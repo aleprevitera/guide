@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+
+local_backend: true
+
+media_folder: "docs/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "anno_1"
+    label: "I Anno"
+    folder: "docs/I_Anno"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "anno_2"
+    label: "II Anno"
+    folder: "docs/II_Anno"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "anno_3"
+    label: "III Anno"
+    folder: "docs/III_Anno"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "anno_4"
+    label: "IV Anno"
+    folder: "docs/IV_Anno"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "anno_5"
+    label: "V Anno"
+    folder: "docs/V_Anno"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "anno_6"
+    label: "VI Anno"
+    folder: "docs/VI_Anno"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }

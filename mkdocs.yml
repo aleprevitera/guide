@@ -1,0 +1,40 @@
+site_name: Guide Pratiche
+
+theme:
+  name: material
+  language: it
+  palette: 
+    # Modo Chiaro (Default)
+    - scheme: default
+      primary: teal # Colore "Medico"
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Passa alla modalità scura
+    # Modo Scuro (Per chi studia di notte)
+    - scheme: slate
+      primary: teal
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Passa alla modalità chiara
+  features:
+    - navigation.tabs # Menu a schede in alto
+    - navigation.top  # Tasto "Torna su"
+    - navigation.sections # Raggruppa le sezioni nel menu laterale
+    - content.code.copy # Tasto copia per i codici
+
+markdown_extensions:
+  - admonition # I box colorati
+  - pymdownx.details # Per creare sezioni "spoiler" che si aprono/chiudono
+  - pymdownx.superfences
+  - pymdownx.tabbed: # Per creare tab dentro le pagine
+      alternate_style: true 
+  - attr_list # Per aggiungere classi CSS se serve
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - search
+  - awesome-pages
