@@ -1,0 +1,141 @@
+# =============================================================================
+# GUIDE PRATICHE - Medicina UNIPV
+# Configurazione MkDocs con Material Theme e PDF Export
+# =============================================================================
+
+site_name: Guide Pratiche - Medicina UNIPV
+site_url: https://aleprevitera.github.io/guide/
+site_description: Raccolta di guide pratiche per studenti di Medicina e Chirurgia - Università di Pavia
+site_author: Studenti Medicina UNIPV
+
+repo_url: https://github.com/aleprevitera/guide
+repo_name: aleprevitera/guide
+
+# =============================================================================
+# THEME CONFIGURATION
+# =============================================================================
+theme:
+  name: material
+  language: it
+
+  # Color palette
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passa al tema scuro
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passa al tema chiaro
+
+  # Features
+  features:
+    - navigation.tabs           # Tab di navigazione in alto
+    - navigation.tabs.sticky    # Tab sempre visibili durante lo scroll
+    - navigation.sections       # Sezioni espandibili nella sidebar
+    - navigation.expand         # Espande automaticamente le sottosezioni
+    - navigation.top            # Pulsante "torna su"
+    - search.suggest            # Suggerimenti nella ricerca
+    - search.highlight          # Evidenzia i risultati
+    - toc.integrate             # Indice integrato nella sidebar
+    - content.code.copy         # Pulsante copia per blocchi di codice
+
+  # Icons
+  icon:
+    repo: fontawesome/brands/github
+
+# =============================================================================
+# PLUGINS
+# =============================================================================
+plugins:
+  - search:
+      lang: it
+
+  # Plugin per generazione PDF
+  # NOTA: Richiede GTK3 su Windows (vedi README per istruzioni)
+  - with-pdf:
+      author: Studenti Medicina UNIPV
+      copyright: "© 2026 - Guide Pratiche Medicina"
+      cover: true
+      back_cover: true
+      cover_title: "Guide Pratiche"
+      cover_subtitle: "Medicina e Chirurgia - UNIPV"
+      cover_logo: ""
+      toc_title: "Indice"
+      heading_shift: false
+      toc_level: 3
+      ordered_chapter_level: 2
+      enabled_if_env: ENABLE_PDF_EXPORT
+      # output_path: pdf/guida-completa.pdf
+
+# =============================================================================
+# MARKDOWN EXTENSIONS
+# =============================================================================
+markdown_extensions:
+  # Admonitions (note, warning, tip boxes)
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  # Tables
+  - tables
+
+  # Table of Contents
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Formatting
+  - pymdownx.mark          # ==highlighted text==
+  - pymdownx.caret         # ^^superscript^^
+  - pymdownx.tilde         # ~~strikethrough~~
+  - pymdownx.keys          # ++ctrl+alt+del++
+
+  # Task lists
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+# =============================================================================
+# EXTRA CONFIGURATION
+# =============================================================================
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aleprevitera/guide
+
+  # Footer
+  generator: false
+
+# Copyright notice
+copyright: |
+  Made with ❤️ by studenti di Medicina UNIPV
+
+# =============================================================================
+# NAVIGATION STRUCTURE
+# =============================================================================
+nav:
+  - Home: index.md
+
+  - I Anno:
+    - Panoramica: I_Anno/index.md
+
+  - II Anno:
+    - Panoramica: II_Anno/index.md
+
+  - III Anno:
+    - Panoramica: III_Anno/index.md
+
+  - IV Anno:
+    - Panoramica: IV_Anno/index.md
+
+  - V Anno:
+    - Panoramica: V_Anno/index.md
+
+  - VI Anno:
+    - Panoramica: VI_Anno/index.md
+    - Clinica Medica: VI_Anno/clinica_medica.md

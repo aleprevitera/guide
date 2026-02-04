@@ -1,0 +1,18 @@
+# =============================================================================
+# Guide Pratiche - Dipendenze Python
+# =============================================================================
+# Installa con: pip install -r requirements.txt
+# =============================================================================
+
+# MkDocs con tema Material
+mkdocs>=1.5.0
+mkdocs-material>=9.5.0
+
+# Plugin per generazione PDF
+# NOTA: Richiede GTK3 runtime su Windows!
+# Vedi CONTRIBUTING.md per istruzioni di installazione
+mkdocs-with-pdf>=0.9.3
+
+# Dipendenze implicite per il PDF (installate automaticamente)
+# weasyprint
+# cairocffi
