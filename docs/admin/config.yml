@@ -58,5 +58,23 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Contenuto", name: "body", widget: "markdown" }
+      - {label: "Nome Esame", name: "title", widget: "string"}
+      # Questo campo nascosto dice al sistema quale template usare
+      - {label: "Layout", name: "template", widget: "hidden", default: "scheda_esame"} 
+      
+      - {label: "Tempo di Studio Stimato", name: "study_time", widget: "string", hint: "Es. 4-5 settimane"}
+      - {label: "Tipologia Esame", name: "exam_type", widget: "select", options: ["Orale", "Scritto", "Scritto + Orale"]}
+      
+      - {label: "Programma d'Esame", name: "program", widget: "markdown", hint: "Descrivi il programma qui"}
+      
+      - {label: "Consigli e Materiale", name: "material_tips", widget: "markdown", hint: "Dove studiare, sbobine, ecc."}
+      
+      - label: "Lista Professori"
+        name: "professors"
+        widget: "list"
+        fields:
+          - {label: "Nome Prof", name: "name", widget: "string"}
+          - {label: "Stile/Domande tipiche", name: "style", widget: "text"}
+
+      # Il corpo del testo lo nascondiamo o lo usiamo solo per note extra
+      - {label: "Note Extra", name: "body", widget: "markdown", required: false}
