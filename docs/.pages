@@ -1,0 +1,10 @@
+title: Home # Opzionale: cambia il nome della tab "Benvenuto" se vuoi
+nav:
+  - index.md
+  - I_Anno
+  - II_Anno
+  - III_Anno
+  - IV_Anno
+  - V_Anno
+  - VI_Anno
+  - ... # Tutto il resto (es. admin) finirà in fondo in automatico

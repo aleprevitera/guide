@@ -31,11 +31,6 @@ x-esame_fields: &esame_fields
     options: ["I Semestre", "II Semestre", "Annuale"]
     required: false
 
-  - label: "Difficoltà"
-    name: "difficulty"
-    widget: "select"
-    options: ["1"," 2", "3", "4", "5"]
-
   - {label: "Programma", name: "program", widget: "markdown", required: false}
   - {label: "Consigli e Materiale", name: "material_tips", widget: "markdown", required: false}
 

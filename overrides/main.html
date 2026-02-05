@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if page.meta.type == "scheda_esame" %}
+
+{% set raw_score = page.meta.difficulty | default(1) | int %}
+{% set diff_score = raw_score if raw_score else 1 %}
+{% set bar_width = diff_score * 20 %}
+{% set bar_color = "#4caf50" %} {% if diff_score == 3 %}
+  {% set bar_color = "#ff9800" %}
+{% elif diff_score > 3 %}
+  {% set bar_color = "#f44336" %}
+{% endif %}
+<!-- SCHEDA ESAME -->
+<style>
+.scheda-hero {
+  background: linear-gradient(135deg, var(--md-primary-fg-color), var(--md-accent-fg-color)); 
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.scheda-hero h1 { margin: 0; color: white !important; font-size: 1.8rem; }
+.scheda-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.scheda-badge {
+  background: rgba(255,255,255,0.2);
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+/* slider con 5 livelli di difficoltà */
+/* Stili specifici per la barra difficoltà */
+.diff-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.2); /* Sfondo più scuro per contrasto */
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.diff-track {
+  width: 80px;
+  height: 8px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.diff-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.scheda-section {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.scheda-section h3 { margin-top: 0; color: var(--md-primary-fg-color); }
+.scheda-prof {
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+.scheda-prof strong { color: var(--md-primary-fg-color); }
+</style>
+
+<div class="scheda-hero">
+  <h1>{{ page.meta.title }}</h1>
+  <div class="scheda-badges">
+    {% if page.meta.exam_type %}<span class="scheda-badge">{{ page.meta.exam_type }}</span>{% endif %}
+    {% if page.meta.semester %}<span class="scheda-badge">{{ page.meta.semester }}</span>{% endif %}
+    {% if page.meta.study_time %}<span class="scheda-badge">📚 {{ page.meta.study_time }}</span>{% endif %}
+    {% if page.meta.difficulty %}<span class="scheda-badge">{{ page.meta.difficulty }}</span>{% endif %}
+  
+  {% if page.meta.difficulty %}
+  <div class="diff-container" title="Livello difficoltà: {{ diff_score }}/5">
+    <small style="margin-right:4px;">Difficoltà</small>
+    <div class="diff-track">
+        <div class="diff-bar" style="width: {{ bar_width }}%; background-color: {{ bar_color }};"></div>
+    </div>
+    <small><strong>{{ diff_score }}/5</strong></small>
+  </div>
+  {% endif %}
+  </div>
+</div>
+
+{% if page.meta.program %}
+<div class="scheda-section">
+  <h3>📋 Programma</h3>
+  {{ page.meta.program | safe }}
+</div>
+{% endif %}
+
+{% if page.meta.professors %}
+<div class="scheda-section">
+  <h3>👨‍🏫 Docenti</h3>
+  {% for prof in page.meta.professors %}
+  <div class="scheda-prof">
+    <strong>{{ prof.name }}</strong><br>
+    {{ prof.style }}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% if page.meta.material_tips %}
+<div class="scheda-section">
+  <h3>📚 Materiale e Consigli</h3>
+  {{ page.meta.material_tips | safe }}
+</div>
+{% endif %}
+
+{% if page.content %}
+<div class="scheda-section">
+  <h3>📝 Note</h3>
+  {{ page.content }}
+</div>
+{% endif %}
+
+{% else %}
+<!-- PAGINA NORMALE -->
+{{ super() }}
+{% endif %}
+{% endblock %}
