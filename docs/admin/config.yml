@@ -5,7 +5,7 @@ backend:
   base_url: https://guide-pratiche.netlify.app
 
 # Per lavorare in locale senza server
-local_backend: true
+# local_backend: true
 
 media_folder: "docs/assets/images"
 public_folder: "/assets/images"
