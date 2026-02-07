@@ -2,6 +2,7 @@ backend:
   name: github
   repo: aleprevitera/guide
   branch: main
+  base_url: https://github-os-auth.netlify.app
 
 # Per lavorare in locale senza server
 local_backend: true
