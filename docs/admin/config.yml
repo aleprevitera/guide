@@ -1,11 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
   repo: aleprevitera/guide
   branch: main
   base_url: https://api.netlify.com
-
-# Per lavorare in locale senza server
-# local_backend: true
+  site_id: guide-pratiche.netlify.app
 
 media_folder: "docs/assets/images"
 public_folder: "/assets/images"
