@@ -6,6 +6,20 @@
   <title>Admin Guida Medica</title>
 </head>
 <body>
+  <script>window.CMS_MANUAL_INIT = true;</script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: "github",
+          repo: "aleprevitera/guide",
+          branch: "main",
+          base_url: "https://api.netlify.com",
+          site_id: "guide-pratiche.netlify.app"
+        }
+      }
+    });
+  </script>
 </body>
 </html>
