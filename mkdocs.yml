@@ -1,5 +1,7 @@
 site_name: Guide Pratiche
 
+site_url: https://aleprevitera.github.io/guide/
+
 theme:
   name: material
   # custom_dir: overrides
