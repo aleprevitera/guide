@@ -1,4 +1,3 @@
-title: Home # Opzionale: cambia il nome della tab "Benvenuto" se vuoi
 nav:
   - index.md
   - I_Anno

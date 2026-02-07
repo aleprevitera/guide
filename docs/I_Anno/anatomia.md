@@ -10,5 +10,7 @@ material_tips: Altrettanto cazzi neri
 professors:
   - name: Prof. Nero
     style: Cazzi lunghi e neri
+  - name: Prof. Bianco
+    style: Abbastanza infame
 ---
-Salama
+

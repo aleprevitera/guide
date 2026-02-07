@@ -1,0 +1,34 @@
+/* docs/stylesheets/extra.css */
+
+/* 1. Stile Base per i bottoni della Dashboard */
+.btn-dashboard {
+  width: 100%;                /* Occupa tutta la larghezza della colonna */
+  /* margin-bottom: 0.8rem;      Spazio sotto ogni bottone */
+  display: flex !important;   /* Flex per allineare icona e testo */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                   /* Spazio tra icona e testo */
+  font-weight: 700 !important;
+  transition: all 0.2s ease;  /* Animazione fluida */
+}
+
+/* 2. Personalizzazione Bottone WhatsApp */
+.btn-whatsapp {
+  background-color: #25D366 !important; /* Verde Ufficiale */
+  color: white !important;
+  border-color: #25D366 !important;
+}
+
+/* Effetto Hover (quando passi sopra col mouse) */
+.btn-whatsapp:hover {
+  background-color: #128C7E !important; /* Verde Scuro Ufficiale */
+  border-color: #128C7E !important;
+  transform: translateY(-2px); /* Effetto "Sollevamento" */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* 3. Personalizzazione Bottone Sbobine (Opzionale: effetto hover anche qui) */
+.btn-sbobin e:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}

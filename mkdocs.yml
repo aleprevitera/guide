@@ -2,7 +2,7 @@ site_name: Guide Pratiche
 
 theme:
   name: material
-  custom_dir: overrides
+  # custom_dir: overrides
   language: it
   palette: 
     # Modo Chiaro (Default)
@@ -24,11 +24,15 @@ theme:
     - navigation.top  # Tasto "Torna su"
     - navigation.sections # Raggruppa le sezioni nel menu laterale
     - content.code.copy # Tasto copia per i codici
+    - navigation.footer
+  font:
+    text: Noto Sans
 
 markdown_extensions:
   - admonition # I box colorati
   - pymdownx.details # Per creare sezioni "spoiler" che si aprono/chiudono
   - pymdownx.superfences
+  - md_in_html # Per inserire codice HTML
   - pymdownx.tabbed: # Per creare tab dentro le pagine
       alternate_style: true 
   - attr_list # Per aggiungere classi CSS se serve
@@ -36,7 +40,19 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+hooks:
+  - hooks.py
+
+
 plugins:
   - search
   - awesome-pages
   - macros
+
+copyright: "AGP x FR"
+
+extra:
+  generator: false
+
+extra_css:
+  - stylesheet/extra.css
