@@ -29,6 +29,14 @@ def on_page_markdown(markdown, page, config, files):
     </div>
     """
 
+    # --- LOGICA CFU ---
+    # --- LOGICA BADGE CFU ---
+    cfu_val = meta.get('cfu')
+    cfu_badge = ""
+    if cfu_val:
+        # Creiamo un tag con classe custom 'badge-cfu'
+        cfu_badge = f'<span class="badge-cfu">{cfu_val} CFU</span>'
+
     # --- LOGICA BOTTONI (MARKDOWN PURO) ---
     buttons_md = ""
     
@@ -49,7 +57,7 @@ def on_page_markdown(markdown, page, config, files):
 
     # --- COSTRUZIONE HEADER ---
     header = f"""
-# {meta.get('title')}
+# {meta.get('title')} {cfu_badge}
 
 !!! abstract inline "Scheda Sintetica"
     * **Tipologia:** {meta.get('exam_type', 'N/D')}
