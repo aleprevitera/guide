@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main # Assicurati che sia 'main' o 'master'
+  name: github
+  repo: aleprevitera/guide
+  branch: main
 
 # Per lavorare in locale senza server
 local_backend: true
