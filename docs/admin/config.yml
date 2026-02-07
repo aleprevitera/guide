@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: aleprevitera/guide
   branch: main
   base_url: https://guide-pratiche.netlify.app
