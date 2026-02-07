@@ -29,13 +29,26 @@ def on_page_markdown(markdown, page, config, files):
     </div>
     """
 
-    # --- LOGICA CFU ---
     # --- LOGICA BADGE CFU ---
     cfu_val = meta.get('cfu')
     cfu_badge = ""
     if cfu_val:
         # Creiamo un tag con classe custom 'badge-cfu'
         cfu_badge = f'<span class="badge-cfu">{cfu_val} CFU</span>'
+
+    # --- LOGICA BADGE SEMESTRE ---
+    semestre_val = meta.get('semestre')
+    semestre_badge = ""
+    if semestre_val:
+        # Creiamo un tag con classe custom 'badge-cfu'
+        semestre_badge = f'<span class="badge-semestre">{semestre_val} SEMESTRE</span>'
+
+    # --- LOGICA BADGE MODALITà ---
+    modalita_val = meta.get('exam_type')
+    modalita_badge = ""
+    if modalita_val:
+        # Creiamo un tag con classe custom 'badge-cfu'
+        modalita_badge = f'<span class="badge-modalita">{modalita_val}</span>'
 
     # --- LOGICA BOTTONI (MARKDOWN PURO) ---
     buttons_md = ""
@@ -57,9 +70,11 @@ def on_page_markdown(markdown, page, config, files):
 
     # --- COSTRUZIONE HEADER ---
     header = f"""
-# {meta.get('title')} {cfu_badge}
+# {meta.get('title')} 
 
-!!! abstract inline "Scheda Sintetica"
+# {cfu_badge} {semestre_badge} {modalita_badge}
+
+!!! abstract "Scheda Sintetica"
     * **Tipologia:** {meta.get('exam_type', 'N/D')}
     * **Tempo Studio:** {meta.get('study_time', 'N/D')}
     * **Semestre:** {meta.get('semester', 'N/D')}

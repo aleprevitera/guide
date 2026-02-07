@@ -21,6 +21,11 @@ x-esame_fields: &esame_fields
     name: "cfu"
     widget: "string"
     default: "0"
+  
+  - label: "Semestre"
+    name: "semestre"
+    widget: "select"
+    options: ["I", "II"]
 
   # Campo nascosto per attivare la logica Python
   - label: "Tipo Scheda"

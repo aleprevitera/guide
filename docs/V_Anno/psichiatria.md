@@ -1,6 +1,7 @@
 ---
 title: Psichiatria
 cfu: "5"
+semestre: I
 type: scheda_esame
 link_sbobine: https://drive.google.com/drive/folders/1bE8XfKVtpwOGHVQCNIFQt9EpABzYfpZO?usp=sharing
 link_whatsapp: https://chat.whatsapp.com/JJ4E5fa5tQFEdAyGTkZVfn

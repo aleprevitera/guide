@@ -1,3 +1,3 @@
-# V Anno
+# Informazioni generali
 
 Contenuti del quinto anno accademico.
