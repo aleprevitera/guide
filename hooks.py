@@ -26,8 +26,8 @@ def _get_exam_display_name(folder_path):
     return Path(folder_path).name.replace("-", " ").title()
 
 
-def _folder_has_integrated_exam(folder_path):
-    """Restituisce True se almeno un .md nella cartella ha integrated_exam compilato."""
+def _folder_is_integrated(folder_path):
+    """Restituisce True solo se almeno un .md ha is_integrated: true."""
     for f in sorted(Path(folder_path).iterdir()):
         if f.suffix == ".md" and f.name != INFO_FILENAME:
             try:
@@ -35,7 +35,7 @@ def _folder_has_integrated_exam(folder_path):
                 if text.startswith("---"):
                     end = text.index("---", 3)
                     meta = yaml.safe_load(text[3:end])
-                    if meta and meta.get("integrated_exam"):
+                    if meta and meta.get("is_integrated") is True:
                         return True
             except Exception:
                 continue
@@ -66,8 +66,8 @@ def on_files(files, config):
         for entry in sorted(year_path.iterdir()):
             if not entry.is_dir():
                 continue
-            # Crea index solo se almeno un .md ha integrated_exam compilato
-            if not _folder_has_integrated_exam(entry):
+            # Crea index solo se almeno un .md ha is_integrated: true
+            if not _folder_is_integrated(entry):
                 continue
             index_src = f"{year}/{entry.name}/{INFO_FILENAME}".replace("\\", "/")
             if index_src in existing_paths:

@@ -1,4 +1,5 @@
 ---
+is_integrated: true
 integrated_exam: Clinica Medica 2
 title: Medicina d'Urgenza
 cfu: '2'
