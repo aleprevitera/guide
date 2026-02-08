@@ -202,7 +202,7 @@ def _generate_chart_html(sheet_url, exam_title):
             height=300 + (len(distribuzione) * 30)
         )
         
-        return fig.to_html(full_html=False, include_plotlyjs='cdn', config={'displayModeBar': False})
+        return fig.to_html(full_html=False, include_plotlyjs='cdn', config={'displayModeBar': False, 'staticPlot': True})
 
     except Exception as e:
         logging.error(f"Errore grafico per {exam_title}: {e}")
