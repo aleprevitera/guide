@@ -259,4 +259,4 @@ def on_page_markdown(markdown, page, config, files):
             header += f"| **{nome}** | {contatto} | {style} |\n"
         header += "\n---\n"
 
-    return header + "\n## 📝 Note Extra\n" + markdown
+    return header + "\n## :fontawesome-solid-notes-medical: Note Extra\n" + markdown
