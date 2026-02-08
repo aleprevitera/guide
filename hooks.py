@@ -26,6 +26,22 @@ def _get_exam_display_name(folder_path):
     return Path(folder_path).name.replace("-", " ").title()
 
 
+def _folder_has_integrated_exam(folder_path):
+    """Restituisce True se almeno un .md nella cartella ha integrated_exam compilato."""
+    for f in sorted(Path(folder_path).iterdir()):
+        if f.suffix == ".md" and f.name != INFO_FILENAME:
+            try:
+                text = f.read_text(encoding="utf-8")
+                if text.startswith("---"):
+                    end = text.index("---", 3)
+                    meta = yaml.safe_load(text[3:end])
+                    if meta and meta.get("integrated_exam"):
+                        return True
+            except Exception:
+                continue
+    return False
+
+
 def _generate_info_content(display_name):
     return (
         f'---\ntitle: "{display_name}"\n'
@@ -50,7 +66,9 @@ def on_files(files, config):
         for entry in sorted(year_path.iterdir()):
             if not entry.is_dir():
                 continue
-            # entry è una sottocartella = esame integrato
+            # Crea index solo se almeno un .md ha integrated_exam compilato
+            if not _folder_has_integrated_exam(entry):
+                continue
             index_src = f"{year}/{entry.name}/{INFO_FILENAME}".replace("\\", "/")
             if index_src in existing_paths:
                 continue
