@@ -5,6 +5,8 @@ semestre: I
 type: scheda_esame
 link_sbobine: https://drive.google.com/drive/folders/1bE8XfKVtpwOGHVQCNIFQt9EpABzYfpZO?usp=sharing
 link_whatsapp: https://chat.whatsapp.com/JJ4E5fa5tQFEdAyGTkZVfn
+google_sheet_CSV: https://docs.google.com/spreadsheets/d/e/2PACX-1vQoGWgTG_X3IKj2_eJiVzeah-Tcn3BjhiLQZk3VyuxTVYeTH7vd834YOWT5Ka1feLrFG0Q5ksT4Cqn0/pub?output=csv
+google_sheet_URL: https://docs.google.com/spreadsheets/d/1im2Hk2UQiRcGuW_Z8ChflYsAEikN-WTL4_-sZikVzKc/edit?usp=sharing
 study_time: 4 settimane
 difficulty: "3"
 exam_type: Scritto

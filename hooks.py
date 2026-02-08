@@ -1,7 +1,8 @@
 import os
 import logging
 from pathlib import Path
-
+import pandas as pd
+import plotly.express as px
 import yaml
 from mkdocs.structure.files import File
 
@@ -136,6 +137,77 @@ def _render_scheda_integrato(markdown, meta):
 
     return header
 
+# LOGICA STATISTICHE DOMANDE
+def _generate_chart_html(sheet_url, exam_title):
+    """Scarica il CSV e genera l'HTML del grafico Plotly."""
+    if not sheet_url:
+        return "_Nessun foglio statistiche collegato._"
+
+    try:
+        df = pd.read_csv(sheet_url)
+        
+        # Raggruppamento dati
+        distribuzione = df.groupby('MACROARGOMENTO')['DOMANDA'].count().reset_index()
+        distribuzione.columns = ['Argomento', 'Frequenza']
+        distribuzione = distribuzione.sort_values('Frequenza', ascending=True)
+
+        # Creazione Plotly
+        fig = px.bar(distribuzione, 
+                        x='Frequenza', 
+                        y='Argomento', 
+                        orientation='h', 
+                        text='Frequenza',
+                        title="",
+                        color='Frequenza',
+                        color_continuous_scale=px.colors.sequential.Teal)
+
+# --- UPDATE DEL DESIGN ---
+        fig.update_traces(
+            textposition='outside', # Numeri FUORI dalle barre
+            textfont_color='#777',  # Colore grigio neutro (leggibile su bianco e nero)
+            cliponaxis=False,       # Evita che i numeri lunghi vengano tagliati
+            marker_line_width=0,    # Nessun bordo alle barre
+            width=0.8             # Barre leggermente più sottili per dare spazio
+        )
+
+        fig.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(family="Noto Sans, sans-serif", size=14, color = "#777"),
+            margin=dict(l=0, r=40, t=40, b=0),
+            xaxis_title="",
+            yaxis_title="",
+            
+            # Pulisci Asse X
+            xaxis=dict(
+                showgrid=False,
+                showticklabels=False,
+                zeroline=False,
+                visible=False
+            ),
+            
+            # Pulisci Asse Y (Niente linee, solo etichette)
+            yaxis=dict(
+                showgrid=False,
+                showline=False,
+                showticklabels=True,
+                zeroline=False,
+                ticksuffix=" "  # Aggiunge un po' di spazio tra testo e barra
+            ),
+            
+            # Nascondi la barra colori laterale
+            coloraxis_showscale=False,
+            
+            # Altezza dinamica (opzionale, per evitare grafici giganti con poche barre)
+            height=300 + (len(distribuzione) * 30)
+        )
+        
+        return fig.to_html(full_html=False, include_plotlyjs='cdn', config={'displayModeBar': False})
+
+    except Exception as e:
+        logging.error(f"Errore grafico per {exam_title}: {e}")
+        return f"⚠️ _Impossibile caricare il grafico: {e}_"
+
 
 def on_page_markdown(markdown, page, config, files):
     # 1. Check per scheda_integrato
@@ -259,4 +331,23 @@ def on_page_markdown(markdown, page, config, files):
             header += f"| **{nome}** | {contatto} | {style} |\n"
         header += "\n---\n"
 
+# GRAFICO
+    if meta.get('google_sheet_CSV'):
+        header += "\n## :fontawesome-solid-chart-line: Domande precedenti\n"
+        header += f'\n[:octicons-question-16: Vai alle Domande]({meta["google_sheet_URL"]}){{:target="_blank" .md-button .md-button--primary .btn-dashboard .btn-sbobine }}\n'
+        header += _generate_chart_html(meta['google_sheet_CSV'], meta['title'])
+        header += "\n---\n"
+
     return header + "\n## :fontawesome-solid-notes-medical: Note Extra\n" + markdown
+
+
+    
+
+
+
+
+
+
+
+
+    

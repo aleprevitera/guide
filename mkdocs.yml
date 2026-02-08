@@ -53,6 +53,7 @@ plugins:
   - search
   - awesome-pages
   - macros
+  - table-reader
 
 copyright: "AGP x FR"
 

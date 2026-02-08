@@ -52,6 +52,18 @@ x-esame_fields: &esame_fields
     required: false
     hint: "Link di invito al gruppo"
 
+  - label: "Link CSV (Google Sheet CSV)"
+    name: "google_sheet_CSV"
+    widget: "string"
+    required: false
+    hint: "Incolla il link che finisce con .../pub?output=csv"
+
+  - label: "URL Google Sheet"
+    name: "google_sheet_URL"
+    widget: "string"
+    required: false
+    hint: "Incolla il link pubblico delle domande"
+
   # --- DATI TECNICI ---
   - label: "Tempo di Studio"
     name: "study_time"
