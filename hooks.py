@@ -1,7 +1,148 @@
+import os
 import logging
+from pathlib import Path
+
+import yaml
+from mkdocs.structure.files import File
+
+YEAR_FOLDERS = {"I_Anno", "II_Anno", "III_Anno", "IV_Anno", "V_Anno", "VI_Anno"}
+INFO_FILENAME = "index.md"
+
+
+def _get_exam_display_name(folder_path):
+    """Legge integrated_exam dal primo .md nella cartella; fallback: title-case del nome."""
+    for f in sorted(Path(folder_path).iterdir()):
+        if f.suffix == ".md" and f.name != INFO_FILENAME:
+            try:
+                text = f.read_text(encoding="utf-8")
+                if text.startswith("---"):
+                    end = text.index("---", 3)
+                    meta = yaml.safe_load(text[3:end])
+                    if meta and meta.get("integrated_exam"):
+                        return meta["integrated_exam"]
+            except Exception:
+                continue
+    return Path(folder_path).name.replace("-", " ").title()
+
+
+def _generate_info_content(display_name):
+    return (
+        f'---\ntitle: "{display_name}"\n'
+        f'type: "scheda_integrato"\n'
+        f'---\n\n'
+        f"Informazioni generali sull'esame integrato.\n"
+    )
+
+
+def on_files(files, config):
+    docs_dir = config["docs_dir"]
+    use_directory_urls = config.get("use_directory_urls", True)
+    site_dir = config["site_dir"]
+
+    # Set di percorsi già presenti nella collezione files
+    existing_paths = {f.src_path.replace("\\", "/") for f in files}
+
+    for year in YEAR_FOLDERS:
+        year_path = Path(docs_dir) / year
+        if not year_path.is_dir():
+            continue
+        for entry in sorted(year_path.iterdir()):
+            if not entry.is_dir():
+                continue
+            # entry è una sottocartella = esame integrato
+            index_src = f"{year}/{entry.name}/{INFO_FILENAME}".replace("\\", "/")
+            if index_src in existing_paths:
+                continue
+
+            # Genera il file su disco
+            abs_path = Path(docs_dir) / index_src
+            display_name = _get_exam_display_name(entry)
+            abs_path.write_text(_generate_info_content(display_name), encoding="utf-8")
+
+            # Aggiunge alla collezione MkDocs
+            new_file = File(index_src, docs_dir, site_dir, use_directory_urls)
+            files.append(new_file)
+            logging.info(f"[hooks] Generato {index_src} per esame integrato '{display_name}'")
+
+    return files
+
+
+def _render_scheda_integrato(markdown, meta):
+    # --- SLIDER DIFFICOLTA ---
+    try:
+        score = int(str(meta.get('difficulty', '1')).strip())
+    except (ValueError, TypeError):
+        score = 1
+
+    width = score * 20
+    if score <= 2: color = "#4caf50"
+    elif score == 3: color = "#ff9800"
+    else: color = "#f44336"
+
+    slider_html = f"""
+    <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px; margin-bottom: 20px;">
+        <b style="min-width: 70px;">Difficoltà:</b>
+        <div style="background: #e0e0e0; height: 10px; width: 150px; border-radius: 5px;">
+            <div style="width: {width}%; background: {color}; height: 100%; border-radius: 5px;"></div>
+        </div>
+        <span>{score}/5</span>
+    </div>
+    """
+
+    # --- BADGE ---
+    cfu_badge = f'<span class="badge-cfu">{meta.get("cfu")} CFU</span>' if meta.get('cfu') else ""
+    semestre_badge = f'<span class="badge-semestre">{meta.get("semestre")} SEMESTRE</span>' if meta.get('semestre') else ""
+    modalita_badge = f'<span class="badge-modalita">{meta.get("exam_type")}</span>' if meta.get('exam_type') else ""
+
+    # --- BOTTONI ---
+    buttons_md = ""
+    if meta.get('link_sbobine'):
+        buttons_md += f"""
+[:material-folder: Vai alle Sbobine]({meta['link_sbobine']}){{:target="_blank" .md-button .md-button--primary .btn-dashboard .btn-sbobine }}
+        """
+    if meta.get('link_whatsapp'):
+        buttons_md += f"""
+
+[:material-whatsapp: Gruppo WhatsApp]({meta['link_whatsapp']}){{:target="_blank" .md-button .btn-dashboard .btn-whatsapp }}
+        """
+
+    # --- HEADER ---
+    header = f"""
+# {meta.get('title')}
+
+# {cfu_badge} {semestre_badge} {modalita_badge}
+
+!!! abstract "Scheda Sintetica"
+    * **Tipologia:** {meta.get('exam_type', 'N/D')}
+    * **Semestre:** {meta.get('semestre', 'N/D')}
+    {slider_html}
+<div class="grid" markdown>
+
+{buttons_md}
+
+</div>
+"""
+
+    if meta.get('exam_details'):
+        header += f"""
+## :fontawesome-solid-user-gear: Modalità d'Esame
+{meta.get('exam_details')}
+
+---
+"""
+
+    if markdown.strip():
+        header += f"\n## :material-note-text: Note Generali\n{markdown}\n"
+
+    return header
+
 
 def on_page_markdown(markdown, page, config, files):
-    # 1. Filtro di sicurezza
+    # 1. Check per scheda_integrato
+    if page.meta.get('type') == 'scheda_integrato':
+        return _render_scheda_integrato(markdown, page.meta)
+
+    # 2. Filtro di sicurezza
     if page.meta.get('type') != 'scheda_esame':
         return markdown
 

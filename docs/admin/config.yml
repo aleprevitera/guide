@@ -104,6 +104,17 @@ x-esame_fields: &esame_fields
     widget: "markdown"
     required: false
 
+x-integrato_fields: &integrato_fields
+  - { label: "Nome Esame Integrato", name: "title", widget: "string" }
+  - { label: "Tipo Scheda", name: "type", widget: "hidden", default: "scheda_integrato" }
+  - { label: "CFU Totali", name: "cfu", widget: "string", default: "0" }
+  - { label: "Semestre", name: "semestre", widget: "select", options: ["I", "II"] }
+  - { label: "Difficoltà (1-5)", name: "difficulty", widget: "select", options: ["1","2","3","4","5"], default: "1" }
+  - { label: "Tipologia Esame", name: "exam_type", widget: "select", options: ["Orale","Scritto","Scritto + Orale"], default: "Orale" }
+  - { label: "Dettagli Modalità Esame", name: "exam_details", widget: "markdown", required: false }
+  - { label: "Link Sbobine (Drive)", name: "link_sbobine", widget: "string", required: false }
+  - { label: "Link Gruppo WhatsApp", name: "link_whatsapp", widget: "string", required: false }
+  - { label: "Descrizione / Note Generali", name: "body", widget: "markdown", required: false }
 
 # ============================================================
 # COLLEZIONI (STRUTTURA DEL SITO)
@@ -115,6 +126,7 @@ collections:
     path: "{{integrated_exam}}/{{title}}"
     slug: "{{title}}"
     create: true
+    filter: { field: "type", value: "scheda_esame" }
     fields: *esame_fields
 
   - name: "anno_2"
@@ -123,6 +135,7 @@ collections:
     path: "{{integrated_exam}}/{{title}}"
     slug: "{{title}}"
     create: true
+    filter: { field: "type", value: "scheda_esame" }
     fields: *esame_fields
 
   - name: "anno_3"
@@ -131,6 +144,7 @@ collections:
     path: "{{integrated_exam}}/{{title}}"
     slug: "{{title}}"
     create: true
+    filter: { field: "type", value: "scheda_esame" }
     fields: *esame_fields
 
   - name: "anno_4"
@@ -139,6 +153,7 @@ collections:
     path: "{{integrated_exam}}/{{title}}"
     slug: "{{title}}"
     create: true
+    filter: { field: "type", value: "scheda_esame" }
     fields: *esame_fields
 
   - name: "anno_5"
@@ -147,12 +162,68 @@ collections:
     path: "{{integrated_exam}}/{{title}}"
     slug: "{{title}}"
     create: true
+    filter: { field: "type", value: "scheda_esame" }
     fields: *esame_fields
 
   - name: "anno_6"
     label: "VI Anno"
     folder: "docs/VI_Anno"
     path: "{{integrated_exam}}/{{title}}"
-    slug: "{{title}}"    
+    slug: "{{title}}"
     create: true
+    filter: { field: "type", value: "scheda_esame" }
     fields: *esame_fields
+
+  - name: "integrato_1"
+    label: "I Anno - Esami Integrati"
+    folder: "docs/I_Anno"
+    path: "{{title}}/index"
+    slug: "{{title}}"
+    create: true
+    filter: { field: "type", value: "scheda_integrato" }
+    fields: *integrato_fields
+
+  - name: "integrato_2"
+    label: "II Anno - Esami Integrati"
+    folder: "docs/II_Anno"
+    path: "{{title}}/index"
+    slug: "{{title}}"
+    create: true
+    filter: { field: "type", value: "scheda_integrato" }
+    fields: *integrato_fields
+
+  - name: "integrato_3"
+    label: "III Anno - Esami Integrati"
+    folder: "docs/III_Anno"
+    path: "{{title}}/index"
+    slug: "{{title}}"
+    create: true
+    filter: { field: "type", value: "scheda_integrato" }
+    fields: *integrato_fields
+
+  - name: "integrato_4"
+    label: "IV Anno - Esami Integrati"
+    folder: "docs/IV_Anno"
+    path: "{{title}}/index"
+    slug: "{{title}}"
+    create: true
+    filter: { field: "type", value: "scheda_integrato" }
+    fields: *integrato_fields
+
+  - name: "integrato_5"
+    label: "V Anno - Esami Integrati"
+    folder: "docs/V_Anno"
+    path: "{{title}}/index"
+    slug: "{{title}}"
+    create: true
+    filter: { field: "type", value: "scheda_integrato" }
+    fields: *integrato_fields
+
+  - name: "integrato_6"
+    label: "VI Anno - Esami Integrati"
+    folder: "docs/VI_Anno"
+    path: "{{title}}/index"
+    slug: "{{title}}"
+    create: true
+    filter: { field: "type", value: "scheda_integrato" }
+    fields: *integrato_fields

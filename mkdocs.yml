@@ -27,6 +27,7 @@ theme:
     - navigation.tabs # Menu a schede in alto
     - navigation.top  # Tasto "Torna su"
     - navigation.sections # Raggruppa le sezioni nel menu laterale
+    - navigation.indexes # index.md diventa pagina della sezione
     - content.code.copy # Tasto copia per i codici
     - navigation.footer
   font:
