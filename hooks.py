@@ -57,14 +57,14 @@ def on_page_markdown(markdown, page, config, files):
         # .md-button--primary fa il bottone colorato (Teal/Blu)
         # Nota le doppie graffe {{ }} per scappare la sintassi
         buttons_md += f"""
-- [:material-folder: Vai alle Sbobine]({meta['link_sbobine']}){{:target="_blank" .md-button .md-button--primary .btn-dashboard .btn-sbobine }}
+[:material-folder: Vai alle Sbobine]({meta['link_sbobine']}){{:target="_blank" .md-button .md-button--primary .btn-dashboard .btn-sbobine }}
         """
     
     if meta.get('link_whatsapp'):
         # Qui usiamo style inline per forzare il verde WhatsApp
         buttons_md += f"""
 
-- [:material-whatsapp: Gruppo WhatsApp]({meta['link_whatsapp']}){{:target="_blank" .md-button .btn-dashboard .btn-whatsapp }}
+[:material-whatsapp: Gruppo WhatsApp]({meta['link_whatsapp']}){{:target="_blank" .md-button .btn-dashboard .btn-whatsapp }}
         """
 
     # --- COSTRUZIONE HEADER ---
@@ -78,7 +78,7 @@ def on_page_markdown(markdown, page, config, files):
     * **Tempo Studio:** {meta.get('study_time', 'N/D')}
     * **Semestre:** {meta.get('semester', 'N/D')}
     {slider_html}
-<div class="grid cards" markdown>
+<div class="grid" markdown>
 
 {buttons_md}
 

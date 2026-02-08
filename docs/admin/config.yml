@@ -13,6 +13,12 @@ public_folder: "/assets/images"
 # ============================================================
 
 x-esame_fields: &esame_fields
+  - label: "Esame Integrato (Padre)"
+    name: "integrated_exam"
+    widget: "string"
+    required: false
+    hint: "Se è un modulo, scrivi qui il nome dell'esame totale (es: Fisiologia)"
+
   - label: "Nome Esame"
     name: "title"
     widget: "string"
@@ -106,41 +112,47 @@ collections:
   - name: "anno_1"
     label: "I Anno"
     folder: "docs/I_Anno"
+    path: "{{integrated_exam}}/{{title}}"
+    slug: "{{title}}"
     create: true
-    slug: "{{slug}}"
-    fields: *esame_fields  # <--- MAGIA: Incolla i campi definiti sopra
+    fields: *esame_fields
 
   - name: "anno_2"
     label: "II Anno"
     folder: "docs/II_Anno"
+    path: "{{integrated_exam}}/{{title}}"
+    slug: "{{title}}"
     create: true
-    slug: "{{slug}}"
     fields: *esame_fields
 
   - name: "anno_3"
     label: "III Anno"
     folder: "docs/III_Anno"
+    path: "{{integrated_exam}}/{{title}}"
+    slug: "{{title}}"
     create: true
-    slug: "{{slug}}"
     fields: *esame_fields
 
   - name: "anno_4"
     label: "IV Anno"
     folder: "docs/IV_Anno"
+    path: "{{integrated_exam}}/{{title}}"
+    slug: "{{title}}"
     create: true
-    slug: "{{slug}}"
     fields: *esame_fields
 
   - name: "anno_5"
     label: "V Anno"
     folder: "docs/V_Anno"
+    path: "{{integrated_exam}}/{{title}}"
+    slug: "{{title}}"
     create: true
-    slug: "{{slug}}"
     fields: *esame_fields
 
   - name: "anno_6"
     label: "VI Anno"
     folder: "docs/VI_Anno"
+    path: "{{integrated_exam}}/{{title}}"
+    slug: "{{title}}"    
     create: true
-    slug: "{{slug}}"
     fields: *esame_fields

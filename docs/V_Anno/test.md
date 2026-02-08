@@ -1,21 +1,18 @@
 # Test
-:octicons-chevron-right-16: Disturbi dello spettro della Schizofrenia: aspetti storici e psicopatologici; aspetti clinici, epidemiologici, sociali ed evolutivi; eziologia, aspetti biologici, terapia e cura.
-- I sistemi nosografici e diagnostici in Psichiatria
-- Altri Disturbi Psicotici: clinica, terapia e cura
-- L’esame clinico in Psichiatria: principi di psicopatologia e di semeiotica psichiatrica
-- Disturbi dell’umore: Disturbo bipolare e Disturbi depressivi
-- Disturbi d’ansia e Disturbo ossessivo- compulsivo
-- Disturbi dell’umore: eziologia, aspetti epidemiologici e biologici, terapia e cura
-- Disturbo da sintomi somatici e disturbi correlati
-- Presentazione e discussione di casi clinici
-- Presentazione e discussione di casi clinici
-- Disturbi della nutrizione e dell’alimentazione
-- Anoressia nervosa e Bulimia nervosa
-- Disturbi di personalità: Gruppo A, B e C
-- Disturbi correlati a eventi traumatici e stressantie Disturbi dissociativi
-- Disturbi neurocognitivi: Delirium
-- Disturbi neurocognitivi maggiori e lievi
-- Disturbi del neurosviluppo e dello spettro dell’autismo
-- Disturbi correlati a sostanze e disturbi da addiction
-- Disturbi e Disfunzioni Sessuali
-- Principi di Etnopsichiatria
+
+!!! info "Informazioni generali"
+    L'esame dura 45 minuti ed è svolto su carta
+
+<div class='grid cards' markdown>
+
+- :simple-ticktick:{ .lg .middle } __Vero o Falso__
+
+    3 blocchi da 10 domande 
+
+- :octicons-question-16:{ .lg .middle } __Domande aperte__
+
+    1 domanda aperta e 1 caso clinico
+</div>
+
+!!! warning "Attenzione"
+      Sbagliando cinque o più VoF in un gruppo di 10 domande tutto il gruppo viene considerato errato
