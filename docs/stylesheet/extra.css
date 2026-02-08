@@ -98,3 +98,35 @@
   color: #ba68c8;
   border-color: #ba68c8;
 }
+
+/* Griglia per il programma d'esame */
+.programma-lista ul {
+  column-count: 2;         /* 2 Colonne su desktop */
+  column-gap: 40px;
+  column-rule: 1px solid var(--md-default-fg-color--lightest); /* Linea divisoria sottile */
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.programma-lista ul li {
+  break-inside: avoid;     /* Evita che un punto si spezzi tra due colonne */
+  padding-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Icona personalizzata prima di ogni punto */
+.programma-lista ul li::before {
+  content: "\e409";       /* Codice icona Material 'check-circle' o simile */
+  font-family: "Material Icons";
+  color: var(--md-primary-fg-color);
+  font-size: 1.1em;
+}
+
+/* Torna a 1 colonna su Mobile */
+@media screen and (max-width: 76.25em) {
+  .programma-lista ul {
+    column-count: 1;
+  }
+}

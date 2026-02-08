@@ -59,4 +59,5 @@ extra:
   generator: false
 
 extra_css:
+  - https://fonts.googleapis.com/css2?family=Material+Icons
   - stylesheet/extra.css

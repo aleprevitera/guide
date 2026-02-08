@@ -67,7 +67,6 @@ def on_page_markdown(markdown, page, config, files):
 - [:material-whatsapp: Gruppo WhatsApp]({meta['link_whatsapp']}){{:target="_blank" .md-button .btn-dashboard .btn-whatsapp }}
         """
 
-
     # --- COSTRUZIONE HEADER ---
     header = f"""
 # {meta.get('title')} 
@@ -95,8 +94,10 @@ def on_page_markdown(markdown, page, config, files):
 """
 
     header += f"""
-## :octicons-checklist-16: Programma
-{meta.get('program', 'Nessun programma inserito.')}
+##  :octicons-checklist-16: Programma
+<div class="programma-lista" markdown>
+{meta.get('program', 'Nessun programma.')}
+</div>
 
 ---
 
