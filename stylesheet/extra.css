@@ -1,0 +1,132 @@
+/* docs/stylesheets/extra.css */
+
+/* 1. Stile Base per i bottoni della Dashboard */
+.btn-dashboard {
+  width: 100%;                /* Occupa tutta la larghezza della colonna */
+  display: flex !important;   /* Flex per allineare icona e testo */
+  align-items: center;
+  justify-content: center;
+  gap: 8px;                   /* Spazio tra icona e testo */
+  font-weight: 700 !important;
+  transition: all 0.2s ease;  /* Animazione fluida */
+}
+
+/* 2. Personalizzazione Bottone WhatsApp */
+.btn-whatsapp {
+  background-color: #25D366 !important; /* Verde Ufficiale */
+  color: white !important;
+  border-color: #25D366 !important;
+}
+
+/* Effetto Hover (quando passi sopra col mouse) */
+.btn-whatsapp:hover {
+  background-color: #128C7E !important; /* Verde Scuro Ufficiale */
+  border-color: #128C7E !important;
+  transform: translateY(-2px); /* Effetto "Sollevamento" */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* 3. Personalizzazione Bottone Sbobine (Opzionale: effetto hover anche qui) */
+.btn-sbobin e:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.badge-cfu {
+  display: inline-block;
+  background-color: var(--md-primary-fg-color--transparent); /* Colore del tema trasparente */
+  color: var(--md-primary-fg-color);                         /* Testo del colore del tema */
+  border: 1px solid var(--md-primary-fg-color);              /* Bordino sottile */
+  padding: 2px 10px;
+  border-radius: 20px;         /* Forma a pillola */
+  font-size: 0.6em;            /* Più piccolo rispetto al titolo h1 */
+  vertical-align: middle;      /* Allineato al centro del testo */
+  /* margin-left: 10px;           Distanza dal nome dell'esame */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Badge Semestre - Giallo/Arancio */
+.badge-semestre {
+  display: inline-block;
+  background-color: rgba(255, 160, 0, 0.1); /* Arancio trasparente */
+  color: #fb8c00;                            /* Arancio scuro per leggibilità */
+  border: 1px solid #fb8c00;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-left: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Variante per la modalità scura (Slate) */
+[data-md-color-scheme="slate"] .badge-semestre {
+  background-color: rgba(255, 183, 77, 0.1);
+  color: #ffb74d;
+  border-color: #ffb74d;
+}
+/* Variante per la modalità scura (Slate) */
+[data-md-color-scheme="slate"] .badge-cfu {
+  background-color: rgba(0, 150, 136, 0.1);
+  color: #4db6ac;
+  border-color: #4db6ac;
+}
+
+/* Badge Modalità d'Esame - Violetto */
+.badge-modalita {
+  display: inline-block;
+  background-color: rgba(156, 39, 176, 0.1); /* Violetto trasparente */
+  color: #9c27b0;                            /* Violetto scuro */
+  border: 1px solid #9c27b0;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.6em;
+  vertical-align: middle;
+  margin-left: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Variante per la modalità scura (Slate) */
+[data-md-color-scheme="slate"] .badge-modalita {
+  background-color: rgba(186, 104, 200, 0.1);
+  color: #ba68c8;
+  border-color: #ba68c8;
+}
+
+/* Griglia per il programma d'esame */
+.programma-lista ul {
+  column-count: 2;         /* 2 Colonne su desktop */
+  column-gap: 40px;
+  column-rule: 1px solid var(--md-default-fg-color--lightest); /* Linea divisoria sottile */
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.programma-lista ul li {
+  break-inside: avoid;     /* Evita che un punto si spezzi tra due colonne */
+  padding-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Icona personalizzata prima di ogni punto */
+.programma-lista ul li::before {
+  content: "\e409";       /* Codice icona Material 'check-circle' o simile */
+  font-family: "Material Icons";
+  color: var(--md-primary-fg-color);
+  font-size: 1.1em;
+}
+
+/* Torna a 1 colonna su Mobile */
+@media screen and (max-width: 76.25em) {
+  .programma-lista ul {
+    column-count: 1;
+  }
+}
