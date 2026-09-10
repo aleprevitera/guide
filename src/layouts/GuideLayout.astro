@@ -3,10 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import GuideHeader from '../components/guide/GuideHeader.astro';
 import ModuloSection from '../components/guide/ModuloSection.astro';
-import CalcoloVotoFinaleSection from '../components/guide/CalcoloVotoFinaleSection.astro';
 import InfoDaVerificareCallout from '../components/guide/InfoDaVerificareCallout.astro';
-import ContattiSection from '../components/guide/ContattiSection.astro';
-import LinkUtiliSection from '../components/guide/LinkUtiliSection.astro';
 import UltimoAggiornamento from '../components/guide/UltimoAggiornamento.astro';
 
 interface Props {
@@ -14,29 +11,25 @@ interface Props {
 }
 
 const { data } = Astro.props;
-const showCalcoloVoto = Boolean(data.calcolo_voto_finale) || data.moduli.length > 1;
 ---
 
 <BaseLayout title={data.title}>
   <article class="guide">
     <GuideHeader
       title={data.title}
-      corso_di_laurea={data.corso_di_laurea}
-      anno_accademico={data.anno_accademico}
+      anno_di_corso={data.anno_di_corso}
       cfu_totali={data.cfu_totali}
       moduli={data.moduli}
+      link_sbobine_generale={data.link_sbobine_generale}
+      link_whatsapp_generale={data.link_whatsapp_generale}
+      descrizione_generale={data.descrizione_generale}
     />
 
     {data.moduli.map((modulo) => (
       <ModuloSection modulo={modulo} />
     ))}
 
-    {showCalcoloVoto && <CalcoloVotoFinaleSection testo={data.calcolo_voto_finale} />}
-
     <InfoDaVerificareCallout items={data.info_da_verificare} />
-
-    <ContattiSection contatti={data.contatti} />
-    <LinkUtiliSection links={data.link_utili} />
 
     <UltimoAggiornamento data={data.ultimo_aggiornamento} autore={data.aggiornato_da} />
   </article>

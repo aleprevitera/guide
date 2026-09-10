@@ -1,0 +1,34 @@
+title: "Ginecologia e Ostetricia"
+anno_di_corso: "VI Anno"
+cfu_totali: 9
+
+descrizione_generale: |
+  **Consiglio:** riprendere in mano l'anatomia ginecologica prima di iniziare
+  la preparazione.
+
+  Esame composto da due moduli: Ginecologia e Ostetricia (orale) e Genetica
+  (scritto a risposta multipla). **Attenzione:** lo scritto di Genetica è
+  **sbarramento** per l'accesso all'orale di Ginecologia.
+
+moduli:
+  - nome_modulo: "Ginecologia e Ostetricia"
+    cfu: 8
+    exam_type: "Orale"
+    program: |
+      Programma da confermare — vedi sezione "Da verificare".
+  - nome_modulo: "Genetica"
+    cfu: 1
+    exam_type: "Scritto"
+    exam_details: |
+      Scritto a risposta multipla. È **sbarramento**: va superato per poter
+      accedere all'orale di Ginecologia.
+    program: |
+      Programma da confermare — vedi sezione "Da verificare".
+
+info_da_verificare:
+  - campo: "Programma dettagliato di entrambi i moduli"
+    nota: "Non presente nella pagina originale."
+  - campo: "Docenti"
+    nota: "La pagina originale aveva una sezione \"Docenti\" senza contenuto compilato."
+
+ultimo_aggiornamento: 2026-09-10

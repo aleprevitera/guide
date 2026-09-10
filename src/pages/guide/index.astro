@@ -1,25 +1,48 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ANNI_DI_CORSO } from '../../content/config';
 
-const guide = (await getCollection('guide')).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title)
-);
+const guide = await getCollection('guide');
+
+const gruppi = ANNI_DI_CORSO.map((anno) => ({
+  anno,
+  entries: guide
+    .filter((entry) => entry.data.anno_di_corso === anno)
+    .sort((a, b) => a.data.title.localeCompare(b.data.title)),
+})).filter((gruppo) => gruppo.entries.length > 0);
 ---
 
 <BaseLayout title="Tutte le guide" description="Elenco delle guide pratiche per esame">
   <h1>Tutte le guide</h1>
-  <ul class="guide-list">
-    {guide.map((entry) => (
-      <li>
-        <a href={`/guide/${entry.id}/`}>{entry.data.title}</a>
-        <span class="guide-list__meta">{entry.data.corso_di_laurea} · {entry.data.anno_accademico}</span>
-      </li>
-    ))}
-  </ul>
+  {gruppi.map((gruppo) => (
+    <section class="anno-group">
+      <h2>{gruppo.anno}</h2>
+      <ul class="guide-list">
+        {gruppo.entries.map((entry) => (
+          <li>
+            <a href={`/guide/${entry.id}/`}>{entry.data.title}</a>
+            {entry.data.moduli.length > 1 && (
+              <span class="guide-list__meta">{entry.data.moduli.length} moduli</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
 </BaseLayout>
 
 <style>
+  .anno-group {
+    margin-bottom: 2rem;
+  }
+  .anno-group h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin: 0 0 0.5rem;
+  }
   .guide-list {
     list-style: none;
     margin: 0;
@@ -35,7 +58,7 @@ const guide = (await getCollection('guide')).sort((a, b) =>
     color: inherit;
   }
   .guide-list__meta {
-    display: block;
+    margin-left: 0.5rem;
     font-size: 0.8rem;
     color: #64748b;
   }

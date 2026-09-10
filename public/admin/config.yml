@@ -24,72 +24,82 @@ collections:
     format: "yaml"
     extension: "yaml"
 
+    # Raggruppa le entry per anno di corso nella lista, come le sei sezioni
+    # per anno del progetto MkDocs esistente — qui però è un unico
+    # collection/file per esame (eventualmente multi-modulo).
+    view_groups:
+      - label: "Anno di Corso"
+        field: anno_di_corso
+
     fields:
       - { label: "Nome Esame", name: "title", widget: "string", required: true, pattern: ['^.{3,150}$', "Tra 3 e 150 caratteri"] }
 
-      - label: "Corso di Laurea"
-        name: "corso_di_laurea"
+      - label: "Anno di Corso"
+        name: "anno_di_corso"
         widget: "select"
         required: true
-        options:
-          - "Medicina e Chirurgia"
-          - "Odontoiatria e Protesi Dentaria"
-          - "Infermieristica"
-          - "Fisioterapia"
-          - "Biotecnologie"
-
-      - label: "Anno Accademico"
-        name: "anno_accademico"
-        widget: "string"
-        required: true
-        pattern: ['^\d{4}/\d{4}$', "Formato AAAA/AAAA, es. 2026/2027"]
-        default: "2026/2027"
+        options: ["I Anno", "II Anno", "III Anno", "IV Anno", "V Anno", "VI Anno"]
 
       - { label: "CFU Totali (facoltativo)", name: "cfu_totali", widget: "number", value_type: "int", min: 1, max: 120, required: false }
+
+      - label: "Link Sbobine Generale (Drive, solo se esame a più moduli)"
+        name: "link_sbobine_generale"
+        widget: "string"
+        required: false
+        pattern: ['^https?://.+', "URL non valido"]
+
+      - label: "Link Gruppo WhatsApp Generale (solo se esame a più moduli)"
+        name: "link_whatsapp_generale"
+        widget: "string"
+        required: false
+        pattern: ['^https?://.+', "URL non valido"]
+
+      - label: "Descrizione Generale (solo se esame a più moduli)"
+        name: "descrizione_generale"
+        widget: "markdown"
+        required: false
+        minimal: true
+        modes: ["rich_text"]
+        buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+        editor_components: []
+        image: false
 
       - label: "Moduli"
         name: "moduli"
         widget: "list"
         required: true
         min: 1
-        summary: "{{nome_modulo}} — {{tipo_esame}}"
+        summary: "{{nome_modulo}}"
+        hint: "Per un esame a modulo unico, aggiungi un solo modulo con nome uguale al Nome Esame."
         fields:
-          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true, hint: "Per un esame a modulo unico, ripeti il nome dell'esame." }
-          - { label: "Docente", name: "docente", widget: "string", required: false }
-          - { label: "CFU del modulo (facoltativo)", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
+          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true }
+          - { label: "CFU", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
 
-          - label: "Tipo Esame"
-            name: "tipo_esame"
+          - label: "Semestre"
+            name: "semestre"
             widget: "select"
-            required: true
-            options: ["Orale", "Scritto", "Scritto e orale", "Progetto/Elaborato", "Altro"]
-
-          - { label: "Preappello previsto", name: "preappello", widget: "boolean", default: false }
-          - { label: "Note preappello (es. periodo)", name: "preappello_note", widget: "string", required: false }
-          - { label: "Frequenza obbligatoria", name: "frequenza_obbligatoria", widget: "boolean", default: false }
-
-          - label: "Programma"
-            name: "programma"
-            widget: "markdown"
-            required: true
-            minimal: true
-            modes: ["rich_text"]
-            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
-            editor_components: []
-            image: false
-
-          - label: "Dove Studiare"
-            name: "dove_studiare"
-            widget: "markdown"
             required: false
-            minimal: true
-            modes: ["rich_text"]
-            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
-            editor_components: []
-            image: false
+            options: ["I", "II"]
 
-          - label: "Per Quanto Tempo Studiare"
-            name: "per_quanto_tempo_studiare"
+          - label: "Difficoltà (1-5)"
+            name: "difficolta"
+            widget: "select"
+            required: false
+            options: [1, 2, 3, 4, 5]
+
+          - label: "Tipologia Esame"
+            name: "exam_type"
+            widget: "select"
+            required: false
+            options: ["Orale", "Scritto", "Scritto + Orale"]
+
+          - { label: "Link Sbobine (Drive)", name: "link_sbobine", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Incolla l'URL completo (es. https://drive.google...)" }
+          - { label: "Link Gruppo WhatsApp", name: "link_whatsapp", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link di invito al gruppo" }
+          - { label: "Link Google Sheet Domande", name: "google_sheet_url", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link pubblico al foglio con le domande passate" }
+          - { label: "Tempo di Studio", name: "study_time", widget: "string", required: false, hint: "Es. 2-3 settimane" }
+
+          - label: "Modalità d'Esame"
+            name: "exam_details"
             widget: "markdown"
             required: false
             minimal: true
@@ -97,9 +107,20 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
             editor_components: []
             image: false
+            hint: "Descrivi qui i dettagli tecnici (es. 30 domande in 45 minuti)"
 
-          - label: "Come si Svolge l'Esame"
-            name: "come_si_svolge_esame"
+          - label: "Programma"
+            name: "program"
+            widget: "markdown"
+            required: true
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+            editor_components: []
+            image: false
+
+          - label: "Consigli e Materiale"
+            name: "material_tips"
             widget: "markdown"
             required: false
             minimal: true
@@ -108,8 +129,18 @@ collections:
             editor_components: []
             image: false
 
-          - label: "Consigli Pratici"
-            name: "consigli_pratici"
+          - label: "Docenti"
+            name: "professors"
+            widget: "list"
+            required: false
+            summary: "{{nome}}"
+            fields:
+              - { label: "Nome Docente", name: "nome", widget: "string", required: true }
+              - { label: "Email", name: "email", widget: "string", required: false, pattern: ['^[^@\s]+@[^@\s]+\.[^@\s]+$', "Email non valida"] }
+              - { label: "Stile/Domande", name: "stile", widget: "text", required: false }
+
+          - label: "Note Extra"
+            name: "body"
             widget: "markdown"
             required: false
             minimal: true
@@ -117,26 +148,6 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
-
-          - label: "Domande e Argomenti Ricorrenti"
-            name: "domande_argomenti_ricorrenti"
-            widget: "markdown"
-            required: false
-            minimal: true
-            modes: ["rich_text"]
-            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
-            editor_components: []
-            image: false
-
-      - label: "Calcolo Voto Finale (se più moduli)"
-        name: "calcolo_voto_finale"
-        widget: "markdown"
-        required: false
-        minimal: true
-        modes: ["rich_text"]
-        buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
-        editor_components: []
-        image: false
 
       - label: "Informazioni da Verificare"
         name: "info_da_verificare"
@@ -154,24 +165,6 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
             editor_components: []
             image: false
-
-      - label: "Contatti Docente"
-        name: "contatti"
-        widget: "object"
-        required: false
-        fields:
-          - { label: "Email", name: "email", widget: "string", required: false, pattern: ['^[^@\s]+@[^@\s]+\.[^@\s]+$', "Email non valida"] }
-          - { label: "Sito Web", name: "sito_web", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"] }
-          - { label: "Ufficio/Stanza", name: "ufficio", widget: "string", required: false }
-
-      - label: "Link Utili"
-        name: "link_utili"
-        widget: "list"
-        required: false
-        summary: "{{etichetta}}"
-        fields:
-          - { label: "Etichetta", name: "etichetta", widget: "string", required: true }
-          - { label: "URL", name: "url", widget: "string", required: true, pattern: ['^https?://.+', "URL non valido"] }
 
       - { label: "Ultimo Aggiornamento", name: "ultimo_aggiornamento", widget: "datetime", required: true, format: "YYYY-MM-DD" }
       - { label: "Aggiornato da (nome, facoltativo)", name: "aggiornato_da", widget: "string", required: false }

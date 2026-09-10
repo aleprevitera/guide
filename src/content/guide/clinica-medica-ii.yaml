@@ -1,0 +1,38 @@
+title: "Clinica Medica II"
+anno_di_corso: "I Anno"
+
+moduli:
+  - nome_modulo: "Clinica Medica II"
+    study_time: "4-5 settimane"
+    exam_type: "Orale"
+    exam_details: |
+      Durata dell'esame: **20-30 minuti**.
+    program: |
+      Non esiste un programma d'esame rigidamente definito. È fondamentale il
+      **ragionamento clinico** sui pazienti: diagnosi differenziale e
+      impostazione della terapia basata sui sintomi.
+    material_tips: |
+      **Sbobine:** fondamentali. Gli argomenti trattati a lezione sono i più
+      chiesti.
+
+      **Libri di testo:** utile il *Rugarli* (specie per Gastroenterologia) o
+      l'*Harrison* (per diagnosi differenziale di tosse, dispnea, febbre, ecc.).
+
+      **Manuali SSM:** molto consigliati per avere quadri esaustivi e schematici.
+
+      È utile fare un ripasso delle cliniche degli anni passati: Cardiologia
+      (es. fibrillazione atriale), Gastroenterologia, Ematologia e Diabete. Non
+      verranno chieste "aritmie strane", ma le basi devono essere solide.
+    professors:
+      - nome: "Bergamaschi"
+        stile: "Unico che fa una vera interrogazione di medicina interna a 360°. Chiede grandi sindromi."
+      - nome: "Corazza"
+        stile: "Parte spesso da un caso clinico. Tranquillo, chiede raramente gastro specifica, ma punta sul ragionamento."
+      - nome: "Di Sabatino"
+        stile: "Chiede tutta la gastroenterologia e i suoi \"pallini\" detti a lezione."
+      - nome: "Lenti"
+        stile: "Gastroenterologia partendo da un sintomo (es. dolore addominale, anemia)."
+      - nome: "Noris"
+        stile: "Paziente. Chiede sintomo e diagnosi differenziale (occhio all'Ematologia)."
+
+ultimo_aggiornamento: 2026-09-10

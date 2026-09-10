@@ -1,40 +1,66 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import SafeMarkdown from '../common/SafeMarkdown.astro';
 
 type GuideData = CollectionEntry<'guide'>['data'];
 
 interface Props {
   title: GuideData['title'];
-  corso_di_laurea: GuideData['corso_di_laurea'];
-  anno_accademico: GuideData['anno_accademico'];
+  anno_di_corso: GuideData['anno_di_corso'];
   cfu_totali: GuideData['cfu_totali'];
   moduli: GuideData['moduli'];
+  link_sbobine_generale: GuideData['link_sbobine_generale'];
+  link_whatsapp_generale: GuideData['link_whatsapp_generale'];
+  descrizione_generale: GuideData['descrizione_generale'];
 }
 
-const { title, corso_di_laurea, anno_accademico, cfu_totali, moduli } = Astro.props;
+const {
+  title,
+  anno_di_corso,
+  cfu_totali,
+  moduli,
+  link_sbobine_generale,
+  link_whatsapp_generale,
+  descrizione_generale,
+} = Astro.props;
+
+const isIntegrato = moduli.length > 1;
 ---
 
 <header class="guide-header">
-  <p class="guide-header__eyebrow">{corso_di_laurea}</p>
+  <p class="guide-header__eyebrow">{anno_di_corso}</p>
   <h1>{title}</h1>
   <dl class="guide-header__meta">
-    <div>
-      <dt>Anno accademico</dt>
-      <dd>{anno_accademico}</dd>
-    </div>
     {cfu_totali && (
       <div>
         <dt>CFU totali</dt>
         <dd>{cfu_totali}</dd>
       </div>
     )}
-    {moduli.length > 1 && (
+    {isIntegrato && (
       <div>
         <dt>Moduli</dt>
         <dd>{moduli.map((m) => m.nome_modulo).join(', ')}</dd>
       </div>
     )}
   </dl>
+
+  {(link_sbobine_generale || link_whatsapp_generale) && (
+    <p class="guide-header__links">
+      {link_sbobine_generale && (
+        <a class="button" href={link_sbobine_generale} target="_blank" rel="noopener noreferrer">Vai alle sbobine</a>
+      )}
+      {link_whatsapp_generale && (
+        <a class="button" href={link_whatsapp_generale} target="_blank" rel="noopener noreferrer">Gruppo WhatsApp</a>
+      )}
+    </p>
+  )}
+
+  {isIntegrato && descrizione_generale && (
+    <div class="guide-header__descrizione">
+      <SafeMarkdown text={descrizione_generale} />
+    </div>
+  )}
 </header>
 
 <style>
@@ -64,5 +90,23 @@ const { title, corso_di_laurea, anno_accademico, cfu_totali, moduli } = Astro.pr
   .guide-header__meta dd {
     margin: 0;
     font-weight: 600;
+  }
+  .guide-header__links {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1rem 0 0;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 0.4rem;
+    background: #0f766e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .guide-header__descrizione {
+    margin-top: 1.25rem;
   }
 </style>

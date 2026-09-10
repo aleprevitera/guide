@@ -11,83 +11,98 @@ interface Props {
 const { modulo } = Astro.props;
 const {
   nome_modulo,
-  docente,
   cfu,
-  tipo_esame,
-  preappello,
-  preappello_note,
-  frequenza_obbligatoria,
-  programma,
-  dove_studiare,
-  per_quanto_tempo_studiare,
-  come_si_svolge_esame,
-  consigli_pratici,
-  domande_argomenti_ricorrenti,
+  semestre,
+  difficolta,
+  exam_type,
+  link_sbobine,
+  link_whatsapp,
+  google_sheet_url,
+  study_time,
+  exam_details,
+  program,
+  material_tips,
+  body,
+  professors,
 } = modulo;
+
+const difficultyColor = !difficolta ? '' : difficolta <= 2 ? '#4caf50' : difficolta === 3 ? '#ff9800' : '#f44336';
+const difficultyWidth = difficolta ? difficolta * 20 : 0;
+
+const hasLinks = link_sbobine || link_whatsapp || google_sheet_url;
 ---
 
 <section class="modulo">
   <h2>{nome_modulo}</h2>
 
   <dl class="modulo__facts">
-    {docente && (
-      <div><dt>Docente</dt><dd>{docente}</dd></div>
-    )}
-    {cfu && (
-      <div><dt>CFU</dt><dd>{cfu}</dd></div>
-    )}
-    <div><dt>Tipo esame</dt><dd class="badge">{tipo_esame}</dd></div>
-    <div>
-      <dt>Preappello</dt>
-      <dd class="badge" class:list={[preappello ? 'badge--yes' : 'badge--no']}>
-        {preappello ? 'Sì' : 'No'}{preappello && preappello_note ? ` — ${preappello_note}` : ''}
-      </dd>
-    </div>
-    <div>
-      <dt>Frequenza obbligatoria</dt>
-      <dd class="badge" class:list={[frequenza_obbligatoria ? 'badge--yes' : 'badge--no']}>
-        {frequenza_obbligatoria ? 'Sì' : 'No'}
-      </dd>
-    </div>
+    {cfu && (<div><dt>CFU</dt><dd class="badge">{cfu}</dd></div>)}
+    {semestre && (<div><dt>Semestre</dt><dd class="badge">{semestre}</dd></div>)}
+    {exam_type && (<div><dt>Tipo esame</dt><dd class="badge">{exam_type}</dd></div>)}
+    {study_time && (<div><dt>Tempo di studio</dt><dd class="badge">{study_time}</dd></div>)}
   </dl>
+
+  {difficolta && (
+    <div class="difficulty">
+      <span class="difficulty__label">Difficoltà</span>
+      <span class="difficulty__track">
+        <span class="difficulty__fill" style={`width:${difficultyWidth}%;background:${difficultyColor}`} />
+      </span>
+      <span class="difficulty__score">{difficolta}/5</span>
+    </div>
+  )}
+
+  {hasLinks && (
+    <p class="modulo__links">
+      {link_sbobine && <a class="button" href={link_sbobine} target="_blank" rel="noopener noreferrer">Sbobine</a>}
+      {link_whatsapp && <a class="button" href={link_whatsapp} target="_blank" rel="noopener noreferrer">Gruppo WhatsApp</a>}
+      {google_sheet_url && <a class="button" href={google_sheet_url} target="_blank" rel="noopener noreferrer">Domande passate</a>}
+    </p>
+  )}
+
+  {exam_details && (
+    <div class="modulo__section">
+      <h3>Modalità d'esame</h3>
+      <SafeMarkdown text={exam_details} />
+    </div>
+  )}
 
   <div class="modulo__section">
     <h3>Programma</h3>
-    <SafeMarkdown text={programma} />
+    <SafeMarkdown text={program} />
   </div>
 
-  {dove_studiare && (
+  {material_tips && (
     <div class="modulo__section">
-      <h3>Dove studiare</h3>
-      <SafeMarkdown text={dove_studiare} />
+      <h3>Consigli e materiale</h3>
+      <SafeMarkdown text={material_tips} />
     </div>
   )}
 
-  {per_quanto_tempo_studiare && (
+  {professors.length > 0 && (
     <div class="modulo__section">
-      <h3>Per quanto tempo studiare</h3>
-      <SafeMarkdown text={per_quanto_tempo_studiare} />
+      <h3>Docenti</h3>
+      <table class="professors">
+        <thead>
+          <tr><th>Docente</th><th>Contatti</th><th>Stile/Domande</th></tr>
+        </thead>
+        <tbody>
+          {professors.map((prof) => (
+            <tr>
+              <td>{prof.nome}</td>
+              <td>{prof.email ? <a href={`mailto:${prof.email}`}>{prof.email}</a> : '—'}</td>
+              <td>{prof.stile || '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )}
 
-  {come_si_svolge_esame && (
+  {body && (
     <div class="modulo__section">
-      <h3>Come si svolge l'esame</h3>
-      <SafeMarkdown text={come_si_svolge_esame} />
-    </div>
-  )}
-
-  {consigli_pratici && (
-    <div class="modulo__section">
-      <h3>Consigli pratici</h3>
-      <SafeMarkdown text={consigli_pratici} />
-    </div>
-  )}
-
-  {domande_argomenti_ricorrenti && (
-    <div class="modulo__section">
-      <h3>Domande e argomenti ricorrenti</h3>
-      <SafeMarkdown text={domande_argomenti_ricorrenti} />
+      <h3>Note extra</h3>
+      <SafeMarkdown text={body} />
     </div>
   )}
 </section>
@@ -101,7 +116,7 @@ const {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem 1.5rem;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1rem;
   }
   .modulo__facts dt {
     font-size: 0.75rem;
@@ -119,13 +134,39 @@ const {
     border-radius: 999px;
     background: #e2e8f0;
   }
-  .badge--yes {
-    background: #dcfce7;
-    color: #166534;
+  .difficulty {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
   }
-  .badge--no {
-    background: #f1f5f9;
-    color: #475569;
+  .difficulty__track {
+    background: #e2e8f0;
+    height: 8px;
+    width: 130px;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .difficulty__fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+  .modulo__links {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .button {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 0.4rem;
+    background: #0f766e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
   }
   .modulo__section {
     margin-bottom: 1.5rem;
@@ -133,5 +174,16 @@ const {
   .modulo__section h3 {
     font-size: 1rem;
     margin: 0 0 0.5rem;
+  }
+  .professors {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .professors th,
+  .professors td {
+    text-align: left;
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid #e2e8f0;
   }
 </style>

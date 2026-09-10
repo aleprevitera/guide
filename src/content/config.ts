@@ -1,59 +1,48 @@
 import { defineCollection, z } from 'astro:content';
 
-// Elenco fisso dei corsi di laurea — deve restare identico all'elenco
-// "options" del widget select in public/admin/config.yml. Modificarlo
-// richiede una PR, non è editabile dai rappresentanti: impedisce
-// categorie improvvisate che romperebbero badge/filtri condizionali.
-export const CORSI_DI_LAUREA = [
-  'Medicina e Chirurgia',
-  'Odontoiatria e Protesi Dentaria',
-  'Infermieristica',
-  'Fisioterapia',
-  'Biotecnologie',
-] as const;
+// Anni di corso — mirror del progetto MkDocs esistente (docs/I_Anno..VI_Anno),
+// dove l'organizzazione del sito è per anno accademico, non per corso di laurea.
+// Deve restare identico all'elenco "options" in public/admin/config.yml.
+export const ANNI_DI_CORSO = ['I Anno', 'II Anno', 'III Anno', 'IV Anno', 'V Anno', 'VI Anno'] as const;
 
-export const TIPI_ESAME = [
-  'Orale',
-  'Scritto',
-  'Scritto e orale',
-  'Progetto/Elaborato',
-  'Altro',
-] as const;
+export const SEMESTRI = ['I', 'II'] as const;
 
+// Allineato 1:1 alle opzioni realmente in uso nel progetto esistente.
+export const TIPI_ESAME = ['Orale', 'Scritto', 'Scritto + Orale'] as const;
+
+const professoreSchema = z.object({
+  nome: z.string().min(1).max(150),
+  email: z.string().email().optional(),
+  stile: z.string().max(500).optional(),
+});
+
+// Un modulo = uno "scheda_esame"/"scheda_modulo" del progetto MkDocs: un esame a
+// modulo singolo ha semplicemente moduli.length === 1 con nome_modulo === title.
 const moduloSchema = z.object({
   nome_modulo: z.string().min(1).max(150),
-  docente: z.string().max(150).optional(),
   cfu: z.number().int().min(1).max(60).optional(),
+  semestre: z.enum(SEMESTRI).optional(),
+  difficolta: z.number().int().min(1).max(5).optional(),
+  exam_type: z.enum(TIPI_ESAME).optional(),
 
-  tipo_esame: z.enum(TIPI_ESAME),
-  preappello: z.boolean().default(false),
-  preappello_note: z.string().max(200).optional(),
-  frequenza_obbligatoria: z.boolean().default(false),
+  link_sbobine: z.string().url().optional(),
+  link_whatsapp: z.string().url().optional(),
+  google_sheet_url: z.string().url().optional(),
+  study_time: z.string().max(100).optional(),
 
   // Sezioni narrative: testo Markdown ristretto (solo bold/italic/liste/link,
   // nessun heading/HTML), sanificato in src/lib/markdown.ts prima del render.
-  programma: z.string().min(1),
-  dove_studiare: z.string().optional(),
-  per_quanto_tempo_studiare: z.string().optional(),
-  come_si_svolge_esame: z.string().optional(),
-  consigli_pratici: z.string().optional(),
-  domande_argomenti_ricorrenti: z.string().optional(),
+  exam_details: z.string().optional(),
+  program: z.string().min(1),
+  material_tips: z.string().optional(),
+  body: z.string().optional(),
+
+  professors: z.array(professoreSchema).default([]),
 });
 
 const infoDaVerificareSchema = z.object({
   campo: z.string().min(1).max(200),
   nota: z.string().optional(),
-});
-
-const contattiSchema = z.object({
-  email: z.string().email().optional(),
-  sito_web: z.string().url().optional(),
-  ufficio: z.string().max(200).optional(),
-});
-
-const linkUtileSchema = z.object({
-  etichetta: z.string().min(1).max(80),
-  url: z.string().url(),
 });
 
 const guideCollection = defineCollection({
@@ -63,17 +52,19 @@ const guideCollection = defineCollection({
   type: 'data',
   schema: z.object({
     title: z.string().min(3).max(150),
-    corso_di_laurea: z.enum(CORSI_DI_LAUREA),
-    anno_accademico: z.string().regex(/^\d{4}\/\d{4}$/, 'Formato atteso: AAAA/AAAA'),
+    anno_di_corso: z.enum(ANNI_DI_CORSO),
     cfu_totali: z.number().int().min(1).max(120).optional(),
+
+    // Rilevanti solo per un esame integrato (moduli.length > 1): link e
+    // descrizione a livello di esame aggregato, equivalenti allo
+    // "scheda_integrato"/index.md del progetto esistente.
+    link_sbobine_generale: z.string().url().optional(),
+    link_whatsapp_generale: z.string().url().optional(),
+    descrizione_generale: z.string().optional(),
 
     moduli: z.array(moduloSchema).min(1),
 
-    calcolo_voto_finale: z.string().optional(),
     info_da_verificare: z.array(infoDaVerificareSchema).default([]),
-
-    contatti: contattiSchema.optional(),
-    link_utili: z.array(linkUtileSchema).default([]),
 
     ultimo_aggiornamento: z.date(),
     aggiornato_da: z.string().max(100).optional(),
