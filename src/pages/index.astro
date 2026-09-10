@@ -10,3 +10,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </p>
   <p><a href="/guide/">Vai all'elenco delle guide →</a></p>
 </BaseLayout>
+
+<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script is:inline>
+  // Gli inviti/recuperi password di Netlify Identity atterrano sulla home
+  // del sito (SITE_URL/#invite_token=...): questo gestore apre il popup di
+  // attivazione e, dopo il login, porta l'utente su /admin/.
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', (user) => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
