@@ -1,0 +1,68 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type GuideData = CollectionEntry<'guide'>['data'];
+
+interface Props {
+  title: GuideData['title'];
+  corso_di_laurea: GuideData['corso_di_laurea'];
+  anno_accademico: GuideData['anno_accademico'];
+  cfu_totali: GuideData['cfu_totali'];
+  moduli: GuideData['moduli'];
+}
+
+const { title, corso_di_laurea, anno_accademico, cfu_totali, moduli } = Astro.props;
+---
+
+<header class="guide-header">
+  <p class="guide-header__eyebrow">{corso_di_laurea}</p>
+  <h1>{title}</h1>
+  <dl class="guide-header__meta">
+    <div>
+      <dt>Anno accademico</dt>
+      <dd>{anno_accademico}</dd>
+    </div>
+    {cfu_totali && (
+      <div>
+        <dt>CFU totali</dt>
+        <dd>{cfu_totali}</dd>
+      </div>
+    )}
+    {moduli.length > 1 && (
+      <div>
+        <dt>Moduli</dt>
+        <dd>{moduli.map((m) => m.nome_modulo).join(', ')}</dd>
+      </div>
+    )}
+  </dl>
+</header>
+
+<style>
+  .guide-header {
+    margin-bottom: 2rem;
+  }
+  .guide-header__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin: 0 0 0.25rem;
+  }
+  .guide-header h1 {
+    margin: 0 0 1rem;
+  }
+  .guide-header__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0;
+  }
+  .guide-header__meta dt {
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+  .guide-header__meta dd {
+    margin: 0;
+    font-weight: 600;
+  }
+</style>

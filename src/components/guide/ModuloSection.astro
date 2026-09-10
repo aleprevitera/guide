@@ -1,0 +1,137 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SafeMarkdown from '../common/SafeMarkdown.astro';
+
+type Modulo = CollectionEntry<'guide'>['data']['moduli'][number];
+
+interface Props {
+  modulo: Modulo;
+}
+
+const { modulo } = Astro.props;
+const {
+  nome_modulo,
+  docente,
+  cfu,
+  tipo_esame,
+  preappello,
+  preappello_note,
+  frequenza_obbligatoria,
+  programma,
+  dove_studiare,
+  per_quanto_tempo_studiare,
+  come_si_svolge_esame,
+  consigli_pratici,
+  domande_argomenti_ricorrenti,
+} = modulo;
+---
+
+<section class="modulo">
+  <h2>{nome_modulo}</h2>
+
+  <dl class="modulo__facts">
+    {docente && (
+      <div><dt>Docente</dt><dd>{docente}</dd></div>
+    )}
+    {cfu && (
+      <div><dt>CFU</dt><dd>{cfu}</dd></div>
+    )}
+    <div><dt>Tipo esame</dt><dd class="badge">{tipo_esame}</dd></div>
+    <div>
+      <dt>Preappello</dt>
+      <dd class="badge" class:list={[preappello ? 'badge--yes' : 'badge--no']}>
+        {preappello ? 'Sì' : 'No'}{preappello && preappello_note ? ` — ${preappello_note}` : ''}
+      </dd>
+    </div>
+    <div>
+      <dt>Frequenza obbligatoria</dt>
+      <dd class="badge" class:list={[frequenza_obbligatoria ? 'badge--yes' : 'badge--no']}>
+        {frequenza_obbligatoria ? 'Sì' : 'No'}
+      </dd>
+    </div>
+  </dl>
+
+  <div class="modulo__section">
+    <h3>Programma</h3>
+    <SafeMarkdown text={programma} />
+  </div>
+
+  {dove_studiare && (
+    <div class="modulo__section">
+      <h3>Dove studiare</h3>
+      <SafeMarkdown text={dove_studiare} />
+    </div>
+  )}
+
+  {per_quanto_tempo_studiare && (
+    <div class="modulo__section">
+      <h3>Per quanto tempo studiare</h3>
+      <SafeMarkdown text={per_quanto_tempo_studiare} />
+    </div>
+  )}
+
+  {come_si_svolge_esame && (
+    <div class="modulo__section">
+      <h3>Come si svolge l'esame</h3>
+      <SafeMarkdown text={come_si_svolge_esame} />
+    </div>
+  )}
+
+  {consigli_pratici && (
+    <div class="modulo__section">
+      <h3>Consigli pratici</h3>
+      <SafeMarkdown text={consigli_pratici} />
+    </div>
+  )}
+
+  {domande_argomenti_ricorrenti && (
+    <div class="modulo__section">
+      <h3>Domande e argomenti ricorrenti</h3>
+      <SafeMarkdown text={domande_argomenti_ricorrenti} />
+    </div>
+  )}
+</section>
+
+<style>
+  .modulo {
+    padding: 1.5rem 0;
+    border-top: 1px solid #e2e8f0;
+  }
+  .modulo__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    margin: 0 0 1.5rem;
+  }
+  .modulo__facts dt {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 0.15rem;
+  }
+  .modulo__facts dd {
+    margin: 0;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    background: #e2e8f0;
+  }
+  .badge--yes {
+    background: #dcfce7;
+    color: #166534;
+  }
+  .badge--no {
+    background: #f1f5f9;
+    color: #475569;
+  }
+  .modulo__section {
+    margin-bottom: 1.5rem;
+  }
+  .modulo__section h3 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+  }
+</style>

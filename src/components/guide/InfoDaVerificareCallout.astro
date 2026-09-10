@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SafeMarkdown from '../common/SafeMarkdown.astro';
+
+type Item = CollectionEntry<'guide'>['data']['info_da_verificare'][number];
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+{items.length > 0 && (
+  <aside class="callout">
+    <h2>⚠️ Informazioni da verificare</h2>
+    <ul>
+      {items.map((item) => (
+        <li>
+          <strong>{item.campo}</strong>
+          {item.nota && <SafeMarkdown text={item.nota} />}
+        </li>
+      ))}
+    </ul>
+  </aside>
+)}
+
+<style>
+  .callout {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid #fbbf24;
+    background: #fffbeb;
+    border-radius: 0.5rem;
+  }
+  .callout h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+    color: #92400e;
+  }
+  .callout ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .callout li {
+    margin-bottom: 0.5rem;
+  }
+  .callout li:last-child {
+    margin-bottom: 0;
+  }
+</style>

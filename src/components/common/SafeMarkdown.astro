@@ -1,0 +1,28 @@
+---
+import { renderRestrictedMarkdown } from '../../lib/markdown';
+
+interface Props {
+  text?: string;
+}
+
+const { text } = Astro.props;
+const html = text ? await renderRestrictedMarkdown(text) : '';
+---
+
+{html && <div class="safe-markdown" set:html={html} />}
+
+<style>
+  .safe-markdown :global(p) {
+    margin: 0 0 0.75em;
+  }
+  .safe-markdown :global(p:last-child) {
+    margin-bottom: 0;
+  }
+  .safe-markdown :global(ul),
+  .safe-markdown :global(ol) {
+    margin: 0 0 0.75em 1.25em;
+  }
+  .safe-markdown :global(a) {
+    color: var(--color-link, #1d4ed8);
+  }
+</style>

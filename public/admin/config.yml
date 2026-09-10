@@ -1,0 +1,177 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Attivato automaticamente da Decap quando gira su localhost (richiede
+# `npm run cms:local` in un secondo terminale); in produzione (Netlify)
+# viene ignorato e si usa git-gateway con Netlify Identity.
+local_backend: true
+
+publish_mode: simple
+
+media_folder: "public/images/guide"
+public_folder: "/images/guide"
+
+collections:
+  - name: "guida"
+    label: "Guide per Esame"
+    label_singular: "Guida"
+    folder: "src/content/guide"
+    create: true
+    delete: false
+    slug: "{{slug}}"
+    identifier_field: title
+    format: "yaml"
+    extension: "yaml"
+
+    fields:
+      - { label: "Nome Esame", name: "title", widget: "string", required: true, pattern: ['^.{3,150}$', "Tra 3 e 150 caratteri"] }
+
+      - label: "Corso di Laurea"
+        name: "corso_di_laurea"
+        widget: "select"
+        required: true
+        options:
+          - "Medicina e Chirurgia"
+          - "Odontoiatria e Protesi Dentaria"
+          - "Infermieristica"
+          - "Fisioterapia"
+          - "Biotecnologie"
+
+      - label: "Anno Accademico"
+        name: "anno_accademico"
+        widget: "string"
+        required: true
+        pattern: ['^\d{4}/\d{4}$', "Formato AAAA/AAAA, es. 2026/2027"]
+        default: "2026/2027"
+
+      - { label: "CFU Totali (facoltativo)", name: "cfu_totali", widget: "number", value_type: "int", min: 1, max: 120, required: false }
+
+      - label: "Moduli"
+        name: "moduli"
+        widget: "list"
+        required: true
+        min: 1
+        summary: "{{nome_modulo}} — {{tipo_esame}}"
+        fields:
+          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true, hint: "Per un esame a modulo unico, ripeti il nome dell'esame." }
+          - { label: "Docente", name: "docente", widget: "string", required: false }
+          - { label: "CFU del modulo (facoltativo)", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
+
+          - label: "Tipo Esame"
+            name: "tipo_esame"
+            widget: "select"
+            required: true
+            options: ["Orale", "Scritto", "Scritto e orale", "Progetto/Elaborato", "Altro"]
+
+          - { label: "Preappello previsto", name: "preappello", widget: "boolean", default: false }
+          - { label: "Note preappello (es. periodo)", name: "preappello_note", widget: "string", required: false }
+          - { label: "Frequenza obbligatoria", name: "frequenza_obbligatoria", widget: "boolean", default: false }
+
+          - label: "Programma"
+            name: "programma"
+            widget: "markdown"
+            required: true
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+            editor_components: []
+            image: false
+
+          - label: "Dove Studiare"
+            name: "dove_studiare"
+            widget: "markdown"
+            required: false
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+            editor_components: []
+            image: false
+
+          - label: "Per Quanto Tempo Studiare"
+            name: "per_quanto_tempo_studiare"
+            widget: "markdown"
+            required: false
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
+            editor_components: []
+            image: false
+
+          - label: "Come si Svolge l'Esame"
+            name: "come_si_svolge_esame"
+            widget: "markdown"
+            required: false
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+            editor_components: []
+            image: false
+
+          - label: "Consigli Pratici"
+            name: "consigli_pratici"
+            widget: "markdown"
+            required: false
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+            editor_components: []
+            image: false
+
+          - label: "Domande e Argomenti Ricorrenti"
+            name: "domande_argomenti_ricorrenti"
+            widget: "markdown"
+            required: false
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
+            editor_components: []
+            image: false
+
+      - label: "Calcolo Voto Finale (se più moduli)"
+        name: "calcolo_voto_finale"
+        widget: "markdown"
+        required: false
+        minimal: true
+        modes: ["rich_text"]
+        buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
+        editor_components: []
+        image: false
+
+      - label: "Informazioni da Verificare"
+        name: "info_da_verificare"
+        widget: "list"
+        required: false
+        summary: "{{campo}}"
+        fields:
+          - { label: "Cosa manca / cosa verificare", name: "campo", widget: "string", required: true }
+          - label: "Dettagli"
+            name: "nota"
+            widget: "markdown"
+            required: false
+            minimal: true
+            modes: ["rich_text"]
+            buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
+            editor_components: []
+            image: false
+
+      - label: "Contatti Docente"
+        name: "contatti"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Email", name: "email", widget: "string", required: false, pattern: ['^[^@\s]+@[^@\s]+\.[^@\s]+$', "Email non valida"] }
+          - { label: "Sito Web", name: "sito_web", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"] }
+          - { label: "Ufficio/Stanza", name: "ufficio", widget: "string", required: false }
+
+      - label: "Link Utili"
+        name: "link_utili"
+        widget: "list"
+        required: false
+        summary: "{{etichetta}}"
+        fields:
+          - { label: "Etichetta", name: "etichetta", widget: "string", required: true }
+          - { label: "URL", name: "url", widget: "string", required: true, pattern: ['^https?://.+', "URL non valido"] }
+
+      - { label: "Ultimo Aggiornamento", name: "ultimo_aggiornamento", widget: "datetime", required: true, format: "YYYY-MM-DD" }
+      - { label: "Aggiornato da (nome, facoltativo)", name: "aggiornato_da", widget: "string", required: false }

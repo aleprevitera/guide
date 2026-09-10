@@ -1,0 +1,23 @@
+---
+interface Props {
+  data: Date;
+  autore?: string;
+}
+
+const { data, autore } = Astro.props;
+const formatted = data.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<p class="ultimo-aggiornamento">
+  Ultimo aggiornamento: {formatted}{autore ? ` — a cura di ${autore}` : ''}
+</p>
+
+<style>
+  .ultimo-aggiornamento {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+</style>

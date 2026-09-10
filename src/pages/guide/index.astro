@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const guide = (await getCollection('guide')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+---
+
+<BaseLayout title="Tutte le guide" description="Elenco delle guide pratiche per esame">
+  <h1>Tutte le guide</h1>
+  <ul class="guide-list">
+    {guide.map((entry) => (
+      <li>
+        <a href={`/guide/${entry.id}/`}>{entry.data.title}</a>
+        <span class="guide-list__meta">{entry.data.corso_di_laurea} · {entry.data.anno_accademico}</span>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  .guide-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .guide-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .guide-list a {
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+  }
+  .guide-list__meta {
+    display: block;
+    font-size: 0.8rem;
+    color: #64748b;
+  }
+</style>
