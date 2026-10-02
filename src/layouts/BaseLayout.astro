@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import pixelifyWoff2 from '@fontsource/pixelify-sans/files/pixelify-sans-latin-700-normal.woff2?url';
+import pixelifyWoff2 from '@fontsource/pixelify-sans/files/pixelify-sans-latin-500-normal.woff2?url';
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
 
@@ -9,9 +9,11 @@ interface Props {
   description?: string;
   aggiornamento?: Date;
   autore?: string;
+  /** Pagine di sviluppo/anteprima: da non indicizzare. */
+  noindex?: boolean;
 }
 
-const { title, description, aggiornamento, autore } = Astro.props;
+const { title, description, aggiornamento, autore, noindex } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,6 +24,7 @@ const { title, description, aggiornamento, autore } = Astro.props;
     <meta name="theme-color" content="#1a1c2c" />
     <title>{title} · Guide Universitarie</title>
     {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="preload" href={pixelifyWoff2} as="font" type="font/woff2" crossorigin />
   </head>
   <body>

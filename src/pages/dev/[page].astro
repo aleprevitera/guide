@@ -1,16 +1,19 @@
 ---
-// Pagine di sviluppo: esistono con `astro dev` ma in build di produzione
-// getStaticPaths non restituisce percorsi, quindi non finiscono in dist/.
+// Pagine di sviluppo: esistono con `astro dev` e nei deploy di anteprima di
+// Netlify (deploy preview delle PR e branch deploy), ma non nella build di
+// produzione: lì getStaticPaths non restituisce percorsi e non finiscono in
+// dist/. Netlify indica il contesto della build nella variabile CONTEXT.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StudyTimeHistogram from '../../components/feedback/StudyTimeHistogram.astro';
 
 export function getStaticPaths() {
-  if (import.meta.env.PROD) return [];
+  const anteprima = ['deploy-preview', 'branch-deploy'].includes(process.env.CONTEXT ?? '');
+  if (import.meta.env.PROD && !anteprima) return [];
   return [{ params: { page: 'istogramma' } }];
 }
 ---
 
-<BaseLayout title="Dev · Istogramma">
+<BaseLayout title="Dev · Istogramma" noindex>
   <h1>Istogramma (dev)</h1>
   <p>Dati finti. Questa pagina non viene generata nella build di produzione.</p>
 

@@ -1,7 +1,7 @@
 /* Font self-hosted (pacchetti @fontsource, solo sottoinsieme latin e pesi usati).
    Pixelify Sans e Silkscreen sono font pixel: solo per titoli ed etichette,
    mai per il corpo del testo. */
-@import '@fontsource/pixelify-sans/latin-700.css';
+@import '@fontsource/pixelify-sans/latin-500.css';
 @import '@fontsource/silkscreen/latin-400.css';
 @import '@fontsource/atkinson-hyperlegible-next/latin-400.css';
 @import '@fontsource/atkinson-hyperlegible-next/latin-700.css';
@@ -20,6 +20,8 @@
   --warn: #ef7d57;
 
   /* Tipografia */
+  /* 500: a 700 gli occhielli (e, a) si chiudono e i titoli diventano macchie. */
+  --title-weight: 500;
   --font-title: 'Pixelify Sans', 'Courier New', monospace;
   --font-label: 'Silkscreen', 'Courier New', monospace;
   --font-body: 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -71,7 +73,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-title);
-  font-weight: 700;
+  font-weight: var(--title-weight);
   line-height: 1.2;
   -webkit-font-smoothing: none;
   -moz-osx-font-smoothing: grayscale;
