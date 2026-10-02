@@ -1,8 +1,10 @@
+id: "g-ra9dqztt"
 title: "Psichiatria"
 anno_di_corso: "V Anno"
 
 moduli:
   - nome_modulo: "Psichiatria"
+    id: "m-0v8s8vwa"
     cfu: 5
     semestre: "I"
     difficolta: 3

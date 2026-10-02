@@ -1,0 +1,306 @@
+/* Font self-hosted (pacchetti @fontsource, solo sottoinsieme latin e pesi usati).
+   Pixelify Sans e Silkscreen sono font pixel: solo per titoli ed etichette,
+   mai per il corpo del testo. */
+@import '@fontsource/pixelify-sans/latin-700.css';
+@import '@fontsource/silkscreen/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-700.css';
+
+:root {
+  /* Palette */
+  --bg: #1a1c2c;
+  --text: #f4f4f4;
+  --text-2: #c9d6e2;
+  --caption: #94b0c2;
+  --panel: #29366f;
+  --chip: #333c57;
+  --border-off: #566c86;
+  --accent: #ffcd75;
+  --you: #a7f070;
+  --warn: #ef7d57;
+
+  /* Tipografia */
+  --font-title: 'Pixelify Sans', 'Courier New', monospace;
+  --font-label: 'Silkscreen', 'Courier New', monospace;
+  --font-body: 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Unità "pixel" del sito: ogni misura è un suo multiplo intero, così
+     bordi, blocchi e saltelli cadono sempre sulla griglia dello schermo. */
+  --px: 4px;
+
+  /* Silkscreen è una bitmap su griglia 8: nitida solo a multipli di 8px. */
+  --label-size: 16px;
+
+  /* Pixelify Sans non ha una griglia rigida (aste ~88/1000 em): queste
+     misure fanno valere l'asta circa 2px / 3px / 4px. */
+  --h2-size: 23px;
+  --h1-size: 34px;
+
+  color-scheme: dark;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --h1-size: 45px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: 700;
+  line-height: 1.2;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  color: var(--accent);
+  margin: 32px 0 12px;
+}
+
+h3 {
+  font-size: var(--h2-size);
+  margin: 24px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+strong {
+  color: var(--text);
+}
+
+/* ---------- Layout ---------- */
+
+.site-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* Destinazione dello skip link: riceve il focus ma non serve il contorno. */
+.site-main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -100px;
+  z-index: 10;
+  padding: 12px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Primitive pixel ---------- */
+
+/* Etichetta: Silkscreen, maiuscolo, antialiasing spento, nessun kerning. */
+.label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-kerning: none;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+/* Bordo "a scalini": quattro ombre piene senza blur lasciano vuoti gli
+   angoli, che è proprio il gradino della pixel art. Le ombre sporgono di
+   4px, da qui il margine laterale. */
+.px-border {
+  --px-c: var(--text);
+  margin-left: var(--px);
+  margin-right: var(--px);
+  box-shadow:
+    calc(var(--px) * -1) 0 0 0 var(--px-c),
+    var(--px) 0 0 0 var(--px-c),
+    0 calc(var(--px) * -1) 0 0 var(--px-c),
+    0 var(--px) 0 0 var(--px-c);
+}
+
+.px-border--off {
+  --px-c: var(--border-off);
+}
+
+.px-border--warn {
+  --px-c: var(--warn);
+}
+
+.panel {
+  background: var(--panel);
+  padding: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  margin: 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--chip);
+  color: var(--text);
+}
+
+.chip--accent {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Pulsanti e link-pulsante: target minimo 44px, spostamenti a scatti di
+   2px (hover su, active giù). */
+.btn-px {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 16px;
+  background: var(--chip);
+  color: var(--text);
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 80ms steps(1, end);
+}
+
+.btn-px:hover {
+  transform: translateY(-2px);
+}
+
+.btn-px:active {
+  transform: translateY(2px);
+}
+
+.btn-px--accent {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px var(--px);
+}
+
+/* ---------- Modalità contrasto elevato ---------- */
+/* In forced-colors i box-shadow vengono rimossi: servono bordi veri. */
+@media (forced-colors: active) {
+  .px-border,
+  .chip,
+  .btn-px {
+    outline: 2px solid CanvasText;
+    outline-offset: 0;
+  }
+  .btn-px:focus-visible,
+  a:focus-visible {
+    outline: 3px solid Highlight;
+  }
+}
+
+/* ---------- Movimento ridotto ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .btn-px:hover,
+  .btn-px:active {
+    transform: none;
+  }
+}

@@ -1,3 +1,4 @@
+id: "g-8u01rdat"
 title: "Oncologia e Diagnostica per Immagini"
 anno_di_corso: "IV Anno"
 
@@ -8,6 +9,7 @@ descrizione_generale: |
 
 moduli:
   - nome_modulo: "Oncologia"
+    id: "m-4ewf06rv"
     exam_type: "Orale"
     study_time: "circa 1 mese"
     exam_details: |
@@ -57,6 +59,7 @@ moduli:
     professors: []
 
   - nome_modulo: "Diagnostica per immagini"
+    id: "m-t588av4v"
     exam_type: "Scritto"
     study_time: "10 giorni (minimo) — 1 mese (preparazione completa)"
     exam_details: |

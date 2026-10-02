@@ -1,0 +1,110 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type Modulo = CollectionEntry<'guide'>['data']['moduli'][number];
+
+interface Props {
+  modulo: Modulo;
+}
+
+const { modulo } = Astro.props;
+
+// Solo le righe con un dato: nessun "—" segnaposto.
+const righe: { etichetta: string; valore: string }[] = [];
+const add = (etichetta: string, valore: string | number | undefined) => {
+  if (valore !== undefined && valore !== '') righe.push({ etichetta, valore: String(valore) });
+};
+
+add("Tipo d'esame", modulo.exam_type);
+add('Docenti', modulo.professors.map((p) => p.nome).join(', ') || undefined);
+add('Preappello', modulo.preappello);
+add('Durata orale', modulo.durata_orale_min ? `${modulo.durata_orale_min} min circa` : undefined);
+add('Frequenza', modulo.frequenza);
+add('Tempo stimato', modulo.study_time ?? modulo.fascia_studio);
+add('CFU', modulo.cfu);
+add('Semestre', modulo.semestre);
+
+const difficolta = modulo.difficolta;
+---
+
+{(righe.length > 0 || difficolta) && (
+  <section class="scheda panel px-border" aria-label="Scheda esame">
+    <p class="scheda__titolo label">Scheda esame</p>
+    <dl class="scheda__dl">
+      {righe.map((r) => (
+        <div class="scheda__riga">
+          <dt class="label">{r.etichetta}</dt>
+          <dd>{r.valore}</dd>
+        </div>
+      ))}
+      {difficolta && (
+        <div class="scheda__riga">
+          <dt class="label">Difficoltà</dt>
+          <dd class="difficolta">
+            <span class="difficolta__blocchi" aria-hidden="true">
+              {[1, 2, 3, 4, 5].map((n) => <span class:list={['blocco', { 'blocco--on': n <= difficolta }]} />)}
+            </span>
+            <span>{difficolta}/5</span>
+          </dd>
+        </div>
+      )}
+    </dl>
+  </section>
+)}
+
+<style>
+  .scheda__titolo {
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  .scheda__dl {
+    margin: 0;
+  }
+  .scheda__riga {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 16px;
+    padding: 8px 0;
+    border-top: 4px solid var(--bg);
+  }
+  .scheda__riga:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  @media (min-width: 480px) {
+    .scheda__riga {
+      grid-template-columns: 168px 1fr;
+      align-items: baseline;
+    }
+  }
+  .scheda__riga dt {
+    color: var(--caption);
+  }
+  .scheda__riga dd {
+    margin: 0;
+    color: var(--text);
+  }
+  .difficolta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .difficolta__blocchi {
+    display: inline-flex;
+    gap: 4px;
+  }
+  .blocco {
+    width: 12px;
+    height: 12px;
+    background: var(--bg);
+    box-shadow: inset 0 0 0 2px var(--border-off);
+  }
+  .blocco--on {
+    background: var(--accent);
+    box-shadow: none;
+  }
+  @media (forced-colors: active) {
+    .blocco { outline: 1px solid CanvasText; }
+    .blocco--on { background: CanvasText; }
+  }
+</style>

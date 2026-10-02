@@ -2,35 +2,30 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import GuideHeader from '../components/guide/GuideHeader.astro';
+import ModuliTabs from '../components/guide/ModuliTabs.astro';
 import ModuloSection from '../components/guide/ModuloSection.astro';
 import InfoDaVerificareCallout from '../components/guide/InfoDaVerificareCallout.astro';
-import UltimoAggiornamento from '../components/guide/UltimoAggiornamento.astro';
+import { moduloAnchor } from '../lib/ids';
 
 interface Props {
   data: CollectionEntry<'guide'>['data'];
 }
 
 const { data } = Astro.props;
+const isIntegrato = data.moduli.length > 1;
+const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(modulo.id, i) }));
 ---
 
-<BaseLayout title={data.title}>
+<BaseLayout title={data.title} description={data.sottotitolo} aggiornamento={data.ultimo_aggiornamento} autore={data.aggiornato_da}>
   <article class="guide">
-    <GuideHeader
-      title={data.title}
-      anno_di_corso={data.anno_di_corso}
-      cfu_totali={data.cfu_totali}
-      moduli={data.moduli}
-      link_sbobine_generale={data.link_sbobine_generale}
-      link_whatsapp_generale={data.link_whatsapp_generale}
-      descrizione_generale={data.descrizione_generale}
-    />
+    <GuideHeader data={data} />
 
-    {data.moduli.map((modulo) => (
-      <ModuloSection modulo={modulo} />
+    {isIntegrato && <ModuliTabs moduli={moduli.map((m) => ({ nome: m.modulo.nome_modulo, anchor: m.anchor }))} />}
+
+    {moduli.map(({ modulo, anchor }) => (
+      <ModuloSection modulo={modulo} anchor={anchor} mostraNome={isIntegrato} />
     ))}
 
     <InfoDaVerificareCallout items={data.info_da_verificare} />
-
-    <UltimoAggiornamento data={data.ultimo_aggiornamento} autore={data.aggiornato_da} />
   </article>
 </BaseLayout>

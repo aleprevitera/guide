@@ -21,5 +21,50 @@
         });
       }
     </script>
+    <script>
+      // Widget "readonly-id": id stabile per guide e moduli (es. g-ab12cd34).
+      // Se il campo è vuoto genera un id casuale con il prefisso indicato in
+      // config.yml ("prefix"); se esiste già lo mostra in sola lettura, così
+      // non può essere modificato dall'interfaccia. Formato verificato anche
+      // dallo schema Astro (src/content/config.ts), che in build segnala id
+      // duplicati (es. entry duplicata con "Duplica").
+      (function () {
+        var ALPHABET = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+        function generateId(prefix) {
+          var bytes = new Uint8Array(8);
+          window.crypto.getRandomValues(bytes);
+          var out = '';
+          for (var i = 0; i < bytes.length; i++) out += ALPHABET[bytes[i] % ALPHABET.length];
+          return prefix + '-' + out;
+        }
+
+        var ReadonlyIdControl = createClass({
+          componentDidMount: function () {
+            if (!this.props.value) {
+              this.props.onChange(generateId(this.props.field.get('prefix') || 'x'));
+            }
+          },
+          render: function () {
+            return h('input', {
+              id: this.props.forID,
+              className: this.props.classNameWrapper,
+              type: 'text',
+              value: this.props.value || '',
+              readOnly: true,
+              style: { fontFamily: 'monospace', opacity: 0.8 },
+            });
+          },
+        });
+
+        var ReadonlyIdPreview = createClass({
+          render: function () {
+            return h('code', {}, this.props.value || '');
+          },
+        });
+
+        CMS.registerWidget('readonly-id', ReadonlyIdControl, ReadonlyIdPreview);
+      })();
+    </script>
   </body>
 </html>

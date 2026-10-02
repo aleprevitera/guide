@@ -32,7 +32,10 @@ collections:
         field: anno_di_corso
 
     fields:
+      - { label: "ID (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "g", required: false, hint: "Identificativo stabile della guida: viene generato da solo e non cambia mai, anche se rinomini l'esame." }
       - { label: "Nome Esame", name: "title", widget: "string", required: true, pattern: ['^.{3,150}$', "Tra 3 e 150 caratteri"] }
+
+      - { label: "Sottotitolo (facoltativo)", name: "sottotitolo", widget: "string", required: false, pattern: ['^.{0,200}$', "Massimo 200 caratteri"], hint: "Una riga sotto il titolo, es. \"Esame integrato del IV anno\"" }
 
       - label: "Anno di Corso"
         name: "anno_di_corso"
@@ -73,6 +76,7 @@ collections:
         hint: "Per un esame a modulo unico, aggiungi un solo modulo con nome uguale al Nome Esame."
         fields:
           - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true }
+          - { label: "ID modulo (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "m", required: false }
           - { label: "CFU", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
 
           - label: "Semestre"
@@ -97,6 +101,28 @@ collections:
           - { label: "Link Gruppo WhatsApp", name: "link_whatsapp", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link di invito al gruppo" }
           - { label: "Link Google Sheet Domande", name: "google_sheet_url", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link pubblico al foglio con le domande passate" }
           - { label: "Tempo di Studio", name: "study_time", widget: "string", required: false, hint: "Es. 2-3 settimane" }
+
+          - label: "Fascia tempo di studio (stima)"
+            name: "fascia_studio"
+            widget: "select"
+            required: false
+            options: ["< 1 sett", "1–2 sett", "3–4 sett", "5–8 sett", "> 8 sett"]
+            hint: "La stessa stima di \"Tempo di Studio\", ricondotta a una fascia."
+
+          - label: "Preappello"
+            name: "preappello"
+            widget: "select"
+            required: false
+            options: ["Sì", "No"]
+            hint: "Lascia vuoto se non lo sai."
+
+          - label: "Frequenza"
+            name: "frequenza"
+            widget: "select"
+            required: false
+            options: ["Obbligatoria", "Consigliata", "Facoltativa"]
+
+          - { label: "Durata orale (minuti)", name: "durata_orale_min", widget: "number", value_type: "int", min: 1, max: 240, required: false, hint: "Durata indicativa dell'orale per studente" }
 
           - label: "Modalità d'Esame"
             name: "exam_details"

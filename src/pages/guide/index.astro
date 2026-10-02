@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ANNI_DI_CORSO } from '../../content/config';
+import { cfuGuida, tempoBreve, tipiEsame } from '../../lib/guide';
 
 const guide = await getCollection('guide');
 
@@ -9,22 +10,35 @@ const gruppi = ANNI_DI_CORSO.map((anno) => ({
   anno,
   entries: guide
     .filter((entry) => entry.data.anno_di_corso === anno)
-    .sort((a, b) => a.data.title.localeCompare(b.data.title)),
+    .sort((a, b) => a.data.title.localeCompare(b.data.title))
+    .map((entry) => ({
+      href: `/guide/${entry.id}/`,
+      title: entry.data.title,
+      cfu: cfuGuida(entry.data),
+      tipi: tipiEsame(entry.data),
+      tempo: tempoBreve(entry.data),
+      moduli: entry.data.moduli.length,
+    })),
 })).filter((gruppo) => gruppo.entries.length > 0);
 ---
 
 <BaseLayout title="Tutte le guide" description="Elenco delle guide pratiche per esame">
   <h1>Tutte le guide</h1>
   {gruppi.map((gruppo) => (
-    <section class="anno-group">
-      <h2>{gruppo.anno}</h2>
+    <section class="anno" aria-labelledby={`anno-${gruppo.anno}`}>
+      <h2 class="anno__titolo label" id={`anno-${gruppo.anno}`}>{gruppo.anno}</h2>
       <ul class="guide-list">
-        {gruppo.entries.map((entry) => (
+        {gruppo.entries.map((g) => (
           <li>
-            <a href={`/guide/${entry.id}/`}>{entry.data.title}</a>
-            {entry.data.moduli.length > 1 && (
-              <span class="guide-list__meta">{entry.data.moduli.length} moduli</span>
-            )}
+            <a class="guida panel px-border" href={g.href}>
+              <span class="guida__titolo">{g.title}</span>
+              <span class="chips label">
+                {g.cfu && <span class="chip">{g.cfu} CFU</span>}
+                {g.tipi.map((t) => <span class="chip">{t}</span>)}
+                {g.tempo && <span class="chip">{g.tempo}</span>}
+                {g.moduli > 1 && <span class="chip">{g.moduli} moduli</span>}
+              </span>
+            </a>
           </li>
         ))}
       </ul>
@@ -33,15 +47,12 @@ const gruppi = ANNI_DI_CORSO.map((anno) => ({
 </BaseLayout>
 
 <style>
-  .anno-group {
-    margin-bottom: 2rem;
+  .anno {
+    margin-bottom: 32px;
   }
-  .anno-group h2 {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #64748b;
-    margin: 0 0 0.5rem;
+  .anno__titolo {
+    color: var(--caption);
+    margin: 0 0 8px;
   }
   .guide-list {
     list-style: none;
@@ -49,17 +60,35 @@ const gruppi = ANNI_DI_CORSO.map((anno) => ({
     padding: 0;
   }
   .guide-list li {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid #e2e8f0;
+    margin: 0;
   }
-  .guide-list a {
-    font-weight: 600;
+  .guida {
+    display: block;
+    min-height: 44px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    color: var(--text);
     text-decoration: none;
-    color: inherit;
+    transition: transform 80ms steps(1, end);
   }
-  .guide-list__meta {
-    margin-left: 0.5rem;
-    font-size: 0.8rem;
-    color: #64748b;
+  .guida:hover {
+    transform: translateY(-2px);
+    --px-c: var(--accent);
+  }
+  .guida:active {
+    transform: translateY(2px);
+  }
+  .guida__titolo {
+    display: block;
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: var(--h2-size);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .guida .chips {
+    margin: 0;
   }
 </style>

@@ -1,3 +1,4 @@
+id: "g-qjcg8has"
 title: "Ginecologia e Ostetricia"
 anno_di_corso: "VI Anno"
 cfu_totali: 9
@@ -12,11 +13,13 @@ descrizione_generale: |
 
 moduli:
   - nome_modulo: "Ginecologia e Ostetricia"
+    id: "m-oc7rmh1w"
     cfu: 8
     exam_type: "Orale"
     program: |
       Programma da confermare — vedi sezione "Da verificare".
   - nome_modulo: "Genetica"
+    id: "m-ldm3iupg"
     cfu: 1
     exam_type: "Scritto"
     exam_details: |

@@ -13,16 +13,23 @@ const html = text ? await renderRestrictedMarkdown(text) : '';
 
 <style>
   .safe-markdown :global(p) {
-    margin: 0 0 0.75em;
+    margin: 0 0 12px;
   }
-  .safe-markdown :global(p:last-child) {
+  .safe-markdown :global(p:last-child),
+  .safe-markdown :global(ul:last-child),
+  .safe-markdown :global(ol:last-child) {
     margin-bottom: 0;
   }
   .safe-markdown :global(ul),
   .safe-markdown :global(ol) {
-    margin: 0 0 0.75em 1.25em;
+    margin: 0 0 12px;
+    padding-left: 24px;
+  }
+  .safe-markdown :global(ul) {
+    list-style-type: square;
   }
   .safe-markdown :global(a) {
-    color: var(--color-link, #1d4ed8);
+    color: var(--accent);
+    overflow-wrap: anywhere;
   }
 </style>

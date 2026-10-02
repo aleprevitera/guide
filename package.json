@@ -11,6 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/atkinson-hyperlegible-next": "^5.3.0",
+    "@fontsource/pixelify-sans": "^5.3.0",
+    "@fontsource/silkscreen": "^5.3.0",
     "astro": "^5.1.0",
     "rehype-sanitize": "^6.0.0",
     "rehype-stringify": "^10.0.0",

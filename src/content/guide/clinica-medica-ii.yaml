@@ -1,8 +1,10 @@
+id: "g-m8g8n3g2"
 title: "Clinica Medica II"
 anno_di_corso: "I Anno"
 
 moduli:
   - nome_modulo: "Clinica Medica II"
+    id: "m-c2anv9sl"
     study_time: "4-5 settimane"
     exam_type: "Orale"
     exam_details: |

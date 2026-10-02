@@ -10,6 +10,21 @@ export const SEMESTRI = ['I', 'II'] as const;
 // Allineato 1:1 alle opzioni realmente in uso nel progetto esistente.
 export const TIPI_ESAME = ['Orale', 'Scritto', 'Scritto + Orale'] as const;
 
+export const FREQUENZE = ['Obbligatoria', 'Consigliata', 'Facoltativa'] as const;
+
+// Fasce del tempo di studio: stima del rappresentante (fascia_studio) e
+// fasce di voto dell'istogramma. Deve restare identico alle "options" di
+// fascia_studio in public/admin/config.yml.
+export const FASCE_STUDIO = ['< 1 sett', '1–2 sett', '3–4 sett', '5–8 sett', '> 8 sett'] as const;
+export type FasciaStudio = (typeof FASCE_STUDIO)[number];
+
+// Id stabili e immutabili, distinti da titolo e slug: servono ad agganciare
+// dati esterni (es. i feedback) anche se una guida viene rinominata.
+// Generati dal widget "readonly-id" di Decap (public/admin/index.html).
+// Opzionali solo per compatibilità; l'unicità è verificata in build.
+export const GUIDA_ID = /^g-[a-z0-9]{8}$/;
+export const MODULO_ID = /^m-[a-z0-9]{8}$/;
+
 const professoreSchema = z.object({
   nome: z.string().min(1).max(150),
   email: z.string().email().optional(),
@@ -19,6 +34,7 @@ const professoreSchema = z.object({
 // Un modulo = uno "scheda_esame"/"scheda_modulo" del progetto MkDocs: un esame a
 // modulo singolo ha semplicemente moduli.length === 1 con nome_modulo === title.
 const moduloSchema = z.object({
+  id: z.string().regex(MODULO_ID).optional(),
   nome_modulo: z.string().min(1).max(150),
   cfu: z.number().int().min(1).max(60).optional(),
   semestre: z.enum(SEMESTRI).optional(),
@@ -29,6 +45,12 @@ const moduloSchema = z.object({
   link_whatsapp: z.string().url().optional(),
   google_sheet_url: z.string().url().optional(),
   study_time: z.string().max(100).optional(),
+
+  // Scheda esame (tutti facoltativi; in pagina compaiono solo se presenti).
+  preappello: z.enum(['Sì', 'No']).optional(),
+  frequenza: z.enum(FREQUENZE).optional(),
+  durata_orale_min: z.number().int().min(1).max(240).optional(),
+  fascia_studio: z.enum(FASCE_STUDIO).optional(),
 
   // Sezioni narrative: testo Markdown ristretto (solo bold/italic/liste/link,
   // nessun heading/HTML), sanificato in src/lib/markdown.ts prima del render.
@@ -51,7 +73,9 @@ const guideCollection = defineCollection({
   // questi campi attraverso i componenti fissi del layout.
   type: 'data',
   schema: z.object({
+    id: z.string().regex(GUIDA_ID).optional(),
     title: z.string().min(3).max(150),
+    sottotitolo: z.string().max(200).optional(),
     anno_di_corso: z.enum(ANNI_DI_CORSO),
     cfu_totali: z.number().int().min(1).max(120).optional(),
 
