@@ -3,7 +3,7 @@
 //
 // Due modalità:
 //   - collegata (prop `moduloId`): conteggi e voto letti/scritti su Supabase
-//     dal browser; per votare serve l'accesso con codice via email
+//     dal browser; per votare serve l'accesso con Google con l'account
 //     istituzionale (@universitadipavia.it).
 //   - statica (props `counts` + `totale`): solo UI, usata da /dev/istogramma.
 import { FASCE_STUDIO, type FasciaStudio } from '../../lib/fasce';
@@ -89,48 +89,10 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
 
     {live && (
       <div class="accesso" data-accesso hidden>
-        <form class="accesso__passo" data-passo-email novalidate>
-          <label class="label" for={`${uid}-email`}>Email istituzionale</label>
-          <p class="accesso__aiuto" id={`${uid}-email-aiuto`}>Ti mandiamo un codice per confermare che sei uno studente.</p>
-          <div class="accesso__riga">
-            <input
-              class="accesso__input"
-              id={`${uid}-email`}
-              name="email"
-              type="email"
-              inputmode="email"
-              autocomplete="email"
-              autocapitalize="off"
-              spellcheck="false"
-              placeholder="nome.cognome@universitadipavia.it"
-              aria-describedby={`${uid}-email-aiuto`}
-              required
-            />
-            <button type="submit" class="btn-px btn-px--accent label">Invia codice</button>
-          </div>
-        </form>
-        <form class="accesso__passo" data-passo-codice novalidate hidden>
-          <label class="label" for={`${uid}-codice`}>Codice ricevuto</label>
-          <p class="accesso__aiuto" id={`${uid}-codice-aiuto`}>
-            Controlla la posta di <strong data-email-inviata></strong> (anche lo spam).
-          </p>
-          <div class="accesso__riga">
-            <input
-              class="accesso__input accesso__input--codice"
-              id={`${uid}-codice`}
-              name="codice"
-              type="text"
-              inputmode="numeric"
-              autocomplete="one-time-code"
-              pattern="[0-9]*"
-              maxlength="10"
-              aria-describedby={`${uid}-codice-aiuto`}
-              required
-            />
-            <button type="submit" class="btn-px btn-px--accent label">Conferma</button>
-          </div>
-          <button type="button" class="voto__link" data-cambia-email>Usa un'altra email</button>
-        </form>
+        <p class="accesso__testo">
+          Per votare accedi con il tuo account <strong>@universitadipavia.it</strong>: serve solo a garantire un voto per studente.
+        </p>
+        <button type="button" class="btn-px btn-px--accent label" data-accedi>Accedi con Google</button>
       </div>
     )}
 
@@ -216,6 +178,8 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   if (liveHists.length > 0) {
     // Il client Supabase è in un chunk separato, caricato solo dove serve.
     const sb = import('../../lib/supabase');
+    const PENDING_KEY = 'guide:voto-in-sospeso';
+    type Pending = { moduloId: string; fascia: FasciaStudio; anchor: string };
     let session: Session | null = null;
 
     const stato = (hist: HTMLElement, msg: string) => ($(hist, '[data-stato]').textContent = msg);
@@ -263,32 +227,53 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       }
     }
 
-    function mostraAccesso(hist: HTMLElement, fascia: FasciaStudio) {
-      hist.dataset.inSospeso = fascia;
-      premuto(hist, fascia);
-      const box = $(hist, '[data-accesso]');
-      box.hidden = false;
-      stato(hist, 'Per votare accedi con la tua email istituzionale.');
-      const passoCodice = $(box, '[data-passo-codice]');
-      $<HTMLInputElement>(box, passoCodice.hidden ? 'input[name=email]' : 'input[name=codice]').focus();
+    function leggiPending(): Pending | null {
+      try {
+        const p = JSON.parse(sessionStorage.getItem(PENDING_KEY) ?? 'null');
+        sessionStorage.removeItem(PENDING_KEY);
+        return p && isFascia(p.fascia) ? p : null;
+      } catch {
+        return null;
+      }
     }
 
     (async () => {
       const { supabase, DOMINIO_ATENEO } = await sb;
+
+      // Al ritorno da Google il client scambia il ?code= con la sessione
+      // (PKCE) durante l'inizializzazione; getSession() la attende.
       session = (await supabase.auth.getSession()).data.session;
+
+      // Ripulisce l'URL dai parametri del login, mostrando l'eventuale errore
+      // (es. account rifiutato dall'hook perché non d'ateneo).
+      const url = new URL(location.href);
+      const erroreLogin = url.searchParams.get('error_description');
+      if (['code', 'error', 'error_code', 'error_description'].some((k) => url.searchParams.has(k))) {
+        ['code', 'error', 'error_code', 'error_description'].forEach((k) => url.searchParams.delete(k));
+        history.replaceState(null, '', url);
+      }
+
+      if (session && !(session.user.email ?? '').toLowerCase().endsWith(`@${DOMINIO_ATENEO}`)) {
+        // Non dovrebbe accadere (hook lato Auth + RLS), ma non lasciamo
+        // aperta una sessione con un account non ammesso.
+        await supabase.auth.signOut();
+        session = null;
+      }
       aggiornaAccount();
 
+      const pending = leggiPending();
+
       for (const hist of liveHists) {
-        const box = $(hist, '[data-accesso]');
-        const passoEmail = $<HTMLFormElement>(box, '[data-passo-email]');
-        const passoCodice = $<HTMLFormElement>(box, '[data-passo-codice]');
-        const inputEmail = $<HTMLInputElement>(passoEmail, 'input[name=email]');
-        const inputCodice = $<HTMLInputElement>(passoCodice, 'input[name=codice]');
-        let email = '';
+        const moduloId = hist.dataset.modulo!;
+        const daVotare = session && pending?.moduloId === moduloId ? pending.fascia : null;
+
+        if (erroreLogin && pending?.moduloId === moduloId) {
+          stato(hist, `Accesso non riuscito. Usa un account @${DOMINIO_ATENEO}.`);
+        }
 
         animaQuandoVisibile(
           hist,
-          carica(hist).catch(() => {
+          (daVotare ? vota(hist, daVotare) : carica(hist)).catch(() => {
             $(hist, '[data-totale]').textContent = 'Voti non disponibili';
             stato(hist, 'Al momento non è possibile caricare i voti.');
           }),
@@ -297,64 +282,40 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
         hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
           btn.addEventListener('click', () => {
             const fascia = btn.dataset.voto as FasciaStudio;
-            if (session) vota(hist, fascia);
-            else mostraAccesso(hist, fascia);
+            if (session) {
+              vota(hist, fascia);
+              return;
+            }
+            hist.dataset.inSospeso = fascia;
+            premuto(hist, fascia);
+            $(hist, '[data-accesso]').hidden = false;
+            stato(hist, '');
+            $(hist, '[data-accedi]').focus();
           });
         });
 
-        // Passo 1: email → codice via mail.
-        passoEmail.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          email = inputEmail.value.trim().toLowerCase();
-          if (!email.endsWith(`@${DOMINIO_ATENEO}`)) {
-            stato(hist, `Serve un indirizzo @${DOMINIO_ATENEO}.`);
-            inputEmail.focus();
-            return;
-          }
-          stato(hist, 'Invio del codice…');
-          const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
-          if (error) {
-            stato(hist, error.status === 429 ? 'Troppe richieste: riprova tra qualche minuto.' : 'Non è stato possibile inviare il codice. Riprova.');
-            return;
-          }
-          $(passoCodice, '[data-email-inviata]').textContent = email;
-          passoEmail.hidden = true;
-          passoCodice.hidden = false;
-          stato(hist, 'Codice inviato.');
-          inputCodice.focus();
-        });
-
-        // Passo 2: codice → sessione → voto in sospeso.
-        passoCodice.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const token = inputCodice.value.replace(/\s/g, '');
-          if (!/^\d{6,10}$/.test(token)) {
-            stato(hist, 'Inserisci il codice numerico ricevuto via email.');
-            inputCodice.focus();
-            return;
-          }
-          stato(hist, 'Verifica del codice…');
-          const { data, error } = await supabase.auth.verifyOtp({ email, token, type: 'email' });
-          if (error || !data.session) {
-            stato(hist, 'Codice non valido o scaduto. Controlla o richiedine uno nuovo.');
-            inputCodice.select();
-            return;
-          }
-          session = data.session;
-          inputCodice.value = '';
-          aggiornaAccount();
+        $(hist, '[data-accedi]').addEventListener('click', async () => {
           const fascia = hist.dataset.inSospeso;
-          delete hist.dataset.inSospeso;
-          if (isFascia(fascia)) await vota(hist, fascia);
-          // Gli altri istogrammi della pagina mostrano ora anche il proprio voto.
-          liveHists.filter((h) => h !== hist).forEach((h) => carica(h).catch(() => {}));
-        });
-
-        $(passoCodice, '[data-cambia-email]').addEventListener('click', () => {
-          passoCodice.hidden = true;
-          passoEmail.hidden = false;
-          stato(hist, '');
-          inputEmail.focus();
+          // Il voto scelto sopravvive al giro su Google in sessionStorage.
+          if (isFascia(fascia)) {
+            const anchor = hist.closest<HTMLElement>('[data-modulo-panel]')?.id ?? '';
+            try {
+              sessionStorage.setItem(PENDING_KEY, JSON.stringify({ moduloId, fascia, anchor } satisfies Pending));
+            } catch {
+              /* senza storage il voto andrà ripetuto dopo l'accesso */
+            }
+          }
+          stato(hist, 'Apertura di Google…');
+          const { error } = await supabase.auth.signInWithOAuth({
+            provider: 'google',
+            options: {
+              redirectTo: location.origin + location.pathname,
+              // Suggerisce a Google gli account del dominio d'ateneo; il
+              // vincolo vero è lato server (hook Auth + RLS).
+              queryParams: { hd: DOMINIO_ATENEO, prompt: 'select_account' },
+            },
+          });
+          if (error) stato(hist, 'Non è stato possibile avviare l’accesso con Google.');
         });
 
         $(hist, '[data-esci]').addEventListener('click', async () => {
@@ -366,6 +327,11 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
             carica(h).catch(() => {});
           });
         });
+      }
+
+      // Riporta lo studente al modulo da cui aveva votato (schede dei moduli).
+      if (pending?.anchor && location.hash.slice(1) !== pending.anchor) {
+        location.hash = pending.anchor;
       }
     })();
   }
@@ -530,49 +496,15 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     .voto__btn[aria-pressed='true'] { outline: 4px solid Highlight; }
   }
 
-  /* --- Accesso con codice via email --- */
+  /* --- Accesso con Google --- */
   .accesso {
     margin-top: 16px;
     padding: 12px;
     background: var(--bg);
   }
-  .accesso__passo > label {
-    display: block;
-    color: var(--accent);
-  }
-  .accesso__aiuto {
+  .accesso__testo {
     color: var(--text-2);
-    font-size: 14px;
-    margin: 4px 0 8px;
-  }
-  .accesso__riga {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .accesso__input {
-    flex: 1 1 200px;
-    min-width: 0;
-    min-height: 44px;
-    padding: 8px 12px;
-    border: 0;
-    background: var(--panel);
-    color: var(--text);
-    /* 16px: sotto questa misura iOS zooma la pagina al focus. */
-    font: 16px/1.5 var(--font-body);
-    box-shadow: inset 0 0 0 2px var(--border-off);
-  }
-  .accesso__input::placeholder {
-    color: var(--caption);
-  }
-  .accesso__input:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-  .accesso__input--codice {
-    flex: 0 1 160px;
-    letter-spacing: 4px;
-    font-weight: 700;
+    margin: 0 0 12px;
   }
   .voto__stato:empty {
     display: none;
@@ -592,8 +524,5 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
     cursor: pointer;
-  }
-  @media (forced-colors: active) {
-    .accesso__input { outline: 2px solid CanvasText; }
   }
 </style>
