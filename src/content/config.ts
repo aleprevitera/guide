@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import { FASCE_STUDIO } from '../lib/fasce';
 
 // Anni di corso — mirror del progetto MkDocs esistente (docs/I_Anno..VI_Anno),
 // dove l'organizzazione del sito è per anno accademico, non per corso di laurea.
@@ -12,11 +13,9 @@ export const TIPI_ESAME = ['Orale', 'Scritto', 'Scritto + Orale'] as const;
 
 export const FREQUENZE = ['Obbligatoria', 'Consigliata', 'Facoltativa'] as const;
 
-// Fasce del tempo di studio: stima del rappresentante (fascia_studio) e
-// fasce di voto dell'istogramma. Deve restare identico alle "options" di
-// fascia_studio in public/admin/config.yml.
-export const FASCE_STUDIO = ['< 1 sett', '1–2 sett', '3–4 sett', '5–8 sett', '> 8 sett'] as const;
-export type FasciaStudio = (typeof FASCE_STUDIO)[number];
+// Fasce del tempo di studio (stima del rappresentante e voti): definite in
+// src/lib/fasce.ts perché servono anche nel browser.
+export { FASCE_STUDIO, type FasciaStudio } from '../lib/fasce';
 
 // Id stabili e immutabili, distinti da titolo e slug: servono ad agganciare
 // dati esterni (es. i feedback) anche se una guida viene rinominata.

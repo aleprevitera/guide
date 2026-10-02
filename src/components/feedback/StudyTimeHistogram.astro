@@ -1,78 +1,79 @@
 ---
-// Istogramma del tempo di studio votato dagli studenti. Solo UI: non è
-// collegato a nessun backend e il voto resta nello stato della pagina.
-import { FASCE_STUDIO, type FasciaStudio } from '../../content/config';
+// Istogramma del tempo di studio votato dagli studenti.
+//
+// Due modalità:
+//   - collegata (prop `moduloId`): conteggi e voto letti/scritti su Supabase
+//     dal browser; per votare serve l'accesso con codice via email
+//     istituzionale (@universitadipavia.it).
+//   - statica (props `counts` + `totale`): solo UI, usata da /dev/istogramma.
+import { FASCE_STUDIO, type FasciaStudio } from '../../lib/fasce';
+import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, MS_PER_BLOCCO, ritardoTu, type Conteggi } from '../../lib/histogram';
 
 interface Props {
-  /** Numero di voti per ciascuna fascia. */
-  counts: Record<FasciaStudio, number>;
+  /** Id stabile del modulo: attiva la modalità collegata. */
+  moduloId?: string;
+  /** Modalità statica: numero di voti per ciascuna fascia. */
+  counts?: Conteggi;
+  /** Modalità statica: numero totale di risposte. */
+  totale?: number;
   /** Fascia stimata dal rappresentante (modulo.fascia_studio). */
   fasciaRappresentante?: FasciaStudio;
-  /** Fascia votata dall'utente corrente, se ha già votato. */
+  /** Modalità statica: fascia votata dall'utente corrente. */
   fasciaUtente?: FasciaStudio;
-  /** Numero totale di risposte. */
-  totale: number;
   /** Titolo della sezione (default: "Tempo di studio"). */
   titolo?: string;
 }
 
-const { counts, fasciaRappresentante, fasciaUtente, totale, titolo = 'Tempo di studio' } = Astro.props;
+const { moduloId, counts = conteggiVuoti(), totale = 0, fasciaRappresentante, fasciaUtente, titolo = 'Tempo di studio' } = Astro.props;
 
-const MIN_RISPOSTE = 5;
-const BLOCCHI = 10;
-const MS_PER_BLOCCO = 70;
-const SFALSAMENTO_MS = 150;
-
+const live = !!moduloId;
 const uid = `hist-${Math.random().toString(36).slice(2, 8)}`;
-const sufficienti = totale >= MIN_RISPOSTE;
-const max = Math.max(...FASCE_STUDIO.map((f) => counts[f] ?? 0), 1);
-
-const righe = FASCE_STUDIO.map((fascia, i) => {
-  const count = counts[fascia] ?? 0;
-  // Lunghezza proporzionale alla fascia più votata, arrotondata al blocco;
-  // almeno un blocco se c'è almeno un voto.
-  const blocchi = count > 0 ? Math.max(1, Math.round((count / max) * BLOCCHI)) : 0;
-  return { fascia, count, blocchi, i };
-});
-
-// "TU" compare quando l'ultima barra ha finito di riempirsi.
-const tuDelayMs = Math.max(...righe.map((r) => r.i * SFALSAMENTO_MS + r.blocchi * MS_PER_BLOCCO), 0);
+const sufficienti = !live && totale >= MIN_RISPOSTE;
+const blocchi = blocchiPerFascia(counts);
+const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?? 0, blocchi: blocchi[i], i }));
 ---
 
-<section class="hist panel px-border" aria-labelledby={`${uid}-titolo`} data-hist style={`--tu-delay:${tuDelayMs}ms;--ms-blocco:${MS_PER_BLOCCO}ms`}>
+<section
+  class="hist panel px-border"
+  aria-labelledby={`${uid}-titolo`}
+  data-hist
+  data-modulo={moduloId}
+  data-live={live ? '' : undefined}
+  style={`--tu-delay:${ritardoTu(blocchi)}ms;--ms-blocco:${MS_PER_BLOCCO}ms`}
+>
   <h2 class="hist__titolo label" id={`${uid}-titolo`}>{titolo}</h2>
-  <p class="hist__totale label">{totale} {totale === 1 ? 'risposta' : 'risposte'}</p>
+  <p class="hist__totale label" data-totale>
+    {live ? 'Caricamento…' : `${totale} ${totale === 1 ? 'risposta' : 'risposte'}`}
+  </p>
 
-  {sufficienti ? (
-    <ol class="hist__righe" aria-label="Distribuzione delle risposte per fascia">
-      {righe.map((r) => (
-        <li class:list={['riga', { 'riga--tu': r.fascia === fasciaUtente }]} data-fascia={r.fascia}>
-          <div class="riga__testa">
-            <span class="riga__fascia label">{r.fascia}</span>
-            {r.fascia === fasciaRappresentante && (
-              <span class="tag tag--rappr label" title="Stima del rappresentante">
-                Rappr.<span class="visually-hidden"> (stima del rappresentante)</span>
-              </span>
-            )}
-            <span class="tag tag--tu label" hidden={r.fascia !== fasciaUtente}>
-              Tu<span class="visually-hidden"> (il tuo voto)</span>
+  <ol class="hist__righe" aria-label="Distribuzione delle risposte per fascia" hidden={!sufficienti} data-righe>
+    {righe.map((r) => (
+      <li class:list={['riga', { 'riga--tu': r.fascia === fasciaUtente }]} data-fascia={r.fascia}>
+        <div class="riga__testa">
+          <span class="riga__fascia label">{r.fascia}</span>
+          {r.fascia === fasciaRappresentante && (
+            <span class="tag tag--rappr label" title="Stima del rappresentante">
+              Rappr.<span class="visually-hidden"> (stima del rappresentante)</span>
             </span>
-          </div>
-          <div class="riga__barra">
-            <span class="traccia" aria-hidden="true">
-              <span class="barra" style={`--n:${r.blocchi};--i:${r.i}`}></span>
-            </span>
-            <span class="riga__count">{r.count}<span class="visually-hidden"> {r.count === 1 ? 'voto' : 'voti'}</span></span>
-          </div>
-        </li>
-      ))}
-    </ol>
-  ) : (
-    <p class="hist__insufficienti">
-      <span class="label">Dati insufficienti.</span>
-      Servono almeno {MIN_RISPOSTE} risposte per mostrare la distribuzione (finora {totale}).
-    </p>
-  )}
+          )}
+          <span class="tag tag--tu label" hidden={r.fascia !== fasciaUtente}>
+            Tu<span class="visually-hidden"> (il tuo voto)</span>
+          </span>
+        </div>
+        <div class="riga__barra">
+          <span class="traccia" aria-hidden="true">
+            <span class="barra" style={`--n:${r.blocchi};--i:${r.i}`}></span>
+          </span>
+          <span class="riga__count"><span data-count>{r.count}</span><span class="visually-hidden"> voti</span></span>
+        </div>
+      </li>
+    ))}
+  </ol>
+
+  <p class="hist__insufficienti" hidden={live || sufficienti} data-insufficienti>
+    <span class="label">Dati insufficienti.</span>
+    Servono almeno {MIN_RISPOSTE} risposte per mostrare la distribuzione (finora <span data-finora>{totale}</span>).
+  </p>
 
   <div class="voto">
     <h3 class="voto__domanda" id={`${uid}-domanda`}>
@@ -85,23 +86,109 @@ const tuDelayMs = Math.max(...righe.map((r) => r.i * SFALSAMENTO_MS + r.blocchi 
         </button>
       ))}
     </div>
-    <p class="voto__nota">Un voto per studente, con account istituzionale.</p>
+
+    {live && (
+      <div class="accesso" data-accesso hidden>
+        <form class="accesso__passo" data-passo-email novalidate>
+          <label class="label" for={`${uid}-email`}>Email istituzionale</label>
+          <p class="accesso__aiuto" id={`${uid}-email-aiuto`}>Ti mandiamo un codice per confermare che sei uno studente.</p>
+          <div class="accesso__riga">
+            <input
+              class="accesso__input"
+              id={`${uid}-email`}
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              autocapitalize="off"
+              spellcheck="false"
+              placeholder="nome.cognome@universitadipavia.it"
+              aria-describedby={`${uid}-email-aiuto`}
+              required
+            />
+            <button type="submit" class="btn-px btn-px--accent label">Invia codice</button>
+          </div>
+        </form>
+        <form class="accesso__passo" data-passo-codice novalidate hidden>
+          <label class="label" for={`${uid}-codice`}>Codice ricevuto</label>
+          <p class="accesso__aiuto" id={`${uid}-codice-aiuto`}>
+            Controlla la posta di <strong data-email-inviata></strong> (anche lo spam).
+          </p>
+          <div class="accesso__riga">
+            <input
+              class="accesso__input accesso__input--codice"
+              id={`${uid}-codice`}
+              name="codice"
+              type="text"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              pattern="[0-9]*"
+              maxlength="10"
+              aria-describedby={`${uid}-codice-aiuto`}
+              required
+            />
+            <button type="submit" class="btn-px btn-px--accent label">Conferma</button>
+          </div>
+          <button type="button" class="voto__link" data-cambia-email>Usa un'altra email</button>
+        </form>
+      </div>
+    )}
+
+    <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
+    <p class="voto__nota">
+      Un voto per studente, con account istituzionale.
+      <span data-account hidden>
+        Accesso come <strong data-email></strong> · <button type="button" class="voto__link" data-esci>Esci</button>
+      </span>
+    </p>
   </div>
 </section>
 
 <script>
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  import { isFascia, type FasciaStudio } from '../../lib/fasce';
+  import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, ritardoTu, type Conteggi } from '../../lib/histogram';
+  import type { Session } from '@supabase/supabase-js';
 
-  for (const hist of document.querySelectorAll<HTMLElement>('[data-hist]')) {
-    // Animazione al primo ingresso nel viewport. Senza JS (o con
-    // movimento ridotto) le barre sono già piene.
-    if (!reduce && 'IntersectionObserver' in window) {
-      hist.classList.add('is-armed');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = <T extends Element = HTMLElement>(root: ParentNode, sel: string) => root.querySelector<T>(sel)!;
+
+  /** Barre, conteggi e "TU" a partire dai dati. */
+  function render(hist: HTMLElement, counts: Conteggi, totale: number, mia: FasciaStudio | null) {
+    const blocchi = blocchiPerFascia(counts);
+    hist.style.setProperty('--tu-delay', `${ritardoTu(blocchi)}ms`);
+    $(hist, '[data-totale]').textContent = `${totale} ${totale === 1 ? 'risposta' : 'risposte'}`;
+    const sufficienti = totale >= MIN_RISPOSTE;
+    $(hist, '[data-righe]').hidden = !sufficienti;
+    $(hist, '[data-insufficienti]').hidden = sufficienti;
+    $(hist, '[data-finora]').textContent = String(totale);
+    hist.querySelectorAll<HTMLElement>('.riga').forEach((riga, i) => {
+      const fascia = riga.dataset.fascia as FasciaStudio;
+      $(riga, '.barra').style.setProperty('--n', String(blocchi[i]));
+      $(riga, '[data-count]').textContent = String(counts[fascia] ?? 0);
+      segnaMia(riga, fascia === mia);
+    });
+    premuto(hist, mia);
+  }
+
+  function segnaMia(riga: HTMLElement, mia: boolean) {
+    riga.classList.toggle('riga--tu', mia);
+    $(riga, '.tag--tu').hidden = !mia;
+  }
+
+  function premuto(hist: HTMLElement, fascia: string | null) {
+    hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.voto === fascia)));
+  }
+
+  /** Animazione al primo ingresso nel viewport, quando `pronto` si risolve. */
+  function animaQuandoVisibile(hist: HTMLElement, pronto: Promise<unknown>) {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    hist.classList.add('is-armed');
+    const visibile = new Promise<void>((resolve) => {
       const io = new IntersectionObserver(
         (entries) => {
           if (entries.some((e) => e.isIntersecting)) {
-            hist.classList.replace('is-armed', 'is-playing');
             io.disconnect();
+            resolve();
           }
         },
         // Soglia 0 + margine: parte anche se il pannello è più alto dello
@@ -109,22 +196,178 @@ const tuDelayMs = Math.max(...righe.map((r) => r.i * SFALSAMENTO_MS + r.blocchi 
         { threshold: 0, rootMargin: '0px 0px -15% 0px' },
       );
       io.observe(hist);
+    });
+    Promise.all([visibile, pronto]).finally(() => hist.classList.replace('is-armed', 'is-playing'));
+  }
+
+  // --- Modalità statica: voto solo locale -----------------------------------
+  for (const hist of document.querySelectorAll<HTMLElement>('[data-hist]:not([data-live])')) {
+    animaQuandoVisibile(hist, Promise.resolve());
+    hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        premuto(hist, btn.dataset.voto!);
+        hist.querySelectorAll<HTMLElement>('.riga').forEach((riga) => segnaMia(riga, riga.dataset.fascia === btn.dataset.voto));
+      });
+    });
+  }
+
+  // --- Modalità collegata (Supabase) ---------------------------------------
+  const liveHists = [...document.querySelectorAll<HTMLElement>('[data-hist][data-live]')];
+  if (liveHists.length > 0) {
+    // Il client Supabase è in un chunk separato, caricato solo dove serve.
+    const sb = import('../../lib/supabase');
+    let session: Session | null = null;
+
+    const stato = (hist: HTMLElement, msg: string) => ($(hist, '[data-stato]').textContent = msg);
+
+    async function carica(hist: HTMLElement) {
+      const { supabase } = await sb;
+      const moduloId = hist.dataset.modulo!;
+      const [conteggi, mio] = await Promise.all([
+        supabase.rpc('study_time_counts', { p_modulo_id: moduloId }),
+        session
+          ? supabase.from('study_time_votes').select('fascia').eq('modulo_id', moduloId).maybeSingle()
+          : Promise.resolve({ data: null, error: null }),
+      ]);
+      if (conteggi.error) throw conteggi.error;
+      if (mio.error) throw mio.error;
+
+      const counts = conteggiVuoti();
+      let totale = 0;
+      for (const r of (conteggi.data ?? []) as { fascia: string; voti: number }[]) {
+        if (!isFascia(r.fascia)) continue;
+        counts[r.fascia] = Number(r.voti);
+        totale += Number(r.voti);
+      }
+      render(hist, counts, totale, mio.data && isFascia(mio.data.fascia) ? mio.data.fascia : null);
     }
 
-    // Voto solo locale: aggiorna aria-pressed e sposta "TU" sulla riga scelta.
-    const buttons = [...hist.querySelectorAll<HTMLButtonElement>('[data-voto]')];
-    for (const btn of buttons) {
-      btn.addEventListener('click', () => {
-        const fascia = btn.dataset.voto;
-        for (const b of buttons) b.setAttribute('aria-pressed', String(b === btn));
-        for (const riga of hist.querySelectorAll<HTMLElement>('.riga')) {
-          const mia = riga.dataset.fascia === fascia;
-          riga.classList.toggle('riga--tu', mia);
-          const tu = riga.querySelector<HTMLElement>('.tag--tu');
-          if (tu) tu.hidden = !mia;
-        }
-      });
+    async function vota(hist: HTMLElement, fascia: FasciaStudio) {
+      const { supabase } = await sb;
+      stato(hist, 'Invio del voto…');
+      const { error } = await supabase.rpc('cast_study_time_vote', { p_modulo_id: hist.dataset.modulo!, p_fascia: fascia });
+      if (error) {
+        stato(hist, 'Non è stato possibile registrare il voto. Riprova più tardi.');
+        return;
+      }
+      stato(hist, 'Voto registrato. Grazie!');
+      await carica(hist).catch(() => {});
     }
+
+    /** Riga "Accesso come … · Esci" su tutti gli istogrammi della pagina. */
+    function aggiornaAccount() {
+      for (const hist of liveHists) {
+        $(hist, '[data-account]').hidden = !session;
+        $(hist, '[data-email]').textContent = session?.user.email ?? '';
+        if (session) $(hist, '[data-accesso]').hidden = true;
+      }
+    }
+
+    function mostraAccesso(hist: HTMLElement, fascia: FasciaStudio) {
+      hist.dataset.inSospeso = fascia;
+      premuto(hist, fascia);
+      const box = $(hist, '[data-accesso]');
+      box.hidden = false;
+      stato(hist, 'Per votare accedi con la tua email istituzionale.');
+      const passoCodice = $(box, '[data-passo-codice]');
+      $<HTMLInputElement>(box, passoCodice.hidden ? 'input[name=email]' : 'input[name=codice]').focus();
+    }
+
+    (async () => {
+      const { supabase, DOMINIO_ATENEO } = await sb;
+      session = (await supabase.auth.getSession()).data.session;
+      aggiornaAccount();
+
+      for (const hist of liveHists) {
+        const box = $(hist, '[data-accesso]');
+        const passoEmail = $<HTMLFormElement>(box, '[data-passo-email]');
+        const passoCodice = $<HTMLFormElement>(box, '[data-passo-codice]');
+        const inputEmail = $<HTMLInputElement>(passoEmail, 'input[name=email]');
+        const inputCodice = $<HTMLInputElement>(passoCodice, 'input[name=codice]');
+        let email = '';
+
+        animaQuandoVisibile(
+          hist,
+          carica(hist).catch(() => {
+            $(hist, '[data-totale]').textContent = 'Voti non disponibili';
+            stato(hist, 'Al momento non è possibile caricare i voti.');
+          }),
+        );
+
+        hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const fascia = btn.dataset.voto as FasciaStudio;
+            if (session) vota(hist, fascia);
+            else mostraAccesso(hist, fascia);
+          });
+        });
+
+        // Passo 1: email → codice via mail.
+        passoEmail.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          email = inputEmail.value.trim().toLowerCase();
+          if (!email.endsWith(`@${DOMINIO_ATENEO}`)) {
+            stato(hist, `Serve un indirizzo @${DOMINIO_ATENEO}.`);
+            inputEmail.focus();
+            return;
+          }
+          stato(hist, 'Invio del codice…');
+          const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: true } });
+          if (error) {
+            stato(hist, error.status === 429 ? 'Troppe richieste: riprova tra qualche minuto.' : 'Non è stato possibile inviare il codice. Riprova.');
+            return;
+          }
+          $(passoCodice, '[data-email-inviata]').textContent = email;
+          passoEmail.hidden = true;
+          passoCodice.hidden = false;
+          stato(hist, 'Codice inviato.');
+          inputCodice.focus();
+        });
+
+        // Passo 2: codice → sessione → voto in sospeso.
+        passoCodice.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const token = inputCodice.value.replace(/\s/g, '');
+          if (!/^\d{6,10}$/.test(token)) {
+            stato(hist, 'Inserisci il codice numerico ricevuto via email.');
+            inputCodice.focus();
+            return;
+          }
+          stato(hist, 'Verifica del codice…');
+          const { data, error } = await supabase.auth.verifyOtp({ email, token, type: 'email' });
+          if (error || !data.session) {
+            stato(hist, 'Codice non valido o scaduto. Controlla o richiedine uno nuovo.');
+            inputCodice.select();
+            return;
+          }
+          session = data.session;
+          inputCodice.value = '';
+          aggiornaAccount();
+          const fascia = hist.dataset.inSospeso;
+          delete hist.dataset.inSospeso;
+          if (isFascia(fascia)) await vota(hist, fascia);
+          // Gli altri istogrammi della pagina mostrano ora anche il proprio voto.
+          liveHists.filter((h) => h !== hist).forEach((h) => carica(h).catch(() => {}));
+        });
+
+        $(passoCodice, '[data-cambia-email]').addEventListener('click', () => {
+          passoCodice.hidden = true;
+          passoEmail.hidden = false;
+          stato(hist, '');
+          inputEmail.focus();
+        });
+
+        $(hist, '[data-esci]').addEventListener('click', async () => {
+          await supabase.auth.signOut();
+          session = null;
+          aggiornaAccount();
+          liveHists.forEach((h) => {
+            stato(h, '');
+            carica(h).catch(() => {});
+          });
+        });
+      }
+    })();
   }
 </script>
 
@@ -285,5 +528,72 @@ const tuDelayMs = Math.max(...righe.map((r) => r.i * SFALSAMENTO_MS + r.blocchi 
     .barra { --c: CanvasText; }
     .tag { outline: 2px solid CanvasText; }
     .voto__btn[aria-pressed='true'] { outline: 4px solid Highlight; }
+  }
+
+  /* --- Accesso con codice via email --- */
+  .accesso {
+    margin-top: 16px;
+    padding: 12px;
+    background: var(--bg);
+  }
+  .accesso__passo > label {
+    display: block;
+    color: var(--accent);
+  }
+  .accesso__aiuto {
+    color: var(--text-2);
+    font-size: 14px;
+    margin: 4px 0 8px;
+  }
+  .accesso__riga {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .accesso__input {
+    flex: 1 1 200px;
+    min-width: 0;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 0;
+    background: var(--panel);
+    color: var(--text);
+    /* 16px: sotto questa misura iOS zooma la pagina al focus. */
+    font: 16px/1.5 var(--font-body);
+    box-shadow: inset 0 0 0 2px var(--border-off);
+  }
+  .accesso__input::placeholder {
+    color: var(--caption);
+  }
+  .accesso__input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .accesso__input--codice {
+    flex: 0 1 160px;
+    letter-spacing: 4px;
+    font-weight: 700;
+  }
+  .voto__stato:empty {
+    display: none;
+  }
+  .voto__stato {
+    color: var(--text);
+    margin: 12px 0 0;
+  }
+  .voto__link {
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    cursor: pointer;
+  }
+  @media (forced-colors: active) {
+    .accesso__input { outline: 2px solid CanvasText; }
   }
 </style>
