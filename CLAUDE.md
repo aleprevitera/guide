@@ -81,7 +81,12 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   `--mondo-chiaro` (sul fondo pagina, ≥ 6:1; colora gli h2). Terreno pixel: `.terreno[data-terreno]`
   in `global.css`. Link, pulsanti e focus restano nel giallo accento ovunque. Anteprima: `/dev/mondi`.
 - Animazioni sempre a scatti (`steps()`), mai fluide; tutte spente con `prefers-reduced-motion`.
-  Le micro-animazioni di feedback passano da `src/lib/fx.ts`.
+  Le micro-animazioni di feedback passano da `src/lib/fx.ts` (anche `vibra()`, solo Android).
+- **Animazioni pensate per il telefono**: mai affidare un effetto al solo `:hover`. Gli effetti di
+  passaggio del mouse stanno sempre in `@media (hover: hover) and (pointer: fine)`; sul telefono
+  valgono `:active` (pressione 4px), la comparsa allo scorrimento (`data-rivela`, `src/lib/rivela.ts`)
+  e le View Transitions fra pagine (nomi condivisi: `vtMondo()` casella↔banner, `guida-<id>`
+  card↔titolo; nomi unici per pagina). Su desktop i loop infiniti si fermano dopo pochi giri.
 - Accessibilità: contrasto testo ≥ 4.5:1, focus visibile (outline 2px accento), target ≥ 44px,
   HTML semantico, stato mai affidato al solo colore, fallback `forced-colors` (i box-shadow spariscono:
   servono outline veri).

@@ -99,6 +99,11 @@ import PixelIcon from './PixelIcon.astro';
   .benvenuto__icona {
     animation: lucchetto-scuoti 1.2s steps(1, end) infinite;
   }
+  @media (hover: hover) and (pointer: fine) {
+    .benvenuto__icona {
+      animation-iteration-count: 2;
+    }
+  }
   @keyframes lucchetto-scuoti {
     0%, 70% { transform: translateX(0); }
     80% { transform: translateX(-4px); }

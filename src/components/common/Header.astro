@@ -37,6 +37,16 @@ import AccountButton from './AccountButton.astro';
   .site-header__logo :global(.site-header__book) {
     animation: book-hop 1s steps(1, end) infinite;
   }
+  /* Desktop più sobrio: pochi saltelli all'apertura, poi solo al passaggio
+     del mouse. Sul telefono il saltello continua. */
+  @media (hover: hover) and (pointer: fine) {
+    .site-header__logo :global(.site-header__book) {
+      animation-iteration-count: 3;
+    }
+    .site-header__logo:hover :global(.site-header__book) {
+      animation-iteration-count: infinite;
+    }
+  }
   @keyframes book-hop {
     0% { transform: translateY(0); }
     50% { transform: translateY(-4px); }

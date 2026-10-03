@@ -92,6 +92,12 @@ const numero = numeroRomano(anno);
     top: 12px;
     animation: banner-salta 1s steps(1, end) infinite;
   }
+  /* Desktop più sobrio: l'icona saltella qualche volta e si ferma. */
+  @media (hover: hover) and (pointer: fine) {
+    .banner__cielo :global(.banner__icona) {
+      animation-iteration-count: 3;
+    }
+  }
   @keyframes banner-salta {
     0% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
