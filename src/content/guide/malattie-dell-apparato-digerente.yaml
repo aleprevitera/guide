@@ -1,0 +1,103 @@
+id: g-zdx6ojf6
+title: Malattie dell’apparato digerente
+anno_di_corso: IV Anno
+descrizione_generale: "L’esame è composto da **tre moduli**: **Gastroenterologia**, **Chirurgia gastroenterologica** e **Nutrizione umana**. Le parti di Gastroenterologia e Chirurgia gastroenterologica sono **orali**, mentre Nutrizione umana prevede uno **scritto**. L’appello si articola in tre parti da sostenere **tutte nello stesso appello**: 1. Scritto di Nutrizione umana; 2. Orale di Gastroenterologia; 3. Orale di Chirurgia gastroenterologica. Non è possibile conservare il risultato di una singola parte per un appello successivo. **Non è previsto il salto d’appello.** Sono previsti **preappelli**, generalmente a fine maggio; nell’ultimo anno il preappello era a numero chiuso, con un massimo di 120 studenti. **Tempo di studio complessivo:** 1 mese – 2 mesi (1 mese sufficiente con studio intenso e ben organizzato; 2 mesi consigliabili per distribuire il carico)."
+moduli:
+  - nome_modulo: Gastroenterologia
+    id: m-mslxesvn
+    exam_type: Orale
+    exam_details: "Prova **orale**. L’orale prevede generalmente **2 domande**: una relativa a un primo blocco di argomenti e una relativa a un secondo blocco. Le domande sono generalmente piuttosto **schematiche e secche**. L’interrogazione dura mediamente **15-20 minuti**, anche se la durata può variare in base al docente e all’andamento dell’interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Durante l’esame erano presenti **3 docenti + 1 specializzanda**. La parte di Gastroenterologia si svolge dopo lo scritto di Nutrizione umana, nello stesso appello."
+    program: |-
+      Programma molto ampio, da studiare nel suo complesso. Particolare attenzione alle **principali sindromi gastroenteriche**, frequentemente oggetto della prima domanda.
+
+      Da integrare allo studio delle sbobine:
+
+      - **Dolore addominale** → Rugarli, cap. 1 di Gastroenterologia.
+      - **Vomito e diarrea** → Unigastro.
+      - **Ittero** → Rugarli, con particolare attenzione ai diversi tipi di ittero.
+      - **Epatiti** → approfondire epatiti alcoliche, virali e da farmaci.
+      - **Giardia** → Rugarli, perché può essere chiesta anche se non viene adeguatamente trattata a lezione.
+
+      Argomenti ricorrenti delle domande di Biagi:
+
+      - **Prima domanda:** disfagia, dispepsia, vomito, diarrea, stipsi, melena, rettorragia, ittero, ascite, dolore addominale acuto, dolore addominale cronico.
+      - **Seconda domanda:** acalasia, neoplasie dell’esofago, MRGE (condizioni predisponenti, quadro clinico, complicanze), ulcera peptica (cause, quadro clinico, complicanze), gastriti croniche (tipi), danno da FANS, HP e malattie correlate, tumori dello stomaco, anemie in gastroenterologia, malattia celiaca (eziopatogenesi, clinica, complicanze), morbo di Whipple, morbo di Crohn vs RCU, morbo di Crohn (clinica, complicanze), RCU (clinica, complicanze), tumori maligni del colon, polipi del colon, epatiti acute, danno da alcol, cirrosi epatica (cause, quadro clinico, complicanze), colecistite acuta, colica biliare, pancreatite acuta (cause, clinica).
+    material_tips: |-
+      Fonte principale consigliata: **sbobine 2023-2024**, considerate le più complete, da integrare con alcune lezioni di altri anni:
+
+      - **Sbobine 2023-2024** → base principale.
+      - **Breath test all’idrogeno** → sbobine 2025-2026.
+      - **Anemia in gastroenterologia** → sbobine 2024-2025.
+      - **Stipsi** → sbobine 2022-2023.
+
+      È quindi necessario fare un po’ di “collage” tra le diverse annate.
+
+      Dal **Rugarli**:
+
+      - capitolo 1 di Gastroenterologia → da fare integralmente;
+      - dolore addominale → particolarmente importante;
+      - ittero → da approfondire bene;
+      - epatiti → consigliato approfondimento;
+      - giardia → da studiare perché può essere richiesta.
+
+      **Vomito e diarrea:** Unigastro.
+
+      Consiglio pratico: riconoscere i **sintomi d’allarme** e sapere quale approfondimento diagnostico è indicato, in particolare **gastroscopia** e **colonscopia**; non limitarsi a conoscere la patologia, ma sapere come comportarsi davanti al paziente e quando è indicato l’approfondimento endoscopico.
+    professors:
+      - nome: Biagi
+        stile: Le domande proiettate da Biagi sono suddivise in **prima domanda** e **seconda domanda**. La prima domanda è estratta da un gruppo (disfagia, dispepsia, vomito, diarrea, stipsi, melena, rettorragia, ittero, ascite, dolore addominale acuto/cronico). La seconda da un altro gruppo (acalasia, neoplasie esofago, MRGE, ulcera peptica, gastriti, FANS, HP, tumori stomaco, anemie, celiachia, Whipple, Crohn/RCU, tumori colon, polipi, epatiti, alcol, cirrosi, colecistite, colica biliare, pancreatite).
+  - nome_modulo: Chirurgia gastroenterologica
+    id: m-ohza1kya
+    exam_type: Orale
+    exam_details: "Prova **orale**. L’orale prevede generalmente **2 domande**: una relativa a un primo blocco di argomenti e una relativa a un secondo blocco. Le domande sono generalmente piuttosto **schematiche e secche**. L’interrogazione dura mediamente **15-20 minuti**, anche se la durata può variare in base al docente e all’andamento dell’interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Durante l’esame erano presenti **3 docenti + 1 specializzanda**. La parte di Chirurgia gastroenterologica si svolge dopo lo scritto di Nutrizione umana, nello stesso appello."
+    program: |-
+      Le domande sono abbastanza varie. Quest’anno è stata dedicata particolare attenzione alla **chirurgia bariatrica**, che può quindi essere un argomento su cui i docenti si soffermano.
+
+      È importante considerare anche gli argomenti **non spiegati direttamente a lezione ma lasciati nelle slide**, perché possono comunque essere oggetto d’esame. Quest’anno, ad esempio, sono state chieste:
+
+      - ernie addominali;
+      - acalasia.
+    material_tips: |-
+      Poiché quest’anno sono cambiati i docenti, è consigliato utilizzare principalmente le **sbobine 2025-2026**, che sono quelle più aggiornate e maggiormente in linea con gli argomenti effettivamente richiesti.
+
+      Non è più necessario affidarsi al vecchio libro utilizzato negli anni precedenti: le sbobine dell’anno sono considerate sufficienti.
+
+      **Attenzione:** controllare comunque sulle slide gli argomenti che i docenti hanno indicato ma non hanno spiegato direttamente a lezione, perché possono essere chiesti all’esame.
+
+      Consiglio pratico: non fermarsi esclusivamente alle sbobine. Se durante la lezione il docente dice che un argomento è lasciato da studiare autonomamente dalle slide, **quell’argomento va comunque preparato**, perché può essere chiesto all’esame.
+  - nome_modulo: Nutrizione umana
+    id: m-v738a2c5
+    exam_type: Scritto
+    exam_details: |-
+      Prova **scritta**, si svolge **all’inizio della giornata**, prima degli orali di Gastroenterologia e Chirurgia gastroenterologica. Si hanno a disposizione **45 minuti**.
+
+      La prova è composta da:
+
+      - **10 domande a scelta multipla**, con una sola risposta corretta, valutate: risposta corretta → **+2 punti**; risposta non data → **0 punti**; risposta sbagliata → **−0,5 punti**.
+      - **2 domande aperte**, valutate da **0 a 5 punti** ciascuna.
+
+      Le domande aperte possono essere **ricorrenti** e ripetersi negli anni precedenti.
+
+      Lo scritto di Nutrizione, così come le due prove orali, deve essere **superato nello stesso appello**. Non è possibile mantenere il risultato di una singola parte per un appello successivo e **non è previsto il salto d’appello**.
+    program: Programma da confermare.
+    material_tips: |-
+      La preparazione deve essere fatta **principalmente dalle slide**.
+
+      È utile:
+
+      - andare a lezione;
+      - prendere eventuali appunti;
+      - consultare le domande degli anni precedenti.
+
+      Tuttavia, la fonte fondamentale rimangono le **slide**, perché le informazioni necessarie per lo scritto sono contenute al loro interno. Le slide possono cambiare di anno in anno, quindi è consigliato utilizzare quelle dell’anno di corso più recente.
+
+      Consiglio pratico: **studiare direttamente dalle slide**. Non affidarsi esclusivamente alle domande degli anni precedenti, ma utilizzarle come integrazione allo studio delle slide.
+info_da_verificare:
+  - campo: Modalità di chiamata
+    nota: La scheda indica [DA INTEGRARE – ordine alfabetico/ordine di iscrizione/altro].
+  - campo: Programma
+    nota: Il programma di Nutrizione umana non è dettagliato; la scheda indica solo di studiare principalmente dalle slide.
+  - campo: Contenuto delle domande aperte
+    nota: La scheda segnala che mancava il contenuto specifico delle domande aperte di Nutrizione umana.
+aggiornato_da: Sara Cocci
+ultimo_aggiornamento: 2026-10-03

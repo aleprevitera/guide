@@ -1,54 +1,80 @@
-id: "g-ra9dqztt"
-title: "Psichiatria"
-anno_di_corso: "V Anno"
-
+id: g-ra9dqztt
+title: Psichiatria
+anno_di_corso: V Anno
 moduli:
-  - nome_modulo: "Psichiatria"
-    id: "m-0v8s8vwa"
-    cfu: 5
-    semestre: "I"
-    difficolta: 3
-    exam_type: "Scritto"
-    link_sbobine: "https://drive.google.com/drive/folders/1bE8XfKVtpwOGHVQCNIFQt9EpABzYfpZO?usp=sharing"
-    link_whatsapp: "https://chat.whatsapp.com/JJ4E5fa5tQFEdAyGTkZVfn"
-    google_sheet_url: "https://docs.google.com/spreadsheets/d/1im2Hk2UQiRcGuW_Z8ChflYsAEikN-WTL4_-sZikVzKc/edit?usp=sharing"
-    study_time: "4 settimane"
-    exam_details: |
-      Esame scritto, 45 minuti di tempo. Sono presenti 3 **macroargomenti**, in
-      genere 2 trattati da Fusar Poli e 1 trattato da Brondino/Berlincioni: 10
-      domande Vero/Falso per ognuno dei 3 macroargomenti più 2 domande aperte, di
-      cui una in genere è un caso clinico da discutere brevemente o un criterio
-      DSM-5.
+  - nome_modulo: Psichiatria
+    id: m-0v8s8vwa
+    exam_type: Scritto
+    study_time: 20 giorni
+    exam_details: |-
+      L'esame è scritto, ha una durata di 30 minuti ed è composto da due tipologie di quesiti.
 
-      **Attenzione:** sbagliando cinque o più Vero/Falso in un gruppo di 10
-      domande, tutto il gruppo viene considerato errato.
-    program: |
-      - Disturbi dello spettro della Schizofrenia: aspetti storici e psicopatologici; aspetti clinici, epidemiologici, sociali ed evolutivi; eziologia, aspetti biologici, terapia e cura
-      - I sistemi nosografici e diagnostici in Psichiatria
-      - Altri Disturbi Psicotici: clinica, terapia e cura
-      - L'esame clinico in Psichiatria: principi di psicopatologia e di semeiotica psichiatrica
-      - Disturbi dell'umore: Disturbo bipolare e Disturbi depressivi
-      - Disturbi d'ansia e Disturbo ossessivo-compulsivo
-      - Disturbi dell'umore: eziologia, aspetti epidemiologici e biologici, terapia e cura
-      - Disturbo da sintomi somatici e disturbi correlati
-      - Presentazione e discussione di casi clinici
-      - Disturbi della nutrizione e dell'alimentazione
-      - Anoressia nervosa e Bulimia nervosa
-      - Disturbi di personalità: Gruppo A, B e C
-      - Disturbi correlati a eventi traumatici e stressanti e Disturbi dissociativi
-      - Disturbi neurocognitivi: Delirium
-      - Disturbi neurocognitivi maggiori e lievi
-      - Disturbi del neurosviluppo e dello spettro dell'autismo
-      - Disturbi correlati a sostanze e disturbi da addiction
-      - Disturbi e Disfunzioni Sessuali
-      - Principi di Etnopsichiatria
+      Struttura della prova:
+
+      - 2 domande aperte (10 punti complessivi)
+      - 3 blocchi da 10 vero/falso (4 punti per blocco)
+
+      Ogni blocco è associato a una domanda aperta o a un macrotema.
+
+      Punteggio massimo: 32 punti. La lode viene assegnata con un punteggio superiore a 30.
+
+      Domande vero/falso: i tre blocchi sono costituiti da 10 affermazioni vero/falso ciascuno. Ogni blocco vale 4 punti. Se si sbagliano 5 risposte, il blocco vale 0 punti. Il punteggio del singolo blocco non può essere negativo.
+
+      Domande aperte: le due domande aperte valgono complessivamente 10 punti. Possono riguardare:
+
+      - argomenti teorici;
+      - criteri diagnostici DSM;
+      - casi clinici, nei quali viene richiesta la diagnosi e l'indicazione dei relativi criteri DSM.
+
+      È quindi utile esercitarsi sia nell'esposizione teorica sia nell'applicazione dei criteri diagnostici a un caso clinico.
+
+      Valutazione: il punteggio massimo è di 32 punti. La lode viene assegnata quando si supera 30. In alcuni appelli, quando la media generale dell'esame è particolarmente bassa, può essere applicata una sorta di correzione gaussiana, che può comportare un incremento di uno o due voti. Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
+
+      All'esame è sempre presente il professor Damiani.
+    program: |-
+      Il programma d'esame è quello indicato nel syllabus ufficiale.
+
+      È importante studiare l'intero programma, prestando particolare attenzione alle prime lezioni del professor Fusar Poli, che possono sembrare meno rilevanti ma vengono frequentemente richieste.
+
+      Tra gli argomenti da non trascurare:
+
+      - OCD (disturbo ossessivo-compulsivo)
+      - ADHD
+      - Mini Mental State Examination
+      - Seminari sulle psicosi
+      - Criteri diagnostici DSM
+      - Riconoscimento e diagnosi dei principali disturbi psichiatrici
+
+      Le domande aperte possono riguardare sia argomenti teorici sia criteri diagnostici DSM, oppure presentare un caso clinico da interpretare.
+    material_tips: |-
+      La fonte principale consigliata sono le sbobine 2022-2023, considerate complete e sufficienti per preparare l'esame.
+
+      È necessario integrarle con le seguenti lezioni delle sbobine 2025-2026:
+
+      - OCD, argomento che è stato richiesto all'esame;
+      - ADHD.
+
+      È inoltre importante consultare le slide dei docenti, perché alcune domande vero/falso sono formulate riprendendo direttamente frasi presenti nelle presentazioni.
+
+      Non trascurare le prime lezioni del professor Fusar Poli, in particolare:
+
+      - Mini Mental State Examination;
+      - seminari sulle psicosi.
+
+      Anche se possono sembrare argomenti introduttivi o secondari, vengono frequentemente richiesti.
+
+      Infine, è consigliabile consultare le domande degli appelli precedenti, soprattutto per individuare i criteri DSM e gli argomenti teorici che ricorrono nelle domande aperte.
     professors:
-      - nome: "Fusar Poli"
-
+      - nome: Fusar Poli
+      - nome: Damiani
+      - nome: Stefanelli
+    fascia_studio: 3–4 sett
 info_da_verificare:
-  - campo: "Stile/domande del prof. Fusar Poli"
-    nota: "Nel dato originale il campo era compilato con un segnaposto (\"a\"): va richiesto al rappresentante di descriverlo davvero."
-  - campo: "Docente Brondino/Berlincioni non ancora in elenco"
-    nota: "L'exam_details cita Brondino/Berlincioni come co-titolare di un macroargomento, ma non è presente nella lista Docenti."
-
-ultimo_aggiornamento: 2026-09-10
+  - campo: Frequenza
+    nota: Non sembra essere controllata in maniera particolarmente rigorosa; i docenti non sono particolarmente pignoli nella rilevazione delle presenze.
+  - campo: Criterio per la correzione gaussiana
+    nota: Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
+  - campo: Elenco completo delle domande ricorrenti
+    nota: Non è disponibile un elenco completo; dalla testimonianza emergono alcuni punti da preparare con particolare attenzione.
+aggiornato_da: Rocco Buellis
+ultimo_aggiornamento: 2026-10-03

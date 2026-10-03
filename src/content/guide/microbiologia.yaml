@@ -1,0 +1,36 @@
+id: g-isk3qiid
+title: Microbiologia
+anno_di_corso: III Anno
+moduli:
+  - nome_modulo: Microbiologia
+    id: m-2f7qtr59
+    exam_type: Scritto + Orale
+    study_time: 1 mese e mezzo – 2 mesi
+    exam_details: |-
+      L’esame consiste in uno scritto sbarramento per l’orale senza voto: per superarlo è necessario fare 25 crocette giuste su 30; l’esito viene comunicato il giorno stesso.
+      All’orale possono interrogare tutti e cinque i professori, talvolta accompagnati da assistenti; le interrogazioni si svolgono in ordine di iscrizione. Si viene sempre interrogati da due professori, con una parte di virologia e una di batteriologia. Sono tutti molto gentili e fanno ragionare.
+    program: |-
+      L’esame è diviso in macro-argomenti:
+
+      - batteriologia
+      - virologia
+      - genetica batterica, micobatteri e funghi
+      - microbiologia clinica
+
+      Il syllabus sul sito dell’università è molto completo, ma le professoresse si basano sugli argomenti spiegati a lezione. È importante informarsi sugli argomenti trattati nella propria coorte perché di anno in anno il programma cambia leggermente.
+    material_tips: Le sbobine più recenti sono sufficienti per preparare l’esame. La parte di antibiotici è spesso confusionaria nelle sbobine recenti, perciò è consigliabile consultarla dal libro oppure dalle Sbobine 20-21.
+    body: Durante il corso viene svolto un laboratorio obbligatorio molto utile per la comprensione delle culture cellulari spiegate nel modulo di batteriologia.
+    professors:
+      - nome: Migliavacca
+        stile: Chiede solamente batteriologia.
+      - nome: Rovida
+        stile: Chiede solamente virologia.
+      - nome: Baldanti
+        stile: Chiede un po’ tutto e a volte fa casi clinici.
+      - nome: Piazza
+        stile: "Si concentra molto sulla sua parte di programma: genetica batterica, micobatteri e funghi."
+      - nome: Cambieri
+        stile: Si concentra su microbiologia clinica.
+    fascia_studio: 5–8 sett
+aggiornato_da: Lisa Ceci
+ultimo_aggiornamento: 2026-10-03

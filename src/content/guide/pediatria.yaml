@@ -1,0 +1,104 @@
+id: g-0lom9qml
+title: Pediatria
+anno_di_corso: V Anno
+descrizione_generale: |-
+  L'esame è composto da tre moduli: **Pediatria**, **Chirurgia pediatrica** e **Neuropsichiatria infantile (NPI)**. I tre orali si svolgono contemporaneamente.
+
+  Tempo di studio complessivo: circa un mese di studio intenso per preparare tutti e tre i moduli.
+moduli:
+  - nome_modulo: Pediatria
+    id: m-akbjnuzm
+    exam_type: Orale
+    exam_details: Gli studenti vengono chiamati due alla volta, in ordine alfabetico. Ogni studente riceve due domande. I docenti tendono a interrogare sugli argomenti della propria sottospecialità. La prima domanda verte spesso sulla specializzazione che si desidera intraprendere o sul reparto in cui si sta svolgendo l’internato.
+    program: |-
+      Il programma ufficiale è quello previsto dal syllabus. Oltre al programma generale, è utile approfondire:
+
+      - Pneumologia: polmoniti, asma e bronchiolite.
+      - Celiachia.
+      - Infezioni del sistema nervoso e crisi epilettiche.
+      - Sindrome di Guillain-Barré, atassia e anemie.
+      - Gastroenterologia, nefrologia e otorinolaringoiatria, soprattutto in relazione al reparto frequentato durante l’internato o alla specializzazione di interesse.
+    material_tips: |-
+      Sbobine 2024-2025 come fonte principale.
+
+      Integrare dalle sbobine 2023-2024:
+
+      - Pneumologia: polmoniti, asma e bronchiolite.
+      - Celiachia.
+      - Infezioni del sistema nervoso.
+      - Crisi epilettiche.
+
+      Integrare dalle sbobine 2025-2026:
+
+      - Sindrome di Guillain-Barré.
+      - Atassia.
+      - Anemie, argomento richiesto frequentemente dal professor Castagnoli.
+
+      Dal libro: lettura delle parti di gastroenterologia, nefrologia e ORL, soprattutto se si sta svolgendo un internato in questi reparti.
+
+      Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+    professors:
+      - nome: Castagnoli
+        stile: Interroga su immunologia, ad esempio SCID; anemie.
+      - nome: Brambilla
+        stile: Interroga su pubertà e crescita.
+  - nome_modulo: Chirurgia pediatrica
+    id: m-5o6zmswx
+    exam_type: Orale
+    exam_details: Interroga il professor Bertozzi; Parigi non è più presente. Vengono interrogati tre studenti insieme.
+    program: |-
+      Gli argomenti da integrare comprendono:
+
+      - Canale inguinale.
+      - Stenosi ipertrofica del piloro.
+      - Malattia di Hirschsprung.
+    material_tips: |-
+      Sbobine 2024-2025.
+
+      Integrare dalle sbobine 2025-2026 il canale inguinale.
+
+      Integrare dalle sbobine 2023-2024 stenosi ipertrofica del piloro e malattia di Hirschsprung.
+
+      Consultare le domande degli appelli precedenti: possono essere di grande aiuto per orientare la preparazione. Possono aiutare a orientarsi, pur senza garantire che gli argomenti si ripetano.
+
+      Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+    professors:
+      - nome: Bertozzi
+        stile: Sceglie un macroargomento e pone domande ai tre studenti; se uno non sa rispondere, può rivolgersi agli altri. L’interrogazione viene descritta come piuttosto imprevedibile e variabile da una giornata all’altra.
+  - nome_modulo: Neuropsichiatria infantile (NPI)
+    id: m-18qy3q5f
+    exam_type: Orale
+    exam_details: I docenti possono essere molto puntigliosi e richiedere un linguaggio preciso e specifico. È quindi importante saper esporre gli argomenti con terminologia corretta, evitando descrizioni vaghe o generiche.
+    program: |-
+      Da approfondire:
+
+      - Adolescenza.
+      - Malattie neuromuscolari.
+      - Crisi epilettiche e sindromi epilettiche specifiche, in particolare sindrome di West e sindrome di Lennox-Gastaut.
+      - Esame neurologico del bambino.
+      - Paralisi cerebrali.
+    material_tips: |-
+      Sbobine 2024-2025 come fonte principale.
+
+      Integrare dalle sbobine 2025-2026:
+
+      - Adolescenza.
+      - Malattie neuromuscolari.
+      - Crisi epilettiche e sindromi specifiche, soprattutto West e Lennox-Gastaut.
+
+      Leggere la parte relativa all’esame neurologico del bambino.
+
+      Integrare l’argomento delle paralisi cerebrali.
+
+      Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+info_da_verificare:
+  - campo: Durata delle singole interrogazioni
+    nota: DAINTEGRARE
+  - campo: Criteri di assegnazione dei voti
+    nota: DAINTEGRARE
+  - campo: Modalità di eventuali preappelli
+    nota: DAINTEGRARE
+  - campo: Elenco puntuale delle domande ricorrenti per ciascun modulo
+    nota: DAINTEGRARE
+aggiornato_da: Rocco Buellis
+ultimo_aggiornamento: 2026-10-03

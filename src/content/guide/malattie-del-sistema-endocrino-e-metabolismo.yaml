@@ -1,0 +1,31 @@
+id: g-kxnnzaqi
+title: Malattie del Sistema Endocrino e Metabolismo
+anno_di_corso: III Anno
+descrizione_generale: |-
+  L’esame è composto da tre prove: **endocrinologia**, **malattie del metabolismo** e **chirurgia endocrina**. I tre esami sono separati e fanno media ponderata tra loro. È necessario svolgere endocrinologia e metabolismo nello stesso appello: iscrivendosi a uno solo dei due c’è il rischio che i professori non facciano svolgere l’esame. È possibile rifiutare e ripetere uno solo dei tre parziali.
+
+  Tempo di studio complessivo: 15/20 giorni complessivi per i 3 esami, a seconda di quanto si padroneggia la fisiologia endocrina.
+moduli:
+  - nome_modulo: Endocrinologia
+    id: m-r6dtmg80
+    exam_type: Orale
+    exam_details: L’interrogazione è unica tra endocrinologia e malattie del metabolismo; lo stesso professore interroga per entrambe.
+    program: Programma da confermare.
+    material_tips: Le sbobine sono sufficienti.
+  - nome_modulo: Malattie del metabolismo
+    id: m-s11z2uij
+    exam_type: Orale
+    exam_details: L’interrogazione è unica tra endocrinologia e malattie del metabolismo; lo stesso professore interroga per entrambe.
+    program: Programma da confermare.
+    material_tips: Le sbobine sono sufficienti.
+  - nome_modulo: Chirurgia endocrina
+    id: m-srbieauq
+    exam_type: Scritto
+    exam_details: Prova scritta separata a crocette.
+    program: Programma da confermare.
+    material_tips: Le sbobine sono sufficienti, ma è consigliabile leggere anche le domande dei precedenti appelli poiché spesso si ripetono.
+info_da_verificare:
+  - campo: Programma d'esame
+    nota: La scheda riporta solo 'syllabus' senza elenco di argomenti.
+aggiornato_da: Lisa Ceci
+ultimo_aggiornamento: 2026-10-03

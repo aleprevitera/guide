@@ -1,0 +1,33 @@
+id: g-ug99qebv
+title: Malattie cutanee e Chirurgia plastica
+anno_di_corso: IV Anno
+descrizione_generale: "L'esame è composto da due moduli: Dermatologia e Chirurgia plastica. Entrambe le parti sono orali. Per completare l'esame è necessario superare entrambi i moduli mantenendoli entro una distanza massima di un appello (es. Dermatologia a giugno e Chirurgia plastica a luglio)."
+moduli:
+  - nome_modulo: Dermatologia
+    id: m-a12glpvn
+    exam_type: Orale
+    study_time: 1 mese
+    preappello: No
+    exam_details: "Esame orale. Studenti chiamati in ordine, indicativamente alfabetico. Modalità varia per docente: 2-3 domande dirette, oppure vetrino, immagine di lesione o caso clinico. Importante parlare in modo ampio e ordinato. Preappelli non previsti. Organizzazione variabile: docenti possono arrivare in momenti diversi, con possibili variazioni e ritardi negli orari."
+    program: Programma molto vasto, senza argomenti richiesti sistematicamente. Le domande variano molto in base al docente. Particolare attenzione a unghie e capelli; il sarcoma di Kaposi, pur talvolta considerato secondario, viene richiesto abbastanza frequentemente. Studiare anche gli argomenti indicati come meno rilevanti.
+    material_tips: "Fonte principale: sbobine a due colonne 2019-2020, integrate con argomenti dalle sbobine 2023-2024: infezioni sessualmente trasmissibili, dermatosi professionali (dermatite irritativa da contatto, dermatite allergica da contatto), patologie delle unghie, alopecia, seminario sulla terapia dermatologica. Dal Core Curriculum: Lichen, Leishmaniosi, Sarcoma di Kaposi, Tumori mesenchimali. Consiglio: non tralasciare gli argomenti poco richiesti."
+    fascia_studio: 3–4 sett
+  - nome_modulo: Chirurgia plastica
+    id: m-r3ai30ir
+    exam_type: Orale
+    study_time: 20 giorni – 1 mese
+    preappello: No
+    frequenza: Facoltativa
+    exam_details: Esame orale. Lo studente può essere interrogato da Nicoletti, dal docente del corso o da una specializzanda. Generalmente un paio di domande sugli argomenti delle sbobine. Studenti chiamati in ordine di iscrizione. Preappelli non previsti.
+    program: Programma interamente coperto dalle sbobine principali. Integrare con la sindrome del tunnel carpale, studiabile dal libro di testo/programmazione d'esame.
+    material_tips: "Fonte principale: sbobine a due colonne 2019-2020, sufficienti per la preparazione. Aggiungere dal Faga la sindrome del tunnel carpale (presente anche nelle sbobine più recenti, ma integrabile dal libro)."
+    professors:
+      - nome: Nicoletti
+    fascia_studio: 3–4 sett
+info_da_verificare:
+  - campo: Regola superamento moduli
+    nota: Formulazione esatta della regola e cosa succede se si supera un appello di distanza.
+  - campo: Media dell'esame
+    nota: Da integrare.
+aggiornato_da: Sara Cocci
+ultimo_aggiornamento: 2026-10-03

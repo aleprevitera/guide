@@ -1,0 +1,49 @@
+id: g-zvqm8dmw
+title: Semeiotica Medica e Chirurgica
+anno_di_corso: III Anno
+descrizione_generale: "L'esame è composto da tre moduli: **Semeiotica Medica** (orale), **Semeiotica Strumentale** (scritto a crocette) e **Semeiotica Chirurgica** (orale). Il voto di Semeiotica Strumentale fa media aritmetica con Semeiotica Medica e Semeiotica Chirurgica."
+moduli:
+  - nome_modulo: Semeiotica Medica
+    id: m-vna9dmvw
+    exam_type: Orale
+    study_time: 15 giorni
+    durata_orale_min: 15
+    exam_details: Orale di circa 15 minuti con uno dei 3 professori (Di Pietro, Salinaro e a volte Perlini) o con un assistente (sono super bravi).
+    program: Argomenti contenuti nel syllabus. È importante concentrarsi sui casi clinici trattati dal professor Di Pietro a lezione (in esame chiede gli stessi o cose molto simili) e su tutta la semeiotica di cuore e polmoni, molto richiesta da Salinaro.
+    material_tips: |-
+      - Sbobine 18-19: sono le più complete per la parte teorica della semeiotica.
+      - Integrare la semeiotica neurologica trattata solo negli ultimi 2 anni e i casi clinici spiegati da Di Pietro (consigliato usare le sbobine della propria coorte).
+      - Fare attenzione ai dettagli citati da Di Pietro e non spiegati nelle sbobine (ad esempio a volte cita argomenti di semeiotica chirurgica, come pancreatite e appendicite, per cui vale la pena fare una breve integrazione perché lui è puntiglioso).
+    professors:
+      - nome: Di Pietro
+        stile: Oltre a un argomento variabile, chiede sempre un caso clinico simile o uguale a quelli trattati a lezione.
+      - nome: Salinaro
+        stile: Chiede sempre qualcosa sul cuore e sui soffi cardiaci; la semeiotica di cuore e polmoni è molto richiesta.
+      - nome: Perlini
+        stile: Chiede sempre qualcosa sul cuore e sui soffi cardiaci.
+    fascia_studio: 1–2 sett
+  - nome_modulo: Semeiotica Strumentale
+    id: m-o9hifbga
+    exam_type: Scritto
+    exam_details: Scritto a crocette con voti che vanno di tre punti in tre punti.
+    program: Programma da confermare.
+    material_tips: Per prepararsi è sufficiente studiare le sbobine e consultare le vecchie domande, che a volte si ripetono.
+  - nome_modulo: Semeiotica Chirurgica
+    id: m-rug9bioa
+    exam_type: Orale
+    study_time: 10 giorni
+    durata_orale_min: 15
+    exam_details: "Orale di circa 15 minuti con il Professor Bianchi. Il professore si basa spesso sul voto di Semeiotica Medica, per cui è consigliabile fare l'esame dopo aver sostenuto l'altro parziale. Importantissimo arrivare puntuali: convoca la mattina presto e anche se si è ultimi si deve arrivare per l'appello, altrimenti non fa fare l'esame."
+    program: Tutti gli argomenti contenuti nel syllabus.
+    material_tips: |-
+      - Sbobine 18-19.
+      - Le prime quattro lezioni sono riassuntive del programma di Semeiotica Medica (soprattutto della parte relativa all'addome e all'esame obiettivo); le lezioni più chieste al professore sono dalla quinta in poi.
+    professors:
+      - nome: Bianchi
+        stile: Tende a interrompere molto durante l'esame (non va interrotto). Chiede principalmente le patologie relative alla semeiotica dell'addome (lezioni 5-6-7-8-9-10-11-12 su sbobine 18-19). Si concentra molto sulle cose apparentemente banali, che non vanno tralasciate.
+    fascia_studio: 1–2 sett
+info_da_verificare:
+  - campo: Programma
+    nota: La scheda non descrive il programma di Semeiotica Strumentale; indica solo di studiare le sbobine e le vecchie domande, che a volte si ripetono.
+aggiornato_da: Lisa Ceci
+ultimo_aggiornamento: 2026-10-03

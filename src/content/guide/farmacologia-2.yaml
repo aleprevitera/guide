@@ -1,0 +1,58 @@
+id: g-0qfyrg1m
+title: Farmacologia 2
+anno_di_corso: IV Anno
+cfu_totali: 5
+descrizione_generale: "Esame da 5 CFU composto da tre parti: Chemioterapia (1 CFU), Tossicologia (1 CFU) e Farmacologia (3 CFU). Il voto finale è la media ponderata dei tre esami."
+moduli:
+  - nome_modulo: Chemioterapia
+    id: m-yfczwv5j
+    cfu: 1
+    exam_type: Scritto + Orale
+    study_time: circa 1 settimana
+    exam_details: Scritto a crocette su Kiro + orale in cui si correggono le domande sbagliate, ma durante il quale possono essere fatte anche altre domande. Si tiene di solito lo stesso giorno o il giorno dopo dello scritto se si è in molti. Generalmente il professore è disponibile a mettere appelli aggiuntivi purché siano sempre durante il periodo dedicato alle sessioni d’esame.
+    program: Programma da confermare.
+    material_tips: Sbobine e slide sono sufficienti. Utile rivedere le crocette del drive perché spesso si ripetono; è presente anche un file organizzato in domande e risposte, molto utile per l’orale.
+    fascia_studio: 1–2 sett
+  - nome_modulo: Tossicologia
+    id: m-obz8gkpx
+    cfu: 1
+    exam_type: Orale
+    study_time: circa 15 giorni
+    exam_details: "Interrogazione a tre con uno dei professori. Generalmente fanno tre domande in cui entrano man mano nello specifico: la prima è più generica, mentre l’ultima può essere, ad esempio, sugli antidoti. A volte la prima domanda è a scelta e interrogano in ordine di iscrizione. I professori non entrano particolarmente nel dettaglio e si concentrano sulla clinica; i voti sono abbastanza alti. Sono stati concessi appelli straordinari."
+    program: Programma da confermare.
+    material_tips: "È disponibile una dispensa fatta direttamente dal CAV che tocca praticamente tutti gli argomenti; manca forse la parte dell’intossicazione da cianuro, che però, se non mi sbaglio, quest’anno è stata spiegata a lezione. Esiste anche un file molto più stretto che, penso, abbia tutto il necessario per affrontare l’esame, ma personalmente non l’ho trovato sui vari drive. Consiglio: non sottovalutare l’esame anche se si tratta soltanto di un CFU."
+    body: L’esame di per sé non è difficile, ma molti argomenti sono completamente nuovi; per questo l’ho trovato lungo.
+    fascia_studio: 1–2 sett
+  - nome_modulo: Farmacologia
+    id: m-g59ohk2q
+    cfu: 3
+    exam_type: Orale
+    study_time: circa 2-3 settimane
+    exam_details: Esame orale.
+    program: Programma da confermare.
+    material_tips: Sbobine + integrare eventuali argomenti del syllabus non spiegati da sbobine precedenti.
+    professors:
+      - nome: Crema
+        stile: Molto gentile e alta di voti; non entra particolarmente nel dettaglio dello specifico farmaco.
+      - nome: Fattore
+        stile: Più puntigliosa ma comunque giusta.
+    fascia_studio: 3–4 sett
+info_da_verificare:
+  - campo: Programma d’esame
+    nota: Voce vuota nella scheda per il modulo Chemioterapia.
+  - campo: Frequenza
+    nota: "La scheda riporta: 'non credo vengano prese le presenze ma non ne sono certa'."
+  - campo: Programma d’esame
+    nota: Voce vuota nella scheda per il modulo Tossicologia.
+  - campo: Frequenza
+    nota: Voce vuota nella scheda per il modulo Tossicologia.
+  - campo: Materiale di studio
+    nota: "La scheda esprime dubbi: manca forse la parte sull’intossicazione da cianuro (forse spiegata a lezione) e il file più stretto pensa abbia tutto il necessario, ma non l’ha trovato sui drive."
+  - campo: Tempo di studio
+    nota: Indica circa 15 giorni per la dispensa, ma ipotizza che con il file più stretto possa bastare meno tempo.
+  - campo: Programma d’esame
+    nota: Voce vuota nella scheda per il modulo Farmacologia.
+  - campo: Frequenza
+    nota: Indicata come 'da sistemare' per il modulo Farmacologia.
+aggiornato_da: Giulia Stofler
+ultimo_aggiornamento: 2026-10-03

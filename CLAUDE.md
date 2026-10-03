@@ -45,7 +45,18 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 ## Regole sui contenuti
 
 - Ogni nuovo campo dello schema è **opzionale**: gli YAML esistenti devono continuare a validare.
-- Non modificare il contenuto delle guide. L'unica modifica fatta agli YAML è l'aggiunta degli `id`.
+- **Fonte dei contenuti: le schede Notion** (export in `NOTION/`, non versionato), importate con
+  `node scripts/importa-notion.mjs` (`--elenco`, `--dry`, `--solo "Titolo"`, `--rifai`; chiave
+  `OPENROUTER_API_KEY` in `.env`). Modello `deepseek/deepseek-v4.1-flash` via OpenRouter con schema
+  JSON vincolato; anno, autore (`aggiornato_da`), `id` e date li decide il codice; validazione zod +
+  controllo su numeri/link non presenti nella scheda; cache in `.cache/` (rilanci senza costi).
+  Si importano solo le schede "Fatto" con contenuto; le guide esistenti con lo stesso titolo vengono
+  sostituite **mantenendo `id` e nome file**. Le guide non presenti in Notion (oggi Clinica Medica II e
+  Ginecologia) sono segnaposto del vecchio sito.
+- Tempo di studio = istogramma, **sempre per modulo**: `study_time` per modulo solo se la scheda lo dà per
+  quel modulo; un tempo unico per un esame integrato va in `descrizione_generale`, mai copiato sui moduli.
+  `fascia_studio` (etichetta RAPPR.) la calcola il codice con `fasciaDaGiorni` (`src/lib/fasce.ts`),
+  mai il modello.
 - `id` guida `g-xxxxxxxx`, `id` modulo `m-xxxxxxxx`: stabili, immutabili, distinti da titolo/slug,
   chiave dei feedback. Unicità verificata in build (`assertUniqueIds`). In Decap li genera il
   widget `readonly-id` (`public/admin/index.html`).

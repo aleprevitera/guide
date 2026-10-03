@@ -1,0 +1,48 @@
+id: g-hxm7b57t
+title: Medicina di Laboratorio
+anno_di_corso: III Anno
+moduli:
+  - nome_modulo: Medicina di Laboratorio
+    id: m-snews6i7
+    study_time: 15-20 giorni
+    exam_details: |-
+      L’esame può essere sostenuto in due modalità:
+
+      1. **Parziale + completamento**: è possibile sostenere un esame parziale, solitamente verso metà/fine aprile, sugli argomenti spiegati fino alla lezione antecedente il parziale. Nel mese di maggio bisogna seguire il Journal Club, un’attività a gruppi di massimo 10 persone che consiste nel presentare un *paper* scelto dai professori. Il completamento dell’esame deve avvenire il prima possibile (entro la fine della sessione estiva), con un esame orale sugli argomenti delle lezioni successive al parziale. Tuttavia, nell’a.a. 2025/26, dato l’elevato numero di iscritti all’esame di completamento a giugno, la Prof.ssa Balduini ha deciso di optare per un esame scritto che prevedeva la descrizione dell’iter diagnostico da seguire davanti a un caso clinico proposto.
+      2. **Esame intero orale**: è possibile sostenere l’intero esame in formato orale, tendenzialmente con gli assistenti.
+
+      In entrambe le modalità, analogamente all’esame di Patologia Generale, i professori danno particolare importanza al contenuto, penalizzando chi risulta troppo prolisso.
+      Attenzione: dall’a.a. 2022/23 l’esame di Patologia Generale è propedeutico a Medicina di Laboratorio. A volte risulta complicato darli nella stessa sessione poiché le Prof.sse di Patologia possono essere lente nella correzione degli esami. La Prof.ssa Balduini in genere permette a chi non ha ancora ricevuto gli esiti di Patologia di sostenere il suo esame e mantenere in sospeso il voto fino a quando non viene verbalizzato l’esame di Patologia Generale.
+    program: |-
+      - Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
+      - Esame emocromocitometrico e metabolismo del ferro
+      - L'emostasi: rischio trombotico ed emorragico
+      - Struttura e funzione del midollo osseo
+      - Meccanismi biochimici di fibrosi
+      - Ruolo del Calcio nella malattia
+      - UPR e Autofagia
+      - Introduzione alla medicina rigenerativa e ai biomateriali
+      - La funzionalità epatica e pancreatica
+      - Le sieroproteine
+      - Diagnosi di laboratorio e monitoraggio del diabete
+      - La fase acuta e la sepsi
+      - I lipidi e le classi lipoproteiche: struttura e parametri di rischio aterosclerotico
+      - Marcatori di danno cardiaco
+      - Metabolismo del calcio e dell'osso
+      - Marcatori tumorali e loro significato
+      - La funzionalità renale e l'esame delle urine
+    material_tips: |-
+      - Ad oggi, le sbobine più complete sono quelle relative all’anno accademico 2020-2021.
+      - È sufficiente studiare sulle sbobine dell’anno corrente integrate con le slide fornite dai professori tramite la piattaforma Kiro.
+      - Si consiglia, però, di integrare con le sbobine dell’anno precedente gli argomenti che talvolta non vengono affrontati, ma che possono essere oggetto di esame.
+    body: Se dovete contattare i prof., scrivete a tutti e tre, dato che Malara e Di Buduo leggono più spesso le email.
+    professors:
+      - nome: Alessandra Balduini
+        email: alessandra.balduini@unipv.it
+      - nome: Alessandro Malara
+        email: alessandro.malara@unipv.it
+      - nome: Christian Di Buduo
+        email: christian.dibuduo@unipv.it
+    fascia_studio: 3–4 sett
+aggiornato_da: Luiza Leshi
+ultimo_aggiornamento: 2026-10-03

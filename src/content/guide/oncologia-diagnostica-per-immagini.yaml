@@ -1,134 +1,30 @@
-id: "g-8u01rdat"
-title: "Oncologia e Diagnostica per Immagini"
-anno_di_corso: "IV Anno"
-
-descrizione_generale: |
-  Esame integrato composto da **due moduli**: Oncologia (orale) e Diagnostica per
-  immagini (scritto). Le due parti hanno modalità di svolgimento, programmi e
-  tempistiche di preparazione differenti — vedi le sezioni dedicate qui sotto.
-
+id: g-8u01rdat
+title: Oncologia e Diagnostica per immagini
+anno_di_corso: IV Anno
+descrizione_generale: "L’esame è composto da **due moduli**: **Oncologia** (orale) e **Diagnostica per immagini** (scritta). Le due parti hanno modalità di svolgimento differenti. Voto finale: la scheda non riporta la modalità esatta di calcolo; è indicato solo che **Diagnostica per immagini ha un peso maggiore rispetto a Oncologia**."
 moduli:
-  - nome_modulo: "Oncologia"
-    id: "m-4ewf06rv"
-    exam_type: "Orale"
-    study_time: "circa 1 mese"
-    exam_details: |
-      Sono presenti **più docenti** che possono interrogare. L'interrogazione dura
-      indicativamente **15 minuti**.
-
-      È previsto il **preappello**, che nell'anno di riferimento si è svolto **a
-      metà maggio**.
-
-      La frequenza è obbligatoria, ma i controlli non risultano particolarmente
-      rigorosi.
-    program: |
-      Il programma è **molto ampio**, ma non ci sono argomenti che vengano sistematicamente
-      richiesti più di altri: è consigliabile preparare **tutto il programma**.
-
-      Le domande risultano generalmente coerenti con gli argomenti effettivamente trattati
-      durante le lezioni. Ad esempio, i **tumori rari**, non trattati nelle lezioni di
-      riferimento, non sono stati richiesti nell'anno considerato.
-
-      Il programma può variare leggermente di anno in anno in base agli argomenti
-      affrontati a lezione. Nell'anno di riferimento è stata inoltre aggiunta una parte
-      relativa alle **cure palliative**.
-    material_tips: |
-      La fonte principale utilizzata sono le **sbobine 2024-2025**, molto complete.
-      Sono state usate in particolare perché, nell'anno di riferimento, le sbobine
-      dell'anno corrente non erano ancora disponibili al momento della preparazione
-      del preappello. È comunque consigliabile confrontarle con il materiale
-      dell'anno corrente, soprattutto per verificare eventuali **argomenti aggiunti
-      o modificati**.
-
-      Il consiglio principale è **non concentrarsi esclusivamente su presunti
-      argomenti più frequenti**, perché le domande possono riguardare praticamente
-      tutto ciò che viene affrontato a lezione. È quindi utile:
-
-      - studiare tutto il programma
-      - utilizzare le sbobine più recenti e complete
-      - verificare eventuali argomenti aggiunti nell'anno corrente
-      - prepararsi soprattutto attraverso la **ripetizione**, dato che l'esame è orale
-    body: |
-      Non risultano esserci argomenti specifici richiesti sistematicamente più degli
-      altri. Le domande tendono comunque a essere **coerenti con quanto spiegato
-      durante le lezioni**.
-
-      Gli argomenti non trattati durante le lezioni possono essere meno rilevanti ai
-      fini dell'esame: nell'anno di riferimento, ad esempio, i **tumori rari** non
-      sono stati richiesti.
-    professors: []
-
-  - nome_modulo: "Diagnostica per immagini"
-    id: "m-t588av4v"
-    exam_type: "Scritto"
-    study_time: "10 giorni (minimo) — 1 mese (preparazione completa)"
-    exam_details: |
-      L'esame si svolge tramite **Chirotesting**. La prova comprende:
-
-      - 7 domande a scelta multipla di Radiologia
-      - 4 domande a scelta multipla di Radioterapia
-      - 4 domande a scelta multipla di Neuroradiologia
-      - 3 domande aperte, una per ciascuna delle tre sezioni
-
-      Le domande a scelta multipla sono **senza penalità**. Vengono estratte da un
-      ampio pool di quesiti non accessibile agli studenti, e possono essere diverse
-      tra i vari candidati: la difficoltà della prova può quindi variare
-      sensibilmente da uno studente all'altro. La valutazione viene normalizzata con
-      una correzione gaussiana.
-
-      La frequenza risulta più controllata rispetto ad altri insegnamenti, anche se
-      non è richiesta la partecipazione al 100% delle lezioni.
-
-      È prevista una **flipped classroom**, aperta agli studenti che hanno raggiunto
-      almeno il 75% di frequenza. Sono previsti punti aggiuntivi sull'esame: +1
-      punto per la partecipazione, +3 punti per i gruppi finalisti, +5 punti per il
-      gruppo vincitore.
-    program: |
-      Il programma comprende diverse aree:
-
-      - Radiologia
-      - Pneumoradiologia
-      - Radioterapia
-      - Neuroradiologia
-      - Imaging dell'apparato riproduttore femminile
-      - Radiologia ginecologica
-      - Imaging del sistema vascolare
-
-      È importante preparare anche gli argomenti che non vengono necessariamente
-      approfonditi durante le lezioni, ma che possono comparire nelle domande d'esame.
-    material_tips: |
-      La preparazione è stata effettuata principalmente dalle **sbobine 2023-2024**
-      (Radiologia, Pneumoradiologia, Radioterapia, Neuroradiologia), con l'aggiunta
-      di alcune lezioni da altre annualità:
-
-      - Imaging e apparato riproduttore femminile — sbobine **2023-2024**
-      - Radiologia ginecologica — sbobine **2024-2025**
-      - Imaging del sistema vascolare — sbobine **2019-2020** (particolarmente
-        importante: nell'anno di riferimento è stata oggetto di una domanda aperta)
-
-      È inoltre consigliabile guardare le slide dei docenti, svolgere le
-      esercitazioni caricate sul Drive e osservare attentamente le immagini
-      proiettate durante le lezioni, che possono essere riproposte nelle domande a
-      scelta multipla. Per l'imaging dei tumori ossei, l'argomento è affrontato
-      anche nella flipped classroom, ma è comunque presente nelle sbobine
-      2023-2024, fonte principale da utilizzare.
-    body: |
-      Non è disponibile un elenco stabile di domande ricorrenti, dato che le
-      domande a scelta multipla vengono estratte da un pool molto ampio. È però
-      particolarmente utile conoscere:
-
-      - le immagini mostrate a lezione e nelle esercitazioni
-      - gli argomenti delle presentazioni caricate sul Drive
-      - imaging del sistema vascolare, oggetto di una domanda aperta nell'anno di
-        riferimento
-      - imaging dei tumori ossei, affrontato anche nella flipped classroom
-    professors: []
-
+  - nome_modulo: Oncologia
+    id: m-4ewf06rv
+    exam_type: Orale
+    study_time: 1 mese
+    preappello: Sì
+    frequenza: Obbligatoria
+    durata_orale_min: 15
+    exam_details: "Esame **orale**. Sono presenti più docenti che possono interrogare. L'interrogazione dura indicativamente **15 minuti**. Preappello: previsto, nell'anno di riferimento si è svolto **a metà maggio**. Frequenza: **obbligatoria**, ma i controlli non risultano particolarmente rigorosi."
+    program: Programma molto ampio; è consigliabile preparare **tutto il programma**. Le domande sono generalmente coerenti con gli argomenti trattati a lezione. I **tumori rari**, non trattati a lezione, non sono stati richiesti nell'anno di riferimento. Il programma può variare leggermente di anno in anno. Nell'anno di riferimento è stata aggiunta una parte sulle **cure palliative**. Non risultano argomenti sistematicamente più richiesti.
+    material_tips: "Fonte principale: **sbobine 2024-2025**, molto complete. Sono state usate perché nell'anno di riferimento le sbobine dell'anno corrente non erano ancora disponibili al momento della preparazione del preappello. Consigliabile confrontarle con il materiale dell'anno corrente per verificare argomenti aggiunti o modificati. Consigli: studiare tutto il programma, usare sbobine recenti e complete, verificare aggiunte dell'anno corrente, prepararsi soprattutto con la **ripetizione**."
+    fascia_studio: 3–4 sett
+  - nome_modulo: Diagnostica per immagini
+    id: m-t588av4v
+    exam_type: Scritto
+    study_time: 10 giorni – 1 mese
+    preappello: No
+    exam_details: "Esame **scritto** tramite **Chirotesting**. La prova comprende: - **7 domande a scelta multipla di Radiologia** - **4 domande a scelta multipla di Radioterapia** - **4 domande a scelta multipla di Neuroradiologia** - **3 domande aperte**, una per ciascuna delle tre sezioni. Le domande a scelta multipla sono **senza penalità**. Le domande vengono estratte da un **ampio pool di quesiti**, non accessibile agli studenti; possono essere differenti tra i candidati, quindi la difficoltà può variare. La valutazione viene **normalizzata con una correzione gaussiana**. Preappello: **non previsto**. Frequenza: risulta più controllata rispetto ad altri insegnamenti; i docenti prestano attenzione alla presenza in aula e al numero di studenti presenti, anche se non è necessariamente richiesta una partecipazione al **100% delle lezioni**. Flipped classroom: prevista per Diagnostica per immagini, partecipazione per studenti con almeno il **75% di frequenza**. Attività: 1. scelta di un argomento tra quelli proposti; 2. lettura di articoli forniti dai docenti; 3. preparazione di una presentazione PowerPoint; 4. esposizione del lavoro. Punti aggiuntivi sull'esame: - partecipazione → **+1 punto** - gruppi finalisti → **+3 punti** - gruppo vincitore → **+5 punti**."
+    program: "Il programma comprende: - Radiologia - Pneumoradiologia - Radioterapia - Neuroradiologia - Imaging dell'apparato riproduttore femminile - Radiologia ginecologica - Imaging del sistema vascolare. È importante preparare anche gli argomenti che non vengono necessariamente approfonditi durante le lezioni, ma che possono comparire nelle domande d'esame. Particolare attenzione a **Imaging del sistema vascolare** (oggetto di una domanda aperta nell'anno di riferimento) e **Imaging dei tumori ossei** (affrontato anche nella flipped classroom e presente nelle sbobine)."
+    material_tips: "Preparazione effettuata principalmente dalle **sbobine 2023-2024** per: - Radiologia - Pneumoradiologia - Radioterapia - Neuroradiologia. Aggiunte: - **Imaging e apparato riproduttore femminile** (sbobine 2023-2024) - **Radiologia ginecologica** (sbobine 2024-2025) - **Imaging del sistema vascolare** (sbobine 2019-2020), importante perché nell'anno di riferimento è stato oggetto di una domanda aperta nonostante non fosse spiegato direttamente a lezione. Consigliabile dare un'occhiata alle **sbobine dell'anno corrente** per aggiornamenti. Materiale aggiuntivo consigliato: - **esercitazioni caricate dai docenti** - **presentazioni disponibili sul Drive** - immagini proiettate durante le lezioni. Le immagini mostrate a lezione possono essere riproposte nelle domande a scelta multipla. Per **imaging dei tumori ossei**, l'argomento è presente nelle sbobine 2023-2024, che restano la fonte principale. Consigli: studiare dalle sbobine indicate, guardare le **slide dei docenti**, svolgere le **esercitazioni sul Drive**, osservare le **immagini proiettate**. Non è necessario dedicare molto tempo alla ripetizione orale: concentrarsi su comprensione, immagini ed esercitazioni."
+    fascia_studio: 3–4 sett
 info_da_verificare:
-  - campo: "Peso CFU dei due moduli e modalità esatta di calcolo della media finale"
-    nota: |
-      Una studentessa riferisce che Diagnostica per immagini ha un peso maggiore
-      rispetto a Oncologia nella media finale, ma non ricorda la modalità esatta di
-      calcolo. Da confermare con la segreteria didattica o con i docenti.
-
-ultimo_aggiornamento: 2026-09-10
+  - campo: Media ponderata dei due moduli
+    nota: "La studentessa riferisce che **Diagnostica per immagini ha un peso maggiore rispetto a Oncologia**, ma non ricorda la modalità esatta di calcolo della media. Da integrare: CFU/peso dei due moduli e modalità esatta di calcolo della valutazione finale."
+aggiornato_da: Sara Cocci
+ultimo_aggiornamento: 2026-10-03
