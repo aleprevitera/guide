@@ -124,6 +124,6 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 
 ## Aperto
 
-- Testo della lettera e nomi dei due creatori.
+- Testo della lettera (firme già inserite: Francesco Ruspino, Alessandro Gavino Previtera).
 - Configurazione Google + hook in dashboard Supabase, poi prova del voto reale sul deploy preview.
 - Merge della PR #1 (`redesign-pixel`).
