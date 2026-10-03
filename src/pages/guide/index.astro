@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuideList from '../../components/guide/GuideList.astro';
+import SearchBox from '../../components/common/SearchBox.astro';
 import { ANNI_DI_CORSO, annoHref, annoSlug } from '../../lib/anni';
 
 const guide = await getCollection('guide');
@@ -14,6 +15,7 @@ const gruppi = ANNI_DI_CORSO.map((anno) => ({
 
 <BaseLayout title="Tutte le guide" description="Elenco delle guide pratiche per esame">
   <h1>Tutte le guide</h1>
+  <SearchBox />
   {gruppi.map((gruppo) => (
     <section class="anno" aria-labelledby={`anno-${annoSlug(gruppo.anno)}`}>
       <h2 class="anno__titolo label" id={`anno-${annoSlug(gruppo.anno)}`}>

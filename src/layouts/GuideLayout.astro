@@ -18,7 +18,9 @@ const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(mo
 ---
 
 <BaseLayout title={data.title} description={data.sottotitolo} aggiornamento={data.ultimo_aggiornamento} autore={data.aggiornato_da}>
-  <article class="guide" style={stileMondo(data.anno_di_corso)}>
+  <article class="guide" style={stileMondo(data.anno_di_corso)} data-pagefind-body>
+    {/* Metadati per la ricerca (Pagefind): l'anno colora il risultato. */}
+    <span hidden data-pagefind-meta="anno">{data.anno_di_corso}</span>
     <span class="terreno guide__terreno" data-terreno={MONDI[data.anno_di_corso].icona} aria-hidden="true"></span>
     <GuideHeader data={data} />
 

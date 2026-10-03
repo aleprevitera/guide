@@ -14,7 +14,8 @@ e i testi sono in italiano.
 
 ```bash
 npm run dev        # http://localhost:4321  (anche /dev/istogramma)
-npm run build      # astro check + astro build: deve chiudersi con 0 errori/warning
+npm run build      # astro check + astro build + pagefind: deve chiudersi con 0 errori/warning
+npm run preview    # serve dist/: l'unico modo per provare la ricerca in locale
 npm run cms:local  # proxy Decap per /admin/ in locale
 ```
 
@@ -35,6 +36,10 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - `src/components/feedback/` — `StudyTimeHistogram.astro` (modalità collegata o statica).
 - `src/components/home/` — caselle degli anni, lettera dei creatori.
 - `src/pages/` — home, `/guide/`, `/guide/[slug]/`, `/anni/[anno]/`, `/dev/[page]/`.
+- Ricerca: Pagefind (`SearchBox.astro`, in home e `/guide/`). Indicizza solo `data-pagefind-body`
+  (l'`article` delle guide); escludere con `data-pagefind-ignore` ciò che non è contenuto (schede,
+  istogramma, info da verificare). Metadato `anno` per il chip colorato. L'indice esiste solo dopo
+  la build: in `npm run dev` la ricerca risponde "non disponibile".
 - `supabase/migrations/` — SQL applicato al progetto, in ordine.
 
 ## Regole sui contenuti

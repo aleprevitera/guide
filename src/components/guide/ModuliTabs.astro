@@ -6,7 +6,7 @@ interface Props {
 const { moduli } = Astro.props;
 ---
 
-<nav class="tabs" aria-label="Moduli dell'esame" data-moduli-tabs>
+<nav class="tabs" aria-label="Moduli dell'esame" data-moduli-tabs data-pagefind-ignore>
   <ul class="tabs__list">
     {moduli.map((m, i) => (
       <li>

@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import YearTiles from '../components/home/YearTiles.astro';
 import LetteraMission from '../components/home/LetteraMission.astro';
+import SearchBox from '../components/common/SearchBox.astro';
 ---
 
 <BaseLayout title="Home" description="Guide pratiche universitarie">
@@ -10,6 +11,8 @@ import LetteraMission from '../components/home/LetteraMission.astro';
     Programmi, fonti di studio, tempistiche e consigli pratici per ogni esame, scritti dai
     rappresentanti degli studenti.
   </p>
+
+  <SearchBox />
 
   <section aria-labelledby="anni-titolo" id="anni">
     <h2 id="anni-titolo">Scegli il tuo anno</h2>

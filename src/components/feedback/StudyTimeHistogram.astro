@@ -38,6 +38,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   class="hist panel px-border"
   aria-labelledby={`${uid}-titolo`}
   data-hist
+  data-pagefind-ignore
   data-modulo={moduloId}
   data-live={live ? '' : undefined}
   style={`--tu-delay:${ritardoTu(blocchi)}ms;--ms-blocco:${MS_PER_BLOCCO}ms`}
