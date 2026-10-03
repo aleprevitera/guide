@@ -29,17 +29,17 @@ const difficolta = modulo.difficolta;
 
 {(righe.length > 0 || difficolta) && (
   <section class="scheda panel px-border" aria-label="Scheda esame">
-    <p class="scheda__titolo label">Scheda esame</p>
+    <p class="scheda__titolo label" data-pagefind-ignore>Scheda esame</p>
     <dl class="scheda__dl">
       {righe.map((r) => (
         <div class="scheda__riga">
-          <dt class="label">{r.etichetta}</dt>
+          <dt class="label">{r.etichetta}<span class="visually-hidden">: </span></dt>
           <dd>{r.valore}</dd>
         </div>
       ))}
       {difficolta && (
         <div class="scheda__riga">
-          <dt class="label">Difficoltà</dt>
+          <dt class="label">Difficoltà<span class="visually-hidden">: </span></dt>
           <dd class="difficolta">
             <span class="difficolta__blocchi" aria-hidden="true">
               {[1, 2, 3, 4, 5].map((n) => <span class:list={['blocco', { 'blocco--on': n <= difficolta }]} />)}

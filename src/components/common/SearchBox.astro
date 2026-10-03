@@ -152,15 +152,18 @@ const { id = 'cerca' } = Astro.props;
   .cerca__label {
     display: block;
     color: var(--caption);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
+  /* Campo chiaro su fondo scuro: deve distinguersi dai pannelli blu.
+     Testo #1a1c2c su #f4f4f4 = 15:1, placeholder #566c86 = 4.9:1. */
   .cerca__campo {
     position: relative;
     margin: 0 4px;
-    box-shadow: -4px 0 0 0 var(--text), 4px 0 0 0 var(--text), 0 -4px 0 0 var(--text), 0 4px 0 0 var(--text);
-  }
-  .cerca__campo:focus-within {
     box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+  }
+  /* Focus: il bordo a scalini raddoppia (4 → 8px), non cambia solo colore. */
+  .cerca__campo:focus-within {
+    box-shadow: -8px 0 0 0 var(--accent), 8px 0 0 0 var(--accent), 0 -8px 0 0 var(--accent), 0 8px 0 0 var(--accent);
   }
   .cerca__campo :global(.cerca__lente) {
     position: absolute;
@@ -175,27 +178,27 @@ const { id = 'cerca' } = Astro.props;
     min-height: 48px;
     padding: 12px 12px 12px 40px;
     border: 0;
-    background: var(--panel);
-    color: var(--text);
+    background: var(--text);
+    color: var(--bg);
+    caret-color: var(--bg);
     /* 16px: sotto questa misura iOS zooma la pagina al focus. */
     font: 16px/1.5 var(--font-body);
     -webkit-appearance: none;
     appearance: none;
   }
   .cerca__input::placeholder {
-    color: var(--caption);
+    color: var(--border-off);
   }
-  /* Il bordo a scalini del contenitore fa già da indicatore di focus. */
+  /* L'indicatore di focus è il bordo del contenitore (vedi sopra). */
   .cerca__input:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
+    outline: none;
   }
   .cerca__input::-webkit-search-cancel-button {
     -webkit-appearance: none;
   }
   .cerca__stato {
     color: var(--caption);
-    margin: 12px 0 0;
+    margin: 16px 0 0;
   }
   .cerca__stato:empty {
     display: none;
@@ -250,6 +253,7 @@ const { id = 'cerca' } = Astro.props;
   }
   @media (forced-colors: active) {
     .cerca__campo { outline: 2px solid CanvasText; }
+    .cerca__campo:focus-within { outline: 4px solid Highlight; }
     .cerca__risultati :global(.risultato) { outline: 1px solid CanvasText; }
   }
 </style>
