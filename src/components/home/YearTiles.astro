@@ -24,7 +24,7 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
 }));
 ---
 
-<ul class="mondi">
+<ul class="mondi" data-rivela>
   {anni.map((a) => (
     <li>
       {a.n > 0 ? (
@@ -78,13 +78,20 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
     box-shadow: -4px 0 0 0 var(--text), 4px 0 0 0 var(--text), 0 -4px 0 0 var(--text), 0 4px 0 0 var(--text);
     transition: transform 80ms steps(1, end);
   }
-  a.mondo:hover,
   a.mondo:focus-visible {
     transform: translateY(-2px);
     box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
   }
+  @media (hover: hover) and (pointer: fine) {
+    a.mondo:hover {
+      transform: translateY(-2px);
+      box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+    }
+  }
+  /* Al tocco la casella "affonda" di un blocco, come un mattone colpito. */
   a.mondo:active {
-    transform: translateY(2px);
+    transform: translateY(4px);
+    box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
   }
   .mondo__cielo {
     position: relative;
@@ -111,10 +118,19 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
     right: 8px;
     top: 8px;
   }
-  /* L'icona del mondo salta (2 fotogrammi) quando la casella è puntata. */
-  a.mondo:hover :global(.mondo__icona),
+  /* L'icona del mondo salta (2 fotogrammi): due volte quando la casella
+     compare scorrendo (telefono), di continuo se puntata col mouse o focus. */
+  .mondi > :global(.is-visto) :global(.mondo__icona) {
+    animation: mondo-salta 400ms steps(1, end) 2;
+    animation-delay: calc(var(--i, 0) * 100ms + 240ms);
+  }
   a.mondo:focus-visible :global(.mondo__icona) {
     animation: mondo-salta 500ms steps(1, end) infinite;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a.mondo:hover :global(.mondo__icona) {
+      animation: mondo-salta 500ms steps(1, end) infinite;
+    }
   }
   @keyframes mondo-salta {
     0% { transform: translateY(0); }

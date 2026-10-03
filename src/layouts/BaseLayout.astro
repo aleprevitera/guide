@@ -36,5 +36,9 @@ const { title, description, aggiornamento, autore, noindex } = Astro.props;
     </main>
     <Footer aggiornamento={aggiornamento} autore={autore} />
     <BenvenutoAccesso />
+    <script>
+      import { attivaRivela } from '../lib/rivela';
+      attivaRivela();
+    </script>
   </body>
 </html>

@@ -20,7 +20,7 @@ const guide = [...Astro.props.entries]
   }));
 ---
 
-<ul class="guide-list">
+<ul class="guide-list" data-rivela>
   {guide.map((g) => (
     <li>
       <a class="guida panel px-border" href={g.href}>
@@ -54,13 +54,16 @@ const guide = [...Astro.props.entries]
     text-decoration: none;
     transition: transform 80ms steps(1, end);
   }
-  .guida:hover {
-    transform: translateY(-2px);
-    /* Nelle pagine anno il bordo prende il colore del mondo. */
-    --px-c: var(--mondo-chiaro, var(--accent));
+  @media (hover: hover) and (pointer: fine) {
+    .guida:hover {
+      transform: translateY(-2px);
+      /* Nelle pagine anno il bordo prende il colore del mondo. */
+      --px-c: var(--mondo-chiaro, var(--accent));
+    }
   }
   .guida:active {
-    transform: translateY(2px);
+    transform: translateY(4px);
+    --px-c: var(--mondo-chiaro, var(--accent));
   }
   .guida__titolo {
     display: block;

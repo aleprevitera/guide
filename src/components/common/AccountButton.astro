@@ -90,7 +90,9 @@
     cursor: pointer;
     transition: transform 80ms steps(1, end);
   }
-  .account__btn:hover { transform: translateY(-2px); }
+  @media (hover: hover) and (pointer: fine) {
+    .account__btn:hover { transform: translateY(-2px); }
+  }
   .account__btn:active { transform: translateY(2px); }
   .account__btn--off {
     background: var(--bg);

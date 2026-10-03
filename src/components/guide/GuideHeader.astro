@@ -59,9 +59,11 @@ const cfu = cfuGuida(data);
     min-height: 44px;
     text-decoration: none;
   }
-  .chip--link:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
+  @media (hover: hover) and (pointer: fine) {
+    .chip--link:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
   }
   .guide-header {
     margin-bottom: 24px;

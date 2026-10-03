@@ -228,9 +228,14 @@ const { id = 'cerca' } = Astro.props;
     color: var(--text);
     text-decoration: none;
   }
-  .cerca__risultati :global(.risultato:hover),
-  .cerca__risultati :global(.risultato:focus-visible) {
+  .cerca__risultati :global(.risultato:focus-visible),
+  .cerca__risultati :global(.risultato:active) {
     background: var(--chip);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .cerca__risultati :global(.risultato:hover) {
+      background: var(--chip);
+    }
   }
   .cerca__risultati :global(.risultato__anno) {
     padding: 0 6px;

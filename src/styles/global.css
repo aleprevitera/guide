@@ -259,8 +259,12 @@ strong {
   transition: transform 80ms steps(1, end);
 }
 
-.btn-px:hover {
-  transform: translateY(-2px);
+/* Il passaggio del mouse solo dove c'è un mouse: sul telefono l'effetto
+   resterebbe "incollato" dopo il tocco. Al tocco vale :active. */
+@media (hover: hover) and (pointer: fine) {
+  .btn-px:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .btn-px:active {
@@ -343,6 +347,26 @@ strong {
   background:
     repeating-linear-gradient(90deg, #566c86 0 12px, transparent 12px 16px) 0 0 / 100% 4px no-repeat,
     #566c86;
+}
+
+/* ---------- Comparsa allo scorrimento (src/lib/rivela.ts) ---------- */
+/* Pensata per il telefono: gli elementi di [data-rivela] compaiono a scatti
+   (12 → 0px in 3 fotogrammi) quando entrano nello schermo. */
+
+[data-rivela].is-armed > *:not(.is-visto) {
+  visibility: hidden;
+}
+
+[data-rivela] > .is-visto {
+  animation: rivela-entra 240ms steps(3, end) backwards;
+  animation-delay: calc(var(--i, 0) * 100ms);
+}
+
+@keyframes rivela-entra {
+  from {
+    transform: translateY(12px);
+    visibility: hidden;
+  }
 }
 
 /* ---------- Micro-animazioni di feedback (src/lib/fx.ts) ---------- */

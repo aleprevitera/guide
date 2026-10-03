@@ -79,8 +79,10 @@ const { moduli } = Astro.props;
       0 -4px 0 0 var(--border-off),
       0 4px 0 0 var(--border-off);
   }
-  .tabs__tab:hover {
-    color: var(--text);
+  @media (hover: hover) and (pointer: fine) {
+    .tabs__tab:hover {
+      color: var(--text);
+    }
   }
   .tabs__tab[aria-current='true'] {
     background: var(--accent);
