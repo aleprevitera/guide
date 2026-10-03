@@ -5,14 +5,24 @@
 // dist/. Netlify indica il contesto della build nella variabile CONTEXT.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StudyTimeHistogram from '../../components/feedback/StudyTimeHistogram.astro';
+import YearTiles from '../../components/home/YearTiles.astro';
 
 export function getStaticPaths() {
   const anteprima = ['deploy-preview', 'branch-deploy'].includes(process.env.CONTEXT ?? '');
   if (import.meta.env.PROD && !anteprima) return [];
-  return [{ params: { page: 'istogramma' } }];
+  return [{ params: { page: 'istogramma' } }, { params: { page: 'mondi' } }];
 }
 ---
 
+{Astro.params.page === 'mondi' && (
+<BaseLayout title="Dev · Mondi" noindex>
+  <h1>Mondi (dev)</h1>
+  <p>Tutti i mondi sbloccati, per valutare la palette. In home gli anni senza guide restano bloccati.</p>
+  <YearTiles anteprima />
+</BaseLayout>
+)}
+
+{Astro.params.page === 'istogramma' && (
 <BaseLayout title="Dev · Istogramma" noindex>
   <h1>Istogramma (dev)</h1>
   <p>Dati finti. Questa pagina non viene generata nella build di produzione.</p>
@@ -39,3 +49,4 @@ export function getStaticPaths() {
     totale={3}
   />
 </BaseLayout>
+)}

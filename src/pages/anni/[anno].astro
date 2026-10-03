@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuideList from '../../components/guide/GuideList.astro';
+import PixelIcon from '../../components/common/PixelIcon.astro';
 import { ANNI_DI_CORSO, annoSlug, numeroRomano, type Anno } from '../../lib/anni';
+import { MONDI, stileMondo } from '../../lib/mondi';
 
 export async function getStaticPaths() {
   const guide = await getCollection('guide');
@@ -18,20 +20,28 @@ interface Props {
 }
 
 const { anno, entries } = Astro.props;
+const mondo = MONDI[anno];
+const numero = numeroRomano(anno);
 ---
 
 <BaseLayout title={anno} description={`Guide pratiche agli esami del ${anno}`}>
   <p class="indietro"><a class="label" href="/#anni">&lt; Tutti gli anni</a></p>
-  <div class="testa">
-    <span class="testa__numero" aria-hidden="true">{numeroRomano(anno)}</span>
-    <div>
-      <h1>{anno}</h1>
-      <p class="testa__conteggio label">
-        {entries.length === 0 ? 'Nessuna guida' : `${entries.length} ${entries.length === 1 ? 'guida' : 'guide'}`}
-      </p>
+  <header class="banner" style={stileMondo(anno)}>
+    <div class="banner__cielo">
+      <span class="banner__numero" aria-hidden="true">{numero}</span>
+      <div>
+        <p class="banner__mondo label">Mondo {numero} · {mondo.nome}</p>
+        <h1>{anno}</h1>
+        <p class="banner__conteggio label">
+          {entries.length === 0 ? 'Nessuna guida' : `${entries.length} ${entries.length === 1 ? 'guida' : 'guide'}`}
+        </p>
+      </div>
+      <PixelIcon name={mondo.icona} size={32} class="banner__icona" />
     </div>
-  </div>
+    <span class="terreno" data-terreno={mondo.icona} aria-hidden="true"></span>
+  </header>
 
+  <div style={stileMondo(anno)}>
   {entries.length > 0 ? (
     <GuideList entries={entries} />
   ) : (
@@ -39,6 +49,7 @@ const { anno, entries } = Astro.props;
       Nessuna guida ancora per questo anno: i rappresentanti ci stanno lavorando.
     </p>
   )}
+  </div>
 </BaseLayout>
 
 <style>
@@ -50,33 +61,45 @@ const { anno, entries } = Astro.props;
     align-items: center;
     min-height: 44px;
   }
-  .testa {
+  .banner {
+    margin: 4px 4px 24px;
+    color: var(--mondo-ink);
+    box-shadow: -4px 0 0 0 var(--text), 4px 0 0 0 var(--text), 0 -4px 0 0 var(--text), 0 4px 0 0 var(--text);
+  }
+  .banner__cielo {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 8px;
+    padding: 16px 48px 16px 16px;
+    background: var(--mondo);
   }
-  .testa h1 {
+  .banner h1 {
     margin: 0;
   }
-  .testa__numero {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 64px;
-    height: 64px;
-    padding: 0 8px;
-    margin: 4px;
-    background: var(--accent);
-    color: var(--bg);
+  .banner__numero {
     font-family: var(--font-title);
     font-weight: var(--title-weight);
-    font-size: var(--h1-size);
+    font-size: 68px;
+    line-height: 1;
     -webkit-font-smoothing: none;
   }
-  .testa__conteggio {
-    color: var(--caption);
-    margin: 4px 0 0;
+  .banner__mondo,
+  .banner__conteggio {
+    margin: 0;
+  }
+  .banner__cielo :global(.banner__icona) {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    animation: banner-salta 1s steps(1, end) infinite;
+  }
+  @keyframes banner-salta {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  @media (forced-colors: active) {
+    .banner { outline: 2px solid CanvasText; }
   }
   .vuoto {
     color: var(--text-2);

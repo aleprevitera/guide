@@ -1,34 +1,55 @@
 ---
-// Sei caselle "selezione livello", una per anno di corso. Gli anni senza
-// guide sono spenti e non cliccabili.
+// Mappa dei mondi: sei caselle, una per anno di corso, ognuna con la palette
+// e il terreno del suo mondo (src/lib/mondi.ts). Gli anni senza guide sono
+// mondi ancora bloccati: spenti, con il lucchetto, non cliccabili.
 import { getCollection } from 'astro:content';
 import { ANNI_DI_CORSO, annoHref, numeroRomano } from '../../lib/anni';
+import { MONDI, stileMondo } from '../../lib/mondi';
 import PixelIcon from '../common/PixelIcon.astro';
 
+interface Props {
+  /** Solo per /dev/mondi: mostra tutti i mondi come sbloccati. */
+  anteprima?: boolean;
+}
+
+const { anteprima = false } = Astro.props;
 const guide = await getCollection('guide');
 const anni = ANNI_DI_CORSO.map((anno) => ({
   anno,
   numero: numeroRomano(anno),
   href: annoHref(anno),
-  n: guide.filter((g) => g.data.anno_di_corso === anno).length,
+  mondo: MONDI[anno],
+  stile: stileMondo(anno),
+  n: anteprima ? 1 : guide.filter((g) => g.data.anno_di_corso === anno).length,
 }));
 ---
 
-<ul class="anni">
+<ul class="mondi">
   {anni.map((a) => (
     <li>
       {a.n > 0 ? (
-        <a class="casella px-border" href={a.href}>
-          <span class="casella__numero" aria-hidden="true">{a.numero}</span>
-          <span class="visually-hidden">{a.anno}, </span>
-          <span class="casella__info label">{a.n} {a.n === 1 ? 'guida' : 'guide'}</span>
-          <PixelIcon name="book" size={16} class="casella__icona" />
+        <a class="mondo" href={a.href} style={a.stile}>
+          <span class="mondo__cielo">
+            <span class="mondo__numero" aria-hidden="true">{a.numero}</span>
+            <span class="mondo__nome label">{a.mondo.nome}</span>
+            <span class="mondo__info label">
+              <span class="visually-hidden">{a.anno}, </span>{a.n} {a.n === 1 ? 'guida' : 'guide'}
+            </span>
+            <PixelIcon name={a.mondo.icona} size={32} class="mondo__icona" />
+          </span>
+          <span class="terreno" data-terreno={a.mondo.icona} aria-hidden="true"></span>
         </a>
       ) : (
-        <span class="casella casella--spenta px-border px-border--off">
-          <span class="casella__numero" aria-hidden="true">{a.numero}</span>
-          <span class="visually-hidden">{a.anno}: </span>
-          <span class="casella__info label">In arrivo</span>
+        <span class="mondo mondo--bloccato">
+          <span class="mondo__cielo">
+            <span class="mondo__numero" aria-hidden="true">{a.numero}</span>
+            <span class="mondo__nome label">{a.mondo.nome}</span>
+            <span class="mondo__info label">
+              <span class="visually-hidden">{a.anno}: </span>In arrivo
+            </span>
+            <PixelIcon name="lock" size={24} class="mondo__icona" />
+          </span>
+          <span class="terreno" data-terreno="spento" aria-hidden="true"></span>
         </span>
       )}
     </li>
@@ -36,7 +57,7 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
 </ul>
 
 <style>
-  .anni {
+  .mondi {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px 16px;
@@ -45,65 +66,72 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
     list-style: none;
   }
   @media (min-width: 720px) {
-    .anni {
+    .mondi {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .anni li {
+  .mondi li {
     margin: 0;
   }
-  .casella {
+  .mondo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 4px;
+    color: var(--mondo-ink);
+    text-decoration: none;
+    box-shadow: -4px 0 0 0 var(--text), 4px 0 0 0 var(--text), 0 -4px 0 0 var(--text), 0 4px 0 0 var(--text);
+    transition: transform 80ms steps(1, end);
+  }
+  a.mondo:hover,
+  a.mondo:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+  }
+  a.mondo:active {
+    transform: translateY(2px);
+  }
+  .mondo__cielo {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    min-height: 96px;
-    margin: 0;
-    padding: 12px 16px;
-    background: var(--panel);
-    color: var(--text);
-    text-decoration: none;
-    transition: transform 80ms steps(1, end);
+    min-height: 104px;
+    padding: 12px 12px 8px;
+    background: var(--mondo);
   }
-  a.casella:hover,
-  a.casella:focus-visible {
-    transform: translateY(-2px);
-    --px-c: var(--accent);
-  }
-  a.casella:active {
-    transform: translateY(2px);
-  }
-  .casella__numero {
+  .mondo__numero {
     font-family: var(--font-title);
     font-weight: var(--title-weight);
     font-size: var(--h1-size);
     line-height: 1;
-    color: var(--accent);
     -webkit-font-smoothing: none;
   }
-  .casella__info {
-    color: var(--text-2);
+  .mondo__info {
+    margin-top: auto;
   }
-  .casella :global(.casella__icona) {
+  .mondo__cielo :global(.mondo__icona) {
     position: absolute;
-    right: 12px;
-    top: 12px;
+    right: 8px;
+    top: 8px;
   }
-  /* Il libro salta (2 fotogrammi) quando la casella è puntata. */
-  a.casella:hover :global(.casella__icona),
-  a.casella:focus-visible :global(.casella__icona) {
-    animation: casella-salta 500ms steps(1, end) infinite;
+  /* L'icona del mondo salta (2 fotogrammi) quando la casella è puntata. */
+  a.mondo:hover :global(.mondo__icona),
+  a.mondo:focus-visible :global(.mondo__icona) {
+    animation: mondo-salta 500ms steps(1, end) infinite;
   }
-  @keyframes casella-salta {
+  @keyframes mondo-salta {
     0% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
   }
-  .casella--spenta {
-    background: var(--bg);
-  }
-  .casella--spenta .casella__numero,
-  .casella--spenta .casella__info {
+  .mondo--bloccato {
     color: var(--caption);
+    box-shadow: -4px 0 0 0 var(--border-off), 4px 0 0 0 var(--border-off), 0 -4px 0 0 var(--border-off), 0 4px 0 0 var(--border-off);
+  }
+  .mondo--bloccato .mondo__cielo {
+    background: var(--chip);
+  }
+  @media (forced-colors: active) {
+    .mondo { outline: 2px solid CanvasText; }
   }
 </style>

@@ -6,6 +6,7 @@ import ModuliTabs from '../components/guide/ModuliTabs.astro';
 import ModuloSection from '../components/guide/ModuloSection.astro';
 import InfoDaVerificareCallout from '../components/guide/InfoDaVerificareCallout.astro';
 import { moduloAnchor } from '../lib/ids';
+import { MONDI, stileMondo } from '../lib/mondi';
 
 interface Props {
   data: CollectionEntry<'guide'>['data'];
@@ -17,7 +18,8 @@ const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(mo
 ---
 
 <BaseLayout title={data.title} description={data.sottotitolo} aggiornamento={data.ultimo_aggiornamento} autore={data.aggiornato_da}>
-  <article class="guide">
+  <article class="guide" style={stileMondo(data.anno_di_corso)}>
+    <span class="terreno guide__terreno" data-terreno={MONDI[data.anno_di_corso].icona} aria-hidden="true"></span>
     <GuideHeader data={data} />
 
     {isIntegrato && <ModuliTabs moduli={moduli.map((m) => ({ nome: m.modulo.nome_modulo, anchor: m.anchor }))} />}
@@ -29,3 +31,12 @@ const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(mo
     <InfoDaVerificareCallout items={data.info_da_verificare} />
   </article>
 </BaseLayout>
+
+<style>
+  /* Mini-scena del mondo: 8px di cielo nel colore del mondo + terreno. */
+  .guide__terreno {
+    height: 24px;
+    margin: 0 0 16px;
+    border-top: 8px solid var(--mondo);
+  }
+</style>
