@@ -117,7 +117,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   import { isFascia, type FasciaStudio } from '../../lib/fasce';
   import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, ritardoTu, type Conteggi } from '../../lib/histogram';
   import { accedi, EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
-  import { fluttua, saltello, scintille } from '../../lib/fx';
+  import { fluttua, saltello, scintille, vibra } from '../../lib/fx';
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = <T extends Element = HTMLElement>(root: ParentNode, sel: string) => root.querySelector<T>(sel)!;
@@ -221,6 +221,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       }
       stato(hist, 'Voto registrato. Grazie!');
       scintille(btn);
+      vibra([12, 40, 12]); // doppio "tic": voto registrato
       await carica(hist).catch(() => {});
       const riga = hist.querySelector<HTMLElement>(`.riga[data-fascia="${fascia}"]`);
       if (riga && !$(hist, '[data-righe]').hidden) {

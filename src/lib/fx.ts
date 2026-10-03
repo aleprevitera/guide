@@ -54,6 +54,21 @@ export function fluttua(el: Element, testo: string) {
   setTimeout(() => host.remove(), 700);
 }
 
+/**
+ * Vibrazione breve (feedback tattile da gioco). Solo dove il browser la
+ * supporta (Android; iOS no) e solo in risposta a un gesto dell'utente,
+ * altrimenti il browser la ignora. Spenta con "riduci movimento".
+ */
+export function vibra(schema: number | number[] = 10) {
+  if (ridotto()) return;
+  if (!('vibrate' in navigator)) return;
+  try {
+    navigator.vibrate(schema);
+  } catch {
+    /* non disponibile */
+  }
+}
+
 /** Saltello a due fotogrammi (classe fx-hop) su un elemento esistente. */
 export function saltello(el: Element) {
   if (ridotto()) return;

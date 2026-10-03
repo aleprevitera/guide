@@ -52,6 +52,17 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
   ))}
 </ul>
 
+<script>
+  import { vibra } from '../../lib/fx';
+
+  // Tic brevissimo al tocco di un mondo (Android), come premere un blocco.
+  for (const casella of document.querySelectorAll<HTMLAnchorElement>('a.mondo')) {
+    casella.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') vibra(8);
+    });
+  }
+</script>
+
 <style>
   .mondi {
     display: grid;
