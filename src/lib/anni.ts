@@ -15,4 +15,7 @@ export const numeroRomano = (anno: Anno): string => anno.split(' ')[0];
 
 export const annoHref = (anno: Anno): string => `/anni/${annoSlug(anno)}/`;
 
+/** Nome di View Transition condiviso fra casella del mondo e banner dell'anno. */
+export const vtMondo = (anno: Anno): string => `mondo-${annoSlug(anno)}`;
+
 export { ANNI_DI_CORSO };

@@ -349,6 +349,52 @@ strong {
     #566c86;
 }
 
+/* ---------- Transizioni fra pagine (View Transitions) ---------- */
+/* Navigazione "da app", soprattutto su telefono: la casella del mondo
+   diventa il banner dell'anno, il titolo della card diventa il titolo della
+   guida, l'intestazione resta ferma. A scatti come il resto del sito. Dove
+   il browser non le supporta la pagina si apre normalmente. */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 240ms;
+  animation-timing-function: steps(4, end);
+}
+
+/* La pagina cambia di colpo (niente dissolvenza semitrasparente, poco
+   "pixel"): si muovono solo gli elementi con un nome di transizione. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Elementi con nome ma senza corrispondente nell'altra pagina (es. le altre
+   caselle dei mondi): spariscono / compaiono subito, niente fantasmi. */
+::view-transition-old(*):only-child {
+  animation: none;
+  opacity: 0;
+}
+::view-transition-new(*):only-child {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
 /* ---------- Comparsa allo scorrimento (src/lib/rivela.ts) ---------- */
 /* Pensata per il telefono: gli elementi di [data-rivela] compaiono a scatti
    (12 → 0px in 3 fotogrammi) quando entrano nello schermo. */

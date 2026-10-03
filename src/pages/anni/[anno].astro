@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuideList from '../../components/guide/GuideList.astro';
 import PixelIcon from '../../components/common/PixelIcon.astro';
-import { ANNI_DI_CORSO, annoSlug, numeroRomano, type Anno } from '../../lib/anni';
+import { ANNI_DI_CORSO, annoSlug, numeroRomano, vtMondo, type Anno } from '../../lib/anni';
 import { MONDI, stileMondo } from '../../lib/mondi';
 
 export async function getStaticPaths() {
@@ -26,7 +26,7 @@ const numero = numeroRomano(anno);
 
 <BaseLayout title={anno} description={`Guide pratiche agli esami del ${anno}`}>
   <p class="indietro"><a class="label" href="/#anni">&lt; Tutti gli anni</a></p>
-  <header class="banner" style={stileMondo(anno)}>
+  <header class="banner" style={`${stileMondo(anno)};view-transition-name:${vtMondo(anno)}`}>
     <div class="banner__cielo">
       <span class="banner__numero" aria-hidden="true">{numero}</span>
       <div>

@@ -3,7 +3,7 @@
 // e il terreno del suo mondo (src/lib/mondi.ts). Gli anni senza guide sono
 // mondi ancora bloccati: spenti, con il lucchetto, non cliccabili.
 import { getCollection } from 'astro:content';
-import { ANNI_DI_CORSO, annoHref, numeroRomano } from '../../lib/anni';
+import { ANNI_DI_CORSO, annoHref, numeroRomano, vtMondo } from '../../lib/anni';
 import { MONDI, stileMondo } from '../../lib/mondi';
 import PixelIcon from '../common/PixelIcon.astro';
 
@@ -19,7 +19,7 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
   numero: numeroRomano(anno),
   href: annoHref(anno),
   mondo: MONDI[anno],
-  stile: stileMondo(anno),
+  stile: `${stileMondo(anno)};view-transition-name:${vtMondo(anno)}`,
   n: anteprima ? 1 : guide.filter((g) => g.data.anno_di_corso === anno).length,
 }));
 ---
