@@ -1,0 +1,13 @@
+{
+  "_nota": "Id di guide tolte dal sito ma con voti già registrati su Supabase: l'import da Notion li riusa quando arriva la scheda con questo titolo (chiave = titolo Notion), così i voti restano agganciati. Moduli abbinati per nome.",
+  "Clinica Medica 2": {
+    "id": "g-m8g8n3g2",
+    "file": "clinica-medica-ii.yaml",
+    "moduli": { "Clinica Medica II": "m-c2anv9sl", "Clinica Medica 2": "m-c2anv9sl" }
+  },
+  "Ginecologia e Ostetricia": {
+    "id": "g-qjcg8has",
+    "file": "ginecologia-e-ostetricia.yaml",
+    "moduli": { "Ginecologia e Ostetricia": "m-oc7rmh1w", "Genetica": "m-ldm3iupg" }
+  }
+}

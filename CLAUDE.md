@@ -51,8 +51,9 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   JSON vincolato; anno, autore (`aggiornato_da`), `id` e date li decide il codice; validazione zod +
   controllo su numeri/link non presenti nella scheda; cache in `.cache/` (rilanci senza costi).
   Si importano solo le schede "Fatto" con contenuto; le guide esistenti con lo stesso titolo vengono
-  sostituite **mantenendo `id` e nome file**. Le guide non presenti in Notion (oggi Clinica Medica II e
-  Ginecologia) sono segnaposto del vecchio sito.
+  sostituite **mantenendo `id` e nome file**. I segnaposto del vecchio sito sono stati tolti; gli `id`
+  di guide tolte ma con voti su Supabase stanno in `scripts/id-riservati.json` e l'import li riusa
+  quando arriva la scheda con quel titolo. Non cancellare guide con voti senza riservarne gli `id`.
 - Tempo di studio = istogramma, **sempre per modulo**: `study_time` per modulo solo se la scheda lo dà per
   quel modulo; un tempo unico per un esame integrato va in `descrizione_generale`, mai copiato sui moduli.
   `fascia_studio` (etichetta RAPPR.) la calcola il codice con `fasciaDaGiorni` (`src/lib/fasce.ts`),

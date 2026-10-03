@@ -141,6 +141,13 @@ async function leggiIndice() {
 
 async function leggiEsistenti() {
   const mappa = new Map();
+  // Id riservati di guide tolte dal sito ma con voti su Supabase.
+  const riservati = JSON.parse(await fs.readFile(path.join(ROOT, 'scripts/id-riservati.json'), 'utf8'));
+  for (const [titolo, r] of Object.entries(riservati)) {
+    if (titolo.startsWith('_')) continue;
+    const moduli = Object.entries(r.moduli).map(([nome_modulo, id]) => ({ nome_modulo, id }));
+    mappa.set(chiaveTitolo(titolo), { file: r.file, dati: { id: r.id, moduli } });
+  }
   for (const f of await fs.readdir(DIR_GUIDE)) {
     if (!f.endsWith('.yaml')) continue;
     const dati = YAML.parse(await fs.readFile(path.join(DIR_GUIDE, f), 'utf8'));
