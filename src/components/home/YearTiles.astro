@@ -30,11 +30,9 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
       {a.n > 0 ? (
         <a class="mondo" href={a.href} style={a.stile}>
           <span class="mondo__cielo">
-            <span class="mondo__numero" aria-hidden="true">{a.numero}</span>
-            <span class="mondo__nome label">{a.mondo.nome}</span>
-            <span class="mondo__info label">
-              <span class="visually-hidden">{a.anno}, </span>{a.n} {a.n === 1 ? 'guida' : 'guide'}
-            </span>
+            <span class="mondo__numero">{a.numero}</span>
+            <span class="label">Anno<span class="visually-hidden">,</span></span>
+            <span class="mondo__info label">{a.n} {a.n === 1 ? 'guida' : 'guide'}</span>
             <PixelIcon name={a.mondo.icona} size={32} class="mondo__icona" />
           </span>
           <span class="terreno" data-terreno={a.mondo.icona} aria-hidden="true"></span>
@@ -42,11 +40,9 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
       ) : (
         <span class="mondo mondo--bloccato">
           <span class="mondo__cielo">
-            <span class="mondo__numero" aria-hidden="true">{a.numero}</span>
-            <span class="mondo__nome label">{a.mondo.nome}</span>
-            <span class="mondo__info label">
-              <span class="visually-hidden">{a.anno}: </span>In arrivo
-            </span>
+            <span class="mondo__numero">{a.numero}</span>
+            <span class="label">Anno<span class="visually-hidden">:</span></span>
+            <span class="mondo__info label">In arrivo</span>
             <PixelIcon name="lock" size={24} class="mondo__icona" />
           </span>
           <span class="terreno" data-terreno="spento" aria-hidden="true"></span>

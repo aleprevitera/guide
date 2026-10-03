@@ -57,8 +57,9 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   **solo a multipli di 8px** (16px; è una bitmap su griglia 8), Atkinson Hyperlegible Next 16px/1.5
   per il corpo. Il corpo del testo non è mai in font pixel.
 - Nessun `border-radius`. Bordo a scalini con `.px-border` (+ `--off`, `--warn`), margine laterale 4px.
-- **Mondi**: ogni anno è un "mondo" (I Prato, II Deserto, III Mare, IV Ghiaccio, V Vulcano,
-  VI Castello = laurea) definito solo in `src/lib/mondi.ts` (colori Sweetie 16 + lilla `#d59ef0`).
+- **Mondi**: ogni anno è un "mondo" con palette, icona e terreno propri (I prato, II deserto,
+  III mare, IV ghiaccio, V vulcano, VI castello = laurea), definito solo in `src/lib/mondi.ts`
+  (colori Sweetie 16 + lilla `#d59ef0`). I mondi **non hanno nomi visibili**: in pagina solo l'anno.
   `stileMondo(anno)` imposta `--mondo` (fondo), `--mondo-ink` (testo sul fondo, ≥ 5:1) e
   `--mondo-chiaro` (sul fondo pagina, ≥ 6:1; colora gli h2). Terreno pixel: `.terreno[data-terreno]`
   in `global.css`. Link, pulsanti e focus restano nel giallo accento ovunque. Anteprima: `/dev/mondi`.

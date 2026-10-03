@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
 import { cfuGuida } from '../../lib/guide';
 import { annoHref } from '../../lib/anni';
-import { MONDI } from '../../lib/mondi';
 
 type GuideData = CollectionEntry<'guide'>['data'];
 
@@ -20,7 +19,7 @@ const cfu = cfuGuida(data);
 
 <header class="guide-header">
   <ul class="chips label" aria-label="In breve">
-    <li><a class="chip chip--mondo chip--link" href={annoHref(anno_di_corso)}>{anno_di_corso} · {MONDI[anno_di_corso].nome}</a></li>
+    <li><a class="chip chip--mondo chip--link" href={annoHref(anno_di_corso)}>{anno_di_corso}</a></li>
     {cfu && <li class="chip">{cfu} CFU</li>}
     {isIntegrato && <li class="chip">{moduli.length} moduli</li>}
   </ul>
