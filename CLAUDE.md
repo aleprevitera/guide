@@ -26,10 +26,12 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - `src/content/config.ts` — schema Zod della collection `guide` (YAML in `src/content/guide/`).
 - `src/lib/` — logica condivisa: `fasce.ts` (fasce tempo di studio, usabile anche nel
   browser), `histogram.ts`, `guide.ts` (CFU, tipi esame, tempo breve), `ids.ts`
-  (unicità id, ancore moduli), `anni.ts` (slug degli anni), `supabase.ts` (client),
-  `auth.ts` (accesso Google), `fx.ts` (micro-animazioni), `markdown.ts` (sanitizzazione).
+  (unicità id, ancore moduli), `anni.ts` (slug degli anni), `supabase-config.ts` (URL,
+  chiave publishable, dominio: senza dipendenze), `supabase.ts` (client, importato solo
+  dinamicamente), `auth.ts` (accesso Google: non scarica supabase-js se non c'è una sessione),
+  `fx.ts` (micro-animazioni), `markdown.ts` (sanitizzazione).
 - `src/components/common/` — header, footer, icone pixel, account, benvenuto.
-- `src/components/guide/` — intestazione guida, schede moduli, scheda esame, sezioni, card.
+- `src/components/guide/` — intestazione guida, schede moduli, scheda esame, sezioni, `GuideList` (pannelli guida per `/guide/` e `/anni/`).
 - `src/components/feedback/` — `StudyTimeHistogram.astro` (modalità collegata o statica).
 - `src/components/home/` — caselle degli anni, lettera dei creatori.
 - `src/pages/` — home, `/guide/`, `/guide/[slug]/`, `/anni/[anno]/`, `/dev/[page]/`.

@@ -1,0 +1,109 @@
+---
+// Sei caselle "selezione livello", una per anno di corso. Gli anni senza
+// guide sono spenti e non cliccabili.
+import { getCollection } from 'astro:content';
+import { ANNI_DI_CORSO, annoHref, numeroRomano } from '../../lib/anni';
+import PixelIcon from '../common/PixelIcon.astro';
+
+const guide = await getCollection('guide');
+const anni = ANNI_DI_CORSO.map((anno) => ({
+  anno,
+  numero: numeroRomano(anno),
+  href: annoHref(anno),
+  n: guide.filter((g) => g.data.anno_di_corso === anno).length,
+}));
+---
+
+<ul class="anni">
+  {anni.map((a) => (
+    <li>
+      {a.n > 0 ? (
+        <a class="casella px-border" href={a.href}>
+          <span class="casella__numero" aria-hidden="true">{a.numero}</span>
+          <span class="visually-hidden">{a.anno}, </span>
+          <span class="casella__info label">{a.n} {a.n === 1 ? 'guida' : 'guide'}</span>
+          <PixelIcon name="book" size={16} class="casella__icona" />
+        </a>
+      ) : (
+        <span class="casella casella--spenta px-border px-border--off">
+          <span class="casella__numero" aria-hidden="true">{a.numero}</span>
+          <span class="visually-hidden">{a.anno}: </span>
+          <span class="casella__info label">In arrivo</span>
+        </span>
+      )}
+    </li>
+  ))}
+</ul>
+
+<style>
+  .anni {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+    margin: 0 0 32px;
+    padding: 4px;
+    list-style: none;
+  }
+  @media (min-width: 720px) {
+    .anni {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .anni li {
+    margin: 0;
+  }
+  .casella {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-height: 96px;
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--panel);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 80ms steps(1, end);
+  }
+  a.casella:hover,
+  a.casella:focus-visible {
+    transform: translateY(-2px);
+    --px-c: var(--accent);
+  }
+  a.casella:active {
+    transform: translateY(2px);
+  }
+  .casella__numero {
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h1-size);
+    line-height: 1;
+    color: var(--accent);
+    -webkit-font-smoothing: none;
+  }
+  .casella__info {
+    color: var(--text-2);
+  }
+  .casella :global(.casella__icona) {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  /* Il libro salta (2 fotogrammi) quando la casella è puntata. */
+  a.casella:hover :global(.casella__icona),
+  a.casella:focus-visible :global(.casella__icona) {
+    animation: casella-salta 500ms steps(1, end) infinite;
+  }
+  @keyframes casella-salta {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  .casella--spenta {
+    background: var(--bg);
+  }
+  .casella--spenta .casella__numero,
+  .casella--spenta .casella__info {
+    color: var(--caption);
+  }
+</style>

@@ -3,9 +3,10 @@
 //
 // Due modalità:
 //   - collegata (prop `moduloId`): conteggi e voto letti/scritti su Supabase
-//     dal browser; per votare serve l'accesso con Google con l'account
-//     istituzionale (@universitadipavia.it).
+//     dal browser. È un contenuto "extra": senza accesso Google con
+//     l'account d'ateneo il pannello resta bloccato (vedi src/lib/auth.ts).
 //   - statica (props `counts` + `totale`): solo UI, usata da /dev/istogramma.
+import PixelIcon from '../common/PixelIcon.astro';
 import { FASCE_STUDIO, type FasciaStudio } from '../../lib/fasce';
 import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, MS_PER_BLOCCO, ritardoTu, type Conteggi } from '../../lib/histogram';
 
@@ -42,6 +43,24 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   style={`--tu-delay:${ritardoTu(blocchi)}ms;--ms-blocco:${MS_PER_BLOCCO}ms`}
 >
   <h2 class="hist__titolo label" id={`${uid}-titolo`}>{titolo}</h2>
+
+  {live && (
+    <div class="bloccato" data-bloccato>
+      <span class="bloccato__icona" data-lucchetto>
+        <span data-lucchetto-chiuso><PixelIcon name="lock" size={32} /></span>
+        <span data-lucchetto-aperto hidden><PixelIcon name="lock-open" size={32} /></span>
+      </span>
+      <p class="bloccato__titolo label">Contenuto extra</p>
+      <p class="bloccato__testo">
+        Accedi con il tuo account <strong>@universitadipavia.it</strong> per vedere quanto hanno
+        studiato gli altri e dare il tuo voto.
+      </p>
+      <button type="button" class="btn-px btn-px--accent label" data-accedi>Accedi con Google</button>
+      <p class="bloccato__errore" role="status" data-bloccato-errore></p>
+    </div>
+  )}
+
+  <div class="hist__contenuto" data-contenuto hidden={live}>
   <p class="hist__totale label" data-totale>
     {live ? 'Caricamento…' : `${totale} ${totale === 1 ? 'risposta' : 'risposte'}`}
   </p>
@@ -87,29 +106,17 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       ))}
     </div>
 
-    {live && (
-      <div class="accesso" data-accesso hidden>
-        <p class="accesso__testo">
-          Per votare accedi con il tuo account <strong>@universitadipavia.it</strong>: serve solo a garantire un voto per studente.
-        </p>
-        <button type="button" class="btn-px btn-px--accent label" data-accedi>Accedi con Google</button>
-      </div>
-    )}
-
     <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
-    <p class="voto__nota">
-      Un voto per studente, con account istituzionale.
-      <span data-account hidden>
-        Accesso come <strong data-email></strong> · <button type="button" class="voto__link" data-esci>Esci</button>
-      </span>
-    </p>
+    <p class="voto__nota">Un voto per studente, con account istituzionale.</p>
+  </div>
   </div>
 </section>
 
 <script>
   import { isFascia, type FasciaStudio } from '../../lib/fasce';
   import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, ritardoTu, type Conteggi } from '../../lib/histogram';
-  import type { Session } from '@supabase/supabase-js';
+  import { accedi, EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+  import { fluttua, saltello, scintille } from '../../lib/fx';
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = <T extends Element = HTMLElement>(root: ParentNode, sel: string) => root.querySelector<T>(sel)!;
@@ -174,24 +181,20 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   }
 
   // --- Modalità collegata (Supabase) ---------------------------------------
+  // Contenuto "extra": senza accesso il pannello resta bloccato e non si
+  // interroga Supabase (che comunque nega i dati a chi non è autenticato).
   const liveHists = [...document.querySelectorAll<HTMLElement>('[data-hist][data-live]')];
   if (liveHists.length > 0) {
-    // Il client Supabase è in un chunk separato, caricato solo dove serve.
-    const sb = import('../../lib/supabase');
-    const PENDING_KEY = 'guide:voto-in-sospeso';
-    type Pending = { moduloId: string; fascia: FasciaStudio; anchor: string };
-    let session: Session | null = null;
+    let session: StatoAuth['session'] = null;
 
     const stato = (hist: HTMLElement, msg: string) => ($(hist, '[data-stato]').textContent = msg);
 
     async function carica(hist: HTMLElement) {
-      const { supabase } = await sb;
+      const { supabase } = await import('../../lib/supabase');
       const moduloId = hist.dataset.modulo!;
       const [conteggi, mio] = await Promise.all([
         supabase.rpc('study_time_counts', { p_modulo_id: moduloId }),
-        session
-          ? supabase.from('study_time_votes').select('fascia').eq('modulo_id', moduloId).maybeSingle()
-          : Promise.resolve({ data: null, error: null }),
+        supabase.from('study_time_votes').select('fascia').eq('modulo_id', moduloId).maybeSingle(),
       ]);
       if (conteggi.error) throw conteggi.error;
       if (mio.error) throw mio.error;
@@ -206,8 +209,9 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       render(hist, counts, totale, mio.data && isFascia(mio.data.fascia) ? mio.data.fascia : null);
     }
 
-    async function vota(hist: HTMLElement, fascia: FasciaStudio) {
-      const { supabase } = await sb;
+    async function vota(hist: HTMLElement, btn: HTMLButtonElement) {
+      const fascia = btn.dataset.voto as FasciaStudio;
+      const { supabase } = await import('../../lib/supabase');
       stato(hist, 'Invio del voto…');
       const { error } = await supabase.rpc('cast_study_time_vote', { p_modulo_id: hist.dataset.modulo!, p_fascia: fascia });
       if (error) {
@@ -215,125 +219,66 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
         return;
       }
       stato(hist, 'Voto registrato. Grazie!');
+      scintille(btn);
       await carica(hist).catch(() => {});
+      const riga = hist.querySelector<HTMLElement>(`.riga[data-fascia="${fascia}"]`);
+      if (riga && !$(hist, '[data-righe]').hidden) {
+        fluttua($(riga, '.riga__count'), '+1');
+        riga.classList.remove('riga--lampo');
+        void riga.offsetWidth;
+        riga.classList.add('riga--lampo');
+      }
     }
 
-    /** Riga "Accesso come … · Esci" su tutti gli istogrammi della pagina. */
-    function aggiornaAccount() {
+    function blocca(hist: HTMLElement) {
+      $(hist, '[data-contenuto]').hidden = true;
+      $(hist, '[data-bloccato]').hidden = false;
+      $(hist, '[data-lucchetto-aperto]').hidden = true;
+      $(hist, '[data-lucchetto-chiuso]').hidden = false;
+      stato(hist, '');
+    }
+
+    async function sblocca(hist: HTMLElement, animato: boolean) {
+      if (animato && !reduce) {
+        // Il lucchetto si apre (2 fotogrammi) prima di mostrare i dati.
+        $(hist, '[data-lucchetto-chiuso]').hidden = true;
+        $(hist, '[data-lucchetto-aperto]').hidden = false;
+        saltello($(hist, '[data-lucchetto]'));
+        await new Promise((r) => setTimeout(r, 500));
+      }
+      $(hist, '[data-bloccato]').hidden = true;
+      $(hist, '[data-contenuto]').hidden = false;
+      animaQuandoVisibile(
+        hist,
+        carica(hist).catch(() => {
+          $(hist, '[data-totale]').textContent = 'Voti non disponibili';
+          stato(hist, 'Al momento non è possibile caricare i voti.');
+        }),
+      );
+    }
+
+    const applica = ({ session: s, appenaEntrato }: StatoAuth) => {
+      session = s;
       for (const hist of liveHists) {
-        $(hist, '[data-account]').hidden = !session;
-        $(hist, '[data-email]').textContent = session?.user.email ?? '';
-        if (session) $(hist, '[data-accesso]').hidden = true;
+        if (s) sblocca(hist, appenaEntrato);
+        else blocca(hist);
       }
+    };
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+
+    for (const hist of liveHists) {
+      hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (session) vota(hist, btn);
+        });
+      });
+      $(hist, '[data-accedi]').addEventListener('click', async () => {
+        stato(hist, '');
+        const { errore } = await accedi();
+        if (errore) $(hist, '[data-bloccato-errore]').textContent = errore;
+      });
     }
-
-    function leggiPending(): Pending | null {
-      try {
-        const p = JSON.parse(sessionStorage.getItem(PENDING_KEY) ?? 'null');
-        sessionStorage.removeItem(PENDING_KEY);
-        return p && isFascia(p.fascia) ? p : null;
-      } catch {
-        return null;
-      }
-    }
-
-    (async () => {
-      const { supabase, DOMINIO_ATENEO } = await sb;
-
-      // Al ritorno da Google il client scambia il ?code= con la sessione
-      // (PKCE) durante l'inizializzazione; getSession() la attende.
-      session = (await supabase.auth.getSession()).data.session;
-
-      // Ripulisce l'URL dai parametri del login, mostrando l'eventuale errore
-      // (es. account rifiutato dall'hook perché non d'ateneo).
-      const url = new URL(location.href);
-      const erroreLogin = url.searchParams.get('error_description');
-      if (['code', 'error', 'error_code', 'error_description'].some((k) => url.searchParams.has(k))) {
-        ['code', 'error', 'error_code', 'error_description'].forEach((k) => url.searchParams.delete(k));
-        history.replaceState(null, '', url);
-      }
-
-      if (session && !(session.user.email ?? '').toLowerCase().endsWith(`@${DOMINIO_ATENEO}`)) {
-        // Non dovrebbe accadere (hook lato Auth + RLS), ma non lasciamo
-        // aperta una sessione con un account non ammesso.
-        await supabase.auth.signOut();
-        session = null;
-      }
-      aggiornaAccount();
-
-      const pending = leggiPending();
-
-      for (const hist of liveHists) {
-        const moduloId = hist.dataset.modulo!;
-        const daVotare = session && pending?.moduloId === moduloId ? pending.fascia : null;
-
-        if (erroreLogin && pending?.moduloId === moduloId) {
-          stato(hist, `Accesso non riuscito. Usa un account @${DOMINIO_ATENEO}.`);
-        }
-
-        animaQuandoVisibile(
-          hist,
-          (daVotare ? vota(hist, daVotare) : carica(hist)).catch(() => {
-            $(hist, '[data-totale]').textContent = 'Voti non disponibili';
-            stato(hist, 'Al momento non è possibile caricare i voti.');
-          }),
-        );
-
-        hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
-          btn.addEventListener('click', () => {
-            const fascia = btn.dataset.voto as FasciaStudio;
-            if (session) {
-              vota(hist, fascia);
-              return;
-            }
-            hist.dataset.inSospeso = fascia;
-            premuto(hist, fascia);
-            $(hist, '[data-accesso]').hidden = false;
-            stato(hist, '');
-            $(hist, '[data-accedi]').focus();
-          });
-        });
-
-        $(hist, '[data-accedi]').addEventListener('click', async () => {
-          const fascia = hist.dataset.inSospeso;
-          // Il voto scelto sopravvive al giro su Google in sessionStorage.
-          if (isFascia(fascia)) {
-            const anchor = hist.closest<HTMLElement>('[data-modulo-panel]')?.id ?? '';
-            try {
-              sessionStorage.setItem(PENDING_KEY, JSON.stringify({ moduloId, fascia, anchor } satisfies Pending));
-            } catch {
-              /* senza storage il voto andrà ripetuto dopo l'accesso */
-            }
-          }
-          stato(hist, 'Apertura di Google…');
-          const { error } = await supabase.auth.signInWithOAuth({
-            provider: 'google',
-            options: {
-              redirectTo: location.origin + location.pathname,
-              // Suggerisce a Google gli account del dominio d'ateneo; il
-              // vincolo vero è lato server (hook Auth + RLS).
-              queryParams: { hd: DOMINIO_ATENEO, prompt: 'select_account' },
-            },
-          });
-          if (error) stato(hist, 'Non è stato possibile avviare l’accesso con Google.');
-        });
-
-        $(hist, '[data-esci]').addEventListener('click', async () => {
-          await supabase.auth.signOut();
-          session = null;
-          aggiornaAccount();
-          liveHists.forEach((h) => {
-            stato(h, '');
-            carica(h).catch(() => {});
-          });
-        });
-      }
-
-      // Riporta lo studente al modulo da cui aveva votato (schede dei moduli).
-      if (pending?.anchor && location.hash.slice(1) !== pending.anchor) {
-        location.hash = pending.anchor;
-      }
-    })();
   }
 </script>
 
@@ -496,33 +441,49 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     .voto__btn[aria-pressed='true'] { outline: 4px solid Highlight; }
   }
 
-  /* --- Accesso con Google --- */
-  .accesso {
-    margin-top: 16px;
-    padding: 12px;
+  /* --- Contenuto extra bloccato --- */
+  .bloccato {
+    margin-top: 12px;
+    padding: 16px;
     background: var(--bg);
+    text-align: center;
   }
-  .accesso__testo {
+  .bloccato__icona {
+    display: inline-block;
+  }
+  .bloccato__icona span[hidden] {
+    display: none;
+  }
+  .bloccato__titolo {
+    color: var(--accent);
+    margin: 8px 0;
+  }
+  .bloccato__testo {
     color: var(--text-2);
-    margin: 0 0 12px;
+    margin: 0 0 16px;
   }
+  .bloccato__errore:empty {
+    display: none;
+  }
+  .bloccato__errore {
+    color: var(--warn);
+    margin: 12px 0 0;
+  }
+
+  /* Lampo a due fotogrammi sulla barra appena votata (più specifico
+     dell'animazione di riempimento .hist.is-playing .barra). */
+  .hist .riga.riga--lampo .barra {
+    animation: lampo 160ms steps(1, end) 3;
+  }
+  @keyframes lampo {
+    50% { visibility: hidden; }
+  }
+
   .voto__stato:empty {
     display: none;
   }
   .voto__stato {
     color: var(--text);
     margin: 12px 0 0;
-  }
-  .voto__link {
-    min-height: 44px;
-    padding: 0;
-    border: 0;
-    background: none;
-    color: var(--accent);
-    font: inherit;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    cursor: pointer;
   }
 </style>

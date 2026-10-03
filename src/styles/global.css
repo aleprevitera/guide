@@ -278,6 +278,63 @@ strong {
   margin: 16px var(--px);
 }
 
+/* ---------- Micro-animazioni di feedback (src/lib/fx.ts) ---------- */
+
+.fx-host {
+  position: fixed;
+  z-index: 50;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.fx-pixel {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  animation: fx-scintilla 400ms steps(4, end) forwards;
+}
+
+@keyframes fx-scintilla {
+  from {
+    transform: translate(calc(var(--dx) / 2), calc(var(--dy) / 2));
+  }
+  to {
+    transform: translate(var(--dx), var(--dy));
+    visibility: hidden;
+  }
+}
+
+.fx-float {
+  position: absolute;
+  transform: translateX(-50%);
+  color: var(--you);
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  line-height: 1;
+  white-space: nowrap;
+  -webkit-font-smoothing: none;
+  animation: fx-sali 600ms steps(4, end) forwards;
+}
+
+@keyframes fx-sali {
+  from { transform: translate(-50%, -8px); }
+  to { transform: translate(-50%, -24px); visibility: hidden; }
+}
+
+.fx-hop {
+  animation: fx-hop 400ms steps(1, end);
+}
+
+@keyframes fx-hop {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-4px); }
+}
+
 /* ---------- Modalità contrasto elevato ---------- */
 /* In forced-colors i box-shadow vengono rimossi: servono bordi veri. */
 @media (forced-colors: active) {

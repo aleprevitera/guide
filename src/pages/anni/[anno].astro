@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GuideList from '../../components/guide/GuideList.astro';
+import { ANNI_DI_CORSO, annoSlug, numeroRomano, type Anno } from '../../lib/anni';
+
+export async function getStaticPaths() {
+  const guide = await getCollection('guide');
+  return ANNI_DI_CORSO.map((anno) => ({
+    params: { anno: annoSlug(anno) },
+    props: { anno, entries: guide.filter((g) => g.data.anno_di_corso === anno) },
+  }));
+}
+
+interface Props {
+  anno: Anno;
+  entries: Awaited<ReturnType<typeof getCollection<'guide'>>>;
+}
+
+const { anno, entries } = Astro.props;
+---
+
+<BaseLayout title={anno} description={`Guide pratiche agli esami del ${anno}`}>
+  <p class="indietro"><a class="label" href="/#anni">&lt; Tutti gli anni</a></p>
+  <div class="testa">
+    <span class="testa__numero" aria-hidden="true">{numeroRomano(anno)}</span>
+    <div>
+      <h1>{anno}</h1>
+      <p class="testa__conteggio label">
+        {entries.length === 0 ? 'Nessuna guida' : `${entries.length} ${entries.length === 1 ? 'guida' : 'guide'}`}
+      </p>
+    </div>
+  </div>
+
+  {entries.length > 0 ? (
+    <GuideList entries={entries} />
+  ) : (
+    <p class="vuoto panel px-border px-border--off">
+      Nessuna guida ancora per questo anno: i rappresentanti ci stanno lavorando.
+    </p>
+  )}
+</BaseLayout>
+
+<style>
+  .indietro {
+    margin: 0 0 8px;
+  }
+  .indietro a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .testa {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .testa h1 {
+    margin: 0;
+  }
+  .testa__numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    height: 64px;
+    padding: 0 8px;
+    margin: 4px;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h1-size);
+    -webkit-font-smoothing: none;
+  }
+  .testa__conteggio {
+    color: var(--caption);
+    margin: 4px 0 0;
+  }
+  .vuoto {
+    color: var(--text-2);
+    background: var(--bg);
+  }
+</style>

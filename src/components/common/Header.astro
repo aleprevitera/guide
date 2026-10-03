@@ -1,5 +1,6 @@
 ---
 import PixelIcon from './PixelIcon.astro';
+import AccountButton from './AccountButton.astro';
 ---
 
 <header class="site-header">
@@ -9,6 +10,7 @@ import PixelIcon from './PixelIcon.astro';
   </a>
   <nav class="site-header__nav" aria-label="Principale">
     <a class="label" href="/guide/">Tutte le guide</a>
+    <AccountButton />
   </nav>
 </header>
 
@@ -38,6 +40,12 @@ import PixelIcon from './PixelIcon.astro';
   @keyframes book-hop {
     0% { transform: translateY(0); }
     50% { transform: translateY(-4px); }
+  }
+  .site-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
   }
   .site-header__nav a {
     display: inline-flex;

@@ -1,0 +1,60 @@
+---
+// Lettera dei creatori sulla mission del progetto.
+// Modificabile SOLO qui nel codice (non da Decap). TODO testo: il testo
+// definitivo e le firme li forniscono i creatori; quello sotto è segnaposto.
+import PixelIcon from '../common/PixelIcon.astro';
+
+const firme = ['Nome Cognome', 'Nome Cognome'];
+---
+
+<section class="lettera panel px-border" aria-labelledby="lettera-titolo">
+  <div class="lettera__testa">
+    <PixelIcon name="letter" size={32} />
+    <h2 id="lettera-titolo" class="label">Lettera dai creatori</h2>
+  </div>
+
+  <div class="lettera__corpo">
+    <p>Cara studentessa, caro studente,</p>
+    <p>
+      <em>[Testo in arrivo.]</em> Qui racconteremo perché abbiamo creato queste guide, a chi sono
+      rivolte e come vogliamo che crescano, anno dopo anno, grazie a chi le usa.
+    </p>
+  </div>
+
+  <p class="lettera__firme">
+    {firme.map((f) => <span class="lettera__firma">{f}</span>)}
+  </p>
+</section>
+
+<style>
+  .lettera {
+    background: var(--panel);
+  }
+  .lettera__testa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .lettera__testa h2 {
+    margin: 0;
+    color: var(--accent);
+  }
+  .lettera__corpo {
+    color: var(--text-2);
+  }
+  .lettera__firme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 24px;
+    margin: 16px 0 0;
+  }
+  .lettera__firma {
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h2-size);
+    color: var(--text);
+    -webkit-font-smoothing: none;
+  }
+</style>

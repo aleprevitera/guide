@@ -1,34 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PixelIcon from '../components/common/PixelIcon.astro';
+import YearTiles from '../components/home/YearTiles.astro';
+import LetteraMission from '../components/home/LetteraMission.astro';
 ---
 
 <BaseLayout title="Home" description="Guide pratiche universitarie">
-  <section class="hero panel px-border" aria-labelledby="hero-title">
-    <PixelIcon name="book" size={32} />
-    <h1 id="hero-title">Guide pratiche universitarie</h1>
-    <p>
-      Guide compilate e mantenute dai rappresentanti degli studenti per aiutarti a prepararti
-      agli esami: programmi, fonti di studio, tempistiche e consigli pratici.
-    </p>
-    <p class="hero__cta">
-      <a class="btn-px btn-px--accent label" href="/guide/">Vai alle guide</a>
-    </p>
+  <h1>Guide pratiche universitarie</h1>
+  <p class="intro">
+    Programmi, fonti di studio, tempistiche e consigli pratici per ogni esame, scritti dai
+    rappresentanti degli studenti.
+  </p>
+
+  <section aria-labelledby="anni-titolo" id="anni">
+    <h2 id="anni-titolo">Scegli il tuo anno</h2>
+    <YearTiles />
   </section>
+
+  <LetteraMission />
+
+  <p class="tutte">
+    <a class="btn-px label" href="/guide/">Tutte le guide</a>
+  </p>
 </BaseLayout>
 
 <style>
-  .hero {
-    margin-top: 16px;
-  }
-  .hero h1 {
-    margin-top: 16px;
-  }
-  .hero p {
+  .intro {
     color: var(--text-2);
   }
-  .hero__cta {
-    margin: 24px 0 0;
+  #anni {
+    scroll-margin-top: 16px;
+  }
+  .tutte {
+    margin: 32px var(--px) 0;
   }
 </style>
 

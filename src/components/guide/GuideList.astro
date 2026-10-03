@@ -1,0 +1,77 @@
+---
+// Elenco di guide come pannelli cliccabili, con chip per CFU, tipo d'esame e
+// tempo stimato. Usato in /guide/ e nelle pagine degli anni.
+import type { CollectionEntry } from 'astro:content';
+import { cfuGuida, tempoBreve, tipiEsame } from '../../lib/guide';
+
+interface Props {
+  entries: CollectionEntry<'guide'>[];
+}
+
+const guide = [...Astro.props.entries]
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .map((entry) => ({
+    href: `/guide/${entry.id}/`,
+    title: entry.data.title,
+    cfu: cfuGuida(entry.data),
+    tipi: tipiEsame(entry.data),
+    tempo: tempoBreve(entry.data),
+    moduli: entry.data.moduli.length,
+  }));
+---
+
+<ul class="guide-list">
+  {guide.map((g) => (
+    <li>
+      <a class="guida panel px-border" href={g.href}>
+        <span class="guida__titolo">{g.title}</span>
+        <span class="chips label">
+          {g.cfu && <span class="chip">{g.cfu} CFU</span>}
+          {g.tipi.map((t) => <span class="chip">{t}</span>)}
+          {g.tempo && <span class="chip">{g.tempo}</span>}
+          {g.moduli > 1 && <span class="chip">{g.moduli} moduli</span>}
+        </span>
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .guide-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .guide-list li {
+    margin: 0;
+  }
+  .guida {
+    display: block;
+    min-height: 44px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 80ms steps(1, end);
+  }
+  .guida:hover {
+    transform: translateY(-2px);
+    --px-c: var(--accent);
+  }
+  .guida:active {
+    transform: translateY(2px);
+  }
+  .guida__titolo {
+    display: block;
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h2-size);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .guida .chips {
+    margin: 0;
+  }
+</style>
