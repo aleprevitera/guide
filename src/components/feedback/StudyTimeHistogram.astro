@@ -72,23 +72,20 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   <ol class="hist__righe" aria-label="Distribuzione delle risposte per fascia" hidden={!sufficienti} data-righe>
     {righe.map((r) => (
       <li class:list={['riga', { 'riga--tu': r.fascia === fasciaUtente }]} data-fascia={r.fascia}>
-        <div class="riga__testa">
+        <span class="riga__testa">
+          {/* Quadratino verde = il tuo voto (non solo il colore della riga). */}
+          <span class="tag--tu" hidden={r.fascia !== fasciaUtente} title="Il tuo voto"><span class="visually-hidden">(il tuo voto) </span></span>
           <span class="riga__fascia label">{r.fascia}</span>
           {r.fascia === fasciaRappresentante && (
             <span class="tag tag--rappr label" title="Stima del rappresentante">
               Rappr.<span class="visually-hidden"> (stima del rappresentante)</span>
             </span>
           )}
-          <span class="tag tag--tu label" hidden={r.fascia !== fasciaUtente}>
-            Tu<span class="visually-hidden"> (il tuo voto)</span>
-          </span>
-        </div>
-        <div class="riga__barra">
-          <span class="traccia" aria-hidden="true">
-            <span class="barra" style={`--n:${r.blocchi};--i:${r.i}`}></span>
-          </span>
-          <span class="riga__count"><span data-count>{r.count}</span><span class="visually-hidden"> voti</span></span>
-        </div>
+        </span>
+        <span class="traccia" aria-hidden="true">
+          <span class="barra" style={`--n:${r.blocchi};--i:${r.i}`}></span>
+        </span>
+        <span class="riga__count"><span data-count>{r.count}</span><span class="visually-hidden"> voti</span></span>
       </li>
     ))}
   </ol>
@@ -111,7 +108,6 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     </div>
 
     <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
-    <p class="voto__nota">Un voto per studente, con account istituzionale.</p>
   </div>
   {/* Altri feedback del modulo (es. difficoltà): visibili solo dopo l'accesso, come il resto. */}
   <slot />
@@ -302,27 +298,27 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     margin: 0;
     padding: 0;
   }
+  /* Una riga per fascia: etichetta, blocchi e conteggio affiancati (come la
+     difficoltà). 104 + 160 + conteggio stanno nei ~300px del pannello a 375px. */
   .riga {
-    margin: 0 0 12px;
+    display: grid;
+    grid-template-columns: 104px 160px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
   }
   .riga__testa {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
-    min-height: 28px;
+    gap: 6px;
+    white-space: nowrap;
+    min-height: 24px;
   }
   .riga__fascia {
     color: var(--text-2);
   }
   .riga--tu .riga__fascia {
     color: var(--you);
-  }
-  .riga__barra {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 4px;
   }
 
   /* 10 blocchi da 12px + 4px di spazio = 160px (l'ultimo spazio è vuoto). */
@@ -358,8 +354,13 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     padding: 0 6px;
   }
   .tag--tu {
+    flex: 0 0 auto;
+    width: 8px;
+    height: 8px;
     background: var(--you);
-    color: var(--bg);
+  }
+  .tag--tu[hidden] {
+    display: none;
   }
 
   /* --- Animazioni (a scatti) --- */
@@ -433,16 +434,12 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     color: var(--bg);
     box-shadow: none;
   }
-  .voto__nota {
-    color: var(--caption);
-    font-size: 14px;
-    margin: 12px 0 0;
-  }
 
   @media (forced-colors: active) {
     .traccia { outline: 1px solid CanvasText; background: Canvas; }
     .barra { --c: CanvasText; }
     .tag { outline: 2px solid CanvasText; }
+    .tag--tu { background: CanvasText; }
     .voto__btn[aria-pressed='true'] { outline: 4px solid Highlight; }
   }
 

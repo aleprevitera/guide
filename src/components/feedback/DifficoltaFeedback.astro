@@ -21,7 +21,10 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
   <ol class="diff__righe" aria-label="Distribuzione dei voti sulla difficoltà" data-diff-righe hidden>
     {LIVELLI.map((l) => (
       <li class="diff__riga" data-livello={l}>
-        <span class="diff__nome label">{ETICHETTA[l]}</span>
+        <span class="diff__testa">
+          <span class="diff__tu" hidden title="Il tuo voto"><span class="visually-hidden">(il tuo voto) </span></span>
+          <span class="diff__nome label">{ETICHETTA[l]}</span>
+        </span>
         <span class="diff__traccia" aria-hidden="true"><span class="diff__barra"></span></span>
         <span class="diff__count"><span data-diff-count>0</span><span class="visually-hidden"> voti</span></span>
       </li>
@@ -78,6 +81,7 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
           riga.querySelector<HTMLElement>('.diff__barra')!.style.setProperty('--n', String(blocchi));
           riga.querySelector('[data-diff-count]')!.textContent = String(n);
           riga.classList.toggle('diff__riga--tu', riga.dataset.livello === mio);
+          riga.querySelector<HTMLElement>('.diff__tu')!.hidden = riga.dataset.livello !== mio;
         });
         box.querySelectorAll<HTMLButtonElement>('[data-diff-voto]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.diffVoto === mio)));
       } catch {
@@ -144,12 +148,28 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
     margin: 0 0 12px;
     padding: 0;
   }
+  /* Stessa griglia delle righe del tempo di studio. */
   .diff__riga {
     display: grid;
-    grid-template-columns: 96px auto 1fr;
+    grid-template-columns: 104px 160px 1fr;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     margin: 0 0 8px;
+  }
+  .diff__testa {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .diff__tu {
+    flex: 0 0 auto;
+    width: 8px;
+    height: 8px;
+    background: var(--you);
+  }
+  .diff__tu[hidden] {
+    display: none;
   }
   .diff__nome {
     color: var(--text-2);
