@@ -74,19 +74,18 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   **solo a multipli di 8px** (16px; è una bitmap su griglia 8), Atkinson Hyperlegible Next 16px/1.5
   per il corpo. Il corpo del testo non è mai in font pixel.
 - Nessun `border-radius`. Bordo a scalini con `.px-border` (+ `--off`, `--warn`), margine laterale 4px.
-- **Mondi**: ogni anno è un "mondo" con palette, icona e terreno propri (I prato, II deserto,
-  III mare, IV ghiaccio, V vulcano, VI castello = laurea), definito solo in `src/lib/mondi.ts`
-  (colori Sweetie 16 + lilla `#d59ef0`). I mondi **non hanno nomi visibili**: in pagina solo l'anno.
-  `stileMondo(anno)` imposta `--mondo` (fondo), `--mondo-ink` (testo sul fondo, ≥ 5:1) e
-  `--mondo-chiaro` (sul fondo pagina, ≥ 6:1; colora gli h2). Terreno pixel: `.terreno[data-terreno]`
-  in `global.css`. Link, pulsanti e focus restano nel giallo accento ovunque. Anteprima: `/dev/mondi`.
-- Animazioni sempre a scatti (`steps()`), mai fluide; tutte spente con `prefers-reduced-motion`.
-  Le micro-animazioni di feedback passano da `src/lib/fx.ts` (anche `vibra()`, solo Android).
-- **Animazioni pensate per il telefono**: mai affidare un effetto al solo `:hover`. Gli effetti di
-  passaggio del mouse stanno sempre in `@media (hover: hover) and (pointer: fine)`; sul telefono
-  valgono `:active` (pressione 4px), la comparsa allo scorrimento (`data-rivela`, `src/lib/rivela.ts`)
-  e le View Transitions fra pagine (nomi condivisi: `vtMondo()` casella↔banner, `guida-<id>`
-  card↔titolo; nomi unici per pagina). Su desktop i loop infiniti si fermano dopo pochi giri.
+- **Mondi**: ogni anno è un "mondo" ispirato alle sue materie (I aula di anatomia, II fisiologia,
+  III laboratorio, IV radiologia e farmaci, V reparto, VI sala operatoria e laurea), definito in
+  `src/lib/mondi.ts`: colori (Sweetie 16 + lilla `#d59ef0`), icona, terreno e scena. I mondi **non
+  hanno nomi visibili**: in pagina solo l'anno. `stileMondo(anno)` imposta `--mondo`, `--mondo-ink`
+  (testo sul fondo, ≥ 5:1) e `--mondo-chiaro` (sul fondo pagina, ≥ 6:1; colora gli h2). Link,
+  pulsanti e focus restano nel giallo accento ovunque. Anteprima di tutti i mondi: `/dev/mondi`.
+- **Scene animate** (caselle in home e banner delle pagine anno): `node scripts/mondi/genera-scene.mjs`
+  disegna in codice ogni scena su griglia di pixel vera (144×60, solo colori della palette; oggetti a
+  destra, testo a sinistra) e scrive in `src/assets/mondi/` sprite sheet a 6 fotogrammi, versione
+  spenta (anni senza guide) e fondale ripetibile 48×60. `ScenaMondo.astro` le mostra a 2× con
+  `steps()`, solo mentre sono sullo schermo; testi sopra con `.testo-su-scena`. I terreni
+  (`.terreno[data-terreno]`, striscia in testa alle guide) riprendono il pavimento della scena.
 - Accessibilità: contrasto testo ≥ 4.5:1, focus visibile (outline 2px accento), target ≥ 44px,
   HTML semantico, stato mai affidato al solo colore, fallback `forced-colors` (i box-shadow spariscono:
   servono outline veri).

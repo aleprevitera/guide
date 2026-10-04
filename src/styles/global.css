@@ -284,9 +284,9 @@ strong {
 }
 
 /* ---------- Mondi (src/lib/mondi.ts) ---------- */
-/* Striscia di terreno pixel, 16px, decorativa. Solo gradienti a stop netti
-   su righe da 4px: la riga superiore è "a gradini" e si staglia sul colore
-   del mondo che le sta sopra. */
+/* Striscia di terreno pixel, 16px, decorativa: riprende il pavimento della
+   scena del mondo (righe da 2px = 1 pixel delle scene, mostrate a 2×). Solo
+   gradienti a stop netti. */
 
 .terreno {
   display: block;
@@ -294,53 +294,55 @@ strong {
   background-repeat: no-repeat;
 }
 
-.terreno[data-terreno='prato'] {
+.terreno[data-terreno='cellula'] {
+  /* I — parquet dell'aula di anatomia */
   background:
-    repeating-linear-gradient(90deg, #a7f070 0 8px, transparent 8px 12px, #a7f070 12px 16px) 0 0 / 100% 4px no-repeat,
-    linear-gradient(#a7f070, #a7f070) 0 4px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, transparent 0 12px, #1a1c2c 12px 16px) 0 12px / 100% 4px no-repeat,
-    #257179;
-}
-
-.terreno[data-terreno='deserto'] {
-  background:
-    repeating-linear-gradient(90deg, #ef7d57 0 20px, transparent 20px 32px) 0 0 / 100% 4px no-repeat,
-    linear-gradient(#ef7d57, #ef7d57) 0 4px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, transparent 0 20px, #b13e53 20px 24px) 0 12px / 100% 4px no-repeat,
+    linear-gradient(#ffcd75, #ffcd75) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #b13e53 0 2px, transparent 2px 32px) 0 2px / 100% 6px no-repeat,
+    linear-gradient(#b13e53, #b13e53) 0 8px / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 16px, #b13e53 16px 18px, transparent 18px 32px) 0 10px / 100% 6px no-repeat,
     #ef7d57;
 }
 
-.terreno[data-terreno='mare'] {
+.terreno[data-terreno='cuore'] {
+  /* II — piastrelle chiare della fisiologia */
   background:
-    repeating-linear-gradient(90deg, #f4f4f4 0 8px, transparent 8px 24px) 0 0 / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, #73eff7 0 16px, #f4f4f4 16px 24px) 0 4px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, #41a6f6 0 12px, #73eff7 12px 16px) 0 8px / 100% 4px no-repeat,
-    #41a6f6;
+    linear-gradient(#566c86, #566c86) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #f4f4f4 0 8px, #94b0c2 8px 16px) 0 2px / 100% 7px no-repeat,
+    repeating-linear-gradient(90deg, #94b0c2 0 8px, #f4f4f4 8px 16px) 0 9px / 100% 7px no-repeat;
 }
 
-.terreno[data-terreno='ghiaccio'] {
+.terreno[data-terreno='batterio'] {
+  /* III — bancone del laboratorio con cassetti */
   background:
-    repeating-linear-gradient(90deg, #f4f4f4 0 12px, transparent 12px 16px) 0 0 / 100% 4px no-repeat,
-    linear-gradient(#f4f4f4, #f4f4f4) 0 4px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, #3b5dc9 0 4px, transparent 4px 16px) 0 12px / 100% 4px no-repeat,
-    #41a6f6;
+    linear-gradient(#f4f4f4, #f4f4f4) 0 0 / 100% 2px no-repeat,
+    linear-gradient(#94b0c2, #94b0c2) 0 2px / 100% 6px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 8px, #333c57 8px 48px) 0 10px / 100% 4px no-repeat,
+    #566c86;
 }
 
-.terreno[data-terreno='vulcano'] {
+.terreno[data-terreno='lastra'] {
+  /* IV — pavimento scuro della radiologia */
   background:
-    repeating-linear-gradient(90deg, #ffcd75 0 4px, transparent 4px 20px) 0 0 / 100% 4px no-repeat,
-    linear-gradient(#ef7d57, #ef7d57) 0 4px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, #1a1c2c 0 12px, #333c57 12px 16px) 0 8px / 100% 8px no-repeat,
-    #1a1c2c;
+    linear-gradient(#94b0c2, #94b0c2) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #566c86 0 16px, #333c57 16px 32px) 0 2px / 100% 14px no-repeat;
 }
 
-.terreno[data-terreno='castello'] {
+.terreno[data-terreno='cervello'] {
+  /* V — corsia del reparto */
   background:
-    repeating-linear-gradient(90deg, #94b0c2 0 8px, transparent 8px 16px) 0 0 / 100% 4px no-repeat,
-    linear-gradient(#94b0c2, #94b0c2) 0 4px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, #94b0c2 0 12px, #566c86 12px 16px) 0 8px / 100% 4px no-repeat,
-    repeating-linear-gradient(90deg, #94b0c2 0 4px, #566c86 4px 8px, #94b0c2 8px 16px) 0 12px / 100% 4px no-repeat,
-    #94b0c2;
+    linear-gradient(#f4f4f4, #f4f4f4) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #94b0c2 0 8px, #566c86 8px 16px) 0 2px / 100% 7px no-repeat,
+    repeating-linear-gradient(90deg, #566c86 0 8px, #94b0c2 8px 16px) 0 9px / 100% 7px no-repeat;
+}
+
+.terreno[data-terreno='tocco'] {
+  /* VI — pavimento della sala operatoria */
+  background:
+    linear-gradient(#73eff7, #73eff7) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #38b764 0 2px, transparent 2px 16px) 0 2px / 100% 14px no-repeat,
+    linear-gradient(#38b764, #38b764) 0 9px / 100% 2px no-repeat,
+    #257179;
 }
 
 .terreno[data-terreno='spento'] {
@@ -413,6 +415,15 @@ strong {
     transform: translateY(12px);
     visibility: hidden;
   }
+}
+
+/* Testo sopra una scena animata (ScenaMondo): contorno pixel a scalini. */
+.testo-su-scena {
+  position: relative;
+  color: var(--text);
+  text-shadow:
+    -2px 0 0 var(--bg), 2px 0 0 var(--bg), 0 -2px 0 var(--bg), 0 2px 0 var(--bg),
+    -2px -2px 0 var(--bg), 2px -2px 0 var(--bg), -2px 2px 0 var(--bg), 2px 2px 0 var(--bg);
 }
 
 /* ---------- Micro-animazioni di feedback (src/lib/fx.ts) ---------- */

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuideList from '../../components/guide/GuideList.astro';
 import PixelIcon from '../../components/common/PixelIcon.astro';
+import ScenaMondo from '../../components/common/ScenaMondo.astro';
 import { ANNI_DI_CORSO, annoSlug, numeroRomano, vtMondo, type Anno } from '../../lib/anni';
 import { MONDI, stileMondo } from '../../lib/mondi';
 
@@ -22,22 +23,25 @@ interface Props {
 const { anno, entries } = Astro.props;
 const mondo = MONDI[anno];
 const numero = numeroRomano(anno);
+// La scena del mondo (la stessa della casella in home): spenta se l'anno non ha guide.
+const conScena = !!mondo.scena;
 ---
 
 <BaseLayout title={anno} description={`Guide pratiche agli esami del ${anno}`}>
   <p class="indietro"><a class="label" href="/#anni">&lt; Tutti gli anni</a></p>
   <header class="banner" style={`${stileMondo(anno)};view-transition-name:${vtMondo(anno)}`}>
-    <div class="banner__cielo">
-      <span class="banner__numero" aria-hidden="true">{numero}</span>
-      <div>
-        <h1>{anno}</h1>
-        <p class="banner__conteggio label">
+    <div class:list={['banner__cielo', { 'banner__cielo--scena': conScena }]}>
+      {conScena && <ScenaMondo anno={anno} spenta={entries.length === 0} />}
+      <span class:list={['banner__numero', { 'testo-su-scena': conScena }]} aria-hidden="true">{numero}</span>
+      <div class="banner__testi">
+        <h1 class:list={{ 'testo-su-scena': conScena }}>{anno}</h1>
+        <p class:list={['banner__conteggio', 'label', { 'testo-su-scena': conScena }]}>
           {entries.length === 0 ? 'Nessuna guida' : `${entries.length} ${entries.length === 1 ? 'guida' : 'guide'}`}
         </p>
       </div>
-      <PixelIcon name={mondo.icona} size={32} class="banner__icona" />
+      {!conScena && <PixelIcon name={mondo.icona} size={32} class="banner__icona" />}
     </div>
-    <span class="terreno" data-terreno={mondo.icona} aria-hidden="true"></span>
+    {!conScena && <span class="terreno" data-terreno={mondo.icona} aria-hidden="true"></span>}
   </header>
 
   <div style={stileMondo(anno)}>
@@ -75,6 +79,16 @@ const numero = numeroRomano(anno);
   }
   .banner h1 {
     margin: 0;
+  }
+  /* Con la scena: alta quanto lo sprite (120px), testi sopra la scena. */
+  .banner__cielo--scena {
+    min-height: 120px;
+    overflow: hidden;
+    padding-right: 16px;
+    color: var(--text);
+  }
+  .banner__testi {
+    position: relative;
   }
   .banner__numero {
     font-family: var(--font-title);
