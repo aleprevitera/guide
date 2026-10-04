@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import PixelIcon from '../common/PixelIcon.astro';
 
 type Modulo = CollectionEntry<'guide'>['data']['moduli'][number];
 
@@ -24,10 +25,13 @@ add('Tempo stimato', modulo.study_time ?? modulo.fascia_studio);
 add('CFU', modulo.cfu);
 add('Semestre', modulo.semestre);
 
-const difficolta = modulo.difficolta;
+// Difficoltà: è un feedback degli studenti (contenuto "extra"), non il campo
+// `difficolta` dell'autore, che non viene più mostrato. Il verdetto (mediana
+// dei voti) arriva dal browser solo con una sessione; senza, il lucchetto.
+const conDifficolta = !!modulo.id;
 ---
 
-{(righe.length > 0 || difficolta) && (
+{(righe.length > 0 || conDifficolta) && (
   <section class="scheda panel px-border" aria-label="Scheda esame">
     <p class="scheda__titolo label" data-pagefind-ignore>Scheda esame</p>
     <dl class="scheda__dl">
@@ -37,20 +41,58 @@ const difficolta = modulo.difficolta;
           <dd>{r.valore}</dd>
         </div>
       ))}
-      {difficolta && (
+      {conDifficolta && (
         <div class="scheda__riga">
           <dt class="label">Difficoltà<span class="visually-hidden">: </span></dt>
-          <dd class="difficolta">
-            <span class="difficolta__blocchi" aria-hidden="true">
-              {[1, 2, 3, 4, 5].map((n) => <span class:list={['blocco', { 'blocco--on': n <= difficolta }]} />)}
+          <dd class="difficolta" data-diff-scheda data-modulo={modulo.id}>
+            <span class="difficolta__bloccata">
+              <PixelIcon name="lock" size={16} />
+              Accedi per vederla (voto degli studenti)
             </span>
-            <span>{difficolta}/5</span>
           </dd>
         </div>
       )}
     </dl>
   </section>
 )}
+
+<script>
+  import { EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+  import { conteggi, EVENTO_FEEDBACK } from '../../lib/feedback';
+  import { ETICHETTA, mediana, teschiHtml } from '../../lib/difficolta';
+
+  const celle = [...document.querySelectorAll<HTMLElement>('[data-diff-scheda]')];
+  if (celle.length > 0) {
+    const bloccato = celle.map((c) => c.innerHTML);
+    let attivo = false;
+
+    async function aggiorna() {
+      const moduli = celle.map((c) => c.dataset.modulo!);
+      try {
+        const mappa = await conteggi(moduli, 'difficolta');
+        for (const cella of celle) {
+          const { livello, totale } = mediana(mappa.get(cella.dataset.modulo!) ?? {});
+          cella.innerHTML = livello
+            ? `${teschiHtml(livello)} <span>${ETICHETTA[livello]}</span> <span class="difficolta__nota">(${totale} voti)</span>`
+            : `<span class="difficolta__nota">Pochi voti finora (${totale}): vota qui sotto</span>`;
+        }
+      } catch {
+        /* resta il testo precedente */
+      }
+    }
+
+    const applica = ({ session }: StatoAuth) => {
+      attivo = !!session;
+      if (attivo) aggiorna();
+      else celle.forEach((c, i) => (c.innerHTML = bloccato[i]));
+    };
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+    window.addEventListener(EVENTO_FEEDBACK, (e) => {
+      if (attivo && (e as CustomEvent<{ tipo: string }>).detail.tipo === 'difficolta') aggiorna();
+    });
+  }
+</script>
 
 <style>
   .scheda__titolo {
@@ -86,25 +128,20 @@ const difficolta = modulo.difficolta;
   }
   .difficolta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
   }
-  .difficolta__blocchi {
+  .difficolta :global(.teschi) {
     display: inline-flex;
-    gap: 4px;
+    gap: 2px;
   }
-  .blocco {
-    width: 12px;
-    height: 12px;
-    background: var(--bg);
-    box-shadow: inset 0 0 0 2px var(--border-off);
-  }
-  .blocco--on {
-    background: var(--accent);
-    box-shadow: none;
-  }
-  @media (forced-colors: active) {
-    .blocco { outline: 1px solid CanvasText; }
-    .blocco--on { background: CanvasText; }
+  .difficolta__bloccata,
+  .difficolta :global(.difficolta__nota) {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--caption);
+    font-size: 14px;
   }
 </style>

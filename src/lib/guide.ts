@@ -29,9 +29,3 @@ export function proveEsame(data: GuideData): { scritto: boolean; orale: boolean 
   const tipi = data.moduli.map((m) => m.exam_type ?? '');
   return { scritto: tipi.some((t) => t.includes('Scritto')), orale: tipi.some((t) => t.includes('Orale')) };
 }
-
-/** Difficoltà più alta indicata fra i moduli (1–5), se presente. */
-export function difficoltaMax(data: GuideData): number | undefined {
-  const d = data.moduli.map((m) => m.difficolta).filter((x): x is number => typeof x === 'number');
-  return d.length ? Math.max(...d) : undefined;
-}

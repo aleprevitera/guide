@@ -93,11 +93,19 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 
 ## Backend Supabase
 
-- `public.study_time_votes` — un voto per (`modulo_id`, `user_id`), RLS: ognuno legge/scrive solo il
-  proprio, e solo con email `@universitadipavia.it`. Grant minimi (insert `modulo_id, fascia`; update `fascia`).
-- `public.cast_study_time_vote(modulo, fascia)` — `SECURITY INVOKER`, insert o sovrascrittura.
-- `public.study_time_counts(modulo)` — `SECURITY DEFINER` **voluto**: restituisce solo i conteggi per
-  fascia, solo a utenti autenticati d'ateneo.
+- `public.module_feedback` — tutti i feedback per modulo: un voto per (`modulo_id`, `user_id`, `tipo`),
+  `tipo` ∈ `tempo_studio` (valori = `FASCE_STUDIO`, `src/lib/fasce.ts`) | `difficolta` (valori = `LIVELLI`,
+  `src/lib/difficolta.ts`); i valori ammessi sono anche in un check SQL. RLS: ognuno legge/scrive solo il
+  proprio, e solo con email `@universitadipavia.it`. Grant minimi (insert `modulo_id, tipo, valore`;
+  update `valore`). Un nuovo tipo di feedback = nuovo valore nel check + nuova UI, stessa tabella.
+- `public.cast_feedback(modulo, tipo, valore)` — `SECURITY INVOKER`, insert o sovrascrittura.
+- `public.feedback_counts(moduli[], tipo)` — `SECURITY DEFINER` **voluto**: solo conteggi per valore, per
+  più moduli in una chiamata, solo a utenti autenticati d'ateneo. Lato client tutto passa da
+  `src/lib/feedback.ts` (cache + evento `feedback:aggiornato`).
+- `public.study_time_votes_legacy` — archivio chiuso dei primi voti (copiati in `module_feedback`).
+- **Difficoltà** = feedback (Facile/Medio/Difficile/Estremo, 1–4 teschietti), per modulo; verdetto =
+  mediana superiore dei voti, solo da 5 risposte, con la distribuzione visibile. Il campo `difficolta`
+  (1–5) dello schema non viene più mostrato.
 - `public.hook_solo_account_ateneo(event)` — hook Auth "Before User Created": rifiuta domini diversi.
 - **Regola: extra = feedback = solo per chi ha fatto l'accesso.** Ogni nuovo feedback segue lo stesso
   modello (dati su Supabase, niente accesso `anon`), non si nasconde contenuto statico via JS.

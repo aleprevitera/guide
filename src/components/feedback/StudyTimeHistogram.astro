@@ -54,7 +54,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       <p class="bloccato__titolo label">Contenuto extra</p>
       <p class="bloccato__testo">
         Accedi con il tuo account <strong>@universitadipavia.it</strong> per vedere quanto hanno
-        studiato gli altri e dare il tuo voto.
+        studiato gli altri, quanto l'hanno trovato difficile, e dare il tuo voto.
       </p>
       <button type="button" class="btn-px btn-px--accent label" data-accedi>Accedi con Google</button>
       <p class="bloccato__errore" role="status" data-bloccato-errore></p>
@@ -110,6 +110,8 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
     <p class="voto__nota">Un voto per studente, con account istituzionale.</p>
   </div>
+  {/* Altri feedback del modulo (es. difficoltà): visibili solo dopo l'accesso, come il resto. */}
+  <slot />
   </div>
 </section>
 
@@ -118,6 +120,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, ritardoTu, type Conteggi } from '../../lib/histogram';
   import { accedi, EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
   import { fluttua, saltello, scintille, vibra } from '../../lib/fx';
+  import { conteggi, mioVoto, vota as votaFeedback } from '../../lib/feedback';
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const $ = <T extends Element = HTMLElement>(root: ParentNode, sel: string) => root.querySelector<T>(sel)!;
@@ -191,31 +194,24 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     const stato = (hist: HTMLElement, msg: string) => ($(hist, '[data-stato]').textContent = msg);
 
     async function carica(hist: HTMLElement) {
-      const { supabase } = await import('../../lib/supabase');
       const moduloId = hist.dataset.modulo!;
-      const [conteggi, mio] = await Promise.all([
-        supabase.rpc('study_time_counts', { p_modulo_id: moduloId }),
-        supabase.from('study_time_votes').select('fascia').eq('modulo_id', moduloId).maybeSingle(),
-      ]);
-      if (conteggi.error) throw conteggi.error;
-      if (mio.error) throw mio.error;
+      const [mappa, mio] = await Promise.all([conteggi([moduloId], 'tempo_studio'), mioVoto(moduloId, 'tempo_studio')]);
 
       const counts = conteggiVuoti();
       let totale = 0;
-      for (const r of (conteggi.data ?? []) as { fascia: string; voti: number }[]) {
-        if (!isFascia(r.fascia)) continue;
-        counts[r.fascia] = Number(r.voti);
-        totale += Number(r.voti);
+      for (const [fascia, voti] of Object.entries(mappa.get(moduloId) ?? {})) {
+        if (!isFascia(fascia)) continue;
+        counts[fascia] = voti;
+        totale += voti;
       }
-      render(hist, counts, totale, mio.data && isFascia(mio.data.fascia) ? mio.data.fascia : null);
+      render(hist, counts, totale, isFascia(mio) ? mio : null);
     }
 
     async function vota(hist: HTMLElement, btn: HTMLButtonElement) {
       const fascia = btn.dataset.voto as FasciaStudio;
-      const { supabase } = await import('../../lib/supabase');
       stato(hist, 'Invio del voto…');
-      const { error } = await supabase.rpc('cast_study_time_vote', { p_modulo_id: hist.dataset.modulo!, p_fascia: fascia });
-      if (error) {
+      const ok = await votaFeedback(hist.dataset.modulo!, 'tempo_studio', fascia);
+      if (!ok) {
         stato(hist, 'Non è stato possibile registrare il voto. Riprova più tardi.');
         return;
       }

@@ -3,6 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
 import SchedaEsame from './SchedaEsame.astro';
 import StudyTimeHistogram from '../feedback/StudyTimeHistogram.astro';
+import DifficoltaFeedback from '../feedback/DifficoltaFeedback.astro';
 
 type Modulo = CollectionEntry<'guide'>['data']['moduli'][number];
 
@@ -26,7 +27,11 @@ const docentiDettaglio = professors.filter((p) => p.email || p.stile);
 
   <SchedaEsame modulo={modulo} />
 
-  {modulo.id && <StudyTimeHistogram moduloId={modulo.id} fasciaRappresentante={modulo.fascia_studio} />}
+  {modulo.id && (
+    <StudyTimeHistogram moduloId={modulo.id} fasciaRappresentante={modulo.fascia_studio}>
+      <DifficoltaFeedback moduloId={modulo.id} />
+    </StudyTimeHistogram>
+  )}
 
   {hasLinks && (
     <p class="btn-row">
