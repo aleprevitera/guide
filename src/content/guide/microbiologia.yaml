@@ -10,6 +10,111 @@ moduli:
       L’esame consiste in uno scritto sbarramento per l’orale senza voto: per superarlo è necessario fare 25 crocette giuste su 30; l’esito viene comunicato il giorno stesso.
       All’orale possono interrogare tutti e cinque i professori, talvolta accompagnati da assistenti; le interrogazioni si svolgono in ordine di iscrizione. Si viene sempre interrogati da due professori, con una parte di virologia e una di batteriologia. Sono tutti molto gentili e fanno ragionare.
     program: |-
+      Procarioti
+
+      - Principi di tassonomia batterica
+      - Struttura e funzione dei componenti della cellula batterica
+      - Spore batteriche: sporogenesi e germinazione
+      - Fisiologia e metabolismo dei batteri
+      - Genetica batterica
+      - Microbiota umano in condizioni normali e patologiche
+      - Patogenesi dell’infezione batterica
+      - Coltivazione dei batteri
+      - Principi generali della diagnostica di laboratorio delle malattie ad eziologia batterica
+      - Struttura, meccanismo d’azione e attività dei farmaci antibatterici.
+      - Basi molecolari della farmaco-resistenza
+      - Metodi per la determinazione della sensibilità agli antibiotici
+
+      Sistematica: Staphylococcus, Streptococcus, Corynebacterium, Listeria, Mycobacterium, Neisseria, Enterobacteriaceae, Pseudomonas e bacilli Gram negativi non fermentanti, Vibrio, Campylobacter, Helicobacter, Brucella, Haemophilus, Bordetella, Bacillus e Clostridium, Treponema, Borrelia e Leptospira. Bacteroides e altri batteri anaerobi, Legionella, Rickettsia, Coxiella e generi correlati, Mycoplasma, Ureaplasma, Chlamydia.
+
+      Virus
+
+      - I virus: tassonomia, morfologia, struttura, composizione chimica e metodi di studio
+      - Rapporti virus-cellula e meccanismi di replicazione virale
+      - Genetica dei virus
+      - Coltura dei virus e loro titolazione
+      - Il meccanismo d’azione e il ruolo protettivo dell’interferone e di altre citochine nelle infezioni virali
+      - Rapporti virus-ospite; infezioni litiche e non litiche
+      - Trasformazione cellulare ed oncogenesi
+      - Proprietà antigeniche dei virioni
+      - Trasmissione di virus e patogenesi delle infezioni virali
+      - Diagnostica virologica in medicina umana
+      - La classificazione ed il meccanismo di azione dei farmaci antivirali
+      - Cenni sui vettori virali e principi di terapia cellulare e genica
+
+      Sistematica: Virus a DNA: Papillomavirus, Poliomavirus, Herpesvirus, Adenovirus, Parvovirus, Poxvirus, Hepadnavirus. Virus a RNA: Picornavirus, Coronavirus, Orthomyxovirus, Paramyxovirus, Pneumovirus, Rabdovirus, Filovirus, Virus delle epatiti (A, C, D, G, E), Reovirus e virus gastroenterici, Retrovirus (HTLV, HIV), virus trasmessi da artropodi e da roditori: Bunyavirales, Arenaviridae, Togavirus, Flavivirus.
+
+      Prioni: Struttura, Patogenesi, Epidemiologia e Manifestazioni Cliniche
+
+      Eucarioti
+
+      Tassonomia, struttura e replicazione dei miceti, dei protozoi e di interesse medico. Meccanismi della loro azione patogena. Classificazione delle micosi e delle infezioni protozoarie e loro diagnosi di laboratorio. Farmaci e loro meccanismo d’azione. Basi molecolare della farmacoresistenza
+
+      Sistematica: Miceti. Micosi superficiali e cutanee: Tinea, Pietra, Dermatofitosi. Micosi sottocutanee: Sporotricosi, Cromoblastomicosi, Feoifomicosi. Micosi sistemiche da miceti dimorfici: Blastomyces, Paracoccidioides, Histoplasma, Coccidioides). Micosi opportunistiche: Candida albicans e Candida spp, Trichosporon, Malassezia, Criptococcus neoformans, Aspergillus spp, Zygomyces, Pneumocystis jirovecii.
+
+      Protozoi. Protozoi intestinali e urogenitali: Amebe, Flagellati (Trichomonas, Giardia), Ciliati (Balantidium coli), Coccidi (Cryptosporidium, Isospora belli), Microsporidi.
+
+      Protozoi del sangue e dei tessuti: Plasmodium spp, Emoflagellati (Tripanosomi, Leishmanie), Babesia, Toxoplasma gondii.
+
+      Aspetti pratici di immunologia applicata alla microbiologia.
+
+      Difese costitutive dell’ospite. Aspetti generali sull’immunità innata e adattiva. Reazioni sierologiche applicate alla diagnosi microbiologica. Sieri e vaccini.
+
+      - I virus: tassonomia, morfologia, struttura, composizione chimica e metodi di studio
+      - Rapporti virus-cellula e meccanismi di replicazione virale
+      - Genetica dei virus
+      - Coltura dei virus e loro titolazione
+      - Il meccanismo d’azione e il ruolo protettivo dell’interferone e di altre citochine nelle infezioni virali
+      - Rapporti virus-ospite; infezioni litiche e non litiche
+      - Trasformazione cellulare ed oncogenesi
+      - Proprietà antigeniche dei virioni
+      - Trasmissione di virus e patogenesi delle infezioni virali
+      - Diagnostica virologica in medicina umana
+      - La classificazione ed il meccanismo di azione dei farmaci antivirali
+
+      Sistematica: Virus a DNA: Papillomavirus, Poliomavirus, Herpesvirus, Adenovirus, Parvovirus, Poxvirus, Hepadnavirus. Virus a RNA: Picornavirus, Coronavirus, Orthomyxovirus, Paramyxovirus, Pneumovirus, Rabdovirus, Filovirus, Virus delle epatiti (A, C, D, E), Reovirus e virus gastroenterici, Retrovirus (HTLV, HIV), virus trasmessi da artropodi e da roditori: Bunyavirales, Arenaviridae, Togavirus, Flavivirus.
+
+      Procarioti
+
+      Principi di tassonomia batterica. Struttura e funzione dei componenti della cellula batterica. Spore batteriche: sporogenesi e germinazione. Fisiologia e metabolismo dei batteri (cenni). Principi di genetica batterica e scambio genico. Microbiota umano in condizioni normali e patologiche. Patogenesi dell’infezione batterica. La coltivazione dei batteri. Principi generali della diagnostica di laboratorio delle malattie ad eziologia batterica. Struttura, meccanismo d’azione ed attività dei farmaci antibatterici. Basi molecolari della farmaco-resistenza. Metodi per la determinazione della sensibilità agli antibiotici.
+
+      Sistematica: Staphylococcus, Streptococcus, Listeria, Mycobacterium, Neisseria, Enterobacterales, Pseudomonas ed Acinetobacter spp.. Vibrio, Campylobacter, Helicobacter, Haemophilus, Bacillus e Clostridioides, Treponema e Borrelia spp.. Batteri anaerobi, Legionella e generi correlati, Mycoplasma, Chlamydia spp.
+
+      Eucarioti
+
+      Tassonomia, struttura e replicazione di miceti e protozoi di interesse medico. Meccanismi della loro azione patogena. Classificazione delle micosi e delle infezioni protozoarie e loro diagnosi di laboratorio. Farmaci e loro meccanismo d’azione. Basi molecolare della farmacoresistenza
+
+      Sistematica: Miceti. Micosi superficiali e cutanee: Tinea, Pietra, Dermatofitosi. Micosi sottocutanee: Sporotricosi, Cromoblastomicosi, Feoifomicosi. Micosi sistemiche da miceti dimorfici: Blastomyces, Paracoccidioides, Histoplasma, Coccidioides. Micosi opportunistiche: Candida albicans e Candida spp., Trichosporon, Malassezia, Aspergillus spp., Criptococcus neoformans e Pneumocystis jirovecii.
+
+      Protozoi. Protozoi intestinali e urogenitali: Amebe, Flagellati (Trichomonas, Giardia), Ciliati (Balantidium coli), Coccidi (Cryptosporidium, Isospora belli), Microsporidi.
+
+      Protozoi del sangue e dei tessuti: Plasmodium spp., Emoflagellati (Tripanosomi, Leishmanie), Babesia, Toxoplasma gondii.
+
+      - Diagnostica microbiologica in medicina umana
+      - Patogenesi delle malattie infettive
+      - La classificazione ed il meccanismo di azione dei farmaci antivirali
+      - Manifestazioni cliniche associate a:
+
+      Virus a DNA (Papillomavirus, Poliomavirus, Herpesvirus, Adenovirus, Parvovirus, Poxvirus, Hepadnavirus)
+
+      Virus a RNA (Picornavirus, Coronavirus, Orthomyxovirus, Paramyxovirus, Pneumovirus, Rabdovirus, Filovirus)
+
+      - Epatiti virali
+      - Gastroenteriti
+      - Malattie virali trasmesse da artropodi e da roditori: Bunyavirales, Arenaviridae, Togavirus, Flavivirus.
+
+      - Coltura di batteri in terreno liquido e sottoisolamento in diversi terreni agarizzati.
+      - Lettura di vetrini post colorazione di Gram
+      - Allestimento antibiogramma con metodo Kirby Bauer e con E-test
+      - Test biochimici per identificazione presuntiva di microrganismo (es. test ossidasi e catalasi)
+      - Allestimento test fenotipici di conferma di produzione di vari enzimi di resistenza a diverse classi di antibiotici (beta-lattamici principalmente)
+      - Simulazione iter diagnostico da emocoltura positiva
+      - Lettura ed analisi dei risultati dei vari test eseguiti
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/9163/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
       L’esame è diviso in macro-argomenti:
 
       - batteriologia
@@ -18,7 +123,8 @@ moduli:
       - microbiologia clinica
 
       Il syllabus sul sito dell’università è molto completo, ma le professoresse si basano sugli argomenti spiegati a lezione. È importante informarsi sugli argomenti trattati nella propria coorte perché di anno in anno il programma cambia leggermente.
-    material_tips: Le sbobine più recenti sono sufficienti per preparare l’esame. La parte di antibiotici è spesso confusionaria nelle sbobine recenti, perciò è consigliabile consultarla dal libro oppure dalle Sbobine 20-21.
+
+      Le sbobine più recenti sono sufficienti per preparare l’esame. La parte di antibiotici è spesso confusionaria nelle sbobine recenti, perciò è consigliabile consultarla dal libro oppure dalle Sbobine 20-21.
     body: Durante il corso viene svolto un laboratorio obbligatorio molto utile per la comprensione delle culture cellulari spiegate nel modulo di batteriologia.
     professors:
       - nome: Migliavacca
@@ -33,4 +139,6 @@ moduli:
         stile: Si concentra su microbiologia clinica.
     fascia_studio: 5–8 sett
 aggiornato_da: Lisa Ceci
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "501317"
+cfu_totali: 9
+ultimo_aggiornamento: 2026-10-04

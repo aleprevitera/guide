@@ -9,6 +9,38 @@ moduli:
     frequenza: Obbligatoria
     exam_details: "Prova scritta: 12 domande a risposta aperta al computer. La prova scritta complessiva dura un'ora e mezza."
     program: |-
+      Contenuti del Corso di Patologia generale
+
+      **Patologia:**
+
+      Eziologia: agenti di malattia estrinseci e intrinseci al processo morboso; lesione termica; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
+
+      Dinamica della lesione cellulare: morte cellulare; necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche.
+
+      Lesioni elementari: degenerazione e malattia degenerativa; degenerazioni intracellulari (vacuolare e rigonfiamento torbido); degenerazioni extracellulari (ialinosi, amiloidosi e degenerazione fibrinoide); pigmentazioni; infiammazione (modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici); processi di guarigione (risoluzione, rigenerazione e riparazione); accrescimenti patologici; anomalie della crescita (ipertrofia, iperplasia, neoplasia); anomalie del differenziamento (metaplasia, displasia, anaplasia); cancerogenesi e mutagenesi; Infiammazione, immunità e tumori.
+
+      Lesioni complesse: trombo e ateroma.
+
+      Eziologia: agenti di malattia estrinseci e intrinseci al processo morboso; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
+
+      Dinamica della lesione cellulare. Morte cellulare; necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche.
+
+      Lesioni elementari. Degenerazione e malattia degenerativa; degenerazioni intracellulari: vacuolare e rigonfiamento torbido; degenerazioni extracellulari: ialinosi, amiloidosi e degenerazione fibrinoide. Pigmentazioni. Infiammazione: modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici. Processi di guarigione (rigenerazione e riparazione). Accrescimenti patologici. Anomalie della crescita: ipertrofia, iperplasia, neoplasia. Anomalie del differenziamento: metaplasia, displasia, anaplasia. Cancerogenesi e mutagenesi. Infiammazione, immunità e tumori.
+
+      Lesioni complesse: trombo e ateroma.
+
+      Eziologia: agenti di malattia estrinseci e intrinseci al processo morboso; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
+
+      Dinamica della lesione cellulare. Morte cellulare; necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche.
+
+      Lesioni elementari. Degenerazione e malattia degenerativa; degenerazioni intracellulari: vacuolare e rigonfiamento torbido; degenerazioni extracellulari: ialinosi, amiloidosi e degenerazione fibrinoide. Pigmentazioni. Infiammazione: modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici. Processi di guarigione (rigenerazione e riparazione). Accrescimenti patologici. Anomalie della crescita: ipertrofia, iperplasia, neoplasia. Anomalie del differenziamento: metaplasia, displasia, anaplasia. Cancerogenesi e mutagenesi. Infiammazione, immunità e tumori.
+
+      Lesioni complesse: trombo e ateroma
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
       **Eziologia**: agenti di malattia estrinseci e intrinseci al processo morboso; lesione termica; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
 
       **Dinamica della lesione cellulare**: morte cellulare, necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche. Spesso oggetto di domanda d'esame: significato di 'punto di non ritorno' in relazione alla dinamica di lesione cellulare; definire le alterazioni morfologiche che permettono di definire l'apoptosi e la necrosi con particolare riguardo anche ai modelli sperimentali.
@@ -41,7 +73,7 @@ moduli:
       - descrivere i fenomeni di Sanarelli e di Schwartzman, illustrando i meccanismi molecolari che li provocano;
       - analizzare i rapporti tra coagulazione intravascolare disseminata e i fenomeni di Sanarelli e di Schwartzman;
       - in merito all'ateroma, da sapere le definizioni di arteriosclerosi, arteriolosclerosi, aterosclerosi e malattia aterosclerotica. Descrivere la morfologia delle lesioni aterosclerotiche iniziali e avanzate. Considerando l'ateroma come una risposta della parete delle arterie al danno, e in base alle informazioni provenienti dai principali modelli sperimentali, ricostruire la sequenza degli eventi che portano alla lesione complicata, alla progressione o alla regressione della placca includendo le cellule endoteliali, le cellule muscolari lisce, i monociti, le piastrine del sangue e le sostanze secrete da queste cellule. Elencare gli indicatori di rischio dell'aterosclerosi delineandone il contributo alla patogenesi delle lesioni ateromatose.
-    material_tips: |-
+
       La Prof.ssa Stivala consiglia di utilizzare:
 
       - Patologia generale, Altucci et al. (Idelson-Gnocchi). Le Basi patologiche delle malattie (Vol. I);
@@ -62,8 +94,34 @@ moduli:
     exam_type: Scritto
     frequenza: Obbligatoria
     exam_details: "Prova scritta: una domanda e un esercizio (dati pH, paCO2 e HCO3- identificare acidosi/alcalosi, respiratoria/metabolica ed eventualmente compensata). Talvolta l'esercizio può essere di altra tipologia o sostituito da una domanda. La prova scritta complessiva dura un'ora e mezza. Le domande di Fisiopatologia risultano sempre le stesse, ad esempio: descrizione dello PNEI, definizione di omeostasi, pulsossimetro, eustress-distress, soluzione fisiologica, tipi di ipossia, iperosmolarità, riserva funzionale, definizione di salute malattia e morte."
-    program: "Omeostasi e alterazioni delle seguenti omeostasi: psico-neuro-endocrino-immunologica, ossigenazione, acqua e sodio, acido-base e ione potassio."
-    material_tips: Sia per Patologia che per Fisiopatologia le lezioni sono svolte in modo chiaro e lineare per cui è sufficiente utilizzare le sbobine del proprio anno integrate con le slides (o con il sito che indica la Prof.ssa Scotti nel caso di Fisiopatologia). Si consiglia di integrare anche con le sbobine dell’anno precedente, dato che talvolta possono essere chiesti argomenti spiegati in modo più dettagliato nel precedente anno accademico.
+    program: |-
+      Fisiopatologia generale
+
+      Omeostasi, insufficienza funzionale. Alterazioni delle seguenti omeostasi: psico-neuro-endocrino-immunologica, ossigenazione, acqua e sodio, acido-base e ione potassio.
+
+      Argomenti: Fisiopatologia generale
+
+      Omeostasi, insufficienza funzionale. Alterazioni delle seguenti omeostasi: psico-neuro-endocrino-immunologica, ossigenazione, acqua e sodio, acido-base e ione potassio.
+
+      Il modulo di Fisiopatologia Generale del corso Golgi è stato insegnato per più di un decennio dal Prof. Vanio Vannini. Questo corso è in gran parte costruito sul materiale didattico che ha raccolto durante la sua carriera e mira prima di tutto a mantenere la sua visione della materia.
+
+      Nel corso di Fisiopatologia Generale saranno analizzate alcune delle più importanti funzioni integrate. In ogni capitolo sarà definita la funzione stessa e saranno rivisti i principali meccanismi di regolazione. Saranno prese in considerazione le alterazioni della funzione determinate da condizioni fisiologiche e patologiche e saranno discussi i corrispondenti modelli fisiopatologici. Si farà riferimento ai pertinenti sistemi sperimentali essenziali per definire, o per aiutare a definire, i meccanismi fisiopatologici coinvolti. Sarà anche fatto riferimento alla clinica, in quanto luogo finale privilegiato in cui le conoscenze acquisite attraverso il corso saranno applicate, nel lavoro quotidiano dei futuri medici, alla complessa realtà che il paziente rappresenta.
+
+      In questa prospettiva, il corso di fisiopatologia intende contribuire con un ponte preliminare tra la scienza di base e le cliniche. In particolare, è studiato per dare agli studenti la possibilità di iniziare a costruire relazioni tra la maggior parte delle discipline di base, da un lato, e quelle cliniche, dall'altro, dove potranno abituarsi a " leggere" e a trattare il paziente.
+
+      La Fisiopatologia Generale è costituita da diversi blocchi: alcuni di loro comprenderanno una singola lezione, altri diverse. Il primo blocco, omeostasi, si occuperà di questo concetto di base e di quelli strettamente connessi. Nei blocchi successivi saranno discusse le alterazioni delle principali funzioni integrate. All'interno di ogni blocco verrà mantenuta una struttura coerente: verrà inizialmente fornita una definizione della funzione in esame, che sarà seguita dalla lista degli organi e sistemi coinvolti nella loro regolazione e da quella dei principali meccanismi regolatori. Sarà poi fornita una discussione delle alterazioni di ciascuna funzione e del loro significato clinico, fornendo esempi e proponendo esercizi quando ritenuto utile per una migliore comprensione dei concetti chiave.
+
+      Ogni blocco di lezioni includerà la discussione delle alterazioni di una funzione specifica.
+
+      Il corso di Fisiopatologia generale prevede un tutorial al computer con simulazioni di alterazioni fisiopatologiche.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Omeostasi e alterazioni delle seguenti omeostasi: psico-neuro-endocrino-immunologica, ossigenazione, acqua e sodio, acido-base e ione potassio.
+
+      Sia per Patologia che per Fisiopatologia le lezioni sono svolte in modo chiaro e lineare per cui è sufficiente utilizzare le sbobine del proprio anno integrate con le slides (o con il sito che indica la Prof.ssa Scotti nel caso di Fisiopatologia). Si consiglia di integrare anche con le sbobine dell’anno precedente, dato che talvolta possono essere chiesti argomenti spiegati in modo più dettagliato nel precedente anno accademico.
     body: "La frequenza è obbligatoria: è necessario il raggiungimento del 75% del modulo (4 lezioni) per sostenere l'esame. I controlli vengono effettuati esclusivamente dalla Prof.ssa Scotti, che a fine lezione chiede a tutti gli studenti con il cognome che inizia con una lettera scelta casualmente di recarsi alla cattedra muniti di documento d'identità e firmare un foglio per attestare la loro presenza."
     professors:
       - nome: Prof.ssa Claudia Scotti
@@ -73,7 +131,17 @@ moduli:
     exam_type: Orale
     durata_orale_min: 10
     exam_details: "Prova orale: discussione di un preparato istopatologico, durata massima 10 minuti. Se si rifiuta il voto del vetrino è necessario rifare anche lo scritto. È possibile rifiutare lo scritto conservando l'esito dell'orale, che ha validità di 1 anno. In una fase successiva, la docente richiederà la descrizione di un'area specifica, evidenziando l'importanza di un'analisi approfondita delle diverse strutture e degli infiltrati presenti. Si attribuisce maggiore rilevanza alla descrizione accurata di ciò che si osserva al vetrino rispetto alla formulazione di una 'diagnosi' della lesione visibile."
-    program: Analisi di preparati istopatologici (vetrini) con esercitazioni obbligatorie. Le esercitazioni trattano i vetrini che saranno oggetto di valutazione durante l'esame.
-    material_tips: Si raccomanda di partecipare alle esercitazioni organizzate dalla professoressa e di avere a disposizione il materiale di riferimento, sia su Drive che da anni precedenti, che illustri dettagliatamente l'analisi dei vetrini, al fine di garantire una comprensione approfondita. Inoltre, si consiglia di scaricare i software necessari, come QPath (per MacOs) e Aperio-ImageScope, per la visualizzazione dei vetrini caricati dalla professoressa sulla piattaforma Kiro. Si precisa che i vetrini occupano molta memoria (circa 1 gb ciascuno). L’utilizzo di tali software consente di prepararsi efficacemente all’esame, consentendo la visualizzazione dei vetrini con gli ingrandimenti tipici dei microscopi utilizzati in laboratorio e durante l’esame. Per l'osservazione al microscopio, si consiglia di evitare l'apprendimento mnemonico, privilegiando invece l'analisi critica delle strutture fisiologiche e delle lesioni elementari. Si suggerisce di procedere con la descrizione delle osservazioni partendo da ingrandimenti inferiori per poi procedere con quelli maggiori.
+    program: |-
+      Il corso di Patologia generale include 2 laboratori: il primo di Istopatologia prevede un addestramento all'osservazione morfologica di preparati al microscopio; il secondo di Patologia sperimentale include alcuni test sperimentali per la valutazione della tossicità o mutagenicità di sostanze chimiche.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Analisi di preparati istopatologici (vetrini) con esercitazioni obbligatorie. Le esercitazioni trattano i vetrini che saranno oggetto di valutazione durante l'esame.
+
+      Si raccomanda di partecipare alle esercitazioni organizzate dalla professoressa e di avere a disposizione il materiale di riferimento, sia su Drive che da anni precedenti, che illustri dettagliatamente l'analisi dei vetrini, al fine di garantire una comprensione approfondita. Inoltre, si consiglia di scaricare i software necessari, come QPath (per MacOs) e Aperio-ImageScope, per la visualizzazione dei vetrini caricati dalla professoressa sulla piattaforma Kiro. Si precisa che i vetrini occupano molta memoria (circa 1 gb ciascuno). L’utilizzo di tali software consente di prepararsi efficacemente all’esame, consentendo la visualizzazione dei vetrini con gli ingrandimenti tipici dei microscopi utilizzati in laboratorio e durante l’esame. Per l'osservazione al microscopio, si consiglia di evitare l'apprendimento mnemonico, privilegiando invece l'analisi critica delle strutture fisiologiche e delle lesioni elementari. Si suggerisce di procedere con la descrizione delle osservazioni partendo da ingrandimenti inferiori per poi procedere con quelli maggiori.
 aggiornato_da: Luiza Leshi
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "502622"
+cfu_totali: 8
+ultimo_aggiornamento: 2026-10-04

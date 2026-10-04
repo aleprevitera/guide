@@ -11,8 +11,45 @@ moduli:
     frequenza: Obbligatoria
     durata_orale_min: 15
     exam_details: "Esame **orale**. Sono presenti più docenti che possono interrogare. L'interrogazione dura indicativamente **15 minuti**. Preappello: previsto, nell'anno di riferimento si è svolto **a metà maggio**. Frequenza: **obbligatoria**, ma i controlli non risultano particolarmente rigorosi."
-    program: Programma molto ampio; è consigliabile preparare **tutto il programma**. Le domande sono generalmente coerenti con gli argomenti trattati a lezione. I **tumori rari**, non trattati a lezione, non sono stati richiesti nell'anno di riferimento. Il programma può variare leggermente di anno in anno. Nell'anno di riferimento è stata aggiunta una parte sulle **cure palliative**. Non risultano argomenti sistematicamente più richiesti.
-    material_tips: "Fonte principale: **sbobine 2024-2025**, molto complete. Sono state usate perché nell'anno di riferimento le sbobine dell'anno corrente non erano ancora disponibili al momento della preparazione del preappello. Consigliabile confrontarle con il materiale dell'anno corrente per verificare argomenti aggiunti o modificati. Consigli: studiare tutto il programma, usare sbobine recenti e complete, verificare aggiunte dell'anno corrente, prepararsi soprattutto con la **ripetizione**."
+    program: |-
+      Per quanto riguarda il programma e i contenuti si fa riferimento a quanto scritto nei singoli moduli costituenti il corso integrato.
+
+      Basi patogenetiche, epidemiologia e prevenzione primaria e secondaria dei tumori.
+
+      Iter diagnostico nel soggetto con sospetta neoplasia (anamnesi, esame obiettivo, indagini strumentali e di laboratorio).
+
+      **Approccio al paziente con diagnosi di neoplasia:**
+
+      - Stadiazione della malattia ai fini prognostici e terapeutici.
+      - Approccio multidisciplinare al paziente oncologico: tumor board, PDTA.
+      - Concetti fondamentali di trattamento delle neoplasie: terapia sistemica (chemioterapia,, terapie target, immunoterapia) e approcci loco-regionali.
+      - Principali effetti collaterali acuti e tardivi dei trattamenti oncologici e come affrontarli.
+      - Percorso diagnostico, terapeutico e follow-up di patologie oncologiche specifiche, in particolare di quelle a maggiore incidenza.
+      - Le terapie complementari, le cure palliative; concetti di "cure simultanee" e di supporto nutrizionale nel paziente oncologico.
+
+      **Conoscere i principi generali della radioterapia oncologica:**
+
+      a) Iter diagnostico, stadiazione, iter terapeutico,
+
+      b) Tappe nella pianificazione radioterapica: indicazioni, procedure di simulazione, definizione dei volumi bersaglio tumorale e degli organi a rischio,
+
+      dose totale e frazionamenti, approvazione e verifica del piano di trattamento,
+
+      c) Ruolo della radioterapia nei seguenti scenari: carcinoma del polmone (microcitoma e non-microcitoma), carcinoma della mammella, carcinoma della
+
+      prostata, carcinoma del testa-collo, gastroenterico,
+
+      d) Effetti collaterali delle radioterapia per i principali scenari clinici,
+
+      e) Follow-up del paziente sottoposto a radioterapia.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/12832/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
+      Programma molto ampio; è consigliabile preparare **tutto il programma**. Le domande sono generalmente coerenti con gli argomenti trattati a lezione. I **tumori rari**, non trattati a lezione, non sono stati richiesti nell'anno di riferimento. Il programma può variare leggermente di anno in anno. Nell'anno di riferimento è stata aggiunta una parte sulle **cure palliative**. Non risultano argomenti sistematicamente più richiesti.
+
+      Fonte principale: **sbobine 2024-2025**, molto complete. Sono state usate perché nell'anno di riferimento le sbobine dell'anno corrente non erano ancora disponibili al momento della preparazione del preappello. Consigliabile confrontarle con il materiale dell'anno corrente per verificare argomenti aggiunti o modificati. Consigli: studiare tutto il programma, usare sbobine recenti e complete, verificare aggiunte dell'anno corrente, prepararsi soprattutto con la **ripetizione**.
     fascia_studio: 3–4 sett
   - nome_modulo: Diagnostica per immagini
     id: m-t588av4v
@@ -21,11 +58,42 @@ moduli:
     study_time: 10 giorni – 1 mese
     preappello: No
     exam_details: "Esame **scritto** tramite **Chirotesting**. La prova comprende: - **7 domande a scelta multipla di Radiologia** - **4 domande a scelta multipla di Radioterapia** - **4 domande a scelta multipla di Neuroradiologia** - **3 domande aperte**, una per ciascuna delle tre sezioni. Le domande a scelta multipla sono **senza penalità**. Le domande vengono estratte da un **ampio pool di quesiti**, non accessibile agli studenti; possono essere differenti tra i candidati, quindi la difficoltà può variare. La valutazione viene **normalizzata con una correzione gaussiana**. Preappello: **non previsto**. Frequenza: risulta più controllata rispetto ad altri insegnamenti; i docenti prestano attenzione alla presenza in aula e al numero di studenti presenti, anche se non è necessariamente richiesta una partecipazione al **100% delle lezioni**. Flipped classroom: prevista per Diagnostica per immagini, partecipazione per studenti con almeno il **75% di frequenza**. Attività: 1. scelta di un argomento tra quelli proposti; 2. lettura di articoli forniti dai docenti; 3. preparazione di una presentazione PowerPoint; 4. esposizione del lavoro. Punti aggiuntivi sull'esame: - partecipazione → **+1 punto** - gruppi finalisti → **+3 punti** - gruppo vincitore → **+5 punti**."
-    program: "Il programma comprende: - Radiologia - Pneumoradiologia - Radioterapia - Neuroradiologia - Imaging dell'apparato riproduttore femminile - Radiologia ginecologica - Imaging del sistema vascolare. È importante preparare anche gli argomenti che non vengono necessariamente approfonditi durante le lezioni, ma che possono comparire nelle domande d'esame. Particolare attenzione a **Imaging del sistema vascolare** (oggetto di una domanda aperta nell'anno di riferimento) e **Imaging dei tumori ossei** (affrontato anche nella flipped classroom e presente nelle sbobine)."
-    material_tips: "Preparazione effettuata principalmente dalle **sbobine 2023-2024** per: - Radiologia - Pneumoradiologia - Radioterapia - Neuroradiologia. Aggiunte: - **Imaging e apparato riproduttore femminile** (sbobine 2023-2024) - **Radiologia ginecologica** (sbobine 2024-2025) - **Imaging del sistema vascolare** (sbobine 2019-2020), importante perché nell'anno di riferimento è stato oggetto di una domanda aperta nonostante non fosse spiegato direttamente a lezione. Consigliabile dare un'occhiata alle **sbobine dell'anno corrente** per aggiornamenti. Materiale aggiuntivo consigliato: - **esercitazioni caricate dai docenti** - **presentazioni disponibili sul Drive** - immagini proiettate durante le lezioni. Le immagini mostrate a lezione possono essere riproposte nelle domande a scelta multipla. Per **imaging dei tumori ossei**, l'argomento è presente nelle sbobine 2023-2024, che restano la fonte principale. Consigli: studiare dalle sbobine indicate, guardare le **slide dei docenti**, svolgere le **esercitazioni sul Drive**, osservare le **immagini proiettate**. Non è necessario dedicare molto tempo alla ripetizione orale: concentrarsi su comprensione, immagini ed esercitazioni."
+    program: |-
+      Per quanto riguarda il programma e i contenuti si fa riferimento a quanto scritto nei singoli moduli costituenti il corso integrato.
+
+      Il corso ha una componente didattica significativa.
+
+      I temi trattati spaziano da argomenti di radiologia generale (punti di forza e limiti delle diverse modalità di imaging, giustificazione e appropriatezza del loro utilizzo, vantaggi e controindicazioni dei mezzi di contrasto) ad argomenti specifici quali le indicazioni alla diagnostica per immagini e elementi base di semeiotica radiologica della patologia toracica e cardiovascolare, della patologia focale e diffusa epatica e pancreatica, della patologia dell'apparato gastro-enterico, della patologia dell’apparato muscolo-scheletrico, della patologa dell’apparato genito-urinario maschile e femminile e della patologia oncologica mammaria.
+
+      La conoscenza sarà ulteriormente rafforzata dalla discussione di casi emblematici delle problematiche cliniche trattate. Saranno fornite informazioni di base in merito alle probematiche correlate alla radioprotezione del paziente e del personale sanitario, alla luce della normativa vigente.
+
+      Attrezzature radiologiche: tipi e caratteristiche di funzionamento delle attrezzature radiologiche utilizzate nella diagnostica ed interventistica neuroradiologica con particolare attenzione all'impiego della TC e della RM sia nella fase acuta che nel follow-up.
+
+      Tecniche di indagine da utilizzare nella diagnostica delle principali patologie dell'encefalo e del midollo come:
+
+      - malattie cerebrovascolari in fase acuta e stabilizzata
+      - malattie infettivo-infiammatorie
+      - tumori cerebrali
+      - tumori spinali
+      - invecchiamento cerebrale e deterioramento cognitivo
+      - patologie degenerative dell'encefalo
+      - traumi cranio-spinali
+      - epilessia
+      - patologie dell'ipofisi
+      - patologie degenerative della colonna
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/12832/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma comprende: - Radiologia - Pneumoradiologia - Radioterapia - Neuroradiologia - Imaging dell'apparato riproduttore femminile - Radiologia ginecologica - Imaging del sistema vascolare. È importante preparare anche gli argomenti che non vengono necessariamente approfonditi durante le lezioni, ma che possono comparire nelle domande d'esame. Particolare attenzione a **Imaging del sistema vascolare** (oggetto di una domanda aperta nell'anno di riferimento) e **Imaging dei tumori ossei** (affrontato anche nella flipped classroom e presente nelle sbobine).
+
+      Preparazione effettuata principalmente dalle **sbobine 2023-2024** per: - Radiologia - Pneumoradiologia - Radioterapia - Neuroradiologia. Aggiunte: - **Imaging e apparato riproduttore femminile** (sbobine 2023-2024) - **Radiologia ginecologica** (sbobine 2024-2025) - **Imaging del sistema vascolare** (sbobine 2019-2020), importante perché nell'anno di riferimento è stato oggetto di una domanda aperta nonostante non fosse spiegato direttamente a lezione. Consigliabile dare un'occhiata alle **sbobine dell'anno corrente** per aggiornamenti. Materiale aggiuntivo consigliato: - **esercitazioni caricate dai docenti** - **presentazioni disponibili sul Drive** - immagini proiettate durante le lezioni. Le immagini mostrate a lezione possono essere riproposte nelle domande a scelta multipla. Per **imaging dei tumori ossei**, l'argomento è presente nelle sbobine 2023-2024, che restano la fonte principale. Consigli: studiare dalle sbobine indicate, guardare le **slide dei docenti**, svolgere le **esercitazioni sul Drive**, osservare le **immagini proiettate**. Non è necessario dedicare molto tempo alla ripetizione orale: concentrarsi su comprensione, immagini ed esercitazioni.
     fascia_studio: 3–4 sett
 info_da_verificare:
   - campo: Media ponderata dei due moduli
     nota: "La studentessa riferisce che **Diagnostica per immagini ha un peso maggiore rispetto a Oncologia**, ma non ricorda la modalità esatta di calcolo della media. Da integrare: CFU/peso dei due moduli e modalità esatta di calcolo della valutazione finale."
 aggiornato_da: Sara Cocci
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "506413"
+cfu_totali: 6
+ultimo_aggiornamento: 2026-10-04

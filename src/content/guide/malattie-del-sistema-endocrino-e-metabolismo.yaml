@@ -10,22 +10,127 @@ moduli:
     id: m-r6dtmg80
     exam_type: Orale
     exam_details: L’interrogazione è unica tra endocrinologia e malattie del metabolismo; lo stesso professore interroga per entrambe.
-    program: Programma da confermare.
+    program: |-
+      Malattie del sistema endocrino
+
+      Sistema neuroendocrino
+
+      Adenomi ipofisari
+
+      Iperprolattinemia
+
+      Acromegalia
+
+      Malattia di Cushing
+
+      Ipopituitarismo
+
+      Patologie dell’ipofisi posteriore e diabete insipido
+
+      Fisiopatologia dell’asse ipotalamo-ipofisi-tiroide
+
+      Ipertiroidismo
+
+      Ipotiroidismo
+
+      Patologia nodulare tiroidea e tumore tiroideo
+
+      Metabolismo fosfo-calcico
+
+      Iperparatiroidismo
+
+      Ipoparatiroidismo
+
+      Neoplasie endocrine multiple (MEN)
+
+      Fisiopatologia del surrene
+
+      Ipocorticosurrenalismo
+
+      Sindrome di Cushing
+
+      Endocrinologia riproduttiva femminile
+
+      Endocrinologia riproduttiva maschile
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: Le sbobine sono sufficienti.
   - nome_modulo: Malattie del metabolismo
     id: m-s11z2uij
     exam_type: Orale
     exam_details: L’interrogazione è unica tra endocrinologia e malattie del metabolismo; lo stesso professore interroga per entrambe.
-    program: Programma da confermare.
+    program: |-
+      **MALATTIE DEL METABOLISMO**
+
+      Malattie del metabolismo glucidico: diabete mellito e sue complicanze acute e croniche
+
+      Obesità e insulino-resistenza
+
+      Dislipidemie
+
+      Gotta
+
+      Alterazioni del metabolismo secondarie a endocrinopatie
+
+      Classificazione del diabete mellito
+
+      Fisiopatologia del diabete mellito di tipo 1
+
+      Il diabete genetico e LADA
+
+      Fisiopatologia del diabete mellito tipo 2
+
+      Fisiopatologia del diabete mellito secondario
+
+      Le comorbilità del diabete mellito
+
+      Principi di terapia del diabete mellito
+
+      La prevenzione primaria e secondaria
+
+      L'obesità: fisiopatologia e terapia
+
+      La sindrome metabolica: fisiopatologia e comorbilità
+
+      Le Ipoglicemie
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: Le sbobine sono sufficienti.
   - nome_modulo: Chirurgia endocrina
     id: m-srbieauq
     exam_type: Scritto
     exam_details: Prova scritta separata a crocette.
-    program: Programma da confermare.
+    program: |-
+      **ENDOCRINO-CHIRURGIA**
+
+      MEN 1 e MEN 2
+
+      Tumori del pancreas endocrino
+
+      Carcinoidi
+
+      Tumori della corticale del surrene
+
+      Feocromocitoma
+
+      Malattie chirurgiche della tiroide: gozzo tossico e non tossico, Morbo di Basedow-Graves, tumori tiroidei
+
+      Iperparatiroidismo
+
+      Incidentalomi surrenalici
+
+      **Nel corso di endocrinochirurgia vengono trattati i seguenti argomenti:**
+
+      1. Chirurgia della Tiroide
+      2. Chirurgia delle paratiroidi
+      3. Chirurgia delle ghiandole surrenaliche
+      4. Trattamento chirurgico dei tumori neuroendocrine del pancreas
+      5. Trattamento chirurgico dei tumori gastrointestinali neuroendocrini
+      6. Indicazioni chirurgiche nelle MEN 1 e MEN 2
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: Le sbobine sono sufficienti, ma è consigliabile leggere anche le domande dei precedenti appelli poiché spesso si ripetono.
-info_da_verificare:
-  - campo: Programma d'esame
-    nota: La scheda riporta solo 'syllabus' senza elenco di argomenti.
 aggiornato_da: Lisa Ceci
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "501793"
+cfu_totali: 5
+ultimo_aggiornamento: 2026-10-04

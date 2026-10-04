@@ -7,8 +7,112 @@ moduli:
     exam_type: Scritto
     study_time: 15 giorni circa
     exam_details: L’esame consiste in uno scritto composto da 60 crocette. Le crocette spesso consistono in emocromi da interpretare soprattutto sulle varie anemie, leucemie e linfomi. Ci sono poi esercizi riguardanti la coagulazione del sangue e quesiti riguardo i geni responsabili delle patologie. Per ogni risposta sbagliata è prevista una penalità di -0,25.
-    program: Sul syllabus è presente tutto il programma. Prestare particolare attenzione alle diagnosi differenziali delle patologie e ai geni.
-    material_tips: Le sbobine più recenti sono sufficienti per preparare l’esame. È necessario svolgere le prove degli anni precedenti, anche per capire il meccanismo di risoluzione degli emocromi. Esiste una dispensa di vecchi quesiti molto utili per imparare il meccanismo; circolano inoltre vari file di domande più recenti, tra cui anche le prove del corso Harvey, che spesso si ripetono all’esame.
+    program: |-
+      **Argomenti da studiare per la preparazione dell’esame:**
+
+      1. Midollo osseo e sangue periferico
+      2. Cellule staminali emopoietiche e fattori di crescita emopoietici
+      3. Alterazioni ematologiche
+      - Eritropoiesi: anemia ed eritrocitosi
+      - Emostasi: emorragia e trombosi
+      - Linfonodi e milza
+      - Alterazioni dei granulociti dei monociti
+      4. Eritrone, eritropoietina e classificazione delle anemie
+      5. Anemia aplastica
+      6. Metabolismo del ferro, anemia da carenza di ferro ed emocromatosi genetici
+      7. Anemia dell’infiammazione
+      8. Anemie megaloblastiche
+      9. Sindromi talassemiche
+      10. Drepanocitosi
+      11. Anemie emolitiche
+      12. Neoplasie mieloproliferative: leucemia mieloide cronica
+      13. Neoplasie mieloproliferative: policitemia vera, trombocitemia essenziale e mielofibrosi primaria
+      14. Neoplasie mieloidi: sindromi mielodisplastiche
+      15. Neoplasie mieloidi: leucemia mieloide acuta
+      16. Neoplasie linfoidi: leucemia linfatica acuta
+      17. Neoplasie linfoidi: linfoma di Hodgkin
+      18. Neoplasie linfoidi: linfomi maligni
+      19. Neoplasie linfoidi: leucemia linfatica cronica
+      20. Neoplasie plasmacellulari: gammopatia monoclonale di significato indeterminato (MGUS), mieloma multiplo e macroglobulinemia di Waldenström
+      21. Amiloidosi AL
+      22. Disordini delle piastrine e della parete vascolari
+      - Trombocitopenia (porpora trombocitopenica immune, trombocitopenia da eparina, porpora trombotica trombocitopenica)
+      - malattia di von Willebrand
+      23. Disordini della coagulazione
+      - Emofilia
+      - Coagulazione intravascolare disseminata
+      - Trombosi arteriosa e venosa
+      - Farmaci antiaggreganti piastrinici e farmaci anticoagulanti
+      24. Terapia trasfusionale
+      25. Trapianto di cellule staminali emopoietiche
+
+      **Argomenti da studiare:**
+
+      1. Midollo osseo e sangue periferico
+      2. Cellule staminali emopoietiche e fattori di crescita emopoietici
+      3. Alterazioni ematologiche:
+      - Eritropoiesi: anemia ed eritrocitosi
+      - Emostasi: emorragia e trombosi
+      - Linfonodi e milza
+      - Alterazioni dei granulociti dei monociti
+      4. Eritrone, eritropoietina e classificazione delle anemie
+      5. Anemia aplastica
+      6. Metabolismo del ferro, anemia da carenza di ferro ed emocromatosi
+
+      genetica
+
+      7. Anemia dell’infiammazione
+      8. Anemie megaloblastiche
+      9. Sindromi talassemiche
+      10. Drepanocitosi
+      11. Anemie emolitiche
+      12. Neoplasie mieloproliferative: leucemia mieloide cronica
+      13. Neoplasie mieloproliferative: policitemia vera, trombocitemia
+
+      essenziale e mielofibrosi primaria
+
+      14. Neoplasie mieloidi: sindromi mielodisplastiche
+      15. Neoplasie mieloidi: leucemia mieloide acuta
+      16. Neoplasie linfoidi: leucemia linfatica acuta
+      17. Neoplasie linfoidi: linfoma di Hodgkin
+      18. Neoplasie linfoidi: linfomi maligni
+      19. Neoplasie linfoidi: leucemia linfatica cronica
+      20. Neoplasie plasmacellulari: gammopatia monoclonale di significato
+
+      indeterminato (MGUS), mieloma multiplo e macroglobulinemia di
+
+      Waldenström
+
+      21. Amiloidosi AL
+      22. Disordini delle piastrine e della parete vascolari:
+      - Trombocitopenia (porpora trombocitopenica immune, trombocitopenia
+
+      da eparina, porpora trombotica trombocitopenica)
+
+      - malattia di von Willebrand
+      23. Disordini della coagulazione:
+      - Emofilia
+      - Coagulazione intravascolare disseminata
+      - Trombosi arteriosa e venosa
+      - Farmaci antiaggreganti piastrinici e farmaci anticoagulanti
+      24. Terapia trasfusionale
+      25. Trapianto di cellule staminali emopoietiche
+
+      La classificazione delle malattie linfoproliferative: principi generali e significato clinico-patologico.
+
+      Il linfoma di Hodgkin: classificazione, caratteristiche patologiche, patologia moleolare.
+
+      I linfomi a cellule B periferiche: prinicpi generali, caratteristiche patologiche e basi molecolari delle entità più comuni (leucemia linfatica cronica, linfoma mantellare, linfoma follicolare, linfoma della zona marginale, linfomi B diffusi a grandi cellule)
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10671/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Sul syllabus è presente tutto il programma. Prestare particolare attenzione alle diagnosi differenziali delle patologie e ai geni.
+
+      Le sbobine più recenti sono sufficienti per preparare l’esame. È necessario svolgere le prove degli anni precedenti, anche per capire il meccanismo di risoluzione degli emocromi. Esiste una dispensa di vecchi quesiti molto utili per imparare il meccanismo; circolano inoltre vari file di domande più recenti, tra cui anche le prove del corso Harvey, che spesso si ripetono all’esame.
     fascia_studio: 1–2 sett
 aggiornato_da: Lisa Ceci
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "501781"
+cfu_totali: 5
+ultimo_aggiornamento: 2026-10-04

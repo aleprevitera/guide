@@ -8,6 +8,76 @@ moduli:
     exam_type: Orale
     exam_details: "Prova **orale**. L’orale prevede generalmente **2 domande**: una relativa a un primo blocco di argomenti e una relativa a un secondo blocco. Le domande sono generalmente piuttosto **schematiche e secche**. L’interrogazione dura mediamente **15-20 minuti**, anche se la durata può variare in base al docente e all’andamento dell’interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Durante l’esame erano presenti **3 docenti + 1 specializzanda**. La parte di Gastroenterologia si svolge dopo lo scritto di Nutrizione umana, nello stesso appello."
     program: |-
+      -Disfagia
+
+      -Dispepsia
+
+      -Vomito
+
+      -Diarrea
+
+      -Melena
+
+      -Rettorragia
+
+      -Ittero
+
+      -Ascite
+
+      -Dolore addominale (acuto e cronico)
+
+      -Acalasia e disturbi motori esofagei
+
+      -Malattia da reflusso gastroesofageo
+
+      -Neoplasie dell'esofago
+
+      -Malattia peptica
+
+      -Gastriti e gastropatie
+
+      -H pylori
+
+      -Neoplasie dello stomaco
+
+      -Malassorbimento
+
+      -Malattia celiaca
+
+      -Morbo di Whipple
+
+      -Contaminazione batterica dell'intestino tenue
+
+      -Malattia diverticolare
+
+      -Malattie infiammatorie intestinali
+
+      -Sindrome dell'intestino irritabile
+
+      -Neoplasie benigne e maligne del colon
+
+      -Epatiti acute
+
+      -Epatopatie croniche e cirrosi epatica
+
+      -Colecistite acute
+
+      -Colica biliare
+
+      -Tumori del fegato
+
+      -Pancreatite acuta
+
+      -Pancreatite cronica
+
+      -Tumori del pancreas
+
+      -Disfagia -Dispepsia -Vomito -Diarrea -Melena -Rettorragia -Ittero -Ascite -Dolore addominale (acuto e cronico) -Acalasia e disturbi motori esofagei -Malattia da reflusso gastroesofageo -Neoplasie dell'esofago -Malattia peptica -Gastriti e gastropatie -H pylori -Neoplasie dello stomaco -Malassorbimento -Malattia celiaca -Morbo di Whipple -Contaminazione batterica dell'intestino tenue -Malattia diverticolare -Malattie infiammatorie intestinali -Sindrome dell'intestino irritabile -Neoplasie benigne e maligne del colon -Epatiti acute -Epatopatie croniche e cirrosi epatica -Colecistite acute -Colica biliare -Tumori del fegato -Pancreatite acuta -Pancreatite cronica -Tumori del pancreas
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
       Programma molto ampio, da studiare nel suo complesso. Particolare attenzione alle **principali sindromi gastroenteriche**, frequentemente oggetto della prima domanda.
 
       Da integrare allo studio delle sbobine:
@@ -22,7 +92,7 @@ moduli:
 
       - **Prima domanda:** disfagia, dispepsia, vomito, diarrea, stipsi, melena, rettorragia, ittero, ascite, dolore addominale acuto, dolore addominale cronico.
       - **Seconda domanda:** acalasia, neoplasie dell’esofago, MRGE (condizioni predisponenti, quadro clinico, complicanze), ulcera peptica (cause, quadro clinico, complicanze), gastriti croniche (tipi), danno da FANS, HP e malattie correlate, tumori dello stomaco, anemie in gastroenterologia, malattia celiaca (eziopatogenesi, clinica, complicanze), morbo di Whipple, morbo di Crohn vs RCU, morbo di Crohn (clinica, complicanze), RCU (clinica, complicanze), tumori maligni del colon, polipi del colon, epatiti acute, danno da alcol, cirrosi epatica (cause, quadro clinico, complicanze), colecistite acuta, colica biliare, pancreatite acuta (cause, clinica).
-    material_tips: |-
+
       Fonte principale consigliata: **sbobine 2023-2024**, considerate le più complete, da integrare con alcune lezioni di altri anni:
 
       - **Sbobine 2023-2024** → base principale.
@@ -51,13 +121,51 @@ moduli:
     exam_type: Orale
     exam_details: "Prova **orale**. L’orale prevede generalmente **2 domande**: una relativa a un primo blocco di argomenti e una relativa a un secondo blocco. Le domande sono generalmente piuttosto **schematiche e secche**. L’interrogazione dura mediamente **15-20 minuti**, anche se la durata può variare in base al docente e all’andamento dell’interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Durante l’esame erano presenti **3 docenti + 1 specializzanda**. La parte di Chirurgia gastroenterologica si svolge dopo lo scritto di Nutrizione umana, nello stesso appello."
     program: |-
+      - Semeiologia ed esame obiettivo nelle malattie dell'apparato digerente.
+      - Dolore addominale acuto e cronico (approccio fisiopatologico, semeiologico e clinico).
+      - Addome acuto chirurgico (peritonitico, occlusivo, vascolare).
+      - Appendicite acuta.
+      - Pseudoaddome acuto (medico).
+      - Le ernie parietali addominali. Lo strozzamento erniario.
+      - Le ernie diaframmatiche congenite ed acquisite.
+      - Il megaesofago. I diverticoli esofagei.
+      - Tumori benigni e maligni dell'esofago.
+      - Tumori benigni e maligni dello stomaco. Precancerosi gastriche.
+      - Patologia infiammatoria e tumorale del tenue mesenteriale.
+      - Malattie infiammatorie croniche dell'intestino (retto - colite ulcerosa, morbo di Crohn).
+      - Precancerosi intestinali. Polipi intestinali. Poliposi.
+      - Diverticolosi del colon.
+      - Megacolon (congenito, acquisito, tossico).
+      - Carcinoma del colon-retto.
+      - Patologia infiammatoria acuta e cronica del pancreas.
+      - Tumori benigni e maligni del pancreas.
+      - APUDomi. Carcinoidi. Adenomatosi endocrine multiple di rilevanza chirurgica. Sindromi endocrine paraneoplastiche.
+      - Splenopatie chirurgiche.
+      - Tumori benigni e maligni del fegato (lesioni epatiche focali).
+      - Il paziente cirrotico candidato ad intervento chirurgico.
+      - L'ittero chirurgico. Inquadramento generale e aspetti eziopatogenetici.
+      - Patologia infiammatoria delle via biliari.
+      - Malformazioni e tumori delle vie biliari.
+      - La calcolosi biliare.
+      - L'ipertensione portale.
+      - Malattie dell'ano d'interesse chirurgico (ragade, ascesso, fistola, varici emorroidarie, cancro).
+      - Masse addominali (intraperitoneari, retroperitoneari).
+      - Cellule staminali e chirurgia.
+      - Trapianti d'organo.
+
+      - Inquadramento e trattamento multidisciplinare dell'obesità patologica - Semeiologia ed esame obiettivo nelle malattie dell'apparato digerente. - Dolore addominale acuto e cronico (approccio fisiopatologico, semeiologico e clinico). - Addome acuto chirurgico (peritonitico, occlusivo, vascolare). - Appendicite acuta. - Le ernie parietali addominali. Lo strozzamento erniario. - Le ernie diaframmatiche congenite ed acquisite. - MRGE e Barrett - Il megaesofago. I diverticoli esofagei. - Acalasia.- Tumori benigni e maligni dell'esofago. - Tumori benigni e maligni dello stomaco. Precancerosi gastriche. - Patologia infiammatoria e tumorale del tenue mesenteriale. - Malattie infiammatorie croniche dell'intestino (retto - colite ulcerosa, morbo di Crohn). - Precancerosi intestinali. Polipi intestinali. Poliposi. - Diverticolosi del colon. - Megacolon (congenito, acquisito, tossico). - Carcinoma del colon-retto. - Patologia infiammatoria acuta e cronica del pancreas. - Tumori benigni e maligni del pancreas. - Ipertensione Portale.- Sindrome Compartimentale Addominale.- L'ittero chirurgico. Inquadramento generale e aspetti eziopatogenetici. - Patologia infiammatoria delle via biliari. - La calcolosi biliare. - Malattie dell'ano d'interesse chirurgico (ragade, ascesso, fistola, varici emorroidarie, cancro). - Cellule staminali e chirurgia. - Trapianti d'organo.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
       Le domande sono abbastanza varie. Quest’anno è stata dedicata particolare attenzione alla **chirurgia bariatrica**, che può quindi essere un argomento su cui i docenti si soffermano.
 
       È importante considerare anche gli argomenti **non spiegati direttamente a lezione ma lasciati nelle slide**, perché possono comunque essere oggetto d’esame. Quest’anno, ad esempio, sono state chieste:
 
       - ernie addominali;
       - acalasia.
-    material_tips: |-
+
       Poiché quest’anno sono cambiati i docenti, è consigliato utilizzare principalmente le **sbobine 2025-2026**, che sono quelle più aggiornate e maggiormente in linea con gli argomenti effettivamente richiesti.
 
       Non è più necessario affidarsi al vecchio libro utilizzato negli anni precedenti: le sbobine dell’anno sono considerate sufficienti.
@@ -79,7 +187,42 @@ moduli:
       Le domande aperte possono essere **ricorrenti** e ripetersi negli anni precedenti.
 
       Lo scritto di Nutrizione, così come le due prove orali, deve essere **superato nello stesso appello**. Non è possibile mantenere il risultato di una singola parte per un appello successivo e **non è previsto il salto d’appello**.
-    program: Programma da confermare.
+    program: |-
+      Dispendio e bilancio energetico, fabbisogno energetico
+
+      Dietetica fisiologica nell’adulto (Linee guida/LARN)
+
+      Gruppi di alimenti e piramide alimentare
+
+      Diagnostica Nutrizionale nell’adulto
+
+      Obesità e terapia dietetica
+
+      Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
+
+      Dietoterapia nelle Malattie croniche infiammatorie intestinali
+
+      Dispendio e bilancio energetico, fabbisogno energetico
+
+      Dietetica fisiologica nell’adulto (Linee guida/LARN)
+
+      Gruppi di alimenti e piramide alimentare
+
+      Diagnostica Nutrizionale nell’adulto
+
+      Obesità e terapia dietetica
+
+      Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
+
+      Dietoterapia nelle Malattie croniche infiammatorie intestinali
+
+      Disturbi dell'alimentazione e nutrizione
+
+      Malattie neurodegenerative
+
+      Alimentazione e tumori
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
     material_tips: |-
       La preparazione deve essere fatta **principalmente dalle slide**.
 
@@ -95,9 +238,9 @@ moduli:
 info_da_verificare:
   - campo: Modalità di chiamata
     nota: La scheda indica [DA INTEGRARE – ordine alfabetico/ordine di iscrizione/altro].
-  - campo: Programma
-    nota: Il programma di Nutrizione umana non è dettagliato; la scheda indica solo di studiare principalmente dalle slide.
   - campo: Contenuto delle domande aperte
     nota: La scheda segnala che mancava il contenuto specifico delle domande aperte di Nutrizione umana.
 aggiornato_da: Sara Cocci
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "501795"
+cfu_totali: 6
+ultimo_aggiornamento: 2026-10-04

@@ -14,23 +14,62 @@ moduli:
       In entrambe le modalità, analogamente all’esame di Patologia Generale, i professori danno particolare importanza al contenuto, penalizzando chi risulta troppo prolisso.
       Attenzione: dall’a.a. 2022/23 l’esame di Patologia Generale è propedeutico a Medicina di Laboratorio. A volte risulta complicato darli nella stessa sessione poiché le Prof.sse di Patologia possono essere lente nella correzione degli esami. La Prof.ssa Balduini in genere permette a chi non ha ancora ricevuto gli esiti di Patologia di sostenere il suo esame e mantenere in sospeso il voto fino a quando non viene verbalizzato l’esame di Patologia Generale.
     program: |-
-      - Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
-      - Esame emocromocitometrico e metabolismo del ferro
-      - L'emostasi: rischio trombotico ed emorragico
+      •Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
+
+      •Esame emocromocitometrico e metabolismo del ferro
+
+      •Esame emocromocitometrico e metabolismo del ferro
+
+      •L'emostasi: rischio trombotico ed emorragico 1
+
+      •Struttura e funzione del midollo osseo
+
+      •Meccanismi biochimici di fibrosi
+
+      •Ruolo del Calcio nella malattia
+
+      •UPR e Autofagia
+
+      •Introduzione alla medicina rigenerativa e ai biomateriali
+
+      •La funzionalità epatica e pancreatica
+
+      •Le sieroproteine
+
+      •Diagnosi di laboratorio e monitoraggio del diabete
+
+      •La fase acuta e la sepsi
+
+      •I lipidi e le classi lipoproteiche: struttura e parametri di rischio aterosclerotico
+
+      •Marcatori di danno cardiaco
+
+      •Metabolismo del calcio e dell'osso
+
+      •Marcatori tumorali e loro significato
+
+      •La funzionalità renale e l'esame delle urine
+
+      - Introduzione alla Medicina di Laboratorio e raccolta campioni (plasma, siero, principali anticoagulanti)
+      - Sensibilità e specificità dei test di laboratorio
+      - Esame emocromocitometrico
       - Struttura e funzione del midollo osseo
-      - Meccanismi biochimici di fibrosi
-      - Ruolo del Calcio nella malattia
-      - UPR e Autofagia
-      - Introduzione alla medicina rigenerativa e ai biomateriali
-      - La funzionalità epatica e pancreatica
-      - Le sieroproteine
-      - Diagnosi di laboratorio e monitoraggio del diabete
-      - La fase acuta e la sepsi
-      - I lipidi e le classi lipoproteiche: struttura e parametri di rischio aterosclerotico
-      - Marcatori di danno cardiaco
-      - Metabolismo del calcio e dell'osso
-      - Marcatori tumorali e loro significato
+      - Approcci traslazionali allo studio dell’emopoiesi (introduzione alla medicina rigenerativa e biomateriali)
+      - Il laboratorio dell’emostasi
+      - Elettroforesi (sieroproteine, emoglobine)
+      - Spettrofotometria e dosaggio enzimatico
+      - Le tecniche immunochimiche
+      - Studio dell'autoimmunità
+      - Gli approcci di terapia cellulare avanzata
+      - Biobanche e controlli di qualità cellulare
+      - La diagnostica enzimatica (marcatori di danno cardiaco, marcatori di funzionalità epatica e pancreatica, marcatori tumorali)
+      - La diagnostica proteica (marcatori di danno cardiaco, marcatori di fase acuta, marcatori tumorali)
+      - Gli oligoelementi in medicina di laboratorio (metabolismo del ferro, calcio, rame)
       - La funzionalità renale e l'esame delle urine
+      - Banche dati, ricerca bibliografica, analisi e discussione della letteratura scientifica
+      - Discussione di casi clinici
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10669/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: |-
       - Ad oggi, le sbobine più complete sono quelle relative all’anno accademico 2020-2021.
       - È sufficiente studiare sulle sbobine dell’anno corrente integrate con le slide fornite dai professori tramite la piattaforma Kiro.
@@ -45,4 +84,6 @@ moduli:
         email: christian.dibuduo@unipv.it
     fascia_studio: 3–4 sett
 aggiornato_da: Luiza Leshi
-ultimo_aggiornamento: 2026-10-03
+esse3_codice: "501773"
+cfu_totali: 5
+ultimo_aggiornamento: 2026-10-04

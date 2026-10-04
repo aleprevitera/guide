@@ -148,6 +148,23 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - Se ESSE3 non risponde o la pagina cambia (controlli espliciti), lo script esce con errore senza
   toccare il JSON: il sito resta con i dati precedenti.
 
+## Programmi e CFU ufficiali (catalogo dei corsi)
+
+- `src/data/programmi-ufficiali.json`: dati scaricati dal catalogo dei corsi UniPV (Cineca), uno per
+  insegnamento (`codiceAttivita` = codice ESSE3, crediti, anno, programma, testi...).
+- `node scripts/programmi-ufficiali.mjs` (`--dry`, `--solo=titolo`) scrive nelle guide `esse3_codice`,
+  `cfu_totali` e il **Programma** ufficiale (con link alla scheda). Lo si lancia a mano quando arriva il
+  catalogo di un nuovo anno; poi i rappresentanti possono modificarlo da Decap.
+- Il testo ufficiale non viene mai riscritto: solo ripulito (paragrafi duplicati) e convertito in Markdown.
+  Esami a più moduli: divisione per intestazioni se ogni modulo ne ha una, altrimenti DeepSeek
+  (OpenRouter) assegna solo i **numeri di riga** ai moduli o a "comune" (cache in `.cache/`). Modulo
+  senza righe proprie: nota "il programma ufficiale non ha una parte dedicata" + link, non il programma
+  degli altri moduli.
+- Il vecchio "Programma" dei rappresentanti, se contiene consigli (non generico, non un semplice elenco
+  di argomenti), finisce in testa a "Consigli e Materiale" sotto **Sul programma**. Le voci "Programma"
+  di "Informazioni da verificare" vengono tolte; un anno di corso diverso dal catalogo **non** si
+  cambia ma si segnala lì (es. Farmacologia 2: V anno nel catalogo, IV nella guida).
+
 ## Decap CMS (rappresentanti)
 
 - **I rappresentanti hanno accesso solo a Decap** (non a Notion): **Decap è la fonte dei contenuti** delle
