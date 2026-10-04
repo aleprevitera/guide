@@ -12,6 +12,11 @@ export type IconaMondo = 'prato' | 'deserto' | 'mare' | 'ghiaccio' | 'vulcano' |
 
 export interface Mondo {
   icona: IconaMondo;
+  /**
+   * Scena animata (sprite sheet in src/assets/mondi/<slug>.png, generata da
+   * scripts/mondi/genera-scene.mjs): numero di fotogrammi e durata del giro.
+   */
+  scena?: { fotogrammi: number; durataMs: number };
   /** Colore pieno del mondo (caselle, banner, chip). */
   fondo: string;
   /** Testo sopra `fondo`. */
@@ -23,7 +28,7 @@ export interface Mondo {
 export const MONDI: Record<Anno, Mondo> = {
   'I Anno': { icona: 'prato', fondo: '#38b764', inchiostro: '#1a1c2c', chiaro: '#a7f070' },
   'II Anno': { icona: 'deserto', fondo: '#ffcd75', inchiostro: '#1a1c2c', chiaro: '#ffcd75' },
-  'III Anno': { icona: 'mare', fondo: '#3b5dc9', inchiostro: '#f4f4f4', chiaro: '#41a6f6' },
+  'III Anno': { scena: { fotogrammi: 6, durataMs: 1000 }, icona: 'mare', fondo: '#3b5dc9', inchiostro: '#f4f4f4', chiaro: '#41a6f6' },
   'IV Anno': { icona: 'ghiaccio', fondo: '#73eff7', inchiostro: '#1a1c2c', chiaro: '#73eff7' },
   'V Anno': { icona: 'vulcano', fondo: '#b13e53', inchiostro: '#f4f4f4', chiaro: '#ef7d57' },
   'VI Anno': { icona: 'castello', fondo: '#5d275d', inchiostro: '#f4f4f4', chiaro: '#d59ef0' },

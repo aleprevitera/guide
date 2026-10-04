@@ -2,8 +2,11 @@
 // Mappa dei mondi: sei caselle, una per anno di corso, ognuna con la palette
 // e il terreno del suo mondo (src/lib/mondi.ts). Gli anni senza guide sono
 // mondi ancora bloccati: spenti, con il lucchetto, non cliccabili.
+// I mondi con una scena (sprite sheet in src/assets/mondi/, generato da
+// scripts/mondi/genera-scene.mjs) la mostrano animata a scatti al posto di
+// icona e terreno; da bloccati ne mostrano la versione spenta, ferma.
 import { getCollection } from 'astro:content';
-import { ANNI_DI_CORSO, annoHref, numeroRomano, vtMondo } from '../../lib/anni';
+import { ANNI_DI_CORSO, annoHref, annoSlug, numeroRomano, vtMondo } from '../../lib/anni';
 import { MONDI, stileMondo } from '../../lib/mondi';
 import PixelIcon from '../common/PixelIcon.astro';
 
@@ -13,6 +16,11 @@ interface Props {
 }
 
 const { anteprima = false } = Astro.props;
+
+// Sprite sheet delle scene: <slug>.png (animato) e <slug>-spento.png.
+const fogli = import.meta.glob<string>('../../assets/mondi/*.png', { eager: true, query: '?url', import: 'default' });
+const foglio = (nome: string) => fogli[`../../assets/mondi/${nome}.png`];
+
 const guide = await getCollection('guide');
 const anni = ANNI_DI_CORSO.map((anno) => ({
   anno,
@@ -21,31 +29,46 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
   mondo: MONDI[anno],
   stile: `${stileMondo(anno)};view-transition-name:${vtMondo(anno)}`,
   n: anteprima ? 1 : guide.filter((g) => g.data.anno_di_corso === anno).length,
-}));
+})).map((a) => {
+  const scena = a.mondo.scena && foglio(annoSlug(a.anno))
+    ? { ...a.mondo.scena, attiva: foglio(annoSlug(a.anno)), spenta: foglio(`${annoSlug(a.anno)}-spento`) }
+    : null;
+  return { ...a, scena };
+});
 ---
 
 <ul class="mondi" data-rivela>
   {anni.map((a) => (
     <li>
       {a.n > 0 ? (
-        <a class="mondo" href={a.href} style={a.stile}>
+        <a class:list={['mondo', { 'mondo--scena': a.scena }]} href={a.href} style={a.stile}>
           <span class="mondo__cielo">
+            {a.scena && (
+              <span class="scena" aria-hidden="true">
+                <span class="scena__film" style={`--src:url(${a.scena.attiva});--fotogrammi:${a.scena.fotogrammi};--durata:${a.scena.durataMs}ms`}></span>
+              </span>
+            )}
             <span class="mondo__numero">{a.numero}</span>
             <span class="label">Anno<span class="visually-hidden">,</span></span>
             <span class="mondo__info label">{a.n} {a.n === 1 ? 'guida' : 'guide'}</span>
-            <PixelIcon name={a.mondo.icona} size={32} class="mondo__icona" />
+            {!a.scena && <PixelIcon name={a.mondo.icona} size={32} class="mondo__icona" />}
           </span>
-          <span class="terreno" data-terreno={a.mondo.icona} aria-hidden="true"></span>
+          {!a.scena && <span class="terreno" data-terreno={a.mondo.icona} aria-hidden="true"></span>}
         </a>
       ) : (
-        <span class="mondo mondo--bloccato">
+        <span class:list={['mondo', 'mondo--bloccato', { 'mondo--scena': a.scena }]}>
           <span class="mondo__cielo">
+            {a.scena && (
+              <span class="scena" aria-hidden="true">
+                <span class="scena__film" style={`--src:url(${a.scena.spenta});--fotogrammi:1;--durata:1s`}></span>
+              </span>
+            )}
             <span class="mondo__numero">{a.numero}</span>
             <span class="label">Anno<span class="visually-hidden">:</span></span>
             <span class="mondo__info label">In arrivo</span>
             <PixelIcon name="lock" size={24} class="mondo__icona" />
           </span>
-          <span class="terreno" data-terreno="spento" aria-hidden="true"></span>
+          {!a.scena && <span class="terreno" data-terreno="spento" aria-hidden="true"></span>}
         </span>
       )}
     </li>
@@ -54,6 +77,16 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
 
 <script>
   import { vibra } from '../../lib/fx';
+
+  // Le scene si animano solo mentre la casella è sullo schermo (batteria).
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) e.target.classList.toggle('is-in-vista', e.isIntersecting);
+    });
+    document.querySelectorAll('.mondo--scena').forEach((el) => io.observe(el));
+  } else {
+    document.querySelectorAll('.mondo--scena').forEach((el) => el.classList.add('is-in-vista'));
+  }
 
   // Tic brevissimo al tocco di un mondo (Android), come premere un blocco.
   for (const casella of document.querySelectorAll<HTMLAnchorElement>('a.mondo')) {
@@ -154,7 +187,58 @@ const anni = ANNI_DI_CORSO.map((anno) => ({
   .mondo--bloccato .mondo__cielo {
     background: var(--chip);
   }
+  /* --- Scene animate (sprite sheet + steps) --- */
+  /* Fotogramma nativo 112×60 mostrato a 2× (224×120): scala intera,
+     allineato a destra, dove sta il soggetto; a sinistra c'è il testo. */
+  .mondo--scena .mondo__cielo {
+    min-height: 120px;
+    overflow: hidden;
+    color: var(--text);
+  }
+  .scena {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .scena__film {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 224px;
+    height: 120px;
+    background-image: var(--src);
+    background-repeat: no-repeat;
+    background-size: calc(var(--fotogrammi) * 224px) 120px;
+    image-rendering: pixelated;
+    animation: scena-gira var(--durata) steps(var(--fotogrammi), end) infinite;
+    animation-play-state: paused;
+  }
+  .mondo.is-in-vista .scena__film {
+    animation-play-state: running;
+  }
+  @keyframes scena-gira {
+    from { background-position: 0 0; }
+    to { background-position: calc(var(--fotogrammi) * -224px) 0; }
+  }
+  /* Testi sopra la scena: contorno pixel a scalini (8 direzioni). */
+  .mondo--scena .mondo__numero,
+  .mondo--scena .label {
+    position: relative;
+    color: var(--text);
+    text-shadow:
+      -2px 0 0 var(--bg), 2px 0 0 var(--bg), 0 -2px 0 var(--bg), 0 2px 0 var(--bg),
+      -2px -2px 0 var(--bg), 2px -2px 0 var(--bg), -2px 2px 0 var(--bg), 2px 2px 0 var(--bg);
+  }
+  .mondo--bloccato.mondo--scena .mondo__numero,
+  .mondo--bloccato.mondo--scena .label {
+    color: var(--grigio, #94b0c2);
+  }
+  .mondo--bloccato.mondo--scena :global(.mondo__icona) {
+    z-index: 1;
+  }
   @media (forced-colors: active) {
     .mondo { outline: 2px solid CanvasText; }
+    .scena { display: none; }
   }
 </style>
