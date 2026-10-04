@@ -24,46 +24,52 @@ export { FASCE_STUDIO, type FasciaStudio } from '../lib/fasce';
 export const GUIDA_ID = /^g-[a-z0-9]{8}$/;
 export const MODULO_ID = /^m-[a-z0-9]{8}$/;
 
+// Decap salva i campi svuotati come "" (e a volte null) invece di toglierli:
+// per i campi facoltativi valgono come "non compilato", così un rappresentante
+// che cancella un link o un menu non blocca la build del sito.
+const vuotoComeAssente = (v: unknown) => (v === '' || v === null ? undefined : v);
+const opz = <T extends z.ZodTypeAny>(schema: T) => z.preprocess(vuotoComeAssente, schema.optional());
+
 const professoreSchema = z.object({
   nome: z.string().min(1).max(150),
-  email: z.string().email().optional(),
-  stile: z.string().max(500).optional(),
+  email: opz(z.string().email()),
+  stile: opz(z.string().max(500)),
 });
 
 // Un modulo = uno "scheda_esame"/"scheda_modulo" del progetto MkDocs: un esame a
 // modulo singolo ha semplicemente moduli.length === 1 con nome_modulo === title.
 const moduloSchema = z.object({
-  id: z.string().regex(MODULO_ID).optional(),
+  id: opz(z.string().regex(MODULO_ID)),
   nome_modulo: z.string().min(1).max(150),
-  cfu: z.number().int().min(1).max(60).optional(),
-  semestre: z.enum(SEMESTRI).optional(),
-  difficolta: z.number().int().min(1).max(5).optional(),
-  exam_type: z.enum(TIPI_ESAME).optional(),
+  cfu: opz(z.number().int().min(1).max(60)),
+  semestre: opz(z.enum(SEMESTRI)),
+  difficolta: opz(z.number().int().min(1).max(5)),
+  exam_type: opz(z.enum(TIPI_ESAME)),
 
-  link_sbobine: z.string().url().optional(),
-  link_whatsapp: z.string().url().optional(),
-  google_sheet_url: z.string().url().optional(),
-  study_time: z.string().max(100).optional(),
+  link_sbobine: opz(z.string().url()),
+  link_whatsapp: opz(z.string().url()),
+  google_sheet_url: opz(z.string().url()),
+  study_time: opz(z.string().max(100)),
 
   // Scheda esame (tutti facoltativi; in pagina compaiono solo se presenti).
-  preappello: z.enum(['Sì', 'No']).optional(),
-  frequenza: z.enum(FREQUENZE).optional(),
-  durata_orale_min: z.number().int().min(1).max(240).optional(),
-  fascia_studio: z.enum(FASCE_STUDIO).optional(),
+  preappello: opz(z.enum(['Sì', 'No'])),
+  frequenza: opz(z.enum(FREQUENZE)),
+  durata_orale_min: opz(z.number().int().min(1).max(240)),
+  fascia_studio: opz(z.enum(FASCE_STUDIO)),
 
   // Sezioni narrative: testo Markdown ristretto (solo bold/italic/liste/link,
   // nessun heading/HTML), sanificato in src/lib/markdown.ts prima del render.
-  exam_details: z.string().optional(),
+  exam_details: opz(z.string()),
   program: z.string().min(1),
-  material_tips: z.string().optional(),
-  body: z.string().optional(),
+  material_tips: opz(z.string()),
+  body: opz(z.string()),
 
-  professors: z.array(professoreSchema).default([]),
+  professors: z.preprocess(vuotoComeAssente, z.array(professoreSchema).default([])),
 });
 
 const infoDaVerificareSchema = z.object({
   campo: z.string().min(1).max(200),
-  nota: z.string().optional(),
+  nota: opz(z.string()),
 });
 
 const guideCollection = defineCollection({
@@ -72,25 +78,25 @@ const guideCollection = defineCollection({
   // questi campi attraverso i componenti fissi del layout.
   type: 'data',
   schema: z.object({
-    id: z.string().regex(GUIDA_ID).optional(),
+    id: opz(z.string().regex(GUIDA_ID)),
     title: z.string().min(3).max(150),
-    sottotitolo: z.string().max(200).optional(),
+    sottotitolo: opz(z.string().max(200)),
     anno_di_corso: z.enum(ANNI_DI_CORSO),
-    cfu_totali: z.number().int().min(1).max(120).optional(),
+    cfu_totali: opz(z.number().int().min(1).max(120)),
 
     // Rilevanti solo per un esame integrato (moduli.length > 1): link e
     // descrizione a livello di esame aggregato, equivalenti allo
     // "scheda_integrato"/index.md del progetto esistente.
-    link_sbobine_generale: z.string().url().optional(),
-    link_whatsapp_generale: z.string().url().optional(),
-    descrizione_generale: z.string().optional(),
+    link_sbobine_generale: opz(z.string().url()),
+    link_whatsapp_generale: opz(z.string().url()),
+    descrizione_generale: opz(z.string()),
 
     moduli: z.array(moduloSchema).min(1),
 
-    info_da_verificare: z.array(infoDaVerificareSchema).default([]),
+    info_da_verificare: z.preprocess(vuotoComeAssente, z.array(infoDaVerificareSchema).default([])),
 
-    ultimo_aggiornamento: z.date(),
-    aggiornato_da: z.string().max(100).optional(),
+    ultimo_aggiornamento: z.coerce.date(),
+    aggiornato_da: opz(z.string().max(100)),
   }),
 });
 

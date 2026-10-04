@@ -129,6 +129,27 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   `https://guide-pratiche.netlify.app/**`, `https://*--guide-pratiche.netlify.app/**`,
   `http://localhost:4321/**`, hook "Before User Created" → `public.hook_solo_account_ateneo`.
 
+## Decap CMS (rappresentanti)
+
+- **Notion è la fonte unica dei testi.** In Decap si aggiornano solo link, date e dati della scheda
+  (CFU, semestre, frequenza, preappello, durata orale, email dei docenti); i campi di testo hanno un
+  avviso "correggilo in Notion". L'import da Notion **conserva** questi campi se la scheda non li indica
+  (`CAMPI_DECAP_GUIDA` / `CAMPI_DECAP_MODULO` in `scripts/importa-notion.mjs`) e sovrascrive i testi.
+- Pubblicazione diretta (`publish_mode: simple`): ogni salvataggio va su `main`, quindi in produzione.
+- Lo schema accetta i campi facoltativi vuoti (`""`/`null` → non compilato, helper `opz()` in
+  `src/content/config.ts`): Decap salva così i campi svuotati e altrimenti la build fallirebbe. La data
+  è `z.coerce.date()` (YAML o stringa del selettore).
+- Campi nello schema ma non più mostrati (`difficolta`, `study_time`, `fascia_studio`): in Decap sono
+  `widget: hidden`, quindi invisibili ma conservati nei file. Anteprima di Decap disattivata.
+- Ogni limite dello schema (lunghezze, formati) va riportato anche come `pattern` in
+  `public/admin/config.yml`, così l'errore compare nell'editor invece di rompere la build.
+- Decap è bloccato su una versione precisa con SRI (`public/admin/index.html`); per aggiornarlo:
+  nuova versione + nuovo hash.
+- Backend `git-gateway` + Netlify Identity: **Git Gateway è deprecato da Netlify** (funziona, ma senza
+  correzioni). Per ora resta; alternative quando servirà: DecapBridge o backend GitHub.
+- Prova in locale: `npm run cms:local` + `npm run dev`, poi `http://localhost:4321/admin/index.html`
+  (in dev `/admin/` non serve l'index; in produzione sì, via redirect Netlify).
+
 ## Flusso di lavoro
 
 - Branch + PR verso `main`; nessun commit diretto su `main`. Il merge su `main` = produzione.

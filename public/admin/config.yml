@@ -16,6 +16,9 @@ collections:
   - name: "guida"
     label: "Guide per Esame"
     label_singular: "Guida"
+    # Notion è la fonte dei contenuti (vedi CLAUDE.md): qui si gestiscono solo
+    # link, date e dati della scheda; i testi si correggono in Notion.
+    description: "I testi delle guide arrivano da Notion: correggili lì (qui verrebbero sovrascritti al prossimo import). Qui puoi aggiornare link, date e dati della scheda esame (CFU, semestre, frequenza, preappello, durata orale). Non usare \"Duplica\": la copia avrebbe gli stessi ID e il sito non si aggiornerebbe."
     folder: "src/content/guide"
     create: true
     delete: false
@@ -23,6 +26,10 @@ collections:
     identifier_field: title
     format: "yaml"
     extension: "yaml"
+    # L'anteprima di Decap non ha lo stile del sito e mostrerebbe dati che il
+    # sito non pubblica: meglio vedere le modifiche sul sito dopo il salvataggio.
+    editor:
+      preview: false
 
     # Raggruppa le entry per anno di corso nella lista, come le sei sezioni
     # per anno del progetto MkDocs esistente — qui però è un unico
@@ -61,6 +68,7 @@ collections:
         name: "descrizione_generale"
         widget: "markdown"
         required: false
+        hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
         minimal: true
         modes: ["rich_text"]
         buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
@@ -75,7 +83,7 @@ collections:
         summary: "{{nome_modulo}}"
         hint: "Per un esame a modulo unico, aggiungi un solo modulo con nome uguale al Nome Esame."
         fields:
-          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true }
+          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true, pattern: ['^.{1,150}$', "Massimo 150 caratteri"] }
           - { label: "ID modulo (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "m", required: false }
           - { label: "CFU", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
 
@@ -85,11 +93,9 @@ collections:
             required: false
             options: ["I", "II"]
 
-          - label: "Difficoltà (1-5)"
-            name: "difficolta"
-            widget: "select"
-            required: false
-            options: [1, 2, 3, 4, 5]
+          # Non più mostrata nel sito: la difficoltà la votano gli studenti.
+          # Nascosta ma conservata nei file.
+          - { label: "Difficoltà (non usata)", name: "difficolta", widget: "hidden", required: false }
 
           - label: "Tipologia Esame"
             name: "exam_type"
@@ -100,14 +106,10 @@ collections:
           - { label: "Link Sbobine (Drive)", name: "link_sbobine", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Incolla l'URL completo (es. https://drive.google...)" }
           - { label: "Link Gruppo WhatsApp", name: "link_whatsapp", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link di invito al gruppo" }
           - { label: "Link Google Sheet Domande", name: "google_sheet_url", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link pubblico al foglio con le domande passate" }
-          - { label: "Tempo di Studio", name: "study_time", widget: "string", required: false, hint: "Es. 2-3 settimane" }
-
-          - label: "Fascia tempo di studio (stima)"
-            name: "fascia_studio"
-            widget: "select"
-            required: false
-            options: ["< 1 sett", "1–2 sett", "3–4 sett", "5–8 sett", "> 8 sett"]
-            hint: "La stessa stima di \"Tempo di Studio\", ricondotta a una fascia."
+          # Non più mostrati nel sito: il tempo di studio lo votano gli
+          # studenti. Li compila l'import da Notion; nascosti ma conservati.
+          - { label: "Tempo di Studio (non usato)", name: "study_time", widget: "hidden", required: false }
+          - { label: "Fascia tempo di studio (non usata)", name: "fascia_studio", widget: "hidden", required: false }
 
           - label: "Preappello"
             name: "preappello"
@@ -133,7 +135,7 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
             editor_components: []
             image: false
-            hint: "Descrivi qui i dettagli tecnici (es. 30 domande in 45 minuti)"
+            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
           - label: "Programma"
             name: "program"
@@ -144,6 +146,7 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
+            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
           - label: "Consigli e Materiale"
             name: "material_tips"
@@ -154,6 +157,7 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
+            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
           - label: "Docenti"
             name: "professors"
@@ -161,9 +165,9 @@ collections:
             required: false
             summary: "{{nome}}"
             fields:
-              - { label: "Nome Docente", name: "nome", widget: "string", required: true }
+              - { label: "Nome Docente", name: "nome", widget: "string", required: true, pattern: ['^.{1,150}$', "Massimo 150 caratteri"] }
               - { label: "Email", name: "email", widget: "string", required: false, pattern: ['^[^@\s]+@[^@\s]+\.[^@\s]+$', "Email non valida"] }
-              - { label: "Stile/Domande", name: "stile", widget: "text", required: false }
+              - { label: "Stile/Domande", name: "stile", widget: "text", required: false, pattern: ['^[\\s\\S]{0,500}$', "Massimo 500 caratteri"] }
 
           - label: "Note Extra"
             name: "body"
@@ -174,6 +178,7 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
+            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
       - label: "Informazioni da Verificare"
         name: "info_da_verificare"
@@ -181,7 +186,7 @@ collections:
         required: false
         summary: "{{campo}}"
         fields:
-          - { label: "Cosa manca / cosa verificare", name: "campo", widget: "string", required: true }
+          - { label: "Cosa manca / cosa verificare", name: "campo", widget: "string", required: true, pattern: ['^.{1,200}$', "Massimo 200 caratteri"] }
           - label: "Dettagli"
             name: "nota"
             widget: "markdown"
@@ -192,5 +197,7 @@ collections:
             editor_components: []
             image: false
 
-      - { label: "Ultimo Aggiornamento", name: "ultimo_aggiornamento", widget: "datetime", required: true, format: "YYYY-MM-DD" }
-      - { label: "Aggiornato da (nome, facoltativo)", name: "aggiornato_da", widget: "string", required: false }
+      # Solo data (niente ora), già compilata con oggi sulle guide nuove:
+      # ricordati di aggiornarla quando modifichi una guida.
+      - { label: "Ultimo Aggiornamento", name: "ultimo_aggiornamento", widget: "datetime", required: true, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, default: "{{now}}", hint: "Aggiornala quando modifichi la guida: compare nel footer." }
+      - { label: "Autore/i (pubblicato nel footer della guida)", name: "aggiornato_da", widget: "string", required: false, pattern: ['^.{0,100}$', "Massimo 100 caratteri"], hint: "Nome e cognome di chi ha scritto la guida: è visibile a tutti." }

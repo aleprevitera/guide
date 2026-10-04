@@ -441,26 +441,46 @@ function controllaTempo(guida, sorgente) {
   return avvisi;
 }
 
+// Campi gestiti in Decap (Notion non li riporta): se la scheda non li indica,
+// si conserva il valore già presente nella guida, così l'import non cancella
+// link, CFU e dati della scheda inseriti dai rappresentanti.
+const CAMPI_DECAP_GUIDA = ['sottotitolo', 'cfu_totali', 'link_sbobine_generale', 'link_whatsapp_generale'];
+const CAMPI_DECAP_MODULO = ['cfu', 'semestre', 'preappello', 'frequenza', 'durata_orale_min', 'link_sbobine', 'link_whatsapp', 'google_sheet_url'];
+
 function componiYaml(scheda, guida, esistente) {
   // Esame a modulo unico: il modulo si chiama come l'esame (convenzione del sito).
   if (guida.moduli.length === 1) guida.moduli[0].nome_modulo = guida.title;
   const idModuliEsistenti = new Map((esistente?.dati.moduli ?? []).map((m) => [chiaveTitolo(m.nome_modulo), m.id]));
+  const moduliEsistenti = new Map((esistente?.dati.moduli ?? []).map((m) => [chiaveTitolo(m.nome_modulo), m]));
+  const conserva = (nuovo, vecchio, campi) => {
+    for (const k of campi) if ((nuovo[k] == null || nuovo[k] === '') && vecchio?.[k] != null && vecchio[k] !== '') nuovo[k] = vecchio[k];
+    return nuovo;
+  };
   const moduli = guida.moduli.map((m) => {
     const { nome_modulo, giorni_min, giorni_max, ...resto } = m;
+    const vecchio = moduliEsistenti.get(chiaveTitolo(nome_modulo));
+    conserva(resto, vecchio, CAMPI_DECAP_MODULO);
+    // Email dei docenti inserite in Decap, abbinate per nome.
+    const email = new Map((vecchio?.professors ?? []).filter((p) => p.email).map((p) => [chiaveTitolo(p.nome), p.email]));
+    for (const p of resto.professors ?? []) if (!p.email && email.has(chiaveTitolo(p.nome))) p.email = email.get(chiaveTitolo(p.nome));
     return pulisci(conMdNormalizzato({
       nome_modulo,
       id: idModuliEsistenti.get(chiaveTitolo(nome_modulo)) ?? idCasuale('m'),
       ...resto,
       // Fascia dell'istogramma ("RAPPR."): calcolata dal codice, non dal modello.
       fascia_studio: giorni_min != null ? fasciaDaGiorni(giorni_min, giorni_max ?? giorni_min) : null,
-      professors: m.professors.map(pulisci),
+      professors: resto.professors.map(pulisci),
     }));
   });
+  conserva(guida, esistente?.dati, CAMPI_DECAP_GUIDA);
   const dati = pulisci({
     id: esistente?.dati.id ?? idCasuale('g'),
     title: guida.title,
+    sottotitolo: guida.sottotitolo,
     anno_di_corso: scheda.anno,
     cfu_totali: guida.cfu_totali,
+    link_sbobine_generale: guida.link_sbobine_generale,
+    link_whatsapp_generale: guida.link_whatsapp_generale,
     descrizione_generale: moduli.length > 1 ? normalizzaMd(guida.descrizione_generale) : null,
     moduli,
     info_da_verificare: guida.info_da_verificare.map(pulisci),

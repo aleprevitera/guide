@@ -7,7 +7,10 @@
   </head>
   <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <!-- Versione bloccata + integrità (SRI): un aggiornamento del CDN non può
+         cambiare l'editor da solo. Per aggiornare: nuova versione e nuovo hash
+         (openssl dgst -sha384 -binary decap-cms.js | openssl base64 -A). -->
+    <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js" integrity="sha384-A/Gdn928CNLufmnGWGs9RM4Q9o8bSNLeJERqBFrBjwzL7FRpoLT3MPF8Tl0+Wd2p" crossorigin="anonymous"></script>
     <script>
       // Gestisce i redirect di invito/recupero password che Netlify Identity
       // aggiunge come hash all'URL (#invite_token=..., #recovery_token=...).
