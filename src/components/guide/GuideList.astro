@@ -94,7 +94,7 @@ const guide = [...Astro.props.entries]
   // Statistiche dai feedback degli studenti: con accesso, il verdetto del
   // modulo "peggiore" della guida (più tempo, più difficile); senza, il
   // lucchetto già nel markup. Una chiamata per tipo per tutte le card.
-  // Prossimo appello: salta le date passate dall'ultimo aggiornamento mensile.
+  // Prossimo appello: salta le date passate dall'ultimo aggiornamento settimanale.
   const MESI = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'];
   const oggi = new Date().toISOString().slice(0, 10);
   for (const c of document.querySelectorAll<HTMLElement>('[data-prossimo-appello]')) {

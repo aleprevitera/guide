@@ -7,7 +7,7 @@
 // src/content/guide/, raccoglie gli appelli dei prossimi 12 mesi, assegnandoli
 // ai moduli. Scrive src/data/appelli.json, letto dal sito in fase di build.
 //
-// Frequenza: UNA VOLTA AL MESE (GitHub Action .github/workflows/appelli.yml),
+// Frequenza: UNA VOLTA ALLA SETTIMANA (GitHub Action .github/workflows/appelli.yml),
 // come farebbe una persona a mano: poche decine di richieste, lente. Non va
 // lanciato a ogni build: ESSE3 chiede di non essere visitato da programmi
 // automatici (robots.txt), quindi lo usiamo il meno possibile.
@@ -45,7 +45,7 @@ const OUT_JSON = join(RADICE, 'src/data/appelli.json');
 
 const BASE = 'https://studentionline.unipv.it/ListaAppelliOfferta.do';
 const SITO = 'https://studentionline.unipv.it/';
-const USER_AGENT = 'guide-universitarie/1.0 (guide dei rappresentanti degli studenti di Medicina UniPV; aggiornamento mensile)';
+const USER_AGENT = 'guide-universitarie/1.0 (guide dei rappresentanti degli studenti di Medicina UniPV; aggiornamento settimanale)';
 
 // Medicina e Chirurgia — Università di Pavia (configurazione del form ESSE3).
 const DIPARTIMENTO = { id: '10004', nome: 'DIPARTIMENTO DI MEDICINA INTERNA E TERAPIA MEDICA' };

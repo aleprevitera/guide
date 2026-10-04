@@ -136,8 +136,8 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   link; **niente** commissione né iscritti). Il sito lo legge in build (`src/lib/appelli.ts`,
   `ProssimiAppelli.astro`, chip sulle card); date passate, conto alla rovescia e stato delle iscrizioni
   si calcolano nel browser.
-- **Una volta al mese**, non di più: `robots.txt` di ESSE3 chiede di non essere visitato da programmi
-  (Disallow: /). GitHub Action `.github/workflows/appelli.yml` (il 1° del mese + avvio manuale) che
+- **Una volta alla settimana** (lunedì), non di più: `robots.txt` di ESSE3 chiede di non essere visitato da programmi
+  (Disallow: /). GitHub Action `.github/workflows/appelli.yml` (ogni lunedì + avvio manuale) che
   committa il JSON su `main` (unica eccezione automatica alla regola "niente commit su main"). Mai
   lanciarlo nella build di Netlify (ogni salvataggio Decap = una build). In locale: `npm run appelli`,
   oppure `--riusa` per rielaborare i dati salvati senza rete. Le API REST ufficiali (e3rest) richiedono

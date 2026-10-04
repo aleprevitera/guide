@@ -1,6 +1,6 @@
 import dati from '../data/appelli.json';
 
-// Appelli d'esame da ESSE3, scaricati una volta al mese da scripts/appelli.mjs
+// Appelli d'esame da ESSE3, scaricati una volta alla settimana da scripts/appelli.mjs
 // (src/data/appelli.json). Le date passate e il conto alla rovescia si
 // calcolano anche nel browser, perché i dati restano fermi fra un
 // aggiornamento e l'altro.
