@@ -138,6 +138,11 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 
 ## Aperto
 
+- **Dati simulati da togliere prima del merge in produzione**: 23 utenti fittizi
+  (`simulato-NN@universitadipavia.it`, `raw_app_meta_data.simulato = true`) con voti su Psichiatria
+  (`m-0v8s8vwa`), inseriti il 2026-10-04 per vedere l'output. Si rimuovono con
+  `delete from auth.users where raw_app_meta_data ->> 'simulato' = 'true';` (i voti vanno via in cascata).
+
 - Testo della lettera (firme già inserite: Francesco Ruspino, Alessandro Gavino Previtera).
 - Configurazione Google + hook in dashboard Supabase, poi prova del voto reale sul deploy preview.
 - Merge della PR #1 (`redesign-pixel`).
