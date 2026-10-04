@@ -280,6 +280,13 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
 </script>
 
 <style>
+  /* Fondo antracite e bordo nel colore del mondo: il "Parere degli studenti"
+     si distingue dalla scheda esame (blu, bordo bianco). Contrasti sul fondo
+     #333c57: testo 9.9, didascalie 4.8, accento 7.4, verde 8.0. */
+  .hist {
+    background: var(--chip);
+    --px-c: var(--mondo-chiaro, var(--text));
+  }
   .hist__titolo {
     color: var(--accent);
     margin: 0;
