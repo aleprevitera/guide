@@ -16,9 +16,9 @@ collections:
   - name: "guida"
     label: "Guide per Esame"
     label_singular: "Guida"
-    # Notion è la fonte dei contenuti (vedi CLAUDE.md): qui si gestiscono solo
-    # link, date e dati della scheda; i testi si correggono in Notion.
-    description: "I testi delle guide arrivano da Notion: correggili lì (qui verrebbero sovrascritti al prossimo import). Qui puoi aggiornare link, date e dati della scheda esame (CFU, semestre, frequenza, preappello, durata orale). Non usare \"Duplica\": la copia avrebbe gli stessi ID e il sito non si aggiornerebbe."
+    # Decap è la fonte dei contenuti delle guide pubblicate: i rappresentanti
+    # lavorano solo qui (vedi CLAUDE.md, "Decap CMS").
+    description: "Qui crei e modifichi le guide: ogni salvataggio va subito online. Ricordati di aggiornare \"Ultimo aggiornamento\". Non usare \"Duplica\": la copia avrebbe gli stessi ID e il sito non si aggiornerebbe; per un esame nuovo usa \"+ Guida\"."
     folder: "src/content/guide"
     create: true
     delete: false
@@ -68,7 +68,6 @@ collections:
         name: "descrizione_generale"
         widget: "markdown"
         required: false
-        hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
         minimal: true
         modes: ["rich_text"]
         buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
@@ -135,7 +134,7 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list"]
             editor_components: []
             image: false
-            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
+            hint: "Descrivi qui i dettagli tecnici (es. 30 domande in 45 minuti)"
 
           - label: "Programma"
             name: "program"
@@ -146,7 +145,6 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
-            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
           - label: "Consigli e Materiale"
             name: "material_tips"
@@ -157,7 +155,6 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
-            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
           - label: "Docenti"
             name: "professors"
@@ -178,7 +175,6 @@ collections:
             buttons: ["bold", "italic", "bulleted-list", "numbered-list", "link"]
             editor_components: []
             image: false
-            hint: "Arriva da Notion: correggilo in Notion, qui verrebbe sovrascritto al prossimo import."
 
       - label: "Informazioni da Verificare"
         name: "info_da_verificare"

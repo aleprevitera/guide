@@ -2,11 +2,17 @@
 // Importa le schede esportate da Notion (cartella NOTION/) come guide YAML in
 // src/content/guide/, usando DeepSeek V4 via OpenRouter come estrattore.
 //
-//   node scripts/importa-notion.mjs            # importa tutte le schede pronte
+// I rappresentanti lavorano solo in Decap: una volta nel sito, una guida si
+// modifica lì. Per questo l'import AGGIUNGE solo le guide nuove e salta quelle
+// già presenti; per riscriverne una da Notion serve --aggiorna (che comunque
+// conserva link, CFU e dati della scheda inseriti in Decap).
+//
+//   node scripts/importa-notion.mjs            # importa le schede pronte non ancora nel sito
 //   node scripts/importa-notion.mjs --dry      # niente scritture nel sito: YAML in .cache/
 //   node scripts/importa-notion.mjs --solo "Pediatria"
 //   node scripts/importa-notion.mjs --rifai    # ignora la cache delle risposte
 //   node scripts/importa-notion.mjs --elenco   # mostra solo cosa verrebbe importato
+//   node scripts/importa-notion.mjs --aggiorna --solo "Titolo"  # riscrive da Notion una guida esistente
 //
 // Chiave: OPENROUTER_API_KEY nell'ambiente o in .env (mai nel repo).
 //
@@ -40,6 +46,7 @@ const DRY = args.includes('--dry');
 const RIFAI = args.includes('--rifai');
 const SOLO = args.includes('--solo') ? args[args.indexOf('--solo') + 1] : null;
 const ELENCO = args.includes('--elenco');
+const AGGIORNA = args.includes('--aggiorna');
 
 // --- Vincoli condivisi con src/content/config.ts e src/lib/fasce.ts --------
 
@@ -146,7 +153,7 @@ async function leggiEsistenti() {
   for (const [titolo, r] of Object.entries(riservati)) {
     if (titolo.startsWith('_')) continue;
     const moduli = Object.entries(r.moduli).map(([nome_modulo, id]) => ({ nome_modulo, id }));
-    mappa.set(chiaveTitolo(titolo), { file: r.file, dati: { id: r.id, moduli } });
+    mappa.set(chiaveTitolo(titolo), { file: r.file, dati: { id: r.id, moduli }, riservato: true });
   }
   for (const f of await fs.readdir(DIR_GUIDE)) {
     if (!f.endsWith('.yaml')) continue;
@@ -497,23 +504,32 @@ const tutte = await leggiIndice();
 const pronte = tutte.filter((s) => s.stato === 'Fatto' && s.corpo.length >= MIN_CARATTERI && (!SOLO || s.nome === SOLO));
 const scartate = tutte.filter((s) => !pronte.includes(s) && (!SOLO || s.nome === SOLO));
 const esistenti = await leggiEsistenti();
+// Guide già pubblicate (non solo id riservati): si modificano in Decap.
+const giaNelSito = (s) => {
+  const e = esistenti.get(chiaveTitolo(s.nome));
+  return !!e && !e.riservato;
+};
+const daSaltare = AGGIORNA ? [] : pronte.filter(giaNelSito);
+const daImportare = pronte.filter((s) => !daSaltare.includes(s));
 
 if (ELENCO) {
-  for (const s of pronte) {
+  for (const s of daImportare) {
     const e = esistenti.get(chiaveTitolo(s.nome));
-    console.log(`IMPORTA  ${s.anno.padEnd(8)} ${s.nome} (${s.corpo.length} car., ${s.autore ?? 'senza autore'})${e ? ` → sostituisce ${e.file}` : ''}`);
+    const nota = e ? (e.riservato ? ` → crea ${e.file} con gli id riservati` : ` → RISCRIVE ${e.file} (--aggiorna)`) : '';
+    console.log(`IMPORTA  ${s.anno.padEnd(8)} ${s.nome} (${s.corpo.length} car., ${s.autore ?? 'senza autore'})${nota}`);
   }
+  for (const s of daSaltare) console.log(`già nel sito ${s.nome} (si modifica in Decap; --aggiorna per riscriverla)`);
   for (const s of scartate) console.log(`salta    ${(s.anno ?? '').padEnd(8)} ${s.nome} (${s.stato}, ${s.corpo.length} car.)`);
   process.exit(0);
 }
 
 const chiave = await chiaveApi();
 
-log(`Schede: ${tutte.length} in tabella, ${pronte.length} da importare, ${scartate.length} saltate (vuote o non pronte).`);
+log(`Schede: ${tutte.length} in tabella, ${daImportare.length} da importare, ${daSaltare.length} già nel sito, ${scartate.length} vuote o non pronte.`);
 log(`Modello: ${MODELLO} · concorrenza ${CONCORRENZA}${DRY ? ' · DRY RUN' : ''}\n`);
 
 const inizio = Date.now();
-const esiti = await limitaConcorrenza(pronte, CONCORRENZA, async (scheda) => {
+const esiti = await limitaConcorrenza(daImportare, CONCORRENZA, async (scheda) => {
   const t0 = Date.now();
   try {
     const r = await estrai(chiave, scheda);
@@ -525,7 +541,7 @@ const esiti = await limitaConcorrenza(pronte, CONCORRENZA, async (scheda) => {
     await fs.mkdir(path.dirname(dest), { recursive: true });
     await fs.writeFile(dest, yaml);
     const avvisi = [...avvisiTempo, ...sospetti(r.guida, scheda.corpo)];
-    log(`✓ ${scheda.nome} → ${nomeFile}${esistente ? ' (sostituisce il segnaposto)' : ''} · ${r.guida.moduli.length} moduli · ${r.daCache ? 'cache' : `${r.tentativi} tent., ${((Date.now() - t0) / 1000).toFixed(1)}s`}${avvisi.length ? ` · ⚠ ${avvisi.length} avvisi` : ''}`);
+    log(`✓ ${scheda.nome} → ${nomeFile}${esistente ? (esistente.riservato ? ' (id riservati)' : ' (riscritta, --aggiorna)') : ''} · ${r.guida.moduli.length} moduli · ${r.daCache ? 'cache' : `${r.tentativi} tent., ${((Date.now() - t0) / 1000).toFixed(1)}s`}${avvisi.length ? ` · ⚠ ${avvisi.length} avvisi` : ''}`);
     return { scheda: scheda.nome, file: nomeFile, ok: true, sostituisce: !!esistente, moduli: r.guida.moduli.map((m) => m.nome_modulo), daVerificare: r.guida.info_da_verificare.length, avvisi, costo: r.daCache ? 0 : r.costo, token: r.daCache ? 0 : r.token, modello: r.modello };
   } catch (e) {
     log(`✗ ${scheda.nome}: ${e.message}`);

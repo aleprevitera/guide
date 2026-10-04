@@ -45,13 +45,13 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 ## Regole sui contenuti
 
 - Ogni nuovo campo dello schema è **opzionale**: gli YAML esistenti devono continuare a validare.
-- **Fonte dei contenuti: le schede Notion** (export in `NOTION/`, non versionato), importate con
-  `node scripts/importa-notion.mjs` (`--elenco`, `--dry`, `--solo "Titolo"`, `--rifai`; chiave
+- **Contenuti iniziali: le schede Notion** (export in `NOTION/`, non versionato), importate con
+  `node scripts/importa-notion.mjs` (`--elenco`, `--dry`, `--solo "Titolo"`, `--rifai`, `--aggiorna`; chiave
   `OPENROUTER_API_KEY` in `.env`). Modello `deepseek/deepseek-v4.1-flash` via OpenRouter con schema
   JSON vincolato; anno, autore (`aggiornato_da`), `id` e date li decide il codice; validazione zod +
   controllo su numeri/link non presenti nella scheda; cache in `.cache/` (rilanci senza costi).
-  Si importano solo le schede "Fatto" con contenuto; le guide esistenti con lo stesso titolo vengono
-  sostituite **mantenendo `id` e nome file**. I segnaposto del vecchio sito sono stati tolti; gli `id`
+  Si importano solo le schede "Fatto" con contenuto e non ancora nel sito (con `--aggiorna` una guida
+  esistente viene riscritta **mantenendo `id` e nome file**). Dopo l'import, le guide si modificano in Decap. I segnaposto del vecchio sito sono stati tolti; gli `id`
   di guide tolte ma con voti su Supabase stanno in `scripts/id-riservati.json` e l'import li riusa
   quando arriva la scheda con quel titolo. Non cancellare guide con voti senza riservarne gli `id`.
 - Tempo di studio e difficoltà **mostrati sono solo quelli votati dagli studenti** (feedback, extra):
@@ -131,10 +131,13 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 
 ## Decap CMS (rappresentanti)
 
-- **Notion è la fonte unica dei testi.** In Decap si aggiornano solo link, date e dati della scheda
-  (CFU, semestre, frequenza, preappello, durata orale, email dei docenti); i campi di testo hanno un
-  avviso "correggilo in Notion". L'import da Notion **conserva** questi campi se la scheda non li indica
-  (`CAMPI_DECAP_GUIDA` / `CAMPI_DECAP_MODULO` in `scripts/importa-notion.mjs`) e sovrascrive i testi.
+- **I rappresentanti hanno accesso solo a Decap** (non a Notion): **Decap è la fonte dei contenuti** delle
+  guide pubblicate, testi compresi, e lì si creano anche le guide nuove. Notion serve solo all'import
+  iniziale delle schede (fatto da chi sviluppa).
+- L'import da Notion **aggiunge solo le guide nuove** e salta quelle già nel sito, per non sovrascrivere il
+  lavoro fatto in Decap. `--aggiorna` riscrive da Notion una guida esistente (solo su richiesta esplicita),
+  conservando comunque link, CFU, dati della scheda ed email dei docenti inseriti in Decap
+  (`CAMPI_DECAP_GUIDA` / `CAMPI_DECAP_MODULO` in `scripts/importa-notion.mjs`).
 - Pubblicazione diretta (`publish_mode: simple`): ogni salvataggio va su `main`, quindi in produzione.
 - Lo schema accetta i campi facoltativi vuoti (`""`/`null` → non compilato, helper `opz()` in
   `src/content/config.ts`): Decap salva così i campi svuotati e altrimenti la build fallirebbe. La data
