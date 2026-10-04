@@ -5,6 +5,8 @@ import GuideHeader from '../components/guide/GuideHeader.astro';
 import ModuliTabs from '../components/guide/ModuliTabs.astro';
 import ModuloSection from '../components/guide/ModuloSection.astro';
 import InfoDaVerificareCallout from '../components/guide/InfoDaVerificareCallout.astro';
+import ProssimiAppelli from '../components/guide/ProssimiAppelli.astro';
+import { appelliGuida, futuri } from '../lib/appelli';
 import { moduloAnchor } from '../lib/ids';
 import { MONDI, stileMondo } from '../lib/mondi';
 
@@ -15,6 +17,10 @@ interface Props {
 const { data } = Astro.props;
 const isIntegrato = data.moduli.length > 1;
 const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(modulo.id, i) }));
+// Appelli da ESSE3: quelli dell'intero esame (verbalizzazioni, prove uniche)
+// sopra le schede dei moduli; quelli di ogni modulo dentro il modulo.
+const appelli = appelliGuida(data.id);
+const appelliEsame = isIntegrato ? (appelli?.generale ?? []) : [];
 ---
 
 <BaseLayout title={data.title} description={data.sottotitolo} aggiornamento={data.ultimo_aggiornamento} autore={data.aggiornato_da}>
@@ -24,10 +30,17 @@ const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(mo
     <span class="terreno guide__terreno" data-terreno={MONDI[data.anno_di_corso].icona} aria-hidden="true"></span>
     <GuideHeader data={data} />
 
+    {futuri(appelliEsame).length > 0 && <ProssimiAppelli turni={appelliEsame} titolo="Appelli dell'intero esame" />}
+
     {isIntegrato && <ModuliTabs moduli={moduli.map((m) => ({ nome: m.modulo.nome_modulo, anchor: m.anchor }))} />}
 
     {moduli.map(({ modulo, anchor }) => (
-      <ModuloSection modulo={modulo} anchor={anchor} mostraNome={isIntegrato} />
+      <ModuloSection
+        modulo={modulo}
+        anchor={anchor}
+        mostraNome={isIntegrato}
+        appelli={appelli ? [...(appelli.moduli[modulo.id ?? ''] ?? []), ...(isIntegrato ? [] : appelli.generale)] : undefined}
+      />
     ))}
 
     <InfoDaVerificareCallout items={data.info_da_verificare} />

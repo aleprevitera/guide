@@ -4,6 +4,8 @@ import SafeMarkdown from '../common/SafeMarkdown.astro';
 import SchedaEsame from './SchedaEsame.astro';
 import StudyTimeHistogram from '../feedback/StudyTimeHistogram.astro';
 import DifficoltaFeedback from '../feedback/DifficoltaFeedback.astro';
+import ProssimiAppelli from './ProssimiAppelli.astro';
+import { futuri, type Turno } from '../../lib/appelli';
 
 type Modulo = CollectionEntry<'guide'>['data']['moduli'][number];
 
@@ -12,9 +14,15 @@ interface Props {
   anchor: string;
   /** In una guida a più moduli mostra il nome del modulo in testa. */
   mostraNome: boolean;
+  /** Appelli ESSE3 del modulo (undefined se la guida non è abbinata a ESSE3). */
+  appelli?: Turno[];
 }
 
-const { modulo, anchor, mostraNome } = Astro.props;
+const { modulo, anchor, mostraNome, appelli } = Astro.props;
+// Pannello appelli: se ce ne sono di futuri, o sempre negli esami a modulo
+// unico (con "nessun appello pubblicato"); nei moduli di un esame integrato
+// senza appelli propri non serve (stanno in "Appelli dell'intero esame").
+const mostraAppelli = !!appelli && (futuri(appelli).length > 0 || !mostraNome);
 const { nome_modulo, link_sbobine, link_whatsapp, google_sheet_url, exam_details, program, material_tips, body, professors } = modulo;
 
 const hasLinks = link_sbobine || link_whatsapp || google_sheet_url;
@@ -26,6 +34,8 @@ const docentiDettaglio = professors.filter((p) => p.email || p.stile);
   {mostraNome && <p class="modulo__nome label">Modulo · {nome_modulo}</p>}
 
   <SchedaEsame modulo={modulo} />
+
+  {mostraAppelli && <ProssimiAppelli turni={appelli!} />}
 
   {modulo.id && (
     <StudyTimeHistogram moduloId={modulo.id} titolo="Parere degli studenti" sottotitolo="Tempo di studio">

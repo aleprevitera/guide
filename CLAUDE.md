@@ -129,6 +129,25 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   `https://guide-pratiche.netlify.app/**`, `https://*--guide-pratiche.netlify.app/**`,
   `http://localhost:4321/**`, hook "Before User Created" → `public.hook_solo_account_ateneo`.
 
+## Appelli d'esame (ESSE3)
+
+- `scripts/appelli.mjs` legge la bacheca appelli pubblica di ESSE3 UniPV (CdS Medicina e Chirurgia
+  Golgi) e scrive `src/data/appelli.json` (prossimi 12 mesi; data, ora, tipo di prova, aula, iscrizioni,
+  link; **niente** commissione né iscritti). Il sito lo legge in build (`src/lib/appelli.ts`,
+  `ProssimiAppelli.astro`, chip sulle card); date passate, conto alla rovescia e stato delle iscrizioni
+  si calcolano nel browser.
+- **Una volta al mese**, non di più: `robots.txt` di ESSE3 chiede di non essere visitato da programmi
+  (Disallow: /). GitHub Action `.github/workflows/appelli.yml` (il 1° del mese + avvio manuale) che
+  committa il JSON su `main` (unica eccezione automatica alla regola "niente commit su main"). Mai
+  lanciarlo nella build di Netlify (ogni salvataggio Decap = una build). In locale: `npm run appelli`,
+  oppure `--riusa` per rielaborare i dati salvati senza rete. Le API REST ufficiali (e3rest) richiedono
+  credenziali: se l'università le concede, sono la strada migliore.
+- Abbinamento: guida ↔ esame ESSE3 per nome o con `esse3_codice` (codice attività, stabile fra gli anni);
+  appello ↔ modulo: "Prova Parziale" → modulo dal nome dell'appello o da `esse3_appello` del modulo,
+  "Prova Finale" → intero esame (verbalizzazioni, prove uniche). Entrambi i campi sono in Decap.
+- Se ESSE3 non risponde o la pagina cambia (controlli espliciti), lo script esce con errore senza
+  toccare il JSON: il sito resta con i dati precedenti.
+
 ## Decap CMS (rappresentanti)
 
 - **I rappresentanti hanno accesso solo a Decap** (non a Notion): **Decap è la fonte dei contenuti** delle

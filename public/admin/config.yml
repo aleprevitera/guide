@@ -42,6 +42,7 @@ collections:
       - { label: "ID (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "g", required: false, hint: "Identificativo stabile della guida: viene generato da solo e non cambia mai, anche se rinomini l'esame." }
       - { label: "Nome Esame", name: "title", widget: "string", required: true, pattern: ['^.{3,150}$', "Tra 3 e 150 caratteri"] }
 
+      - { label: "Codice esame ESSE3 (facoltativo)", name: "esse3_codice", widget: "string", required: false, pattern: ['^\\d{4,8}$', "Solo cifre, es. 501694"], hint: "Il numero tra parentesi quadre nella bacheca appelli ESSE3 (es. [501694] FARMACOLOGIA 2). Serve solo se gli appelli non compaiono da soli." }
       - { label: "Sottotitolo (facoltativo)", name: "sottotitolo", widget: "string", required: false, pattern: ['^.{0,200}$', "Massimo 200 caratteri"], hint: "Una riga sotto il titolo, es. \"Esame integrato del IV anno\"" }
 
       - label: "Anno di Corso"
@@ -84,6 +85,7 @@ collections:
         fields:
           - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true, pattern: ['^.{1,150}$', "Massimo 150 caratteri"] }
           - { label: "ID modulo (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "m", required: false }
+          - { label: "Nome dell'appello su ESSE3 (facoltativo)", name: "esse3_appello", widget: "string", required: false, pattern: ['^.{0,100}$', "Massimo 100 caratteri"], hint: "Solo se su ESSE3 gli appelli di questo modulo hanno un nome diverso (es. \"RX-NEURORX-RT\" per Diagnostica per immagini)." }
           - { label: "CFU", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
 
           - label: "Semestre"

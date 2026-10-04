@@ -41,6 +41,10 @@ const professoreSchema = z.object({
 const moduloSchema = z.object({
   id: opz(z.string().regex(MODULO_ID)),
   nome_modulo: z.string().min(1).max(150),
+  // Appelli da ESSE3 (scripts/appelli.mjs): testo che compare nel nome
+  // dell'appello di questo modulo, se diverso dal nome del modulo
+  // (es. "RX-NEURORX-RT" per Diagnostica per immagini).
+  esse3_appello: opz(z.string().max(100)),
   cfu: opz(z.number().int().min(1).max(60)),
   semestre: opz(z.enum(SEMESTRI)),
   difficolta: opz(z.number().int().min(1).max(5)),
@@ -80,6 +84,9 @@ const guideCollection = defineCollection({
   schema: z.object({
     id: opz(z.string().regex(GUIDA_ID)),
     title: z.string().min(3).max(150),
+    // Codice dell'attività didattica su ESSE3 (es. "501694"), stabile fra gli
+    // anni: serve a scripts/appelli.mjs se l'abbinamento per nome non basta.
+    esse3_codice: opz(z.string().regex(/^\d{4,8}$/)),
     sottotitolo: opz(z.string().max(200)),
     anno_di_corso: z.enum(ANNI_DI_CORSO),
     cfu_totali: opz(z.number().int().min(1).max(120)),

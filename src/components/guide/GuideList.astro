@@ -7,6 +7,7 @@ import type { CollectionEntry } from 'astro:content';
 import PixelIcon from '../common/PixelIcon.astro';
 import { cfuGuida, proveEsame } from '../../lib/guide';
 import { MONDI, stileMondo } from '../../lib/mondi';
+import { dateFuture, parti } from '../../lib/appelli';
 
 interface Props {
   entries: CollectionEntry<'guide'>[];
@@ -30,6 +31,8 @@ const guide = [...Astro.props.entries]
       // Tempo di studio e difficoltà: feedback degli studenti, caricati nel
       // browser solo con una sessione; senza, la statistica mostra il lucchetto.
       idModuli: entry.data.moduli.map((m) => m.id).filter(Boolean).join(','),
+      // Prossimo appello (ESSE3): date future alla build; nel browser si salta quelle passate.
+      appelli: dateFuture(entry.data.id),
     };
   });
 ---
@@ -54,6 +57,12 @@ const guide = [...Astro.props.entries]
               )}
               {g.moduli > 1 && (
                 <span class="stat"><PixelIcon name="moduli" size={16} />{g.moduli} moduli</span>
+              )}
+              {g.appelli.length > 0 && (
+                <span class="stat" data-prossimo-appello={g.appelli.join(',')}>
+                  <PixelIcon name="calendario" size={16} />
+                  <span><span class="visually-hidden">Prossimo appello: </span><span data-prossimo-testo>{parti(g.appelli[0]).giorno} {parti(g.appelli[0]).mese}</span></span>
+                </span>
               )}
               {g.idModuli && (
                 <>
@@ -85,6 +94,15 @@ const guide = [...Astro.props.entries]
   // Statistiche dai feedback degli studenti: con accesso, il verdetto del
   // modulo "peggiore" della guida (più tempo, più difficile); senza, il
   // lucchetto già nel markup. Una chiamata per tipo per tutte le card.
+  // Prossimo appello: salta le date passate dall'ultimo aggiornamento mensile.
+  const MESI = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'];
+  const oggi = new Date().toISOString().slice(0, 10);
+  for (const c of document.querySelectorAll<HTMLElement>('[data-prossimo-appello]')) {
+    const prossima = c.dataset.prossimoAppello!.split(',').find((d) => d >= oggi);
+    if (!prossima) c.hidden = true;
+    else c.querySelector('[data-prossimo-testo]')!.textContent = `${Number(prossima.slice(8, 10))} ${MESI[Number(prossima.slice(5, 7)) - 1]}`;
+  }
+
   const stat = [...document.querySelectorAll<HTMLElement>('[data-fb-card]')];
   const valore = (c: HTMLElement) => c.querySelector<HTMLElement>('[data-fb-valore]')!;
   const bloccato = stat.map((c) => valore(c).innerHTML);
