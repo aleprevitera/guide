@@ -126,8 +126,12 @@ const uid = `app-${Math.random().toString(36).slice(2, 8)}`;
 </script>
 
 <style>
+  /* Fondo scuro e bordo giallo: si distingue dalla scheda esame (blu, bordo
+     bianco) e dal parere degli studenti (antracite, bordo del mondo).
+     Contrasti su #1a1c2c: testo 15.3, testo secondario 11.4, didascalie 7.4. */
   .appelli {
-    background: var(--panel);
+    background: var(--bg);
+    --px-c: var(--accent);
   }
   .appelli__titolo {
     display: flex;
@@ -146,7 +150,7 @@ const uid = `app-${Math.random().toString(36).slice(2, 8)}`;
     grid-template-columns: 56px 1fr;
     gap: 12px;
     padding: 12px 0;
-    border-top: 4px solid var(--bg);
+    border-top: 4px solid var(--chip);
   }
   .appello:first-child {
     border-top: 0;
@@ -190,8 +194,8 @@ const uid = `app-${Math.random().toString(36).slice(2, 8)}`;
   }
   .appello__conto {
     padding: 0 6px;
-    background: var(--bg);
-    color: var(--caption);
+    background: var(--chip);
+    color: var(--text-2);
   }
   .appello__conto:empty {
     display: none;
