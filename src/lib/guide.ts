@@ -12,11 +12,6 @@ export function cfuGuida(data: GuideData): number | undefined {
   return undefined;
 }
 
-/** Tipi d'esame distinti dei moduli, nell'ordine in cui compaiono. */
-export function tipiEsame(data: GuideData): string[] {
-  return [...new Set(data.moduli.map((m) => m.exam_type).filter((t): t is NonNullable<typeof t> => !!t))];
-}
-
 /**
  * Tempo stimato in forma breve, adatta a un chip: la fascia se presente,
  * altrimenti il testo libero se è corto. Per le guide a più moduli solo se
@@ -27,4 +22,16 @@ export function tempoBreve(data: GuideData): string | undefined {
   const unici = new Set(valori);
   if (unici.size === 1 && valori[0]) return valori[0];
   return undefined;
+}
+
+/** Prove previste dall'esame (da tutti i moduli): scritto e/o orale. */
+export function proveEsame(data: GuideData): { scritto: boolean; orale: boolean } {
+  const tipi = data.moduli.map((m) => m.exam_type ?? '');
+  return { scritto: tipi.some((t) => t.includes('Scritto')), orale: tipi.some((t) => t.includes('Orale')) };
+}
+
+/** Difficoltà più alta indicata fra i moduli (1–5), se presente. */
+export function difficoltaMax(data: GuideData): number | undefined {
+  const d = data.moduli.map((m) => m.difficolta).filter((x): x is number => typeof x === 'number');
+  return d.length ? Math.max(...d) : undefined;
 }

@@ -1,8 +1,12 @@
 ---
-// Elenco di guide come pannelli cliccabili, con chip per CFU, tipo d'esame e
-// tempo stimato. Usato in /guide/ e nelle pagine degli anni.
+// Elenco di guide come card cliccabili, usato in /guide/ e nelle pagine degli
+// anni. Ogni card ha il colore e il terreno del suo mondo (anno di corso) e
+// una riga di "statistiche da videogioco" ricavata solo dai dati della guida
+// (niente da aggiungere a mano: i rappresentanti compilano Decap come sempre).
 import type { CollectionEntry } from 'astro:content';
-import { cfuGuida, tempoBreve, tipiEsame } from '../../lib/guide';
+import PixelIcon from '../common/PixelIcon.astro';
+import { cfuGuida, difficoltaMax, proveEsame, tempoBreve } from '../../lib/guide';
+import { MONDI, stileMondo } from '../../lib/mondi';
 
 interface Props {
   entries: CollectionEntry<'guide'>[];
@@ -10,29 +14,62 @@ interface Props {
 
 const guide = [...Astro.props.entries]
   .sort((a, b) => a.data.title.localeCompare(b.data.title))
-  .map((entry) => ({
-    href: `/guide/${entry.id}/`,
-    // Il titolo della card diventa il titolo della guida (View Transition).
-    vt: entry.data.id ? `guida-${entry.data.id}` : undefined,
-    title: entry.data.title,
-    cfu: cfuGuida(entry.data),
-    tipi: tipiEsame(entry.data),
-    tempo: tempoBreve(entry.data),
-    moduli: entry.data.moduli.length,
-  }));
+  .map((entry) => {
+    const prove = proveEsame(entry.data);
+    return {
+      href: `/guide/${entry.id}/`,
+      // Il titolo della card diventa il titolo della guida (View Transition).
+      vt: entry.data.id ? `guida-${entry.data.id}` : undefined,
+      title: entry.data.title,
+      stile: stileMondo(entry.data.anno_di_corso),
+      terreno: MONDI[entry.data.anno_di_corso].icona,
+      cfu: cfuGuida(entry.data),
+      prove,
+      tipo: prove.scritto && prove.orale ? 'Scritto + orale' : prove.scritto ? 'Scritto' : prove.orale ? 'Orale' : undefined,
+      tempo: tempoBreve(entry.data),
+      moduli: entry.data.moduli.length,
+      difficolta: difficoltaMax(entry.data),
+    };
+  });
 ---
 
 <ul class="guide-list" data-rivela>
   {guide.map((g) => (
     <li>
-      <a class="guida panel px-border" href={g.href}>
-        <span class="guida__titolo" style={g.vt && `view-transition-name:${g.vt}`}>{g.title}</span>
-        <span class="chips label">
-          {g.cfu && <span class="chip">{g.cfu} CFU</span>}
-          {g.tipi.map((t) => <span class="chip">{t}</span>)}
-          {g.tempo && <span class="chip">{g.tempo}</span>}
-          {g.moduli > 1 && <span class="chip">{g.moduli} moduli</span>}
+      <a class="guida px-border" href={g.href} style={g.stile}>
+        <span class="guida__corpo">
+          <span class="guida__titolo" style={g.vt && `view-transition-name:${g.vt}`}>{g.title}</span>
+          {(g.cfu || g.tipo || g.tempo || g.moduli > 1 || g.difficolta) && (
+            <span class="hud label">
+              {g.cfu && (
+                <span class="stat"><PixelIcon name="moneta" size={16} />{g.cfu} CFU</span>
+              )}
+              {g.tipo && (
+                <span class="stat">
+                  {g.prove.scritto && <PixelIcon name="penna" size={16} />}
+                  {g.prove.orale && <PixelIcon name="fumetto" size={16} />}
+                  {g.tipo}
+                </span>
+              )}
+              {g.tempo && (
+                <span class="stat"><PixelIcon name="clessidra" size={16} /><span class="visually-hidden">Tempo stimato: </span>{g.tempo}</span>
+              )}
+              {g.moduli > 1 && (
+                <span class="stat"><PixelIcon name="moduli" size={16} />{g.moduli} moduli</span>
+              )}
+              {g.difficolta && (
+                <span class="stat">
+                  Diff.
+                  <span class="blocchi" aria-hidden="true">
+                    {[1, 2, 3, 4, 5].map((n) => <span class:list={['blocco', { 'blocco--on': n <= g.difficolta! }]} />)}
+                  </span>
+                  <span class="visually-hidden">{g.difficolta} su 5</span>
+                </span>
+              )}
+            </span>
+          )}
         </span>
+        <span class="terreno" data-terreno={g.terreno} aria-hidden="true"></span>
       </a>
     </li>
   ))}
@@ -52,6 +89,7 @@ const guide = [...Astro.props.entries]
     min-height: 44px;
     margin-top: 16px;
     margin-bottom: 20px;
+    background: var(--panel);
     color: var(--text);
     text-decoration: none;
     transition: transform 80ms steps(1, end);
@@ -59,13 +97,18 @@ const guide = [...Astro.props.entries]
   @media (hover: hover) and (pointer: fine) {
     .guida:hover {
       transform: translateY(-2px);
-      /* Nelle pagine anno il bordo prende il colore del mondo. */
       --px-c: var(--mondo-chiaro, var(--accent));
     }
   }
   .guida:active {
     transform: translateY(4px);
     --px-c: var(--mondo-chiaro, var(--accent));
+  }
+  /* Fascia del colore del mondo sul lato sinistro. */
+  .guida__corpo {
+    display: block;
+    padding: 16px 16px 16px 28px;
+    box-shadow: inset 12px 0 0 0 var(--mondo, var(--chip));
   }
   .guida__titolo {
     display: block;
@@ -77,7 +120,35 @@ const guide = [...Astro.props.entries]
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
   }
-  .guida .chips {
-    margin: 0;
+  /* Statistiche "HUD": icona pixel + valore su fondo scuro. */
+  .hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .blocchi {
+    display: inline-flex;
+    gap: 2px;
+  }
+  .blocco {
+    width: 8px;
+    height: 8px;
+    box-shadow: inset 0 0 0 2px var(--border-off);
+  }
+  .blocco--on {
+    background: var(--accent);
+    box-shadow: none;
+  }
+  @media (forced-colors: active) {
+    .guida { outline: 2px solid CanvasText; }
+    .stat { outline: 1px solid CanvasText; }
   }
 </style>
