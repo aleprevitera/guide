@@ -28,7 +28,7 @@ const docentiDettaglio = professors.filter((p) => p.email || p.stile);
   <SchedaEsame modulo={modulo} />
 
   {modulo.id && (
-    <StudyTimeHistogram moduloId={modulo.id} fasciaRappresentante={modulo.fascia_studio}>
+    <StudyTimeHistogram moduloId={modulo.id} titolo="Parere degli studenti" sottotitolo="Tempo di studio">
       <DifficoltaFeedback moduloId={modulo.id} />
     </StudyTimeHistogram>
   )}

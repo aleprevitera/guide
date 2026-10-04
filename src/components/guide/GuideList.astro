@@ -5,7 +5,7 @@
 // (niente da aggiungere a mano: i rappresentanti compilano Decap come sempre).
 import type { CollectionEntry } from 'astro:content';
 import PixelIcon from '../common/PixelIcon.astro';
-import { cfuGuida, proveEsame, tempoBreve } from '../../lib/guide';
+import { cfuGuida, proveEsame } from '../../lib/guide';
 import { MONDI, stileMondo } from '../../lib/mondi';
 
 interface Props {
@@ -26,9 +26,9 @@ const guide = [...Astro.props.entries]
       cfu: cfuGuida(entry.data),
       prove,
       tipo: prove.scritto && prove.orale ? 'Scritto + orale' : prove.scritto ? 'Scritto' : prove.orale ? 'Orale' : undefined,
-      tempo: tempoBreve(entry.data),
       moduli: entry.data.moduli.length,
-      // Difficoltà: feedback degli studenti, caricata nel browser solo con una sessione.
+      // Tempo di studio e difficoltà: feedback degli studenti, caricati nel
+      // browser solo con una sessione; senza, la statistica mostra il lucchetto.
       idModuli: entry.data.moduli.map((m) => m.id).filter(Boolean).join(','),
     };
   });
@@ -40,7 +40,7 @@ const guide = [...Astro.props.entries]
       <a class="guida px-border" href={g.href} style={g.stile}>
         <span class="guida__corpo">
           <span class="guida__titolo" style={g.vt && `view-transition-name:${g.vt}`}>{g.title}</span>
-          {(g.cfu || g.tipo || g.tempo || g.moduli > 1 || g.idModuli) && (
+          {(g.cfu || g.tipo || g.moduli > 1 || g.idModuli) && (
             <span class="hud label">
               {g.cfu && (
                 <span class="stat"><PixelIcon name="moneta" size={16} />{g.cfu} CFU</span>
@@ -52,13 +52,20 @@ const guide = [...Astro.props.entries]
                   {g.tipo}
                 </span>
               )}
-              {g.tempo && (
-                <span class="stat"><PixelIcon name="clessidra" size={16} /><span class="visually-hidden">Tempo stimato: </span>{g.tempo}</span>
-              )}
               {g.moduli > 1 && (
                 <span class="stat"><PixelIcon name="moduli" size={16} />{g.moduli} moduli</span>
               )}
-              {g.idModuli && <span class="stat" data-diff-card data-moduli={g.idModuli} hidden></span>}
+              {g.idModuli && (
+                <>
+                  <span class="stat" data-fb-card data-tipo="tempo_studio" data-moduli={g.idModuli}>
+                    <PixelIcon name="clessidra" size={16} />
+                    <span data-fb-valore>Tempo <PixelIcon name="lock" size={16} /><span class="visually-hidden"> (accedi per vederlo)</span></span>
+                  </span>
+                  <span class="stat" data-fb-card data-tipo="difficolta" data-moduli={g.idModuli}>
+                    <span data-fb-valore><PixelIcon name="teschio" size={16} />Difficoltà <PixelIcon name="lock" size={16} /><span class="visually-hidden"> (accedi per vederla)</span></span>
+                  </span>
+                </>
+              )}
             </span>
           )}
         </span>
@@ -70,33 +77,47 @@ const guide = [...Astro.props.entries]
 
 <script>
   import { EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
-  import { conteggi } from '../../lib/feedback';
-  import { ETICHETTA, LIVELLI, mediana, teschiHtml, type Livello } from '../../lib/difficolta';
+  import { conteggi, type TipoFeedback } from '../../lib/feedback';
+  import { ETICHETTA, LIVELLI, mediana, teschiHtml } from '../../lib/difficolta';
+  import { FASCE_STUDIO } from '../../lib/fasce';
+  import { medianaSuperiore, piuAlto } from '../../lib/verdetto';
 
-  // Per chi ha fatto l'accesso: la difficoltà del modulo più difficile della
-  // guida (mediana dei voti, solo con abbastanza voti). Una chiamata sola per
-  // tutte le card della pagina.
-  const card = [...document.querySelectorAll<HTMLElement>('[data-diff-card]')];
-  async function mostra() {
-    const moduli = [...new Set(card.flatMap((c) => c.dataset.moduli!.split(',')))];
+  // Statistiche dai feedback degli studenti: con accesso, il verdetto del
+  // modulo "peggiore" della guida (più tempo, più difficile); senza, il
+  // lucchetto già nel markup. Una chiamata per tipo per tutte le card.
+  const stat = [...document.querySelectorAll<HTMLElement>('[data-fb-card]')];
+  const valore = (c: HTMLElement) => c.querySelector<HTMLElement>('[data-fb-valore]')!;
+  const bloccato = stat.map((c) => valore(c).innerHTML);
+
+  async function mostra(tipo: TipoFeedback) {
+    const mie = stat.filter((c) => c.dataset.tipo === tipo);
+    const moduli = [...new Set(mie.flatMap((c) => c.dataset.moduli!.split(',')))];
     try {
-      const mappa = await conteggi(moduli, 'difficolta');
-      for (const c of card) {
-        const livelli = c.dataset.moduli!.split(',').map((m) => mediana(mappa.get(m) ?? {}).livello).filter((l): l is Livello => !!l);
-        if (livelli.length === 0) continue;
-        const peggiore = livelli.reduce((a, b) => (LIVELLI.indexOf(b) > LIVELLI.indexOf(a) ? b : a));
-        c.innerHTML = `${teschiHtml(peggiore)}<span class="visually-hidden">Difficoltà: </span>${ETICHETTA[peggiore]}`;
-        c.hidden = false;
+      const mappa = await conteggi(moduli, tipo);
+      for (const c of mie) {
+        const ids = c.dataset.moduli!.split(',');
+        if (tipo === 'difficolta') {
+          const peggiore = piuAlto(LIVELLI, ids.map((m) => mediana(mappa.get(m) ?? {}).livello).filter((l) => l !== null));
+          valore(c).innerHTML = peggiore
+            ? `${teschiHtml(peggiore)}<span class="visually-hidden">Difficoltà: </span>${ETICHETTA[peggiore]}`
+            : 'Difficoltà: pochi voti';
+        } else {
+          const lungo = piuAlto(FASCE_STUDIO, ids.map((m) => medianaSuperiore(FASCE_STUDIO, mappa.get(m) ?? {}).valore).filter((f) => f !== null));
+          valore(c).innerHTML = lungo ? `<span class="visually-hidden">Tempo di studio: </span>${lungo}` : 'Tempo: pochi voti';
+        }
       }
     } catch {
-      /* niente statistica */
+      /* resta il lucchetto */
     }
   }
+
   const applica = ({ session }: StatoAuth) => {
-    if (session) mostra();
-    else card.forEach((c) => (c.hidden = true));
+    if (session) {
+      mostra('tempo_studio');
+      mostra('difficolta');
+    } else stat.forEach((c, i) => (valore(c).innerHTML = bloccato[i]));
   };
-  if (card.length > 0) {
+  if (stat.length > 0) {
     statoAuth().then(applica);
     window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
   }
@@ -164,6 +185,11 @@ const guide = [...Astro.props.entries]
   .stat :global(.teschi) {
     display: inline-flex;
     gap: 2px;
+  }
+  [data-fb-valore] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
   @media (forced-colors: active) {
     .guida { outline: 2px solid CanvasText; }

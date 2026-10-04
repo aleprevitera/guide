@@ -1,4 +1,4 @@
-import { MIN_RISPOSTE } from './histogram';
+import { medianaSuperiore } from './verdetto';
 
 // Difficoltà percepita di un modulo: feedback degli studenti (contenuto
 // "extra"), come il tempo di studio. Usabile sia nel sito sia nel browser.
@@ -25,23 +25,10 @@ export const COLORE: Record<Livello, string> = {
 
 export const numeroTeschi = (l: Livello): number => LIVELLI.indexOf(l) + 1;
 
-/**
- * Verdetto = mediana dei voti (la scala è ordinata: la mediana regge meglio
- * della "vittoria singola" con pochi voti). Con un numero pari di voti si
- * prende la mediana superiore: in caso di equilibrio (es. 3 facile, 3
- * estremo) il verdetto pende verso il livello più difficile, per prudenza.
- * Sotto MIN_RISPOSTE voti nessun verdetto.
- */
+/** Verdetto sulla difficoltà: mediana superiore dei voti (vedi src/lib/verdetto.ts). */
 export function mediana(conteggi: Partial<Record<string, number>>): { livello: Livello | null; totale: number } {
-  const totale = LIVELLI.reduce((s, l) => s + (conteggi[l] ?? 0), 0);
-  if (totale < MIN_RISPOSTE) return { livello: null, totale };
-  const posizione = Math.floor(totale / 2) + 1;
-  let cumulato = 0;
-  for (const l of LIVELLI) {
-    cumulato += conteggi[l] ?? 0;
-    if (cumulato >= posizione) return { livello: l, totale };
-  }
-  return { livello: null, totale };
+  const { valore, totale } = medianaSuperiore(LIVELLI, conteggi);
+  return { livello: valore, totale };
 }
 
 /** Teschietto pixel 8×8 (SVG statico, senza dati utente: sicuro per innerHTML). */

@@ -54,10 +54,11 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   sostituite **mantenendo `id` e nome file**. I segnaposto del vecchio sito sono stati tolti; gli `id`
   di guide tolte ma con voti su Supabase stanno in `scripts/id-riservati.json` e l'import li riusa
   quando arriva la scheda con quel titolo. Non cancellare guide con voti senza riservarne gli `id`.
-- Tempo di studio = istogramma, **sempre per modulo**: `study_time` per modulo solo se la scheda lo dà per
-  quel modulo; un tempo unico per un esame integrato va in `descrizione_generale`, mai copiato sui moduli.
-  `fascia_studio` (etichetta RAPPR.) la calcola il codice con `fasciaDaGiorni` (`src/lib/fasce.ts`),
-  mai il modello.
+- Tempo di studio e difficoltà **mostrati sono solo quelli votati dagli studenti** (feedback, extra):
+  le stime scritte nelle guide (`study_time`, `fascia_studio`, `difficolta`) restano nei dati ma non si
+  mostrano più (niente etichetta RAPPR. nell'istogramma). L'import continua a compilarle per modulo
+  (`fascia_studio` calcolata dal codice con `fasciaDaGiorni`, mai dal modello); un tempo unico per un
+  esame integrato va in `descrizione_generale`, mai copiato sui moduli.
 - `id` guida `g-xxxxxxxx`, `id` modulo `m-xxxxxxxx`: stabili, immutabili, distinti da titolo/slug,
   chiave dei feedback. Unicità verificata in build (`assertUniqueIds`). In Decap li genera il
   widget `readonly-id` (`public/admin/index.html`).
@@ -103,9 +104,10 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   più moduli in una chiamata, solo a utenti autenticati d'ateneo. Lato client tutto passa da
   `src/lib/feedback.ts` (cache + evento `feedback:aggiornato`).
 - `public.study_time_votes_legacy` — archivio chiuso dei primi voti (copiati in `module_feedback`).
-- **Difficoltà** = feedback (Facile/Medio/Difficile/Estremo, 1–4 teschietti), per modulo; verdetto =
-  mediana superiore dei voti, solo da 5 risposte, con la distribuzione visibile. Il campo `difficolta`
-  (1–5) dello schema non viene più mostrato.
+- **Verdetti dei feedback** (`src/lib/verdetto.ts`): mediana superiore dei voti (in equilibrio pende verso
+  più tempo / più difficile), solo da 5 risposte, con la distribuzione visibile. Difficoltà =
+  Facile/Medio/Difficile/Estremo (1–4 teschietti). Pannello "Parere degli studenti" per modulo; scheda
+  esame e card mostrano il verdetto con accesso (card: modulo "peggiore"), il lucchetto senza.
 - `public.hook_solo_account_ateneo(event)` — hook Auth "Before User Created": rifiuta domini diversi.
 - **Regola: extra = feedback = solo per chi ha fatto l'accesso.** Ogni nuovo feedback segue lo stesso
   modello (dati su Supabase, niente accesso `anon`), non si nasconde contenuto statico via JS.

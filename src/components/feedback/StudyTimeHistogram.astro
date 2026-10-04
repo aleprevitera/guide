@@ -23,9 +23,11 @@ interface Props {
   fasciaUtente?: FasciaStudio;
   /** Titolo della sezione (default: "Tempo di studio"). */
   titolo?: string;
+  /** Sottotitolo della parte istogramma, se il pannello contiene altri feedback. */
+  sottotitolo?: string;
 }
 
-const { moduloId, counts = conteggiVuoti(), totale = 0, fasciaRappresentante, fasciaUtente, titolo = 'Tempo di studio' } = Astro.props;
+const { moduloId, counts = conteggiVuoti(), totale = 0, fasciaRappresentante, fasciaUtente, titolo = 'Tempo di studio', sottotitolo } = Astro.props;
 
 const live = !!moduloId;
 const uid = `hist-${Math.random().toString(36).slice(2, 8)}`;
@@ -62,6 +64,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   )}
 
   <div class="hist__contenuto" data-contenuto hidden={live}>
+  {sottotitolo && <h3 class="hist__sottotitolo label">{sottotitolo}</h3>}
   <p class="hist__totale label" data-totale>
     {live ? 'Caricamento…' : `${totale} ${totale === 1 ? 'risposta' : 'risposte'}`}
   </p>
@@ -284,6 +287,10 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   .hist__titolo {
     color: var(--accent);
     margin: 0;
+  }
+  .hist__sottotitolo {
+    color: var(--text-2);
+    margin: 16px 0 0;
   }
   .hist__totale {
     color: var(--caption);

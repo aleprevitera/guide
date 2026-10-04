@@ -21,14 +21,18 @@ add('Docenti', modulo.professors.map((p) => p.nome).join(', ') || undefined);
 add('Preappello', modulo.preappello);
 add('Durata orale', modulo.durata_orale_min ? `${modulo.durata_orale_min} min circa` : undefined);
 add('Frequenza', modulo.frequenza);
-add('Tempo stimato', modulo.study_time ?? modulo.fascia_studio);
 add('CFU', modulo.cfu);
 add('Semestre', modulo.semestre);
 
-// Difficoltà: è un feedback degli studenti (contenuto "extra"), non il campo
-// `difficolta` dell'autore, che non viene più mostrato. Il verdetto (mediana
-// dei voti) arriva dal browser solo con una sessione; senza, il lucchetto.
+// Tempo di studio e difficoltà sono feedback degli studenti (contenuto
+// "extra"): non si mostrano più le stime scritte nella guida (study_time,
+// difficolta). Il verdetto (mediana dei voti) arriva dal browser solo con una
+// sessione; senza, il lucchetto.
 const conDifficolta = !!modulo.id;
+const feedback = [
+  { tipo: 'tempo_studio', etichetta: 'Tempo di studio', bloccato: 'Accedi per vederlo' },
+  { tipo: 'difficolta', etichetta: 'Difficoltà', bloccato: 'Accedi per vederla' },
+] as const;
 ---
 
 {(righe.length > 0 || conDifficolta) && (
@@ -41,41 +45,52 @@ const conDifficolta = !!modulo.id;
           <dd>{r.valore}</dd>
         </div>
       ))}
-      {conDifficolta && (
+      {conDifficolta && feedback.map((f) => (
         <div class="scheda__riga">
-          <dt class="label">Difficoltà<span class="visually-hidden">: </span></dt>
-          <dd class="difficolta" data-diff-scheda data-modulo={modulo.id}>
+          <dt class="label">{f.etichetta}<span class="visually-hidden">: </span></dt>
+          <dd class="difficolta" data-fb-scheda data-tipo={f.tipo} data-modulo={modulo.id}>
             <span class="difficolta__bloccata">
               <PixelIcon name="lock" size={16} />
-              Accedi per vederla (voto degli studenti)
+              {f.bloccato} (voto degli studenti)
             </span>
           </dd>
         </div>
-      )}
+      ))}
     </dl>
   </section>
 )}
 
 <script>
   import { EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
-  import { conteggi, EVENTO_FEEDBACK } from '../../lib/feedback';
+  import { conteggi, EVENTO_FEEDBACK, type TipoFeedback } from '../../lib/feedback';
   import { ETICHETTA, mediana, teschiHtml } from '../../lib/difficolta';
+  import { FASCE_STUDIO } from '../../lib/fasce';
+  import { medianaSuperiore } from '../../lib/verdetto';
 
-  const celle = [...document.querySelectorAll<HTMLElement>('[data-diff-scheda]')];
+  const celle = [...document.querySelectorAll<HTMLElement>('[data-fb-scheda]')];
   if (celle.length > 0) {
     const bloccato = celle.map((c) => c.innerHTML);
     let attivo = false;
 
-    async function aggiorna() {
-      const moduli = celle.map((c) => c.dataset.modulo!);
+    /** Verdetto (HTML statico + numeri) per un tipo di feedback. */
+    function verdetto(tipo: TipoFeedback, c: Record<string, number>): string {
+      if (tipo === 'difficolta') {
+        const { livello, totale } = mediana(c);
+        return livello
+          ? `${teschiHtml(livello)} <span>${ETICHETTA[livello]}</span> <span class="difficolta__nota">(${totale} voti)</span>`
+          : `<span class="difficolta__nota">Pochi voti finora (${totale}): vota qui sotto</span>`;
+      }
+      const { valore, totale } = medianaSuperiore(FASCE_STUDIO, c);
+      return valore
+        ? `<span>${valore}</span> <span class="difficolta__nota">(${totale} voti)</span>`
+        : `<span class="difficolta__nota">Pochi voti finora (${totale}): vota qui sotto</span>`;
+    }
+
+    async function aggiorna(tipo: TipoFeedback) {
+      const mie = celle.filter((c) => c.dataset.tipo === tipo);
       try {
-        const mappa = await conteggi(moduli, 'difficolta');
-        for (const cella of celle) {
-          const { livello, totale } = mediana(mappa.get(cella.dataset.modulo!) ?? {});
-          cella.innerHTML = livello
-            ? `${teschiHtml(livello)} <span>${ETICHETTA[livello]}</span> <span class="difficolta__nota">(${totale} voti)</span>`
-            : `<span class="difficolta__nota">Pochi voti finora (${totale}): vota qui sotto</span>`;
-        }
+        const mappa = await conteggi(mie.map((c) => c.dataset.modulo!), tipo);
+        for (const cella of mie) cella.innerHTML = verdetto(tipo, mappa.get(cella.dataset.modulo!) ?? {});
       } catch {
         /* resta il testo precedente */
       }
@@ -83,13 +98,15 @@ const conDifficolta = !!modulo.id;
 
     const applica = ({ session }: StatoAuth) => {
       attivo = !!session;
-      if (attivo) aggiorna();
-      else celle.forEach((c, i) => (c.innerHTML = bloccato[i]));
+      if (attivo) {
+        aggiorna('tempo_studio');
+        aggiorna('difficolta');
+      } else celle.forEach((c, i) => (c.innerHTML = bloccato[i]));
     };
     statoAuth().then(applica);
     window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
     window.addEventListener(EVENTO_FEEDBACK, (e) => {
-      if (attivo && (e as CustomEvent<{ tipo: string }>).detail.tipo === 'difficolta') aggiorna();
+      if (attivo) aggiorna((e as CustomEvent<{ tipo: TipoFeedback }>).detail.tipo);
     });
   }
 </script>
