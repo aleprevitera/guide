@@ -120,6 +120,22 @@ a {
   text-underline-offset: 4px;
 }
 
+/* Cursore lampeggiante accanto alle domande dei feedback: invito a votare.
+   Sparisce appena si è votato (.is-votato, vedi i componenti feedback). */
+.cursore {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 20px;
+  background: var(--accent);
+  animation: lampeggia 1s steps(1, end) infinite;
+}
+.is-votato .cursore {
+  display: none;
+}
+@keyframes lampeggia {
+  50% { visibility: hidden; }
+}
+
 /* "Cambia voto": pulsante con l'aspetto di un link, sotto la scelta fatta
    (i feedback, dopo il voto, mostrano solo quella). */
 .cambia-voto {

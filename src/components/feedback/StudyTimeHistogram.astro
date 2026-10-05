@@ -96,9 +96,9 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
   </p>
 
   {/* Dopo il voto restano visibili solo la scelta fatta e "Cambia voto". */}
-  <div class="voto" data-scelte>
+  <div class:list={['voto', { 'is-votato': !!fasciaUtente }]} data-scelte>
     <h3 class="voto__domanda" id={`${uid}-domanda`}>
-      <span class="cursore" aria-hidden="true"></span>E tu, quanto hai studiato?
+      <span class="cursore" aria-hidden="true"></span>Quanto hai studiato?
     </h3>
     <div class="voto__pulsanti" role="group" aria-labelledby={`${uid}-domanda`}>
       {FASCE_STUDIO.map((fascia) => (
@@ -108,7 +108,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       ))}
     </div>
 
-    <button type="button" class="cambia-voto" data-cambia hidden>Cambia voto</button>
+    <button type="button" class="cambia-voto" data-cambia hidden={!fasciaUtente}>Cambia voto</button>
     <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
   </div>
   {/* Altri feedback del modulo (es. difficoltà): visibili solo dopo l'accesso, come il resto. */}
@@ -431,16 +431,6 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     gap: 8px;
     margin: 0 0 12px;
     color: var(--text);
-  }
-  .cursore {
-    flex: 0 0 auto;
-    width: 12px;
-    height: 20px;
-    background: var(--accent);
-    animation: lampeggia 1s steps(1, end) infinite;
-  }
-  @keyframes lampeggia {
-    50% { visibility: hidden; }
   }
   .voto__pulsanti {
     display: flex;
