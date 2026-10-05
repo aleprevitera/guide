@@ -108,6 +108,7 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   più tempo / più difficile), solo da 5 risposte, con la distribuzione visibile. Difficoltà =
   Facile/Medio/Difficile/Estremo (1–4 teschietti). Pannello "Parere degli studenti" per modulo; scheda
   esame e card mostrano il verdetto con accesso (card: modulo "peggiore"), il lucchetto senza.
+  Dopo il voto le altre scelte spariscono: restano quella fatta e "Cambia voto" (classe `.cambia-voto`).
 - `public.hook_solo_account_ateneo(event)` — hook Auth "Before User Created": rifiuta domini diversi.
 - **Regola: extra = feedback = solo per chi ha fatto l'accesso.** Ogni nuovo feedback segue lo stesso
   modello (dati su Supabase, niente accesso `anon`), non si nasconde contenuto statico via JS.

@@ -34,6 +34,8 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
     Servono almeno {MIN_RISPOSTE} voti per un verdetto (finora <span data-diff-finora>0</span>).
   </p>
 
+  {/* Dopo il voto restano visibili solo la scelta fatta e "Cambia voto". */}
+  <div data-scelte>
   <p class="diff__domanda" id={`${uid}-domanda`}>Quanto è stato difficile per te?</p>
   <div class="diff__pulsanti" role="group" aria-labelledby={`${uid}-domanda`}>
     {LIVELLI.map((l) => (
@@ -42,6 +44,8 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
         {ETICHETTA[l]}
       </button>
     ))}
+  </div>
+  <button type="button" class="cambia-voto" data-cambia hidden>Cambia voto</button>
   </div>
   <p class="diff__stato" role="status" aria-live="polite" data-diff-stato></p>
 </div>
@@ -59,6 +63,16 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
     const q = <T extends Element = HTMLElement>(sel: string) => box.querySelector<T>(sel)!;
     const stato = (msg: string) => (q('[data-diff-stato]').textContent = msg);
     let attivo = false;
+
+    /** Con un voto dato nasconde le altre scelte; "Cambia voto" le riapre. */
+    const comprimi = (votato: boolean) => {
+      q('[data-scelte]').classList.toggle('is-votato', votato);
+      q('[data-cambia]').hidden = !votato;
+    };
+    q('[data-cambia]').addEventListener('click', () => {
+      comprimi(false);
+      box.querySelector<HTMLButtonElement>('[data-diff-voto][aria-pressed="true"]')?.focus();
+    });
 
     async function carica() {
       try {
@@ -84,6 +98,7 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
           riga.querySelector<HTMLElement>('.diff__tu')!.hidden = riga.dataset.livello !== mio;
         });
         box.querySelectorAll<HTMLButtonElement>('[data-diff-voto]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.diffVoto === mio)));
+        comprimi(!!mio);
       } catch {
         q('[data-diff-verdetto]').textContent = 'Al momento non è possibile caricare i voti.';
       }
@@ -222,6 +237,9 @@ const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
   .diff__btn[aria-pressed='true'] {
     color: var(--you);
     box-shadow: inset 0 0 0 4px var(--you);
+  }
+  .is-votato .diff__btn[aria-pressed='false'] {
+    display: none;
   }
   .diff__stato:empty {
     display: none;

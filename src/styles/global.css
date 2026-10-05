@@ -120,6 +120,27 @@ a {
   text-underline-offset: 4px;
 }
 
+/* "Cambia voto": pulsante con l'aspetto di un link, sotto la scelta fatta
+   (i feedback, dopo il voto, mostrano solo quella). */
+.cambia-voto {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.cambia-voto[hidden] {
+  display: none;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

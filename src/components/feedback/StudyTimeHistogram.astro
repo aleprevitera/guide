@@ -95,7 +95,8 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     Servono almeno {MIN_RISPOSTE} risposte per mostrare la distribuzione (finora <span data-finora>{totale}</span>).
   </p>
 
-  <div class="voto">
+  {/* Dopo il voto restano visibili solo la scelta fatta e "Cambia voto". */}
+  <div class="voto" data-scelte>
     <h3 class="voto__domanda" id={`${uid}-domanda`}>
       <span class="cursore" aria-hidden="true"></span>E tu, quanto hai studiato?
     </h3>
@@ -107,6 +108,7 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
       ))}
     </div>
 
+    <button type="button" class="cambia-voto" data-cambia hidden>Cambia voto</button>
     <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
   </div>
   {/* Altri feedback del modulo (es. difficoltà): visibili solo dopo l'accesso, come il resto. */}
@@ -149,6 +151,20 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
 
   function premuto(hist: HTMLElement, fascia: string | null) {
     hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.voto === fascia)));
+    comprimi($(hist, '[data-scelte]'), !!fascia);
+  }
+
+  /** Con un voto dato nasconde le altre scelte; "Cambia voto" le riapre. */
+  function comprimi(scelte: HTMLElement, votato: boolean) {
+    scelte.classList.toggle('is-votato', votato);
+    $(scelte, '[data-cambia]').hidden = !votato;
+  }
+
+  for (const scelte of document.querySelectorAll<HTMLElement>('[data-hist] [data-scelte]')) {
+    $(scelte, '[data-cambia]').addEventListener('click', () => {
+      comprimi(scelte, false);
+      scelte.querySelector<HTMLButtonElement>('[aria-pressed="true"]')?.focus();
+    });
   }
 
   /** Animazione al primo ingresso nel viewport, quando `pronto` si risolve. */
@@ -440,6 +456,9 @@ const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?
     background: var(--you);
     color: var(--bg);
     box-shadow: none;
+  }
+  .is-votato .voto__btn[aria-pressed='false'] {
+    display: none;
   }
 
   @media (forced-colors: active) {
