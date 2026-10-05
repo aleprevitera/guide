@@ -1,15 +1,14 @@
 id: g-kxnnzaqi
 title: Malattie del Sistema Endocrino e Metabolismo
+esse3_codice: "501793"
 anno_di_corso: III Anno
-descrizione_generale: |-
-  L’esame è composto da tre prove: **endocrinologia**, **malattie del metabolismo** e **chirurgia endocrina**. I tre esami sono separati e fanno media ponderata tra loro. È necessario svolgere endocrinologia e metabolismo nello stesso appello: iscrivendosi a uno solo dei due c’è il rischio che i professori non facciano svolgere l’esame. È possibile rifiutare e ripetere uno solo dei tre parziali.
-
-  Tempo di studio complessivo: 15/20 giorni complessivi per i 3 esami, a seconda di quanto si padroneggia la fisiologia endocrina.
+cfu_totali: 5
+descrizione_generale: "L'esame è composto da tre moduli formalmente separati: Endocrinologia, Malattie del metabolismo e Chirurgia endocrina. I voti dei tre moduli concorrono alla media ponderata. Endocrinologia e Malattie del metabolismo devono essere sostenuti nello stesso appello; l'interrogazione è unica e lo stesso professore interroga su entrambi i moduli. Chirurgia endocrina è una prova separata scritta a risposta multipla. È possibile rifiutare e ripetere uno solo dei tre parziali. Tempo di studio complessivo: 15-20 giorni. La tempistica dipende dal livello di padronanza della fisiologia endocrina."
 moduli:
   - nome_modulo: Endocrinologia
     id: m-r6dtmg80
     exam_type: Orale
-    exam_details: L’interrogazione è unica tra endocrinologia e malattie del metabolismo; lo stesso professore interroga per entrambe.
+    exam_details: Prova orale unica con Malattie del metabolismo; stesso professore interroga su entrambi i moduli. È necessario sostenere entrambi nello stesso appello.
     program: |-
       Malattie del sistema endocrino
 
@@ -54,11 +53,11 @@ moduli:
       Endocrinologia riproduttiva maschile
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
-    material_tips: Le sbobine sono sufficienti.
+    material_tips: Sbobine sufficienti. Ripassare bene la fisiologia endocrina prima di iniziare la preparazione.
   - nome_modulo: Malattie del metabolismo
     id: m-s11z2uij
     exam_type: Orale
-    exam_details: L’interrogazione è unica tra endocrinologia e malattie del metabolismo; lo stesso professore interroga per entrambe.
+    exam_details: Prova orale unica con Endocrinologia; stesso professore interroga su entrambi i moduli. È necessario sostenere entrambi nello stesso appello.
     program: |-
       **MALATTIE DEL METABOLISMO**
 
@@ -95,11 +94,11 @@ moduli:
       Le Ipoglicemie
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
-    material_tips: Le sbobine sono sufficienti.
+    material_tips: Sbobine sufficienti. Ripassare bene la fisiologia endocrina prima di iniziare la preparazione.
   - nome_modulo: Chirurgia endocrina
     id: m-srbieauq
     exam_type: Scritto
-    exam_details: Prova scritta separata a crocette.
+    exam_details: Prova scritta a risposta multipla, separata dagli altri moduli.
     program: |-
       **ENDOCRINO-CHIRURGIA**
 
@@ -129,8 +128,17 @@ moduli:
       6. Indicazioni chirurgiche nelle MEN 1 e MEN 2
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
-    material_tips: Le sbobine sono sufficienti, ma è consigliabile leggere anche le domande dei precedenti appelli poiché spesso si ripetono.
+    material_tips: Sbobine sufficienti; consigliabile integrare con le domande degli appelli precedenti, poiché alcune vengono spesso riproposte.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande degli appelli precedenti, alcune delle quali si ripetono.
+info_da_verificare:
+  - campo: Frequenza
+    nota: Da integrare
+  - campo: Domande e argomenti ricorrenti - Endocrinologia
+    nota: Da integrare
+  - campo: Domande e argomenti ricorrenti - Malattie del metabolismo
+    nota: Da integrare
 aggiornato_da: Lisa Ceci
-esse3_codice: "501793"
-cfu_totali: 5
-ultimo_aggiornamento: 2026-10-04
+ultimo_aggiornamento: 2026-10-05

@@ -1,14 +1,29 @@
 id: g-isk3qiid
 title: Microbiologia
+esse3_codice: "501317"
 anno_di_corso: III Anno
+cfu_totali: 9
 moduli:
   - nome_modulo: Microbiologia
     id: m-2f7qtr59
     exam_type: Scritto + Orale
     study_time: 1 mese e mezzo – 2 mesi
     exam_details: |-
-      L’esame consiste in uno scritto sbarramento per l’orale senza voto: per superarlo è necessario fare 25 crocette giuste su 30; l’esito viene comunicato il giorno stesso.
-      All’orale possono interrogare tutti e cinque i professori, talvolta accompagnati da assistenti; le interrogazioni si svolgono in ordine di iscrizione. Si viene sempre interrogati da due professori, con una parte di virologia e una di batteriologia. Sono tutti molto gentili e fanno ragionare.
+      **Scritto (prova sbarratoria)**
+
+      - 30 domande a risposta multipla.
+      - È necessario rispondere correttamente ad almeno 25 domande su 30.
+      - Lo scritto non assegna un voto.
+      - L'esito viene comunicato nella stessa giornata.
+      - Il superamento dello scritto consente di accedere all'esame orale.
+
+      **Orale**
+
+      - Gli studenti vengono interrogati in ordine di iscrizione.
+      - All'orale possono interrogare tutti e cinque i professori, talvolta affiancati da assistenti.
+      - Si viene interrogati da due professori; è sempre presente una parte di virologia e una parte di batteriologia.
+      - I docenti sono descritti come gentili e orientati a far ragionare lo studente.
+      - Indicativamente: Rovida si concentra sulla virologia; Migliavacca sulla batteriologia; Piazza su genetica batterica, micobatteri e funghi; Cambieri sulla microbiologia clinica; Baldanti può spaziare maggiormente tra i diversi argomenti e può proporre anche casi clinici.
     program: |-
       Procarioti
 
@@ -115,30 +130,61 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      L’esame è diviso in macro-argomenti:
+      Il syllabus ufficiale è molto dettagliato e comprende un programma più ampio rispetto agli argomenti effettivamente spiegati a lezione. È importante informarsi sugli argomenti trattati nella propria coorte, poiché il programma può variare di anno in anno.
 
-      - batteriologia
-      - virologia
-      - genetica batterica, micobatteri e funghi
-      - microbiologia clinica
+      L’esame è suddiviso nei seguenti macro-argomenti:
 
-      Il syllabus sul sito dell’università è molto completo, ma le professoresse si basano sugli argomenti spiegati a lezione. È importante informarsi sugli argomenti trattati nella propria coorte perché di anno in anno il programma cambia leggermente.
+      - Batteriologia → prof.ssa Migliavacca
+      - Virologia → prof.sse Rovida e Baldanti
+      - Genetica batterica, micobatteri e funghi → prof.ssa Piazza
+      - Microbiologia clinica → prof. Baldanti e prof.ssa Cambieri
 
-      Le sbobine più recenti sono sufficienti per preparare l’esame. La parte di antibiotici è spesso confusionaria nelle sbobine recenti, perciò è consigliabile consultarla dal libro oppure dalle Sbobine 20-21.
-    body: Durante il corso viene svolto un laboratorio obbligatorio molto utile per la comprensione delle culture cellulari spiegate nel modulo di batteriologia.
+      **Fonti principali**
+
+      - Le sbobine più recenti sono generalmente sufficienti.
+      - Per la parte sugli antibiotici, le sbobine recenti possono essere confusionarie: integrare con il libro o con le sbobine 2020-21, considerate più chiare.
+      - Verificare sempre gli argomenti effettivamente svolti nella propria coorte prima di iniziare lo studio.
+
+      **Consigli pratici**
+
+      - Non affidarsi esclusivamente al syllabus ufficiale: è molto dettagliato e può comprendere argomenti non affrontati a lezione.
+      - Informarsi sugli argomenti trattati nella propria coorte, poiché il programma può cambiare leggermente di anno in anno.
+      - Sfruttare il laboratorio obbligatorio, soprattutto per comprendere meglio la parte relativa alle colture cellulari.
+      - All'orale non limitarsi alla memorizzazione: i professori tendono a far ragionare sul perché delle risposte.
+      - Prepararsi anche alla possibilità di dover discutere un caso clinico, soprattutto con Baldanti.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Migliavacca: Batteriologia
+      - Rovida: Virologia
+      - Piazza: Genetica batterica, micobatteri e funghi
+      - Cambieri: Microbiologia clinica
+      - Baldanti: Programma più ampio; possibili casi clinici
+
+      Durante il corso viene svolto un laboratorio obbligatorio, particolarmente utile per comprendere meglio la parte relativa alle colture cellulari affrontata nel modulo di batteriologia.
     professors:
-      - nome: Migliavacca
-        stile: Chiede solamente batteriologia.
-      - nome: Rovida
-        stile: Chiede solamente virologia.
-      - nome: Baldanti
-        stile: Chiede un po’ tutto e a volte fa casi clinici.
-      - nome: Piazza
-        stile: "Si concentra molto sulla sua parte di programma: genetica batterica, micobatteri e funghi."
-      - nome: Cambieri
-        stile: Si concentra su microbiologia clinica.
+      - nome: Fausto Baldanti
+        email: fausto.baldanti@unipv.it
+        stile: Titolare del corso. Può spaziare maggiormente tra i diversi argomenti e può proporre anche casi clinici.
+      - nome: Patrizia Cambieri
+        email: patrizia.cambieri@unipv.it
+        stile: Si concentra sulla microbiologia clinica.
+      - nome: Irene Cassaniti
+        email: irene.cassaniti@unipv.it
+      - nome: Roberta Migliavacca
+        email: roberta.migliavacca@unipv.it
+        stile: Si concentra sulla batteriologia.
+      - nome: Aurora Piazza
+        email: aurora.piazza@unipv.it
+        stile: Si concentra soprattutto su genetica batterica, micobatteri e funghi.
+      - nome: Francesca Rovida
+        email: francesca.rovida@unipv.it
+        stile: Si concentra sulla virologia.
     fascia_studio: 5–8 sett
+info_da_verificare:
+  - campo: Frequenza delle lezioni frontali
+    nota: La scheda riporta [DA INTEGRARE] per la frequenza delle lezioni frontali.
+  - campo: Domande e argomenti ricorrenti
+    nota: Eventuale elenco di domande ricorrenti dagli appelli precedenti.
 aggiornato_da: Lisa Ceci
-esse3_codice: "501317"
-cfu_totali: 9
-ultimo_aggiornamento: 2026-10-04
+ultimo_aggiornamento: 2026-10-05

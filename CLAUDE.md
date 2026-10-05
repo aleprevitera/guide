@@ -54,6 +54,13 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   esistente viene riscritta **mantenendo `id` e nome file**). Dopo l'import, le guide si modificano in Decap. I segnaposto del vecchio sito sono stati tolti; gli `id`
   di guide tolte ma con voti su Supabase stanno in `scripts/id-riservati.json` e l'import li riusa
   quando arriva la scheda con quel titolo. Non cancellare guide con voti senza riservarne gli `id`.
+- **Documenti Word dei rappresentanti** (un .docx per anno, un esame per titolo in MAIUSCOLO, sezioni
+  numerate 1–9): stessa pipeline con `--docx "III anno.docx" "IV anno.docx"` (+ `--aggiorna` per le guide
+  esistenti; usa `textutil`, quindi macOS). Il modello non copia il syllabus ufficiale (poi
+  `programmi-ufficiali.mjs` mette il Programma del catalogo e sposta le note in "Sul programma"), usa i
+  nomi dei moduli esistenti (gli `id` dei voti si abbinano per nome) e trasforma "[DA INTEGRARE]" in
+  "Informazioni da verificare". Titolo, codice ESSE3, CFU, autore e link restano quelli del sito.
+  Dopo l'import: `node scripts/programmi-ufficiali.mjs`, poi rileggere le guide toccate.
 - Tempo di studio e difficoltà **mostrati sono solo quelli votati dagli studenti** (feedback, extra):
   le stime scritte nelle guide (`study_time`, `fascia_studio`, `difficolta`) restano nei dati ma non si
   mostrano più (niente etichetta RAPPR. nell'istogramma). L'import continua a compilarle per modulo

@@ -1,12 +1,22 @@
 id: g-krp5gsa0
 title: Malattie del Sangue
+esse3_codice: "501781"
 anno_di_corso: III Anno
+cfu_totali: 5
 moduli:
   - nome_modulo: Malattie del Sangue
     id: m-v0jgxqro
     exam_type: Scritto
-    study_time: 15 giorni circa
-    exam_details: L’esame consiste in uno scritto composto da 60 crocette. Le crocette spesso consistono in emocromi da interpretare soprattutto sulle varie anemie, leucemie e linfomi. Ci sono poi esercizi riguardanti la coagulazione del sangue e quesiti riguardo i geni responsabili delle patologie. Per ogni risposta sbagliata è prevista una penalità di -0,25.
+    study_time: circa 15 giorni
+    exam_details: |-
+      L'esame consiste in uno scritto composto da 60 domande a risposta multipla. Le domande comprendono principalmente:
+
+      - interpretazione di emocromi, soprattutto relativi alle diverse forme di anemia;
+      - emocromi e quesiti relativi a leucemie e linfomi;
+      - esercizi riguardanti la coagulazione del sangue;
+      - quesiti sui geni responsabili delle diverse patologie.
+
+      Per ogni risposta sbagliata è prevista una penalità di −0,25 punti.
     program: |-
       **Argomenti da studiare per la preparazione dell’esame:**
 
@@ -108,11 +118,42 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Sul syllabus è presente tutto il programma. Prestare particolare attenzione alle diagnosi differenziali delle patologie e ai geni.
+      Il syllabus contiene il programma completo dell'esame. Nella preparazione è particolarmente importante prestare attenzione a:
 
-      Le sbobine più recenti sono sufficienti per preparare l’esame. È necessario svolgere le prove degli anni precedenti, anche per capire il meccanismo di risoluzione degli emocromi. Esiste una dispensa di vecchi quesiti molto utili per imparare il meccanismo; circolano inoltre vari file di domande più recenti, tra cui anche le prove del corso Harvey, che spesso si ripetono all’esame.
+      - diagnosi differenziali delle diverse patologie;
+      - geni responsabili delle patologie.
+
+      Le sbobine più recenti sono sufficienti per preparare l'esame. È fondamentale svolgere le prove degli anni precedenti, sia per esercitarsi sia per comprendere il meccanismo di risoluzione degli emocromi. In particolare, è disponibile una dispensa di vecchi quesiti molto utile per imparare il metodo di interpretazione degli emocromi. Circolano inoltre diversi file con domande più recenti, tra cui le prove del corso Harvey, che vengono spesso riproposte all'esame.
+      Consigli pratici:
+
+      - Studiare il programma completo indicato nel syllabus.
+      - Non limitarsi allo studio teorico: è fondamentale esercitarsi con gli emocromi.
+      - Utilizzare la dispensa dei vecchi quesiti per imparare il metodo di interpretazione degli emocromi.
+      - Svolgere le prove degli anni precedenti.
+      - Controllare anche i file di domande più recenti e le prove Harvey, perché alcune domande possono ripetersi.
+      - Considerare la penalizzazione di −0,25 per le risposte errate quando ci si esercita con i quiz.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Emocromi: Interpretazione degli emocromi, soprattutto nelle diverse anemie
+      - Ematologia oncologica: Leucemie e linfomi
+      - Coagulazione: Esercizi e quesiti sulla coagulazione del sangue
+      - Genetica: Geni responsabili delle patologie
+      - Diagnosi differenziale: Distinzione tra le diverse patologie ematologiche
+      - Domande ricorrenti: Prove degli anni precedenti e prove Harvey
+    professors:
+      - nome: Luca Malcovati
+        email: luca.malcovati@unipv.it
+        stile: Titolare del corso
+      - nome: Luca Arcaini
+        email: luca.arcaini@unipv.it
+      - nome: Marco Paulli
+        email: marco.paulli@unipv.it
+      - nome: Elisa Rumi
+        email: elisa.rumi@unipv.it
     fascia_studio: 1–2 sett
+info_da_verificare:
+  - campo: Frequenza
+    nota: "[DA INTEGRARE]"
 aggiornato_da: Lisa Ceci
-esse3_codice: "501781"
-cfu_totali: 5
-ultimo_aggiornamento: 2026-10-04
+ultimo_aggiornamento: 2026-10-05

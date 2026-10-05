@@ -1,14 +1,31 @@
 id: g-ug99qebv
 title: Malattie cutanee e Chirurgia plastica
+esse3_codice: "501802"
 anno_di_corso: IV Anno
-descrizione_generale: "L'esame è composto da due moduli: Dermatologia e Chirurgia plastica. Entrambe le parti sono orali. Per completare l'esame è necessario superare entrambi i moduli mantenendoli entro una distanza massima di un appello (es. Dermatologia a giugno e Chirurgia plastica a luglio)."
+cfu_totali: 4
+descrizione_generale: |-
+  L'esame è composto da due moduli: **Dermatologia** e **Chirurgia plastica**. Entrambe le parti prevedono un esame orale.
+
+  **Per completare l'esame è necessario sostenere Dermatologia e Chirurgia plastica entro una distanza massima di un appello.** Ad esempio: Dermatologia → appello di giugno; Chirurgia plastica → appello di luglio → ✅.
+
+  Il calcolo del voto finale non è specificato (vedi info_da_verificare).
 moduli:
   - nome_modulo: Dermatologia
     id: m-a12glpvn
     exam_type: Orale
     study_time: 1 mese
     preappello: No
-    exam_details: "Esame orale. Studenti chiamati in ordine, indicativamente alfabetico. Modalità varia per docente: 2-3 domande dirette, oppure vetrino, immagine di lesione o caso clinico. Importante parlare in modo ampio e ordinato. Preappelli non previsti. Organizzazione variabile: docenti possono arrivare in momenti diversi, con possibili variazioni e ritardi negli orari."
+    exam_details: |-
+      L'esame è **orale**. Gli studenti vengono generalmente chiamati in ordine, indicativamente secondo l'ordine alfabetico. La modalità dell'interrogazione varia molto in base al docente. L'esame può consistere in:
+
+      - 2-3 domande dirette;
+      - presentazione di un vetrino;
+      - presentazione di un'immagine di una lesione;
+      - una sorta di caso clinico, sul quale viene chiesto allo studente di ragionare.
+
+      È quindi importante essere in grado di parlare dell'argomento in maniera ampia e ordinata, fornendo le informazioni pertinenti e dimostrando una visione complessiva della patologia.
+
+      **Preappelli:** Non sono previsti preappelli regolari. L'organizzazione degli esami può essere piuttosto variabile: i diversi docenti possono arrivare in momenti differenti della giornata e gli orari effettivi dell'interrogazione possono quindi subire variazioni e ritardi.
     program: |-
       Per i programmi dei moduli di Malattie Cutanee e Chirurgia Pastica si rimanda ai rispettivi Syllabi.
 
@@ -123,9 +140,46 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Programma molto vasto, senza argomenti richiesti sistematicamente. Le domande variano molto in base al docente. Particolare attenzione a unghie e capelli; il sarcoma di Kaposi, pur talvolta considerato secondario, viene richiesto abbastanza frequentemente. Studiare anche gli argomenti indicati come meno rilevanti.
+      Il programma è molto vasto e non ci sono argomenti che vengano richiesti sistematicamente più di altri. La scelta delle domande può variare molto in base al docente che interroga. È comunque consigliabile prestare particolare attenzione agli argomenti presenti nelle sbobine. In particolare, vengono richiesti frequentemente gli argomenti relativi a unghie e capelli. È importante non trascurare neppure gli argomenti considerati meno rilevanti: ad esempio, il sarcoma di Kaposi può essere richiesto abbastanza frequentemente.
 
-      Fonte principale: sbobine a due colonne 2019-2020, integrate con argomenti dalle sbobine 2023-2024: infezioni sessualmente trasmissibili, dermatosi professionali (dermatite irritativa da contatto, dermatite allergica da contatto), patologie delle unghie, alopecia, seminario sulla terapia dermatologica. Dal Core Curriculum: Lichen, Leishmaniosi, Sarcoma di Kaposi, Tumori mesenchimali. Consiglio: non tralasciare gli argomenti poco richiesti.
+      La fonte principale utilizzata è costituita dalle **sbobine a due colonne 2019-2020**, da integrare con alcuni argomenti presenti nelle **sbobine 2023-2024**. In particolare, dalle sbobine 2023-2024 vanno aggiunti:
+
+      - Infezioni sessualmente trasmissibili
+      - Dermatosi professionali
+      - Dermatite irritativa da contatto
+      - Dermatite allergica da contatto
+      - Patologie delle unghie
+      - Alopecia
+      - Seminario sulla terapia dermatologica
+
+      Dal **Core Curriculum** sono stati inoltre utilizzati:
+
+      - Lichen
+      - Leishmaniosi
+      - Sarcoma di Kaposi
+      - Tumori mesenchimali
+
+      Questi ultimi argomenti risultano generalmente meno frequenti, ma il sarcoma di Kaposi, in particolare, può essere richiesto abbastanza spesso.
+
+      Consigli: studiare in maniera completa, senza basarsi esclusivamente su una lista di argomenti frequenti; prestare attenzione a unghie e capelli; studiare bene gli argomenti presenti nelle sbobine; non trascurare gli argomenti indicati come meno frequenti; prestare particolare attenzione al sarcoma di Kaposi; prepararsi a modalità di interrogazione diverse.
+    body: |-
+      **Domande e argomenti ricorrenti**
+      Non esiste un elenco di domande che venga riproposto sistematicamente: la scelta dipende molto dal docente che interroga. Tra gli argomenti che possono essere richiesti frequentemente:
+
+      - Unghie
+      - Capelli
+      - Alopecia
+      - Infezioni sessualmente trasmissibili
+      - Dermatiti da contatto
+      - Terapia dermatologica
+      - Sarcoma di Kaposi
+
+      È quindi consigliabile non trascurare gli argomenti apparentemente meno importanti, perché possono comunque essere oggetto di domanda.
+    professors:
+      - nome: Stefania Barruscotti
+        email: stefania.barruscotti@unipv.it
+      - nome: Carlo Francesco Tomasini
+        email: carlofrancesco.tomasini@unipv.it
     fascia_studio: 3–4 sett
   - nome_modulo: Chirurgia plastica
     id: m-r3ai30ir
@@ -133,7 +187,10 @@ moduli:
     study_time: 20 giorni – 1 mese
     preappello: No
     frequenza: Facoltativa
-    exam_details: Esame orale. Lo studente può essere interrogato da Nicoletti, dal docente del corso o da una specializzanda. Generalmente un paio di domande sugli argomenti delle sbobine. Studenti chiamati in ordine di iscrizione. Preappelli non previsti.
+    exam_details: |-
+      Anche l'esame di Chirurgia plastica è **orale**. Lo studente può essere interrogato da **Nicoletti**, dal docente del corso o da una specializzanda. Generalmente vengono poste un paio di domande sugli argomenti presenti nelle sbobine. Gli studenti vengono chiamati indicativamente in ordine di iscrizione.
+
+      **Preappelli:** Non sono previsti preappelli.
     program: |-
       Per i programmi dei moduli di Malattie Cutanee e Chirurgia Pastica si rimanda ai rispettivi Syllabi.
 
@@ -212,18 +269,23 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Programma interamente coperto dalle sbobine principali. Integrare con la sindrome del tunnel carpale, studiabile dal libro di testo/programmazione d'esame.
+      Il programma è sostanzialmente coperto dalle sbobine principali. È necessario integrare lo studio con la **sindrome del tunnel carpale**, presente anche nelle sbobine più recenti ma ulteriormente consultabile sul libro di testo.
 
-      Fonte principale: sbobine a due colonne 2019-2020, sufficienti per la preparazione. Aggiungere dal Faga la sindrome del tunnel carpale (presente anche nelle sbobine più recenti, ma integrabile dal libro).
+      La fonte principale sono le **sbobine a due colonne 2019-2020**, che coprono sostanzialmente l'intero programma. Va aggiunta dal **Faga** la **sindrome del tunnel carpale**. L'argomento è presente anche nelle sbobine più recenti, ma può essere ulteriormente integrato dal libro. Non sembra quindi necessario integrare massicciamente il materiale con altre fonti.
+    body: |-
+      **Domande e argomenti ricorrenti**
+      Le domande sono generalmente abbastanza dirette e vertono sugli argomenti trattati nelle sbobine. La **sindrome del tunnel carpale** è un argomento da integrare specificamente nella preparazione.
     professors:
-      - nome: Nicoletti
+      - nome: Giovanni Nicoletti
+        email: giovanni.nicoletti@unipv.it
+        stile: Può interrogare; generalmente un paio di domande sugli argomenti delle sbobine.
     fascia_studio: 3–4 sett
 info_da_verificare:
-  - campo: Regola superamento moduli
-    nota: Formulazione esatta della regola e cosa succede se si supera un appello di distanza.
+  - campo: Frequenza Dermatologia
+    nota: La scheda riporta che la frequenza non sembra essere particolarmente rigida; verificare se è obbligatoria, consigliata o facoltativa.
+  - campo: Regola distanza tra i moduli
+    nota: Formulazione esatta della regola e cosa succede se tra i due moduli trascorre più di un appello.
   - campo: Media dell'esame
     nota: Da integrare.
 aggiornato_da: Sara Cocci
-esse3_codice: "501802"
-cfu_totali: 4
-ultimo_aggiornamento: 2026-10-04
+ultimo_aggiornamento: 2026-10-05

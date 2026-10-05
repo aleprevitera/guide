@@ -13,6 +13,9 @@
 //   node scripts/importa-notion.mjs --rifai    # ignora la cache delle risposte
 //   node scripts/importa-notion.mjs --elenco   # mostra solo cosa verrebbe importato
 //   node scripts/importa-notion.mjs --aggiorna --solo "Titolo"  # riscrive da Notion una guida esistente
+//   node scripts/importa-notion.mjs --docx "III anno.docx" "IV anno.docx" [--aggiorna]
+//                                    # sorgente: documenti Word dei rappresentanti (un
+//                                    # esame per titolo in MAIUSCOLO, anno da "TERZO ANNO")
 //
 // Chiave: OPENROUTER_API_KEY nell'ambiente o in .env (mai nel repo).
 //
@@ -24,6 +27,7 @@
 // e controllo anti-invenzione su numeri e link.
 
 import fs from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import YAML from 'yaml';
@@ -47,6 +51,7 @@ const RIFAI = args.includes('--rifai');
 const SOLO = args.includes('--solo') ? args[args.indexOf('--solo') + 1] : null;
 const ELENCO = args.includes('--elenco');
 const AGGIORNA = args.includes('--aggiorna');
+const DOCX = args.includes('--docx') ? args.filter((a) => a.toLowerCase().endsWith('.docx')) : null;
 
 // --- Vincoli condivisi con src/content/config.ts e src/lib/fasce.ts --------
 
@@ -143,6 +148,57 @@ async function leggiIndice() {
   }
   return schede;
 }
+
+// --- 1 bis. Documenti Word (--docx) -----------------------------------------
+// Un file per anno: riga "TERZO ANNO", poi un esame per titolo tutto in
+// maiuscolo (es. "MALATTIE DEL SANGUE") seguito dalle sezioni numerate.
+// Esami "Mancante" / "In fase di scrittura" si scartano per lunghezza.
+
+function testoDocx(file) {
+  try {
+    return execFileSync('textutil', ['-convert', 'txt', '-stdout', file], { encoding: 'utf8', maxBuffer: 50 * 1024 * 1024 });
+  } catch {
+    throw new Error(`Impossibile leggere ${file}: serve textutil (macOS) per convertire i .docx.`);
+  }
+}
+
+const TITOLO_DOCX = /^[A-ZÀ-Ü’' ]+(?: \d+)?$/;
+const titoloLeggibile = (s) => s.charAt(0) + s.slice(1).toLowerCase();
+
+async function leggiDocx(files) {
+  const schede = [];
+  for (const file of files) {
+    let anno = null, corrente = null;
+    const chiudi = () => {
+      if (corrente) schede.push({ ...corrente, corpo: corrente.righe.join('\n').trim(), stato: 'Fatto' });
+      corrente = null;
+    };
+    for (const grezza of testoDocx(file).split(/\r?\n/)) {
+      const riga = grezza.trim();
+      const sezione = riga.match(/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/);
+      if (sezione) { chiudi(); anno = ANNI[sezione[1]]; continue; }
+      if (riga.length >= 5 && TITOLO_DOCX.test(riga)) {
+        if (corrente?.nomeDocx === riga) continue; // titolo ripetuto
+        chiudi();
+        corrente = { nome: titoloLeggibile(riga), nomeDocx: riga, anno, file: path.basename(file), righe: [] };
+        continue;
+      }
+      corrente?.righe.push(grezza.replace(/\s+$/, ''));
+    }
+    chiudi();
+  }
+  return schede;
+}
+
+const ISTRUZIONI_DOCX = `
+
+Regole aggiuntive per questa scheda (documento dei rappresentanti, sezioni numerate 1-9):
+- "Syllabus ufficiale": NON copiarlo. Il programma ufficiale lo inserisce il sito dal catalogo dell'università. In program metti solo le note dei rappresentanti sul programma (cosa curare di più, cosa integrare, cosa non viene chiesto); se non ce ne sono, "Programma da confermare." SENZA aggiungere elementi in info_da_verificare per questo.
+- "Offerta formativa": ignorala (il link lo aggiunge il sito).
+- "Professori e contatti": nome e cognome completi ed email di ciascun docente; il titolare va indicato in stile solo se non c'è altro ("Titolare del corso").
+- "Domande e argomenti ricorrenti": in body, come elenco introdotto da **Domande e argomenti ricorrenti** (per modulo).
+- "[DA INTEGRARE]" o "[DA VERIFICARE]": un elemento in info_da_verificare (campo = cosa manca, nota = dettaglio), e nient'altro nel campo corrispondente.
+- Avvertenze importanti (propedeuticità, rifiuto del voto, puntualità, tirocini): in exam_details o descrizione_generale, in **grassetto** l'essenziale.`;
 
 // --- 2. Guide esistenti (per sostituire i segnaposto mantenendo gli id) -----
 
@@ -365,7 +421,7 @@ async function chiamaModello(chiave, messaggi) {
 }
 
 async function estrai(chiave, scheda) {
-  const hash = crypto.createHash('sha256').update(MODELLO + ISTRUZIONI + JSON.stringify(SCHEMA_JSON) + scheda.corpo).digest('hex').slice(0, 16);
+  const hash = crypto.createHash('sha256').update(MODELLO + ISTRUZIONI + (scheda.nomeDocx ? ISTRUZIONI_DOCX : '') + JSON.stringify(SCHEMA_JSON) + JSON.stringify(scheda.moduliEsistenti ?? []) + scheda.corpo).digest('hex').slice(0, 16);
   const fileCache = path.join(DIR_CACHE, `${slugify(scheda.nome)}-${hash}.json`);
   if (!RIFAI) {
     try {
@@ -373,9 +429,12 @@ async function estrai(chiave, scheda) {
     } catch {}
   }
 
+  const vincoloModuli = scheda.moduliEsistenti?.length
+    ? `\nLa guida esiste già con questi moduli: ${scheda.moduliEsistenti.map((n) => `"${n}"`).join(', ')}. Usa esattamente questi nomi_modulo (stesso numero e stesso nome), raccogliendo in ciascuno le sue informazioni.`
+    : '';
   const messaggi = [
-    { role: 'system', content: ISTRUZIONI },
-    { role: 'user', content: `Scheda "${scheda.nome}" (${scheda.anno}). Restituisci il json.\n\n<scheda>\n${scheda.corpo}\n</scheda>` },
+    { role: 'system', content: ISTRUZIONI + (scheda.nomeDocx ? ISTRUZIONI_DOCX : '') },
+    { role: 'user', content: `Scheda "${scheda.nome}" (${scheda.anno}).${vincoloModuli} Restituisci il json.\n\n<scheda>\n${scheda.corpo}\n</scheda>` },
   ];
   let costo = 0, token = 0, ultimoErrore = '', modello = MODELLO;
   for (let t = 1; t <= TENTATIVI; t++) {
@@ -451,10 +510,13 @@ function controllaTempo(guida, sorgente) {
 // Campi gestiti in Decap (Notion non li riporta): se la scheda non li indica,
 // si conserva il valore già presente nella guida, così l'import non cancella
 // link, CFU e dati della scheda inseriti dai rappresentanti.
-const CAMPI_DECAP_GUIDA = ['sottotitolo', 'cfu_totali', 'link_sbobine_generale', 'link_whatsapp_generale'];
-const CAMPI_DECAP_MODULO = ['cfu', 'semestre', 'preappello', 'frequenza', 'durata_orale_min', 'link_sbobine', 'link_whatsapp', 'google_sheet_url'];
+const CAMPI_DECAP_GUIDA = ['sottotitolo', 'cfu_totali', 'esse3_codice', 'link_sbobine_generale', 'link_whatsapp_generale'];
+const CAMPI_DECAP_MODULO = ['cfu', 'semestre', 'preappello', 'frequenza', 'durata_orale_min', 'esse3_appello', 'link_sbobine', 'link_whatsapp', 'google_sheet_url'];
 
 function componiYaml(scheda, guida, esistente) {
+  // Guida già nel sito: il titolo resta quello di Decap (il documento lo ha in maiuscolo).
+  if (esistente && !esistente.riservato) guida.title = esistente.dati.title;
+  else if (scheda.nomeDocx) guida.title = scheda.nome;
   // Esame a modulo unico: il modulo si chiama come l'esame (convenzione del sito).
   if (guida.moduli.length === 1) guida.moduli[0].nome_modulo = guida.title;
   const idModuliEsistenti = new Map((esistente?.dati.moduli ?? []).map((m) => [chiaveTitolo(m.nome_modulo), m.id]));
@@ -483,6 +545,7 @@ function componiYaml(scheda, guida, esistente) {
   const dati = pulisci({
     id: esistente?.dati.id ?? idCasuale('g'),
     title: guida.title,
+    esse3_codice: guida.esse3_codice,
     sottotitolo: guida.sottotitolo,
     anno_di_corso: scheda.anno,
     cfu_totali: guida.cfu_totali,
@@ -491,7 +554,7 @@ function componiYaml(scheda, guida, esistente) {
     descrizione_generale: moduli.length > 1 ? normalizzaMd(guida.descrizione_generale) : null,
     moduli,
     info_da_verificare: guida.info_da_verificare.map(pulisci),
-    aggiornato_da: scheda.autore,
+    aggiornato_da: scheda.autore ?? esistente?.dati.aggiornato_da,
   });
   // ultimo_aggiornamento come data YAML semplice (z.date() nello schema Astro).
   const testo = YAML.stringify(dati, { lineWidth: 0, blockQuote: 'literal' });
@@ -500,10 +563,16 @@ function componiYaml(scheda, guida, esistente) {
 
 // --- Main -------------------------------------------------------------------
 
-const tutte = await leggiIndice();
+const tutte = DOCX ? await leggiDocx(DOCX) : await leggiIndice();
 const pronte = tutte.filter((s) => s.stato === 'Fatto' && s.corpo.length >= MIN_CARATTERI && (!SOLO || s.nome === SOLO));
 const scartate = tutte.filter((s) => !pronte.includes(s) && (!SOLO || s.nome === SOLO));
 const esistenti = await leggiEsistenti();
+// Moduli della guida esistente: il modello deve riusarne i nomi (gli id, chiave
+// dei voti, si abbinano per nome).
+for (const s of tutte) {
+  const e = esistenti.get(chiaveTitolo(s.nome));
+  if (e) s.moduliEsistenti = e.dati.moduli.map((m) => m.nome_modulo);
+}
 // Guide già pubblicate (non solo id riservati): si modificano in Decap.
 const giaNelSito = (s) => {
   const e = esistenti.get(chiaveTitolo(s.nome));
@@ -541,6 +610,9 @@ const esiti = await limitaConcorrenza(daImportare, CONCORRENZA, async (scheda) =
     await fs.mkdir(path.dirname(dest), { recursive: true });
     await fs.writeFile(dest, yaml);
     const avvisi = [...avvisiTempo, ...sospetti(r.guida, scheda.corpo)];
+    // Moduli esistenti non ritrovati: perderebbero l'id e quindi i voti.
+    const nuoviNomi = new Set(r.guida.moduli.map((m) => chiaveTitolo(m.nome_modulo)));
+    for (const n of scheda.moduliEsistenti ?? []) if (!nuoviNomi.has(chiaveTitolo(n)) && !(r.guida.moduli.length === 1 && scheda.moduliEsistenti.length === 1)) avvisi.push(`modulo esistente "${n}" non ritrovato: id nuovo`);
     log(`✓ ${scheda.nome} → ${nomeFile}${esistente ? (esistente.riservato ? ' (id riservati)' : ' (riscritta, --aggiorna)') : ''} · ${r.guida.moduli.length} moduli · ${r.daCache ? 'cache' : `${r.tentativi} tent., ${((Date.now() - t0) / 1000).toFixed(1)}s`}${avvisi.length ? ` · ⚠ ${avvisi.length} avvisi` : ''}`);
     return { scheda: scheda.nome, file: nomeFile, ok: true, sostituisce: !!esistente, moduli: r.guida.moduli.map((m) => m.nome_modulo), daVerificare: r.guida.info_da_verificare.length, avvisi, costo: r.daCache ? 0 : r.costo, token: r.daCache ? 0 : r.token, modello: r.modello };
   } catch (e) {

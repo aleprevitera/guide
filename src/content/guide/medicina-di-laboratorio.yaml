@@ -1,18 +1,23 @@
 id: g-hxm7b57t
 title: Medicina di Laboratorio
+esse3_codice: "501773"
 anno_di_corso: III Anno
+cfu_totali: 5
 moduli:
   - nome_modulo: Medicina di Laboratorio
     id: m-snews6i7
     study_time: 15-20 giorni
     exam_details: |-
-      L’esame può essere sostenuto in due modalità:
+      L'esame può essere sostenuto secondo due modalità:
 
-      1. **Parziale + completamento**: è possibile sostenere un esame parziale, solitamente verso metà/fine aprile, sugli argomenti spiegati fino alla lezione antecedente il parziale. Nel mese di maggio bisogna seguire il Journal Club, un’attività a gruppi di massimo 10 persone che consiste nel presentare un *paper* scelto dai professori. Il completamento dell’esame deve avvenire il prima possibile (entro la fine della sessione estiva), con un esame orale sugli argomenti delle lezioni successive al parziale. Tuttavia, nell’a.a. 2025/26, dato l’elevato numero di iscritti all’esame di completamento a giugno, la Prof.ssa Balduini ha deciso di optare per un esame scritto che prevedeva la descrizione dell’iter diagnostico da seguire davanti a un caso clinico proposto.
-      2. **Esame intero orale**: è possibile sostenere l’intero esame in formato orale, tendenzialmente con gli assistenti.
+      - **Modalità 1 – Parziale + completamento**: è possibile sostenere un esame parziale, solitamente a metà/fine aprile, sugli argomenti spiegati fino alla lezione precedente al parziale. Nel mese di maggio è previsto il Journal Club, un'attività a gruppi di massimo 10 persone che consiste nella presentazione di un paper scelto dai professori. Il completamento dell'esame deve essere sostenuto il prima possibile e comunque entro la fine della sessione estiva, sugli argomenti delle lezioni successive al parziale. Nell'a.a. 2025/26, a causa dell'elevato numero di iscritti all'esame di completamento di giugno, la prof.ssa Balduini ha modificato la modalità di completamento, proponendo uno scritto in cui veniva richiesto di descrivere l'iter diagnostico da seguire davanti a un caso clinico.
+      - **Modalità 2 – Esame completo**: è possibile sostenere direttamente l'intero esame in forma orale, generalmente con gli assistenti.
 
-      In entrambe le modalità, analogamente all’esame di Patologia Generale, i professori danno particolare importanza al contenuto, penalizzando chi risulta troppo prolisso.
-      Attenzione: dall’a.a. 2022/23 l’esame di Patologia Generale è propedeutico a Medicina di Laboratorio. A volte risulta complicato darli nella stessa sessione poiché le Prof.sse di Patologia possono essere lente nella correzione degli esami. La Prof.ssa Balduini in genere permette a chi non ha ancora ricevuto gli esiti di Patologia di sostenere il suo esame e mantenere in sospeso il voto fino a quando non viene verbalizzato l’esame di Patologia Generale.
+      Durante le prove viene data particolare importanza alla pertinenza e al contenuto delle risposte, penalizzando gli studenti che risultano eccessivamente prolissi.
+
+      **Propedeuticità con Patologia Generale**: dall'a.a. 2022/23, l'esame di Patologia Generale è propedeutico a Medicina di Laboratorio. Questo può rendere complicato sostenere i due esami nella stessa sessione, poiché le professoresse di Patologia Generale possono impiegare diverso tempo per la correzione degli esami. La prof.ssa Balduini generalmente permette comunque agli studenti che non hanno ancora ricevuto l'esito di Patologia Generale di sostenere Medicina di Laboratorio, mantenendo il voto in sospeso fino alla verbalizzazione dell'esame di Patologia.
+
+      In caso di esame scritto basato su un caso clinico, è importante saper impostare correttamente l'iter diagnostico di laboratorio a partire dal caso proposto.
     program: |-
       •Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
 
@@ -71,19 +76,24 @@ moduli:
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10669/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: |-
-      - Ad oggi, le sbobine più complete sono quelle relative all’anno accademico 2020-2021.
-      - È sufficiente studiare sulle sbobine dell’anno corrente integrate con le slide fornite dai professori tramite la piattaforma Kiro.
-      - Si consiglia, però, di integrare con le sbobine dell’anno precedente gli argomenti che talvolta non vengono affrontati, ma che possono essere oggetto di esame.
-    body: Se dovete contattare i prof., scrivete a tutti e tre, dato che Malara e Di Buduo leggono più spesso le email.
+      - Sbobine dell'a.a. 2020-21 sono le più complete.
+      - Per la preparazione è sufficiente utilizzare le sbobine dell'anno corrente e le slide fornite dai professori tramite Kiro.
+      - È consigliabile integrare con le sbobine dell'anno precedente gli argomenti che talvolta non vengono affrontati durante le lezioni, ma che possono comunque essere oggetto d'esame.
+      - Prestare attenzione alla modalità di risposta: i professori danno importanza al contenuto e alla capacità di arrivare al punto, penalizzando le risposte eccessivamente prolisse.
+    body: "Per contattare i docenti: è consigliabile scrivere a tutti e tre i professori, poiché Malara e Di Buduo leggono più frequentemente le email."
     professors:
       - nome: Alessandra Balduini
         email: alessandra.balduini@unipv.it
+        stile: Titolare del corso
       - nome: Alessandro Malara
         email: alessandro.malara@unipv.it
       - nome: Christian Di Buduo
         email: christian.dibuduo@unipv.it
     fascia_studio: 3–4 sett
+info_da_verificare:
+  - campo: Frequenza
+    nota: Da integrare
+  - campo: Domande e argomenti ricorrenti
+    nota: Da integrare – elenco delle domande e degli argomenti maggiormente ricorrenti agli appelli precedenti.
 aggiornato_da: Luiza Leshi
-esse3_codice: "501773"
-cfu_totali: 5
-ultimo_aggiornamento: 2026-10-04
+ultimo_aggiornamento: 2026-10-05
