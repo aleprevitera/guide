@@ -116,6 +116,9 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   Facile/Medio/Difficile/Estremo (1–4 teschietti). Pannello "Parere degli studenti" per modulo; scheda
   esame e card mostrano il verdetto con accesso (card: modulo "peggiore"), il lucchetto senza.
   Dopo il voto le altre scelte spariscono: restano quella fatta e "Cambia voto" (classe `.cambia-voto`).
+- `public.elimina_account()` — `SECURITY DEFINER` **voluto** (l'utente non può cancellare `auth.users`):
+  senza parametri, cancella solo `auth.uid()` e a cascata i suoi feedback; niente `anon`. Pulsante in
+  `/privacy/#elimina` (`EliminaAccount.astro`, `eliminaAccount()` in `src/lib/auth.ts`).
 - `public.hook_solo_account_ateneo(event)` — hook Auth "Before User Created": rifiuta domini diversi.
 - **Regola: extra = feedback = solo per chi ha fatto l'accesso.** Ogni nuovo feedback segue lo stesso
   modello (dati su Supabase, niente accesso `anon`), non si nasconde contenuto statico via JS.
@@ -125,6 +128,16 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - Test delle policy: blocco `DO` che simula ruoli con `set local role` + `request.jwt.claims` e chiude
   con `raise exception` per fare rollback (nessun dato di prova resta nel DB).
 - Nel client solo la chiave **publishable** (`src/lib/supabase.ts`). Mai secret / service_role nel repo.
+
+## Privacy
+
+- Informativa in `src/pages/privacy.astro` (link nel footer e nella finestra di benvenuto). Descrive il
+  funzionamento reale: **ogni modifica che tocca dati personali** (nuovo feedback, nuovo fornitore, cookie,
+  statistiche, script esterni) si accompagna all'aggiornamento della pagina e di `AGGIORNATA_IL`.
+- Solo strumenti tecnici (cookie di sessione `guide_benvenuto`, sessione Supabase in localStorage):
+  niente banner. Niente script di terze parti per i visitatori: il widget Netlify Identity si scarica
+  solo con un token d'invito nell'URL (`src/pages/index.astro`).
+- Titolari: i due creatori. Supabase in UE.
 
 ## Accesso studenti (Google)
 
@@ -211,6 +224,7 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   (`m-0v8s8vwa`), inseriti il 2026-10-04 per vedere l'output. Si rimuovono con
   `delete from auth.users where raw_app_meta_data ->> 'simulato' = 'true';` (i voti vanno via in cascata).
 
+- **Email di contatto privacy** in `src/pages/privacy.astro` (`CONTATTO`, ora segnaposto): da inserire prima del merge.
 - Testo della lettera (firme già inserite: Francesco Ruspino, Alessandro Gavino Previtera).
 - Configurazione Google + hook in dashboard Supabase, poi prova del voto reale sul deploy preview.
 - Merge della PR #1 (`redesign-pixel`).

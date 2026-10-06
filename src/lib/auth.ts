@@ -118,6 +118,22 @@ export async function esci(): Promise<void> {
   annuncia(nuovo);
 }
 
+/**
+ * Elimina l'account dello studente e, a cascata, tutti i suoi feedback
+ * (funzione `elimina_account` su Supabase: cancella solo chi la chiama).
+ */
+export async function eliminaAccount(): Promise<{ errore: string | null }> {
+  const { supabase } = await caricaClient();
+  const { error } = await supabase.rpc('elimina_account');
+  if (error) return { errore: 'Non è stato possibile eliminare l’account. Riprova più tardi.' };
+  // L'utente non esiste più: si chiude solo la sessione locale.
+  await supabase.auth.signOut({ scope: 'local' });
+  const nuovo: StatoAuth = { session: null, appenaEntrato: false, errore: null };
+  stato = Promise.resolve(nuovo);
+  annuncia(nuovo);
+  return { errore: null };
+}
+
 /** Nome breve da mostrare (solo visualizzazione, mai per autorizzazioni). */
 export function nomeBreve(session: Session): string {
   const meta = session.user.user_metadata ?? {};

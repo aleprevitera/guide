@@ -1,0 +1,108 @@
+---
+// Cancellazione dell'account dal sito (pagina /privacy/). Con l'accesso:
+// pulsante con conferma in pagina (niente confirm() del browser); senza:
+// spiega che non ci sono dati personali da eliminare.
+const uid = `elimina-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<div class="elimina panel px-border px-border--warn" data-elimina aria-labelledby={`${uid}-titolo`} role="region">
+  <h2 class="elimina__titolo label" id={`${uid}-titolo`}>Elimina il tuo account</h2>
+
+  <p data-elimina-ospite>
+    Non hai fatto l’accesso da questo browser: qui non ci sono dati tuoi da eliminare. Se hai un account,
+    accedi e torna su questa pagina.
+  </p>
+
+  <div data-elimina-utente hidden>
+    <p>
+      Cancella subito e per sempre il tuo account (<strong data-elimina-email></strong>) e tutti i tuoi voti.
+      Le statistiche delle guide verranno ricalcolate senza i tuoi voti.
+    </p>
+    <button type="button" class="btn-px label" data-elimina-avvia>Elimina account e voti</button>
+    <div class="elimina__conferma" data-elimina-conferma hidden>
+      <p><strong>Sei sicuro?</strong> L’operazione non si può annullare.</p>
+      <div class="btn-row">
+        <button type="button" class="btn-px btn-px--pericolo label" data-elimina-ok>Elimina definitivamente</button>
+        <button type="button" class="btn-px label" data-elimina-annulla>Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="elimina__stato" tabindex="-1" role="status" aria-live="polite" data-elimina-stato></p>
+</div>
+
+<script>
+  import { eliminaAccount, EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+
+  for (const box of document.querySelectorAll<HTMLElement>('[data-elimina]')) {
+    const q = <T extends HTMLElement = HTMLElement>(s: string) => box.querySelector<T>(s)!;
+    const ospite = q('[data-elimina-ospite]');
+    const utente = q('[data-elimina-utente]');
+    const avvia = q<HTMLButtonElement>('[data-elimina-avvia]');
+    const conferma = q('[data-elimina-conferma]');
+    const ok = q<HTMLButtonElement>('[data-elimina-ok]');
+    const stato = q('[data-elimina-stato]');
+
+    const applica = ({ session }: StatoAuth) => {
+      ospite.hidden = !!session;
+      utente.hidden = !session;
+      q('[data-elimina-email]').textContent = session?.user.email ?? '';
+      conferma.hidden = true;
+      avvia.hidden = false;
+    };
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+
+    avvia.addEventListener('click', () => {
+      avvia.hidden = true;
+      conferma.hidden = false;
+      q<HTMLButtonElement>('[data-elimina-annulla]').focus();
+    });
+    q('[data-elimina-annulla]').addEventListener('click', () => {
+      conferma.hidden = true;
+      avvia.hidden = false;
+      avvia.focus();
+    });
+    ok.addEventListener('click', async () => {
+      ok.disabled = true;
+      stato.textContent = 'Eliminazione in corso…';
+      const { errore } = await eliminaAccount();
+      ok.disabled = false;
+      stato.textContent = errore ?? 'Account e voti eliminati.';
+      if (!errore) stato.focus();
+    });
+  }
+</script>
+
+<style>
+  .elimina {
+    margin: 32px 4px;
+  }
+  .elimina__titolo {
+    color: var(--warn);
+    margin: 0 0 12px;
+  }
+  .elimina p {
+    margin: 0 0 12px;
+  }
+  .elimina [hidden] {
+    display: none;
+  }
+  .elimina__conferma {
+    margin-top: 4px;
+  }
+  .btn-px--pericolo {
+    background: var(--warn);
+    color: var(--bg);
+  }
+  .elimina__stato:empty {
+    display: none;
+  }
+  .elimina__stato {
+    margin: 12px 0 0;
+    font-weight: 700;
+  }
+  @media (forced-colors: active) {
+    .btn-px--pericolo { outline: 2px solid CanvasText; }
+  }
+</style>

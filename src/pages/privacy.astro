@@ -1,0 +1,153 @@
+---
+// Informativa privacy (art. 13 GDPR). Descrive il funzionamento reale del
+// sito: se cambia qualcosa che tocca dati personali (nuovi feedback, nuovi
+// fornitori, statistiche...), va aggiornata insieme al codice, con la data.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EliminaAccount from '../components/common/EliminaAccount.astro';
+import { CHIAVE_SESSIONE } from '../lib/supabase-config';
+import { MIN_RISPOSTE } from '../lib/histogram';
+
+const AGGIORNATA_IL = new Date('2026-10-06');
+// TODO prima della pubblicazione: indirizzo email per la privacy.
+const CONTATTO = '[email da definire]';
+---
+
+<BaseLayout title="Informativa privacy" description="Come Guide Universitarie tratta i dati personali" aggiornamento={AGGIORNATA_IL}>
+  <article class="privacy">
+    <h1>Informativa privacy</h1>
+
+    <div class="privacy__breve panel px-border">
+      <h2 class="label">In breve</h2>
+      <ul>
+        <li>Puoi leggere tutte le guide <strong>senza account</strong>, senza cookie di profilazione e senza statistiche sulle visite.</li>
+        <li>L’accesso con l’account d’ateneo è <strong>facoltativo</strong>: serve solo per vedere e dare i pareri sugli esami (tempo di studio, difficoltà).</li>
+        <li>Agli altri studenti mostriamo solo <strong>conteggi anonimi</strong>, mai chi ha votato cosa.</li>
+        <li>Puoi <a href="#elimina">eliminare il tuo account e i tuoi voti</a> in qualsiasi momento, da questa pagina.</li>
+      </ul>
+    </div>
+
+    <h2>Chi tratta i dati</h2>
+    <p>
+      Guide Universitarie è un progetto di studenti, indipendente: <strong>non è un servizio ufficiale
+      dell’Università di Pavia</strong>. I dati sono trattati da Francesco Ruspino e Alessandro Gavino Previtera,
+      contitolari del trattamento, che hanno realizzato e gestiscono il sito.
+    </p>
+    <p>Per qualsiasi domanda o richiesta sui tuoi dati: <strong>{CONTATTO}</strong>.</p>
+
+    <h2>Quali dati trattiamo e perché</h2>
+
+    <h3>Se navighi senza accesso</h3>
+    <p>
+      Non raccogliamo dati su di te. Come ogni sito, il servizio di hosting (Netlify) registra per motivi
+      tecnici e di sicurezza i dati della richiesta: indirizzo IP, browser, pagina richiesta, data e ora.
+      <em>Base giuridica:</em> legittimo interesse a far funzionare e proteggere il sito (art. 6.1.f GDPR).
+    </p>
+
+    <h3>Se accedi con Google</h3>
+    <p>
+      L’accesso è possibile solo con un account <strong>@universitadipavia.it</strong>. Da Google riceviamo
+      indirizzo email, nome e immagine del profilo e un identificativo dell’account; il sistema di accesso
+      (Supabase) registra inoltre data e indirizzo IP degli accessi, per sicurezza. Il nome serve solo a
+      mostrarti che sei collegato; l’email a verificare che l’account sia dell’ateneo.
+      <em>Base giuridica:</em> fornirti il servizio che hai chiesto (art. 6.1.b GDPR); per i registri di accesso,
+      il legittimo interesse alla sicurezza (art. 6.1.f).
+    </p>
+
+    <h3>I tuoi pareri sugli esami</h3>
+    <p>
+      Per ogni parere salviamo il modulo d’esame, il tipo (tempo di studio o difficoltà), la risposta scelta e le
+      date di inserimento e modifica, collegati al tuo account: così puoi cambiare il voto e ognuno vota una volta
+      sola. Gli altri studenti vedono solo i totali per risposta, e la distribuzione compare solo da
+      {MIN_RISPOSTE} risposte in su. <em>Base giuridica:</em> fornirti il servizio (art. 6.1.b GDPR).
+    </p>
+
+    <h3>Rappresentanti che scrivono le guide</h3>
+    <p>
+      Chi modifica le guide lo fa con un account su invito (Netlify Identity: email, nome, password gestita da
+      Netlify). Le modifiche sono salvate nell’archivio del sito su GitHub con il nome dell’account; il nome
+      indicato come autore della guida compare in fondo alla guida stessa.
+    </p>
+
+    <h3>Docenti</h3>
+    <p>
+      Le guide riportano nomi e indirizzi email istituzionali dei docenti e indicazioni, scritte dagli studenti, su
+      come si svolge l’esame. Le date degli appelli e i programmi provengono dalle pagine pubbliche dell’ateneo
+      (ESSE3 e catalogo dei corsi), senza commissioni né iscritti. Per correzioni o rimozioni, scrivi a
+      {CONTATTO}.
+    </p>
+
+    <h2>Cookie e memoria del browser</h2>
+    <p>Usiamo solo strumenti <strong>tecnici</strong>, necessari al funzionamento: per questo non serve un banner di consenso.</p>
+    <ul>
+      <li><strong>Cookie <code>guide_benvenuto</code></strong>: ricorda che hai già visto la proposta di accesso; si cancella alla chiusura del browser.</li>
+      <li><strong>Memoria locale <code>{CHIAVE_SESSIONE}</code></strong>: la tua sessione di accesso, solo se accedi; si cancella quando esci.</li>
+      <li><strong>Memoria di sessione</strong>: il punto della pagina a cui tornare dopo l’accesso con Google; dura solo il tempo dell’accesso.</li>
+    </ul>
+    <p>Non usiamo cookie di profilazione, pubblicità, statistiche o pulsanti dei social.</p>
+
+    <h2>A chi affidiamo i dati</h2>
+    <p>Usiamo questi fornitori, che trattano i dati per nostro conto secondo i loro accordi sul trattamento dei dati:</p>
+    <ul>
+      <li><strong>Netlify</strong>: pubblicazione del sito e account dei rappresentanti.</li>
+      <li><strong>Supabase</strong>: accesso degli studenti e archivio dei pareri, su server nell’Unione europea.</li>
+      <li><strong>GitHub</strong>: archivio dei contenuti delle guide (solo dati dei rappresentanti e dei docenti già pubblicati).</li>
+    </ul>
+    <p>
+      <strong>Google</strong> gestisce l’accesso con il tuo account come titolare autonomo, secondo la propria
+      informativa. Alcuni fornitori hanno sede negli Stati Uniti: eventuali trasferimenti di dati fuori dall’Unione
+      europea avvengono con le garanzie previste dal GDPR (artt. 45–46: Data Privacy Framework o clausole
+      contrattuali standard). Non vendiamo né cediamo i dati a nessuno.
+    </p>
+
+    <h2>Per quanto tempo</h2>
+    <ul>
+      <li>Account e pareri: finché non elimini l’account, o finché il sito resta attivo.</li>
+      <li>Registri tecnici di hosting e di accesso: per il periodo limitato previsto dai fornitori.</li>
+    </ul>
+
+    <h2>I tuoi diritti</h2>
+    <p>
+      Puoi chiedere di accedere ai tuoi dati, correggerli, cancellarli, limitarne il trattamento, riceverli in un
+      formato leggibile (portabilità) o opporti al trattamento basato sul legittimo interesse (artt. 15–22 GDPR),
+      scrivendo a {CONTATTO}. Per cancellare account e voti non serve scriverci: usa il pulsante qui sotto.
+      Hai anche diritto di presentare reclamo al
+      <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>.
+    </p>
+
+    <div id="elimina">
+      <EliminaAccount />
+    </div>
+
+    <h2>Modifiche</h2>
+    <p>
+      Se il sito cambia in modo che riguarda i tuoi dati, aggiorniamo questa pagina: la data dell’ultima versione è
+      in fondo.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .privacy h2 {
+    margin-top: 32px;
+  }
+  .privacy h3 {
+    margin: 24px 0 8px;
+  }
+  .privacy__breve {
+    margin: 16px 4px 0;
+  }
+  .privacy__breve h2 {
+    margin: 0 0 12px;
+    color: var(--accent);
+  }
+  .privacy__breve ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .privacy code {
+    overflow-wrap: anywhere;
+  }
+  #elimina {
+    scroll-margin-top: 16px;
+  }
+</style>

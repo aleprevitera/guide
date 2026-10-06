@@ -15,6 +15,7 @@ const formatted = aggiornamento?.toLocaleDateString('it-IT', { year: 'numeric', 
       {autore && <> · {autore}</>}
     </p>
   )}
+  <p class="site-footer__link"><a href="/privacy/">Privacy</a></p>
   <p class="site-footer__firma">RUSPI <span class="site-footer__x">x</span> AGP</p>
 </footer>
 
@@ -29,8 +30,15 @@ const formatted = aggiornamento?.toLocaleDateString('it-IT', { year: 'numeric', 
   .site-footer p {
     margin: 0 0 8px;
   }
-  .site-footer__firma {
+  .site-footer__firma,
+  .site-footer__link {
     text-align: center;
+  }
+  .site-footer__link a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--caption);
   }
   /* La "x" resta minuscola nel footer tutto maiuscolo. */
   .site-footer__x {

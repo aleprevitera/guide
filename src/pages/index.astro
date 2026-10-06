@@ -38,18 +38,15 @@ import SearchBox from '../components/common/SearchBox.astro';
   }
 </style>
 
-<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script is:inline>
-  // Gli inviti/recuperi password di Netlify Identity atterrano sulla home
-  // del sito (SITE_URL/#invite_token=...): questo gestore apre il popup di
-  // attivazione e, dopo il login, porta l'utente su /admin/.
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on('init', (user) => {
-      if (!user) {
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      }
-    });
+  // Gli inviti/recuperi password di Netlify Identity (solo rappresentanti)
+  // atterrano sulla home (SITE_URL/#invite_token=...). Il widget si scarica
+  // solo in quel caso, non per ogni visitatore (vedi /privacy/): apre il popup
+  // di attivazione e, dopo il login, porta su /admin/.
+  if (/(invite|recovery|confirmation|email_change)_token=/.test(location.hash)) {
+    const s = document.createElement('script');
+    s.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+    s.onload = () => window.netlifyIdentity?.on('login', () => (document.location.href = '/admin/'));
+    document.head.append(s);
   }
 </script>
