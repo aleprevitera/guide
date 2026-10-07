@@ -1,6 +1,7 @@
-# Guide Universitarie — note di progetto
+# HowToGolgi — note di progetto
 
-Portale di guide pratiche per esame (Medicina, Università di Pavia), scritte dai
+**HowToGolgi** (nome deciso il 2026-10-07; in Silkscreen "HOWTO" + "GOLGI" in giallo): portale di guide
+pratiche per esame (Medicina, Università di Pavia), scritte dai
 rappresentanti degli studenti. Sito statico Astro con contenuti YAML gestiti da
 Decap CMS; feedback degli studenti (oggi: tempo di studio) su Supabase.
 Utenti in gran parte da telefono: **mobile first**. Tutto il codice, i commenti

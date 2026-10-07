@@ -1,4 +1,4 @@
-# Guide Universitarie
+# HowToGolgi
 
 Portale di guide pratiche per esame, compilato e mantenuto dai rappresentanti degli
 studenti tramite un CMS git-based (Decap CMS), con layout e struttura dati immutabili

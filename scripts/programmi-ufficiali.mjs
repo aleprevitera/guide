@@ -72,7 +72,7 @@ async function assegnaConModello(righe, moduli, titolo) {
     const testo = numerate.map((x) => `${x.i}: ${x.r}`).join('\n');
     const risposta = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
-      headers: { Authorization: `Bearer ${await chiaveApi()}`, 'Content-Type': 'application/json', 'X-Title': 'Guide Universitarie - programmi ufficiali' },
+      headers: { Authorization: `Bearer ${await chiaveApi()}`, 'Content-Type': 'application/json', 'X-Title': 'HowToGolgi - programmi ufficiali' },
       body: JSON.stringify({
         model: MODELLO,
         temperature: 0,

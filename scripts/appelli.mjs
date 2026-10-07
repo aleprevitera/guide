@@ -45,7 +45,7 @@ const OUT_JSON = join(RADICE, 'src/data/appelli.json');
 
 const BASE = 'https://studentionline.unipv.it/ListaAppelliOfferta.do';
 const SITO = 'https://studentionline.unipv.it/';
-const USER_AGENT = 'guide-universitarie/1.0 (guide dei rappresentanti degli studenti di Medicina UniPV; aggiornamento settimanale)';
+const USER_AGENT = 'howtogolgi/1.0 (guide dei rappresentanti degli studenti di Medicina UniPV; aggiornamento settimanale)';
 
 // Medicina e Chirurgia — Università di Pavia (configurazione del form ESSE3).
 const DIPARTIMENTO = { id: '10004', nome: 'DIPARTIMENTO DI MEDICINA INTERNA E TERAPIA MEDICA' };

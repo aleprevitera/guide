@@ -6,7 +6,7 @@ import AccountButton from './AccountButton.astro';
 <header class="site-header" style="view-transition-name: intestazione">
   <a class="site-header__logo" href="/">
     <PixelIcon name="book" size={32} class="site-header__book" />
-    <span class="label">Guide Universitarie</span>
+    <span class="label site-header__nome">HowTo<span class="site-header__golgi">Golgi</span></span>
   </a>
   <nav class="site-header__nav" aria-label="Principale">
     <a class="label" href="/guide/">Tutte le guide</a>
@@ -24,6 +24,10 @@ import AccountButton from './AccountButton.astro';
     max-width: 720px;
     margin: 0 auto;
     padding: 12px 16px;
+  }
+  /* Nome in Silkscreen (maiuscolo): "GOLGI" in giallo separa le due parole. */
+  .site-header__golgi {
+    color: var(--accent);
   }
   .site-header__logo {
     display: inline-flex;
