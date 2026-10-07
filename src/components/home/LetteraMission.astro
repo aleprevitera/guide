@@ -13,25 +13,25 @@ const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
   </div>
 
   <div class="lettera__corpo">
-    <p>Cara studentessa, caro studente,</p>
     <p>
-      Medicina è un percorso lungo, e una parte della fatica non sta nello studio, ma in tutto quello che gli
-      gira intorno: capire come funziona un esame, quali sbobine usare, quanto tempo serve, a chi chiedere.
-      Sono informazioni che esistono già, sparse tra chat, cartelle condivise e passaparola, e che ogni anno
-      qualcuno deve rimettere insieme da capo.
+      Medicina è un percorso lungo e faticoso. Gran parte della fatica, però, non sta nello studio; sta in tutto
+      quello che gli gira intorno: capire come funziona un esame, quali sbobine usare, quanto tempo serve, a chi
+      chiedere. Sono informazioni che esistono già, sparse tra chat, cartelle condivise e passaparola. E,
+      soprattutto, sono informazioni dinamiche, che cambiano costantemente e che non possono stare ai tempi delle
+      guide su rotocalco.
     </p>
     <p>
-      Queste guide nascono per mettere ordine: un solo posto, organizzato per anno e per semestre, dove
-      trovare ciò che serve per affrontare ogni esame, insieme al parere di chi l’ha già sostenuto. Meno tempo
-      a cercare, più tempo per studiare. E per tutto il resto.
+      Questo sito nasce proprio per mettere ordine: un unico posto, organizzato per anno e per semestre, dove
+      trovare ciò che serve per affrontare ogni esame. Il tutto con il vantaggio di poter ricevere aggiornamenti
+      costanti e istantanei.
     </p>
+    <p>Meno tempo a cercare, più tempo per studiare. E, preferibilmente, per tutto il resto.</p>
     <p>
-      È un progetto <strong>apolitico</strong>: non appartiene a nessuna lista e a nessuno schieramento. È nato
-      dalla collaborazione tra rappresentanti e studenti di anni diversi, che hanno messo la propria esperienza
-      a disposizione di chi viene dopo. Per questo è di tutti, e cresce solo se ognuno fa la sua parte: un
-      voto, una correzione, un consiglio in più.
+      Ci teniamo a sottolineare che si tratta di un progetto apolitico: non appartiene a nessuna lista e a nessuno
+      schieramento. È nato dalla collaborazione tra rappresentanti e studenti di anni diversi, che hanno messo la
+      propria esperienza a disposizione di chi viene dopo. Per questo è di tutti, e cresce solo se ognuno fa la
+      sua parte: un voto, una correzione, un consiglio in più.
     </p>
-    <p>Buono studio!</p>
   </div>
 
   <p class="lettera__firme">
@@ -56,15 +56,44 @@ const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
   .lettera__corpo {
     color: var(--text-2);
   }
-  /* Le due firme una sotto l'altra, centrate. */
+  /* Le due firme una sotto l'altra, centrate, dentro una cornice di luci
+     pixel che corrono in senso orario come le lampadine di un'insegna
+     arcade: 4 strisce di "lampadine" 4×4 ogni 12px, spostate di 4px a ogni
+     scatto. Con prefers-reduced-motion le luci restano accese e ferme. */
   .lettera__firme {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
     margin: 24px 0 0;
-    padding-top: 16px;
-    border-top: 4px solid var(--bg);
+    padding: 20px 8px;
+  }
+  .lettera__firme::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    --lampada: linear-gradient(to right, var(--accent) 4px, transparent 4px);
+    --lampada-v: linear-gradient(to bottom, var(--accent) 4px, transparent 4px);
+    background:
+      var(--lampada) 0 0 / 12px 4px repeat-x,
+      var(--lampada-v) 100% 0 / 4px 12px repeat-y,
+      var(--lampada) 0 100% / 12px 4px repeat-x,
+      var(--lampada-v) 0 0 / 4px 12px repeat-y;
+    animation: luci 600ms steps(3, end) infinite;
+  }
+  @keyframes luci {
+    to {
+      background-position: 12px 0, 100% 12px, -12px 100%, 0 -12px;
+    }
+  }
+  @media (forced-colors: active) {
+    .lettera__firme::before {
+      background: none;
+      outline: 4px dashed CanvasText;
+      outline-offset: -4px;
+    }
   }
   .lettera__firma {
     text-align: center;
