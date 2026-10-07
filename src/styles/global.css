@@ -101,6 +101,16 @@ p {
   margin: 0 0 12px;
 }
 
+/* Paragrafi giustificati, con sillabazione italiana (<html lang="it">) per
+   non aprire spazi larghi nelle colonne strette del telefono. Le etichette
+   (Silkscreen) restano allineate a sinistra; i contenitori centrati
+   rimettono text-align: center sui propri paragrafi. */
+p:not(.label) {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
 ul {
   list-style-type: square;
   padding-left: 24px;
