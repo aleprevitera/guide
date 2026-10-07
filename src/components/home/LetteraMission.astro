@@ -2,6 +2,8 @@
 // Lettera dei creatori sulla mission del progetto.
 // Modificabile SOLO qui nel codice (non da Decap): il testo è dei creatori.
 import PixelIcon from '../common/PixelIcon.astro';
+import { ANNI_DI_CORSO } from '../../lib/anni';
+import { MONDI } from '../../lib/mondi';
 
 const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
 ---
@@ -12,25 +14,32 @@ const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
     <h2 id="lettera-titolo" class="label">Lettera dai creatori</h2>
   </div>
 
-  <div class="lettera__corpo">
-    <p>
+  {/* data-rivela: paragrafi, separatore e motto compaiono allo scorrimento
+      (src/lib/rivela.ts); senza JS o con "riduci movimento" tutto è visibile. */}
+  <div class="lettera__corpo" data-rivela>
+    <p class="lettera__primo">
       Medicina è un percorso lungo e faticoso. Gran parte della fatica, però, non sta nello studio; sta in tutto
       quello che gli gira intorno: capire come funziona un esame, quali sbobine usare, quanto tempo serve, a chi
       chiedere. Sono informazioni che esistono già, sparse tra chat, cartelle condivise e passaparola. E,
       soprattutto, sono informazioni dinamiche, che cambiano costantemente e che non possono stare ai tempi delle
       guide su rotocalco.
     </p>
+    {/* Sei quadratini nei colori dei sei anni: si accendono uno dopo l'altro. */}
+    <div class="lettera__anni" aria-hidden="true">
+      {ANNI_DI_CORSO.map((a, k) => <span style={`--c:${MONDI[a].chiaro};--k:${k}`}></span>)}
+    </div>
     <p>
-      Questo sito nasce proprio per mettere ordine: un unico posto, organizzato per anno e per semestre, dove
-      trovare ciò che serve per affrontare ogni esame. Il tutto con il vantaggio di poter ricevere aggiornamenti
-      costanti e istantanei.
+      Questo sito nasce proprio per <mark class="evidenzia">mettere ordine</mark>: un unico posto, organizzato per
+      anno e per semestre, dove trovare ciò che serve per affrontare ogni esame. Il tutto con il vantaggio di poter
+      ricevere aggiornamenti <mark class="evidenzia">costanti e istantanei</mark>.
     </p>
-    <p>Meno tempo a cercare, più tempo per studiare. E, preferibilmente, per tutto il resto.</p>
+    <p class="lettera__motto">Meno tempo a cercare, più tempo per studiare. E, preferibilmente, per tutto il resto.</p>
     <p>
-      Ci teniamo a sottolineare che si tratta di un progetto apolitico: non appartiene a nessuna lista e a nessuno
-      schieramento. È nato dalla collaborazione tra rappresentanti e studenti di anni diversi, che hanno messo la
-      propria esperienza a disposizione di chi viene dopo. Per questo è di tutti, e cresce solo se ognuno fa la
-      sua parte: un voto, una correzione, un consiglio in più.
+      Ci teniamo a sottolineare che si tratta di un progetto <mark class="evidenzia">apolitico</mark>: non appartiene
+      a nessuna lista e a nessuno schieramento. È nato dalla collaborazione tra rappresentanti e studenti di anni
+      diversi, che hanno messo la propria esperienza a disposizione di chi viene dopo. Per questo
+      <mark class="evidenzia">è di tutti</mark>, e cresce solo se ognuno fa la sua parte: un voto, una correzione,
+      un consiglio in più.
     </p>
   </div>
 
@@ -55,6 +64,82 @@ const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
   }
   .lettera__corpo {
     color: var(--text-2);
+  }
+
+  /* Capolettera: la prima lettera in un blocco giallo, in carattere pixel. */
+  .lettera__primo::first-letter {
+    float: left;
+    margin: 4px 8px 0 0;
+    padding: 4px 8px;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: 40px;
+    line-height: 1;
+    -webkit-font-smoothing: none;
+  }
+
+  /* Separatore: un quadratino per anno, nel colore del suo mondo. */
+  .lettera__anni {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .lettera__anni span {
+    width: 12px;
+    height: 12px;
+    background: var(--c);
+  }
+  .lettera__anni.is-visto span {
+    animation: accendi 1ms steps(1, end) backwards;
+    animation-delay: calc(240ms + var(--k) * 120ms);
+  }
+  @keyframes accendi {
+    from { background: var(--bg); }
+  }
+
+  /* Evidenziatore: tratto giallo sotto la parola, steso a scatti quando il
+     paragrafo compare. Il testo resta sul fondo del pannello (contrasto pieno). */
+  .evidenzia {
+    color: var(--text);
+    background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 100% / 100% 4px;
+    padding-bottom: 2px;
+    hyphens: manual;
+  }
+  .is-visto .evidenzia {
+    animation: evidenzia 480ms steps(6, end) backwards;
+    animation-delay: 360ms;
+  }
+  @keyframes evidenzia {
+    from { background-size: 0 4px; }
+  }
+
+  /* Motto: frase-slogan in carattere pixel, che compare riga per riga. */
+  .lettera__motto {
+    margin: 24px 0;
+    padding: 16px 12px;
+    background: var(--bg);
+    color: var(--text);
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: 20px;
+    line-height: 1.4;
+    hyphens: manual;
+    -webkit-font-smoothing: none;
+  }
+  .lettera__motto.is-visto {
+    animation: motto 600ms steps(4, end) backwards;
+  }
+  @keyframes motto {
+    from { clip-path: inset(0 0 100% 0); }
+  }
+  @media (forced-colors: active) {
+    .evidenzia { text-decoration: underline; background: none; }
+    .lettera__anni span { outline: 1px solid CanvasText; }
+    .lettera__motto { outline: 2px solid CanvasText; }
   }
   /* Le due firme una sotto l'altra, centrate, dentro una cornice di luci
      pixel che corrono in senso orario come le lampadine di un'insegna
