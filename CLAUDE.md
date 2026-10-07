@@ -230,6 +230,7 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   (`m-0v8s8vwa`), inseriti il 2026-10-04 per vedere l'output. Si rimuovono con
   `delete from auth.users where raw_app_meta_data ->> 'simulato' = 'true';` (i voti vanno via in cascata).
 
-- **Email di contatto privacy** in `src/pages/privacy.astro` (`CONTATTO`, ora segnaposto): da inserire prima del merge.
+- Email di contatto privacy (`CONTATTO` in `src/pages/privacy.astro`): per ora quella personale di Alessandro;
+  da sostituire con un indirizzo sul dominio (es. `privacy@howtogolgi.it`).
 - Configurazione Google + hook in dashboard Supabase, poi prova del voto reale sul deploy preview.
 - Merge della PR #1 (`redesign-pixel`).
