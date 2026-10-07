@@ -510,7 +510,7 @@ function controllaTempo(guida, sorgente) {
 // Campi gestiti in Decap (Notion non li riporta): se la scheda non li indica,
 // si conserva il valore già presente nella guida, così l'import non cancella
 // link, CFU e dati della scheda inseriti dai rappresentanti.
-const CAMPI_DECAP_GUIDA = ['sottotitolo', 'cfu_totali', 'esse3_codice', 'link_sbobine_generale', 'link_whatsapp_generale'];
+const CAMPI_DECAP_GUIDA = ['sottotitolo', 'cfu_totali', 'semestre', 'esse3_codice', 'link_sbobine_generale', 'link_whatsapp_generale'];
 const CAMPI_DECAP_MODULO = ['cfu', 'semestre', 'preappello', 'frequenza', 'durata_orale_min', 'esse3_appello', 'link_sbobine', 'link_whatsapp', 'google_sheet_url'];
 
 function componiYaml(scheda, guida, esistente) {
@@ -549,6 +549,7 @@ function componiYaml(scheda, guida, esistente) {
     sottotitolo: guida.sottotitolo,
     anno_di_corso: scheda.anno,
     cfu_totali: guida.cfu_totali,
+    semestre: guida.semestre,
     link_sbobine_generale: guida.link_sbobine_generale,
     link_whatsapp_generale: guida.link_whatsapp_generale,
     descrizione_generale: moduli.length > 1 ? normalizzaMd(guida.descrizione_generale) : null,

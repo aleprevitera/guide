@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
-import { cfuGuida } from '../../lib/guide';
+import { cfuGuida, ETICHETTA_SEMESTRE, semestreGuida } from '../../lib/guide';
 import { annoHref } from '../../lib/anni';
 
 type GuideData = CollectionEntry<'guide'>['data'];
@@ -15,11 +15,13 @@ const { title, sottotitolo, anno_di_corso, moduli, link_sbobine_generale, link_w
 
 const isIntegrato = moduli.length > 1;
 const cfu = cfuGuida(data);
+const semestre = semestreGuida(data);
 ---
 
 <header class="guide-header">
   <ul class="chips label" aria-label="In breve">
     <li><a class="chip chip--mondo chip--link" href={annoHref(anno_di_corso)}>{anno_di_corso}</a></li>
+    {semestre && <li class="chip">{ETICHETTA_SEMESTRE[semestre]}</li>}
     {cfu && <li class="chip">{cfu} CFU</li>}
     {isIntegrato && <li class="chip">{moduli.length} moduli</li>}
   </ul>

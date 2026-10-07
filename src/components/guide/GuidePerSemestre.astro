@@ -1,0 +1,49 @@
+---
+// Guide di un anno divise per semestre (I, II, annuali). Se nessuna guida
+// indica il semestre, l'elenco resta unico, senza intestazioni.
+import type { CollectionEntry } from 'astro:content';
+import GuideList from './GuideList.astro';
+import { perSemestre } from '../../lib/guide';
+
+interface Props {
+  entries: CollectionEntry<'guide'>[];
+  /** Livello dei titoli dei gruppi: h2 nella pagina dell'anno, h3 in /guide/. */
+  livello?: 2 | 3;
+}
+
+const { entries, livello = 2 } = Astro.props;
+const gruppi = perSemestre(entries);
+const senzaDivisione = gruppi.length === 1 && gruppi[0].semestre === null;
+const Titolo = livello === 2 ? 'h2' : 'h3';
+---
+
+{senzaDivisione ? (
+  <GuideList entries={entries} />
+) : (
+  gruppi.map((g) => (
+    <section class="semestre">
+      <Titolo class="semestre__titolo label">{g.titolo}</Titolo>
+      <GuideList entries={g.entries} />
+    </section>
+  ))
+)}
+
+<style>
+  .semestre + .semestre {
+    margin-top: 24px;
+  }
+  .semestre__titolo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+    color: var(--mondo-chiaro, var(--text-2));
+  }
+  /* Trattino a blocchi prima del titolo, come una tacca della mappa. */
+  .semestre__titolo::before {
+    content: '';
+    width: 12px;
+    height: 4px;
+    background: currentColor;
+  }
+</style>

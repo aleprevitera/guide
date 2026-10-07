@@ -7,6 +7,8 @@ import { FASCE_STUDIO } from '../lib/fasce';
 export const ANNI_DI_CORSO = ['I Anno', 'II Anno', 'III Anno', 'IV Anno', 'V Anno', 'VI Anno'] as const;
 
 export const SEMESTRI = ['I', 'II'] as const;
+/** Periodo di un esame intero: un semestre o tutto l'anno (es. Semeiotica). */
+export const SEMESTRI_ESAME = ['I', 'II', 'Annuale'] as const;
 
 // Allineato 1:1 alle opzioni realmente in uso nel progetto esistente.
 export const TIPI_ESAME = ['Orale', 'Scritto', 'Scritto + Orale'] as const;
@@ -90,6 +92,9 @@ const guideCollection = defineCollection({
     sottotitolo: opz(z.string().max(200)),
     anno_di_corso: z.enum(ANNI_DI_CORSO),
     cfu_totali: opz(z.number().int().min(1).max(120)),
+    // Periodo dell'esame (dal catalogo dei corsi, scripts/programmi-ufficiali.mjs):
+    // raggruppa le guide nelle pagine degli anni.
+    semestre: opz(z.enum(SEMESTRI_ESAME)),
 
     // Rilevanti solo per un esame integrato (moduli.length > 1): link e
     // descrizione a livello di esame aggregato, equivalenti allo

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import GuideList from '../../components/guide/GuideList.astro';
+import GuidePerSemestre from '../../components/guide/GuidePerSemestre.astro';
 import SearchBox from '../../components/common/SearchBox.astro';
 import { ANNI_DI_CORSO, annoHref, annoSlug } from '../../lib/anni';
 
@@ -21,7 +21,7 @@ const gruppi = ANNI_DI_CORSO.map((anno) => ({
       <h2 class="anno__titolo label" id={`anno-${annoSlug(gruppo.anno)}`}>
         <a href={annoHref(gruppo.anno)}>{gruppo.anno}</a>
       </h2>
-      <GuideList entries={gruppo.entries} />
+      <GuidePerSemestre entries={gruppo.entries} livello={3} />
     </section>
   ))}
 </BaseLayout>

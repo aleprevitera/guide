@@ -52,6 +52,7 @@ collections:
         options: ["I Anno", "II Anno", "III Anno", "IV Anno", "V Anno", "VI Anno"]
 
       - { label: "CFU Totali (facoltativo)", name: "cfu_totali", widget: "number", value_type: "int", min: 1, max: 120, required: false }
+      - { label: "Semestre (facoltativo)", name: "semestre", widget: "select", options: ["I", "II", "Annuale"], required: false, hint: "Quando si tiene il corso: le guide di ogni anno sono divise per semestre." }
 
       - label: "Link Sbobine Generale (Drive, solo se esame a più moduli)"
         name: "link_sbobine_generale"

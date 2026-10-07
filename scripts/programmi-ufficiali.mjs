@@ -6,6 +6,7 @@
 // Medicina e Chirurgia Golgi) e aggiorna le guide in src/content/guide/:
 //   • esse3_codice  = codice attività dell'insegnamento (es. "501694");
 //   • cfu_totali    = crediti ufficiali;
+//   • semestre      = periodo del corso (I, II, Annuale), da src/data/syllabus.json;
 //   • program       = programma ufficiale (sostituisce quello scritto dai
 //                     rappresentanti), diviso per modulo; in fondo il link
 //                     alla scheda del catalogo;
@@ -38,6 +39,7 @@ import YAML from 'yaml';
 const RADICE = join(import.meta.dirname, '..');
 const DIR_GUIDE = join(RADICE, 'src/content/guide');
 const CATALOGO = join(RADICE, 'src/data/programmi-ufficiali.json');
+const SYLLABUS = join(RADICE, 'src/data/syllabus.json');
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
@@ -247,6 +249,13 @@ const fonte = (p) => `*Programma ufficiale dal catalogo dei corsi UniPV: [scheda
 
 const catalogo = JSON.parse(await readFile(CATALOGO, 'utf8'));
 const programmi = catalogo.programmi;
+// Periodo di ogni insegnamento (scripts/syllabus.mjs), per codice attività.
+const PERIODI = { 'Primo Semestre': 'I', 'Secondo Semestre': 'II', 'Annualità Singola': 'Annuale' };
+const semestri = new Map(
+  (JSON.parse(await readFile(SYLLABUS, 'utf8')).esami ?? [])
+    .filter((e) => PERIODI[e.periodo])
+    .map((e) => [String(e.codiceAttivita), PERIODI[e.periodo]]),
+);
 let modificate = 0;
 
 for (const f of (await readdir(DIR_GUIDE)).filter((x) => x.endsWith('.yaml')).sort()) {
@@ -268,6 +277,7 @@ for (const f of (await readdir(DIR_GUIDE)).filter((x) => x.endsWith('.yaml')).so
   const prima = JSON.stringify(dati);
   dati.esse3_codice = p.codiceAttivita;
   if (p.crediti) dati.cfu_totali = p.crediti;
+  if (semestri.has(p.codiceAttivita)) dati.semestre = semestri.get(p.codiceAttivita);
 
   // Anno di corso diverso dal catalogo: non si cambia, si segnala.
   const ROMANI = ['I', 'II', 'III', 'IV', 'V', 'VI'];

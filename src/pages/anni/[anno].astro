@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import GuideList from '../../components/guide/GuideList.astro';
+import GuidePerSemestre from '../../components/guide/GuidePerSemestre.astro';
 import PixelIcon from '../../components/common/PixelIcon.astro';
 import ScenaMondo from '../../components/common/ScenaMondo.astro';
 import { ANNI_DI_CORSO, annoSlug, numeroRomano, vtMondo, type Anno } from '../../lib/anni';
@@ -46,7 +46,7 @@ const conScena = !!mondo.scena;
 
   <div style={stileMondo(anno)}>
   {entries.length > 0 ? (
-    <GuideList entries={entries} />
+    <GuidePerSemestre entries={entries} />
   ) : (
     <p class="vuoto panel px-border px-border--off">
       Nessuna guida ancora per questo anno: i rappresentanti ci stanno lavorando.

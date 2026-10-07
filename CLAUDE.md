@@ -174,13 +174,16 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - `src/data/programmi-ufficiali.json`: dati scaricati dal catalogo dei corsi UniPV (Cineca), uno per
   insegnamento (`codiceAttivita` = codice ESSE3, crediti, anno, programma, testi...).
 - `node scripts/programmi-ufficiali.mjs` (`--dry`, `--solo=titolo`) scrive nelle guide `esse3_codice`,
-  `cfu_totali` e il **Programma** ufficiale (con link alla scheda). Lo si lancia a mano quando arriva il
+  `cfu_totali`, `semestre` (I / II / Annuale, dal `periodo` di `src/data/syllabus.json`, generato da
+  `scripts/syllabus.mjs`) e il **Programma** ufficiale (con link alla scheda). Lo si lancia a mano quando arriva il
   catalogo di un nuovo anno; poi i rappresentanti possono modificarlo da Decap.
 - Il testo ufficiale non viene mai riscritto: solo ripulito (paragrafi duplicati) e convertito in Markdown.
   Esami a più moduli: divisione per intestazioni se ogni modulo ne ha una, altrimenti DeepSeek
   (OpenRouter) assegna solo i **numeri di riga** ai moduli o a "comune" (cache in `.cache/`). Modulo
   senza righe proprie: nota "il programma ufficiale non ha una parte dedicata" + link, non il programma
   degli altri moduli.
+- Il semestre raggruppa le guide nelle pagine degli anni e in `/guide/` (`GuidePerSemestre.astro`,
+  `perSemestre()` in `src/lib/guide.ts`); senza semestre nella guida vale quello comune dei moduli.
 - Il vecchio "Programma" dei rappresentanti, se contiene consigli (non generico, non un semplice elenco
   di argomenti), finisce in testa a "Consigli e Materiale" sotto **Sul programma**. Le voci "Programma"
   di "Informazioni da verificare" vengono tolte; un anno di corso diverso dal catalogo **non** si
