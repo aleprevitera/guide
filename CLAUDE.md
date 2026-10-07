@@ -73,7 +73,7 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   `src/lib/fasce.ts`, `public/admin/config.yml` (`fascia_studio`), check SQL su `study_time_votes.fascia`.
 - Il Markdown dei campi narrativi passa sempre da `SafeMarkdown` (whitelist ristretta).
 - La lettera in home (`src/components/home/LetteraMission.astro`) si modifica **solo nel codice**,
-  non da Decap. Il testo definitivo lo forniscono i creatori.
+  non da Decap: due temi, l'organizzazione che semplifica la vita e un progetto apolitico nato dalla collaborazione.
 
 ## Design system (pixel art)
 
@@ -228,6 +228,5 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   `delete from auth.users where raw_app_meta_data ->> 'simulato' = 'true';` (i voti vanno via in cascata).
 
 - **Email di contatto privacy** in `src/pages/privacy.astro` (`CONTATTO`, ora segnaposto): da inserire prima del merge.
-- Testo della lettera (firme già inserite: Francesco Ruspino, Alessandro Gavino Previtera).
 - Configurazione Google + hook in dashboard Supabase, poi prova del voto reale sul deploy preview.
 - Merge della PR #1 (`redesign-pixel`).
