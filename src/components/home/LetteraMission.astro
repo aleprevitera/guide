@@ -5,7 +5,11 @@ import PixelIcon from '../common/PixelIcon.astro';
 import { ANNI_DI_CORSO } from '../../lib/anni';
 import { MONDI } from '../../lib/mondi';
 
-const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
+// Firme a pezzi: le parti tra [quadre] sono evidenziate e compongono la
+// sigla del footer, "RUSPI x AGP".
+const firme = ['Francesco [Ruspi]no', '[A]lessandro [G]avino [P]revitera'].map((f) =>
+  f.split(/(\[[^\]]+\])/).filter(Boolean).map((t) => ({ testo: t.replace(/[[\]]/g, ''), sigla: t.startsWith('[') })),
+);
 ---
 
 <section class="lettera panel px-border" aria-labelledby="lettera-titolo">
@@ -44,7 +48,11 @@ const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
   </div>
 
   <p class="lettera__firme">
-    {firme.map((f) => <span class="lettera__firma">{f}</span>)}
+    {firme.map((pezzi) => (
+      <span class="lettera__firma">
+        {pezzi.map((p) => (p.sigla ? <span class="lettera__sigla">{p.testo}</span> : p.testo))}
+      </span>
+    ))}
   </p>
 </section>
 
@@ -173,7 +181,16 @@ const firme = ['Francesco Ruspino', 'Alessandro Gavino Previtera'];
       background-position: 12px 0, 100% 12px, -12px 100%, 0 -12px;
     }
   }
+  /* Le lettere della sigla in giallo, accese a turno come le luci della cornice. */
+  .lettera__sigla {
+    color: var(--accent);
+    animation: sigla 2.4s steps(1, end) infinite;
+  }
+  @keyframes sigla {
+    50% { color: var(--text); }
+  }
   @media (forced-colors: active) {
+    .lettera__sigla { text-decoration: underline; }
     .lettera__firme::before {
       background: none;
       outline: 4px dashed CanvasText;
