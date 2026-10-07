@@ -383,7 +383,7 @@ async function chiamaModello(chiave, messaggi) {
       headers: {
         Authorization: `Bearer ${chiave}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': 'https://guide-pratiche.netlify.app',
+        'HTTP-Referer': 'https://howtogolgi.it',
         'X-Title': 'HowToGolgi - import Notion',
       },
       body: JSON.stringify({

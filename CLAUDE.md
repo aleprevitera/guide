@@ -20,6 +20,8 @@ npm run preview    # serve dist/: l'unico modo per provare la ricerca in locale
 npm run cms:local  # proxy Decap per /admin/ in locale
 ```
 
+Dominio: **https://howtogolgi.it** (registrato su GoDaddy, `site` in `astro.config.mjs`); il sito Netlify
+resta `guide-pratiche` (anteprime su `*--guide-pratiche.netlify.app`).
 Contesti Netlify (`process.env.CONTEXT`): `production`, `deploy-preview`, `branch-deploy`.
 Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzione.
 
@@ -147,8 +149,8 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - Accesso facoltativo, proposto una volta per sessione del browser (`BenvenutoAccesso`); necessario
   per vedere e dare feedback.
 - Configurazione da dashboard (non versionata): provider Google (Client ID/secret da Google Cloud,
-  app "In production"), Site URL `https://guide-pratiche.netlify.app`, Redirect URLs
-  `https://guide-pratiche.netlify.app/**`, `https://*--guide-pratiche.netlify.app/**`,
+  app "In production"), Site URL `https://howtogolgi.it`, Redirect URLs `https://howtogolgi.it/**`,
+  `https://www.howtogolgi.it/**`, `https://guide-pratiche.netlify.app/**`, `https://*--guide-pratiche.netlify.app/**`,
   `http://localhost:4321/**`, hook "Before User Created" → `public.hook_solo_account_ateneo`.
 
 ## Appelli d'esame (ESSE3)
