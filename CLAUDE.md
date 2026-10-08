@@ -208,6 +208,9 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   "a quanto riferito", "nell'anno di riferimento"...). `node scripts/tono-diretto.mjs` (`--dry`) riscrive con
   DeepSeek solo le frasi sospette dei campi narrativi (mai il programma ufficiale), tenendo nomi e numeri; anche
   l'import lo chiede al modello.
+- **Gruppi WhatsApp**: nei campi `link_whatsapp` (modulo) e `link_whatsapp_generale` (esame), modificabili in
+  Decap. Per gli esami senza guida in `src/data/gruppi-whatsapp.json` (per codice ESSE3), mostrati sulle schede
+  "Guida in arrivo": quando nasce la guida, il link va copiato nel modulo in Decap.
 - **Esami senza guida** (schede bloccate "Guida in arrivo"): `src/lib/in-arrivo.ts` li ricava dal catalogo
   (`syllabus.json`: voto finale, niente esami a scelta né tirocini) per gli anni in `ANNI_CON_SEGNAPOSTO`
   (ora IV, V e VI). Spariscono da soli quando esiste una guida con lo stesso `esse3_codice` o lo stesso nome.

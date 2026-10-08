@@ -81,6 +81,7 @@ moduli:
         stile: Pone una domanda e può generalmente aumentare il voto fino a circa 3 punti. Generalmente tranquillo.
       - nome: Specializzando incaricato della prima parte dell’esame
         stile: Interroga nella prima parte, che è la più corposa. Al termine consegna un foglio con proposta di voto. Generalmente tranquillo.
+    link_whatsapp: https://chat.whatsapp.com/Bldcr5hCzPo2Szs8bHnYK7
   - nome_modulo: Medicina del Lavoro
     id: m-kfhcmrwh
     exam_type: Scritto
@@ -143,6 +144,7 @@ moduli:
       - Le domande si ripetono frequentemente.
       - Spesso le domande degli anni precedenti costituiscono la maggior parte dell’esame.
       - In genere vengono aggiunte circa 2-3 domande nuove.
+    link_whatsapp: https://chat.whatsapp.com/HJKSWmvH9v58cVG7K0sMr9
   - nome_modulo: Bioetica
     id: m-f18tcg5t
     exam_type: Scritto
@@ -178,6 +180,7 @@ moduli:
 
       - Le domande tendono a ripetersi.
       - È molto utile preparare in anticipo una scaletta per ciascuna delle domande passate.
+    link_whatsapp: https://chat.whatsapp.com/CfTE4QU1gfLCBRveUxFOve
   - nome_modulo: Organizzazione sanitaria
     id: m-iptxage9
     cfu: 1
@@ -219,6 +222,7 @@ moduli:
         stile: Interroga un numero più limitato di studenti. Ha a disposizione e consulta il programma dell’anno in cui si è frequentato il corso durante l’esame.
       - nome: Mosconi
         stile: All’interrogazione è frequentemente presente soprattutto il Prof. Mosconi.
+    link_whatsapp: https://chat.whatsapp.com/HvcPpH2vpPw3iynn8qqRRX
   - nome_modulo: Igiene ambientale
     id: m-cdt6q6du
     cfu: 1
@@ -267,6 +271,7 @@ moduli:
         stile: Interroga un numero più limitato di studenti. Ha a disposizione e consulta il programma dell’anno in cui si è frequentato il corso durante l’esame.
       - nome: Mosconi
         stile: All’interrogazione è frequentemente presente soprattutto il Prof. Mosconi.
+    link_whatsapp: https://chat.whatsapp.com/HvcPpH2vpPw3iynn8qqRRX
 esse3_codice: "504451"
 cfu_totali: 11
 ultimo_aggiornamento: 2026-10-08

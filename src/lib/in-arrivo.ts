@@ -5,6 +5,7 @@
 // guida con lo stesso codice ESSE3 o lo stesso nome (in qualsiasi anno).
 import type { CollectionEntry } from 'astro:content';
 import syllabus from '../data/syllabus.json';
+import gruppi from '../data/gruppi-whatsapp.json';
 import { ANNI_DI_CORSO } from '../content/config';
 import type { Anno } from './anni';
 import type { Semestre } from './guide';
@@ -16,6 +17,8 @@ export interface EsameInArrivo {
   nome: string;
   semestre: Semestre | null;
   cfu: number | null;
+  /** Gruppo WhatsApp dell'esame, se c'è (src/data/gruppi-whatsapp.json). */
+  whatsapp: string | null;
 }
 
 interface VoceCatalogo {
@@ -64,6 +67,7 @@ export function esamiInArrivo(anno: Anno, guide: CollectionEntry<'guide'>[]): Es
       nome: nomeLeggibile(e.nome),
       semestre: (e.periodo && PERIODI[e.periodo]) || null,
       cfu: e.crediti ?? null,
+      whatsapp: (gruppi as Record<string, { link?: string }>)[String(e.codiceAttivita)]?.link ?? null,
     }))
     .sort((a, b) => a.nome.localeCompare(b.nome));
 }

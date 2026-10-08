@@ -54,6 +54,7 @@ moduli:
       - nome: Bottazzi
         stile: Durante l’esame può essere richiesto, soprattutto da lui, di interpretare un’emogasanalisi, diagnosticare il quadro, commentare i risultati e interpretare curve e grafici.
       - nome: Natoli
+    link_whatsapp: https://chat.whatsapp.com/KiwFagap6Yn5irHXedFS4d
   - nome_modulo: Chirurgia d’urgenza
     id: m-or9pjiie
     exam_type: Scritto
@@ -87,6 +88,7 @@ moduli:
 
       - Fare con particolare attenzione le domande degli esami precedenti.
       - Le domande tendono a ripetersi molto frequentemente: in alcuni casi possono ripresentarsi anche interi esami.
+    link_whatsapp: https://chat.whatsapp.com/CsluoUcTsm9KqRi0PIF7fZ
   - nome_modulo: Clinica chirurgica
     id: m-ke2k2iky
     exam_type: Orale
@@ -141,6 +143,7 @@ moduli:
     professors:
       - nome: Cobianchi
         stile: Richiede in particolare l’argomento pancreas.
+    link_whatsapp: https://chat.whatsapp.com/LCtmTWtx5fu87CIFuqjGZa
 esse3_codice: "506412"
 cfu_totali: 8
 ultimo_aggiornamento: 2026-10-08

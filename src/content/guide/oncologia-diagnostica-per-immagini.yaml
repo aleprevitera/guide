@@ -73,6 +73,7 @@ moduli:
         email: francesco.agustoni@unipv.it
       - nome: Salvatore Corallo
         email: salvatore.corallo@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/Ejch1ZaWGM85ZqhCoR6tcw
   - nome_modulo: Diagnostica per immagini
     id: m-t588av4v
     exam_type: Scritto
@@ -198,6 +199,7 @@ moduli:
         email: ester.orlandi@unipv.it
       - nome: Anna Pichiecchio
         email: anna.pichiecchio@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/DqOyLKjCSTEGeRQA3tHPEK
 aggiornato_da: Sara Cocci
 semestre: II
 ultimo_aggiornamento: 2026-10-08

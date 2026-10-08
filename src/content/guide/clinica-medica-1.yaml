@@ -66,6 +66,7 @@ moduli:
         email: stefano.cartesegna@unipv.it
         stile: Molto tranquillo e generoso nella valutazione, anche se il caso clinico non è risolto completamente.
     fascia_studio: < 1 sett
+    link_whatsapp: https://chat.whatsapp.com/Gf2Kdrt8ucH19hdZqRQGfE
   - nome_modulo: Geriatria
     id: m-2f76o2dk
     study_time: mezza giornata – 4 giorni
@@ -136,7 +137,9 @@ moduli:
         stile: Accomodante, chiede frequentemente rischio cardiovascolare e dislipidemia.
         email: mauriziomaria.coronelli@unipv.it
     fascia_studio: < 1 sett
+    link_whatsapp: https://chat.whatsapp.com/GWKAUEFyObBLPsAKXRdFnR
 esse3_codice: "501832"
 cfu_totali: 5
 semestre: II
+link_whatsapp_generale: https://chat.whatsapp.com/BckglYcCdw75GPFlDvTZ6j
 ultimo_aggiornamento: 2026-10-08

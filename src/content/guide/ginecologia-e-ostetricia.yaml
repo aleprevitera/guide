@@ -61,6 +61,7 @@ moduli:
         stile: Probabilmente nozionismo stile Gardella.
       - nome: Spinillo
       - nome: Nappi
+    link_whatsapp: https://chat.whatsapp.com/J661P9ZxqUj5W6AySf2j7Z
   - nome_modulo: Genetica
     id: m-ldm3iupg
     exam_type: Scritto
@@ -76,6 +77,7 @@ moduli:
 
       *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
     material_tips: Impararsi le domande degli appelli precedenti e una lettura alle sbobine dell’anno.
+    link_whatsapp: https://chat.whatsapp.com/DPVqjGnNYLDFRmAxN4dj3x
 esse3_codice: "501628"
 cfu_totali: 8
 ultimo_aggiornamento: 2026-10-08

@@ -106,6 +106,7 @@ moduli:
       - nome: Giacinto Triolo
         email: giacinto.triolo@unipv.it
     fascia_studio: 1–2 sett
+    link_whatsapp: https://chat.whatsapp.com/EvQNgjd1MtTEOfJzUl1GZI
   - nome_modulo: Otorinolaringoiatria e Audiologia
     id: m-lcq5czjs
     exam_type: Orale
@@ -243,6 +244,7 @@ moduli:
         email: elena.carlotto@unipv.it
     esse3_appello: OTORINO
     fascia_studio: 3–4 sett
+    link_whatsapp: https://chat.whatsapp.com/FmSTfKFCPtW6reSAmGF0bo
   - nome_modulo: Odontoiatria
     id: m-j91rrxoo
     exam_type: Scritto
@@ -280,6 +282,7 @@ moduli:
       - nome: Maria Francesca Sfondrini
         stile: Titolare del corso.
         email: francesca.sfondrini@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/Bkq4bMZcByW4FS11UIPbs2
   - nome_modulo: Chirurgia maxillo-facciale
     id: m-qya7ev2i
     exam_type: Scritto
@@ -306,5 +309,6 @@ moduli:
       - nome: Domenico Sfondrini
         email: domenico.sfondrini@unipv.it
     fascia_studio: < 1 sett
+    link_whatsapp: https://chat.whatsapp.com/Bkq4bMZcByW4FS11UIPbs2
 aggiornato_da: Rocco Buellis
 ultimo_aggiornamento: 2026-10-08

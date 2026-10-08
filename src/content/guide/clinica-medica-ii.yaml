@@ -74,6 +74,7 @@ moduli:
       - nome: Santi Di Pietro
         stile: Può chiedere anche i dosaggi dei farmaci. Non è necessario imparare a memoria ogni dosaggio nel dettaglio, ma è consigliabile avere almeno un'idea dei relativi ordini di grandezza.
         email: santi.dipietro@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/EaFjIA8Fiwg6wqP9h4BF9F
   - nome_modulo: Medicina Interna B
     id: m-is900itq
     exam_type: Orale
@@ -144,6 +145,7 @@ moduli:
       - nome: Giovanni Santacroce
         stile: Particolare attenzione alla Gastroenterologia per gli argomenti affrontati.
         email: giovanni.santacroce@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/LMyJAZ6T4TyFqMyzB1bUiI
 esse3_codice: "501833"
 cfu_totali: 8
 ultimo_aggiornamento: 2026-10-08

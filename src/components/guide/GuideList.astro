@@ -96,6 +96,9 @@ const guide = [...Astro.props.entries]
             <span class="stat stat--bloccata"><PixelIcon name="lock" size={16} />Guida in arrivo</span>
             {e.cfu && <span class="stat"><PixelIcon name="moneta" size={16} />{e.cfu} CFU</span>}
           </span>
+          {e.whatsapp && (
+            <a class="guida__gruppo" href={e.whatsapp} target="_blank" rel="noopener noreferrer">Gruppo WhatsApp dell’esame</a>
+          )}
         </span>
       </div>
     </li>
@@ -241,6 +244,12 @@ const guide = [...Astro.props.entries]
   .guida--bloccata .stat {
     background: var(--chip);
     color: var(--text-2);
+  }
+  .guida__gruppo {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-top: 8px;
   }
   .stat--bloccata {
     color: var(--accent) !important;

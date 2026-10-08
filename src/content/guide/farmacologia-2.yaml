@@ -202,6 +202,7 @@ moduli:
         email: andrea.ferrigno@unipv.it
       - nome: Laura Giuseppina Di Pasqua
         email: lauragiuseppina.dipasqua@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/Jmp518YP8t2GhP82RHa7UZ
   - nome_modulo: Tossicologia
     id: m-obz8gkpx
     cfu: 1
@@ -247,6 +248,7 @@ moduli:
     professors:
       - nome: Carlo Alessandro Locatelli
         email: carloalessandro.locatelli@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/HjoJMPHveHV61RIVSxSHtM
   - nome_modulo: Farmacologia
     id: m-g59ohk2q
     cfu: 3
@@ -419,4 +421,5 @@ moduli:
         email: cinzia.fattore@unipv.it
     fascia_studio: 3–4 sett
 aggiornato_da: Giulia Stofler
+link_whatsapp_generale: https://chat.whatsapp.com/HxI2Qgy9Vgl8oPJphLGXDB
 ultimo_aggiornamento: 2026-10-08
