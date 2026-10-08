@@ -187,6 +187,11 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   degli altri moduli.
 - Il semestre raggruppa le guide nelle pagine degli anni e in `/guide/` (`GuidePerSemestre.astro`,
   `perSemestre()` in `src/lib/guide.ts`); senza semestre nella guida vale quello comune dei moduli.
+- **Docenti ed email** dal catalogo: `node scripts/docenti.mjs` (`--dry`, `--riusa`) scarica docenti, email
+  istituzionali e moduli insegnati (API `insegnamento` + `docente` del catalogo) in `src/data/docenti.json` e li
+  inserisce nelle guide: completa nome ed email dei docenti già presenti (la nota "Stile/Domande" resta),
+  aggiunge i mancanti nel modulo che insegnano. Cognomi uguali (es. due Fusar Poli) = voce lasciata com'è e
+  segnalata. Da rilanciare a inizio anno accademico.
 - **Esami senza guida** (schede bloccate "Guida in arrivo"): `src/lib/in-arrivo.ts` li ricava dal catalogo
   (`syllabus.json`: voto finale, niente esami a scelta né tirocini) per gli anni in `ANNI_CON_SEGNAPOSTO`
   (ora IV e V). Spariscono da soli quando esiste una guida con lo stesso `esse3_codice` o lo stesso nome.

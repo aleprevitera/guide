@@ -100,10 +100,19 @@ moduli:
 
       Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
     professors:
-      - nome: Castagnoli
+      - nome: Riccardo Castagnoli
         stile: Interroga su immunologia, ad esempio SCID; anemie.
+        email: riccardo.castagnoli@unipv.it
       - nome: Brambilla
         stile: Interroga su pubertà e crescita.
+      - nome: Amelia Licari
+        email: amelia.licari@unipv.it
+      - nome: Simona Orcesi
+        email: simona.orcesi@unipv.it
+      - nome: Gianluigi Augusto Marseglia
+        email: gianluigi.marseglia@unipv.it
+      - nome: Valeria Calcaterra
+        email: valeria.calcaterra@unipv.it
   - nome_modulo: Chirurgia pediatrica
     id: m-5o6zmswx
     exam_type: Orale
@@ -161,8 +170,11 @@ moduli:
 
       Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
     professors:
-      - nome: Bertozzi
+      - nome: Mirko Bertozzi
         stile: Sceglie un macroargomento e pone domande ai tre studenti; se uno non sa rispondere, può rivolgersi agli altri. L’interrogazione viene descritta come piuttosto imprevedibile e variabile da una giornata all’altra.
+        email: mirko.bertozzi@unipv.it
+      - nome: Amelia Licari
+        email: amelia.licari@unipv.it
   - nome_modulo: Neuropsichiatria infantile (NPI)
     id: m-18qy3q5f
     exam_type: Orale
@@ -201,6 +213,11 @@ moduli:
       Integrare l’argomento delle paralisi cerebrali.
 
       Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+    professors:
+      - nome: Amelia Licari
+        email: amelia.licari@unipv.it
+      - nome: Simona Orcesi
+        email: simona.orcesi@unipv.it
 info_da_verificare:
   - campo: Durata delle singole interrogazioni
     nota: DAINTEGRARE
@@ -214,4 +231,4 @@ aggiornato_da: Rocco Buellis
 esse3_codice: "501763"
 cfu_totali: 7
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

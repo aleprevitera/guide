@@ -205,6 +205,11 @@ moduli:
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: Sbobine e slide sono sufficienti. Utile rivedere le crocette del drive perché spesso si ripetono; è presente anche un file organizzato in domande e risposte, molto utile per l’orale.
     fascia_studio: 1–2 sett
+    professors:
+      - nome: Andrea Ferrigno
+        email: andrea.ferrigno@unipv.it
+      - nome: Laura Giuseppina Di Pasqua
+        email: lauragiuseppina.dipasqua@unipv.it
   - nome_modulo: Tossicologia
     id: m-obz8gkpx
     cfu: 1
@@ -232,6 +237,9 @@ moduli:
     material_tips: "È disponibile una dispensa fatta direttamente dal CAV che tocca praticamente tutti gli argomenti; manca forse la parte dell’intossicazione da cianuro, che però, se non mi sbaglio, quest’anno è stata spiegata a lezione. Esiste anche un file molto più stretto che, penso, abbia tutto il necessario per affrontare l’esame, ma personalmente non l’ho trovato sui vari drive. Consiglio: non sottovalutare l’esame anche se si tratta soltanto di un CFU."
     body: L’esame di per sé non è difficile, ma molti argomenti sono completamente nuovi; per questo l’ho trovato lungo.
     fascia_studio: 1–2 sett
+    professors:
+      - nome: Carlo Alessandro Locatelli
+        email: carloalessandro.locatelli@unipv.it
   - nome_modulo: Farmacologia
     id: m-g59ohk2q
     cfu: 3
@@ -290,10 +298,12 @@ moduli:
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: Sbobine + integrare eventuali argomenti del syllabus non spiegati da sbobine precedenti.
     professors:
-      - nome: Crema
+      - nome: Francesca Crema
         stile: Molto gentile e alta di voti; non entra particolarmente nel dettaglio dello specifico farmaco.
-      - nome: Fattore
+        email: francesca.crema@unipv.it
+      - nome: Cinzia Fattore
         stile: Più puntigliosa ma comunque giusta.
+        email: cinzia.fattore@unipv.it
     fascia_studio: 3–4 sett
 info_da_verificare:
   - campo: Frequenza
@@ -311,4 +321,4 @@ info_da_verificare:
 aggiornato_da: Giulia Stofler
 esse3_codice: "501694"
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

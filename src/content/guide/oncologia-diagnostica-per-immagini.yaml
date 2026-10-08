@@ -72,6 +72,15 @@ moduli:
       - Le domande tendono a essere coerenti con quanto spiegato durante le lezioni.
       - Gli argomenti non trattati durante le lezioni possono essere meno rilevanti ai fini dell’esame: nell’anno di riferimento, ad esempio, i tumori rari non sono stati richiesti.
     fascia_studio: 3–4 sett
+    professors:
+      - nome: Lorenzo Preda
+        email: lorenzo.preda@unipv.it
+      - nome: Paolo Pedrazzoli
+        email: paolo.pedrazzoli@unipv.it
+      - nome: Francesco Agustoni
+        email: francesco.agustoni@unipv.it
+      - nome: Salvatore Corallo
+        email: salvatore.corallo@unipv.it
   - nome_modulo: Diagnostica per immagini
     id: m-t588av4v
     exam_type: Scritto
@@ -186,9 +195,18 @@ moduli:
         - imaging dei tumori ossei, affrontato anche nella flipped classroom e presente nelle sbobine.
     esse3_appello: RX-NEURORX-RT
     fascia_studio: 3–4 sett
+    professors:
+      - nome: Lorenzo Preda
+        email: lorenzo.preda@unipv.it
+      - nome: Chandra Bortolotto
+        email: chandra.bortolotto@unipv.it
+      - nome: Ester Orlandi
+        email: ester.orlandi@unipv.it
+      - nome: Anna Pichiecchio
+        email: anna.pichiecchio@unipv.it
 info_da_verificare:
   - campo: CFU/peso dei due moduli e modalità esatta di calcolo della valutazione finale
     nota: La studentessa riferisce che Diagnostica per immagini ha un peso maggiore rispetto a Oncologia, ma non ricorda la modalità esatta di calcolo.
 aggiornato_da: Sara Cocci
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

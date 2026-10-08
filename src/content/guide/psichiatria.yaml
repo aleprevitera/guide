@@ -119,8 +119,11 @@ moduli:
       Infine, è consigliabile consultare le domande degli appelli precedenti, soprattutto per individuare i criteri DSM e gli argomenti teorici che ricorrono nelle domande aperte.
     professors:
       - nome: Fusar Poli
-      - nome: Damiani
+      - nome: Stefano Damiani
+        email: stefano.damiani@unipv.it
       - nome: Stefanelli
+      - nome: Natascia Brondino
+        email: natascia.brondino@unipv.it
     fascia_studio: 3–4 sett
 info_da_verificare:
   - campo: Frequenza
@@ -133,4 +136,4 @@ aggiornato_da: Rocco Buellis
 esse3_codice: "501746"
 cfu_totali: 5
 semestre: I
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

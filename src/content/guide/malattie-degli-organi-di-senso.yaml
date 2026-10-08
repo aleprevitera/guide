@@ -100,10 +100,16 @@ moduli:
       - Guardare sempre le domande degli appelli precedenti e utilizzarle per individuare gli argomenti da integrare.
     body: Milano a lezione comunica di prestare attenzione alle presenze, ma le presenze non vengono poi controllate durante l’esame.
     professors:
-      - nome: Bianchi
+      - nome: Paolo Emilio Bianchi
         stile: generalmente tranquillo
-      - nome: Milano
+        email: paoloemilio.bianchi@unipv.it
+      - nome: Giovanni Milano
         stile: un po’ più puntiglioso
+        email: giovanni.milano@unipv.it
+      - nome: Francesco Maria Quaranta Leoni
+        email: francescomaria.quarantaleoni@unipv.it
+      - nome: Giacinto Triolo
+        email: giacinto.triolo@unipv.it
     fascia_studio: 1–2 sett
   - nome_modulo: Otorinolaringoiatria e Audiologia
     id: m-lcq5czjs
@@ -246,12 +252,16 @@ moduli:
       Le domande degli appelli precedenti sono utili anche per ORL e Audiologia. In ORL, controllare il syllabus oltre alle sbobine per evitare di lasciare scoperti argomenti non affrontati a lezione. Per Audiologia, dedicare particolare attenzione alla vestibologia.
     body: A lezione viene preso il codice di frequenza, ma questo non viene controllato in sede d’esame.
     professors:
-      - nome: Benazzo
+      - nome: Marco Benazzo
         stile: descritto come il più impegnativo
-      - nome: Pagella
-      - nome: Canzi
-      - nome: Carlotto
+        email: marco.benazzo@unipv.it
+      - nome: Fabio Giuseppe Maria Pagella
+        email: fabio.pagella@unipv.it
+      - nome: Pietro Canzi
+        email: pietro.canzi@unipv.it
+      - nome: Elena Carlotto
         stile: descritta come tranquilla, propensa a lasciare parlare lo studente e generalmente larga nella valutazione
+        email: elena.carlotto@unipv.it
     fascia_studio: 3–4 sett
   - nome_modulo: Odontoiatria
     id: m-j91rrxoo
@@ -300,4 +310,4 @@ aggiornato_da: Rocco Buellis
 esse3_codice: "501804"
 cfu_totali: 8
 semestre: I
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

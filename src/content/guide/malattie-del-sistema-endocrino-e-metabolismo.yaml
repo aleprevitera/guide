@@ -54,6 +54,11 @@ moduli:
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: Sbobine sufficienti. Ripassare bene la fisiologia endocrina prima di iniziare la preparazione.
+    professors:
+      - nome: Flavia Magri
+        email: flavia.magri@unipv.it
+      - nome: Mario Rotondi
+        email: mario.rotondi@unipv.it
   - nome_modulo: Malattie del metabolismo
     id: m-s11z2uij
     exam_type: Orale
@@ -95,6 +100,11 @@ moduli:
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10672/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: Sbobine sufficienti. Ripassare bene la fisiologia endocrina prima di iniziare la preparazione.
+    professors:
+      - nome: Flavia Magri
+        email: flavia.magri@unipv.it
+      - nome: Laura Croce
+        email: laura.croce@unipv.it
   - nome_modulo: Chirurgia endocrina
     id: m-srbieauq
     exam_type: Scritto
@@ -133,6 +143,11 @@ moduli:
       **Domande e argomenti ricorrenti**
 
       - Domande degli appelli precedenti, alcune delle quali si ripetono.
+    professors:
+      - nome: Flavia Magri
+        email: flavia.magri@unipv.it
+      - nome: Mario Alessiani
+        email: mario.alessiani@unipv.it
 info_da_verificare:
   - campo: Frequenza
     nota: Da integrare
@@ -142,4 +157,4 @@ info_da_verificare:
     nota: Da integrare
 aggiornato_da: Lisa Ceci
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08
