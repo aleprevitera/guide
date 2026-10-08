@@ -118,7 +118,7 @@ function unaPassata(md) {
   const chiaveTitolo = (r) => r.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   const eTitolo = (r) => /^\*\*/.test(r.trim());
   const primo = sezioni.find((sz) => eTitolo(sz[0]));
-  const inizioCopie = primo ? sezioni.findIndex((sz, k) => sz !== primo && eTitolo(sz[0]) && chiaveTitolo(sz[0]) === chiaveTitolo(primo[0])) : -1;
+  const inizioCopie = primo ? sezioni.findIndex((sz) => sz !== primo && eTitolo(sz[0]) && chiaveTitolo(sz[0]) === chiaveTitolo(primo[0])) : -1;
   const tenute = inizioCopie < 0 ? [...sezioni] : sezioni.slice(0, inizioCopie);
   let tolte = 0;
   for (const sez of inizioCopie < 0 ? [] : sezioni.slice(inizioCopie)) {

@@ -47,7 +47,7 @@ function somiglianza(a, b) {
   for (const t of A) if (B.has(t)) n++;
   return n / Math.min(A.size, B.size);
 }
-const maiuscola = (w) => w.toLowerCase().replace(/(^|[\s'’-])([a-zà-ü])/g, (m, p, c) => p + c.toUpperCase());
+const maiuscola = (w) => w.toLowerCase().replace(/(^|[\s'’-])([a-zà-ü])/g, (_, p, c) => p + c.toUpperCase());
 
 /**
  * "STIVALA LUCIA ANNA" + "luciaanna.stivala@unipv.it" → { nome: "Lucia Anna", cognome: "Stivala" }.

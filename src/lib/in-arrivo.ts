@@ -67,7 +67,7 @@ export function esamiInArrivo(anno: Anno, guide: CollectionEntry<'guide'>[]): Es
       nome: nomeLeggibile(e.nome),
       semestre: (e.periodo && PERIODI[e.periodo]) || null,
       cfu: e.crediti ?? null,
-      whatsapp: (gruppi as Record<string, { link?: string }>)[String(e.codiceAttivita)]?.link ?? null,
+      whatsapp: (gruppi as unknown as Record<string, { link?: string }>)[String(e.codiceAttivita)]?.link ?? null,
     }))
     .sort((a, b) => a.nome.localeCompare(b.nome));
 }

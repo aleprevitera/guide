@@ -283,18 +283,11 @@ for (const f of (await readdir(DIR_GUIDE)).filter((x) => x.endsWith('.yaml')).so
   if (p.crediti) dati.cfu_totali = p.crediti;
   if (semestri.has(p.codiceAttivita)) dati.semestre = semestri.get(p.codiceAttivita);
 
-  // Anno di corso diverso dal catalogo: non si cambia, si segnala.
+  // Anno di corso diverso dal catalogo: non si cambia; solo un avviso nel log
+  // (niente "Informazioni da verificare" automatiche nelle guide).
   const ROMANI = ['I', 'II', 'III', 'IV', 'V', 'VI'];
   const annoUfficiale = ROMANI[Number(p.annoCorso) - 1];
-  // Segnalazione disattivata (niente avvisi automatici nelle guide): solo log.
   if (annoUfficiale && dati.anno_di_corso !== `${annoUfficiale} Anno`) console.log(`  ⚠ ${dati.title}: nel catalogo è al ${annoUfficiale} anno`);
-  if (false && annoUfficiale && dati.anno_di_corso !== `${annoUfficiale} Anno`) {
-    const campo = 'Anno di corso';
-    dati.info_da_verificare ??= [];
-    if (!dati.info_da_verificare.some((i) => i.campo === campo)) {
-      dati.info_da_verificare.push({ campo, nota: `Nel catalogo ufficiale UniPV l'insegnamento è al ${annoUfficiale} anno ([scheda](${p.url})).` });
-    }
-  }
 
   const righe = righePulite(p.programma);
   let resoconto;
