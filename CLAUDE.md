@@ -37,7 +37,8 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - `src/components/common/` — header, footer, icone pixel, account, benvenuto.
 - `src/components/guide/` — intestazione guida, schede moduli, scheda esame, sezioni, `GuideList` (pannelli guida per `/guide/` e `/anni/`).
 - `src/components/feedback/` — `StudyTimeHistogram.astro` (modalità collegata o statica).
-- `src/components/home/` — caselle degli anni, lettera dei creatori.
+- `src/components/home/` — caselle degli anni, lettera dei creatori, banner "Lavori in corso" (`BannerLavori.astro`:
+  chiudibile, ricordato in localStorage; da togliere da `index.astro` quando le guide saranno complete).
 - `src/pages/` — home, `/guide/`, `/guide/[slug]/`, `/anni/[anno]/`, `/dev/[page]/`.
 - Ricerca: Pagefind (`SearchBox.astro`, in home e `/guide/`). Indicizza solo `data-pagefind-body`
   (l'`article` delle guide); escludere con `data-pagefind-ignore` ciò che non è contenuto (schede,
