@@ -1,5 +1,5 @@
 {
-  "generato_il": "2026-10-08T13:39:12.211Z",
+  "generato_il": "2026-10-08T15:06:57.677Z",
   "fonte": "https://unipv.coursecatalogue.cineca.it (API insegnamento e docente)",
   "esami": {
     "501317": {
@@ -1006,6 +1006,10 @@
         }
       ]
     },
+    "501833": {
+      "nome": "CLINICA MEDICA 2",
+      "docenti": []
+    },
     "502622": {
       "nome": "PATOLOGIA GENERALE",
       "docenti": [
@@ -1047,6 +1051,10 @@
           ]
         }
       ]
+    },
+    "506412": {
+      "nome": "CHIRURGIA ED EMERGENZE",
+      "docenti": []
     },
     "506413": {
       "nome": "DIAGNOSTICA PER IMMAGINI E ONCOLOGIA",

@@ -197,7 +197,7 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   anno accademico.
 - **Esami senza guida** (schede bloccate "Guida in arrivo"): `src/lib/in-arrivo.ts` li ricava dal catalogo
   (`syllabus.json`: voto finale, niente esami a scelta né tirocini) per gli anni in `ANNI_CON_SEGNAPOSTO`
-  (ora IV e V). Spariscono da soli quando esiste una guida con lo stesso `esse3_codice` o lo stesso nome.
+  (ora IV, V e VI). Spariscono da soli quando esiste una guida con lo stesso `esse3_codice` o lo stesso nome.
 - Il vecchio "Programma" dei rappresentanti, se contiene consigli (non generico, non un semplice elenco
   di argomenti), finisce in testa a "Consigli e Materiale" sotto **Sul programma**. Le voci "Programma"
   di "Informazioni da verificare" vengono tolte; un anno di corso diverso dal catalogo **non** si

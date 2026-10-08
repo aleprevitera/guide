@@ -1,0 +1,110 @@
+id: g-riy9dsfx
+title: Chirurgia ed Emergenze
+anno_di_corso: VI Anno
+descrizione_generale: "L’esame è composto da tre moduli, valutati attraverso una media aritmetica: Terapia intensiva, Chirurgia d’urgenza e Clinica chirurgica."
+moduli:
+  - nome_modulo: Terapia intensiva
+    id: m-2dg08krc
+    exam_type: Orale
+    exam_details: |-
+      Esame orale, a gruppi di 3-4 studenti, con il Prof. Bottazzi e il Prof. Natoli.
+
+      - Durata: circa 50 minuti per gruppo.
+      - Solitamente: 2 domande a testa.
+      - La giornata d’esame può risultare piuttosto lunga.
+
+      Durante l’esame può essere richiesto, soprattutto dal Prof. Bottazzi, di:
+
+      - interpretare un’emogasanalisi;
+      - diagnosticare il quadro;
+      - commentare i risultati;
+      - interpretare curve e grafici.
+
+      L’esame è spesso basato sul ragionamento fisiopatologico più che sulla semplice memorizzazione.
+    program: |-
+      Argomenti trattati nelle sbobine dell’anno corrente, con particolare attenzione a:
+
+      - BPCO scompensata
+      - Asma grave
+
+      Sono inoltre importanti i quadri di rianimazione e terapia intensiva dal punto di vista fisiopatologico.
+    material_tips: |-
+      Fonti consigliate:
+
+      - Sbobine dell’anno corrente
+      - Dispense del Prof. Iotti per integrare BPCO scompensata e asma grave
+      - Domande degli anni precedenti, comprese le eventuali domande secondarie associate
+
+      Consigli:
+
+      - Guardare molto bene le domande degli anni precedenti.
+      - Prestare attenzione a curve e grafici.
+      - Allenarsi nell’interpretazione dell’emogasanalisi.
+      - Non limitarsi alla memorizzazione: è importante capire i meccanismi fisiopatologici alla base dei quadri di terapia intensiva.
+    professors:
+      - nome: Bottazzi
+        stile: Durante l’esame può essere richiesto, soprattutto da lui, di interpretare un’emogasanalisi, diagnosticare il quadro, commentare i risultati e interpretare curve e grafici.
+      - nome: Natoli
+  - nome_modulo: Chirurgia d’urgenza
+    id: m-or9pjiie
+    exam_type: Scritto
+    exam_details: |-
+      Esame scritto a crocette, composto da 30 domande.
+      Il punteggio segue una scala in cui:
+
+      - 30/30 = 30 e lode
+      - gli altri punteggi vengono assegnati a scalare.
+    program: Argomenti presenti nelle slide e nelle domande degli esami precedenti.
+    material_tips: |-
+      Fonti consigliate:
+
+      - Slide
+      - Domande degli esami passati
+
+      Consigli:
+
+      - Fare con particolare attenzione le domande degli esami precedenti.
+      - Le domande tendono a ripetersi molto frequentemente: in alcuni casi possono ripresentarsi anche interi esami.
+  - nome_modulo: Clinica chirurgica
+    id: m-ke2k2iky
+    exam_type: Orale
+    exam_details: |-
+      Esame orale, a gruppi e in ordine alfabetico.
+
+      - Durata: circa 30 minuti per gruppo.
+      - L’esame può diventare piuttosto lungo a causa della tendenza dei docenti a divagare.
+      - La prima domanda può essere orientata anche sulla base del reparto in cui si è interni o della futura specializzazione.
+
+      I docenti sono descritti come molto tranquilli.
+    program: |-
+      Il programma è ampio e comprende numerosi argomenti di chirurgia generale.
+      Particolare attenzione a:
+
+      - Pancreas
+      - Colecisti
+      - Anatomia delle strutture più frequentemente citate
+      - Gestione del paziente traumatizzato
+      - Elementi pratici relativi alla chirurgia
+
+      Non è necessario perdersi eccessivamente nei dettagli delle tecniche chirurgiche, che solitamente non costituiscono il focus dell’esame.
+    material_tips: |-
+      Le sbobine sono molto ampie e possono risultare eccessive da studiare integralmente. È consigliabile:
+
+      - fare una lettura delle sbobine;
+      - selezionare le informazioni più rilevanti;
+      - utilizzare le domande degli anni precedenti per capire su quali argomenti concentrarsi.
+
+      Particolare attenzione alle sbobine sul pancreas, argomento estremamente richiesto dal Prof. Cobianchi.
+      Non cercare di imparare integralmente tutte le sbobine.
+      Usare le domande passate per selezionare le informazioni realmente importanti.
+    professors:
+      - nome: Cobianchi
+        stile: Richiede in particolare l’argomento pancreas.
+info_da_verificare:
+  - campo: Docenti
+    nota: Non specificati per il modulo Chirurgia d’urgenza.
+  - campo: Docenti
+    nota: Non specificati per il modulo Clinica chirurgica, oltre a Cobianchi citato nelle domande.
+esse3_codice: "506412"
+cfu_totali: 8
+ultimo_aggiornamento: 2026-10-08

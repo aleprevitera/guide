@@ -9,7 +9,7 @@ import { ANNI_DI_CORSO } from '../content/config';
 import type { Anno } from './anni';
 import type { Semestre } from './guide';
 
-export const ANNI_CON_SEGNAPOSTO: Anno[] = ['IV Anno', 'V Anno'];
+export const ANNI_CON_SEGNAPOSTO: Anno[] = ['IV Anno', 'V Anno', 'VI Anno'];
 
 export interface EsameInArrivo {
   codice: string;
@@ -57,7 +57,7 @@ export function esamiInArrivo(anno: Anno, guide: CollectionEntry<'guide'>[]): Es
   const codici = new Set(guide.map((g) => g.data.esse3_codice).filter(Boolean));
   const nomi = new Set(guide.map((g) => chiave(g.data.title)));
   return catalogo
-    .filter((e) => e.annoCorso === numero && e.valutazione === 'Voto Finale' && !/scelta/i.test(e.tipo ?? ''))
+    .filter((e) => e.annoCorso === numero && e.valutazione === 'Voto Finale' && !/scelta/i.test(e.tipo ?? '') && !/prova finale/i.test(e.nome))
     .filter((e) => !codici.has(String(e.codiceAttivita)) && !nomi.has(chiave(e.nome)))
     .map((e) => ({
       codice: String(e.codiceAttivita),

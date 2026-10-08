@@ -52,6 +52,8 @@ const SOLO = args.includes('--solo') ? args[args.indexOf('--solo') + 1] : null;
 const ELENCO = args.includes('--elenco');
 const AGGIORNA = args.includes('--aggiorna');
 const DOCX = args.includes('--docx') ? args.filter((a) => a.toLowerCase().endsWith('.docx')) : null;
+// Esami da non importare (es. ancora in scrittura): --escludi "Medicina pubblica,Altro".
+const ESCLUDI = args.includes('--escludi') ? args[args.indexOf('--escludi') + 1].split(',').map((x) => x.trim().toLowerCase()) : [];
 
 // --- Vincoli condivisi con src/content/config.ts e src/lib/fasce.ts --------
 
@@ -165,29 +167,44 @@ function testoDocx(file) {
 const TITOLO_DOCX = /^[A-ZÀ-Ü’' ]+(?: \d+)?$/;
 const titoloLeggibile = (s) => s.charAt(0) + s.slice(1).toLowerCase();
 
+const ROMANI_ANNO = { I: 'I Anno', II: 'II Anno', III: 'III Anno', IV: 'IV Anno', V: 'V Anno', VI: 'VI Anno' };
+
+/**
+ * Un esame per titolo. Due formati:
+ *  - titoli tutti in MAIUSCOLO ("MALATTIE DEL SANGUE"), anno da "TERZO ANNO";
+ *  - (se non ce ne sono) titoli normali su una riga breve dopo due righe vuote,
+ *    anno dal nome del file ("VI ANNO - GUIDE PRATICHE.docx").
+ */
 async function leggiDocx(files) {
   const schede = [];
   for (const file of files) {
-    let anno = null, corrente = null;
+    const righe = testoDocx(file).split(/\r?\n/);
+    const annoFile = ROMANI_ANNO[(path.basename(file).match(/\b(VI|IV|V|III|II|I) ANNO\b/i)?.[1] ?? '').toUpperCase()] ?? null;
+    const maiuscolo = (r) => r.length >= 5 && TITOLO_DOCX.test(r) && !/^GUIDA ALL/.test(r) && !/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/.test(r);
+    const usaMaiuscolo = righe.some((r) => maiuscolo(r.trim()));
+    const dopoVuote = (i) => (i === 0 || (i >= 2 && !righe[i - 1].trim() && !righe[i - 2].trim()));
+    const titoloNormale = (r, i) => dopoVuote(i) && r.length >= 4 && r.length <= 70 && /^[A-ZÀ-Ü]/.test(r) && !/[.:;,]$/.test(r) && !/^\d/.test(r);
+
+    let anno = annoFile, corrente = null;
     const chiudi = () => {
       if (corrente) schede.push({ ...corrente, corpo: corrente.righe.join('\n').trim(), stato: 'Fatto' });
       corrente = null;
     };
-    for (const grezza of testoDocx(file).split(/\r?\n/)) {
+    righe.forEach((grezza, i) => {
       const riga = grezza.trim();
       const sezione = riga.match(/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/);
-      if (sezione) { chiudi(); anno = ANNI[sezione[1]]; continue; }
-      if (riga.length >= 5 && TITOLO_DOCX.test(riga) && !/^GUIDA ALL/.test(riga)) {
-        if (corrente?.nomeDocx === riga) continue; // titolo ripetuto
+      if (sezione) { chiudi(); anno = ANNI[sezione[1]]; return; }
+      if (usaMaiuscolo ? maiuscolo(riga) : riga && titoloNormale(riga, i)) {
+        if (corrente?.nomeDocx === riga) return; // titolo ripetuto
         chiudi();
-        corrente = { nome: titoloLeggibile(riga), nomeDocx: riga, anno, file: path.basename(file), righe: [] };
-        continue;
+        corrente = { nome: usaMaiuscolo ? titoloLeggibile(riga) : riga, nomeDocx: riga, anno, file: path.basename(file), righe: [] };
+        return;
       }
       corrente?.righe.push(grezza.replace(/\s+$/, ''));
-    }
+    });
     chiudi();
   }
-  return schede;
+  return schede.filter((s) => !ESCLUDI.includes(s.nome.toLowerCase()));
 }
 
 const ISTRUZIONI_DOCX = `
@@ -575,7 +592,9 @@ const esistenti = await leggiEsistenti();
 // dei voti, si abbinano per nome).
 for (const s of tutte) {
   const e = esistenti.get(chiaveTitolo(s.nome));
-  if (e) s.moduliEsistenti = e.dati.moduli.map((m) => m.nome_modulo);
+  // Solo guide pubblicate: per gli id riservati l'esame può essere cambiato
+  // (es. Clinica Medica 2 ora in due moduli), i moduli si abbinano per nome.
+  if (e && !e.riservato) s.moduliEsistenti = e.dati.moduli.map((m) => m.nome_modulo);
 }
 // Guide già pubblicate (non solo id riservati): si modificano in Decap.
 const giaNelSito = (s) => {
