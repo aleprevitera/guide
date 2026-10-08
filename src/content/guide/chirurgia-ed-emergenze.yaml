@@ -22,13 +22,22 @@ moduli:
 
       L’esame è spesso basato sul ragionamento fisiopatologico più che sulla semplice memorizzazione.
     program: |-
+      - Fisiopatologia e trattamento dello shock, con particolare riguardo allo shock cardiogeno, settico e ostruttivo
+      - Fisiopatologia e trattamento del paziente con danno neurologico acuto
+      - Fisiopatologia dell’insufficienza respiratoria acuta e principi di ventilazione non invasiva e meccanica
+      - Principi di utilizzo dei cateteri venosi centrali
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
+    material_tips: |-
+      **Sul programma**
+
       Argomenti trattati nelle sbobine dell’anno corrente, con particolare attenzione a:
 
       - BPCO scompensata
       - Asma grave
 
       Sono inoltre importanti i quadri di rianimazione e terapia intensiva dal punto di vista fisiopatologico.
-    material_tips: |-
+
       Fonti consigliate:
 
       - Sbobine dell’anno corrente
@@ -90,6 +99,25 @@ moduli:
 
       I docenti sono descritti come molto tranquilli.
     program: |-
+      - **Storia della Chirurgia**: cenni. Chirurgia laparoscopica e robotica.
+      - **La sala operatoria**: struttura e organizzazione.
+      - **La nutrizione artificiale parenterale ed enterale**. Posizionamento di catetere venoso centrale.
+      - **Ernie e laparoceli**. Anatomia del canale inguinale e della parete addominale. Ernie inguinali e crurali. Ernie ombelicali. Laparoceli. Interventi di plastica erniaria.
+      - **Tiroide e Surrene**. Embriologia ed anatomia. Tumori neuroendocrini e MEN. Iper- e ipo-paratiroidismo. Tiroidectomia. Paratiroidectomia. Surrenalectomia.
+      - **Esofago e stomaco**. Anatomia. Diverticoli e tumori dell’esofago. Esofago di Barrett. Acalasia esofagea. S. di Mallory-Weiss. Ernie jatali. Ulcera peptica. Gastrite emorragica. Precancerosi. Tumori maligni dello stomaco. Classificazione TNM e stadiazione. Emorragie delle prime vie digestive. GIST. Resezioni esofagee. Intervento di Nissen. Resezioni gastriche. Gastrectomia totale. Gastroenteroanastomosi. Gastrostomie. Resezioni endoscopiche.
+      - **Fegato e vie biliari**. Anatomia. Calcolosi della colecisti e delle vie biliari. Colangiti e fistole biliari. Tumori primitivi e secondari del fegato. Ipertensione portale. Cisti e ascessi epatici. Colecistectomia. Resezioni epatiche. Terapie ablative (RFTA, MW, etc.).
+      - **Pancreas**. Anatomia. Pancreatiti acute e croniche. Cisti e pseudocisti. Tumori esocrini e tumori endocrini. Tumori della papilla di Vater. Necrosectomia pancreatica. Resezioni parziali e totali del pancreas.
+      - **Ileo, colon e retto**. Anatomia. M. di Crohn. Rettocolite ulcerosa. Sindrome di Gardner. Diverticolosi e diverticolite. Diverticolo di Meckel. Tumori benigni e maligni dell’ileo, del colon e del retto. Appendicite e tumori dell’appendice. Infarto intestinale e sindrome da intestino corto. Enterite attinica. Ragade anale. Emorroidi. Prolasso del retto. Emorragie dell’ileo, colon e retto. Resezioni intestinali. Colostomia, ileostomia. Resezioni endoscopiche.
+      - **Peritoneo**. Anatomia e fisiopatologia. Tumori del peritoneo. Emoperitoneo. Peritonectomia sec. Sugarbaker e chemioterapia ipertermica.
+      - **Addome acuto**. Occlusione intestinale (ileo dinamico, ileo meccanico, ileo biliare, invaginazione intestinale). Perforazione intestinale. Peritoniti acute. S. compartimentale. Addome aperto. Vacuum therapy.
+      - **Mammella e cavo ascellare**. Anatomia. Mastiti. Condizioni predisponenti e trasformazione neoplastica. Mutazioni genetiche. Tumori della mammella, classificazione TNM e loro stadiazione. M. di Paget. Mastectomia radicale. Quadrantectomia. Linfonodo sentinella. Svuotamento del cavo ascellare. Ricostruzione con protesi.
+      - **Rene e vie genitali**. Tumori benigni e maligni del rene, dell’uretere, della vescica e del testicolo. Varicocele. Criptorchidismo. Cisti del funicolo. Idrocele. Torsione testicolare. Nefrectomia. Cistectomia. Orchiectomia. Interventi per varicocele.
+      - **Trapianti d’organo**. Trapianto di rene, fegato, pancreas, intestino. Trapianti multiviscerali. Organi artificiali.
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
+    material_tips: |-
+      **Sul programma**
+
       Il programma è ampio e comprende numerosi argomenti di chirurgia generale.
       Particolare attenzione a:
 
@@ -100,7 +128,7 @@ moduli:
       - Elementi pratici relativi alla chirurgia
 
       Non è necessario perdersi eccessivamente nei dettagli delle tecniche chirurgiche, che solitamente non costituiscono il focus dell’esame.
-    material_tips: |-
+
       Le sbobine sono molto ampie e possono risultare eccessive da studiare integralmente. È consigliabile:
 
       - fare una lettura delle sbobine;
