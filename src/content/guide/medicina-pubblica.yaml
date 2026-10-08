@@ -1,0 +1,212 @@
+id: g-ays218a8
+title: Medicina Pubblica
+anno_di_corso: VI Anno
+descrizione_generale: "L’esame è composto da 5 moduli, che concorrono alla valutazione finale attraverso una media ponderata. La lode viene considerata una sola volta: è sufficiente ottenere una sola lode tra i cinque moduli. Per il calcolo della media: il 30 e lode viene considerato come 30; la lode aggiunge +2 punti alla media ponderata finale; il risultato viene arrotondato per eccesso; per ottenere la lode finale è sufficiente raggiungere 30,1. I moduli di Organizzazione sanitaria e Igiene ambientale valgono 1 CFU ciascuno e vengono sostenuti con un unico esame orale. Tempo di studio complessivo: non sono disponibili indicazioni precise sui giorni necessari per la preparazione."
+moduli:
+  - nome_modulo: Medicina Legale
+    id: m-p7i98hbx
+    exam_type: Orale
+    exam_details: |-
+      L’esame è diviso in due parti.
+
+      **Prima parte**
+
+      - Interrogazione con uno specializzando.
+      - È la parte più corposa dell’esame.
+      - Al termine viene consegnato un foglio con una proposta di voto.
+
+      **Seconda parte**
+
+      - Con il voto proposto si passa da uno dei due professori: Prof. Cecchetto o Prof. Visonà.
+      - Il professore pone una domanda e può generalmente aumentare il voto fino a circa 3 punti.
+
+      Entrambe le fasi dell’esame sono generalmente tranquille.
+
+      La frequenza è generalmente necessaria per poter accedere agli eventuali preappelli.
+    program: |-
+      Il programma comprende i principali argomenti di Medicina Legale, con particolare attenzione agli aspetti normativi e agli articoli fondamentali. È richiesta una conoscenza precisa e talvolta mnemonica di:
+
+      - omicidio e relative tipologie;
+      - violenza sessuale;
+      - aggravanti;
+      - procedibilità;
+      - principali articoli di interesse medico-legale.
+    material_tips: |-
+      **Dove studiare**
+
+      - Sbobine dell’anno corrente.
+      - Domande degli esami precedenti.
+
+      **Consigli per la preparazione**
+
+      - Studiare le sbobine dell’anno corrente.
+      - Guardare attentamente le domande passate.
+      - Memorizzare con precisione gli articoli e gli aspetti normativi maggiormente richiesti.
+      - Prestare particolare attenzione a omicidio, violenza sessuale, aggravanti e procedibilità.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Le domande passate sono molto utili per capire dove concentrare lo studio.
+    professors:
+      - nome: Cecchetto
+        stile: Pone una domanda e può generalmente aumentare il voto fino a circa 3 punti. Generalmente tranquillo.
+      - nome: Visonà
+        stile: Pone una domanda e può generalmente aumentare il voto fino a circa 3 punti. Generalmente tranquillo.
+      - nome: Specializzando incaricato della prima parte dell’esame
+        stile: Interroga nella prima parte, che è la più corposa. Al termine consegna un foglio con proposta di voto. Generalmente tranquillo.
+  - nome_modulo: Medicina del Lavoro
+    id: m-kfhcmrwh
+    exam_type: Scritto
+    exam_details: |-
+      Esame scritto a crocette:
+
+      - 20 domande;
+      - 20/20 = 30 e lode;
+      - subito sotto, 19/20 = 29;
+      - gli altri voti vengono calcolati proporzionalmente in ventesimi.
+
+      Solitamente le domande comprendono una combinazione di:
+
+      - domande già presenti negli appelli precedenti;
+      - circa 2-3 domande nuove.
+
+      La frequenza è generalmente necessaria per poter accedere agli eventuali preappelli.
+    program: |-
+      Il programma è basato principalmente su:
+
+      - slide del corso;
+      - domande degli anni precedenti.
+    material_tips: |-
+      **Dove studiare**
+
+      - Domande degli anni precedenti.
+      - Slide.
+
+      Le domande passate sono particolarmente utili e, spesso, possono essere sufficienti per preparare gran parte dell’esame.
+
+      **Consigli per la preparazione**
+
+      - Fare bene le domande degli anni precedenti.
+      - Integrare con le slide.
+      - Le domande vecchie costituiscono spesso la parte principale dell’esame.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Le domande si ripetono frequentemente.
+      - Spesso le domande degli anni precedenti costituiscono la maggior parte dell’esame.
+      - In genere vengono aggiunte circa 2-3 domande nuove.
+  - nome_modulo: Bioetica
+    id: m-f18tcg5t
+    exam_type: Scritto
+    exam_details: |-
+      Esame scritto a domanda aperta, simile a un breve tema.
+
+      - La domanda riguarda uno dei macroargomenti affrontati a lezione.
+      - Le domande tendono a ripetersi, quindi è molto utile preparare in anticipo una scaletta per ciascuna delle domande passate.
+      - La correzione può richiedere molto tempo.
+
+      Le presenze non vengono controllate.
+    program: Il programma comprende i macroargomenti affrontati durante le lezioni.
+    material_tips: |-
+      **Dove studiare**
+
+      - Domande passate.
+      - Scalette personali.
+
+      Il modo più efficace è preparare delle scalette per ciascuna delle domande passate, così da avere una struttura pronta per sviluppare la risposta durante lo scritto.
+
+      **Consigli per la preparazione**
+
+      - Recuperare tutte le domande degli appelli precedenti.
+      - Preparare una scaletta per ogni domanda.
+      - Essere in grado di sviluppare rapidamente una risposta discorsiva a partire dalla scaletta.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Le domande tendono a ripetersi.
+      - È molto utile preparare in anticipo una scaletta per ciascuna delle domande passate.
+  - nome_modulo: Organizzazione sanitaria
+    id: m-iptxage9
+    cfu: 1
+    exam_type: Orale
+    frequenza: Obbligatoria
+    exam_details: |-
+      Esame orale unico per i due moduli (Organizzazione sanitaria e Igiene ambientale).
+      Generalmente vengono poste:
+
+      - una domanda di Organizzazione sanitaria;
+      - una domanda di Igiene ambientale.
+
+      Spesso la prima domanda può essere collegata alla futura specializzazione dello studente.
+
+      **Frequenza obbligatoria e controllata.** È necessario raggiungere il 75% di presenza complessiva sui due moduli: le lezioni complessive sono 8; è quindi necessario aver frequentato almeno 6 lezioni su 8; le 6 presenze possono essere distribuite liberamente tra i due moduli. Se non viene raggiunta la percentuale richiesta, la Prof.ssa Odone consente comunque di sostenere l’esame, ma aggiungendo argomenti integrativi.
+    program: L’esame comprende generalmente una domanda di Organizzazione sanitaria. È fondamentale attenersi al programma dell’anno in cui si è frequentato il corso, che la Prof.ssa Odone ha a disposizione e consulta durante l’esame.
+    material_tips: |-
+      **Dove studiare**
+
+      - Sbobine.
+      - Capitoli del libro indicati dalla Prof.ssa Odone.
+      - Letture assegnate durante il corso.
+
+      È consigliato almeno dare una lettura ai capitoli del libro indicati dalla docente. Le domande specifiche su questa parte sono rare, ma non è consigliabile trascurare le letture assegnate, che possono comunque essere oggetto di domanda.
+
+      **Consigli per la preparazione**
+
+      - Seguire il programma dell’anno in cui si è frequentato.
+      - Studiare le sbobine.
+      - Non trascurare le letture assegnate.
+      - Dare almeno una lettura ai capitoli del libro indicati dalla docente.
+      - Prepararsi eventualmente sulla propria futura specializzazione, vista la frequente presenza di domande iniziali su questo argomento.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - La prima domanda può riguardare la futura specializzazione.
+    professors:
+      - nome: Odone
+        stile: Interroga un numero più limitato di studenti. Ha a disposizione e consulta il programma dell’anno in cui si è frequentato il corso durante l’esame.
+      - nome: Mosconi
+        stile: All’interrogazione è frequentemente presente soprattutto il Prof. Mosconi.
+  - nome_modulo: Igiene ambientale
+    id: m-cdt6q6du
+    cfu: 1
+    exam_type: Orale
+    frequenza: Obbligatoria
+    exam_details: |-
+      Esame orale unico per i due moduli (Organizzazione sanitaria e Igiene ambientale).
+      Generalmente vengono poste:
+
+      - una domanda di Organizzazione sanitaria;
+      - una domanda di Igiene ambientale.
+
+      Spesso la prima domanda può essere collegata alla futura specializzazione dello studente.
+
+      **Frequenza obbligatoria e controllata.** È necessario raggiungere il 75% di presenza complessiva sui due moduli: le lezioni complessive sono 8; è quindi necessario aver frequentato almeno 6 lezioni su 8; le 6 presenze possono essere distribuite liberamente tra i due moduli. Se non viene raggiunta la percentuale richiesta, la Prof.ssa Odone consente comunque di sostenere l’esame, ma aggiungendo argomenti integrativi.
+    program: L’esame comprende generalmente una domanda di Igiene ambientale. È fondamentale attenersi al programma dell’anno in cui si è frequentato il corso, che la Prof.ssa Odone ha a disposizione e consulta durante l’esame.
+    material_tips: |-
+      **Dove studiare**
+
+      - Sbobine.
+      - Capitoli del libro indicati dalla Prof.ssa Odone.
+      - Letture assegnate durante il corso.
+
+      È consigliato almeno dare una lettura ai capitoli del libro indicati dalla docente. Le domande specifiche su questa parte sono rare, ma non è consigliabile trascurare le letture assegnate, che possono comunque essere oggetto di domanda.
+
+      **Consigli per la preparazione**
+
+      - Seguire il programma dell’anno in cui si è frequentato.
+      - Studiare le sbobine.
+      - Non trascurare le letture assegnate.
+      - Dare almeno una lettura ai capitoli del libro indicati dalla docente.
+      - Prepararsi eventualmente sulla propria futura specializzazione, vista la frequente presenza di domande iniziali su questo argomento.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - La prima domanda può riguardare la futura specializzazione.
+    professors:
+      - nome: Odone
+        stile: Interroga un numero più limitato di studenti. Ha a disposizione e consulta il programma dell’anno in cui si è frequentato il corso durante l’esame.
+      - nome: Mosconi
+        stile: All’interrogazione è frequentemente presente soprattutto il Prof. Mosconi.
+esse3_codice: "504451"
+cfu_totali: 11
+ultimo_aggiornamento: 2026-10-08

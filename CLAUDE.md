@@ -65,6 +65,10 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   nomi dei moduli esistenti (gli `id` dei voti si abbinano per nome) e trasforma "[DA INTEGRARE]" in
   "Informazioni da verificare". Titolo, codice ESSE3, CFU, autore e link restano quelli del sito.
   Dopo l'import: `node scripts/programmi-ufficiali.mjs`, poi rileggere le guide toccate.
+  Formati riconosciuti: titoli in MAIUSCOLO (anno da "TERZO ANNO") o titoli normali dopo due righe vuote
+  (anno dal nome del file); vince la divisione con più esami che hanno UNA sezione "1. Docenti/Professori"
+  (le bozze grezze in cima al documento si scartano). `--escludi "Nome"` per esami incompleti; un esame
+  in un formato diverso si importa da un ritaglio: `--txt sezione.txt --titolo "…" --anno "VI Anno"`.
 - Tempo di studio e difficoltà **mostrati sono solo quelli votati dagli studenti** (feedback, extra):
   le stime scritte nelle guide (`study_time`, `fascia_studio`, `difficolta`) restano nei dati ma non si
   mostrano più (niente etichetta RAPPR. nell'istogramma). L'import continua a compilarle per modulo

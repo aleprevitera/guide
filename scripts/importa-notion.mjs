@@ -52,6 +52,10 @@ const SOLO = args.includes('--solo') ? args[args.indexOf('--solo') + 1] : null;
 const ELENCO = args.includes('--elenco');
 const AGGIORNA = args.includes('--aggiorna');
 const DOCX = args.includes('--docx') ? args.filter((a) => a.toLowerCase().endsWith('.docx')) : null;
+// Un esame da un ritaglio di testo (formati che il docx non permette di
+// dividere da solo): --txt sezione.txt --titolo "Ginecologia e Ostetricia" --anno "VI Anno".
+const TXT = args.includes('--txt') ? args[args.indexOf('--txt') + 1] : null;
+const valore = (k) => (args.includes(k) ? args[args.indexOf(k) + 1] : null);
 // Esami da non importare (es. ancora in scrittura): --escludi "Medicina pubblica,Altro".
 const ESCLUDI = args.includes('--escludi') ? args[args.indexOf('--escludi') + 1].split(',').map((x) => x.trim().toLowerCase()) : [];
 
@@ -181,28 +185,44 @@ async function leggiDocx(files) {
     const righe = testoDocx(file).split(/\r?\n/);
     const annoFile = ROMANI_ANNO[(path.basename(file).match(/\b(VI|IV|V|III|II|I) ANNO\b/i)?.[1] ?? '').toUpperCase()] ?? null;
     const maiuscolo = (r) => r.length >= 5 && TITOLO_DOCX.test(r) && !/^GUIDA ALL/.test(r) && !/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/.test(r);
-    const usaMaiuscolo = righe.some((r) => maiuscolo(r.trim()));
-    const dopoVuote = (i) => (i === 0 || (i >= 2 && !righe[i - 1].trim() && !righe[i - 2].trim()));
-    const titoloNormale = (r, i) => dopoVuote(i) && r.length >= 4 && r.length <= 70 && /^[A-ZÀ-Ü]/.test(r) && !/[.:;,]$/.test(r) && !/^\d/.test(r);
+    const dopoVuote = (i) => i === 0 || (i >= 2 && !righe[i - 1].trim() && !righe[i - 2].trim());
+    const normale = (r, i) =>
+      (r && dopoVuote(i) && r.length >= 4 && r.length <= 70 && /^[A-ZÀ-Ü]/.test(r) && !/[.:;,]$/.test(r) && !/^\d/.test(r)) ||
+      // Una riga tutta maiuscola dopo una vuota chiude comunque l'esame precedente.
+      (i > 0 && !righe[i - 1].trim() && maiuscolo(r));
 
-    let anno = annoFile, corrente = null;
-    const chiudi = () => {
-      if (corrente) schede.push({ ...corrente, corpo: corrente.righe.join('\n').trim(), stato: 'Fatto' });
-      corrente = null;
+    const dividi = (eTitolo, leggibile) => {
+      const out = [];
+      let anno = annoFile, corrente = null;
+      const chiudi = () => {
+        if (corrente) out.push({ ...corrente, corpo: corrente.righe.join('\n').trim(), stato: 'Fatto' });
+        corrente = null;
+      };
+      righe.forEach((grezza, i) => {
+        const riga = grezza.trim();
+        const sezione = riga.match(/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/);
+        if (sezione) { chiudi(); anno = ANNI[sezione[1]]; return; }
+        if (eTitolo(riga, i)) {
+          if (corrente?.nomeDocx === riga) return; // titolo ripetuto
+          chiudi();
+          corrente = { nome: leggibile(riga), nomeDocx: riga, anno, file: path.basename(file), righe: [] };
+          return;
+        }
+        corrente?.righe.push(grezza.replace(/\s+$/, ''));
+      });
+      chiudi();
+      return out;
     };
-    righe.forEach((grezza, i) => {
-      const riga = grezza.trim();
-      const sezione = riga.match(/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/);
-      if (sezione) { chiudi(); anno = ANNI[sezione[1]]; return; }
-      if (usaMaiuscolo ? maiuscolo(riga) : riga && titoloNormale(riga, i)) {
-        if (corrente?.nomeDocx === riga) return; // titolo ripetuto
-        chiudi();
-        corrente = { nome: usaMaiuscolo ? titoloLeggibile(riga) : riga, nomeDocx: riga, anno, file: path.basename(file), righe: [] };
-        return;
-      }
-      corrente?.righe.push(grezza.replace(/\s+$/, ''));
-    });
-    chiudi();
+    // Una guida vera ha UNA sezione "1. Docenti/Professori…": le parti senza
+    // (intestazioni, bozze grezze in cima al documento) si scartano; esami
+    // "Mancante" restano e vengono saltati per lunghezza.
+    const sezioniUno = (c) => (c.corpo.match(/^\s*1\.\s+(Docenti|Professori)\b/gim) ?? []).length;
+    const valide = (lista) => lista.filter((c) => sezioniUno(c) === 1 || c.corpo.length < MIN_CARATTERI);
+    const conMaiuscolo = dividi((r) => maiuscolo(r), titoloLeggibile);
+    const conNormali = dividi(normale, (r) => r);
+    const punti = (lista) => valide(lista).filter((c) => sezioniUno(c) === 1).length;
+    if (process.env.DEBUG_DOCX) for (const [n, l] of [["maiuscolo", conMaiuscolo], ["normali", conNormali]]) log(n, punti(l), l.map((c) => `${c.nome}:${sezioniUno(c)}`).join(" | "));
+    schede.push(...valide(punti(conNormali) > punti(conMaiuscolo) ? conNormali : conMaiuscolo));
   }
   return schede.filter((s) => !ESCLUDI.includes(s.nome.toLowerCase()));
 }
@@ -584,7 +604,9 @@ function componiYaml(scheda, guida, esistente) {
 
 // --- Main -------------------------------------------------------------------
 
-const tutte = DOCX ? await leggiDocx(DOCX) : await leggiIndice();
+const tutte = TXT
+  ? [{ nome: valore('--titolo'), nomeDocx: valore('--titolo'), anno: valore('--anno'), stato: 'Fatto', file: path.basename(TXT), corpo: (await fs.readFile(TXT, 'utf8')).trim() }]
+  : DOCX ? await leggiDocx(DOCX) : await leggiIndice();
 const pronte = tutte.filter((s) => s.stato === 'Fatto' && s.corpo.length >= MIN_CARATTERI && (!SOLO || s.nome === SOLO));
 const scartate = tutte.filter((s) => !pronte.includes(s) && (!SOLO || s.nome === SOLO));
 const esistenti = await leggiEsistenti();

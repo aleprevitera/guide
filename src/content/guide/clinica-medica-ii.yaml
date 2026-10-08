@@ -46,8 +46,9 @@ moduli:
     professors:
       - nome: Salinaro
         stile: Può essere richiesto di affrontare un caso ragionando come se ci si trovasse realmente in Pronto Soccorso. Può essere molto utile ragionare ad alta voce.
-      - nome: Di Pietro
+      - nome: Santi Di Pietro
         stile: Può chiedere anche i dosaggi dei farmaci. Non è necessario imparare a memoria ogni dosaggio nel dettaglio, ma è consigliabile avere almeno un'idea dei relativi ordini di grandezza.
+        email: santi.dipietro@unipv.it
   - nome_modulo: Medicina Interna B
     id: m-is900itq
     exam_type: Orale
@@ -96,16 +97,20 @@ moduli:
       - Ematologia: Anemia: approccio diagnostico, Linfoadenopatia, Policitemia vera, Piastrinopenia (trombocitopenia), Diatesi emorragica, Emocromatosi, Trombofilie ereditarie
       - Endocrinologia e metabolismo: Obesità e sindrome metabolica, Diabete mellito tipo 2 (DM2), Tiroidite autoimmune, Calo ponderale
     professors:
-      - nome: Noris
+      - nome: Patrizia Noris
         stile: Studiare bene le sbobine. Può essere utile integrare con le lezioni dell’a.a. 2024/2025, quando la Prof.ssa Noris aveva un CFU aggiuntivo.
-      - nome: Lenti
+        email: patrizia.noris@unipv.it
+      - nome: Marco Vincenzo Lenti
         stile: Studiare le sbobine.
-      - nome: Di Sabatino
+        email: marcovincenzo.lenti@unipv.it
+      - nome: Antonio Di Sabatino
         stile: Concentrarsi soprattutto sulle aggiunte del docente e sugli argomenti ricorrenti. Particolare attenzione agli argomenti su cui insiste maggiormente, come CVID e colite microscopica. Può apparire particolarmente severo o intimidatorio durante l’esame, ma questo atteggiamento non sembra necessariamente riflettersi sul voto finale.
+        email: antonio.disabatino@unipv.it
       - nome: Corazza
         stile: Anche le lezioni che possono sembrare meno cliniche vanno studiate, nel caso il docente sia presente all’esame.
-      - nome: Santacroce
+      - nome: Giovanni Santacroce
         stile: Particolare attenzione alla Gastroenterologia per gli argomenti affrontati.
+        email: giovanni.santacroce@unipv.it
 esse3_codice: "501833"
 cfu_totali: 8
 ultimo_aggiornamento: 2026-10-08

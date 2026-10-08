@@ -130,10 +130,15 @@ const senzaTitolo = (nome) => nome.replace(/^\s*(prof\.?(ssa)?|dott\.?(ssa)?|dr\
 
 function stessaPersona(prof, d) {
   const nome = senzaTitolo(prof.nome);
-  prof = { ...prof, nome };
-  const n = norm(nome);
   if (prof.email && d.email && prof.email.toLowerCase() === d.email) return true;
-  return n.includes(norm(d.cognome)) && (n === norm(d.cognome) || n.includes(norm(d.nome.split(' ')[0])) || !/\s/.test(prof.nome.trim()));
+  // Confronto a parole intere ("Santacroce" non è "Croce").
+  const parole = nome.split(/\s+/).map(norm).filter(Boolean);
+  const cognome = d.cognome.split(/\s+/).map(norm).filter(Boolean);
+  const pos = parole.findIndex((_, k) => cognome.every((c, h) => parole[k + h] === c));
+  if (pos < 0) return false;
+  const altre = parole.filter((_, k) => k < pos || k >= pos + cognome.length);
+  // Solo il cognome, oppure cognome + un nome che corrisponde a quello del catalogo.
+  return altre.length === 0 || altre.some((a) => d.nome.split(/\s+/).map(norm).includes(a));
 }
 
 // Esami in cui il catalogo elenca moltissimi docenti (turni, reparti): si
@@ -177,10 +182,15 @@ else {
   await writeFile(USCITA, `${JSON.stringify(dati, null, 2)}\n`);
 }
 
+// Tutti i docenti del catalogo, per completare quelli citati in esami senza dati.
+const TUTTI = Object.values(dati.esami).flatMap((e) => e.docenti);
+
 console.log('\nGuide:');
 let toccate = 0;
 for (const g of guide) {
-  const esame = dati.esami[g.esse3_codice];
+  // Esami senza docenti nel catalogo (es. VI anno): si completa comunque
+  // dai docenti degli altri esami (passo 1 bis).
+  const esame = dati.esami[g.esse3_codice] ?? (g.esse3_codice ? { nome: g.title, docenti: [] } : null);
   if (!esame) continue;
   const prima = JSON.stringify(g.moduli);
   const note = [];
@@ -210,8 +220,15 @@ for (const g of guide) {
         note.push(`= "${p.nome}" (${m.nome_modulo}) → ${candidati.map(nomeDi).join(' e ')}`);
         continue;
       }
-      const d = candidati[0];
-      if (!d) continue;
+      let d = candidati[0];
+      // 1 bis. Non nel catalogo di questo esame: cognome UNICO fra tutti i
+      // docenti del catalogo (altri esami) → nome ed email da lì.
+      if (!d) {
+        const altrove = [...new Map(TUTTI.filter((x) => stessaPersona(p, x)).map((x) => [x.email ?? nomeDi(x), x])).values()];
+        if (altrove.length !== 1) continue;
+        d = altrove[0];
+        note.push(`(da un altro esame) "${p.nome}" → ${nomeDi(d)}`);
+      }
       abbinati.add(d);
       if (p.nome !== nomeDi(d)) { note.push(`nome "${p.nome}" → "${nomeDi(d)}"`); p.nome = nomeDi(d); }
       if (d.email && p.email !== d.email) {

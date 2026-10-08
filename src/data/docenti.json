@@ -1,5 +1,5 @@
 {
-  "generato_il": "2026-10-08T15:06:57.677Z",
+  "generato_il": "2026-10-08T15:22:43.691Z",
   "fonte": "https://unipv.coursecatalogue.cineca.it (API insegnamento e docente)",
   "esami": {
     "501317": {
@@ -88,6 +88,10 @@
           ]
         }
       ]
+    },
+    "501628": {
+      "nome": "GINECOLOGIA E OSTETRICIA",
+      "docenti": []
     },
     "501690": {
       "nome": "FARMACOLOGIA 1",
@@ -1051,6 +1055,10 @@
           ]
         }
       ]
+    },
+    "504451": {
+      "nome": "MEDICINA PUBBLICA",
+      "docenti": []
     },
     "506412": {
       "nome": "CHIRURGIA ED EMERGENZE",
