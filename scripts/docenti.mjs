@@ -130,6 +130,10 @@ function stessaPersona(prof, d) {
   return n.includes(norm(d.cognome)) && (n === norm(d.cognome) || n.includes(norm(d.nome.split(' ')[0])) || !/\s/.test(prof.nome.trim()));
 }
 
+// Esami in cui il catalogo elenca moltissimi docenti (turni, reparti): si
+// completano quelli già nella guida e si aggiunge solo il titolare.
+const SOLO_NOMINATI = new Set(['501771']); // Semeiotica medica e chirurgica
+
 // Nomi dei moduli nel catalogo che non somigliano a quelli delle guide.
 const ALIAS = {
   RADIOLOGIA: 'Diagnostica per immagini',
@@ -202,6 +206,7 @@ for (const g of guide) {
   // 2. Docenti mancanti: nel modulo che insegnano.
   for (const d of esame.docenti) {
     if (abbinati.has(d) || ambigui.has(d)) continue;
+    if (SOLO_NOMINATI.has(String(g.esse3_codice)) && !d.titolare) continue;
     const dove = moduliDelDocente(d, g.moduli, esame.nome);
     if (!dove.length) {
       note.push(`? ${nomeDi(d)} (${d.moduli.join(', ') || 'nessun modulo indicato'}): modulo non riconosciuto, non aggiunto`);
