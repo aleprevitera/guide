@@ -1,13 +1,16 @@
 id: g-g65v8vsv
 title: Malattie degli Organi di senso
+esse3_codice: "501804"
 anno_di_corso: V Anno
-descrizione_generale: "L’esame è composto da quattro moduli: Oftalmologia, Otorinolaringoiatria e Audiologia, Odontoiatria, Chirurgia maxillo-facciale. I moduli hanno modalità d’esame e tempi di preparazione differenti. Il voto finale non è specificato nella scheda."
+cfu_totali: 8
+semestre: I
+descrizione_generale: "L'esame è composto da quattro moduli: Oftalmologia, Otorinolaringoiatria e Audiologia, Odontoiatria, Chirurgia maxillo-facciale. I quattro moduli presentano modalità d'esame e tempi di preparazione piuttosto differenti. **Frequenza**: non sembra essere controllata in maniera particolarmente rigorosa nei vari moduli."
 moduli:
   - nome_modulo: Oftalmologia
     id: m-ze2xjad6
     exam_type: Orale
     study_time: 1–2 settimane
-    exam_details: "Esame orale. Interrogano Bianchi e Milano. Gli studenti vengono chiamati in ordine alfabetico. Generalmente vengono poste due domande: una prima su un argomento più ampio; una seconda su un argomento più circoscritto, ad esempio un vizio di rifrazione, ectropion, entropion ecc. Le bocciature sono comunque rare."
+    exam_details: "L'esame è orale e gli studenti vengono chiamati in ordine alfabetico. Interrogano Bianchi e Milano. Generalmente vengono poste due domande: una prima domanda su un argomento più ampio; una seconda domanda su un argomento più circoscritto, ad esempio un vizio di rifrazione, ectropion, entropion, ecc. Le bocciature sono comunque rare."
     program: |-
       Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
 
@@ -91,20 +94,22 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Argomenti trattati durante il corso. Tra gli argomenti che possono richiedere integrazione: ectropion; entropion; blefarospasmo; lagoftalmo; calazio.
+      Il programma comprende gli argomenti trattati durante il corso. È particolarmente utile confrontarlo con le domande degli appelli precedenti, che permettono di individuare gli argomenti eventualmente trattati solo superficialmente o non affrontati durante il proprio anno. Tra gli argomenti che possono richiedere integrazione: ectropion, entropion, blefarospasmo, lagoftalmo, calazio.
 
-      - Sbobine dell’anno corrente come fonte principale.
-      - Domande degli appelli precedenti, fondamentali per capire quali argomenti siano stati trattati meno nel proprio anno.
-      - Per gli argomenti mancanti o trattati superficialmente, integrare dalle sbobine degli anni precedenti.
+      - Sbobine dell'anno corrente come fonte principale.
+      - Domande degli appelli precedenti, fondamentali per individuare gli argomenti trattati meno durante il proprio anno.
+      - Sbobine degli anni precedenti per integrare gli argomenti mancanti o trattati superficialmente.
       - Per alcuni argomenti minori, come ectropion, entropion, blefarospasmo, lagoftalmo e calazio, può essere sufficiente una ricerca mirata su fonti online.
-      - Guardare sempre le domande degli appelli precedenti e utilizzarle per individuare gli argomenti da integrare.
-    body: Milano a lezione comunica di prestare attenzione alle presenze, ma le presenze non vengono poi controllate durante l’esame.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Vizi di rifrazione; ectropion; entropion; altri argomenti individuabili dalle domande degli appelli precedenti
     professors:
       - nome: Paolo Emilio Bianchi
-        stile: generalmente tranquillo
+        stile: Generalmente tranquillo.
         email: paoloemilio.bianchi@unipv.it
       - nome: Giovanni Milano
-        stile: un po’ più puntiglioso
+        stile: Tende a essere un po' più puntiglioso.
         email: giovanni.milano@unipv.it
       - nome: Francesco Maria Quaranta Leoni
         email: francescomaria.quarantaleoni@unipv.it
@@ -113,10 +118,9 @@ moduli:
     fascia_studio: 1–2 sett
   - nome_modulo: Otorinolaringoiatria e Audiologia
     id: m-lcq5czjs
-    esse3_appello: OTORINO
     exam_type: Orale
     study_time: 3–4 settimane
-    exam_details: Esame orale e si svolge in ordine alfabetico. I docenti sono Benazzo, Pagella, Canzi e Carlotto. Spesso la prima domanda riguarda il reparto in cui si sta svolgendo l’internato. È frequente una struttura con una domanda di ORL e una domanda di Audiologia/Vestibologia.
+    exam_details: L'esame è orale e si svolge in ordine alfabetico. Spesso la prima domanda riguarda il reparto in cui si sta svolgendo l'internato. È frequente una struttura con una domanda di ORL e una domanda di Audiologia/Vestibologia.
     program: |-
       Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
 
@@ -236,38 +240,43 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      ORL: programma previsto dal syllabus, verificando che tutti gli argomenti siano effettivamente presenti nelle sbobine dell’anno corrente. Audiologia: oltre agli argomenti delle sbobine, è particolarmente importante la vestibologia.
+      Per ORL è necessario coprire il programma previsto dal syllabus, verificando che tutti gli argomenti siano effettivamente presenti nelle sbobine dell'anno corrente. Per Audiologia, oltre agli argomenti delle sbobine, è particolarmente importante la vestibologia.
 
-      ORL:
+      **ORL**
 
-      - Sbobine dell’anno corrente, generalmente sufficienti.
-      - Controllare il syllabus per verificare che non manchino argomenti.
-      - Integrare dal De Campora o dalle sbobine degli anni precedenti gli argomenti presenti nel programma ma non trattati nell’anno corrente (es. tumori del cavo orale e dell’orofaringe).
+      - Sbobine dell'anno corrente, generalmente sufficienti.
+      - Syllabus, da confrontare con le sbobine per verificare che non manchino argomenti.
+      - De Campora o sbobine degli anni precedenti per integrare gli argomenti presenti nel programma ma non trattati nell'anno corrente (es. tumori del cavo orale e dell'orofaringe).
 
-      Audiologia:
+      **Audiologia**
 
       - Le sbobine sono generalmente sufficienti per la parte di audiologia.
-      - La vestibologia richiede integrazione dal De Campora, in particolare per: anatomia, come ripasso; patologie periferiche e miste; tumori dell’angolo ponto-cerebellare.
+      - Per la vestibologia è necessario integrare dal De Campora, in particolare: anatomia (come ripasso), patologie periferiche e miste, tumori dell'angolo ponto-cerebellare.
 
-      Le domande degli appelli precedenti sono utili anche per ORL e Audiologia. In ORL, controllare il syllabus oltre alle sbobine per evitare di lasciare scoperti argomenti non affrontati a lezione. Per Audiologia, dedicare particolare attenzione alla vestibologia.
-    body: A lezione viene preso il codice di frequenza, ma questo non viene controllato in sede d’esame.
+      Le domande degli appelli precedenti sono utili sia per ORL sia per Audiologia.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - ORL: Argomenti del programma; possibile domanda iniziale sul reparto di internato; tumori del cavo orale e dell'orofaringe
+      - Audiologia / Vestibologia: Patologie periferiche e miste; tumori dell'angolo ponto-cerebellare
     professors:
       - nome: Marco Benazzo
-        stile: descritto come il più impegnativo
+        stile: Descritto come il più impegnativo.
         email: marco.benazzo@unipv.it
       - nome: Fabio Giuseppe Maria Pagella
         email: fabio.pagella@unipv.it
       - nome: Pietro Canzi
         email: pietro.canzi@unipv.it
       - nome: Elena Carlotto
-        stile: descritta come tranquilla, propensa a lasciare parlare lo studente e generalmente larga nella valutazione
+        stile: Descritta come tranquilla, propensa a lasciare parlare lo studente e generalmente larga nella valutazione.
         email: elena.carlotto@unipv.it
+    esse3_appello: OTORINO
     fascia_studio: 3–4 sett
   - nome_modulo: Odontoiatria
     id: m-j91rrxoo
     exam_type: Scritto
     study_time: 3–4 giorni
-    exam_details: A partire dall’anno di riferimento, l’esame è diventato scritto. Le domande a scelta multipla sono quindi nuove rispetto agli anni precedenti. L’esame viene svolto tramite Kiro Testing. La valutazione segue la stessa logica di Maxillo, con un punto bonus.
+    exam_details: A partire dall'anno di riferimento, l'esame è diventato scritto. Le domande a scelta multipla sono quindi nuove rispetto agli anni precedenti. L'esame viene svolto tramite Kiro Testing e la valutazione segue la stessa logica di Maxillo, con un punto bonus.
     program: |-
       Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
 
@@ -277,18 +286,20 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Il programma comprende le lezioni previste dal corso. Nell’anno di riferimento sono state svolte soltanto 3 delle 4 lezioni previste, rendendo necessario integrare autonomamente la quarta. Argomenti da integrare: glossopatie; lesioni pigmentate della mucosa orale; iperplasie e lesioni reattivo-traumatiche della mucosa orale; malformazioni vascolari benigne del cavo orale; stomatiti; pemfigo della mucosa orale; pseudolesioni della mucosa orale; sindrome della bocca che brucia.
+      Il programma comprende le lezioni previste dal corso. Nell'anno di riferimento sono state svolte soltanto 3 delle 4 lezioni previste, rendendo necessario integrare autonomamente la quarta. Gli argomenti da integrare comprendono: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne del cavo orale, stomatiti, pemfigo della mucosa orale, pseudolesioni della mucosa orale, sindrome della bocca che brucia.
 
-      - Sbobine dell’anno corrente, generalmente sufficienti.
-      - Integrare la quarta lezione non svolta nell’anno di riferimento tramite il libro/PDF fornito.
-      - Recuperare necessariamente la quarta lezione non svolta nell’anno di riferimento.
-    body: Le presenze non vengono controllate.
+      - Sbobine dell'anno corrente, generalmente sufficienti.
+      - Per la quarta lezione non svolta nell'anno di riferimento, utilizzare il libro/PDF fornito per integrare: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne, stomatiti, pemfigo della mucosa orale, pseudolesioni, sindrome della bocca che brucia.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande nuove rispetto agli anni precedenti; argomenti delle lezioni dell'anno corrente e della quarta lezione da integrare
     fascia_studio: < 1 sett
   - nome_modulo: Chirurgia maxillo-facciale
     id: m-qya7ev2i
     exam_type: Scritto
     study_time: 2–3 giorni
-    exam_details: "Esame scritto con 30 domande a scelta multipla, tenuto dal professor Sfondrini. La valutazione segue questa modalità: 30/30 → 30 e lode; 29/30 → 30; e così via. È quindi presente un punto bonus rispetto alla conversione diretta del numero di risposte corrette."
+    exam_details: "L'esame è scritto, con 30 domande a scelta multipla, ed è tenuto dal professor Sfondrini. La valutazione segue questa modalità: 30/30 → 30 e lode; 29/30 → 30; e così via. È quindi presente un punto bonus rispetto alla conversione diretta del numero di risposte corrette."
     program: |-
       Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
 
@@ -296,18 +307,22 @@ moduli:
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
-      - Sbobine dell’anno corrente, ritenute sufficienti.
-      - Le domande degli appelli precedenti sono fondamentali perché, secondo la testimonianza, alcune domande tendono a ripetersi.
-      - Dare grande importanza alle domande precedenti.
-    body: Le presenze non vengono controllate.
+      **Sul programma**
+
+      Il programma corrisponde agli argomenti trattati durante le lezioni del corso.
+
+      - Sbobine dell'anno corrente, ritenute sufficienti.
+      - Domande degli appelli precedenti, particolarmente importanti perché, secondo la testimonianza, alcune domande tendono a ripetersi.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande delle prove precedenti, alcune delle quali possono ripetersi
     professors:
       - nome: Sfondrini
+        stile: Titolare del corso.
     fascia_studio: < 1 sett
 info_da_verificare:
-  - campo: Frequenza
-    nota: La scheda afferma che la frequenza non sembra essere controllata in maniera rigorosa nei vari moduli; verificare eventuali obblighi di frequenza.
+  - campo: Contatti docenti
+    nota: Email e nomi completi mancanti per Bianchi, Milano, Benazzo, Pagella, Canzi, Carlotto, Sfondrini; per Odontoiatria nome e contatti da integrare.
 aggiornato_da: Rocco Buellis
-esse3_codice: "501804"
-cfu_totali: 8
-semestre: I
 ultimo_aggiornamento: 2026-10-08

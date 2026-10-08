@@ -124,8 +124,13 @@ async function scarica(guide) {
 // --- 2. Guide ----------------------------------------------------------------
 
 /** Il docente del catalogo è questo professore della guida? (per cognome) */
+// "Prof.ssa Crema", "Dott. Stefanelli" → "Crema", "Stefanelli".
+const senzaTitolo = (nome) => nome.replace(/^\s*(prof\.?(ssa)?|dott\.?(ssa)?|dr\.?)\s+/i, '').trim();
+
 function stessaPersona(prof, d) {
-  const n = norm(prof.nome);
+  const nome = senzaTitolo(prof.nome);
+  prof = { ...prof, nome };
+  const n = norm(nome);
   if (prof.email && d.email && prof.email.toLowerCase() === d.email) return true;
   return n.includes(norm(d.cognome)) && (n === norm(d.cognome) || n.includes(norm(d.nome.split(' ')[0])) || !/\s/.test(prof.nome.trim()));
 }
@@ -183,6 +188,8 @@ for (const g of guide) {
   //    catalogo (confronto sui dati originali). Due docenti con lo stesso
   //    cognome (es. Laura e Paolo Fusar Poli) = ambiguo: la voce resta com'è
   //    e nessuno dei due viene aggiunto, da sistemare a mano.
+  // Nomi senza titoli ("Prof.ssa", "Dott."): uniformi anche per i docenti che il catalogo non conosce.
+  for (const m of g.moduli) for (const p of m.professors ?? []) p.nome = senzaTitolo(p.nome);
   const abbinati = new Set();
   const ambigui = new Set();
   for (const m of g.moduli) {

@@ -1,26 +1,24 @@
 id: g-ra9dqztt
 title: Psichiatria
+esse3_codice: "501746"
 anno_di_corso: V Anno
+cfu_totali: 5
+semestre: I
 moduli:
   - nome_modulo: Psichiatria
     id: m-0v8s8vwa
     exam_type: Scritto
-    study_time: 20 giorni
+    study_time: circa 20 giorni
     exam_details: |-
-      L'esame è scritto, ha una durata di 30 minuti ed è composto da due tipologie di quesiti.
+      L'esame è scritto, dura 30 minuti ed è composto da due tipologie di quesiti:
 
-      Struttura della prova:
+      - 2 domande aperte, per un totale di 10 punti;
+      - 3 blocchi da 10 domande vero/falso, ciascuno del valore di 4 punti.
 
-      - 2 domande aperte (10 punti complessivi)
-      - 3 blocchi da 10 vero/falso (4 punti per blocco)
+      Il punteggio massimo è quindi di 32 punti.
 
-      Ogni blocco è associato a una domanda aperta o a un macrotema.
-
-      Punteggio massimo: 32 punti. La lode viene assegnata con un punteggio superiore a 30.
-
-      Domande vero/falso: i tre blocchi sono costituiti da 10 affermazioni vero/falso ciascuno. Ogni blocco vale 4 punti. Se si sbagliano 5 risposte, il blocco vale 0 punti. Il punteggio del singolo blocco non può essere negativo.
-
-      Domande aperte: le due domande aperte valgono complessivamente 10 punti. Possono riguardare:
+      **Domande aperte**
+      Le due domande aperte valgono complessivamente 10 punti. Possono riguardare:
 
       - argomenti teorici;
       - criteri diagnostici DSM;
@@ -28,9 +26,11 @@ moduli:
 
       È quindi utile esercitarsi sia nell'esposizione teorica sia nell'applicazione dei criteri diagnostici a un caso clinico.
 
-      Valutazione: il punteggio massimo è di 32 punti. La lode viene assegnata quando si supera 30. In alcuni appelli, quando la media generale dell'esame è particolarmente bassa, può essere applicata una sorta di correzione gaussiana, che può comportare un incremento di uno o due voti. Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
+      **Domande vero/falso**
+      Sono presenti 3 blocchi da 10 affermazioni vero/falso, ciascuno del valore di 4 punti. Ogni blocco è associato a una domanda aperta o a un macrotema. Se si sbagliano 5 risposte, il blocco vale 0 punti. Il punteggio del singolo blocco non può comunque diventare negativo.
 
-      All'esame è sempre presente il professor Damiani.
+      **Valutazione**
+      Il punteggio massimo è di 32 punti e la lode viene assegnata con un punteggio superiore a 30. In alcuni appelli, qualora la media generale dell'esame sia particolarmente bassa, può essere applicata una sorta di correzione gaussiana, con un possibile incremento di uno o due voti. Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
     program: |-
       1.Storia della psichiatria
 
@@ -85,41 +85,52 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Il programma d'esame è quello indicato nel syllabus ufficiale.
-
-      È importante studiare l'intero programma, prestando particolare attenzione alle prime lezioni del professor Fusar Poli, che possono sembrare meno rilevanti ma vengono frequentemente richieste.
+      È consigliabile studiare l'intero programma, prestando particolare attenzione anche alle prime lezioni del Prof. Fusar Poli, che possono sembrare meno rilevanti ma vengono frequentemente richieste.
 
       Tra gli argomenti da non trascurare:
 
-      - OCD (disturbo ossessivo-compulsivo)
-      - ADHD
-      - Mini Mental State Examination
-      - Seminari sulle psicosi
-      - Criteri diagnostici DSM
-      - Riconoscimento e diagnosi dei principali disturbi psichiatrici
+      - OCD (disturbo ossessivo-compulsivo);
+      - ADHD;
+      - Mini Mental State Examination;
+      - seminari sulle psicosi;
+      - criteri diagnostici DSM;
+      - riconoscimento e diagnosi dei principali disturbi psichiatrici.
 
-      Le domande aperte possono riguardare sia argomenti teorici sia criteri diagnostici DSM, oppure presentare un caso clinico da interpretare.
+      Le domande aperte possono riguardare sia argomenti teorici sia criteri diagnostici DSM. Possono inoltre essere presentati casi clinici nei quali viene richiesta l'interpretazione del quadro e la relativa diagnosi.
 
-      La fonte principale consigliata sono le sbobine 2022-2023, considerate complete e sufficienti per preparare l'esame.
+      La fonte principale consigliata sono le sbobine 2022/2023, considerate complete e sufficienti per la preparazione dell'esame.
 
-      È necessario integrarle con le seguenti lezioni delle sbobine 2025-2026:
+      Devono essere integrate con alcune lezioni delle sbobine 2025/2026, in particolare:
 
-      - OCD, argomento che è stato richiesto all'esame;
+      - OCD, trattato dal Dott. Stefanelli;
       - ADHD.
 
-      È inoltre importante consultare le slide dei docenti, perché alcune domande vero/falso sono formulate riprendendo direttamente frasi presenti nelle presentazioni.
+      È inoltre importante consultare le slide dei docenti, perché alcune domande vero/falso possono riprendere direttamente affermazioni presenti nelle presentazioni.
 
-      Non trascurare le prime lezioni del professor Fusar Poli, in particolare:
+      Non vanno trascurate le prime lezioni del Prof. Fusar Poli, in particolare:
 
       - Mini Mental State Examination;
       - seminari sulle psicosi.
 
       Anche se possono sembrare argomenti introduttivi o secondari, vengono frequentemente richiesti.
 
-      Infine, è consigliabile consultare le domande degli appelli precedenti, soprattutto per individuare i criteri DSM e gli argomenti teorici che ricorrono nelle domande aperte.
+      Infine, è consigliabile consultare le domande degli appelli precedenti, soprattutto per individuare i criteri DSM e gli argomenti teorici che ricorrono maggiormente nelle domande aperte.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - OCD: da integrare dalle sbobine 2025/2026; è stato richiesto all'esame.
+      - ADHD: da integrare dalle sbobine 2025/2026.
+      - Mini Mental State Examination: argomento delle prime lezioni di Fusar Poli, frequentemente richiesto.
+      - Seminari sulle psicosi: da studiare anche se possono sembrare meno centrali.
+      - Criteri DSM: possono comparire nelle domande aperte e nei casi clinici.
+      - Casi clinici: possibile richiesta di formulare la diagnosi e indicare i criteri DSM corrispondenti.
+      - Slide: alcune affermazioni vero/falso possono essere riprese direttamente dalle presentazioni.
+
+      La frequenza non sembra essere controllata in maniera particolarmente rigorosa e i docenti non risultano particolarmente pignoli nella rilevazione delle presenze.
     professors:
       - nome: Fusar Poli
       - nome: Stefano Damiani
+        stile: Sempre presente all'esame.
         email: stefano.damiani@unipv.it
       - nome: Stefanelli
       - nome: Natascia Brondino
@@ -127,13 +138,14 @@ moduli:
     fascia_studio: 3–4 sett
 info_da_verificare:
   - campo: Frequenza
-    nota: Non sembra essere controllata in maniera particolarmente rigorosa; i docenti non sono particolarmente pignoli nella rilevazione delle presenze.
-  - campo: Criterio per la correzione gaussiana
-    nota: Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
-  - campo: Elenco completo delle domande ricorrenti
-    nota: Non è disponibile un elenco completo; dalla testimonianza emergono alcuni punti da preparare con particolare attenzione.
+    nota: Modalità e percentuale di frequenza formalmente richiesta. La scheda riporta che la frequenza non sembra essere controllata in maniera particolarmente rigorosa e i docenti non risultano particolarmente pignoli nella rilevazione delle presenze, ma non è chiaro se vi sia un obbligo formale o una percentuale minima richiesta. [DA VERIFICARE] modalità e percentuale di frequenza formalmente richiesta.
+  - campo: Email Prof. Fusar Poli
+    nota: Da integrare.
+  - campo: Email Prof. Damiani
+    nota: Da integrare.
+  - campo: Email Dott. Stefanelli
+    nota: Da integrare.
+  - campo: Criterio correzione gaussiana
+    nota: Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata la correzione gaussiana.
 aggiornato_da: Rocco Buellis
-esse3_codice: "501746"
-cfu_totali: 5
-semestre: I
 ultimo_aggiornamento: 2026-10-08

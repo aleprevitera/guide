@@ -179,7 +179,8 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - `node scripts/programmi-ufficiali.mjs` (`--dry`, `--solo=titolo`) scrive nelle guide `esse3_codice`,
   `cfu_totali`, `semestre` (I / II / Annuale, dal `periodo` di `src/data/syllabus.json`, generato da
   `scripts/syllabus.mjs`) e il **Programma** ufficiale (con link alla scheda). Lo si lancia a mano quando arriva il
-  catalogo di un nuovo anno; poi i rappresentanti possono modificarlo da Decap.
+  catalogo di un nuovo anno; poi i rappresentanti possono modificarlo da Decap. Un programma ufficiale già
+  presente **non** viene riscritto (le correzioni restano): per rifarlo, `--forza`.
 - Il testo ufficiale non viene mai riscritto: solo ripulito (paragrafi duplicati) e convertito in Markdown.
   Esami a più moduli: divisione per intestazioni se ogni modulo ne ha una, altrimenti DeepSeek
   (OpenRouter) assegna solo i **numeri di riga** ai moduli o a "comune" (cache in `.cache/`). Modulo

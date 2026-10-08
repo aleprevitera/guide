@@ -1,15 +1,30 @@
 id: g-0lom9qml
 title: Pediatria
+esse3_codice: "501763"
 anno_di_corso: V Anno
+cfu_totali: 7
+semestre: II
 descrizione_generale: |-
-  L'esame è composto da tre moduli: **Pediatria**, **Chirurgia pediatrica** e **Neuropsichiatria infantile (NPI)**. I tre orali si svolgono contemporaneamente.
+  L’esame è composto da tre moduli: Pediatria, Chirurgia pediatrica e Neuropsichiatria infantile (NPI). I tre orali si svolgono contemporaneamente.
 
-  Tempo di studio complessivo: circa un mese di studio intenso per preparare tutti e tre i moduli.
+  Tempo di studio complessivo: circa 1 mese di studio intenso.
+
+  Voto finale: non specificato.
+
+  **Consigli generali**
+
+  - Personalizzare il ripasso in base ai docenti, tenendo presenti le relative sottospecialità e gli argomenti di maggiore interesse.
+  - Preparare una buona introduzione sul proprio percorso: la prima domanda di Pediatria può riguardare la specializzazione desiderata o il reparto dell’internato.
+  - Non limitarsi alle sbobine dell’anno principale: è necessario integrare il materiale degli altri anni.
+  - Consultare le domande passate di Chirurgia pediatrica, che possono aiutare a orientare lo studio.
+  - Curare particolarmente il linguaggio in NPI, utilizzando una terminologia precisa e specifica.
+  - Non trascurare esame neurologico del bambino, paralisi cerebrali e sindromi epilettiche specifiche.
+  - Per Pediatria, prestare attenzione agli argomenti legati alla propria eventuale area di internato o di interesse specialistico.
 moduli:
   - nome_modulo: Pediatria
     id: m-akbjnuzm
     exam_type: Orale
-    exam_details: Gli studenti vengono chiamati due alla volta, in ordine alfabetico. Ogni studente riceve due domande. I docenti tendono a interrogare sugli argomenti della propria sottospecialità. La prima domanda verte spesso sulla specializzazione che si desidera intraprendere o sul reparto in cui si sta svolgendo l’internato.
+    exam_details: Gli studenti vengono generalmente chiamati due alla volta, in ordine alfabetico, e ciascuno riceve due domande. I docenti tendono a concentrarsi sugli argomenti della propria sottospecialità. La prima domanda può riguardare la specializzazione desiderata o il reparto nel quale si sta svolgendo l’internato.
     program: |-
       **PEDIATRIA GENERALE E SPECIALISTICA**
 
@@ -73,35 +88,32 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Il programma ufficiale è quello previsto dal syllabus. Oltre al programma generale, è utile approfondire:
+      Oltre al programma generale, è utile approfondire:
 
-      - Pneumologia: polmoniti, asma e bronchiolite.
-      - Celiachia.
-      - Infezioni del sistema nervoso e crisi epilettiche.
-      - Sindrome di Guillain-Barré, atassia e anemie.
-      - Gastroenterologia, nefrologia e otorinolaringoiatria, soprattutto in relazione al reparto frequentato durante l’internato o alla specializzazione di interesse.
+      - pneumologia: polmoniti, asma e bronchiolite;
+      - celiachia;
+      - infezioni del sistema nervoso;
+      - crisi epilettiche;
+      - sindrome di Guillain-Barré;
+      - atassia;
+      - anemie;
+      - gastroenterologia, nefrologia e otorinolaringoiatria, soprattutto in relazione al reparto frequentato durante l’internato o alla specializzazione di interesse.
 
-      Sbobine 2024-2025 come fonte principale.
+      La fonte principale sono le sbobine 2024/2025, da integrare con materiale di altri anni:
 
-      Integrare dalle sbobine 2023-2024:
+      - sbobine 2023/2024: polmoniti, asma, bronchiolite, celiachia, infezioni del sistema nervoso e crisi epilettiche;
+      - sbobine 2025/2026: sindrome di Guillain-Barré, atassia e anemie.
 
-      - Pneumologia: polmoniti, asma e bronchiolite.
-      - Celiachia.
-      - Infezioni del sistema nervoso.
-      - Crisi epilettiche.
+      Le anemie sono un argomento richiesto frequentemente dal Prof. Castagnoli.
+      Dal libro è utile leggere le parti relative a gastroenterologia, nefrologia e ORL, soprattutto se si sta svolgendo un internato in questi reparti.
+    body: |-
+      **Domande e argomenti ricorrenti**
 
-      Integrare dalle sbobine 2025-2026:
-
-      - Sindrome di Guillain-Barré.
-      - Atassia.
-      - Anemie, argomento richiesto frequentemente dal professor Castagnoli.
-
-      Dal libro: lettura delle parti di gastroenterologia, nefrologia e ORL, soprattutto se si sta svolgendo un internato in questi reparti.
-
-      Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+      - Immunologia, in particolare SCID; pubertà e crescita; anemie; Guillain-Barré; atassia
+      - Specializzazione desiderata o reparto dell’internato come possibile prima domanda
     professors:
       - nome: Riccardo Castagnoli
-        stile: Interroga su immunologia, ad esempio SCID; anemie.
+        stile: Interroga su immunologia (es. SCID) e anemie; le anemie sono richieste frequentemente.
         email: riccardo.castagnoli@unipv.it
       - nome: Brambilla
         stile: Interroga su pubertà e crescita.
@@ -116,7 +128,7 @@ moduli:
   - nome_modulo: Chirurgia pediatrica
     id: m-5o6zmswx
     exam_type: Orale
-    exam_details: Interroga il professor Bertozzi; Parigi non è più presente. Vengono interrogati tre studenti insieme.
+    exam_details: L’esame è tenuto dal Prof. Bertozzi. Vengono generalmente interrogati tre studenti insieme.
     program: |-
       **CHIRURGIA PEDIATRICA**
 
@@ -156,29 +168,30 @@ moduli:
 
       Gli argomenti da integrare comprendono:
 
-      - Canale inguinale.
-      - Stenosi ipertrofica del piloro.
-      - Malattia di Hirschsprung.
+      - canale inguinale;
+      - stenosi ipertrofica del piloro;
+      - malattia di Hirschsprung.
 
-      Sbobine 2024-2025.
+      - Sbobine 2024/2025 come base.
+      - Integrare dalle sbobine 2025/2026 il canale inguinale.
+      - Integrare dalle sbobine 2023/2024 la stenosi ipertrofica del piloro e la malattia di Hirschsprung.
+      - Consultare le domande degli appelli precedenti, utili per orientare la preparazione.
+    body: |-
+      **Domande e argomenti ricorrenti**
 
-      Integrare dalle sbobine 2025-2026 il canale inguinale.
+      - Macroargomenti scelti dal Prof. Bertozzi; utile consultare le domande degli appelli precedenti
 
-      Integrare dalle sbobine 2023-2024 stenosi ipertrofica del piloro e malattia di Hirschsprung.
-
-      Consultare le domande degli appelli precedenti: possono essere di grande aiuto per orientare la preparazione. Possono aiutare a orientarsi, pur senza garantire che gli argomenti si ripetano.
-
-      Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+      Nota: Parigi non risulta più tra i docenti di Chirurgia pediatrica.
     professors:
       - nome: Mirko Bertozzi
-        stile: Sceglie un macroargomento e pone domande ai tre studenti; se uno non sa rispondere, può rivolgersi agli altri. L’interrogazione viene descritta come piuttosto imprevedibile e variabile da una giornata all’altra.
+        stile: Titolare del corso. Sceglie un macroargomento e pone domande a tre studenti insieme; se uno non sa rispondere, può rivolgersi agli altri. L’interrogazione è descritta come piuttosto imprevedibile e variabile da una giornata all’altra.
         email: mirko.bertozzi@unipv.it
       - nome: Amelia Licari
         email: amelia.licari@unipv.it
   - nome_modulo: Neuropsichiatria infantile (NPI)
     id: m-18qy3q5f
     exam_type: Orale
-    exam_details: I docenti possono essere molto puntigliosi e richiedere un linguaggio preciso e specifico. È quindi importante saper esporre gli argomenti con terminologia corretta, evitando descrizioni vaghe o generiche.
+    exam_details: La NPI può risultare la parte più impegnativa dei tre moduli. I docenti possono essere particolarmente puntigliosi e richiedere un linguaggio preciso e specifico. È quindi importante utilizzare una terminologia corretta, evitando descrizioni vaghe o generiche, soprattutto nell’esposizione degli aspetti clinici e neurologici.
     program: |-
       **NEUROPSICHIATRIA INFANTILE**
 
@@ -194,41 +207,41 @@ moduli:
 
       Da approfondire:
 
-      - Adolescenza.
-      - Malattie neuromuscolari.
-      - Crisi epilettiche e sindromi epilettiche specifiche, in particolare sindrome di West e sindrome di Lennox-Gastaut.
-      - Esame neurologico del bambino.
-      - Paralisi cerebrali.
+      - adolescenza;
+      - malattie neuromuscolari;
+      - crisi epilettiche e sindromi epilettiche specifiche, in particolare sindrome di West e sindrome di Lennox-Gastaut;
+      - esame neurologico del bambino;
+      - paralisi cerebrali.
 
-      Sbobine 2024-2025 come fonte principale.
+      - Sbobine 2024/2025 come fonte principale.
+      - Integrare dalle sbobine 2025/2026:
+        - adolescenza;
+        - malattie neuromuscolari;
+        - crisi epilettiche e sindromi specifiche, soprattutto West e Lennox-Gastaut.
+      - Studiare la parte relativa all’esame neurologico del bambino.
+      - Integrare l’argomento delle paralisi cerebrali.
+    body: |-
+      **Domande e argomenti ricorrenti**
 
-      Integrare dalle sbobine 2025-2026:
-
-      - Adolescenza.
-      - Malattie neuromuscolari.
-      - Crisi epilettiche e sindromi specifiche, soprattutto West e Lennox-Gastaut.
-
-      Leggere la parte relativa all’esame neurologico del bambino.
-
-      Integrare l’argomento delle paralisi cerebrali.
-
-      Consiglio generale: non limitarsi alle sbobine dell’anno principale; integrare gli argomenti indicati dalle sbobine degli altri anni.
+      - Malattie neuromuscolari, crisi epilettiche, sindrome di West, sindrome di Lennox-Gastaut, esame neurologico del bambino e paralisi cerebrali
+      - Particolare attenzione alla precisione terminologica e all’esposizione specifica
     professors:
+      - nome: "[DA INTEGRARE]"
+        stile: Docente di Neuropsichiatria infantile (nome da integrare).
       - nome: Amelia Licari
         email: amelia.licari@unipv.it
       - nome: Simona Orcesi
         email: simona.orcesi@unipv.it
 info_da_verificare:
-  - campo: Durata delle singole interrogazioni
-    nota: DAINTEGRARE
-  - campo: Criteri di assegnazione dei voti
-    nota: DAINTEGRARE
-  - campo: Modalità di eventuali preappelli
-    nota: DAINTEGRARE
+  - campo: Nome e contatti del docente di Neuropsichiatria infantile
+    nota: "[DA INTEGRARE]"
+  - campo: Contatti docenti
+    nota: "Castagnoli, Brambilla, Bertozzi: [DA INTEGRARE]"
+  - campo: Percentuale di frequenza formalmente richiesta
+    nota: "[DA VERIFICARE]"
+  - campo: Durata delle singole interrogazioni, criteri di assegnazione dei voti ed eventuali preappelli
+    nota: "[DA INTEGRARE]"
   - campo: Elenco puntuale delle domande ricorrenti per ciascun modulo
-    nota: DAINTEGRARE
+    nota: "[DA INTEGRARE]"
 aggiornato_da: Rocco Buellis
-esse3_codice: "501763"
-cfu_totali: 7
-semestre: II
 ultimo_aggiornamento: 2026-10-08

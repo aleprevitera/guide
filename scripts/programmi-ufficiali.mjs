@@ -43,6 +43,10 @@ const SYLLABUS = join(RADICE, 'src/data/syllabus.json');
 
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
+// Senza --forza il programma si inserisce solo dove non c'è ancora quello
+// ufficiale: le correzioni fatte dopo (a mano o in Decap) non si perdono.
+const FORZA = args.includes('--forza');
+const giaUfficiale = (m) => (m.program ?? '').includes('coursecatalogue.cineca.it');
 const SOLO = args.find((a) => a.startsWith('--solo='))?.slice(7)?.toLowerCase();
 const oggi = new Date().toISOString().slice(0, 10);
 const DIR_CACHE = join(RADICE, '.cache/programmi-ufficiali');
@@ -294,6 +298,8 @@ for (const f of (await readdir(DIR_GUIDE)).filter((x) => x.endsWith('.yaml')).so
   let resoconto;
   if (!righe.length) {
     resoconto = 'programma assente nel catalogo: lasciato com’era';
+  } else if (!FORZA && dati.moduli.every(giaUfficiale)) {
+    resoconto = 'programma ufficiale già presente: lasciato com’è (--forza per riscriverlo)';
   } else if (dati.moduli.length === 1) {
     salvaConsigli(dati.moduli[0]);
     dati.moduli[0].program = `${markdown(righe)}\n\n${fonte(p)}`;

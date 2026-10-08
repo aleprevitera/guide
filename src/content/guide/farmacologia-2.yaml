@@ -1,15 +1,21 @@
 id: g-0qfyrg1m
 title: Farmacologia 2
+esse3_codice: "501694"
 anno_di_corso: IV Anno
 cfu_totali: 5
-descrizione_generale: "Esame da 5 CFU composto da tre parti: Chemioterapia (1 CFU), Tossicologia (1 CFU) e Farmacologia (3 CFU). Il voto finale è la media ponderata dei tre esami."
+semestre: II
+descrizione_generale: "L'esame è composto da tre parti: Chemioterapia (1 CFU), Tossicologia (1 CFU), Farmacologia (3 CFU). Il voto finale è calcolato come media ponderata dei tre moduli in base ai rispettivi CFU. Non sottovalutare l'esame per il fatto che Tossicologia e Chemioterapia valgano complessivamente solo 2 CFU: soprattutto Tossicologia può richiedere una preparazione piuttosto lunga. Nel complesso, la preparazione richiede un tempo variabile in base alla familiarità con la materia; la Tossicologia, pur non essendo particolarmente difficile, può risultare lunga perché comprende diversi argomenti nuovi."
 moduli:
   - nome_modulo: Chemioterapia
     id: m-yfczwv5j
     cfu: 1
     exam_type: Scritto + Orale
-    study_time: circa 1 settimana
-    exam_details: Scritto a crocette su Kiro + orale in cui si correggono le domande sbagliate, ma durante il quale possono essere fatte anche altre domande. Si tiene di solito lo stesso giorno o il giorno dopo dello scritto se si è in molti. Generalmente il professore è disponibile a mettere appelli aggiuntivi purché siano sempre durante il periodo dedicato alle sessioni d’esame.
+    study_time: 1 settimana
+    exam_details: |-
+      - Si svolge inizialmente uno scritto a crocette su Kiro, seguito da un orale.
+      - Durante l'orale vengono generalmente corrette le domande sbagliate dello scritto, ma possono essere poste anche ulteriori domande sugli argomenti del programma.
+      - L'orale si svolge solitamente lo stesso giorno dello scritto oppure, se gli studenti sono numerosi, il giorno successivo.
+      - Il professore è generalmente disponibile a concedere appelli aggiuntivi, purché siano collocati all'interno del periodo previsto per le sessioni d'esame.
     program: |-
       Il corso comprende tre moduli principali (i) farmacologia/ farmacologia applicata/ farmacologia clinica; (ii) chemioterapia; (iii) tossicologia.
 
@@ -203,7 +209,14 @@ moduli:
       Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
-    material_tips: Sbobine e slide sono sufficienti. Utile rivedere le crocette del drive perché spesso si ripetono; è presente anche un file organizzato in domande e risposte, molto utile per l’orale.
+    material_tips: |-
+      - Sbobine e slide sono sufficienti per la preparazione.
+      - È disponibile un file organizzato in domande e risposte, particolarmente utile per preparare l'orale.
+      - Esercitarsi sulle crocette degli anni precedenti.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Le domande a crocette presenti sul Drive possono ripresentarsi.
     fascia_studio: 1–2 sett
     professors:
       - nome: Andrea Ferrigno
@@ -214,8 +227,15 @@ moduli:
     id: m-obz8gkpx
     cfu: 1
     exam_type: Orale
-    study_time: circa 15 giorni
-    exam_details: "Interrogazione a tre con uno dei professori. Generalmente fanno tre domande in cui entrano man mano nello specifico: la prima è più generica, mentre l’ultima può essere, ad esempio, sugli antidoti. A volte la prima domanda è a scelta e interrogano in ordine di iscrizione. I professori non entrano particolarmente nel dettaglio e si concentrano sulla clinica; i voti sono abbastanza alti. Sono stati concessi appelli straordinari."
+    study_time: 15 giorni
+    exam_details: |-
+      - L'esame è un'interrogazione a tre studenti con uno dei professori.
+      - Generalmente vengono poste circa tre domande, procedendo progressivamente verso aspetti più specifici: la prima domanda è solitamente più generale, mentre le successive possono entrare maggiormente nel dettaglio, ad esempio sugli antidoti.
+      - In alcuni casi la prima domanda può essere scelta dallo studente.
+      - L'interrogazione procede in genere in ordine di iscrizione.
+      - I professori non tendono a entrare particolarmente nel dettaglio dei singoli argomenti e si concentrano soprattutto sugli aspetti clinici.
+      - I voti risultano generalmente abbastanza alti.
+      - Sono stati concessi anche appelli straordinari.
     program: |-
       Il corso comprende tre moduli principali (i) farmacologia/ farmacologia applicata/ farmacologia clinica; (ii) chemioterapia; (iii) tossicologia.
 
@@ -234,8 +254,10 @@ moduli:
       Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
-    material_tips: "È disponibile una dispensa fatta direttamente dal CAV che tocca praticamente tutti gli argomenti; manca forse la parte dell’intossicazione da cianuro, che però, se non mi sbaglio, quest’anno è stata spiegata a lezione. Esiste anche un file molto più stretto che, penso, abbia tutto il necessario per affrontare l’esame, ma personalmente non l’ho trovato sui vari drive. Consiglio: non sottovalutare l’esame anche se si tratta soltanto di un CFU."
-    body: L’esame di per sé non è difficile, ma molti argomenti sono completamente nuovi; per questo l’ho trovato lungo.
+    material_tips: |-
+      - È disponibile una dispensa realizzata direttamente dal CAV, che tratta praticamente tutti gli argomenti. Potrebbe mancare la parte relativa all'intossicazione da cianuro, anche se nell'anno di riferimento è stata spiegata a lezione.
+      - È inoltre presente, a quanto riferito, una dispensa più sintetica e scorrevole che dovrebbe contenere tutto il necessario per l'esame, ma non è stato possibile reperirla nei vari Drive.
+      - Conviene dare importanza soprattutto alla clinica e agli aspetti pratici delle intossicazioni, senza perdersi eccessivamente nei dettagli.
     fascia_studio: 1–2 sett
     professors:
       - nome: Carlo Alessandro Locatelli
@@ -244,8 +266,8 @@ moduli:
     id: m-g59ohk2q
     cfu: 3
     exam_type: Orale
-    study_time: circa 2-3 settimane
-    exam_details: Esame orale.
+    study_time: 2–3 settimane
+    exam_details: L'esame è orale.
     program: |-
       Il corso comprende tre moduli principali (i) farmacologia/ farmacologia applicata/ farmacologia clinica; (ii) chemioterapia; (iii) tossicologia.
 
@@ -296,29 +318,35 @@ moduli:
       Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
-    material_tips: Sbobine + integrare eventuali argomenti del syllabus non spiegati da sbobine precedenti.
+    material_tips: |-
+      - Le sbobine sono la fonte principale.
+      - È necessario integrarle con eventuali argomenti presenti nel syllabus ma non trattati nelle sbobine degli anni precedenti.
     professors:
       - nome: Francesca Crema
-        stile: Molto gentile e alta di voti; non entra particolarmente nel dettaglio dello specifico farmaco.
+        stile: Molto gentile e generalmente generosa nella valutazione; non tende a entrare particolarmente nel dettaglio del singolo farmaco.
         email: francesca.crema@unipv.it
       - nome: Cinzia Fattore
-        stile: Più puntigliosa ma comunque giusta.
+        stile: Più puntigliosa, ma viene comunque descritta come corretta.
         email: cinzia.fattore@unipv.it
     fascia_studio: 3–4 sett
 info_da_verificare:
+  - campo: Professori e contatti
+    nota: Da integrare (nome, cognome, email, modulo di afferenza). Il titolare del corso non è specificato per questo modulo; se non emergerà altro, indicare come 'Titolare del corso' solo se necessario in stile, ma al momento mancano i dati minimi richiesti (nome e cognome completi ed email). Non aggiungere altri dettagli nel campo corrispondente (professors).
+  - campo: Professori e contatti
+    nota: Da integrare (nome, cognome, email, modulo di afferenza). Il titolare del corso non è specificato per questo modulo; se non emergerà altro, indicare come 'Titolare del corso' solo se necessario in stile, ma al momento mancano i dati minimi richiesti (nome e cognome completi ed email). Non aggiungere altri dettagli nel campo corrispondente (professors).
+  - campo: Professori e contatti
+    nota: Contatti da integrare per entrambe le docenti (email). I nomi sono presenti ma mancano le email. Non aggiungere altri dettagli nel campo corrispondente (professors).
+  - campo: Dispensa sintetica di Tossicologia
+    nota: Non reperibile nei vari Drive. La scheda la segnala come potenzialmente utile ma non è stato possibile trovarla. Non aggiungere altri dettagli nel campo corrispondente (material_tips).
   - campo: Frequenza
-    nota: "La scheda riporta: 'non credo vengano prese le presenze ma non ne sono certa'."
+    nota: Non risulta che le presenze vengano normalmente rilevate, ma l'informazione non è certa. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
   - campo: Frequenza
-    nota: Voce vuota nella scheda per il modulo Tossicologia.
-  - campo: Materiale di studio
-    nota: "La scheda esprime dubbi: manca forse la parte sull’intossicazione da cianuro (forse spiegata a lezione) e il file più stretto pensa abbia tutto il necessario, ma non l’ha trovato sui drive."
-  - campo: Tempo di studio
-    nota: Indica circa 15 giorni per la dispensa, ma ipotizza che con il file più stretto possa bastare meno tempo.
+    nota: Da integrare. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
   - campo: Frequenza
-    nota: Indicata come 'da sistemare' per il modulo Farmacologia.
+    nota: Da integrare. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
+  - campo: Domande e argomenti ricorrenti
+    nota: Da integrare. La sezione è vuota; per Chemioterapia è presente solo una nota sulle crocette già riportata in body. Non aggiungere altri dettagli nel campo corrispondente (body).
   - campo: Anno di corso
     nota: Nel catalogo ufficiale UniPV l'insegnamento è al V anno ([scheda](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810)).
 aggiornato_da: Giulia Stofler
-esse3_codice: "501694"
-semestre: II
 ultimo_aggiornamento: 2026-10-08

@@ -1,0 +1,134 @@
+id: g-c9joseb6
+title: Clinica medica 1
+anno_di_corso: V Anno
+descrizione_generale: "Clinica Medica 1 è composta da tre moduli: Medicina Interna A, Medicina del Territorio e Geriatria. Viene verbalizzata insieme a Clinica Medica 2, attraverso una media ponderata dei cinque moduli complessivi. I singoli voti di Clinica Medica 1 hanno quindi un peso relativamente ridotto sulla media finale. Conviene comunque cercare di ottenere buoni voti, anche per poter eventualmente migliorare il voto di Medicina Interna B. **I singoli moduli hanno validità di un anno**: tra il superamento del primo e dell’ultimo modulo deve trascorrere al massimo un anno. Una volta superati tutti i moduli, non scadono, quindi non è necessario preoccuparsi della tempistica con cui sostenere Clinica Medica 2."
+moduli:
+  - nome_modulo: Medicina Interna A
+    id: m-w52b3ng5
+    exam_type: Scritto
+    study_time: mezza giornata – 4 giorni
+    preappello: Sì
+    exam_details: "Prova scritta: una domanda aperta. Curare la grafia e limitare le cancellature (apprezzato dalla Professoressa). Pre-appello a maggio concesso dalla Prof.ssa Melazzini."
+    program: |-
+      Per ogni singolo quadro clinico di interesse internistico, geriatrico o di patologie che si osservano sul territorio, verranno forniti
+
+      allo studente gli strumenti necessari all'utilizzo ed all'interpretazione
+
+      delle più comuni indagini bioumorali e strumentali necessarie a
+
+      confermare il sospetto diagnostico formulato sulla base delle note
+
+      anamnestiche ed obiettive raccolte al letto del paziente o nel proprio studio medico. Verranno forniti
+
+      allo studente gli strumenti necessari per l'elaborazione di un corretto
+
+      piano terapeutico, sia farmacologico che interventistico.
+
+      principi di emostasi
+
+      diatesi emorragica
+
+      diatesi trombofilica
+
+      difetti dell'emostasi primaria e secondaria
+
+      anemia
+
+      microangiopatie trombotiche
+
+      ogni argomento verrà approfondito sia dal punto di vista fisiopatologico, che clinico che terapeutico, facendo riferimento alle più aggiornate linee guida e alle pratiche di EBM (evidence based medicine)
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11747/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: Sbobine dell'anno in corso (4 lezioni, ~50 pagine dense). Domande degli appelli precedenti (tendono a ripetersi molto).
+    professors:
+      - nome: Federica Melazzini
+        stile: Apprezza grafia pulita e poche cancellature. Più disponibile, concede pre-appello a maggio.
+        email: federica.melazzini@unipv.it
+    fascia_studio: < 1 sett
+  - nome_modulo: Medicina del Territorio
+    id: m-dtcnzwqx
+    study_time: mezza giornata – 3 giorni
+    preappello: No
+    exam_details: "Prova con casi clinici frequenti. Prof. Cartasegna: molto tranquillo e generoso nella valutazione, anche se il caso non è risolto completamente. Prof. Coronelli: accomodante, chiede frequentemente rischio cardiovascolare e dislipidemia. Non vengono concessi appelli extra."
+    program: |-
+      Per ogni singolo quadro clinico di interesse internistico, geriatrico o di patologie che si osservano sul territorio, verranno forniti
+
+      allo studente gli strumenti necessari all'utilizzo ed all'interpretazione
+
+      delle più comuni indagini bioumorali e strumentali necessarie a
+
+      confermare il sospetto diagnostico formulato sulla base delle note
+
+      anamnestiche ed obiettive raccolte al letto del paziente o nel proprio studio medico. Verranno forniti
+
+      allo studente gli strumenti necessari per l'elaborazione di un corretto
+
+      piano terapeutico, sia farmacologico che interventistico.
+
+      Attraverso l'analisi di casi clinici reali verranno simulate le diverse tipologie di presa in carico dei pazienti, l'integrazione con le reti territoriali ospedaliere, gli obblighi derivanti dal rivestire il ruolo di pubblico ufficiale.
+
+      **Verranno eseguite esercitazioni pratiche su:**
+
+      1. redazione di un rapporto e invio al destinatario appropriato
+      2. esercitazioni sulla modulistica durante le lezioni: certificazioni di malattia INPS, certificazioni di infortunio sul lavoro INAIL, constatazione di decesso.
+      3. prescrizione di farmaci
+      4. compilazione di piani terapeutici tramite portale dedicato
+      5. analisi del percorso vaccinale: come si organizza una campagna vaccinale, simulazione sul portale ARVAX.
+      6. gestione della proteica: simulazione sul portale ASSISTANT-RL
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11747/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Argomenti chiave da conoscere molto bene: rischio cardiovascolare, ipertensione, dislipidemia, violenza di genere.
+
+      Sbobine dell'anno in corso (consigliate per evitare problemi legati a cambiamenti del programma). Facoltativamente, sbobine dell'a.a. 2022/2023 (particolarmente complete e più lunghe). Domande degli appelli precedenti. Ragionare sulla clinica attraverso i casi clinici.
+    professors:
+      - nome: Maurizio Maria Coronelli
+        stile: Accomodante, chiede frequentemente rischio cardiovascolare e dislipidemia.
+        email: mauriziomaria.coronelli@unipv.it
+      - nome: Stefano Cartesegna
+        email: stefano.cartesegna@unipv.it
+        stile: Molto tranquillo e generoso nella valutazione, anche se il caso clinico non è risolto completamente.
+    fascia_studio: < 1 sett
+  - nome_modulo: Geriatria
+    id: m-2f76o2dk
+    study_time: mezza giornata – 4 giorni
+    preappello: No
+    frequenza: Obbligatoria
+    exam_details: "Non vengono concessi appelli extra. Frequenza obbligatoria: almeno il 60% di presenze (Prof.ssa Noris è fiscale)."
+    program: |-
+      Per ogni singolo quadro clinico di interesse internistico, geriatrico o di patologie che si osservano sul territorio, verranno forniti
+
+      allo studente gli strumenti necessari all'utilizzo ed all'interpretazione
+
+      delle più comuni indagini bioumorali e strumentali necessarie a
+
+      confermare il sospetto diagnostico formulato sulla base delle note
+
+      anamnestiche ed obiettive raccolte al letto del paziente o nel proprio studio medico. Verranno forniti
+
+      allo studente gli strumenti necessari per l'elaborazione di un corretto
+
+      piano terapeutico, sia farmacologico che interventistico.
+
+      Gerontologia: biologia dell'invecchiamento; teorie dell'invecchiamento; fisiologia dell'invecchiamento di organi e sistemi; aspetti demografici della senilità. Geriatria: organizzazione dell'assistenza socio-sanitaria all'anziano; valutazione globale dell'anziano: assessment multidimensionale dell'autosufficienza; nutrizione e malnutrizione dell'anziano; la fragilità, alterazioni dell'assetto immunitario nell'invecchiamento; le più comuni patologie cardiovascolari dell'anziano; le più comuni patologie respiratorie dell'anziano; le più comuni patologie digestive dell'anziano; la stipsi, le più comuni patologie endocrine dell'anziano; il diabete senile e sue complicanze; la patologia ossea dell'anziano: osteoporosi e osteomalacia; le cadute. I disturbi cognitivi dell'anziano: le demenze, i deficit cognitivi, il delirium, idrocefalo normoteso, disturbi della sfera affettiva e depressione nell’anziano, la sindrome da immobilizzazione; la sindrome ipocinetica, le lesioni da pressione, disordini dell'equilibrio idro-elettrolitico nell’anziano, la disidratazione; cenni sui disordini del sonno nell’anziano, la contenzione fisica dell’anziano, il dolore e le cure palliative dell’anziano, Morbo di Parkinson, apparato genito-urinario e cenni su incontinenza urinaria, infezioni delle vie urinarie, ipertrofia prostatica. Livelli dell'assistenza in geriatria: modelli di rete nell’assistenza dell’anziano. Problemi generali di farmacoterapia nell'età senile. Indicazione alle cure palliative e percorsi palliativistici
+
+      Gerontologia: biologia dell'invecchiamento; teorie dell'invecchiamento; fisiologia dell'invecchiamento di organi e sistemi; aspetti demografici della senilità. Geriatria: organizzazione dell'assistenza socio-sanitaria all'anziano; valutazione globale dell'anziano: assessment multidimensionale dell'autosufficienza; nutrizione e malnutrizione dell'anziano; la fragilità, alterazioni dell'assetto immunitario nell'invecchiamento; le più comuni patologie cardiovascolari dell'anziano; le più comuni patologie respiratorie dell'anziano; le più comuni patologie digestive dell'anziano; la stipsi, le più comuni patologie endocrine dell'anziano; il diabete senile e sue complicanze; la patologia ossea dell'anziano: osteoporosi e osteomalacia; le cadute. I disturbi cognitivi dell'anziano: le demenze, i deficit cognitivi, il delirium, idrocefalo normoteso, disturbi della sfera affettiva e depressione nell’anziano, la sindrome da immobilizzazione; la sindrome ipocinetica, le lesioni da pressione, disordini dell'equilibrio idro-elettrolitico nell’anziano, la disidratazione; cenni sui disordini del sonno nell’anziano, la contenzione fisica dell’anziano, il dolore e le cure palliative dell’anziano, Morbo di Parkinson, apparato genito-urinario e cenni su incontinenza urinaria, infezioni delle vie urinarie, ipertrofia prostatica. Livelli dell'assistenza in geriatria: modelli di rete nell’assistenza dell’anziano. Problemi generali di farmacoterapia nell'età senile. Indicazione alle cure palliative e percorsi palliativistici.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11747/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: Materiali dell'a.a. 2025/2026 e successivi (il programma è cambiato). Slide della Prof.ssa Noris. Domande degli appelli precedenti. Le lezioni sono 8, ~100 pagine.
+    professors:
+      - nome: Patrizia Noris
+        stile: Fiscale sulle presenze (almeno 60%). Mette a disposizione le slide.
+        email: patrizia.noris@unipv.it
+      - nome: Marco Vincenzo Lenti
+        email: marcovincenzo.lenti@unipv.it
+      - nome: Maurizio Maria Coronelli
+        stile: Accomodante, chiede frequentemente rischio cardiovascolare e dislipidemia.
+        email: mauriziomaria.coronelli@unipv.it
+    fascia_studio: < 1 sett
+esse3_codice: "501832"
+cfu_totali: 5
+semestre: II
+ultimo_aggiornamento: 2026-10-08

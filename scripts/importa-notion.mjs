@@ -177,7 +177,7 @@ async function leggiDocx(files) {
       const riga = grezza.trim();
       const sezione = riga.match(/^(PRIMO|SECONDO|TERZO|QUARTO|QUINTO|SESTO) ANNO$/);
       if (sezione) { chiudi(); anno = ANNI[sezione[1]]; continue; }
-      if (riga.length >= 5 && TITOLO_DOCX.test(riga)) {
+      if (riga.length >= 5 && TITOLO_DOCX.test(riga) && !/^GUIDA ALL/.test(riga)) {
         if (corrente?.nomeDocx === riga) continue; // titolo ripetuto
         chiudi();
         corrente = { nome: titoloLeggibile(riga), nomeDocx: riga, anno, file: path.basename(file), righe: [] };
@@ -357,7 +357,8 @@ function sospetti(guida, sorgente) {
   const avvisi = [];
   const numeriSorgente = new Set(sorgente.match(/\d+(?:[.,]\d+)?/g) ?? []);
   const visita = (v, dove) => {
-    if (v == null) return;
+    // Campi conservati dal sito (Decap), non estratti dalla scheda.
+    if (v == null || /(^|\.)esse3_codice$/.test(dove)) return;
     if (typeof v === 'number' && !/giorni_(min|max)$/.test(dove) && !numeriSorgente.has(String(v))) avvisi.push(`${dove}: numero ${v} non presente nella scheda`);
     if (typeof v === 'string') {
       if (/giorni_(min|max)$/.test(dove)) return;
@@ -548,7 +549,8 @@ function componiYaml(scheda, guida, esistente) {
     title: guida.title,
     esse3_codice: guida.esse3_codice,
     sottotitolo: guida.sottotitolo,
-    anno_di_corso: scheda.anno,
+    // Guida già nel sito: l'anno resta quello di Decap (può essere stato corretto a mano).
+    anno_di_corso: (esistente && !esistente.riservato && esistente.dati.anno_di_corso) || scheda.anno,
     cfu_totali: guida.cfu_totali,
     semestre: guida.semestre,
     link_sbobine_generale: guida.link_sbobine_generale,
