@@ -239,6 +239,10 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   `widget: hidden`, quindi invisibili ma conservati nei file. Anteprima di Decap disattivata.
 - Ogni limite dello schema (lunghezze, formati) va riportato anche come `pattern` in
   `public/admin/config.yml`, così l'errore compare nell'editor invece di rompere la build.
+  **Attenzione ai backslash**: in YAML tra apici singoli si scrive `'^\d{4,8}$'`, non `'^\\d{4,8}$'` (con due
+  backslash il campo non è mai salvabile: bug del 2026-10-08 su codice ESSE3 e "Stile/Domande").
+  `scripts/verifica-decap.mjs` (primo passo di `npm run build`) controlla che ogni guida sia salvabile in Decap
+  e che i pattern accettino un valore valido d'esempio: se fallisce, il build si ferma.
 - Decap è bloccato su una versione precisa con SRI (`public/admin/index.html`); per aggiornarlo:
   nuova versione + nuovo hash.
 - Backend `git-gateway` + Netlify Identity: **Git Gateway è deprecato da Netlify** (funziona, ma senza
