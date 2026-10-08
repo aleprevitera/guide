@@ -63,6 +63,7 @@ moduli:
       - TC, RMN e angiografia: indicazioni e quadri neuroradiologici nelle principali patologie neurologiche
       - EEG, EMG, potenziali evocati, ECO-doppler
       - rachicentesi ed esame del liquor
+      - TC, RMN e angiografia: indicazioni e quadri euroradiologici nelle principali patologie neurologiche
 
       **Neurologia funzionale**
 
@@ -78,6 +79,8 @@ moduli:
       - Prognosi
       - Terapia
       - problemi psico-sociali e medico-legali
+      - Strumentali
+      - Terapia farmacologica
 
       **Il sonno:**
 
@@ -99,6 +102,8 @@ moduli:
       - Cefalea da sforzo e cefalee "pericolose"
       - Diagnostica strumentale e terapia: Indagini strumentali
       - Terapia farmacologica
+      - Cefalea da sforzo e **altre cefalee primarie - Diagnostica strumentale e terapia:**
+      - Indagini strumentali
 
       **Malattie neurodegenerative**
 
@@ -149,6 +154,8 @@ moduli:
       - Terapie sintomatiche
       - Terapie disease-modifying
       - Neuromielite ottica, leucoencefalopatia progressiva multifocale, Sindrome di Guillain Barré, Neuropatia demielinizzante infiammatoria cronica (CIDP).
+
+      Classificazione delle malattie demielinizzanti
 
       **Malattie del sistema nervoso periferico e del muscolo**
 
@@ -201,6 +208,10 @@ moduli:
 
       **Infezioni del sistema nervoso centrale:** encefaliti, meningiti
 
+      - Crisi miasteniche
+      - Poliradicoloneuriti acute
+      - Altre patologie neurologiche
+
       **Crisi miasteniche**
 
       **Poliradicoloneuriti acute**
@@ -223,43 +234,6 @@ moduli:
 
       **Neuriabilitazione (Basi neurofisiologiche e Campi di intervento)**
 
-      **Le basi della neurologia**
-
-      **Controllo motorio:**
-
-      - Organizzazione del sistema motorio
-      - Semeiotica della motricità
-      - paralisi periferica e paralisi centrale
-
-      **Sensibilità:**
-
-      - Anatomo-fisiologia della sensibilità
-      - I disturbi della sensibilità
-
-      **Le grandi sindromi:**
-
-      - Sindrome piramidale
-      - Sindromi extrapiramidali
-      - Sindrome cerebellare
-      - Sindromi corticali
-
-      **Le funzioni superiori:**
-
-      - La vigilanza e i suoi disturbi (confusione mentale)
-      - Linguaggio ed afasie
-      - Aprassie
-      - Agnosie
-      - Disturbi della memoria
-
-      **I comi:**
-
-      - Fisiopatologia del coma
-      - Esame generale e neurologico del malato comatoso
-      - Scale di valutazione ed esami strumentali
-      - Cause di coma
-      - Prognosi
-      - Morte cerebrale
-
       **Semeiotica dei nervi cranici:**
 
       - Nervo ottico e vie visive
@@ -268,91 +242,7 @@ moduli:
       - Nervo facciale
       - Altri nervi cranici (cenni)
 
-      **Diagnostica strumentale:**
-
-      - TC, RMN e angiografia: indicazioni e quadri euroradiologici nelle principali patologie neurologiche
-      - EEG, EMG, potenziali evocati, ECO-doppler
-      - rachicentesi ed esame del liquor
-
-      **Neurologia funzionale**
-
-      **Crisi epilettiche ed epilessie:**
-
-      - Definizioni
-      - Incidenza e prevalenza
-      - Classificazione clinico-EEG delle crisi epilettiche
-      - Classificazione delle epilessie: i più importanti quadri sindromici
-      - Eziologia e fisiopatogenesi delle crisi epilettiche
-      - Iter diagnostico
-      - Diagnosi differenziale
-      - Prognosi
-      - Terapia
-      - problemi psico-sociali e medico-legali
-
-      **Il sonno:**
-
-      - Il sonno fisiologico
-      - Metodiche di studio
-      - La classificazione internazionale dei disturbi del sonno
-      - Le insonnie
-      - Le ipersonnie diurne
-
-      **Cefalee e algie della faccia:**
-
-      - Generalità: approccio al paziente con cefalea
-      - Classificazione e diagnosi differenziale delle cefalee
-      - Le sindromi cefalalgiche e il loro trattamento: emicrania con e senza aura
-      - cefalea di tipo tensivo
-      - Cefalea a grappolo
-      - Nevralgia trigeminale
-      - Forme particolari di cefalea: cefalea post-traumatica
-      - Cefalea da sforzo e **altre cefalee primarie - Diagnostica strumentale e terapia:**
-      - Indagini strumentali
-      - Terapia farmacologica
-
-      **Malattie del sistema nervoso periferico e del muscolo**
-
-      **Patologia dei nervi periferici:**
-
-      - Processi anatomo-patologici: degenerazione walleriana, demielinizzazione segmentaria, degenerazione assonale
-      - Sintomatologia delle neuropatie periferiche e approccio al paziente
-      - Classificazione sindromica delle neuropatie periferiche
-      - Le sindromi compressive
-      - Le neuropatie tossiche e metaboliche (es: alcoolica e diabetica)
-      - Le neuropatie disimmuni
-
-      **Miopatie:**
-
-      - Classificazione
-      - Cenni di anatomia patologica
-      - Semeiotica clinica e strumentale
-      - Distrofie muscolari
-      - Miopatie infiammatorie
-      - Distrofia miotonica
-      - Altre miopatie (cenni)
-
-      **Miastenia gravis:**
-
-      - clinica, decorso
-      - alterazioni del timo e altre patologie associate
-      - eziopatogenesi
-      - diagnosi
-      - trattamento
-      - Sindrome miasteniforme di Lambert-Eaton (cenni)
-
       **Encefalomielite mialgica (ME)/Sindrome da fatica cronica**
-
-      **Emergenze neurologiche**
-
-      **Malattie cerebrovascolari:**
-
-      - Generalità: epidemiologia
-      - Fattori di rischio dello stroke
-      - Patogenesi: infarto cerebrale aterotrombotico
-      - Embolia cerebrale
-      - Infarto lacunare
-      - Emorragia intraparenchimale
-      - Emorragia subaracnoidea.
 
       **Caratteristiche cliniche:**
 
@@ -362,105 +252,11 @@ moduli:
       - Differenziale
       - Terapia farmacologica e riabilitativa
 
-      **Coma**
-
-      **Infezioni del sistema nervoso centrale: encefaliti, meningiti**
-
-      - Crisi miasteniche
-      - Poliradicoloneuriti acute
-      - Altre patologie neurologiche
-
-      **Neuro AIDS:**
-
-      - Sindromi neurologiche nel periodo della sieroconversione
-      - Sindromi neurologiche croniche
-      - AIDS dementia complex
-
-      **Complicanze neurologiche dell'alcoolismo:**
-
-      - Delirium tremens
-      - Encefalopatia di Wernicke
-      - Sindrome di Korsakoff
-
-      **Encefalopatie non infettive**
-
       **Neuriabilitazione**
 
       **Basi neurofisiologiche**
 
       **Campi di intervento**
-
-      **Le basi della neurologia**
-
-      **Controllo motorio:**
-
-      - Organizzazione del sistema motorio
-      - Semeiotica della motricità
-      - Paralisi periferica e paralisi centrale
-
-      **Sensibilità:**
-
-      - Anatomo-fisiologia della sensibilità
-      - I disturbi della sensibilità
-
-      **Le grandi sindromi:**
-
-      - Sindrome piramidale
-      - Sindromi extrapiramidali
-      - Sindrome cerebellare
-      - Sindromi corticali
-
-      **Le funzioni superiori:**
-
-      - La vigilanza e i suoi disturbi (confusione mentale)
-      - Linguaggio ed afasie
-      - Aprassie
-      - Agnosie
-      - Disturbi della memoria
-
-      **I comi:**
-
-      - Fisiopatologia del coma
-      - Esame generale e neurologico del malato comatoso
-      - Scale di valutazione ed esami strumentali
-      - Cause di coma
-      - Prognosi
-      - Morte cerebrale
-
-      **Diagnostica strumentale:**
-
-      **Neurologia funzionale**
-
-      **Crisi epilettiche ed epilessie:**
-
-      - Definizioni
-      - Incidenza e prevalenza
-      - Classificazione clinico-EEG delle crisi epilettiche
-      - Classificazione delle epilessie: i più importanti quadri sindromici
-      - Eziologia e fisiopatogenesi delle crisi epilettiche
-      - Iter diagnostico
-      - Diagnosi differenziale
-      - Prognosi
-      - Terapia
-      - Problemi psico-sociali e medico-legali
-
-      - Strumentali
-      - Terapia farmacologica
-
-      **Malattie neurodegenerative**
-
-      **Demenze:**
-
-      - La sindrome demenziale
-      - Classificazione delle demenze
-      - Demenze primarie o degenerative primarie: alterazioni istopatologiche, alterazioni biochimiche, eziopatogenesi, quadro clinico e diagnostica avanzata (marcatori biologici)
-      - Demenze multinfartuali: eziopatogenesi, quadro clinico
-      - Pseudodemenze: a genesi psichica o biologica
-      - Demenze sottocorticali
-      - Demenze trasmissibili (Jacob-Creutzfeldt)
-      - Terapia delle demenze
-
-      **Malattie extrapiramidali:**
 
       **Parkinson idiopatico:**
 
@@ -477,18 +273,6 @@ moduli:
       - Altre coree (cenni)
       - Malattia di Wilson (cenni)
       - Semeiotica dei movimenti involontari patologici
-
-      **Sclerosi laterale amiotrofica:**
-
-      - Neuropatologia e eziopatogenesi
-      - Quadro clinico sintomatologico
-      - Decorso, diagnosi e trattamento
-
-      **Malattie neurologiche disimmuni**
-
-      **Sclerosi multipla:**
-
-      Classificazione delle malattie demielinizzanti
 
       **Infiammatorie del SNC**
 
@@ -508,31 +292,6 @@ moduli:
       - Terapie sintomatiche
       - Terapie disease-modifying
       - Neuromielite ottica, leucoencefalopatia progressiva multifocale, Sindrome di Guillain Barré, Neuropatia demielinizzante infiammatoria cronica (CIDP).
-
-      **Emergenze neurologiche**
-
-      **Coma**
-
-      **Infezioni del sistema nervoso centrale: encefaliti, meningiti**
-
-      - Crisi miasteniche
-      - Poliradicoloneuriti acute
-
-      **Altre patologie neurologiche**
-
-      **Neuro AIDS:**
-
-      - Sindromi neurologiche nel periodo della sieroconversione
-      - Sindromi neurologiche croniche
-      - AIDS dementia complex
-
-      **Complicanze neurologiche dell'alcoolismo:**
-
-      - Delirium tremens
-      - Encefalopatia di Wernicke
-      - Sindrome di Korsakoff
-
-      **Encefalopatie non infettive**
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11236/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-

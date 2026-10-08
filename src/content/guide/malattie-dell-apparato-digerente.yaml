@@ -53,24 +53,12 @@ moduli:
       - Rettorragia
       - Ittero
       - Ascite
-      - Dolore addominale (acuto e cronico)
-      - Acalasia e disturbi motori esofagei
-      - Malattia da reflusso gastroesofageo
-      - Neoplasie dell'esofago
       - Malattia peptica
-      - Gastriti e gastropatie
       - H pylori
-      - Neoplasie dello stomaco
       - Malassorbimento
       - Malattia celiaca
       - Morbo di Whipple
-      - Contaminazione batterica dell'intestino tenue
-      - Malattia diverticolare
-      - Malattie infiammatorie intestinali
-      - Sindrome dell'intestino irritabile
-      - Neoplasie benigne e maligne del colon
       - Epatiti acute
-      - Epatopatie croniche e cirrosi epatica
       - Colecistite acute
       - Colica biliare
       - Tumori del fegato
@@ -221,13 +209,6 @@ moduli:
     preappello: Sì
     exam_details: "Scritto di Nutrizione umana. La prova dura 45 minuti ed è composta da: 10 domande a scelta multipla, con una sola risposta corretta: risposta corretta → +2 punti; risposta non data → 0 punti; risposta sbagliata → −0,5 punti; 2 domande aperte, valutate da 0 a 5 punti ciascuna. Le domande aperte possono essere ricorrenti e ripetersi negli anni precedenti. Lo scritto si svolge all'inizio della giornata."
     program: |-
-      - Dispendio e bilancio energetico, fabbisogno energetico
-      - Dietetica fisiologica nell’adulto (Linee guida/LARN)
-      - Gruppi di alimenti e piramide alimentare
-      - Diagnostica Nutrizionale nell’adulto
-      - Obesità e terapia dietetica
-      - Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
-      - Dietoterapia nelle Malattie croniche infiammatorie intestinali
       - Dispendio e bilancio energetico, fabbisogno energetico
       - Dietetica fisiologica nell’adulto (Linee guida/LARN)
       - Gruppi di alimenti e piramide alimentare

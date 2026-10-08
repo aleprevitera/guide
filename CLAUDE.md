@@ -199,6 +199,11 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   aggiunge i mancanti nel modulo che insegnano. Cognomi uguali (es. due Fusar Poli) = voce lasciata com'è e
   segnalata. `SOLO_NOMINATI` (es. Semeiotica): solo docenti già nella guida + titolare. Da rilanciare a inizio
   anno accademico.
+- **Impaginazione dei programmi**: `node scripts/riformatta-programmi.mjs` (`--dry`, `--solo=`, `--solo-doppioni`)
+  rende leggibili i programmi del catalogo (elenchi, titoli in grassetto, niente MAIUSCOLO) con DeepSeek, e
+  accetta il risultato **solo se la sequenza di parole è identica** all'originale. Toglie le ripetizioni senza
+  perdere contenuto: copie del syllabus fuse per titolo (solo se il primo titolo ricompare), sezioni e paragrafi
+  identici, voci puntate ripetute nella stessa sezione. Da lanciare dopo `programmi-ufficiali.mjs`.
 - **Esami senza guida** (schede bloccate "Guida in arrivo"): `src/lib/in-arrivo.ts` li ricava dal catalogo
   (`syllabus.json`: voto finale, niente esami a scelta né tirocini) per gli anni in `ANNI_CON_SEGNAPOSTO`
   (ora IV, V e VI). Spariscono da soli quando esiste una guida con lo stesso `esse3_codice` o lo stesso nome.

@@ -89,7 +89,20 @@ function senzaQuasiDuplicati(testo) {
 // Neurologia: tre versioni). Una sezione (titolo in grassetto + contenuto) si
 // toglie se ≥ 90% delle sue parole sta già in UNA sezione precedente; poi si
 // tolgono le voci d'elenco identiche già comparse.
+/** Ripete la pulizia finché non toglie più nulla (togliere un doppione può farne emergere un altro). */
 function senzaSezioniDoppie(md) {
+  let testo = md, tolte = 0;
+  for (;;) {
+    const r = unaPassata(testo);
+    if (!r.tolte) return { testo, tolte };
+    testo = r.testo;
+    tolte += r.tolte;
+  }
+}
+
+function unaPassata(md) {
+  // Riga confrontabile: senza marcatori d'elenco, numerazione, grassetto, punteggiatura, maiuscole.
+  const chiave = (r) => parole(r.replace(/^\s*(\d+[.)]|[-*])\s+/, '')).join(' ');
   const righe = md.split('\n');
   const sezioni = [];
   for (const r of righe) {
@@ -97,28 +110,61 @@ function senzaSezioniDoppie(md) {
     if (titolo || !sezioni.length) sezioni.push([r]);
     else sezioni[sezioni.length - 1].push(r);
   }
-  const tenute = [];
+  // Copie del syllabus (es. Neurologia: tre versioni): si riconoscono dal
+  // PRIMO titolo del programma che ricompare più avanti. Solo in quel caso le
+  // sezioni delle copie successive si fondono, per titolo, nella prima copia
+  // (righe nuove aggiunte, doppioni via). Titoli ripetuti per struttura
+  // ("Argomenti irrinunciabili" sotto ogni specialità) restano come sono.
+  const chiaveTitolo = (r) => r.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const eTitolo = (r) => /^\*\*/.test(r.trim());
+  const primo = sezioni.find((sz) => eTitolo(sz[0]));
+  const inizioCopie = primo ? sezioni.findIndex((sz, k) => sz !== primo && eTitolo(sz[0]) && chiaveTitolo(sz[0]) === chiaveTitolo(primo[0])) : -1;
+  const tenute = inizioCopie < 0 ? [...sezioni] : sezioni.slice(0, inizioCopie);
   let tolte = 0;
-  for (const sez of sezioni) {
-    const P = new Set(parole(sez.join(' ')));
-    const doppia = P.size >= 8 && tenute.some((q) => {
-      const Q = new Set(parole(q.join(' ')));
-      let inter = 0;
-      for (const w of P) if (Q.has(w)) inter++;
-      return inter / P.size >= 0.9;
-    });
-    if (doppia) tolte++;
-    else tenute.push(sez);
+  for (const sez of inizioCopie < 0 ? [] : sezioni.slice(inizioCopie)) {
+    const prima = eTitolo(sez[0]) ? tenute.find((t) => chiaveTitolo(t[0]) === chiaveTitolo(sez[0])) : null;
+    if (!prima) { tenute.push(sez); continue; }
+    const presenti = new Set(prima.map(chiave));
+    const nuove = sez.slice(1).filter((r) => chiave(r) && !presenti.has(chiave(r)));
+    let fine = prima.length;
+    while (fine > 1 && !prima[fine - 1].trim()) fine--;
+    prima.splice(fine, 0, ...nuove);
+    tolte++;
   }
-  const viste = new Set();
-  const out = [];
-  for (const r of tenute.flat()) {
-    const chiave = r.trim().toLowerCase();
-    if (/^(-|\d+\.)\s/.test(r.trim()) && chiave.length > 30) {
-      if (viste.has(chiave)) { tolte++; continue; }
-      viste.add(chiave);
+  // Sezioni IDENTICHE (titolo e contenuto) a una precedente, ovunque: via.
+  const firme = new Set();
+  const uniche = [];
+  for (const sez of tenute) {
+    const contenuto = sez.slice(1).map(chiave).filter(Boolean);
+    const firma = `${chiaveTitolo(sez[0])}|${contenuto.join('|')}`;
+    if (contenuto.length && firme.has(firma)) { tolte++; continue; }
+    firme.add(firma);
+    uniche.push(sez);
+  }
+  tenute.splice(0, tenute.length, ...uniche);
+  // Paragrafi lunghi (non voci d'elenco, non titoli) identici a uno già comparso.
+  const paragrafiVisti = new Set();
+  for (const sez of tenute) {
+    for (let k = 0; k < sez.length; k++) {
+      const r = sez[k];
+      if (/^\s*(-|\d+[.)]|\*\*)/.test(r) || r.trim().length < 60) continue;
+      const kk = chiave(r);
+      if (paragrafiVisti.has(kk)) { sez[k] = ''; tolte++; } else paragrafiVisti.add(kk);
     }
-    out.push(r);
+  }
+  // Voci d'elenco identiche ripetute DENTRO la stessa sezione.
+  const out = [];
+  for (const sez of tenute) {
+    const gia = new Set();
+    for (const r of sez) {
+      const k = chiave(r);
+      // Solo voci puntate: togliere voci numerate spezzerebbe la numerazione.
+      if (/^\s*-\s/.test(r) && k.length > 20) {
+        if (gia.has(k)) { tolte++; continue; }
+        gia.add(k);
+      }
+      out.push(r);
+    }
   }
   return { testo: out.join('\n'), tolte };
 }
