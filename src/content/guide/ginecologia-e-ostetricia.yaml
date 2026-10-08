@@ -8,12 +8,51 @@ moduli:
     exam_type: Orale
     exam_details: "Orale, generalmente due domande principali (una di ginecologia e una di ostetricia) e domande satelliti. Generalmente si va in ordine alfabetico dopo aver superato l’esame di Genetica. Quest’anno è stato concesso un appello straordinario a marzo, ma solo a chi non sosteneva l’esame a febbraio; considerando che la prof.ssa Beneventi non terrà più le lezioni, sarà più difficile ottenerlo, visto che era stata una sua iniziativa. Ci saranno due nuovi professori: prof.ssa Cuccinella, che lavora con la Nappi ed è esperta di endocrinologia ginecologica; prof. Dominoni, probabilmente nozionismo stile Gardella; verosimilmente l’ultimo ostetrico rimarrà Spinillo."
     program: |-
-      Note dei rappresentanti sul programma:
+      Il corso si articola in 2 moduli integrati: Genetica medica e Ostetricia e Ginecologia.
+
+      - Anatomia dell’apparato genitale femminile
+      - Il ciclo mestruale
+      - L’amenorrea e le altre anomalie del ciclo mestruale
+      - L’anovularietà cronica e gli iperandrogenismi femminili
+      - La fecondazione e l’annidamento
+      - La sterilità coniugale
+      - L’endometriosi
+      - Pianificazione familiare e contraccezione
+      - L’interruzione volontaria e terapeutica della gravidanza
+      - La gravidanza fisiologica: modificazioni dell’organismo materno
+      - Lo sviluppo normale del feto e della placenta
+      - Assistenza alla gravidanza fisiologica
+      - Patologia della gravidanza: preeclampsia-eclampsia, diabete gestazionale, parto pretermine, rottura prematura delle membrane amniocoriali, infezioni, abruptio placentae, gravidanza protratta
+      - Gravidanza plurima
+      - Anomalie di sede dell’annidamento: gravidanza ectopica, placenta previa
+      - L’aborto spontaneo e la sindrome dell’aborto ripetuto
+      - Malattie materne acute e croniche in gravidanza. Uso di farmaci in gravidanza
+      - Patologia dell’accrescimento fetale. Malformazioni.
+      - Screening e diagnosi della patologia fetale: diagnosi prenatale, monitoraggio fetale.
+      - Il parto fisiologico: fasi del parto, assistenza al parto fisiologico
+      - Taglio cesareo, parti vaginali operativi e induzione medica del travaglio
+      - Le distocie e le metrorragie del postpartum
+      - Patologia benigna dell’utero e dell’ovaio: fibromi uterini e cisti ovariche
+      - La menopausa e il suo trattamento
+      - Patologia della statica pelvica
+      - La malattia infiammatoria pelvica
+      - Patologia preneoplastica del tratto genitale inferiore
+      - Il carcinoma della portio
+      - Il carcinoma dell’endometrio
+      - Patologia benigna e maligna della vulva
+      - Tumori epiteliali e non epiteliali dell’ovaio
+      - Tumori eredofamiliari
+      - Malattie del trofoblasto
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
+    material_tips: |-
+      **Sul programma**
 
       - Ginecologia: tutto dalle sbobine 23/24 salvo dove specificato; microbioma dalle lezioni 25/26; tumori dell'endometrio da sbob 24/25.
       - Ostetricia: tutto dalle sbobine 23/24 salvo dove specificato; diabete gestazionale da integrare con lezioni 25/26; alloimmunizzazione materno/fetale da slide; disturbi ipertensivi e pre-eclampsia da sbob 24/25; amniocentesi, villocentesi e B-test da integrare in autonomia.
       - Argomenti core da sapere molto bene per potersi permettere carenze sul dettaglio specialistico.
-    material_tips: L’esame si affronta impostando lo studio a partire dalla dispensa di ginecologia e ostetricia anno 23/24, pre-eclampsia da sbob 25/26, diabete gestazionale da integrare con sbob 25/26, amniocentesi, villocentesi, B-test da integrare in autonomia, tumori dell’endometrio da sbob 24/25, microbioma sbob 25/26, alloimmunizzazione materno-fetale da slide. Non è necessario un libro di testo. Molto apprezzata la logicità clinica durante la prova orale.
+
+      L’esame si affronta impostando lo studio a partire dalla dispensa di ginecologia e ostetricia anno 23/24, pre-eclampsia da sbob 25/26, diabete gestazionale da integrare con sbob 25/26, amniocentesi, villocentesi, B-test da integrare in autonomia, tumori dell’endometrio da sbob 24/25, microbioma sbob 25/26, alloimmunizzazione materno-fetale da slide. Non è necessario un libro di testo. Molto apprezzata la logicità clinica durante la prova orale.
     body: "**Frequenza**: non sono eccessivamente fiscali sulle presenze; fanno la marcatura con l’app e occasionalmente la Nappi raccoglie le firme."
     professors:
       - nome: Beneventi
@@ -26,11 +65,13 @@ moduli:
     id: m-ldm3iupg
     exam_type: Scritto
     exam_details: Esame a crocette (15 domande, 2 punti ciascuna) di sbarramento per Ginecologia, minimo 9 domande su 15. Una volta superato l’esame di Genetica si può tenere il voto e rifare solo Ginecologia.
-    program: Programma da confermare.
+    program: |-
+      Il corso si articola in 2 moduli integrati: Genetica medica e Ostetricia e Ginecologia.
+
+      *Il programma ufficiale non ha una parte dedicata a questo modulo.*
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
     material_tips: Impararsi le domande degli appelli precedenti e una lettura alle sbobine dell’anno.
-info_da_verificare:
-  - campo: Programma
-    nota: La scheda non descrive il programma di Genetica. Verificare se il programma ufficiale è disponibile altrove o se i rappresentanti possono fornire indicazioni sui contenuti d'esame (oltre alle domande degli appelli precedenti).
 esse3_codice: "501628"
 cfu_totali: 8
 ultimo_aggiornamento: 2026-10-08
