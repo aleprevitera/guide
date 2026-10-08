@@ -106,7 +106,12 @@ moduli:
       - La correzione può richiedere molto tempo.
 
       Le presenze non vengono controllate.
-    program: Il programma comprende i macroargomenti affrontati durante le lezioni.
+    program: |-
+      In una prima fase vengono presentati i criteri e i principi della bioetica, con riferimento allo sviluppo storico.
+
+      Principi e valori vengono successivamente utilizzati attraverso l’analisi sia di casi “storici” sia di situazioni tipiche della medicina contemporanea.
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
     material_tips: |-
       **Dove studiare**
 
