@@ -8,10 +8,15 @@ import PixelIcon from '../common/PixelIcon.astro';
 import { cfuGuida, proveEsame } from '../../lib/guide';
 import { MONDI, stileMondo } from '../../lib/mondi';
 import { dateFuture, parti } from '../../lib/appelli';
+import type { EsameInArrivo } from '../../lib/in-arrivo';
 
 interface Props {
   entries: CollectionEntry<'guide'>[];
+  /** Esami senza guida: schede bloccate, dopo le guide (src/lib/in-arrivo.ts). */
+  inArrivo?: EsameInArrivo[];
 }
+
+const inArrivo = Astro.props.inArrivo ?? [];
 
 const guide = [...Astro.props.entries]
   .sort((a, b) => a.data.title.localeCompare(b.data.title))
@@ -80,6 +85,19 @@ const guide = [...Astro.props.entries]
         </span>
         <span class="terreno" data-terreno={g.terreno} aria-hidden="true"></span>
       </a>
+    </li>
+  ))}
+  {inArrivo.map((e) => (
+    <li>
+      <div class="guida guida--bloccata px-border px-border--off">
+        <span class="guida__corpo">
+          <span class="guida__titolo">{e.nome}</span>
+          <span class="hud label">
+            <span class="stat stat--bloccata"><PixelIcon name="lock" size={16} />Guida in arrivo</span>
+            {e.cfu && <span class="stat"><PixelIcon name="moneta" size={16} />{e.cfu} CFU</span>}
+          </span>
+        </span>
+      </div>
     </li>
   ))}
 </ul>
@@ -208,6 +226,24 @@ const guide = [...Astro.props.entries]
     display: inline-flex;
     align-items: center;
     gap: 8px;
+  }
+  /* Esame senza guida: scheda spenta, non cliccabile, con il lucchetto. */
+  .guida--bloccata {
+    background: var(--bg);
+    color: var(--text-2);
+  }
+  .guida--bloccata .guida__corpo {
+    box-shadow: inset 12px 0 0 0 var(--border-off);
+  }
+  .guida--bloccata .guida__titolo {
+    color: var(--text-2);
+  }
+  .guida--bloccata .stat {
+    background: var(--chip);
+    color: var(--text-2);
+  }
+  .stat--bloccata {
+    color: var(--accent) !important;
   }
   @media (forced-colors: active) {
     .guida { outline: 2px solid CanvasText; }

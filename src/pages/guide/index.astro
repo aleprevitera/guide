@@ -4,12 +4,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import GuidePerSemestre from '../../components/guide/GuidePerSemestre.astro';
 import SearchBox from '../../components/common/SearchBox.astro';
 import { ANNI_DI_CORSO, annoHref, annoSlug } from '../../lib/anni';
+import { esamiInArrivo } from '../../lib/in-arrivo';
 
 const guide = await getCollection('guide');
 
 const gruppi = ANNI_DI_CORSO.map((anno) => ({
   anno,
   entries: guide.filter((entry) => entry.data.anno_di_corso === anno),
+  inArrivo: esamiInArrivo(anno, guide),
 })).filter((gruppo) => gruppo.entries.length > 0);
 ---
 
@@ -21,7 +23,7 @@ const gruppi = ANNI_DI_CORSO.map((anno) => ({
       <h2 class="anno__titolo label" id={`anno-${annoSlug(gruppo.anno)}`}>
         <a href={annoHref(gruppo.anno)}>{gruppo.anno}</a>
       </h2>
-      <GuidePerSemestre entries={gruppo.entries} livello={3} />
+      <GuidePerSemestre entries={gruppo.entries} inArrivo={gruppo.inArrivo} livello={3} />
     </section>
   ))}
 </BaseLayout>

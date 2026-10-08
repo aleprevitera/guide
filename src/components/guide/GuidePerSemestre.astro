@@ -1,29 +1,40 @@
 ---
-// Guide di un anno divise per semestre (I, II, annuali). Se nessuna guida
-// indica il semestre, l'elenco resta unico, senza intestazioni.
+// Guide di un anno divise per semestre (I, II, annuali), con in coda a ogni
+// semestre gli esami ancora senza guida (schede bloccate). Se nulla indica
+// il semestre, l'elenco resta unico, senza intestazioni.
 import type { CollectionEntry } from 'astro:content';
 import GuideList from './GuideList.astro';
-import { perSemestre } from '../../lib/guide';
+import { ETICHETTA_SEMESTRE, semestreGuida, type Semestre } from '../../lib/guide';
+import type { EsameInArrivo } from '../../lib/in-arrivo';
 
 interface Props {
   entries: CollectionEntry<'guide'>[];
+  inArrivo?: EsameInArrivo[];
   /** Livello dei titoli dei gruppi: h2 nella pagina dell'anno, h3 in /guide/. */
   livello?: 2 | 3;
 }
 
-const { entries, livello = 2 } = Astro.props;
-const gruppi = perSemestre(entries);
+const { entries, inArrivo = [], livello = 2 } = Astro.props;
+const ordine: (Semestre | null)[] = ['I', 'II', 'Annuale', null];
+const gruppi = ordine
+  .map((semestre) => ({
+    semestre,
+    titolo: semestre ? ETICHETTA_SEMESTRE[semestre] : 'Semestre da definire',
+    entries: entries.filter((e) => semestreGuida(e.data) === semestre),
+    inArrivo: inArrivo.filter((e) => e.semestre === semestre),
+  }))
+  .filter((g) => g.entries.length + g.inArrivo.length > 0);
 const senzaDivisione = gruppi.length === 1 && gruppi[0].semestre === null;
 const Titolo = livello === 2 ? 'h2' : 'h3';
 ---
 
 {senzaDivisione ? (
-  <GuideList entries={entries} />
+  <GuideList entries={entries} inArrivo={inArrivo} />
 ) : (
   gruppi.map((g) => (
     <section class="semestre">
       <Titolo class="semestre__titolo label">{g.titolo}</Titolo>
-      <GuideList entries={g.entries} />
+      <GuideList entries={g.entries} inArrivo={g.inArrivo} />
     </section>
   ))
 )}

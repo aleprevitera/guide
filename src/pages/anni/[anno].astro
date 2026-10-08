@@ -6,21 +6,23 @@ import PixelIcon from '../../components/common/PixelIcon.astro';
 import ScenaMondo from '../../components/common/ScenaMondo.astro';
 import { ANNI_DI_CORSO, annoSlug, numeroRomano, vtMondo, type Anno } from '../../lib/anni';
 import { MONDI, stileMondo } from '../../lib/mondi';
+import { esamiInArrivo } from '../../lib/in-arrivo';
 
 export async function getStaticPaths() {
   const guide = await getCollection('guide');
   return ANNI_DI_CORSO.map((anno) => ({
     params: { anno: annoSlug(anno) },
-    props: { anno, entries: guide.filter((g) => g.data.anno_di_corso === anno) },
+    props: { anno, entries: guide.filter((g) => g.data.anno_di_corso === anno), inArrivo: esamiInArrivo(anno, guide) },
   }));
 }
 
 interface Props {
   anno: Anno;
   entries: Awaited<ReturnType<typeof getCollection<'guide'>>>;
+  inArrivo: ReturnType<typeof esamiInArrivo>;
 }
 
-const { anno, entries } = Astro.props;
+const { anno, entries, inArrivo } = Astro.props;
 const mondo = MONDI[anno];
 const numero = numeroRomano(anno);
 // La scena del mondo (la stessa della casella in home): spenta se l'anno non ha guide.
@@ -45,8 +47,8 @@ const conScena = !!mondo.scena;
   </header>
 
   <div style={stileMondo(anno)}>
-  {entries.length > 0 ? (
-    <GuidePerSemestre entries={entries} />
+  {entries.length + inArrivo.length > 0 ? (
+    <GuidePerSemestre entries={entries} inArrivo={inArrivo} />
   ) : (
     <p class="vuoto panel px-border px-border--off">
       Nessuna guida ancora per questo anno: i rappresentanti ci stanno lavorando.
