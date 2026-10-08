@@ -1,97 +1,156 @@
 id: g-js52zv2u
 title: Malattie infettive
+esse3_codice: "501624"
 anno_di_corso: V Anno
+cfu_totali: 5
+semestre: I
 moduli:
-  - nome_modulo: Malattie infettive
-    id: m-x4s934c2
-    exam_type: Orale
-    study_time: 2 settimane – 3 settimane
-    exam_details: |-
+  - body: >-
+      **Domande e argomenti ricorrenti**
+
+
+      * Terapia antibiotica e principali classi di antibiotici
+
+      * Gastroenteriti
+
+      * Infezioni delle vie urinarie
+
+      * Tubercolosi
+
+      * Malattie trasmesse dalle zanzare
+
+      * Infezioni virali emergenti
+
+      * Malaria
+
+      * HIV/AIDS
+
+      * Infezioni nel paziente immunocompromesso
+
+
+      È comunque consigliabile consultare le domande degli anni precedenti, poiché permettono di individuare con maggiore precisione le tematiche effettivamente ricorrenti.
+    exam_details: >-
       Prova unica orale.
 
+
       - Chiamata in ordine alfabetico.
+
       - Interrogazione con 2-3 domande.
+
       - Modalità varia in base al docente: alcuni lasciano parlare maggiormente lo studente, altri pongono più domande mirate e specifiche.
+
       - Con il Prof. Bruno può essere più difficile ottenere voti particolarmente elevati, ma se lo studente dimostra di conoscere adeguatamente gli argomenti non viene penalizzato. Anche quando l'interrogazione non è eccellente, non vengono assegnati voti particolarmente bassi.
+
 
       **Frequenza**: il Prof. Bruno ha talvolta comunicato che per sostenere l'esame sarebbe stato necessario aver raggiunto il 75% delle presenze.
 
+
       **Appelli extra**: il Prof. Bruno concede generalmente un appello extra nel mese di marzo, senza che sia necessario richiederlo. L'appello extra è solitamente molto frequentato. Al di fuori di questo appello, non vengono generalmente concessi ulteriori appelli straordinari, anche quando richiesti dagli studenti.
-    program: |-
+    study_time: 2 settimane – 3 settimane
+    program: >-
       **Argomenti:**
 
+
       - Generalità sulle malattie da agenti infettivi
+
       - Principi di terapia antibiotica
+
       - Contrasto al fenomeno dell’antibiotico resistenza
+
       - Sepsi
+
       - Endocarditi
+
       - Epatiti Virali
+
       - Infezioni Gastrointestinali
+
       - Infezioni Sistemiche
+
       - Infezioni respiratorie e micobatteriosi
+
       - Malattie sessualmente trasmesse
+
       - Infezioni delle vie urinarie
+
       - Infezione malattia HIV
+
       - Infezioni osso e tessuti Molli
+
       - Malaria e altre malattie parassitarie
 
+
       1. Introduzione
+
       2. Sepsi
+
       3. Endocarditi
+
       4. Gastroenteriti (Tifo / Colera)
+
       5. HIV
+
       6. Influenza
+
       7. Infezioni delle Vie Urinarie
+
       8. Malattie Sessualmente trasmesse
+
       9. Approccio al Paziente febbrile / FUO
+
       10. Epatiti virali
+
       11. Brucellosi
+
       12. Infezioni Sistemiche (CMV e EBV)
+
       13. Tubercolosi ExtraPolmonare
+
       14. Malattie trasmesse da Zecche
+
       15. Infezioni in Gravidanza
+
       16. Covid 19
+
       17. Meningiti / Encefaliti
+
       18. Infezioni dei Tessuti Molli
+
       19. Spondilodisciti
+
       20. Malaria
+
       21. Schistosomiasi
+
       22. Leishmaniosi
+
       23. Malattie Invasive da funghi
 
+
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/9728/2017/9999?coorte=2022&schemaid=17810).*
-    material_tips: |-
-      - Fonte principale: sbobine dell'a.a. 2025-2026.
-      - Utile consultare le domande degli anni precedenti per individuare argomenti più richiesti e parti da integrare.
-      - Per gastroenteriti e infezioni delle vie urinarie, le sbobine 2024-2025 sono particolarmente utili.
-      - Per la tubercolosi, integrare con la lezione svolta durante il corso di Pneumologia.
-      - Verificare sempre chi ha tenuto la lezione e studiare soprattutto il materiale del relativo docente.
-      - Evitare di affidarsi esclusivamente al materiale degli anni precedenti.
-    body: |-
-      **Domande e argomenti ricorrenti**
-
-      - Antimicrobial stewardship
-      - Terapia antibiotica e principali classi di antibiotici
-      - Gastroenteriti
-      - Infezioni delle vie urinarie
-      - Tubercolosi
-      - Malattie trasmesse dalle zanzare
-      - Criptococcosi
-      - Infezioni virali emergenti
-      - Malaria
-      - HIV/AIDS
-      - Infezioni nel paziente immunocompromesso
-
-      È comunque consigliabile consultare le domande degli anni precedenti, poiché permettono di individuare con maggiore precisione le tematiche effettivamente ricorrenti.
     professors:
       - nome: Raffaele Bruno
         email: raffaele.bruno@unipv.it
-        stile: Con il Prof. Bruno può essere più difficile ottenere voti particolarmente elevati, ma se lo studente dimostra di conoscere adeguatamente gli argomenti non viene generalmente penalizzato.
+        stile: Con il Prof. Bruno può essere più difficile ottenere voti particolarmente
+          elevati, ma se lo studente dimostra di conoscere adeguatamente gli
+          argomenti non viene generalmente penalizzato.
       - nome: Valentina Zuccaro
         email: valentina.zuccaro@unipv.it
+    material_tips: >-
+      - Fonte principale: sbobine dell'a.a. 2025-2026.
+
+      - Utile consultare le domande degli anni precedenti per individuare argomenti più richiesti e parti da integrare.
+
+      - Per gastroenteriti e infezioni delle vie urinarie, le sbobine 2024-2025 sono particolarmente utili.
+
+      - Per la tubercolosi, integrare con la lezione svolta durante il corso di Pneumologia.
+
+      - Verificare sempre chi ha tenuto la lezione e studiare soprattutto il materiale del relativo docente.
+
+      - Evitare di affidarsi esclusivamente al materiale degli anni precedenti.
     fascia_studio: 3–4 sett
     link_whatsapp: https://chat.whatsapp.com/G1N9TomqMOEIPIjBrAA3gl
-esse3_codice: "501624"
-cfu_totali: 5
-semestre: I
+    exam_type: Orale
+    id: m-x4s934c2
+    nome_modulo: Malattie infettive
 ultimo_aggiornamento: 2026-10-08
