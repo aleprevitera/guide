@@ -16,6 +16,31 @@ moduli:
 
       Il Prof. Di Pietro può chiedere anche i dosaggi dei farmaci. Non è necessario imparare a memoria ogni dosaggio nel dettaglio, ma è consigliabile avere almeno un'idea dei relativi ordini di grandezza.
     program: |-
+      - Triage
+      - I comi diabetici
+      - Le crisi ipoglicemiche
+      - Encefalopatia porto-sistemica (coma epatico)
+      - La sincope
+      - Lo stroke (ischemico, emorragico, ischemie cerebrali transitorie)
+      - Approccio al paziente con dolore toracico e dispnea:
+          - cardiopatia ischemica acuta;
+          - insufficienza cardiaca acuta (asma cardiaco, EPA);
+          - malattia tromboembolica ed embolia polmonare.
+      - Urgenze ed emergenze ipertensive
+      - Lo shock (fisiopatologia, classificazione, approccio clinico)
+      - La crisi asmatica
+      - Addome acuto non chirurgico
+      - Linee guida diagnostico-terapeutiche nelle emorragie digestive
+      - Diarree acute
+      - Colpo di calore
+      - Tossicodipendenze da alcol e droghe (classificazione, fisiopatologia, intossicazione acuta, sindromi da astinenza)
+      - Insufficienza renale acuta
+      - Approccio clinico ai disturbi dell’equilibrio acido-base ed elettrolitico
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
+    material_tips: |-
+      **Sul programma**
+
       Il programma è molto ampio e l’esame può vertere potenzialmente su qualsiasi argomento affrontato durante il corso. Particolare attenzione a:
 
       - gestione del paziente in shock;
@@ -24,7 +49,7 @@ moduli:
       - interpretazione dell’emogasanalisi;
       - gestione del paziente in base ai risultati dell’EGA;
       - principali quadri di emergenza.
-    material_tips: |-
+
       **Da dove studiare e consigli di studio**
 
       - Sbobine del corso.
