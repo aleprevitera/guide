@@ -127,6 +127,9 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
 - `public.elimina_account()` — `SECURITY DEFINER` **voluto** (l'utente non può cancellare `auth.users`):
   senza parametri, cancella solo `auth.uid()` e a cascata i suoi feedback; niente `anon`. Pulsante in
   `/privacy/#elimina` (`EliminaAccount.astro`, `eliminaAccount()` in `src/lib/auth.ts`).
+- `public.ping()` — `SECURITY INVOKER`, eseguibile anche da `anon`, restituisce solo `now()`: lo chiama la
+  GitHub Action `.github/workflows/supabase-attivo.yml` (lunedì e giovedì) perché il progetto gratuito va in
+  pausa dopo ~7 giorni senza attività. Se l'Action fallisce, controllare la dashboard Supabase.
 - `public.hook_solo_account_ateneo(event)` — hook Auth "Before User Created": rifiuta domini diversi.
 - **Regola: extra = feedback = solo per chi ha fatto l'accesso.** Ogni nuovo feedback segue lo stesso
   modello (dati su Supabase, niente accesso `anon`), non si nasconde contenuto statico via JS.

@@ -1,0 +1,32 @@
+# Tiene attivo il progetto Supabase gratuito, che va in pausa dopo circa 7 giorni
+# senza attività (es. durante le vacanze): con il progetto in pausa accesso e voti
+# non funzionano. Due volte a settimana chiama public.ping() (supabase/migrations/
+# 20261008200000_ping.sql), che restituisce solo l'ora del database.
+# URL e chiave publishable sono pubblici per costruzione (src/lib/supabase-config.ts).
+# Se la chiamata fallisce, GitHub avvisa con un'email: controllare la dashboard Supabase.
+name: Supabase attivo (ping)
+
+on:
+  schedule:
+    - cron: '0 7 * * 1,4' # lunedì e giovedì, 07:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      SUPABASE_URL: https://zbdovlgoincjtjvmesft.supabase.co
+      SUPABASE_PUBLISHABLE_KEY: sb_publishable_aJ5tbRbkzrjcIsOnu1kDUA_O4W5nbde
+    steps:
+      - name: Ping al database
+        run: |
+          curl --fail-with-body -sS --retry 3 --retry-delay 10 \
+            -X POST "$SUPABASE_URL/rest/v1/rpc/ping" \
+            -H "apikey: $SUPABASE_PUBLISHABLE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_PUBLISHABLE_KEY" \
+            -H "Content-Type: application/json" \
+            -d '{}'
