@@ -248,7 +248,12 @@ for (const g of guide) {
     const testo = `${i.campo} ${i.nota ?? ''}`;
     if (!/e-?mail|contatt|nomi? complet|professori e/i.test(testo) || /^frequenza/i.test(i.campo)) return true;
     const citati = prof.filter((p) => cognome(p).length > 2 && norm(testo).includes(cognome(p)));
-    const risolta = (citati.length ? citati : prof).every((p) => p.email) && prof.length > 0;
+    // Nessun docente nominato: contano i moduli nominati (un modulo senza
+    // docenti tiene la nota), altrimenti tutta la guida.
+    const moduliCitati = g.moduli.filter((m) => g.moduli.length > 1 && norm(testo).includes(norm(m.nome_modulo)));
+    const gruppo = citati.length ? citati : moduliCitati.length ? moduliCitati.flatMap((m) => m.professors ?? []) : prof;
+    const vuoto = moduliCitati.some((m) => !(m.professors ?? []).length);
+    const risolta = !vuoto && gruppo.length > 0 && gruppo.every((p) => p.email);
     if (risolta) note.push(`− da verificare: "${i.campo}" (risolta dal catalogo)`);
     return !risolta;
   });
