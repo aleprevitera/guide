@@ -8,7 +8,7 @@ descrizione_generale: |-
 
   **Per completare l'esame è necessario sostenere Dermatologia e Chirurgia plastica entro una distanza massima di un appello.** Ad esempio: Dermatologia → appello di giugno; Chirurgia plastica → appello di luglio → ✅.
 
-  Il calcolo del voto finale non è specificato (vedi info_da_verificare).
+  Il voto finale è la **media aritmetica** dei due moduli.
 moduli:
   - nome_modulo: Dermatologia
     id: m-a12glpvn
@@ -285,8 +285,6 @@ info_da_verificare:
     nota: La scheda riporta che la frequenza non sembra essere particolarmente rigida; verificare se è obbligatoria, consigliata o facoltativa.
   - campo: Regola distanza tra i moduli
     nota: Formulazione esatta della regola e cosa succede se tra i due moduli trascorre più di un appello.
-  - campo: Media dell'esame
-    nota: Da integrare.
 aggiornato_da: Sara Cocci
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08
