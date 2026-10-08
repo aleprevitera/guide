@@ -293,6 +293,10 @@ moduli:
 
       - Domande nuove rispetto agli anni precedenti; argomenti delle lezioni dell'anno corrente e della quarta lezione da integrare
     fascia_studio: < 1 sett
+    professors:
+      - nome: Maria Francesca Sfondrini
+        stile: Titolare del corso.
+        email: francesca.sfondrini@unipv.it
   - nome_modulo: Chirurgia maxillo-facciale
     id: m-qya7ev2i
     exam_type: Scritto
@@ -316,14 +320,8 @@ moduli:
 
       - Domande delle prove precedenti, alcune delle quali possono ripetersi
     professors:
-      - nome: Maria Francesca Sfondrini
-        stile: Titolare del corso.
-        email: francesca.sfondrini@unipv.it
       - nome: Domenico Sfondrini
         email: domenico.sfondrini@unipv.it
     fascia_studio: < 1 sett
 aggiornato_da: Rocco Buellis
-info_da_verificare:
-  - campo: Docente di Odontoiatria
-    nota: Nome e contatti da integrare.
 ultimo_aggiornamento: 2026-10-08
