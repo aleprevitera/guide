@@ -55,12 +55,12 @@ moduli:
       L’esame si affronta impostando lo studio a partire dalla dispensa di ginecologia e ostetricia anno 23/24, pre-eclampsia da sbob 25/26, diabete gestazionale da integrare con sbob 25/26, amniocentesi, villocentesi, B-test da integrare in autonomia, tumori dell’endometrio da sbob 24/25, microbioma sbob 25/26, alloimmunizzazione materno-fetale da slide. Non è necessario un libro di testo. Molto apprezzata la logicità clinica durante la prova orale.
     body: "**Frequenza**: non sono eccessivamente fiscali sulle presenze; fanno la marcatura con l’app e occasionalmente la Nappi raccoglie le firme."
     professors:
-      - nome: Beneventi
-      - nome: Cuccinella
-      - nome: Dominoni
-        stile: Probabilmente nozionismo stile Gardella.
-      - nome: Spinillo
-      - nome: Nappi
+      - nome: Arsenio Spinillo
+        stile: Titolare del corso.
+      - nome: Fausta Beneventi
+      - nome: Chiara Cassani
+      - nome: Barbara Gardella
+      - nome: Rossella Nappi
     link_whatsapp: https://chat.whatsapp.com/J661P9ZxqUj5W6AySf2j7Z
   - nome_modulo: Genetica
     id: m-ldm3iupg
