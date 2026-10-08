@@ -1,0 +1,49 @@
+---
+// Pagine di sviluppo: esistono con `astro dev` e nei deploy di anteprima di
+// Netlify (deploy preview delle PR e branch deploy), ma non nella build di
+// produzione: lì getStaticPaths non restituisce percorsi e non finiscono in
+// dist/. Netlify indica il contesto della build nella variabile CONTEXT.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StudyTimeHistogram from '../../components/feedback/StudyTimeHistogram.astro';
+import YearTiles from '../../components/home/YearTiles.astro';
+
+export function getStaticPaths() {
+  const anteprima = ['deploy-preview', 'branch-deploy'].includes(process.env.CONTEXT ?? '');
+  if (import.meta.env.PROD && !anteprima) return [];
+  return [{ params: { page: 'istogramma' } }, { params: { page: 'mondi' } }];
+}
+---
+
+{Astro.params.page === 'mondi' && (
+<BaseLayout title="Dev · Mondi" noindex>
+  <h1>Mondi (dev)</h1>
+  <p>Tutti i mondi sbloccati, per valutare la palette. In home gli anni senza guide restano bloccati.</p>
+  <YearTiles anteprima />
+</BaseLayout>
+)}
+
+{Astro.params.page === 'istogramma' && (
+<BaseLayout title="Dev · Istogramma" noindex>
+  <h1>Istogramma (dev)</h1>
+  <p>Dati finti. Questa pagina non viene generata nella build di produzione.</p>
+
+  <h2>Con voto dell'utente</h2>
+  <StudyTimeHistogram
+    counts={{ '< 1 sett': 2, '1–2 sett': 9, '3–4 sett': 21, '5–8 sett': 12, '> 8 sett': 3 }}
+    fasciaUtente="5–8 sett"
+    totale={47}
+  />
+
+  <h2>Senza voto</h2>
+  <StudyTimeHistogram
+    counts={{ '< 1 sett': 0, '1–2 sett': 4, '3–4 sett': 3, '5–8 sett': 1, '> 8 sett': 0 }}
+    totale={8}
+  />
+
+  <h2>Meno di 5 risposte</h2>
+  <StudyTimeHistogram
+    counts={{ '< 1 sett': 0, '1–2 sett': 1, '3–4 sett': 2, '5–8 sett': 0, '> 8 sett': 0 }}
+    totale={3}
+  />
+</BaseLayout>
+)}

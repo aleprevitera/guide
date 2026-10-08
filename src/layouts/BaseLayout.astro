@@ -1,13 +1,20 @@
 ---
+import '../styles/global.css';
+import pixelifyWoff2 from '@fontsource/pixelify-sans/files/pixelify-sans-latin-500-normal.woff2?url';
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
+import BenvenutoAccesso from '../components/common/BenvenutoAccesso.astro';
 
 interface Props {
   title: string;
   description?: string;
+  aggiornamento?: Date;
+  autore?: string;
+  /** Pagine di sviluppo/anteprima: da non indicizzare. */
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, aggiornamento, autore, noindex } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,15 +22,27 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} · Guide Universitarie</title>
+    <meta name="theme-color" content="#1a1c2c" />
+    <!-- Favicon: il libro pixel del logo (public/favicon.svg; PNG per chi non legge l'SVG e per iOS). -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>{title} · HowToGolgi</title>
     {description && <meta name="description" content={description} />}
-    <link rel="stylesheet" href="/styles/global.css" />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="preload" href={pixelifyWoff2} as="font" type="font/woff2" crossorigin />
   </head>
   <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
     <Header />
-    <main class="site-main">
+    <main id="contenuto" class="site-main" tabindex="-1">
       <slot />
     </main>
-    <Footer />
+    <Footer aggiornamento={aggiornamento} autore={autore} />
+    <BenvenutoAccesso />
+    <script>
+      import { attivaRivela } from '../lib/rivela';
+      attivaRivela();
+    </script>
   </body>
 </html>

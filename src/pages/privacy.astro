@@ -1,0 +1,123 @@
+---
+// Informativa privacy (art. 13 GDPR). Descrive il funzionamento reale del
+// sito: se cambia qualcosa che tocca dati personali (nuovi feedback, nuovi
+// fornitori, statistiche...), va aggiornata insieme al codice, con la data.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EliminaAccount from '../components/common/EliminaAccount.astro';
+
+const AGGIORNATA_IL = new Date('2026-10-06');
+// Contatto provvisorio (email di uno dei titolari): da sostituire con un
+// indirizzo sul dominio, es. privacy@howtogolgi.it, quando sarà attivo.
+const CONTATTO = 'alessandro.previtera@gmail.com';
+---
+
+<BaseLayout title="Informativa privacy" description="Come HowToGolgi tratta i dati personali" aggiornamento={AGGIORNATA_IL}>
+  <article class="privacy">
+    <h1>Informativa privacy</h1>
+
+    <div class="privacy__breve panel px-border">
+      <h2 class="label">In breve</h2>
+      <ul>
+        <li>Puoi leggere tutte le guide <strong>senza account</strong>, senza cookie di profilazione e senza statistiche sulle visite.</li>
+        <li>L’accesso con l’account d’ateneo è <strong>facoltativo</strong>: serve solo per vedere e dare i pareri sugli esami.</li>
+        <li>Agli altri studenti mostriamo solo <strong>dati aggregati</strong>, mai chi ha votato cosa.</li>
+        <li>Puoi <a href="#elimina">eliminare il tuo account e i tuoi voti</a> in qualsiasi momento, da questa pagina.</li>
+      </ul>
+    </div>
+
+    <h2>Chi tratta i dati</h2>
+    <p>
+      HowToGolgi è un progetto di studenti, indipendente: <strong>non è un servizio ufficiale
+      dell’Università di Pavia</strong>. Titolari del trattamento sono Francesco Ruspino e Alessandro Gavino
+      Previtera, che gestiscono il sito.
+    </p>
+    <p>Per qualsiasi domanda o richiesta sui tuoi dati: <strong>{CONTATTO}</strong>.</p>
+
+    <h2>Quali dati trattiamo e perché</h2>
+
+    <h3>Navigazione</h3>
+    <p>
+      Per leggere le guide non serve alcun dato personale. Come per ogni sito, il fornitore dell’hosting registra
+      dati tecnici delle richieste (ad esempio l’indirizzo IP) per far funzionare e proteggere il servizio.
+      Lo facciamo sulla base del legittimo interesse (art. 6.1.f GDPR).
+    </p>
+
+    <h3>Accesso e pareri sugli esami</h3>
+    <p>
+      Se accedi con il tuo account d’ateneo, trattiamo i dati del profilo forniti da Google (email, nome,
+      immagine) e i pareri che lasci sugli esami. I pareri restano collegati al tuo account perché tu possa
+      modificarli e perché ognuno voti una volta sola; agli altri mostriamo solo dati aggregati e anonimi.
+      Per sicurezza vengono registrati anche gli accessi. Trattiamo questi dati per fornirti il servizio che hai
+      chiesto (art. 6.1.b GDPR) e, per i registri di sicurezza, sulla base del legittimo interesse (art. 6.1.f).
+    </p>
+
+    <h3>Autori delle guide e docenti</h3>
+    <p>
+      Le guide sono scritte dai rappresentanti degli studenti, che accedono con un account dedicato; il loro nome
+      può comparire come autore. Le guide riportano inoltre nomi ed email istituzionali dei docenti e indicazioni
+      sullo svolgimento degli esami. Per correzioni o rimozioni scrivi a {CONTATTO}.
+    </p>
+
+    <h2>Cookie</h2>
+    <p>
+      Usiamo solo cookie e memoria del browser <strong>tecnici</strong>, necessari a mantenere l’accesso e a
+      non riproporti messaggi già visti: per questo non serve un consenso. Niente cookie di profilazione,
+      pubblicità o statistiche.
+    </p>
+
+    <h2>A chi affidiamo i dati</h2>
+    <p>
+      I dati sono gestiti tramite fornitori che li trattano per nostro conto: <strong>Netlify</strong> (hosting),
+      <strong>Supabase</strong> (accesso e pareri, con server nell’Unione europea) e <strong>GitHub</strong>
+      (archivio dei contenuti). <strong>Google</strong> gestisce l’accesso come titolare autonomo. Se un fornitore
+      trasferisce dati fuori dall’Unione europea, lo fa con le garanzie previste dal GDPR (artt. 45–46). Non
+      vendiamo né cediamo i dati a nessuno.
+    </p>
+
+    <h2>Per quanto tempo</h2>
+    <p>
+      Account e pareri restano finché non elimini l’account o finché il sito è attivo; i registri tecnici per il
+      periodo limitato previsto dai fornitori.
+    </p>
+
+    <h2>I tuoi diritti</h2>
+    <p>
+      Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità dei tuoi dati e opporti al
+      trattamento (artt. 15–22 GDPR) scrivendo a {CONTATTO}. Per eliminare account e pareri puoi usare
+      direttamente il pulsante qui sotto. Puoi anche presentare reclamo al
+      <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">Garante per la protezione dei dati personali</a>.
+    </p>
+
+    <div id="elimina">
+      <EliminaAccount />
+    </div>
+
+    <h2>Modifiche</h2>
+    <p>
+      Se cambia qualcosa che riguarda i tuoi dati aggiorniamo questa pagina; la data dell’ultima versione è in fondo.
+    </p>
+  </article>
+</BaseLayout>
+
+<style>
+  .privacy h2 {
+    margin-top: 32px;
+  }
+  .privacy h3 {
+    margin: 24px 0 8px;
+  }
+  .privacy__breve {
+    margin: 16px 4px 0;
+  }
+  .privacy__breve h2 {
+    margin: 0 0 12px;
+    color: var(--accent);
+  }
+  .privacy__breve ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+  #elimina {
+    scroll-margin-top: 16px;
+  }
+</style>

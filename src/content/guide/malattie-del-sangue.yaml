@@ -1,0 +1,107 @@
+id: g-krp5gsa0
+title: Malattie del Sangue
+esse3_codice: "501781"
+anno_di_corso: III Anno
+cfu_totali: 5
+moduli:
+  - nome_modulo: Malattie del Sangue
+    id: m-v0jgxqro
+    exam_type: Scritto
+    study_time: circa 15 giorni
+    exam_details: |-
+      L'esame consiste in uno scritto composto da 60 domande a risposta multipla. Le domande comprendono principalmente:
+
+      - interpretazione di emocromi, soprattutto relativi alle diverse forme di anemia;
+      - emocromi e quesiti relativi a leucemie e linfomi;
+      - esercizi riguardanti la coagulazione del sangue;
+      - quesiti sui geni responsabili delle diverse patologie.
+
+      Per ogni risposta sbagliata è prevista una penalità di −0,25 punti.
+      Tendenzialmente non tengono conto della frequenza.
+    program: |-
+      **Argomenti da studiare per la preparazione dell’esame:**
+
+      1. Midollo osseo e sangue periferico
+      2. Cellule staminali emopoietiche e fattori di crescita emopoietici
+      3. Alterazioni ematologiche
+      - Eritropoiesi: anemia ed eritrocitosi
+      - Emostasi: emorragia e trombosi
+      - Linfonodi e milza
+      - Alterazioni dei granulociti dei monociti
+      4. Eritrone, eritropoietina e classificazione delle anemie
+      5. Anemia aplastica
+      6. Metabolismo del ferro, anemia da carenza di ferro ed emocromatosi genetici
+      7. Anemia dell’infiammazione
+      8. Anemie megaloblastiche
+      9. Sindromi talassemiche
+      10. Drepanocitosi
+      11. Anemie emolitiche
+      12. Neoplasie mieloproliferative: leucemia mieloide cronica
+      13. Neoplasie mieloproliferative: policitemia vera, trombocitemia essenziale e mielofibrosi primaria
+      14. Neoplasie mieloidi: sindromi mielodisplastiche
+      15. Neoplasie mieloidi: leucemia mieloide acuta
+      16. Neoplasie linfoidi: leucemia linfatica acuta
+      17. Neoplasie linfoidi: linfoma di Hodgkin
+      18. Neoplasie linfoidi: linfomi maligni
+      19. Neoplasie linfoidi: leucemia linfatica cronica
+      20. Neoplasie plasmacellulari: gammopatia monoclonale di significato indeterminato (MGUS), mieloma multiplo e macroglobulinemia di Waldenström
+      21. Amiloidosi AL
+      22. Disordini delle piastrine e della parete vascolari
+      - Trombocitopenia (porpora trombocitopenica immune, trombocitopenia da eparina, porpora trombotica trombocitopenica)
+      - malattia di von Willebrand
+      23. Disordini della coagulazione
+      - Emofilia
+      - Coagulazione intravascolare disseminata
+      - Trombosi arteriosa e venosa
+      - Farmaci antiaggreganti piastrinici e farmaci anticoagulanti
+      24. Terapia trasfusionale
+      25. Trapianto di cellule staminali emopoietiche
+
+      **La classificazione delle malattie linfoproliferative: principi generali e significato clinico-patologico.**
+
+      **Il linfoma di Hodgkin: classificazione, caratteristiche patologiche, patologia moleolare.**
+
+      **I linfomi a cellule B periferiche: prinicpi generali, caratteristiche patologiche e basi molecolari delle entità più comuni (leucemia linfatica cronica, linfoma mantellare, linfoma follicolare, linfoma della zona marginale, linfomi B diffusi a grandi cellule)**
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10671/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Il syllabus contiene il programma completo dell'esame. Nella preparazione è particolarmente importante prestare attenzione a:
+
+      - diagnosi differenziali delle diverse patologie;
+      - geni responsabili delle patologie.
+
+      Le sbobine più recenti sono sufficienti per preparare l'esame. È fondamentale svolgere le prove degli anni precedenti, sia per esercitarsi sia per comprendere il meccanismo di risoluzione degli emocromi. In particolare, è disponibile una dispensa di vecchi quesiti molto utile per imparare il metodo di interpretazione degli emocromi. Circolano inoltre diversi file con domande più recenti, tra cui le prove del corso Harvey, che vengono spesso riproposte all'esame.
+      Consigli pratici:
+
+      - Studiare il programma completo indicato nel syllabus.
+      - Non limitarsi allo studio teorico: è fondamentale esercitarsi con gli emocromi.
+      - Utilizzare la dispensa dei vecchi quesiti per imparare il metodo di interpretazione degli emocromi.
+      - Svolgere le prove degli anni precedenti.
+      - Controllare anche i file di domande più recenti e le prove Harvey, perché alcune domande possono ripetersi.
+      - Considerare la penalizzazione di −0,25 per le risposte errate quando ci si esercita con i quiz.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Emocromi: Interpretazione degli emocromi, soprattutto nelle diverse anemie
+      - Ematologia oncologica: Leucemie e linfomi
+      - Coagulazione: Esercizi e quesiti sulla coagulazione del sangue
+      - Genetica: Geni responsabili delle patologie
+      - Diagnosi differenziale: Distinzione tra le diverse patologie ematologiche
+      - Domande ricorrenti: Prove degli anni precedenti e prove Harvey
+    professors:
+      - nome: Luca Malcovati
+        email: luca.malcovati@unipv.it
+        stile: Titolare del corso
+      - nome: Luca Arcaini
+        email: luca.arcaini@unipv.it
+      - nome: Marco Paulli
+        email: marco.paulli@unipv.it
+      - nome: Elisa Rumi
+        email: elisa.rumi@unipv.it
+    fascia_studio: 1–2 sett
+    link_whatsapp: https://chat.whatsapp.com/Ku0CypYkCZY5mUavLGSaCC
+aggiornato_da: Lisa Ceci
+semestre: II
+ultimo_aggiornamento: 2026-10-08

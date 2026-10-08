@@ -1,112 +1,83 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
+import PixelIcon from '../common/PixelIcon.astro';
+import { cfuGuida, ETICHETTA_SEMESTRE, semestreGuida } from '../../lib/guide';
+import { annoHref } from '../../lib/anni';
 
 type GuideData = CollectionEntry<'guide'>['data'];
 
 interface Props {
-  title: GuideData['title'];
-  anno_di_corso: GuideData['anno_di_corso'];
-  cfu_totali: GuideData['cfu_totali'];
-  moduli: GuideData['moduli'];
-  link_sbobine_generale: GuideData['link_sbobine_generale'];
-  link_whatsapp_generale: GuideData['link_whatsapp_generale'];
-  descrizione_generale: GuideData['descrizione_generale'];
+  data: GuideData;
 }
 
-const {
-  title,
-  anno_di_corso,
-  cfu_totali,
-  moduli,
-  link_sbobine_generale,
-  link_whatsapp_generale,
-  descrizione_generale,
-} = Astro.props;
+const { data } = Astro.props;
+const { title, sottotitolo, anno_di_corso, moduli, link_sbobine_generale, link_whatsapp_generale, descrizione_generale } = data;
 
 const isIntegrato = moduli.length > 1;
+const cfu = cfuGuida(data);
+const semestre = semestreGuida(data);
 ---
 
 <header class="guide-header">
-  <p class="guide-header__eyebrow">{anno_di_corso}</p>
-  <h1>{title}</h1>
-  <dl class="guide-header__meta">
-    {cfu_totali && (
-      <div>
-        <dt>CFU totali</dt>
-        <dd>{cfu_totali}</dd>
-      </div>
-    )}
-    {isIntegrato && (
-      <div>
-        <dt>Moduli</dt>
-        <dd>{moduli.map((m) => m.nome_modulo).join(', ')}</dd>
-      </div>
-    )}
-  </dl>
+  <ul class="chips label" aria-label="In breve">
+    <li><a class="chip chip--mondo chip--link" href={annoHref(anno_di_corso)}>{anno_di_corso}</a></li>
+    {semestre && <li class="chip">{ETICHETTA_SEMESTRE[semestre]}</li>}
+    {cfu && <li class="chip">{cfu} CFU</li>}
+    {isIntegrato && <li class="chip">{moduli.length} moduli</li>}
+  </ul>
 
-  {(link_sbobine_generale || link_whatsapp_generale) && (
-    <p class="guide-header__links">
-      {link_sbobine_generale && (
-        <a class="button" href={link_sbobine_generale} target="_blank" rel="noopener noreferrer">Vai alle sbobine</a>
-      )}
-      {link_whatsapp_generale && (
-        <a class="button" href={link_whatsapp_generale} target="_blank" rel="noopener noreferrer">Gruppo WhatsApp</a>
-      )}
-    </p>
-  )}
+  <h1 style={data.id && `view-transition-name:guida-${data.id}`}>{title}</h1>
+  {sottotitolo && <p class="guide-header__sottotitolo">{sottotitolo}</p>}
 
   {isIntegrato && descrizione_generale && (
     <div class="guide-header__descrizione">
       <SafeMarkdown text={descrizione_generale} />
     </div>
   )}
+
+  {(link_sbobine_generale || link_whatsapp_generale) && (
+    <p class="btn-row">
+      {link_sbobine_generale && (
+        <a class="btn-px btn-px--accent label" href={link_sbobine_generale} target="_blank" rel="noopener noreferrer">Sbobine</a>
+      )}
+      {link_whatsapp_generale && (
+        <a class="btn-px label" href={link_whatsapp_generale} target="_blank" rel="noopener noreferrer"><PixelIcon name="whatsapp" size={16} />WhatsApp</a>
+      )}
+    </p>
+  )}
 </header>
 
 <style>
-  .guide-header {
-    margin-bottom: 2rem;
+  .guide-header .chips {
+    align-items: center;
   }
-  .guide-header__eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.75rem;
-    color: #64748b;
-    margin: 0 0 0.25rem;
+  .chip--mondo {
+    background: var(--mondo, var(--accent));
+    color: var(--mondo-ink, var(--bg));
   }
-  .guide-header h1 {
-    margin: 0 0 1rem;
-  }
-  .guide-header__meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 0;
-  }
-  .guide-header__meta dt {
-    font-size: 0.75rem;
-    color: #64748b;
-  }
-  .guide-header__meta dd {
-    margin: 0;
-    font-weight: 600;
-  }
-  .guide-header__links {
-    display: flex;
-    gap: 0.75rem;
-    margin: 1rem 0 0;
-  }
-  .button {
-    display: inline-block;
-    padding: 0.4rem 0.9rem;
-    border-radius: 0.4rem;
-    background: #0f766e;
-    color: #fff;
+  .chip--link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
     text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .chip--link:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+  }
+  .guide-header {
+    margin-bottom: 24px;
+  }
+  .guide-header__sottotitolo {
+    color: var(--text-2);
+    font-size: 18px;
+    margin: 0 0 16px;
   }
   .guide-header__descrizione {
-    margin-top: 1.25rem;
+    color: var(--text-2);
+    margin-top: 16px;
   }
 </style>

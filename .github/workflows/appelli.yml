@@ -1,0 +1,44 @@
+# Aggiorna gli appelli d'esame da ESSE3 una volta alla settimana (come farebbe una
+# persona a mano) e salva src/data/appelli.json: il commit su main fa
+# ripartire il deploy di Netlify. Si può lanciare anche a mano da GitHub
+# (Actions › "Appelli ESSE3" › Run workflow). Se ESSE3 non risponde o la
+# pagina cambia, lo script esce con errore senza toccare i dati e GitHub
+# avvisa con un'email: il sito continua con gli appelli precedenti.
+name: Appelli ESSE3 (settimanale)
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # ogni lunedì, 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: appelli
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Scarica gli appelli da ESSE3
+        run: node scripts/appelli.mjs
+      - name: Salva i dati aggiornati
+        run: |
+          if git diff --quiet -- src/data/appelli.json; then
+            echo "Nessuna modifica."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/appelli.json
+          git commit -m "Aggiorna gli appelli da ESSE3 (settimanale)"
+          git push

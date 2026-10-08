@@ -1,0 +1,108 @@
+---
+interface Props {
+  moduli: { nome: string; anchor: string }[];
+}
+
+const { moduli } = Astro.props;
+---
+
+<nav class="tabs" aria-label="Moduli dell'esame" data-moduli-tabs data-pagefind-ignore>
+  <ul class="tabs__list">
+    {moduli.map((m, i) => (
+      <li>
+        <a class="tabs__tab label" href={`#${m.anchor}`} data-target={m.anchor} aria-current={i === 0 ? 'true' : undefined}>
+          {m.nome}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  // Senza JS le schede sono semplici ancore e tutti i moduli restano visibili.
+  // Con JS si vede un modulo alla volta; l'hash nell'URL resta condivisibile.
+  const nav = document.querySelector<HTMLElement>('[data-moduli-tabs]');
+  if (nav) {
+    const tabs = [...nav.querySelectorAll<HTMLAnchorElement>('[data-target]')];
+    const panels = tabs.map((t) => document.getElementById(t.dataset.target!)).filter((p): p is HTMLElement => !!p);
+
+    const show = (anchor: string) => {
+      if (!panels.some((p) => p.id === anchor)) anchor = panels[0]?.id ?? anchor;
+      for (const p of panels) p.hidden = p.id !== anchor;
+      for (const t of tabs) {
+        if (t.dataset.target === anchor) t.setAttribute('aria-current', 'true');
+        else t.removeAttribute('aria-current');
+      }
+    };
+
+    for (const t of tabs) {
+      t.addEventListener('click', (e) => {
+        e.preventDefault();
+        history.replaceState(null, '', `#${t.dataset.target}`);
+        show(t.dataset.target!);
+      });
+    }
+    window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+    show(location.hash.slice(1));
+  }
+</script>
+
+<style>
+  .tabs {
+    margin: 0 0 8px;
+  }
+  .tabs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0;
+    /* Lo spazio serve alle ombre del bordo a scalini (4px) e al focus.
+       Le schede vanno a capo: su telefono restano tutte visibili. */
+    padding: 8px 4px 12px;
+    list-style: none;
+  }
+  .tabs__list li {
+    margin: 0;
+  }
+  .tabs__tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 12px;
+    background: var(--bg);
+    color: var(--text-2);
+    text-decoration: none;
+    box-shadow:
+      -4px 0 0 0 var(--border-off),
+      4px 0 0 0 var(--border-off),
+      0 -4px 0 0 var(--border-off),
+      0 4px 0 0 var(--border-off);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .tabs__tab:hover {
+      color: var(--text);
+    }
+  }
+  .tabs__tab[aria-current='true'] {
+    background: var(--accent);
+    color: var(--bg);
+    box-shadow:
+      -4px 0 0 0 var(--accent),
+      4px 0 0 0 var(--accent),
+      0 -4px 0 0 var(--accent),
+      0 4px 0 0 var(--accent);
+  }
+  /* Marcatore pixel sulla scheda attiva: lo stato non dipende solo dal colore. */
+  .tabs__tab[aria-current='true']::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--bg);
+  }
+  @media (forced-colors: active) {
+    .tabs__tab { outline: 2px solid CanvasText; }
+    .tabs__tab[aria-current='true'] { outline: 4px solid Highlight; }
+    .tabs__tab[aria-current='true']::before { background: CanvasText; }
+  }
+</style>

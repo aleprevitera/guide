@@ -1,28 +1,70 @@
 ---
+import PixelIcon from './PixelIcon.astro';
+import AccountButton from './AccountButton.astro';
 ---
 
-<header class="site-header">
-  <a class="site-header__logo" href="/">Guide Universitarie</a>
-  <nav class="site-header__nav">
-    <a href="/guide/">Tutte le guide</a>
+<header class="site-header" style="view-transition-name: intestazione">
+  <a class="site-header__logo" href="/">
+    <PixelIcon name="book" size={32} class="site-header__book" />
+    <span class="label site-header__nome">HowTo<span class="site-header__golgi">Golgi</span></span>
+  </a>
+  <nav class="site-header__nav" aria-label="Principale">
+    <a class="label" href="/guide/">Tutte le guide</a>
+    <AccountButton />
   </nav>
 </header>
 
 <style>
   .site-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.5rem;
-    border-bottom: 1px solid #e2e8f0;
+    gap: 8px 16px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 12px 16px;
+  }
+  /* Nome in Silkscreen (maiuscolo): "GOLGI" in giallo separa le due parole. */
+  .site-header__golgi {
+    color: var(--accent);
   }
   .site-header__logo {
-    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    color: var(--text);
     text-decoration: none;
-    color: inherit;
+  }
+  /* Saltello a due fotogrammi: 0 / -4px, a scatti. */
+  .site-header__logo :global(.site-header__book) {
+    animation: book-hop 1s steps(1, end) infinite;
+  }
+  /* Desktop più sobrio: pochi saltelli all'apertura, poi solo al passaggio
+     del mouse. Sul telefono il saltello continua. */
+  @media (hover: hover) and (pointer: fine) {
+    .site-header__logo :global(.site-header__book) {
+      animation-iteration-count: 3;
+    }
+    .site-header__logo:hover :global(.site-header__book) {
+      animation-iteration-count: infinite;
+    }
+  }
+  @keyframes book-hop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  .site-header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 20px;
   }
   .site-header__nav a {
-    text-decoration: none;
-    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--accent);
   }
 </style>

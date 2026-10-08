@@ -1,0 +1,561 @@
+/* Font self-hosted (pacchetti @fontsource, solo sottoinsieme latin e pesi usati).
+   Pixelify Sans e Silkscreen sono font pixel: solo per titoli ed etichette,
+   mai per il corpo del testo. */
+@import '@fontsource/pixelify-sans/latin-500.css';
+@import '@fontsource/silkscreen/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-400.css';
+@import '@fontsource/atkinson-hyperlegible-next/latin-700.css';
+
+:root {
+  /* Palette */
+  --bg: #1a1c2c;
+  --text: #f4f4f4;
+  --text-2: #c9d6e2;
+  --caption: #94b0c2;
+  --panel: #29366f;
+  --chip: #333c57;
+  --border-off: #566c86;
+  --accent: #ffcd75;
+  --you: #a7f070;
+  --warn: #ef7d57;
+
+  /* Tipografia */
+  /* 500: a 700 gli occhielli (e, a) si chiudono e i titoli diventano macchie. */
+  --title-weight: 500;
+  --font-title: 'Pixelify Sans', 'Courier New', monospace;
+  --font-label: 'Silkscreen', 'Courier New', monospace;
+  --font-body: 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Unità "pixel" del sito: ogni misura è un suo multiplo intero, così
+     bordi, blocchi e saltelli cadono sempre sulla griglia dello schermo. */
+  --px: 4px;
+
+  /* Silkscreen è una bitmap su griglia 8: nitida solo a multipli di 8px. */
+  --label-size: 16px;
+
+  /* Pixelify Sans non ha una griglia rigida (aste ~88/1000 em): queste
+     misure fanno valere l'asta circa 2px / 3px / 4px. */
+  --h2-size: 23px;
+  --h1-size: 34px;
+
+  color-scheme: dark;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --h1-size: 45px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-title);
+  font-weight: var(--title-weight);
+  line-height: 1.2;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  /* Nelle pagine di un anno i titoli prendono il colore del suo mondo. */
+  color: var(--mondo-chiaro, var(--accent));
+  margin: 32px 0 12px;
+}
+
+h3 {
+  font-size: var(--h2-size);
+  margin: 24px 0 8px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+/* Paragrafi giustificati, con sillabazione italiana (<html lang="it">) per
+   non aprire spazi larghi nelle colonne strette del telefono. Le etichette
+   (Silkscreen) restano allineate a sinistra; i contenitori centrati
+   rimettono text-align: center sui propri paragrafi. */
+p:not(.label) {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Cursore lampeggiante accanto alle domande dei feedback: invito a votare.
+   Sparisce appena si è votato (.is-votato, vedi i componenti feedback). */
+.cursore {
+  flex: 0 0 auto;
+  width: 12px;
+  height: 20px;
+  background: var(--accent);
+  animation: lampeggia 1s steps(1, end) infinite;
+}
+.is-votato .cursore {
+  display: none;
+}
+@keyframes lampeggia {
+  50% { visibility: hidden; }
+}
+
+/* "Cambia voto": pulsante con l'aspetto di un link, sotto la scelta fatta
+   (i feedback, dopo il voto, mostrano solo quella). */
+.cambia-voto {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.cambia-voto[hidden] {
+  display: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+strong {
+  color: var(--text);
+}
+
+/* ---------- Layout ---------- */
+
+.site-main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* Destinazione dello skip link: riceve il focus ma non serve il contorno. */
+.site-main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -100px;
+  z-index: 10;
+  padding: 12px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Primitive pixel ---------- */
+
+/* Etichetta: Silkscreen, maiuscolo, antialiasing spento, nessun kerning. */
+.label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  font-weight: 400;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-kerning: none;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+/* Bordo "a scalini": quattro ombre piene senza blur lasciano vuoti gli
+   angoli, che è proprio il gradino della pixel art. Le ombre sporgono di
+   4px, da qui il margine laterale. */
+.px-border {
+  --px-c: var(--text);
+  margin-left: var(--px);
+  margin-right: var(--px);
+  box-shadow:
+    calc(var(--px) * -1) 0 0 0 var(--px-c),
+    var(--px) 0 0 0 var(--px-c),
+    0 calc(var(--px) * -1) 0 0 var(--px-c),
+    0 var(--px) 0 0 var(--px-c);
+}
+
+.px-border--off {
+  --px-c: var(--border-off);
+}
+
+.px-border--warn {
+  --px-c: var(--warn);
+}
+
+.panel {
+  background: var(--panel);
+  padding: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.chips li {
+  margin: 0;
+}
+
+.chip {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--chip);
+  color: var(--text);
+}
+
+.chip--accent {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Pulsanti e link-pulsante: target minimo 44px, spostamenti a scatti di
+   2px (hover su, active giù). */
+.btn-px {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--chip);
+  color: var(--text);
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 80ms steps(1, end);
+}
+
+/* Il passaggio del mouse solo dove c'è un mouse: sul telefono l'effetto
+   resterebbe "incollato" dopo il tocco. Al tocco vale :active. */
+@media (hover: hover) and (pointer: fine) {
+  .btn-px:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.btn-px:active {
+  transform: translateY(2px);
+}
+
+.btn-px--accent {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px var(--px);
+}
+
+/* ---------- Mondi (src/lib/mondi.ts) ---------- */
+/* Striscia di terreno pixel, 16px, decorativa: riprende il pavimento della
+   scena del mondo (righe da 2px = 1 pixel delle scene, mostrate a 2×). Solo
+   gradienti a stop netti. */
+
+.terreno {
+  display: block;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.terreno[data-terreno='cellula'] {
+  /* I — parquet dell'aula di anatomia */
+  background:
+    linear-gradient(#ffcd75, #ffcd75) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #b13e53 0 2px, transparent 2px 32px) 0 2px / 100% 6px no-repeat,
+    linear-gradient(#b13e53, #b13e53) 0 8px / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 16px, #b13e53 16px 18px, transparent 18px 32px) 0 10px / 100% 6px no-repeat,
+    #ef7d57;
+}
+
+.terreno[data-terreno='cuore'] {
+  /* II — piastrelle chiare della fisiologia */
+  background:
+    linear-gradient(#566c86, #566c86) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #f4f4f4 0 8px, #94b0c2 8px 16px) 0 2px / 100% 7px no-repeat,
+    repeating-linear-gradient(90deg, #94b0c2 0 8px, #f4f4f4 8px 16px) 0 9px / 100% 7px no-repeat;
+}
+
+.terreno[data-terreno='batterio'] {
+  /* III — bancone del laboratorio con cassetti */
+  background:
+    linear-gradient(#f4f4f4, #f4f4f4) 0 0 / 100% 2px no-repeat,
+    linear-gradient(#94b0c2, #94b0c2) 0 2px / 100% 6px no-repeat,
+    repeating-linear-gradient(90deg, transparent 0 8px, #333c57 8px 48px) 0 10px / 100% 4px no-repeat,
+    #566c86;
+}
+
+.terreno[data-terreno='lastra'] {
+  /* IV — pavimento scuro della radiologia */
+  background:
+    linear-gradient(#94b0c2, #94b0c2) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #566c86 0 16px, #333c57 16px 32px) 0 2px / 100% 14px no-repeat;
+}
+
+.terreno[data-terreno='cervello'] {
+  /* V — corsia del reparto */
+  background:
+    linear-gradient(#f4f4f4, #f4f4f4) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #94b0c2 0 8px, #566c86 8px 16px) 0 2px / 100% 7px no-repeat,
+    repeating-linear-gradient(90deg, #566c86 0 8px, #94b0c2 8px 16px) 0 9px / 100% 7px no-repeat;
+}
+
+.terreno[data-terreno='tocco'] {
+  /* VI — pavimento della sala operatoria */
+  background:
+    linear-gradient(#73eff7, #73eff7) 0 0 / 100% 2px no-repeat,
+    repeating-linear-gradient(90deg, #38b764 0 2px, transparent 2px 16px) 0 2px / 100% 14px no-repeat,
+    linear-gradient(#38b764, #38b764) 0 9px / 100% 2px no-repeat,
+    #257179;
+}
+
+.terreno[data-terreno='spento'] {
+  background:
+    repeating-linear-gradient(90deg, #566c86 0 12px, transparent 12px 16px) 0 0 / 100% 4px no-repeat,
+    #566c86;
+}
+
+/* ---------- Transizioni fra pagine (View Transitions) ---------- */
+/* Navigazione "da app", soprattutto su telefono: la casella del mondo
+   diventa il banner dell'anno, il titolo della card diventa il titolo della
+   guida, l'intestazione resta ferma. A scatti come il resto del sito. Dove
+   il browser non le supporta la pagina si apre normalmente. */
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+  animation-duration: 240ms;
+  animation-timing-function: steps(4, end);
+}
+
+/* La pagina cambia di colpo (niente dissolvenza semitrasparente, poco
+   "pixel"): si muovono solo gli elementi con un nome di transizione. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Elementi con nome ma senza corrispondente nell'altra pagina (es. le altre
+   caselle dei mondi): spariscono / compaiono subito, niente fantasmi. */
+::view-transition-old(*):only-child {
+  animation: none;
+  opacity: 0;
+}
+::view-transition-new(*):only-child {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
+/* ---------- Comparsa allo scorrimento (src/lib/rivela.ts) ---------- */
+/* Pensata per il telefono: gli elementi di [data-rivela] compaiono a scatti
+   (12 → 0px in 3 fotogrammi) quando entrano nello schermo. */
+
+[data-rivela].is-armed > *:not(.is-visto) {
+  visibility: hidden;
+}
+
+[data-rivela] > .is-visto {
+  animation: rivela-entra 240ms steps(3, end) backwards;
+  animation-delay: calc(var(--i, 0) * 100ms);
+}
+
+@keyframes rivela-entra {
+  from {
+    transform: translateY(12px);
+    visibility: hidden;
+  }
+}
+
+/* Testo sopra una scena animata (ScenaMondo): contorno pixel a scalini. */
+.testo-su-scena {
+  position: relative;
+  color: var(--text);
+  text-shadow:
+    -2px 0 0 var(--bg), 2px 0 0 var(--bg), 0 -2px 0 var(--bg), 0 2px 0 var(--bg),
+    -2px -2px 0 var(--bg), 2px -2px 0 var(--bg), -2px 2px 0 var(--bg), 2px 2px 0 var(--bg);
+}
+
+/* ---------- Micro-animazioni di feedback (src/lib/fx.ts) ---------- */
+
+.fx-host {
+  position: fixed;
+  z-index: 50;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.fx-pixel {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  animation: fx-scintilla 400ms steps(4, end) forwards;
+}
+
+@keyframes fx-scintilla {
+  from {
+    transform: translate(calc(var(--dx) / 2), calc(var(--dy) / 2));
+  }
+  to {
+    transform: translate(var(--dx), var(--dy));
+    visibility: hidden;
+  }
+}
+
+.fx-float {
+  position: absolute;
+  transform: translateX(-50%);
+  color: var(--you);
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  line-height: 1;
+  white-space: nowrap;
+  -webkit-font-smoothing: none;
+  animation: fx-sali 600ms steps(4, end) forwards;
+}
+
+@keyframes fx-sali {
+  from { transform: translate(-50%, -8px); }
+  to { transform: translate(-50%, -24px); visibility: hidden; }
+}
+
+.fx-hop {
+  animation: fx-hop 400ms steps(1, end);
+}
+
+@keyframes fx-hop {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-4px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-4px); }
+}
+
+/* ---------- Modalità contrasto elevato ---------- */
+/* In forced-colors i box-shadow vengono rimossi: servono bordi veri. */
+@media (forced-colors: active) {
+  .px-border,
+  .chip,
+  .btn-px {
+    outline: 2px solid CanvasText;
+    outline-offset: 0;
+  }
+  .btn-px:focus-visible,
+  a:focus-visible {
+    outline: 3px solid Highlight;
+  }
+}
+
+/* ---------- Movimento ridotto ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .btn-px:hover,
+  .btn-px:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,251 @@
+id: g-zdx6ojf6
+title: Malattie dell’apparato digerente
+esse3_codice: "501795"
+anno_di_corso: IV Anno
+cfu_totali: 6
+descrizione_generale: "L'esame è composto da tre moduli: Gastroenterologia, Chirurgia gastroenterologica, Nutrizione umana. Le tre parti devono essere sostenute tutte nello stesso appello: scritto di Nutrizione umana, orale di Gastroenterologia, orale di Chirurgia gastroenterologica. Non è possibile conservare il risultato di una singola parte per un appello successivo. Non è previsto il salto d'appello. Tempo di studio complessivo: 1 mese (studio intenso) – 2 mesi (per distribuire il carico). Preappello: previsto generalmente a fine maggio; nell'ultimo anno a numero chiuso con massimo 120 studenti; gli studenti non rientrati hanno sostenuto l'esame nell'appello successivo."
+moduli:
+  - nome_modulo: Gastroenterologia
+    id: m-mslxesvn
+    exam_type: Orale
+    preappello: Sì
+    durata_orale_min: 15
+    exam_details: "Orale di Gastroenterologia. Non c'è un vero sistema di divisione del gruppo di studenti: praticamente lo studente si propone da uno dei docenti (il più delle volte specializzandi. Biagi tende a non interrogare) per farsi interrogare. L'orale prevede generalmente 2 domande: una prima domanda relativa a un primo blocco di argomenti; una seconda domanda relativa a un secondo blocco di argomenti. Le domande sono generalmente piuttosto schematiche e secche. L'interrogazione dura mediamente 15-20 minuti, anche se la durata può variare in base al docente e all'andamento dell'interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Nell'ultimo anno erano presenti 3 docenti + 1 specializzanda."
+    program: |-
+      - Disfagia
+      - Dispepsia
+      - Vomito
+      - Diarrea
+      - Melena
+      - Rettorragia
+      - Ittero
+      - Ascite
+      - Dolore addominale (acuto e cronico)
+      - Acalasia e disturbi motori esofagei
+      - Malattia da reflusso gastroesofageo
+      - Neoplasie dell'esofago
+      - Malattia peptica
+      - Gastriti e gastropatie
+      - H pylori
+      - Neoplasie dello stomaco
+      - Malassorbimento
+      - Malattia celiaca
+      - Morbo di Whipple
+      - Contaminazione batterica dell'intestino tenue
+      - Malattia diverticolare
+      - Malattie infiammatorie intestinali
+      - Sindrome dell'intestino irritabile
+      - Neoplasie benigne e maligne del colon
+      - Epatiti acute
+      - Epatopatie croniche e cirrosi epatica
+      - Colecistite acute
+      - Colica biliare
+      - Tumori del fegato
+      - Pancreatite acuta
+      - Pancreatite cronica
+      - Tumori del pancreas
+
+      - Disfagia
+      - Dispepsia
+      - Vomito
+      - Diarrea
+      - Melena
+      - Rettorragia
+      - Ittero
+      - Ascite
+      - Malattia peptica
+      - H pylori
+      - Malassorbimento
+      - Malattia celiaca
+      - Morbo di Whipple
+      - Epatiti acute
+      - Colecistite acute
+      - Colica biliare
+      - Tumori del fegato
+      - Pancreatite acuta
+      - Pancreatite cronica
+      - Tumori del pancreas
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma è molto ampio e deve essere studiato nel suo complesso. Particolare attenzione va dedicata alle principali sindromi gastroenteriche, che costituiscono frequentemente oggetto della prima domanda. È consigliato integrare il programma con: - Dolore addominale → Rugarli, capitolo 1 di Gastroenterologia. - Vomito e diarrea → Unigastro. - Ittero → Rugarli, con particolare attenzione ai diversi tipi di ittero. - Epatiti → approfondire epatiti alcoliche, virali e da farmaci. - Giardia → Rugarli, perché può essere chiesta anche se non adeguatamente trattata a lezione. È particolarmente importante saper riconoscere i sintomi d'allarme. I docenti insistono molto su questo aspetto durante le lezioni. In presenza di un sintomo d'allarme bisogna sapere quale approfondimento diagnostico sia indicato, in particolare: gastroscopia; colonscopia. Non è quindi sufficiente conoscere la singola patologia: bisogna sapere anche come comportarsi davanti al paziente e quando è indicato un approfondimento endoscopico.
+
+      La fonte principale consigliata sono le sbobine 2023-2024, le più complete. È tuttavia necessario integrare alcuni argomenti utilizzando materiale di altre annate: - Sbobine 2023-2024 → base principale. - Breath test all'idrogeno → sbobine 2025-2026. - Anemia in gastroenterologia → sbobine 2024-2025. - Stipsi → sbobine 2022-2023. È quindi necessario fare un po' di collage tra le diverse annate. Dal Rugarli: - capitolo 1 di Gastroenterologia → da fare integralmente; - dolore addominale → particolarmente importante; - ittero → da approfondire bene; - epatiti → consigliato approfondimento; - Giardia → da studiare perché può essere richiesta. Per vomito e diarrea è consigliato utilizzare Unigastro.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      Gastroenterologia – domande di Biagi
+
+      Prima domanda:
+
+      - Disfagia
+      - Dispepsia
+      - Vomito
+      - Diarrea
+      - Stipsi
+      - Melena
+      - Rettorragia
+      - Ittero
+      - Ascite
+      - Dolore addominale acuto
+      - Dolore addominale cronico
+
+      Seconda domanda:
+
+      - Acalasia
+      - Neoplasie dell'esofago
+      - MRGE – condizioni predisponenti
+      - MRGE – quadro clinico
+      - MRGE – complicanze
+      - Ulcera peptica – cause
+      - Ulcera peptica – quadro clinico
+      - Ulcera peptica – complicanze
+      - Gastriti croniche – tipi
+      - Danno da FANS
+      - HP e malattie correlate
+      - Tumori dello stomaco
+      - Anemie in gastroenterologia
+      - Malattia celiaca – eziopatogenesi
+      - Malattia celiaca – clinica
+      - Malattia celiaca – complicanze
+      - Morbo di Whipple
+      - Morbo di Crohn vs RCU
+      - Morbo di Crohn – clinica
+      - Morbo di Crohn – complicanze
+      - RCU – clinica
+      - RCU – complicanze
+      - Tumori maligni del colon
+      - Polipi del colon
+      - Epatiti acute
+      - Danno da alcol
+      - Cirrosi epatica – cause
+      - Cirrosi epatica – quadro clinico
+      - Cirrosi epatica – complicanze
+      - Colecistite acuta
+      - Colica biliare
+      - Pancreatite acuta – cause
+      - Pancreatite acuta – clinica
+
+      Frequenza: I docenti generalmente non utilizzano il codice per verificare la presenza. I controlli non sono particolarmente rigorosi. In alcuni casi viene comunicato che verrà utilizzato il codice, ma nella pratica non viene effettuato un controllo stringente.
+    professors:
+      - nome: Federico Biagi
+        email: federico.biagi@unipv.it
+        stile: Titolare del corso. Le domande proiettate sono suddivise in prima e seconda domanda.
+      - nome: Hellas Cena
+        email: hellas.cena@unipv.it
+      - nome: Andrea Peri
+        email: andrea.peri@unipv.it
+      - nome: Annalisa Schiepatti
+        email: annalisa.schiepatti@unipv.it
+  - nome_modulo: Chirurgia gastroenterologica
+    id: m-ohza1kya
+    exam_type: Orale
+    preappello: Sì
+    durata_orale_min: 15
+    exam_details: "Orale di Chirurgia gastroenterologica in ordine alfabetico. L'orale prevede generalmente 2 domande: una prima domanda relativa a un primo blocco di argomenti; una seconda domanda relativa a un secondo blocco di argomenti. Le domande sono generalmente piuttosto schematiche e secche. L'interrogazione dura mediamente 15-20 minuti, anche se la durata può variare in base al docente e all'andamento dell'interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Nell'ultimo anno erano presenti 3 docenti + 1 specializzanda."
+    program: |-
+      - Semeiologia ed esame obiettivo nelle malattie dell'apparato digerente.
+      - Dolore addominale acuto e cronico (approccio fisiopatologico, semeiologico e clinico).
+      - Addome acuto chirurgico (peritonitico, occlusivo, vascolare).
+      - Appendicite acuta.
+      - Pseudoaddome acuto (medico).
+      - Le ernie parietali addominali. Lo strozzamento erniario.
+      - Le ernie diaframmatiche congenite ed acquisite.
+      - Il megaesofago. I diverticoli esofagei.
+      - Tumori benigni e maligni dell'esofago.
+      - Tumori benigni e maligni dello stomaco. Precancerosi gastriche.
+      - Patologia infiammatoria e tumorale del tenue mesenteriale.
+      - Malattie infiammatorie croniche dell'intestino (retto - colite ulcerosa, morbo di Crohn).
+      - Precancerosi intestinali. Polipi intestinali. Poliposi.
+      - Diverticolosi del colon.
+      - Megacolon (congenito, acquisito, tossico).
+      - Carcinoma del colon-retto.
+      - Patologia infiammatoria acuta e cronica del pancreas.
+      - Tumori benigni e maligni del pancreas.
+      - APUDomi. Carcinoidi. Adenomatosi endocrine multiple di rilevanza chirurgica. Sindromi endocrine paraneoplastiche.
+      - Splenopatie chirurgiche.
+      - Tumori benigni e maligni del fegato (lesioni epatiche focali).
+      - Il paziente cirrotico candidato ad intervento chirurgico.
+      - L'ittero chirurgico. Inquadramento generale e aspetti eziopatogenetici.
+      - Patologia infiammatoria delle via biliari.
+      - Malformazioni e tumori delle vie biliari.
+      - La calcolosi biliare.
+      - L'ipertensione portale.
+      - Malattie dell'ano d'interesse chirurgico (ragade, ascesso, fistola, varici emorroidarie, cancro).
+      - Masse addominali (intraperitoneari, retroperitoneari).
+      - Cellule staminali e chirurgia.
+      - Trapianti d'organo.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
+      Le domande sono abbastanza varie. Nell'ultimo anno è stata dedicata particolare attenzione alla chirurgia bariatrica, che può quindi rappresentare un argomento su cui i docenti si soffermano. È importante considerare anche gli argomenti non spiegati direttamente a lezione ma presenti nelle slide, perché possono comunque essere oggetto d'esame. Nell'ultimo anno, ad esempio, sono state richieste: ernie addominali; acalasia.
+
+      Poiché nell'ultimo anno sono cambiati i docenti, è consigliato utilizzare principalmente le sbobine 2025-2026, più aggiornate e maggiormente in linea con gli argomenti effettivamente richiesti. Non è più necessario affidarsi al vecchio libro utilizzato negli anni precedenti: le sbobine dell'anno sono considerate sufficienti. È comunque importante controllare le slide, soprattutto per gli argomenti indicati dai docenti ma non spiegati direttamente a lezione, perché possono essere richiesti all'esame.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      Chirurgia gastroenterologica
+
+      Le domande sono abbastanza varie. Possono essere richiesti anche argomenti non spiegati direttamente a lezione, ma presenti nelle slide. Tra gli argomenti richiesti nell'ultimo anno: ernie addominali; acalasia. Particolare attenzione anche alla chirurgia bariatrica, sulla quale sono state svolte numerose lezioni.
+
+      Frequenza: I docenti generalmente non utilizzano il codice per verificare la presenza. I controlli non sono particolarmente rigorosi. In alcuni casi viene comunicato che verrà utilizzato il codice, ma nella pratica non viene effettuato un controllo stringente.
+    professors:
+      - nome: Federico Biagi
+        email: federico.biagi@unipv.it
+        stile: Titolare del corso. Le domande proiettate sono suddivise in prima e seconda domanda.
+      - nome: Hellas Cena
+        email: hellas.cena@unipv.it
+      - nome: Andrea Peri
+        email: andrea.peri@unipv.it
+      - nome: Annalisa Schiepatti
+        email: annalisa.schiepatti@unipv.it
+  - nome_modulo: Nutrizione umana
+    id: m-v738a2c5
+    exam_type: Scritto
+    preappello: Sì
+    exam_details: "Scritto di Nutrizione umana. La prova dura 45 minuti ed è composta da: 10 domande a scelta multipla, con una sola risposta corretta: risposta corretta → +2 punti; risposta non data → 0 punti; risposta sbagliata → −0,5 punti; 2 domande aperte, valutate da 0 a 5 punti ciascuna. Le domande aperte possono essere ricorrenti e ripetersi negli anni precedenti. Lo scritto si svolge all'inizio della giornata."
+    program: |-
+      - Dispendio e bilancio energetico, fabbisogno energetico
+      - Dietetica fisiologica nell’adulto (Linee guida/LARN)
+      - Gruppi di alimenti e piramide alimentare
+      - Diagnostica Nutrizionale nell’adulto
+      - Obesità e terapia dietetica
+      - Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
+      - Dietoterapia nelle Malattie croniche infiammatorie intestinali
+      - Disturbi dell'alimentazione e nutrizione
+      - Malattie neurodegenerative
+      - Alimentazione e tumori
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma va studiato principalmente attraverso le slide delle lezioni. Le domande aperte possono essere ricorrenti e ripetersi negli anni precedenti.
+
+      La preparazione deve essere fatta principalmente dalle slide. È utile: frequentare le lezioni; prendere eventuali appunti; consultare le domande degli anni precedenti. La fonte fondamentale rimangono comunque le slide, perché le informazioni necessarie per lo scritto sono contenute al loro interno. Poiché le slide possono cambiare di anno in anno, è consigliato utilizzare quelle più aggiornate dell'anno di corso corrente.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      Nutrizione umana
+
+      Le domande aperte possono ripetersi negli anni precedenti. Per questo motivo è utile consultare i file contenenti le domande degli appelli passati. Non essendo stati forniti gli argomenti specifici delle domande aperte, non vengono riportati ulteriori contenuti in questa guida.
+
+      Frequenza: Il controllo delle presenze è leggermente più rigoroso, anche se non in maniera sistematica. Nell'ultimo anno, ad esempio, è capitato una volta che venisse fatto circolare il foglio firme perché il codice non funzionava.
+    professors:
+      - nome: Federico Biagi
+        email: federico.biagi@unipv.it
+        stile: Titolare del corso. Le domande proiettate sono suddivise in prima e seconda domanda.
+      - nome: Hellas Cena
+        email: hellas.cena@unipv.it
+      - nome: Andrea Peri
+        email: andrea.peri@unipv.it
+      - nome: Annalisa Schiepatti
+        email: annalisa.schiepatti@unipv.it
+aggiornato_da: Sara Cocci
+semestre: II
+link_whatsapp_generale: https://chat.whatsapp.com/DDtZsEwRaDZFUVGt7YwtLM
+ultimo_aggiornamento: 2026-10-08

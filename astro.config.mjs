@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://example-guide.netlify.app',
+  site: 'https://howtogolgi.it',
   output: 'static',
 });

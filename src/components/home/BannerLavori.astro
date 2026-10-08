@@ -1,0 +1,107 @@
+---
+// Banner "lavori in corso" in cima alla home: il sito è appena nato e alcune
+// guide (le schede con il lucchetto) devono ancora arrivare. Si può chiudere:
+// la scelta resta solo in questo browser (localStorage, facoltativo).
+// Quando le guide saranno complete, basta togliere il componente da index.astro.
+import PixelIcon from '../common/PixelIcon.astro';
+---
+
+<aside class="lavori" aria-labelledby="lavori-titolo" data-lavori>
+  <span class="lavori__strisce" aria-hidden="true"></span>
+  <div class="lavori__corpo">
+    <PixelIcon name="alert" size={32} class="lavori__icona" />
+    <div class="lavori__testo">
+      <h2 id="lavori-titolo" class="label">Lavori in corso</h2>
+      <p>
+        HowToGolgi è appena nato e cresce un esame alla volta. Le guide che non sono ancora pronte compaiono con il
+        <strong>lucchetto</strong>: arriveranno quanto prima.
+      </p>
+    </div>
+    <button type="button" class="lavori__chiudi" data-lavori-chiudi aria-label="Chiudi l’avviso">×</button>
+  </div>
+  <span class="lavori__strisce" aria-hidden="true"></span>
+</aside>
+<script is:inline>
+  // Subito, prima che la pagina si mostri: niente lampo del banner già chiuso.
+  try {
+    if (localStorage.getItem('guide:lavori-chiuso') === '1') document.querySelector('[data-lavori]').hidden = true;
+  } catch (e) {}
+</script>
+
+<script>
+  const banner = document.querySelector<HTMLElement>('[data-lavori]');
+  banner?.querySelector('[data-lavori-chiudi]')?.addEventListener('click', () => {
+    banner.hidden = true;
+    try {
+      localStorage.setItem('guide:lavori-chiuso', '1');
+    } catch {
+      /* senza storage si richiude a ogni visita */
+    }
+    document.querySelector<HTMLElement>('h1')?.focus();
+  });
+</script>
+
+<style>
+  .lavori {
+    margin: 4px 4px 24px;
+    background: var(--panel);
+    box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent);
+  }
+  .lavori[hidden] {
+    display: none;
+  }
+  /* Strisce da cantiere a 45°, che scorrono a scatti di un "pixel" (4px). */
+  .lavori__strisce {
+    display: block;
+    height: 8px;
+    background: repeating-linear-gradient(-45deg, var(--accent) 0 8px, var(--bg) 8px 16px);
+    background-size: 22.63px 8px;
+    animation: strisce 900ms steps(4, end) infinite;
+  }
+  @keyframes strisce {
+    to { background-position: 22.63px 0; }
+  }
+  .lavori__corpo {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 8px 12px 16px;
+  }
+  .lavori__corpo :global(.lavori__icona) {
+    flex: 0 0 auto;
+    margin-top: 4px;
+  }
+  .lavori__testo {
+    flex: 1;
+    min-width: 0;
+  }
+  .lavori h2 {
+    margin: 0 0 4px;
+    color: var(--accent);
+  }
+  /* Colonna stretta: allineato a sinistra, senza sillabazione. */
+  .lavori p {
+    margin: 0;
+    color: var(--text-2);
+    text-align: left;
+    hyphens: manual;
+  }
+  .lavori__chiudi {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    margin: -8px -4px 0 0;
+    border: 0;
+    background: none;
+    color: var(--text-2);
+    font: 700 24px/1 var(--font-title);
+    cursor: pointer;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .lavori__chiudi:hover { color: var(--accent); }
+  }
+  @media (forced-colors: active) {
+    .lavori { outline: 2px solid CanvasText; }
+    .lavori__strisce { background: CanvasText; }
+  }
+</style>

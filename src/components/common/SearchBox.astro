@@ -1,0 +1,264 @@
+---
+// Barra di ricerca full-text sulle guide (Pagefind). L'indice viene creato
+// dopo la build (`pagefind --site dist`, vedi package.json) e scaricato a
+// pezzi solo quando si comincia a cercare. Indicizza solo il corpo delle
+// guide (data-pagefind-body in GuideLayout). Supporta ?q= nell'URL.
+import PixelIcon from './PixelIcon.astro';
+
+interface Props {
+  /** Id univoco se ci sono più barre nella stessa pagina. */
+  id?: string;
+}
+
+const { id = 'cerca' } = Astro.props;
+---
+
+<form class="cerca" role="search" data-cerca novalidate>
+  <label class="cerca__label label" for={id}>Cerca nelle guide</label>
+  <div class="cerca__campo">
+    <PixelIcon name="lente" size={16} class="cerca__lente" />
+    <input
+      class="cerca__input"
+      id={id}
+      name="q"
+      type="search"
+      placeholder="Esame, argomento, docente…"
+      autocomplete="off"
+      autocapitalize="off"
+      spellcheck="false"
+      enterkeyhint="search"
+      aria-describedby={`${id}-stato`}
+    />
+  </div>
+  <p class="cerca__stato label" id={`${id}-stato`} role="status" aria-live="polite" data-cerca-stato></p>
+  <ol class="cerca__risultati" data-cerca-risultati hidden></ol>
+</form>
+
+<script>
+  import { MONDI } from '../../lib/mondi';
+
+  type Pagefind = {
+    init: () => Promise<void>;
+    debouncedSearch: (q: string, opts?: object, ms?: number) => Promise<{ results: { data: () => Promise<RisultatoDati> }[] } | null>;
+  };
+  type RisultatoDati = { url: string; excerpt: string; meta: { title?: string; anno?: string } };
+
+  const MAX_RISULTATI = 8;
+  let pagefind: Promise<Pagefind> | null = null;
+
+  // Il percorso è una stringa a runtime: Vite non deve provare a risolverlo
+  // (l'indice esiste solo dopo `pagefind --site dist`).
+  const caricaPagefind = () => {
+    const percorso = '/pagefind/pagefind.js';
+    pagefind ??= import(/* @vite-ignore */ percorso).then(async (pf: Pagefind) => {
+      await pf.init();
+      return pf;
+    });
+    return pagefind;
+  };
+
+  for (const form of document.querySelectorAll<HTMLFormElement>('[data-cerca]')) {
+    const input = form.querySelector<HTMLInputElement>('input[name=q]')!;
+    const stato = form.querySelector<HTMLElement>('[data-cerca-stato]')!;
+    const lista = form.querySelector<HTMLOListElement>('[data-cerca-risultati]')!;
+
+    const svuota = () => {
+      lista.replaceChildren();
+      lista.hidden = true;
+      stato.textContent = '';
+    };
+
+    const cerca = async () => {
+      const q = input.value.trim();
+      const url = new URL(location.href);
+      if (q) url.searchParams.set('q', q);
+      else url.searchParams.delete('q');
+      history.replaceState(history.state, '', url);
+
+      if (q.length < 2) return svuota();
+
+      let pf: Pagefind;
+      try {
+        pf = await caricaPagefind();
+      } catch {
+        stato.textContent = 'Ricerca non disponibile al momento.';
+        return;
+      }
+      const ricerca = await pf.debouncedSearch(q, {}, 200);
+      if (ricerca === null) return; // superata da una ricerca più recente
+      const dati = await Promise.all(ricerca.results.slice(0, MAX_RISULTATI).map((r) => r.data()));
+      if (input.value.trim() !== q) return;
+
+      const n = ricerca.results.length;
+      stato.textContent = n === 0 ? `Nessun risultato per "${q}"` : `${n} ${n === 1 ? 'risultato' : 'risultati'}`;
+      lista.replaceChildren(...dati.map((d, i) => voce(d, i)));
+      lista.hidden = n === 0;
+    };
+
+    function voce(d: RisultatoDati, i: number) {
+      const li = document.createElement('li');
+      li.style.setProperty('--i', String(i));
+      const a = document.createElement('a');
+      a.className = 'risultato';
+      a.href = d.url;
+
+      const anno = d.meta.anno as keyof typeof MONDI | undefined;
+      if (anno && MONDI[anno]) {
+        const chip = document.createElement('span');
+        chip.className = 'risultato__anno label';
+        chip.textContent = anno;
+        chip.style.background = MONDI[anno].fondo;
+        chip.style.color = MONDI[anno].inchiostro;
+        a.append(chip);
+      }
+      const titolo = document.createElement('span');
+      titolo.className = 'risultato__titolo';
+      titolo.textContent = d.meta.title ?? d.url;
+      // L'estratto di Pagefind è già sicuro (testo escapato + <mark>).
+      const estratto = document.createElement('span');
+      estratto.className = 'risultato__estratto';
+      estratto.innerHTML = d.excerpt;
+      a.append(titolo, estratto);
+      li.append(a);
+      return li;
+    }
+
+    input.addEventListener('input', cerca);
+    input.addEventListener('focus', () => void caricaPagefind().catch(() => {}), { once: true });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        cerca();
+      }
+    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Invio: apre il primo risultato.
+      lista.querySelector<HTMLAnchorElement>('a')?.click();
+    });
+
+    const iniziale = new URL(location.href).searchParams.get('q');
+    if (iniziale) {
+      input.value = iniziale;
+      cerca();
+    }
+  }
+</script>
+
+<style>
+  .cerca {
+    margin: 0 0 32px;
+  }
+  .cerca__label {
+    display: block;
+    color: var(--caption);
+    margin-bottom: 12px;
+  }
+  /* Campo chiaro su fondo scuro: deve distinguersi dai pannelli blu.
+     Testo #1a1c2c su #f4f4f4 = 15:1, placeholder #566c86 = 4.9:1. */
+  .cerca__campo {
+    position: relative;
+    margin: 0 4px;
+    box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+  }
+  /* Focus: il bordo a scalini raddoppia (4 → 8px), non cambia solo colore. */
+  .cerca__campo:focus-within {
+    box-shadow: -8px 0 0 0 var(--accent), 8px 0 0 0 var(--accent), 0 -8px 0 0 var(--accent), 0 8px 0 0 var(--accent);
+  }
+  .cerca__campo :global(.cerca__lente) {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    margin-top: -8px;
+    pointer-events: none;
+  }
+  .cerca__input {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 12px 12px 40px;
+    border: 0;
+    background: var(--text);
+    color: var(--bg);
+    caret-color: var(--bg);
+    /* 16px: sotto questa misura iOS zooma la pagina al focus. */
+    font: 16px/1.5 var(--font-body);
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .cerca__input::placeholder {
+    color: var(--border-off);
+  }
+  /* L'indicatore di focus è il bordo del contenitore (vedi sopra). */
+  .cerca__input:focus-visible {
+    outline: none;
+  }
+  .cerca__input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+  .cerca__stato {
+    color: var(--caption);
+    margin: 16px 0 0;
+  }
+  .cerca__stato:empty {
+    display: none;
+  }
+  .cerca__risultati {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+  }
+  .cerca__risultati li {
+    margin: 0 0 12px;
+    /* Entrata a scatti, sfalsata per riga. */
+    animation: risultato-entra 160ms steps(2, end) backwards;
+    animation-delay: calc(var(--i) * 40ms);
+  }
+  @keyframes risultato-entra {
+    from { transform: translateY(8px); visibility: hidden; }
+  }
+  .cerca__risultati :global(.risultato) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-height: 44px;
+    padding: 12px;
+    background: var(--panel);
+    color: var(--text);
+    text-decoration: none;
+  }
+  .cerca__risultati :global(.risultato:focus-visible),
+  .cerca__risultati :global(.risultato:active) {
+    background: var(--chip);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .cerca__risultati :global(.risultato:hover) {
+      background: var(--chip);
+    }
+  }
+  .cerca__risultati :global(.risultato__anno) {
+    padding: 0 6px;
+  }
+  .cerca__risultati :global(.risultato__titolo) {
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h2-size);
+    line-height: 1.2;
+    -webkit-font-smoothing: none;
+  }
+  .cerca__risultati :global(.risultato__estratto) {
+    color: var(--text-2);
+    font-size: 14px;
+  }
+  .cerca__risultati :global(mark) {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 0 2px;
+  }
+  @media (forced-colors: active) {
+    .cerca__campo { outline: 2px solid CanvasText; }
+    .cerca__campo:focus-within { outline: 4px solid Highlight; }
+    .cerca__risultati :global(.risultato) { outline: 1px solid CanvasText; }
+  }
+</style>

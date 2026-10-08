@@ -1,0 +1,184 @@
+id: g-nqkkq85b
+title: Farmacologia 1
+anno_di_corso: III Anno
+descrizione_generale: "L’esame è suddiviso in tre prove scritte al computer: Farmacocinetica, Farmacodinamica + Farmacologia generale e monitoraggio farmacologico, Tossicologia. Il voto finale non è specificato. Tempo di studio complessivo: circa 15 giorni. In alcuni appelli, al termine dell’esame, il professore può chiamare 2–3 studenti per spiegare le risposte date ai quiz."
+moduli:
+  - nome_modulo: Farmacologia generale e monitoraggio farmacologico
+    id: m-iqm9iw1f
+    exam_type: Scritto
+    exam_details: "Prova scritta al computer insieme a Farmacodinamica: 16 domande a risposta multipla (alcune a scelta multipla) e 2 domande aperte di farmacologia generale e monitoraggio farmacologico. Le domande aperte valgono 8 punti ciascuna. Tempo complessivo: 30 minuti. Le domande aperte spesso vengono riprese dai vecchi appelli."
+    program: |-
+      **Principi Generali di Farmacologia**
+
+      - scoperta e sviluppo di nuovi farmaci: gli stadi pre-clinici, lo sviluppo clinico.
+      - Meccanismo d’azione dei farmaci: proteine come bersaglio per il legame dei farmaci; meccanismi di trasduzione del segnale; teorie recettoriali, curve dose-risposta.
+      - Agonisti, antagonisti, agonisti parziali.
+      - Assorbimento e distribuzione dei farmaci: assorbimento e vie di somministrazione dei farmaci; distribuzione dei farmaci.
+      - Metabolismo dei farmaci.
+      - Escrezione renale dei farmaci e dei loro metaboliti
+      - Escrezione biliare e circolo enteroepatico
+      - Farmacocinetica e Interazione tra farmaci.
+      - Tipi di reazioni avverse ai farmaci.
+      - Tossicità da farmaci.
+      - Dipendenza, abitudine e tossicomania.
+      - Monitoraggio dei farmaci.
+
+      **Monitoraggio terapeutico: definizione.**
+
+      - Indice terapeutico, intervalli di concentrazione terapeutici e di riferimento.
+      - Procedura del monitoraggio terapeutico, tecniche e metodi di analisi.
+      - Esempi di farmaci monitorati.
+      - Presupposti teorici necessari per rendere clinicamente utile il monitoraggio terapeutico.
+      - Concentrazione terapeutica individualizzata.
+      - Esempi di farmaci con cinetica non lineare.
+
+      Potrà essere messo a disposizione degli studenti materiale extra preliminarmente concordato. Verrà valutata la partecipazione ad eventuali seminari condivisi con altri corsi (es. medicina di emergenza urgenza) sulla gestione delle tematiche in programma.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10664/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: Studiare principalmente dalle sbobine più recenti. Ripassare le domande aperte degli appelli precedenti, perché possono ripetersi.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande aperte spesso riprese dai vecchi appelli.
+    professors:
+      - nome: Plinio Richelmi
+        email: plinio.richelmi@unipv.it
+  - nome_modulo: Tossicologia
+    id: m-gihhtc94
+    exam_type: Scritto
+    exam_details: "Prova scritta al computer: 11 domande a risposta multipla. Tempo: circa 12 minuti."
+    program: |-
+      **Lezione 1 — Introduzione**
+
+      - Introduzione alla tossicologia clinica e approccio al paziente intossicato.
+      - Esempi didattici di intossicazioni.
+      - Oppioidi e altri depressori.
+      - GHB, cannabinoidi e cannabinoidi sintetici.
+
+      **Lezione 2 — Cocaina e Amfetamine e derivati (MDMA, metamfetamina): farmacologia e tossicologia**
+
+      - Forme, vie di somministrazione (sniffing, EV, fumo/crack), biodisponibilità, picchi plasmatici.
+      - Metabolismo e implicazioni cliniche.
+      - Meccanismo d'azione; effetti su SNC, cardiovascolare, polmonare; manifestazioni acute e croniche.
+      - Gestione clinica: trattamento agitazione, gestione dolore toracico, approccio a body packer/stuffer.
+
+      **Lezione 3 — Etanolo: farmacocinetica, effetti e dipendenza**
+
+      - Unità alcoliche e calcolo del contenuto; fonti non alimentari.
+      - Assorbimento, metabolismo gastrico/epatico, stress ossidativo.
+      - Meccanismi di tossicità.
+
+      **Lezione 4 — Monossido di carbonio (CO)**
+
+      - Proprietà fisico-chimiche, fonti di esposizione, meccanismi (COHb, mioglobina, citocromo a3), effetti sistemici.
+      - Diagnosi (COHb, pulsossimetria avanzata), terapia (ossigeno normobarico vs iperbarico), follow-up e sequele ritardate.
+
+      Potrà essere messo a disposizione degli studenti materiale extra preliminarmente concordato. Verrà valutata la partecipazione ad eventuali seminari condivisi con altri corsi (es. medicina di emergenza urgenza) sulla gestione delle tematiche in programma.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10664/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: Studiare dalle sbobine più recenti. Tenere conto dei circa 12 minuti a disposizione.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - 11 quiz a risposta multipla.
+    professors:
+      - nome: Petrolini
+      - nome: Davide Lonati
+        email: davide.lonati@unipv.it
+      - nome: Azzurra Schicchi
+        email: azzurra.schicchi@unipv.it
+  - nome_modulo: Farmacocinetica
+    id: m-1ktox7eu
+    exam_type: Scritto
+    exam_details: "Prova scritta al computer: 18 domande a risposta multipla (alcune a scelta multipla) e 2 domande aperte, di cui una consiste in un grafico. Le due domande aperte valgono 4 punti ciascuna. Tempo: 30 minuti."
+    program: |-
+      
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10664/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: Prestare particolare attenzione ai grafici di farmacocinetica, poiché all’esame viene sempre richiesto di affrontarne uno. Studiare dalle sbobine più recenti.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Grafici di farmacocinetica; una domanda aperta è sempre dedicata a un grafico.
+    professors:
+      - nome: Fausto Feletti
+        email: fausto.feletti@unipv.it
+  - nome_modulo: Farmacodinamica
+    id: m-1zfkfke7
+    exam_type: Scritto
+    exam_details: "Prova scritta al computer insieme a Farmacologia generale e monitoraggio farmacologico: 16 domande a risposta multipla (alcune a scelta multipla) e 2 domande aperte di farmacologia generale e monitoraggio farmacologico. Le domande aperte valgono 8 punti ciascuna. Tempo complessivo: 30 minuti."
+    program: |-
+      **Modulo 1 – Teoria dei recettori e parametri farmacodinamici**
+
+      - Farmacocinetica vs farmacodinamica
+      - teoria dei recettori (Langley, esperimento sui tripanosomi)
+      - proprietà dei recettori (specificità, affinità, efficacia, saturabilità)
+      - K_AFF e K_D
+      - occupazione frazionale (f) e curva concentrazione-effetto
+      - agonisti, agonisti parziali, antagonisti competitivi, agonisti inversi.
+
+      **Modulo 2 – Farmacodinamica quantitativa e di popolazione**
+
+      - Efficacia vs potenza
+      - antagonismo competitivo vs non competitivo
+      - farmacodinamica di popolazione ed eventi quantici
+      - finestra terapeutica e indice terapeutico.
+
+      **Modulo 3 – Classificazione dei recettori e principali sistemi di neurotrasmissione**
+
+      - Bersagli recettoriali vs non recettoriali
+      - struttura dei GPCR e proteine G (Gαs, Gαi, Gαq: effettori e secondi messaggeri)
+      - sistema adrenergico (α1, α2, β1-3)
+      - sistema dopaminergico (D1, D2, vie centrali, Parkinson)
+      - sistema GABAergico (GABA-A, GABA-B, benzodiazepine, Z-drugs)
+      - sistema istaminergico (H1, H2)
+      - sistema serotoninergico (5-HT1, 5-HT2, 5-HT3)
+      - recettori delle prostaglandine (EP2/EP3, misoprostolo).
+
+      Potrà essere messo a disposizione degli studenti materiale extra preliminarmente concordato. Verrà valutata la partecipazione ad eventuali seminari condivisi con altri corsi (es. medicina di emergenza urgenza) sulla gestione delle tematiche in programma.
+
+      **Modulo 4 – Eliminazione dei farmaci**
+
+      - Escrezione renale (filtrazione, secrezione e riassorbimento tubulare)
+      - clearance ed extraction ratio
+      - secrezione biliare e circolo enteroepatico
+      - metabolismo di fase 1 (CYP450: famiglie, induzione, inibizione, polimorfismi CYP2D6/CYP2C9/DPD; caso warfarina-azitromicina)
+      - metabolismo di fase 2 (coniugazione/glucuronidazione).
+
+      - **Introduzione alla farmacocinetica:** assorbimento, distribuzione ed eliminazione (metabolismo ed escrezione).
+      - Fasi dell’azione di un farmaco.
+      - Assorbimento sistemico dei farmaci.
+      - **Movimento dei farmaci attraverso le barriere cellulari:** meccanismi, fattori influenzanti l’assorbimento.
+      - Vie di somministrazione dei farmaci.
+      - Forme farmaceutiche a rilascio modificato.
+      - Farmacocinetica clinica, farmacodinamica, omogenicità cinetica, modelli.
+      - Esponenziali e logaritmi.
+      - Significato del calcolo differenziale, equazioni differenziali, calcolo integrale.
+      - Determinazione dell’AUC con il metodo dei trapezoidi.
+      - **Ordini delle cinetiche:** cinetiche di ordine zero e di primo ordine, cinetica di Michaelis-Menten.
+      - **Modelli farmacocinetici:** modello ad un compartimento ed a più compartimenti, modello non compartimentale.
+      - Curve concentrazione-tempo, grafici lineari e semilogaritmici.
+      - Somministrazione in dose singola endovenosa (bolo).
+      - **Parametri farmacocinetici associati coi modelli e loro calcolo:** C0, volume di distribuzione, clearance, costante di eliminazione, tempo di emivita.
+      - **Distribuzione:** definizioni, fattori influenzanti la distribuzione (caratteristiche del farmaco, caratteristiche delle barriere da attraversare, flusso regionale, legame con le proteine plasmatiche e tissutali, fattori fisiologici e patologici).
+      - Trasporto dei farmaci attraverso la barriera emato-encefalica e la placenta.
+      - **Clearance:** clearance totale plasmatica o del sangue, clearance d’organo, estrazione.
+      - Clearance epatica, farmaci ad alta e bassa estrazione, clearance renale.
+      - Biodisponibilità assoluta e relativa.
+      - **Vie e frequenza di somministrazione:** infusione endovenosa continua a velocità costante con e senza raggiungimento dello stato stazionario, somministrazione extravascolare a dose singola e multipla e parametri relativi.
+      - Farmaci equivalenti e biosimilari.
+      - Interazioni farmacocinetiche.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10664/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: Studiare dalle sbobine più recenti. Allenarsi a rispondere rapidamente ai quiz.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande a risposta multipla e integrazione con farmacologia generale.
+    professors:
+      - nome: Andrea Ferrigno
+        email: andrea.ferrigno@unipv.it
+        stile: Titolare del corso
+esse3_codice: "501690"
+cfu_totali: 5
+semestre: I
+ultimo_aggiornamento: 2026-10-08

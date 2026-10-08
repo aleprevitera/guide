@@ -16,6 +16,9 @@ collections:
   - name: "guida"
     label: "Guide per Esame"
     label_singular: "Guida"
+    # Decap è la fonte dei contenuti delle guide pubblicate: i rappresentanti
+    # lavorano solo qui (vedi CLAUDE.md, "Decap CMS").
+    description: "Qui crei e modifichi le guide: ogni salvataggio va subito online. Ricordati di aggiornare \"Ultimo aggiornamento\". Non usare \"Duplica\": la copia avrebbe gli stessi ID e il sito non si aggiornerebbe; per un esame nuovo usa \"+ Guida\"."
     folder: "src/content/guide"
     create: true
     delete: false
@@ -23,6 +26,10 @@ collections:
     identifier_field: title
     format: "yaml"
     extension: "yaml"
+    # L'anteprima di Decap non ha lo stile del sito e mostrerebbe dati che il
+    # sito non pubblica: meglio vedere le modifiche sul sito dopo il salvataggio.
+    editor:
+      preview: false
 
     # Raggruppa le entry per anno di corso nella lista, come le sei sezioni
     # per anno del progetto MkDocs esistente — qui però è un unico
@@ -32,7 +39,11 @@ collections:
         field: anno_di_corso
 
     fields:
+      - { label: "ID (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "g", required: false, hint: "Identificativo stabile della guida: viene generato da solo e non cambia mai, anche se rinomini l'esame." }
       - { label: "Nome Esame", name: "title", widget: "string", required: true, pattern: ['^.{3,150}$', "Tra 3 e 150 caratteri"] }
+
+      - { label: "Codice esame ESSE3 (facoltativo)", name: "esse3_codice", widget: "string", required: false, pattern: ['^\\d{4,8}$', "Solo cifre, es. 501694"], hint: "Il numero tra parentesi quadre nella bacheca appelli ESSE3 (es. [501694] FARMACOLOGIA 2). Serve solo se gli appelli non compaiono da soli." }
+      - { label: "Sottotitolo (facoltativo)", name: "sottotitolo", widget: "string", required: false, pattern: ['^.{0,200}$', "Massimo 200 caratteri"], hint: "Una riga sotto il titolo, es. \"Esame integrato del IV anno\"" }
 
       - label: "Anno di Corso"
         name: "anno_di_corso"
@@ -41,6 +52,7 @@ collections:
         options: ["I Anno", "II Anno", "III Anno", "IV Anno", "V Anno", "VI Anno"]
 
       - { label: "CFU Totali (facoltativo)", name: "cfu_totali", widget: "number", value_type: "int", min: 1, max: 120, required: false }
+      - { label: "Semestre (facoltativo)", name: "semestre", widget: "select", options: ["I", "II", "Annuale"], required: false, hint: "Quando si tiene il corso: le guide di ogni anno sono divise per semestre." }
 
       - label: "Link Sbobine Generale (Drive, solo se esame a più moduli)"
         name: "link_sbobine_generale"
@@ -72,7 +84,9 @@ collections:
         summary: "{{nome_modulo}}"
         hint: "Per un esame a modulo unico, aggiungi un solo modulo con nome uguale al Nome Esame."
         fields:
-          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true }
+          - { label: "Nome Modulo", name: "nome_modulo", widget: "string", required: true, pattern: ['^.{1,150}$', "Massimo 150 caratteri"] }
+          - { label: "ID modulo (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "m", required: false }
+          - { label: "Nome dell'appello su ESSE3 (facoltativo)", name: "esse3_appello", widget: "string", required: false, pattern: ['^.{0,100}$', "Massimo 100 caratteri"], hint: "Solo se su ESSE3 gli appelli di questo modulo hanno un nome diverso (es. \"RX-NEURORX-RT\" per Diagnostica per immagini)." }
           - { label: "CFU", name: "cfu", widget: "number", value_type: "int", min: 1, max: 60, required: false }
 
           - label: "Semestre"
@@ -81,11 +95,9 @@ collections:
             required: false
             options: ["I", "II"]
 
-          - label: "Difficoltà (1-5)"
-            name: "difficolta"
-            widget: "select"
-            required: false
-            options: [1, 2, 3, 4, 5]
+          # Non più mostrata nel sito: la difficoltà la votano gli studenti.
+          # Nascosta ma conservata nei file.
+          - { label: "Difficoltà (non usata)", name: "difficolta", widget: "hidden", required: false }
 
           - label: "Tipologia Esame"
             name: "exam_type"
@@ -96,7 +108,25 @@ collections:
           - { label: "Link Sbobine (Drive)", name: "link_sbobine", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Incolla l'URL completo (es. https://drive.google...)" }
           - { label: "Link Gruppo WhatsApp", name: "link_whatsapp", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link di invito al gruppo" }
           - { label: "Link Google Sheet Domande", name: "google_sheet_url", widget: "string", required: false, pattern: ['^https?://.+', "URL non valido"], hint: "Link pubblico al foglio con le domande passate" }
-          - { label: "Tempo di Studio", name: "study_time", widget: "string", required: false, hint: "Es. 2-3 settimane" }
+          # Non più mostrati nel sito: il tempo di studio lo votano gli
+          # studenti. Li compila l'import da Notion; nascosti ma conservati.
+          - { label: "Tempo di Studio (non usato)", name: "study_time", widget: "hidden", required: false }
+          - { label: "Fascia tempo di studio (non usata)", name: "fascia_studio", widget: "hidden", required: false }
+
+          - label: "Preappello"
+            name: "preappello"
+            widget: "select"
+            required: false
+            options: ["Sì", "No"]
+            hint: "Lascia vuoto se non lo sai."
+
+          - label: "Frequenza"
+            name: "frequenza"
+            widget: "select"
+            required: false
+            options: ["Obbligatoria", "Consigliata", "Facoltativa"]
+
+          - { label: "Durata orale (minuti)", name: "durata_orale_min", widget: "number", value_type: "int", min: 1, max: 240, required: false, hint: "Durata indicativa dell'orale per studente" }
 
           - label: "Modalità d'Esame"
             name: "exam_details"
@@ -135,9 +165,9 @@ collections:
             required: false
             summary: "{{nome}}"
             fields:
-              - { label: "Nome Docente", name: "nome", widget: "string", required: true }
+              - { label: "Nome Docente", name: "nome", widget: "string", required: true, pattern: ['^.{1,150}$', "Massimo 150 caratteri"] }
               - { label: "Email", name: "email", widget: "string", required: false, pattern: ['^[^@\s]+@[^@\s]+\.[^@\s]+$', "Email non valida"] }
-              - { label: "Stile/Domande", name: "stile", widget: "text", required: false }
+              - { label: "Stile/Domande", name: "stile", widget: "text", required: false, pattern: ['^[\\s\\S]{0,500}$', "Massimo 500 caratteri"] }
 
           - label: "Note Extra"
             name: "body"
@@ -155,7 +185,7 @@ collections:
         required: false
         summary: "{{campo}}"
         fields:
-          - { label: "Cosa manca / cosa verificare", name: "campo", widget: "string", required: true }
+          - { label: "Cosa manca / cosa verificare", name: "campo", widget: "string", required: true, pattern: ['^.{1,200}$', "Massimo 200 caratteri"] }
           - label: "Dettagli"
             name: "nota"
             widget: "markdown"
@@ -166,5 +196,7 @@ collections:
             editor_components: []
             image: false
 
-      - { label: "Ultimo Aggiornamento", name: "ultimo_aggiornamento", widget: "datetime", required: true, format: "YYYY-MM-DD" }
-      - { label: "Aggiornato da (nome, facoltativo)", name: "aggiornato_da", widget: "string", required: false }
+      # Solo data (niente ora), già compilata con oggi sulle guide nuove:
+      # ricordati di aggiornarla quando modifichi una guida.
+      - { label: "Ultimo Aggiornamento", name: "ultimo_aggiornamento", widget: "datetime", required: true, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, default: "{{now}}", hint: "Aggiornala quando modifichi la guida: compare nel footer." }
+      - { label: "Autore/i (pubblicato nel footer della guida)", name: "aggiornato_da", widget: "string", required: false, pattern: ['^.{0,100}$', "Massimo 100 caratteri"], hint: "Nome e cognome di chi ha scritto la guida: è visibile a tutti." }

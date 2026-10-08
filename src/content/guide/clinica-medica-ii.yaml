@@ -1,38 +1,151 @@
-title: "Clinica Medica II"
-anno_di_corso: "I Anno"
-
+id: g-m8g8n3g2
+title: Clinica Medica 2
+anno_di_corso: VI Anno
+descrizione_generale: Clinica Medica 2 è composta da due moduli (Medicina d'Urgenza e Medicina Interna B), che vengono verbalizzati insieme ai tre moduli di Clinica Medica 1 attraverso una media ponderata dei cinque moduli complessivi.
 moduli:
-  - nome_modulo: "Clinica Medica II"
-    study_time: "4-5 settimane"
-    exam_type: "Orale"
-    exam_details: |
-      Durata dell'esame: **20-30 minuti**.
-    program: |
-      Non esiste un programma d'esame rigidamente definito. È fondamentale il
-      **ragionamento clinico** sui pazienti: diagnosi differenziale e
-      impostazione della terapia basata sui sintomi.
-    material_tips: |
-      **Sbobine:** fondamentali. Gli argomenti trattati a lezione sono i più
-      chiesti.
+  - nome_modulo: Medicina d'Urgenza
+    id: m-mmtit3w0
+    exam_details: |-
+      L’esame è prevalentemente orientato al caso clinico. Con il Prof. Salinaro, in particolare, può essere richiesto di affrontare un caso ragionando come se ci si trovasse realmente in Pronto Soccorso. È consigliabile quindi:
 
-      **Libri di testo:** utile il *Rugarli* (specie per Gastroenterologia) o
-      l'*Harrison* (per diagnosi differenziale di tosse, dispnea, febbre, ecc.).
+      - partire dalla valutazione iniziale del paziente;
+      - identificare ed escludere immediatamente le condizioni potenzialmente letali;
+      - procedere secondo una sequenza logica;
+      - motivare ad alta voce il proprio ragionamento;
+      - arrivare alla diagnosi e alla gestione terapeutica.
 
-      **Manuali SSM:** molto consigliati per avere quadri esaustivi e schematici.
+      Il Prof. Di Pietro può chiedere anche i dosaggi dei farmaci. Non è necessario imparare a memoria ogni dosaggio nel dettaglio, ma è consigliabile avere almeno un'idea dei relativi ordini di grandezza.
+    program: |-
+      - Triage
+      - I comi diabetici
+      - Le crisi ipoglicemiche
+      - Encefalopatia porto-sistemica (coma epatico)
+      - La sincope
+      - Lo stroke (ischemico, emorragico, ischemie cerebrali transitorie)
+      - Approccio al paziente con dolore toracico e dispnea:
+          - cardiopatia ischemica acuta;
+          - insufficienza cardiaca acuta (asma cardiaco, EPA);
+          - malattia tromboembolica ed embolia polmonare.
+      - Urgenze ed emergenze ipertensive
+      - Lo shock (fisiopatologia, classificazione, approccio clinico)
+      - La crisi asmatica
+      - Addome acuto non chirurgico
+      - Linee guida diagnostico-terapeutiche nelle emorragie digestive
+      - Diarree acute
+      - Colpo di calore
+      - Tossicodipendenze da alcol e droghe (classificazione, fisiopatologia, intossicazione acuta, sindromi da astinenza)
+      - Insufficienza renale acuta
+      - Approccio clinico ai disturbi dell’equilibrio acido-base ed elettrolitico
 
-      È utile fare un ripasso delle cliniche degli anni passati: Cardiologia
-      (es. fibrillazione atriale), Gastroenterologia, Ematologia e Diabete. Non
-      verranno chieste "aritmie strane", ma le basi devono essere solide.
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma è molto ampio e l’esame può vertere potenzialmente su qualsiasi argomento affrontato durante il corso. Particolare attenzione a:
+
+      - gestione del paziente in shock;
+      - shock settico;
+      - Sepsis-6;
+      - interpretazione dell’emogasanalisi;
+      - gestione del paziente in base ai risultati dell’EGA;
+      - principali quadri di emergenza.
+
+      **Da dove studiare e consigli di studio**
+
+      - Sbobine del corso.
+      - Integrare con Sepsis-6.
+      - Ripassare la gestione del paziente in shock e shock settico.
+      - Ripassare l'interpretazione dell'EGA.
+      - Domande degli esami precedenti.
+      - Il consiglio principale è quello di ragionare per tutto l’esame come un medico di Pronto Soccorso.
+      - In particolare: partire sempre dagli elementi primari; escludere prima i quadri urgenti e potenzialmente letali; ragionare ad alta voce; utilizzare i dati clinici per arrivare progressivamente alla diagnosi; sapere interpretare un EGA e impostare la gestione del paziente sulla base del risultato; ripassare bene shock e shock settico; conoscere la Sepsis-6; controllare le domande degli anni precedenti e approfondire gli argomenti che ricorrono maggiormente.
+      - Materiale sulla Sepsis-6.
+      - Ripasso di shock e shock settico.
+      - Domande degli appelli precedenti.
+      - Ragionare da medico di PS: è probabilmente il consiglio più importante.
+      - Davanti a un caso clinico, partire sempre dalle condizioni che possono mettere immediatamente a rischio la vita del paziente.
+      - Con Salinaro può essere molto utile ragionare ad alta voce.
+      - Sapere interpretare l'EGA è fondamentale.
+      - Non impazzire sui dosaggi: conoscere almeno gli ordini di grandezza.
+      - Le domande passate sono molto utili per capire quali quadri approfondire.
     professors:
-      - nome: "Bergamaschi"
-        stile: "Unico che fa una vera interrogazione di medicina interna a 360°. Chiede grandi sindromi."
-      - nome: "Corazza"
-        stile: "Parte spesso da un caso clinico. Tranquillo, chiede raramente gastro specifica, ma punta sul ragionamento."
-      - nome: "Di Sabatino"
-        stile: "Chiede tutta la gastroenterologia e i suoi \"pallini\" detti a lezione."
-      - nome: "Lenti"
-        stile: "Gastroenterologia partendo da un sintomo (es. dolore addominale, anemia)."
-      - nome: "Noris"
-        stile: "Paziente. Chiede sintomo e diagnosi differenziale (occhio all'Ematologia)."
+      - nome: Salinaro
+        stile: Può essere richiesto di affrontare un caso ragionando come se ci si trovasse realmente in Pronto Soccorso. Può essere molto utile ragionare ad alta voce.
+      - nome: Santi Di Pietro
+        stile: Può chiedere anche i dosaggi dei farmaci. Non è necessario imparare a memoria ogni dosaggio nel dettaglio, ma è consigliabile avere almeno un'idea dei relativi ordini di grandezza.
+        email: santi.dipietro@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/EaFjIA8Fiwg6wqP9h4BF9F
+  - nome_modulo: Medicina Interna B
+    id: m-is900itq
+    exam_type: Orale
+    exam_details: L’esame è orale, con uno dei docenti. La difficoltà e il tipo di domande possono variare molto in base al docente con cui si capita, rendendo l'esame piuttosto dipendente dal professore.
+    program: |-
+      Per ogni singolo quadro clinico di interesse internistico verranno forniti allo studente gli strumenti necessari all’utilizzo e all’interpretazione delle più comuni indagini bioumorali e strumentali necessarie a confermare il sospetto diagnostico formulato sulla base delle note anamnestiche e obiettive raccolte al letto del paziente. Verranno forniti allo studente gli strumenti necessari per l’elaborazione di un corretto piano terapeutico, sia farmacologico che interventistico.
 
-ultimo_aggiornamento: 2026-09-10
+      Tutte le patologie di interesse internistico rientrano nel programma del corso, che pertanto non dovrà intendersi limitato alle sole tematiche trattate nelle lezioni frontali.
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma comprende tutta la Medicina Interna, risultando quindi estremamente ampio. In generale, al sesto anno non è richiesta una conoscenza iper-specialistica di ogni patologia, ma ci si aspetta la capacità di:
+
+      - riconoscere e inquadrare i principali quadri clinici;
+      - impostare una terapia di prima linea;
+      - conoscere le principali alternative di seconda linea.
+
+      Particolare attenzione alla Gastroenterologia, soprattutto per gli argomenti affrontati dai Prof. Di Sabatino, Lenti e Santacroce.
+
+      **Da dove studiare e consigli di studio**
+
+      - Il materiale da utilizzare varia in base al docente.
+      - Prof.ssa Noris: Sbobine del corso. Può essere utile integrare con le lezioni dell’a.a. 2024/2025, quando la Prof.ssa Noris aveva un CFU aggiuntivo.
+      - Prof. Lenti: Sbobine del corso.
+      - Prof. Di Sabatino: Concentrarsi soprattutto sulle aggiunte del docente. Non è necessario perdersi eccessivamente nei casi clinici presenti nelle lezioni. Particolare attenzione agli argomenti su cui il docente insiste maggiormente, come CVID e colite microscopica.
+      - Prof. Corazza: Anche le lezioni che possono sembrare meno cliniche vanno studiate, nel caso il docente sia presente all’esame.
+      - Sono inoltre disponibili alcuni file riassuntivi dei principali quadri patologici delle diverse cliniche. Sono molto schematici, ma possono risultare particolarmente utili per il ripasso.
+      - È fondamentale utilizzare le domande degli esami precedenti per capire quali argomenti vengono maggiormente richiesti.
+      - Per le diverse docenze:
+        - Noris: studiare bene le sbobine;
+        - Lenti: studiare le sbobine;
+        - Di Sabatino: concentrarsi soprattutto sulle aggiunte del docente e sugli argomenti ricorrenti;
+        - Corazza: studiare anche le lezioni apparentemente meno cliniche;
+        - per tutti: saper inquadrare la patologia e impostare una terapia ragionevole di prima e seconda linea.
+      - Sbobine dei diversi docenti.
+      - Lezioni Noris 2024/2025.
+      - File riassuntivi dei principali quadri patologici.
+      - Domande degli esami precedenti.
+      - Il programma è enorme: non è realistico approfondire ogni patologia allo stesso livello.
+      - L'obiettivo è raggiungere una preparazione clinica da sesto anno: riconoscere il quadro, impostare l'iter diagnostico e proporre una terapia sensata.
+      - Gastroenterologia merita particolare attenzione.
+      - Il Prof. Di Sabatino ha alcuni argomenti ricorrenti su cui insiste particolarmente, tra cui CVID e colite microscopica.
+      - La preparazione è molto influenzata dal docente con cui si capita.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Cardiologia: Fibrillazione atriale (FA), Ipertensione arteriosa, Infarto miocardico acuto (IMA), Embolia polmonare, Dolore toracico, Insufficienza cardiaca
+      - Gastroenterologia: Malattia celiaca (MC), Malattie infiammatorie croniche intestinali (MICI), Ittero, Colite microscopica, Ascite, Peritonite batterica spontanea (PBS), Infezioni gastrointestinali, Dispepsia, Esofagite eosinofila, Malattia diverticolare, Gastrite atrofica autoimmune, Malattia di Wilson
+      - Pneumologia: Asma bronchiale, Pneumotorace
+      - Reumatologia e immunologia: Immunodeficienza comune variabile (CVID), Febbre di origine sconosciuta (FUO), Infezioni croniche, Artrite reumatoide (AR), Morbo di Still dell’adulto, Granulomatosi eosinofila con poliangioite
+      - Nefrologia: Malattia renale cronica (MRC), Danno renale acuto (AKI)
+      - Ematologia: Anemia: approccio diagnostico, Linfoadenopatia, Policitemia vera, Piastrinopenia (trombocitopenia), Diatesi emorragica, Emocromatosi, Trombofilie ereditarie
+      - Endocrinologia e metabolismo: Obesità e sindrome metabolica, Diabete mellito tipo 2 (DM2), Tiroidite autoimmune, Calo ponderale
+    professors:
+      - nome: Patrizia Noris
+        stile: Studiare bene le sbobine. Può essere utile integrare con le lezioni dell’a.a. 2024/2025, quando la Prof.ssa Noris aveva un CFU aggiuntivo.
+        email: patrizia.noris@unipv.it
+      - nome: Marco Vincenzo Lenti
+        stile: Studiare le sbobine.
+        email: marcovincenzo.lenti@unipv.it
+      - nome: Antonio Di Sabatino
+        stile: Concentrarsi soprattutto sulle aggiunte del docente e sugli argomenti ricorrenti. Particolare attenzione agli argomenti su cui insiste maggiormente, come CVID e colite microscopica. Può apparire particolarmente severo o intimidatorio durante l’esame, ma questo atteggiamento non si riflette necessariamente sul voto finale.
+        email: antonio.disabatino@unipv.it
+      - nome: Corazza
+        stile: Anche le lezioni che possono sembrare meno cliniche vanno studiate, nel caso il docente sia presente all’esame.
+      - nome: Giovanni Santacroce
+        stile: Particolare attenzione alla Gastroenterologia per gli argomenti affrontati.
+        email: giovanni.santacroce@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/LMyJAZ6T4TyFqMyzB1bUiI
+esse3_codice: "501833"
+cfu_totali: 8
+ultimo_aggiornamento: 2026-10-08

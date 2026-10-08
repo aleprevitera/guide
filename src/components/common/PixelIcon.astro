@@ -1,0 +1,258 @@
+---
+// Icone pixel art: griglia 8×8, solo rettangoli, renderizzate a multipli
+// interi (8 → 16/24/32px) con shape-rendering="crispEdges".
+interface Props {
+  name: 'book' | 'alert' | 'letter' | 'lock' | 'lock-open' | 'cellula' | 'cuore' | 'batterio' | 'lastra' | 'cervello' | 'tocco' | 'lente' | 'moneta' | 'penna' | 'fumetto' | 'clessidra' | 'moduli' | 'teschio' | 'calendario' | 'whatsapp';
+  size?: 16 | 24 | 32;
+  class?: string;
+}
+
+const { name, size = 32, class: className } = Astro.props;
+---
+
+{/* Fumetto verde con cornetta: rimando ai gruppi WhatsApp degli esami. */}
+{name === 'whatsapp' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="2" y="0" width="4" height="1" fill="#38b764" />
+    <rect x="1" y="1" width="6" height="1" fill="#38b764" />
+    <rect x="0" y="2" width="8" height="4" fill="#38b764" />
+    <rect x="0" y="6" width="7" height="1" fill="#38b764" />
+    <rect x="0" y="7" width="1" height="1" fill="#38b764" />
+    <rect x="2" y="2" width="1" height="2" fill="#f4f4f4" />
+    <rect x="3" y="4" width="1" height="1" fill="#f4f4f4" />
+    <rect x="4" y="5" width="2" height="1" fill="#f4f4f4" />
+  </svg>
+)}
+
+{name === 'book' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="1" width="6" height="6" fill="#ffcd75" />
+    <rect x="1" y="1" width="1" height="6" fill="#ef7d57" />
+    <rect x="3" y="2" width="3" height="1" fill="#1a1c2c" />
+    <rect x="3" y="4" width="2" height="1" fill="#1a1c2c" />
+    <rect x="2" y="7" width="5" height="1" fill="#f4f4f4" />
+    <rect x="7" y="2" width="1" height="5" fill="#94b0c2" />
+  </svg>
+)}
+
+{name === 'alert' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="0" width="6" height="8" fill="#ef7d57" />
+    <rect x="0" y="1" width="8" height="6" fill="#ef7d57" />
+    <rect x="3" y="1" width="2" height="4" fill="#1a1c2c" />
+    <rect x="3" y="6" width="2" height="1" fill="#1a1c2c" />
+  </svg>
+)}
+
+{name === 'letter' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="0" y="1" width="8" height="6" fill="#f4f4f4" />
+    <rect x="1" y="2" width="1" height="1" fill="#566c86" />
+    <rect x="2" y="3" width="1" height="1" fill="#566c86" />
+    <rect x="3" y="4" width="2" height="1" fill="#566c86" />
+    <rect x="5" y="3" width="1" height="1" fill="#566c86" />
+    <rect x="6" y="2" width="1" height="1" fill="#566c86" />
+    <rect x="3" y="5" width="2" height="1" fill="#ef7d57" />
+  </svg>
+)}
+
+{name === 'lock' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="2" y="0" width="4" height="1" fill="#94b0c2" />
+    <rect x="1" y="1" width="1" height="3" fill="#94b0c2" />
+    <rect x="6" y="1" width="1" height="3" fill="#94b0c2" />
+    <rect x="0" y="4" width="8" height="4" fill="#ffcd75" />
+    <rect x="3" y="5" width="2" height="2" fill="#1a1c2c" />
+  </svg>
+)}
+
+{name === 'lock-open' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="4" y="0" width="3" height="1" fill="#94b0c2" />
+    <rect x="3" y="1" width="1" height="1" fill="#94b0c2" />
+    <rect x="7" y="1" width="1" height="3" fill="#94b0c2" />
+    <rect x="0" y="4" width="8" height="4" fill="#a7f070" />
+    <rect x="3" y="5" width="2" height="2" fill="#1a1c2c" />
+  </svg>
+)}
+
+{name === 'cellula' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="2" y="0" width="4" height="1" fill="#f4f4f4" />
+    <rect x="1" y="1" width="1" height="1" fill="#f4f4f4" />
+    <rect x="6" y="1" width="1" height="1" fill="#f4f4f4" />
+    <rect x="0" y="2" width="1" height="4" fill="#f4f4f4" />
+    <rect x="7" y="2" width="1" height="4" fill="#f4f4f4" />
+    <rect x="1" y="6" width="1" height="1" fill="#f4f4f4" />
+    <rect x="6" y="6" width="1" height="1" fill="#f4f4f4" />
+    <rect x="2" y="7" width="4" height="1" fill="#f4f4f4" />
+    <rect x="2" y="1" width="4" height="1" fill="#ffcd75" />
+    <rect x="1" y="2" width="6" height="4" fill="#ffcd75" />
+    <rect x="2" y="6" width="4" height="1" fill="#ffcd75" />
+    <rect x="3" y="3" width="2" height="2" fill="#5d275d" />
+    <rect x="2" y="5" width="2" height="1" fill="#ef7d57" />
+  </svg>
+)}
+
+{name === 'cuore' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="1" width="2" height="1" fill="#b13e53" />
+    <rect x="5" y="1" width="2" height="1" fill="#b13e53" />
+    <rect x="0" y="2" width="8" height="2" fill="#b13e53" />
+    <rect x="1" y="4" width="6" height="1" fill="#b13e53" />
+    <rect x="2" y="5" width="4" height="1" fill="#b13e53" />
+    <rect x="3" y="6" width="2" height="1" fill="#b13e53" />
+    <rect x="1" y="2" width="1" height="1" fill="#ef7d57" />
+    <rect x="4" y="0" width="1" height="2" fill="#3b5dc9" />
+  </svg>
+)}
+
+{name === 'batterio' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="2" width="6" height="1" fill="#257179" />
+    <rect x="0" y="3" width="8" height="2" fill="#257179" />
+    <rect x="1" y="5" width="6" height="1" fill="#257179" />
+    <rect x="1" y="3" width="6" height="2" fill="#a7f070" />
+    <rect x="2" y="3" width="1" height="1" fill="#1a1c2c" />
+    <rect x="5" y="3" width="1" height="1" fill="#1a1c2c" />
+    <rect x="7" y="1" width="1" height="1" fill="#a7f070" />
+    <rect x="6" y="0" width="1" height="1" fill="#a7f070" />
+  </svg>
+)}
+
+{name === 'lastra' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="0" y="0" width="8" height="8" fill="#94b0c2" />
+    <rect x="1" y="1" width="6" height="6" fill="#1a1c2c" />
+    <rect x="3" y="1" width="2" height="6" fill="#94b0c2" />
+    <rect x="1" y="2" width="2" height="1" fill="#f4f4f4" />
+    <rect x="5" y="2" width="2" height="1" fill="#f4f4f4" />
+    <rect x="1" y="4" width="2" height="1" fill="#f4f4f4" />
+    <rect x="5" y="4" width="2" height="1" fill="#f4f4f4" />
+  </svg>
+)}
+
+{name === 'cervello' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="1" width="6" height="5" fill="#d59ef0" />
+    <rect x="0" y="2" width="8" height="3" fill="#d59ef0" />
+    <rect x="2" y="2" width="1" height="1" fill="#5d275d" />
+    <rect x="4" y="3" width="1" height="1" fill="#5d275d" />
+    <rect x="5" y="1" width="1" height="1" fill="#5d275d" />
+    <rect x="3" y="4" width="1" height="1" fill="#5d275d" />
+    <rect x="4" y="6" width="1" height="2" fill="#d59ef0" />
+  </svg>
+)}
+
+{name === 'tocco' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="0" y="2" width="8" height="2" fill="#1a1c2c" />
+    <rect x="1" y="2" width="6" height="1" fill="#333c57" />
+    <rect x="2" y="4" width="4" height="2" fill="#1a1c2c" />
+    <rect x="3" y="2" width="2" height="1" fill="#ffcd75" />
+    <rect x="6" y="3" width="1" height="3" fill="#ffcd75" />
+  </svg>
+)}
+
+{name === 'lente' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="0" width="3" height="1" fill="#1a1c2c" />
+    <rect x="0" y="1" width="1" height="3" fill="#1a1c2c" />
+    <rect x="4" y="1" width="1" height="3" fill="#1a1c2c" />
+    <rect x="1" y="4" width="3" height="1" fill="#1a1c2c" />
+    <rect x="1" y="1" width="1" height="1" fill="#94b0c2" />
+    <rect x="4" y="4" width="1" height="1" fill="#1a1c2c" />
+    <rect x="5" y="5" width="1" height="1" fill="#1a1c2c" />
+    <rect x="6" y="6" width="2" height="2" fill="#1a1c2c" />
+  </svg>
+)}
+
+{name === 'moneta' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="2" y="0" width="4" height="1" fill="#ffcd75" />
+    <rect x="1" y="1" width="6" height="1" fill="#ffcd75" />
+    <rect x="0" y="2" width="8" height="4" fill="#ffcd75" />
+    <rect x="1" y="6" width="6" height="1" fill="#ffcd75" />
+    <rect x="2" y="7" width="4" height="1" fill="#ffcd75" />
+    <rect x="3" y="2" width="2" height="4" fill="#ef7d57" />
+    <rect x="6" y="2" width="1" height="4" fill="#ef7d57" />
+  </svg>
+)}
+
+{name === 'penna' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="6" y="0" width="2" height="1" fill="#b13e53" />
+    <rect x="7" y="1" width="1" height="1" fill="#b13e53" />
+    <rect x="5" y="1" width="2" height="1" fill="#ffcd75" />
+    <rect x="4" y="2" width="2" height="1" fill="#ffcd75" />
+    <rect x="3" y="3" width="2" height="1" fill="#ffcd75" />
+    <rect x="2" y="4" width="2" height="1" fill="#ffcd75" />
+    <rect x="1" y="5" width="2" height="1" fill="#f4f4f4" />
+    <rect x="0" y="6" width="2" height="1" fill="#1a1c2c" />
+    <rect x="0" y="7" width="1" height="1" fill="#1a1c2c" />
+  </svg>
+)}
+
+{name === 'fumetto' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="0" width="6" height="1" fill="#f4f4f4" />
+    <rect x="0" y="1" width="8" height="4" fill="#f4f4f4" />
+    <rect x="1" y="5" width="6" height="1" fill="#f4f4f4" />
+    <rect x="1" y="6" width="2" height="1" fill="#f4f4f4" />
+    <rect x="1" y="7" width="1" height="1" fill="#f4f4f4" />
+    <rect x="2" y="2" width="1" height="1" fill="#566c86" />
+    <rect x="4" y="2" width="1" height="1" fill="#566c86" />
+    <rect x="6" y="2" width="1" height="1" fill="#566c86" />
+  </svg>
+)}
+
+{name === 'clessidra' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="0" y="0" width="8" height="1" fill="#94b0c2" />
+    <rect x="0" y="7" width="8" height="1" fill="#94b0c2" />
+    <rect x="1" y="1" width="6" height="1" fill="#ffcd75" />
+    <rect x="2" y="2" width="4" height="1" fill="#ffcd75" />
+    <rect x="3" y="3" width="2" height="1" fill="#ffcd75" />
+    <rect x="3" y="4" width="2" height="1" fill="#f4f4f4" />
+    <rect x="2" y="5" width="4" height="1" fill="#f4f4f4" />
+    <rect x="3" y="5" width="2" height="1" fill="#ffcd75" />
+    <rect x="1" y="6" width="6" height="1" fill="#ffcd75" />
+  </svg>
+)}
+
+{name === 'moduli' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="2" y="0" width="4" height="3" fill="#a7f070" />
+    <rect x="0" y="4" width="3" height="3" fill="#ef7d57" />
+    <rect x="5" y="4" width="3" height="3" fill="#73eff7" />
+  </svg>
+)}
+
+{name === 'teschio' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="1" y="0" width="6" height="1" fill="#94b0c2" />
+    <rect x="0" y="1" width="8" height="4" fill="#94b0c2" />
+    <rect x="1" y="5" width="6" height="1" fill="#94b0c2" />
+    <rect x="1" y="6" width="1" height="1" fill="#94b0c2" />
+    <rect x="3" y="6" width="1" height="1" fill="#94b0c2" />
+    <rect x="5" y="6" width="1" height="1" fill="#94b0c2" />
+    <rect x="2" y="7" width="4" height="1" fill="#94b0c2" />
+    <rect x="1" y="2" width="2" height="2" fill="#1a1c2c" />
+    <rect x="5" y="2" width="2" height="2" fill="#1a1c2c" />
+    <rect x="3" y="4" width="2" height="1" fill="#1a1c2c" />
+  </svg>
+)}
+
+{name === 'calendario' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="0" y="1" width="8" height="7" fill="#f4f4f4" />
+    <rect x="0" y="1" width="8" height="2" fill="#b13e53" />
+    <rect x="2" y="0" width="1" height="2" fill="#94b0c2" />
+    <rect x="5" y="0" width="1" height="2" fill="#94b0c2" />
+    <rect x="1" y="4" width="1" height="1" fill="#566c86" />
+    <rect x="3" y="4" width="1" height="1" fill="#566c86" />
+    <rect x="5" y="4" width="1" height="1" fill="#ef7d57" />
+    <rect x="1" y="6" width="1" height="1" fill="#566c86" />
+    <rect x="3" y="6" width="1" height="1" fill="#566c86" />
+  </svg>
+)}

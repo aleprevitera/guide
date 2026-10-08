@@ -1,9 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import GuideLayout from '../../layouts/GuideLayout.astro';
+import { assertUniqueIds } from '../../lib/ids';
 
 export async function getStaticPaths() {
   const guide = await getCollection('guide');
+  assertUniqueIds(guide);
   return guide.map((entry) => ({
     params: { slug: entry.id },
     props: { data: entry.data },

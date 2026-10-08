@@ -1,28 +1,58 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import YearTiles from '../components/home/YearTiles.astro';
+import LetteraMission from '../components/home/LetteraMission.astro';
+import SearchBox from '../components/common/SearchBox.astro';
+import BannerLavori from '../components/home/BannerLavori.astro';
 ---
 
-<BaseLayout title="Home" description="Guide pratiche universitarie">
-  <h1>Guide pratiche universitarie</h1>
-  <p>
-    Guide compilate e mantenute dai rappresentanti degli studenti per aiutarti a prepararti
-    agli esami: programmi, fonti di studio, tempistiche e consigli pratici.
+<BaseLayout title="Home" description="HowToGolgi: guide pratiche agli esami di Medicina e Chirurgia a Pavia, scritte dai rappresentanti degli studenti">
+  <BannerLavori />
+  <h1 tabindex="-1">HowTo<span class="h1-golgi">Golgi</span></h1>
+  <p class="intro">
+    Programmi, fonti di studio, tempistiche e consigli pratici per ogni esame, scritti dai
+    rappresentanti degli studenti.
   </p>
-  <p><a href="/guide/">Vai all'elenco delle guide →</a></p>
+
+  <SearchBox />
+
+  <section aria-labelledby="anni-titolo" id="anni">
+    <h2 id="anni-titolo">Scegli il tuo anno</h2>
+    <YearTiles />
+  </section>
+
+  <LetteraMission />
+
+  <p class="tutte">
+    <a class="btn-px label" href="/guide/">Tutte le guide</a>
+  </p>
 </BaseLayout>
 
-<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  /* Come nell'intestazione: "Golgi" in giallo. */
+  .h1-golgi {
+    color: var(--accent);
+  }
+  .intro {
+    color: var(--text-2);
+  }
+  #anni {
+    scroll-margin-top: 16px;
+  }
+  .tutte {
+    margin: 32px var(--px) 0;
+  }
+</style>
+
 <script is:inline>
-  // Gli inviti/recuperi password di Netlify Identity atterrano sulla home
-  // del sito (SITE_URL/#invite_token=...): questo gestore apre il popup di
-  // attivazione e, dopo il login, porta l'utente su /admin/.
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on('init', (user) => {
-      if (!user) {
-        window.netlifyIdentity.on('login', () => {
-          document.location.href = '/admin/';
-        });
-      }
-    });
+  // Gli inviti/recuperi password di Netlify Identity (solo rappresentanti)
+  // atterrano sulla home (SITE_URL/#invite_token=...). Il widget si scarica
+  // solo in quel caso, non per ogni visitatore (vedi /privacy/): apre il popup
+  // di attivazione e, dopo il login, porta su /admin/.
+  if (/(invite|recovery|confirmation|email_change)_token=/.test(location.hash)) {
+    const s = document.createElement('script');
+    s.src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+    s.onload = () => window.netlifyIdentity?.on('login', () => (document.location.href = '/admin/'));
+    document.head.append(s);
   }
 </script>

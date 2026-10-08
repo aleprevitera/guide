@@ -1,205 +1,205 @@
-title: Oncologia e Diagnostica per Immagini
+id: g-8u01rdat
+title: Oncologia e Diagnostica per immagini
+esse3_codice: "506413"
 anno_di_corso: IV Anno
-cfu_totali: 5
-descrizione_generale: >-
-  Esame integrato composto da **due moduli**: Oncologia (orale) e Diagnostica
-  per
-
-  immagini (scritto). Le due parti hanno modalità di svolgimento, programmi e
-
-  tempistiche di preparazione differenti.
+cfu_totali: 6
+descrizione_generale: "L’esame è composto da due moduli: **Oncologia** (orale) e **Diagnostica per immagini** (scritta). La media è ponderata dei due moduli (2 CFU per Oncologia e 4 CFU per Diagnostica per immagini)."
 moduli:
   - nome_modulo: Oncologia
+    id: m-4ewf06rv
     exam_type: Orale
-    study_time: circa 1 mese
-    exam_details: >
-      Sono presenti **più docenti** che possono interrogare. L'interrogazione
-      dura
+    study_time: 1 mese
+    preappello: Sì
+    frequenza: Obbligatoria
+    durata_orale_min: 15
+    exam_details: |-
+      L’esame è **orale**. Sono presenti più docenti che possono interrogare. L’interrogazione dura indicativamente **15 minuti**.
 
-      indicativamente **15 minuti**.
+      **Preappello**: è previsto; nell’ultimo anno accademico si è svolto a metà maggio.
 
+      **Frequenza**: obbligatoria, ma i controlli non sono particolarmente rigorosi.
+    program: |-
+      Per quanto riguarda il programma e i contenuti si fa riferimento a quanto scritto nei singoli moduli costituenti il corso integrato.
 
-      È previsto il **preappello**, che nell'anno di riferimento si è svolto **a
+      Basi patogenetiche, epidemiologia e prevenzione primaria e secondaria dei tumori.
 
-      metà maggio**.
+      Iter diagnostico nel soggetto con sospetta neoplasia (anamnesi, esame obiettivo, indagini strumentali e di laboratorio).
 
+      **Approccio al paziente con diagnosi di neoplasia:**
 
-      La frequenza è obbligatoria, ma i controlli non risultano particolarmente
+      - Stadiazione della malattia ai fini prognostici e terapeutici.
+      - Approccio multidisciplinare al paziente oncologico: tumor board, PDTA.
+      - Concetti fondamentali di trattamento delle neoplasie: terapia sistemica (chemioterapia,, terapie target, immunoterapia) e approcci loco-regionali.
+      - Principali effetti collaterali acuti e tardivi dei trattamenti oncologici e come affrontarli.
+      - Percorso diagnostico, terapeutico e follow-up di patologie oncologiche specifiche, in particolare di quelle a maggiore incidenza.
+      - Le terapie complementari, le cure palliative; concetti di "cure simultanee" e di supporto nutrizionale nel paziente oncologico.
 
-      rigorosi.
-    program: >
-      Il programma è **molto ampio**, ma non ci sono argomenti che vengano
-      sistematicamente
+      **Conoscere i principi generali della radioterapia oncologica:**
 
-      richiesti più di altri: è consigliabile preparare **tutto il programma**.
+      1. Iter diagnostico, stadiazione, iter terapeutico,
+      2. Tappe nella pianificazione radioterapica: indicazioni, procedure di simulazione, definizione dei volumi bersaglio tumorale e degli organi a rischio, dose totale e frazionamenti, approvazione e verifica del piano di trattamento,
+      3. Ruolo della radioterapia nei seguenti scenari: carcinoma del polmone (microcitoma e non-microcitoma), carcinoma della mammella, carcinoma della prostata, carcinoma del testa-collo, gastroenterico,
+      4. Effetti collaterali delle radioterapia per i principali scenari clinici,
+      5. Follow-up del paziente sottoposto a radioterapia.
 
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/12832/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
 
-      Le domande risultano generalmente coerenti con gli argomenti effettivamente trattati
+      Il programma è molto ampio e non ci sono argomenti che vengano sistematicamente richiesti più di altri. È quindi consigliabile preparare tutto il programma. Il programma può variare leggermente di anno in anno in base agli argomenti affrontati a lezione. Nell’ultimo anno accademico è stata aggiunta una parte relativa alle cure palliative.
 
-      durante le lezioni. Ad esempio, i **tumori rari**, non trattati nelle lezioni di
+      La fonte principale sono le **sbobine 2024-2025**, molto complete. È consigliabile confrontarle con il materiale dell’anno corrente per verificare eventuali argomenti aggiunti o modificati.
 
-      riferimento, non sono stati richiesti nell'anno considerato.
+      Consigli:
 
+      - non concentrarsi esclusivamente su presunti argomenti più frequenti;
+      - studiare tutto il programma;
+      - utilizzare le sbobine più recenti e complete;
+      - verificare eventuali argomenti aggiunti nell’anno corrente;
+      - dedicare particolare attenzione alla ripetizione, dato che l’esame è orale.
+    body: |-
+      **Domande e argomenti ricorrenti**
 
-      Il programma può variare leggermente di anno in anno in base agli argomenti
-
-      affrontati a lezione. Nell'anno di riferimento è stata inoltre aggiunta una parte
-
-      relativa alle **cure palliative**.
-    material_tips: >
-      La fonte principale utilizzata sono le **sbobine 2024-2025**, molto
-      complete.
-
-      Sono state usate in particolare perché, nell'anno di riferimento, le sbobine
-
-      dell'anno corrente non erano ancora disponibili al momento della preparazione
-
-      del preappello. È comunque consigliabile confrontarle con il materiale
-
-      dell'anno corrente, soprattutto per verificare eventuali **argomenti aggiunti
-
-      o modificati**.
-
-
-      Il consiglio principale è **non concentrarsi esclusivamente su presunti
-
-      argomenti più frequenti**, perché le domande possono riguardare praticamente
-
-      tutto ciò che viene affrontato a lezione. È quindi utile:
-
-
-      - studiare tutto il programma
-
-      - utilizzare le sbobine più recenti e complete
-
-      - verificare eventuali argomenti aggiunti nell'anno corrente
-
-      - prepararsi soprattutto attraverso la **ripetizione**, dato che l'esame è orale
-    body: >
-      Non risultano esserci argomenti specifici richiesti sistematicamente più
-      degli
-
-      altri. Le domande tendono comunque a essere **coerenti con quanto spiegato
-
-      durante le lezioni**.
-
-
-      Gli argomenti non trattati durante le lezioni possono essere meno rilevanti ai
-
-      fini dell'esame: nell'anno di riferimento, ad esempio, i **tumori rari** non
-
-      sono stati richiesti.
-    professors: []
+      - Non ci sono argomenti specifici che vengono richiesti sistematicamente più degli altri.
+      - Le domande tendono a essere coerenti con quanto spiegato durante le lezioni.
+      - Gli argomenti non trattati durante le lezioni possono essere meno rilevanti ai fini dell’esame: nell’ultimo anno accademico, ad esempio, i tumori rari non sono stati richiesti.
+    fascia_studio: 3–4 sett
+    professors:
+      - nome: Lorenzo Preda
+        email: lorenzo.preda@unipv.it
+      - nome: Paolo Pedrazzoli
+        email: paolo.pedrazzoli@unipv.it
+      - nome: Francesco Agustoni
+        email: francesco.agustoni@unipv.it
+      - nome: Salvatore Corallo
+        email: salvatore.corallo@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/Ejch1ZaWGM85ZqhCoR6tcw
   - nome_modulo: Diagnostica per immagini
+    id: m-t588av4v
     exam_type: Scritto
-    study_time: 10 giorni (minimo) — 1 mese (preparazione completa)
-    exam_details: >
-      L'esame si svolge tramite **Chirotesting**. La prova comprende:
-
+    study_time: 10 giorni – 1 mese
+    preappello: No
+    exam_details: |-
+      L’esame è **scritto** e si svolge tramite **Kiro Testing**. La prova comprende:
 
       - 7 domande a scelta multipla di Radiologia
-
       - 4 domande a scelta multipla di Radioterapia
-
       - 4 domande a scelta multipla di Neuroradiologia
-
       - 3 domande aperte, una per ciascuna delle tre sezioni
 
+      Le domande a scelta multipla sono **senza penalità**. Le domande vengono estratte da un ampio pool di quesiti, non accessibile agli studenti, e possono quindi essere differenti tra i vari candidati. La difficoltà della prova può pertanto variare sensibilmente da uno studente all’altro. La valutazione viene inoltre **normalizzata con una correzione gaussiana**, che tende ad allineare i risultati tenendo conto della difficoltà complessiva della prova.
 
-      Le domande a scelta multipla sono **senza penalità**. Vengono estratte da un
+      **Preappello**: per Diagnostica per immagini non è previsto.
 
-      ampio pool di quesiti non accessibile agli studenti, e possono essere diverse
+      **Frequenza**: è più controllata rispetto ad altri insegnamenti. I docenti prestano attenzione alla presenza in aula e al numero di studenti presenti, anche se non è necessariamente richiesta una partecipazione al 100% delle lezioni.
 
-      tra i vari candidati: la difficoltà della prova può quindi variare
+      **Flipped classroom**: prevista per Diagnostica per immagini, alla quale possono partecipare gli studenti che hanno raggiunto almeno il 75% di frequenza. L’attività consiste generalmente in:
 
-      sensibilmente da uno studente all'altro. La valutazione viene normalizzata con
+      - scelta di un argomento tra quelli proposti;
+      - lettura degli articoli forniti dai docenti;
+      - preparazione di una presentazione PowerPoint;
+      - esposizione del lavoro.
 
-      una correzione gaussiana.
+      Sono previsti punti aggiuntivi sull’esame:
 
+      - partecipazione → +1 punto;
+      - gruppi finalisti → +3 punti;
+      - gruppo vincitore → +5 punti.
+    program: |-
+      Per quanto riguarda il programma e i contenuti si fa riferimento a quanto scritto nei singoli moduli costituenti il corso integrato.
 
-      La frequenza risulta più controllata rispetto ad altri insegnamenti, anche se
+      Il corso ha una componente didattica significativa.
 
-      non è richiesta la partecipazione al 100% delle lezioni.
+      I temi trattati spaziano da argomenti di radiologia generale (punti di forza e limiti delle diverse modalità di imaging, giustificazione e appropriatezza del loro utilizzo, vantaggi e controindicazioni dei mezzi di contrasto) ad argomenti specifici quali le indicazioni alla diagnostica per immagini e elementi base di semeiotica radiologica della patologia toracica e cardiovascolare, della patologia focale e diffusa epatica e pancreatica, della patologia dell'apparato gastro-enterico, della patologia dell’apparato muscolo-scheletrico, della patologa dell’apparato genito-urinario maschile e femminile e della patologia oncologica mammaria.
 
+      La conoscenza sarà ulteriormente rafforzata dalla discussione di casi emblematici delle problematiche cliniche trattate. Saranno fornite informazioni di base in merito alle probematiche correlate alla radioprotezione del paziente e del personale sanitario, alla luce della normativa vigente.
 
-      È prevista una **flipped classroom**, aperta agli studenti che hanno raggiunto
+      **Attrezzature radiologiche:**
 
-      almeno il 75% di frequenza. Sono previsti punti aggiuntivi sull'esame: +1
+      tipi e caratteristiche di funzionamento delle attrezzature radiologiche utilizzate nella diagnostica ed interventistica neuroradiologica con particolare attenzione all'impiego della TC e della RM sia nella fase acuta che nel follow-up.
 
-      punto per la partecipazione, +3 punti per i gruppi finalisti, +5 punti per il
+      Tecniche di indagine da utilizzare nella diagnostica delle principali patologie dell'encefalo e del midollo come:
 
-      gruppo vincitore.
-    program: >
+      - malattie cerebrovascolari in fase acuta e stabilizzata
+      - malattie infettivo-infiammatorie
+      - tumori cerebrali
+      - tumori spinali
+      - invecchiamento cerebrale e deterioramento cognitivo
+      - patologie degenerative dell'encefalo
+      - traumi cranio-spinali
+      - epilessia
+      - patologie dell'ipofisi
+      - patologie degenerative della colonna
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/12832/2017/9999?coorte=2023&schemaid=17807).*
+    material_tips: |-
+      **Sul programma**
+
       Il programma comprende diverse aree:
 
+      - Radiologia
+      - Pneumoradiologia
+      - Radioterapia
+      - Neuroradiologia
+      - imaging dell’apparato riproduttore femminile
+      - radiologia ginecologica
+      - imaging del sistema vascolare
+
+      È importante preparare anche gli argomenti che non vengono necessariamente approfonditi durante le lezioni, ma che possono comparire nelle domande d’esame.
+
+      La preparazione è stata effettuata principalmente dalle **sbobine 2023-2024**, utilizzando:
 
       - Radiologia
-
       - Pneumoradiologia
-
       - Radioterapia
-
       - Neuroradiologia
 
-      - Imaging dell'apparato riproduttore femminile
+      A queste vanno aggiunte alcune lezioni di altre annate:
 
-      - Radiologia ginecologica
+      - **Sbobine 2023-2024** → imaging dell’apparato riproduttore femminile
+      - **Sbobine 2024-2025** → radiologia ginecologica
+      - **Sbobine 2019-2020** → imaging del sistema vascolare
 
-      - Imaging del sistema vascolare
+      Quest’ultima lezione è particolarmente importante perché, nell’ultimo anno accademico, è stata oggetto di una domanda aperta, nonostante l’argomento non fosse stato spiegato direttamente a lezione. È inoltre consigliabile consultare le **sbobine dell’anno corrente** per verificare eventuali aggiornamenti.
 
+      **Materiale aggiuntivo**:
 
-      È importante preparare anche gli argomenti che non vengono necessariamente
+      - esercitazioni caricate dai docenti;
+      - presentazioni disponibili sul Drive;
+      - immagini proiettate durante le lezioni.
 
-      approfonditi durante le lezioni, ma che possono comparire nelle domande d'esame.
-    material_tips: >
-      La preparazione è stata effettuata principalmente dalle **sbobine
-      2023-2024**
+      Le immagini mostrate durante le lezioni possono essere riproposte nelle domande a scelta multipla. Per l’imaging dei tumori ossei, l’argomento è stato affrontato anche nella flipped classroom, ma è comunque presente nelle sbobine 2023-2024, che rappresentano la fonte principale.
 
-      (Radiologia, Pneumoradiologia, Radioterapia, Neuroradiologia), con l'aggiunta
+      **Consigli**:
 
-      di alcune lezioni da altre annualità:
+      - studiare dalle sbobine indicate;
+      - guardare le slide dei docenti;
+      - svolgere le esercitazioni caricate sul Drive;
+      - osservare attentamente le immagini proiettate durante le lezioni.
 
+      Non è possibile prevedere con precisione la difficoltà delle domande a crocette, poiché vengono estratte da un pool molto ampio e possono cambiare tra gli studenti. È quindi utile arrivare all’esame con una preparazione il più possibile ampia.
+    body: |-
+      **Domande e argomenti ricorrenti**
 
-      - Imaging e apparato riproduttore femminile — sbobine **2023-2024**
-
-      - Radiologia ginecologica — sbobine **2024-2025**
-
-      - Imaging del sistema vascolare — sbobine **2019-2020** (particolarmente
-        importante: nell'anno di riferimento è stata oggetto di una domanda aperta)
-
-      È inoltre consigliabile guardare le slide dei docenti, svolgere le
-
-      esercitazioni caricate sul Drive e osservare attentamente le immagini
-
-      proiettate durante le lezioni, che possono essere riproposte nelle domande a
-
-      scelta multipla. Per l'imaging dei tumori ossei, l'argomento è affrontato
-
-      anche nella flipped classroom, ma è comunque presente nelle sbobine
-
-      2023-2024, fonte principale da utilizzare.
-    body: >
-      Non è disponibile un elenco stabile di domande ricorrenti, dato che le
-
-      domande a scelta multipla vengono estratte da un pool molto ampio. È però
-
-      particolarmente utile conoscere:
-
-
-      - le immagini mostrate a lezione e nelle esercitazioni
-
-      - gli argomenti delle presentazioni caricate sul Drive
-
-      - imaging del sistema vascolare, oggetto di una domanda aperta nell'anno di
-        riferimento
-      - imaging dei tumori ossei, affrontato anche nella flipped classroom
-    professors: []
-info_da_verificare:
-  - campo: Peso CFU dei due moduli e modalità esatta di calcolo della media finale
-    nota: >
-      Una studentessa riferisce che Diagnostica per immagini ha un peso maggiore
-
-      rispetto a Oncologia nella media finale, ma non ricorda la modalità esatta di
-
-      calcolo. Da confermare con la segreteria didattica o con i docenti.
-ultimo_aggiornamento: 2026-09-10
+      - Non è disponibile un elenco stabile di domande ricorrenti, anche perché le domande a scelta multipla vengono estratte da un pool molto ampio.
+      - È particolarmente utile conoscere:
+        - le immagini mostrate a lezione;
+        - le immagini presenti nelle esercitazioni;
+        - gli argomenti delle presentazioni caricate sul Drive;
+        - imaging del sistema vascolare, che nell’ultimo anno accademico è stato oggetto di una domanda aperta;
+        - imaging dei tumori ossei, affrontato anche nella flipped classroom e presente nelle sbobine.
+    esse3_appello: RX-NEURORX-RT
+    fascia_studio: 3–4 sett
+    professors:
+      - nome: Lorenzo Preda
+        email: lorenzo.preda@unipv.it
+      - nome: Chandra Bortolotto
+        email: chandra.bortolotto@unipv.it
+      - nome: Ester Orlandi
+        email: ester.orlandi@unipv.it
+      - nome: Anna Pichiecchio
+        email: anna.pichiecchio@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/DqOyLKjCSTEGeRQA3tHPEK
+aggiornato_da: Sara Cocci
+semestre: II
+ultimo_aggiornamento: 2026-10-08

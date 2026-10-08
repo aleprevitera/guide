@@ -1,0 +1,210 @@
+---
+// Lettera dei creatori sulla mission del progetto.
+// Modificabile SOLO qui nel codice (non da Decap): il testo è dei creatori.
+import PixelIcon from '../common/PixelIcon.astro';
+import { ANNI_DI_CORSO } from '../../lib/anni';
+import { MONDI } from '../../lib/mondi';
+
+// Firme a pezzi: le parti tra [quadre] sono evidenziate e compongono la
+// sigla del footer, "RUSPI x AGP".
+const firme = ['Francesco [Ruspi]no', '[A]lessandro [G]avino [P]revitera'].map((f) =>
+  f.split(/(\[[^\]]+\])/).filter(Boolean).map((t) => ({ testo: t.replace(/[[\]]/g, ''), sigla: t.startsWith('[') })),
+);
+---
+
+<section class="lettera panel px-border" aria-labelledby="lettera-titolo">
+  <div class="lettera__testa">
+    <PixelIcon name="letter" size={32} />
+    <h2 id="lettera-titolo" class="label">Lettera dai creatori</h2>
+  </div>
+
+  {/* data-rivela: paragrafi, separatore e motto compaiono allo scorrimento
+      (src/lib/rivela.ts); senza JS o con "riduci movimento" tutto è visibile. */}
+  <div class="lettera__corpo" data-rivela>
+    <p class="lettera__primo">
+      Medicina è un percorso lungo e faticoso. Gran parte della fatica, però, non sta nello studio; sta in tutto
+      quello che gli gira intorno: capire come funziona un esame, quali sbobine usare, quanto tempo serve, a chi
+      chiedere. Sono informazioni che esistono già, sparse tra chat, cartelle condivise e passaparola. E,
+      soprattutto, sono informazioni dinamiche, che cambiano costantemente e che non possono stare ai tempi delle
+      guide su rotocalco.
+    </p>
+    {/* Sei quadratini nei colori dei sei anni: si accendono uno dopo l'altro. */}
+    <div class="lettera__anni" aria-hidden="true">
+      {ANNI_DI_CORSO.map((a, k) => <span style={`--c:${MONDI[a].chiaro};--k:${k}`}></span>)}
+    </div>
+    <p>
+      Questo sito nasce proprio per <mark class="evidenzia">mettere ordine</mark>: un unico posto, organizzato per
+      anno e per semestre, dove trovare ciò che serve per affrontare ogni esame. Il tutto con il vantaggio di poter
+      ricevere aggiornamenti <mark class="evidenzia">costanti e istantanei</mark>.
+    </p>
+    <p class="lettera__motto">Meno tempo a cercare, più tempo per studiare. E, preferibilmente, per tutto il resto.</p>
+    <p>
+      Ci teniamo a sottolineare che si tratta di un progetto <mark class="evidenzia">apolitico</mark>: non appartiene
+      a nessuna lista e a nessuno schieramento. È nato dalla collaborazione tra rappresentanti e studenti di anni
+      diversi, che hanno messo la propria esperienza a disposizione di chi viene dopo. Per questo
+      <mark class="evidenzia">è di tutti</mark>, e cresce solo se ognuno fa la sua parte: un voto, una correzione,
+      un consiglio in più.
+    </p>
+  </div>
+
+  <p class="lettera__firme">
+    {firme.map((pezzi) => (
+      <span class="lettera__firma">
+        {pezzi.map((p) => (p.sigla ? <span class="lettera__sigla">{p.testo}</span> : p.testo))}
+      </span>
+    ))}
+  </p>
+</section>
+
+<style>
+  .lettera {
+    background: var(--panel);
+  }
+  .lettera__testa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .lettera__testa h2 {
+    margin: 0;
+    color: var(--accent);
+  }
+  .lettera__corpo {
+    color: var(--text-2);
+  }
+
+  /* Capolettera: la prima lettera in un blocco giallo, in carattere pixel. */
+  .lettera__primo::first-letter {
+    float: left;
+    margin: 4px 8px 0 0;
+    padding: 4px 8px;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: 40px;
+    line-height: 1;
+    -webkit-font-smoothing: none;
+  }
+
+  /* Separatore: un quadratino per anno, nel colore del suo mondo. */
+  .lettera__anni {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  .lettera__anni span {
+    width: 12px;
+    height: 12px;
+    background: var(--c);
+  }
+  .lettera__anni.is-visto span {
+    animation: accendi 1ms steps(1, end) backwards;
+    animation-delay: calc(240ms + var(--k) * 120ms);
+  }
+  @keyframes accendi {
+    from { background: var(--bg); }
+  }
+
+  /* Evidenziatore: tratto giallo sotto la parola, steso a scatti quando il
+     paragrafo compare. Il testo resta sul fondo del pannello (contrasto pieno). */
+  .evidenzia {
+    color: var(--text);
+    background: linear-gradient(var(--accent), var(--accent)) no-repeat 0 100% / 100% 4px;
+    padding-bottom: 2px;
+    hyphens: manual;
+  }
+  .is-visto .evidenzia {
+    animation: evidenzia 480ms steps(6, end) backwards;
+    animation-delay: 360ms;
+  }
+  @keyframes evidenzia {
+    from { background-size: 0 4px; }
+  }
+
+  /* Motto: frase-slogan in carattere pixel, che compare riga per riga. */
+  .lettera__motto {
+    margin: 24px 0;
+    padding: 16px 12px;
+    background: var(--bg);
+    color: var(--text);
+    text-align: center;
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: 20px;
+    line-height: 1.4;
+    hyphens: manual;
+    -webkit-font-smoothing: none;
+  }
+  .lettera__motto.is-visto {
+    animation: motto 600ms steps(4, end) backwards;
+  }
+  @keyframes motto {
+    from { clip-path: inset(0 0 100% 0); }
+  }
+  @media (forced-colors: active) {
+    .evidenzia { text-decoration: underline; background: none; }
+    .lettera__anni span { outline: 1px solid CanvasText; }
+    .lettera__motto { outline: 2px solid CanvasText; }
+  }
+  /* Le due firme una sotto l'altra, centrate, dentro una cornice di luci
+     pixel che corrono in senso orario come le lampadine di un'insegna
+     arcade: 4 strisce di "lampadine" 4×4 ogni 12px, spostate di 4px a ogni
+     scatto. Con prefers-reduced-motion le luci restano accese e ferme. */
+  .lettera__firme {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 0;
+    padding: 20px 8px;
+  }
+  .lettera__firme::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    --lampada: linear-gradient(to right, var(--accent) 4px, transparent 4px);
+    --lampada-v: linear-gradient(to bottom, var(--accent) 4px, transparent 4px);
+    background:
+      var(--lampada) 0 0 / 12px 4px repeat-x,
+      var(--lampada-v) 100% 0 / 4px 12px repeat-y,
+      var(--lampada) 0 100% / 12px 4px repeat-x,
+      var(--lampada-v) 0 0 / 4px 12px repeat-y;
+    animation: luci 600ms steps(3, end) infinite;
+  }
+  @keyframes luci {
+    to {
+      background-position: 12px 0, 100% 12px, -12px 100%, 0 -12px;
+    }
+  }
+  /* Le lettere della sigla in giallo, accese a turno come le luci della cornice. */
+  .lettera__sigla {
+    color: var(--accent);
+    animation: sigla 2.4s steps(1, end) infinite;
+  }
+  @keyframes sigla {
+    50% { color: var(--text); }
+  }
+  @media (forced-colors: active) {
+    .lettera__sigla { text-decoration: underline; }
+    .lettera__firme::before {
+      background: none;
+      outline: 4px dashed CanvasText;
+      outline-offset: -4px;
+    }
+  }
+  .lettera__firma {
+    text-align: center;
+    line-height: 1.2;
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    /* Un po' più piccolo dei titoli: ogni nome sta su una riga a 375px. */
+    font-size: 20px;
+    color: var(--text);
+    -webkit-font-smoothing: none;
+  }
+</style>

@@ -1,0 +1,385 @@
+id: g-0lom9qml
+title: Pediatria
+esse3_codice: "501763"
+anno_di_corso: V Anno
+cfu_totali: 7
+semestre: II
+descrizione_generale: |-
+  L’esame è composto da tre moduli: Pediatria, Chirurgia pediatrica e Neuropsichiatria infantile (NPI). I tre orali si svolgono contemporaneamente.
+
+  Tempo di studio complessivo: circa 1 mese di studio intenso.
+
+  Voto finale: non specificato.
+
+  **Consigli generali**
+
+  - Personalizzare il ripasso in base ai docenti, tenendo presenti le relative sottospecialità e gli argomenti di maggiore interesse.
+  - Preparare una buona introduzione sul proprio percorso: la prima domanda di Pediatria può riguardare la specializzazione desiderata o il reparto dell’internato.
+  - Non limitarsi alle sbobine dell’anno principale: è necessario integrare il materiale degli altri anni.
+  - Consultare le domande passate di Chirurgia pediatrica, che possono aiutare a orientare lo studio.
+  - Curare particolarmente il linguaggio in NPI, utilizzando una terminologia precisa e specifica.
+  - Non trascurare esame neurologico del bambino, paralisi cerebrali e sindromi epilettiche specifiche.
+  - Per Pediatria, prestare attenzione agli argomenti legati alla propria eventuale area di internato o di interesse specialistico.
+moduli:
+  - nome_modulo: Pediatria
+    id: m-akbjnuzm
+    exam_type: Orale
+    exam_details: Gli studenti vengono generalmente chiamati due alla volta, in ordine alfabetico, e ciascuno riceve due domande. I docenti tendono a concentrarsi sugli argomenti della propria sottospecialità. La prima domanda può riguardare la specializzazione desiderata o il reparto nel quale si sta svolgendo l’internato.
+    program: |-
+      **Pediatria generale e specialistica**
+
+      **Argomenti irrinunciabili:**
+
+      - note essenziali di fisiopatologia della vita intrauterina
+      - assistenza al neonato normale e patologico (sofferenza fetale, asfissia perinatale)
+      - neonato a termine, pre-termine e post-termine, di peso appropriato e di basso peso
+      - fenomeni fisiologici neonatali
+      - screening neonatali
+      - ritardo di crescita intrauterina
+      - encefalopatia ipossico-ischemica-emorragica
+      - emorragie endocraniche
+      - malattia delle membrane ialine
+      - displasia broncopolmonare
+      - itteri neonatali
+      - enterocolite necrotizzante
+      - atresia esofagea
+      - stenosi ipertrofica del piloro
+      - infezioni e sepsi neonatali
+      - convulsioni neonatali.
+
+      **Argomenti opzionali:**
+
+      - adattamento alla vita extrauterina
+      - neonato di peso molto basso
+      - elementi di nutrizione del neonato;
+
+      **Endocrinologia**
+
+      **Argomenti irrinunciabili:**
+
+      - note di auxologia
+      - deficit staturali
+      - deficit di ormone della crescita
+      - pubertà normale, precoce e ritardata
+      - ipotiroidismo, ipertiroidismo
+      - tiroidite
+      - gozzo
+      - sindrome adrenogenitale
+      - diabete mellito insulino-dipendente
+      - diabete insipido
+      - obesità semplice e patologica.
+
+      **Malattie del metabolismo**
+
+      **Argomenti irrinunciabili:**
+
+      - rachitismo
+
+      **Ematologia e oncoematologia**
+
+      **Argomenti irrinunciabili:**
+
+      - anemie
+      - leucemie
+      - linfomi
+      - piastrinopenie
+      - piastrinopatie.
+      - epato-splenomegalie.
+
+      **Gastroenterologia**
+
+      **Argomenti irrinunciabili:**
+
+      - vomito
+      - reflusso gastroesofageo
+      - gastroenterite
+      - diarrea cronica
+      - malassorbimento (malattia celiaca, fibrosi cistica)
+      - malattia infiammatoria cronica (morbo di Crohn, rettocolite ulcerosa).
+
+      **Patologia cromosomica**
+
+      **Argomenti irrinunciabili:**
+
+      - sindrome di Klinefelter, Turner, Down.
+
+      **Immunologia ed allergologia**
+
+      **Argomenti irrinunciabili:**
+
+      - principali condizioni di immunodeficienza congenita ed acquisita
+      - asma bronchiale.
+
+      **Reumatologia**
+
+      **Argomenti irrinunciabili:**
+
+      - reumatismo articolare acuto
+      - collagenopatie (artrite idiopatica giovanile, lupus eritematoso sistemico giovanile, dermatomiosite giovanile, porpora di Schönlein-Henoch, malattia di Kawasaki).
+
+      **Nefrologia ed urologia**
+
+      **Argomenti irrinunciabili:**
+
+      - sindrome nefrosica
+      - sindrome nefritica
+      - infezioni delle vie urinarie.
+
+      **Infettivologia**
+
+      **Argomenti irrinunciabili:**
+
+      - febbre
+      - morbillo
+      - rosolia
+      - megaloeritema infettivo
+      - esantema critico
+      - varicella
+      - scarlattina
+      - mononucleosi infettiva
+      - parotite
+      - pertosse
+      - meningite a liquor torbido e limpido
+      - tubercolosi.
+
+      **Vaccinazioni**
+
+      **Argomenti irrinunciabili:**
+
+      - vaccinazioni obbligatorie e facoltative.
+
+      **Broncopneumologia**
+
+      **Argomenti irrinunciabili:**
+
+      - faringo-tonsillite acuta
+      - sinusite
+      - otite media
+      - laringiti
+      - bronchite acuta
+      - bronchiolite
+      - polmoniti
+      - pleuriti
+      - tosse.
+
+      **Argomenti opzionali:**
+
+      - bronchiectasie
+      - pneumopatie croniche.
+
+      **Cardiologia**
+
+      **Argomenti irrinunciabili:**
+
+      - principali cardiopatie congenite.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11272/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Oltre al programma generale, è utile approfondire:
+
+      - pneumologia: polmoniti, asma e bronchiolite;
+      - celiachia;
+      - infezioni del sistema nervoso;
+      - crisi epilettiche;
+      - sindrome di Guillain-Barré;
+      - atassia;
+      - anemie;
+      - gastroenterologia, nefrologia e otorinolaringoiatria, soprattutto in relazione al reparto frequentato durante l’internato o alla specializzazione di interesse.
+
+      La fonte principale sono le sbobine 2024/2025, da integrare con materiale di altri anni:
+
+      - sbobine 2023/2024: polmoniti, asma, bronchiolite, celiachia, infezioni del sistema nervoso e crisi epilettiche;
+      - sbobine 2025/2026: sindrome di Guillain-Barré, atassia e anemie.
+
+      Le anemie sono un argomento richiesto frequentemente dal Prof. Castagnoli.
+      Dal libro è utile leggere le parti relative a gastroenterologia, nefrologia e ORL, soprattutto se si sta svolgendo un internato in questi reparti.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Immunologia, in particolare SCID; pubertà e crescita; anemie; Guillain-Barré; atassia
+      - Specializzazione desiderata o reparto dell’internato come possibile prima domanda
+    professors:
+      - nome: Riccardo Castagnoli
+        stile: Interroga su immunologia (es. SCID) e anemie; le anemie sono richieste frequentemente.
+        email: riccardo.castagnoli@unipv.it
+      - nome: Brambilla
+        stile: Interroga su pubertà e crescita.
+      - nome: Amelia Licari
+        email: amelia.licari@unipv.it
+      - nome: Simona Orcesi
+        email: simona.orcesi@unipv.it
+      - nome: Gianluigi Augusto Marseglia
+        email: gianluigi.marseglia@unipv.it
+      - nome: Valeria Calcaterra
+        email: valeria.calcaterra@unipv.it
+  - nome_modulo: Chirurgia pediatrica
+    id: m-5o6zmswx
+    exam_type: Orale
+    exam_details: L’esame è tenuto dal Prof. Bertozzi. Vengono generalmente interrogati tre studenti insieme.
+    program: |-
+      **Chirurgia pediatrica**
+
+      **Argomenti irrinunciabili:**
+
+      - atresia dell'esofago
+      - ernia diaframmatica congenita
+      - occlusioni intestinali nel neonato
+      - stenosi ipertrofica infantile del piloro
+      - ernia inguinale
+      - emorragie gastrointestinali
+      - fimosi
+      - criptorchidismo
+      - addome acuto
+      - masse addominali
+      - idronefrosi
+      - appendicite acuta
+
+      **Argomenti opzionali:**
+
+      - onfalocele
+      - gastroschisi
+      - atresia vie biliari
+      - varicocele
+      - neuroblastoma
+      - nefroblastoma (tumore di Wilms)
+      - epatoblastoma
+      - reflusso vescicoureterale
+      - ipospadia
+
+      1. **Addome acuto nel bambino in chirurgia pediatrica**
+
+      - Invaginazione intestinale
+      - Appendicite acuta
+      - diverticolo di Meckel e complicanze
+      - volvolo
+      - torsione ovarica
+      - torsione tubarica
+      - empiema pleurico
+
+      2. **Scroto acuto**
+
+      - Torsione del testicolo
+      - torsione delle idatidi
+      - torsione dell’epididimo
+      - traumi del testicolo
+      - epididimite e orchiepididimite
+
+      2. **Malformazioni congenite**
+
+      - Ernia diaframmatica congenita
+      - atresie del tubo digerente, dall'esofago al retto
+      - Hirschsprung
+      - Malrotazione intestinale
+
+      4. **Routine in chirurgia pediatrica**
+
+      - Stenosi ipertrofica infantile del piloro
+      - ernia inguinale congenita
+      - idrocele
+      - criptorchidismo
+      - varicocele
+      - fimosi e parafimosi
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11272/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Gli argomenti da integrare comprendono:
+
+      - canale inguinale;
+      - stenosi ipertrofica del piloro;
+      - malattia di Hirschsprung.
+
+      - Sbobine 2024/2025 come base.
+      - Integrare dalle sbobine 2025/2026 il canale inguinale.
+      - Integrare dalle sbobine 2023/2024 la stenosi ipertrofica del piloro e la malattia di Hirschsprung.
+      - Consultare le domande degli appelli precedenti, utili per orientare la preparazione.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Macroargomenti scelti dal Prof. Bertozzi; utile consultare le domande degli appelli precedenti
+
+      Nota: Parigi non è più tra i docenti di Chirurgia pediatrica.
+    professors:
+      - nome: Mirko Bertozzi
+        stile: Titolare del corso. Sceglie un macroargomento e pone domande a tre studenti insieme; se uno non sa rispondere, può rivolgersi agli altri. L’interrogazione è piuttosto imprevedibile e variabile da una giornata all’altra.
+        email: mirko.bertozzi@unipv.it
+      - nome: Amelia Licari
+        email: amelia.licari@unipv.it
+  - nome_modulo: Neuropsichiatria infantile (NPI)
+    id: m-18qy3q5f
+    exam_type: Orale
+    exam_details: La NPI può risultare la parte più impegnativa dei tre moduli. I docenti possono essere particolarmente puntigliosi e richiedere un linguaggio preciso e specifico. È quindi importante utilizzare una terminologia corretta, evitando descrizioni vaghe o generiche, soprattutto nell’esposizione degli aspetti clinici e neurologici.
+    program: |-
+      **Neuropsichiatria infantile**
+
+      **Argomenti irrinunciabili**
+
+      - Sviluppo neuropsichico
+      - Nascita della vita psichica
+      - Lo sviluppo della relazione d'oggetto
+      - Fattori protettivi e fattori di rischio per la relazione
+      - Nozioni di epidemiologia nel campo della neuropsichiatria infantile
+      - Approccio al bambino malato e alla sua famiglia
+      - Esame neurologico del neonato, del lattante e del bambino
+      - Valutazione psichiatrica
+      - Normalità e patologia
+
+      **I principali quadri della psicopatologia infantile**
+
+      - Disturbi pervasivi dello sviluppo (Disturbi autistici e dello spettro autistico)
+      - Disturbo da deficit di attenzione e iperattività
+      - Nevrosi
+      - Psicosi
+      - Depressione nel bambino e nell'adolescente
+      - Disturbi psicosomatici
+      - Anoressia mentale dell'adolescente e Disturbi del comportamento alimentare
+      - Disturbi di personalità
+      - Psicopatologia dell'adolescente
+
+      **I principali quadri della neurologia infantile**
+
+      - Paralisi cerebrali infantili
+      - Malformazioni del Sistema Nervoso Centrale e Idrocefalo
+      - Epilessia dell'infanzia e dell'adolescenza e patologia convulsiva
+      - Patologie del sistema extrapiramidale, Malattie neuromuscolari (amiotrofie spinali primitive, Distrofie muscolari, neuropatie periferiche, patologie della giunzione neuromuscolari)
+      - Disturbi dell'apprendimento e del linguaggio
+      - Ritardo mentale
+      - Emicrania e cefalee precoci idiopatiche
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11272/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Da approfondire:
+
+      - adolescenza;
+      - malattie neuromuscolari;
+      - crisi epilettiche e sindromi epilettiche specifiche, in particolare sindrome di West e sindrome di Lennox-Gastaut;
+      - esame neurologico del bambino;
+      - paralisi cerebrali.
+
+      - Sbobine 2024/2025 come fonte principale.
+      - Integrare dalle sbobine 2025/2026:
+        - adolescenza;
+        - malattie neuromuscolari;
+        - crisi epilettiche e sindromi specifiche, soprattutto West e Lennox-Gastaut.
+      - Studiare la parte relativa all’esame neurologico del bambino.
+      - Integrare l’argomento delle paralisi cerebrali.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Malattie neuromuscolari, crisi epilettiche, sindrome di West, sindrome di Lennox-Gastaut, esame neurologico del bambino e paralisi cerebrali
+      - Particolare attenzione alla precisione terminologica e all’esposizione specifica
+    professors:
+      - nome: "[DA INTEGRARE]"
+        stile: Docente di Neuropsichiatria infantile (nome da integrare).
+      - nome: Amelia Licari
+        email: amelia.licari@unipv.it
+      - nome: Simona Orcesi
+        email: simona.orcesi@unipv.it
+aggiornato_da: Rocco Buellis
+link_whatsapp_generale: https://chat.whatsapp.com/BUr6Jw684zEAdkNm9hOe6r
+ultimo_aggiornamento: 2026-10-08

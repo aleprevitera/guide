@@ -1,16 +1,50 @@
 ---
+interface Props {
+  aggiornamento?: Date;
+  autore?: string;
+}
+
+const { aggiornamento, autore } = Astro.props;
+const formatted = aggiornamento?.toLocaleDateString('it-IT', { year: 'numeric', month: '2-digit', day: '2-digit' });
 ---
 
-<footer class="site-footer">
-  <p>Guide compilate e mantenute dai rappresentanti degli studenti.</p>
+<footer class="site-footer label">
+  {formatted && (
+    <p>
+      Ultimo aggiornamento: <time datetime={aggiornamento!.toISOString().slice(0, 10)}>{formatted}</time>
+      {autore && <> · {autore}</>}
+    </p>
+  )}
+  <p class="site-footer__link"><a href="/privacy/">Privacy</a></p>
+  <p class="site-footer__firma">RUSPI <span class="site-footer__x">x</span> AGP</p>
 </footer>
 
 <style>
   .site-footer {
-    padding: 1.5rem;
-    margin-top: 3rem;
-    border-top: 1px solid #e2e8f0;
-    font-size: 0.875rem;
-    color: #64748b;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 16px 32px;
+    color: var(--caption);
+    border-top: 4px solid var(--chip);
+  }
+  .site-footer p {
+    margin: 0 0 8px;
+  }
+  .site-footer__firma,
+  .site-footer__link {
+    text-align: center;
+  }
+  .site-footer__link a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--caption);
+  }
+  /* La "x" resta minuscola nel footer tutto maiuscolo. */
+  .site-footer__x {
+    text-transform: none;
+  }
+  .site-footer p:last-child {
+    margin-bottom: 0;
   }
 </style>

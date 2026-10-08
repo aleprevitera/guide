@@ -1,0 +1,164 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PixelIcon from '../common/PixelIcon.astro';
+
+type Modulo = CollectionEntry<'guide'>['data']['moduli'][number];
+
+interface Props {
+  modulo: Modulo;
+}
+
+const { modulo } = Astro.props;
+
+// Solo le righe con un dato: nessun "—" segnaposto.
+const righe: { etichetta: string; valore: string }[] = [];
+const add = (etichetta: string, valore: string | number | undefined) => {
+  if (valore !== undefined && valore !== '') righe.push({ etichetta, valore: String(valore) });
+};
+
+add("Tipo d'esame", modulo.exam_type);
+add('Docenti', modulo.professors.map((p) => p.nome).join(', ') || undefined);
+add('Preappello', modulo.preappello);
+add('Durata orale', modulo.durata_orale_min ? `${modulo.durata_orale_min} min circa` : undefined);
+add('Frequenza', modulo.frequenza);
+add('CFU', modulo.cfu);
+add('Semestre', modulo.semestre);
+
+// Tempo di studio e difficoltà sono feedback degli studenti (contenuto
+// "extra"): non si mostrano più le stime scritte nella guida (study_time,
+// difficolta). Il verdetto (mediana dei voti) arriva dal browser solo con una
+// sessione; senza, il lucchetto.
+const conDifficolta = !!modulo.id;
+const feedback = [
+  { tipo: 'tempo_studio', etichetta: 'Tempo di studio', bloccato: 'Accedi per vederlo' },
+  { tipo: 'difficolta', etichetta: 'Difficoltà', bloccato: 'Accedi per vederla' },
+] as const;
+---
+
+{(righe.length > 0 || conDifficolta) && (
+  <section class="scheda panel px-border" aria-label="Scheda esame">
+    <p class="scheda__titolo label" data-pagefind-ignore>Scheda esame</p>
+    <dl class="scheda__dl">
+      {righe.map((r) => (
+        <div class="scheda__riga">
+          <dt class="label">{r.etichetta}<span class="visually-hidden">: </span></dt>
+          <dd>{r.valore}</dd>
+        </div>
+      ))}
+      {conDifficolta && feedback.map((f) => (
+        <div class="scheda__riga">
+          <dt class="label">{f.etichetta}<span class="visually-hidden">: </span></dt>
+          <dd class="difficolta" data-fb-scheda data-tipo={f.tipo} data-modulo={modulo.id}>
+            <span class="difficolta__bloccata">
+              <PixelIcon name="lock" size={16} />
+              {f.bloccato} (voto degli studenti)
+            </span>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+)}
+
+<script>
+  import { EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+  import { conteggi, EVENTO_FEEDBACK, type TipoFeedback } from '../../lib/feedback';
+  import { ETICHETTA, mediana, teschiHtml } from '../../lib/difficolta';
+  import { FASCE_STUDIO } from '../../lib/fasce';
+  import { medianaSuperiore } from '../../lib/verdetto';
+
+  const celle = [...document.querySelectorAll<HTMLElement>('[data-fb-scheda]')];
+  if (celle.length > 0) {
+    const bloccato = celle.map((c) => c.innerHTML);
+    let attivo = false;
+
+    /** Verdetto (HTML statico + numeri) per un tipo di feedback. */
+    function verdetto(tipo: TipoFeedback, c: Record<string, number>): string {
+      if (tipo === 'difficolta') {
+        const { livello, totale } = mediana(c);
+        return livello
+          ? `${teschiHtml(livello)} <span>${ETICHETTA[livello]}</span> <span class="difficolta__nota">(${totale} voti)</span>`
+          : `<span class="difficolta__nota">Pochi voti finora (${totale}): vota qui sotto</span>`;
+      }
+      const { valore, totale } = medianaSuperiore(FASCE_STUDIO, c);
+      return valore
+        ? `<span>${valore}</span> <span class="difficolta__nota">(${totale} voti)</span>`
+        : `<span class="difficolta__nota">Pochi voti finora (${totale}): vota qui sotto</span>`;
+    }
+
+    async function aggiorna(tipo: TipoFeedback) {
+      const mie = celle.filter((c) => c.dataset.tipo === tipo);
+      try {
+        const mappa = await conteggi(mie.map((c) => c.dataset.modulo!), tipo);
+        for (const cella of mie) cella.innerHTML = verdetto(tipo, mappa.get(cella.dataset.modulo!) ?? {});
+      } catch {
+        /* resta il testo precedente */
+      }
+    }
+
+    const applica = ({ session }: StatoAuth) => {
+      attivo = !!session;
+      if (attivo) {
+        aggiorna('tempo_studio');
+        aggiorna('difficolta');
+      } else celle.forEach((c, i) => (c.innerHTML = bloccato[i]));
+    };
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+    window.addEventListener(EVENTO_FEEDBACK, (e) => {
+      if (attivo) aggiorna((e as CustomEvent<{ tipo: TipoFeedback }>).detail.tipo);
+    });
+  }
+</script>
+
+<style>
+  .scheda__titolo {
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  .scheda__dl {
+    margin: 0;
+  }
+  .scheda__riga {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 16px;
+    padding: 8px 0;
+    border-top: 4px solid var(--bg);
+  }
+  .scheda__riga:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  @media (min-width: 480px) {
+    .scheda__riga {
+      grid-template-columns: 168px 1fr;
+      align-items: baseline;
+    }
+  }
+  .scheda__riga dt {
+    color: var(--caption);
+  }
+  .scheda__riga dd {
+    margin: 0;
+    color: var(--text);
+  }
+  .difficolta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+  .difficolta :global(.teschi) {
+    display: inline-flex;
+    gap: 2px;
+  }
+  .difficolta__bloccata,
+  .difficolta :global(.difficolta__nota) {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--caption);
+    font-size: 14px;
+  }
+</style>

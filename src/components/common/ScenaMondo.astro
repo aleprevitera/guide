@@ -1,0 +1,81 @@
+---
+// Scena animata di un mondo (anno di corso): sprite sheet generato da
+// scripts/mondi/genera-scene.mjs in src/assets/mondi/, animato a scatti con
+// steps(). Fotogramma nativo 144×60 mostrato a 2× (288×120), allineato a
+// destra dove sta il soggetto; a sinistra parete e pavimento continuano con
+// il fondale ripetibile (48×60 → 96×120), allineato alla scena. Si anima solo mentre è sullo schermo; con
+// "riduci movimento" resta sul primo fotogramma. Va dentro un contenitore
+// position: relative con overflow: hidden; i testi sopra usano .testo-su-scena.
+import { annoSlug, type Anno } from '../../lib/anni';
+import { MONDI } from '../../lib/mondi';
+
+interface Props {
+  anno: Anno;
+  /** Versione spenta e ferma (anno senza guide). */
+  spenta?: boolean;
+}
+
+const { anno, spenta = false } = Astro.props;
+const fogli = import.meta.glob<string>('../../assets/mondi/*.png', { eager: true, query: '?url', import: 'default' });
+const scena = MONDI[anno].scena;
+const slug = annoSlug(anno);
+const src = scena && fogli[`../../assets/mondi/${slug}${spenta ? '-spento' : ''}.png`];
+const fondale = scena && fogli[`../../assets/mondi/${slug}-fondale${spenta ? '-spento' : ''}.png`];
+const fotogrammi = spenta ? 1 : (scena?.fotogrammi ?? 1);
+---
+
+{src && (
+  <span class="scena" aria-hidden="true" data-scena style={`--fondale:url(${fondale})`}>
+    <span class="scena__film" style={`--src:url(${src});--fotogrammi:${fotogrammi};--durata:${scena!.durataMs}ms`}></span>
+  </span>
+)}
+
+<script>
+  // Animazione solo mentre la scena è sullo schermo (batteria).
+  const scene = document.querySelectorAll<HTMLElement>('[data-scena]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) e.target.classList.toggle('is-in-vista', e.isIntersecting);
+    });
+    scene.forEach((el) => io.observe(el));
+  } else {
+    scene.forEach((el) => el.classList.add('is-in-vista'));
+  }
+</script>
+
+<style>
+  .scena {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background-image: var(--fondale);
+    background-repeat: repeat-x;
+    background-position: right bottom;
+    background-size: 96px 120px;
+    image-rendering: pixelated;
+  }
+  .scena__film {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 288px;
+    height: 120px;
+    background-image: var(--src);
+    background-repeat: no-repeat;
+    background-size: calc(var(--fotogrammi) * 288px) 120px;
+    image-rendering: pixelated;
+    animation: scena-gira var(--durata) steps(var(--fotogrammi), end) infinite;
+    animation-play-state: paused;
+  }
+  .scena.is-in-vista .scena__film {
+    animation-play-state: running;
+  }
+  @keyframes scena-gira {
+    from { background-position: 0 0; }
+    to { background-position: calc(var(--fotogrammi) * -288px) 0; }
+  }
+  @media (forced-colors: active) {
+    .scena { display: none; }
+  }
+</style>

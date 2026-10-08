@@ -1,0 +1,241 @@
+---
+// Prossimi appelli d'esame (da ESSE3, aggiornati una volta alla settimana da
+// scripts/appelli.mjs). Informazione pubblica: niente accesso richiesto.
+// Nel browser si nascondono le date passate e si calcolano conto alla
+// rovescia e stato delle iscrizioni, perché i dati restano fermi per un mese.
+import PixelIcon from '../common/PixelIcon.astro';
+import { AGGIORNATI_IL, BACHECA, breve, futuri, parti, type Turno } from '../../lib/appelli';
+
+interface Props {
+  turni: Turno[];
+  titolo?: string;
+}
+
+const { turni, titolo = 'Prossimi appelli' } = Astro.props;
+const elenco = futuri(turni);
+const VISIBILI = 3;
+const aggiornati = AGGIORNATI_IL.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+const uid = `app-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<section class="appelli panel px-border" aria-labelledby={`${uid}-titolo`} data-appelli data-pagefind-ignore>
+  <h2 class="appelli__titolo label" id={`${uid}-titolo`}>
+    <PixelIcon name="calendario" size={16} />
+    {titolo}
+  </h2>
+
+  <ol class="appelli__lista" data-appelli-lista>
+    {elenco.map((t, i) => {
+      const p = parti(t.giorno!);
+      const luogo = [t.aula, t.edificio].filter(Boolean).join(' · ');
+      return (
+        <li
+          class="appello"
+          data-giorno={t.giorno}
+          data-iscr-da={t.iscrizioniDa ?? ''}
+          data-iscr-a={t.iscrizioniA ?? ''}
+          data-extra={i >= VISIBILI ? '' : undefined}
+        >
+          <span class="appello__data" aria-hidden="true">
+            <span class="appello__giorno">{p.giorno}</span>
+            <span class="appello__mese label">{p.mese}</span>
+          </span>
+          <span class="appello__info">
+            <span class="appello__quando">
+              <strong>
+                <span class="visually-hidden">{p.giorno} {p.mese}, </span>{p.settimana}{t.ora && ` · ${t.ora}`}
+              </strong>
+              <span class="appello__conto label" data-conto></span>
+            </span>
+            <span class="appello__nome label">{t.appello}</span>
+            {t.tipoProva && <span class="appello__dettaglio">{t.tipoProva}{t.tipo && ` · ${t.tipo}`}</span>}
+            {luogo && <span class="appello__dettaglio">{luogo}</span>}
+            {t.iscrizioniDa && t.iscrizioniA && (
+              <span class="appello__iscr" data-iscr>Iscrizioni dal {breve(t.iscrizioniDa)} al {breve(t.iscrizioniA)}</span>
+            )}
+            {t.url && (
+              <a class="appello__link" href={t.url} target="_blank" rel="noopener noreferrer">Dettagli su ESSE3</a>
+            )}
+          </span>
+        </li>
+      );
+    })}
+  </ol>
+
+  {elenco.length > VISIBILI && (
+    <button type="button" class="btn-px label appelli__altri" data-appelli-altri aria-expanded="false" hidden>
+      Tutti gli appelli ({elenco.length})
+    </button>
+  )}
+
+  <p class="appelli__vuoto" data-appelli-vuoto hidden={elenco.length > 0}>
+    Nessun appello pubblicato su ESSE3 per i prossimi mesi.
+  </p>
+
+  <p class="appelli__fonte">
+    Da <a href={BACHECA} target="_blank" rel="noopener noreferrer">ESSE3</a>, aggiornati il {aggiornati}:
+    controlla sempre date e aule sulla bacheca ufficiale.
+  </p>
+</section>
+
+<script>
+  const oggi = () => new Date().toISOString().slice(0, 10);
+  const giorni = (da: string, a: string) => Math.round((Date.parse(a) - Date.parse(da)) / 86_400_000);
+  const breve = (iso: string) => `${iso.slice(8, 10)}/${iso.slice(5, 7)}`;
+
+  for (const box of document.querySelectorAll<HTMLElement>('[data-appelli]')) {
+    const oggiIso = oggi();
+    const voci = [...box.querySelectorAll<HTMLElement>('.appello')];
+    const future = voci.filter((v) => v.dataset.giorno! >= oggiIso);
+    voci.filter((v) => !future.includes(v)).forEach((v) => v.remove()); // passati dall'ultimo aggiornamento
+
+    future.forEach((v, i) => {
+      // Conto alla rovescia.
+      const n = giorni(oggiIso, v.dataset.giorno!);
+      v.querySelector('[data-conto]')!.textContent = n === 0 ? 'Oggi' : n === 1 ? 'Domani' : `Tra ${n} giorni`;
+      v.classList.toggle('appello--vicino', n <= 14);
+
+      // Stato delle iscrizioni.
+      const da = v.dataset.iscrDa;
+      const a = v.dataset.iscrA;
+      const iscr = v.querySelector<HTMLElement>('[data-iscr]');
+      if (iscr && da && a) {
+        if (oggiIso < da) iscr.textContent = `Iscrizioni dal ${breve(da)} al ${breve(a)}`;
+        else if (oggiIso <= a) {
+          iscr.textContent = `Iscrizioni aperte fino al ${breve(a)}`;
+          iscr.classList.add('appello__iscr--aperte');
+        } else iscr.textContent = 'Iscrizioni chiuse';
+      }
+
+      // Solo i primi 3; gli altri dietro "Tutti gli appelli".
+      v.hidden = i >= 3;
+    });
+
+    const altri = box.querySelector<HTMLButtonElement>('[data-appelli-altri]');
+    if (altri) {
+      altri.hidden = future.length <= 3;
+      altri.textContent = `Tutti gli appelli (${future.length})`;
+      altri.addEventListener('click', () => {
+        future.forEach((v) => (v.hidden = false));
+        altri.hidden = true;
+        altri.setAttribute('aria-expanded', 'true');
+      });
+    }
+    box.querySelector<HTMLElement>('[data-appelli-vuoto]')!.hidden = future.length > 0;
+  }
+</script>
+
+<style>
+  /* Fondo scuro e bordo giallo: si distingue dalla scheda esame (blu, bordo
+     bianco) e dal parere degli studenti (antracite, bordo del mondo).
+     Contrasti su #1a1c2c: testo 15.3, testo secondario 11.4, didascalie 7.4. */
+  .appelli {
+    background: var(--bg);
+    --px-c: var(--accent);
+  }
+  .appelli__titolo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  .appelli__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .appello {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 4px solid var(--chip);
+  }
+  .appello:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+  .appello[hidden] {
+    display: none;
+  }
+  /* Data a blocchi, come un foglio di calendario pixel. */
+  .appello__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: start;
+    background: var(--text);
+    color: var(--bg);
+    box-shadow: inset 0 8px 0 0 var(--mondo, var(--accent));
+    padding: 10px 0 4px;
+  }
+  .appello__giorno {
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h2-size);
+    line-height: 1;
+    -webkit-font-smoothing: none;
+  }
+  .appello__mese {
+    font-size: 16px;
+  }
+  .appello__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .appello__quando {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+  }
+  .appello__conto {
+    padding: 0 6px;
+    background: var(--chip);
+    color: var(--text-2);
+  }
+  .appello__conto:empty {
+    display: none;
+  }
+  .appello--vicino .appello__conto {
+    background: var(--accent);
+    color: var(--bg);
+  }
+  .appello__nome {
+    color: var(--text-2);
+    overflow-wrap: anywhere;
+  }
+  .appello__dettaglio,
+  .appello__iscr {
+    color: var(--text-2);
+    font-size: 14px;
+  }
+  .appello__iscr--aperte {
+    color: var(--you);
+    font-weight: 700;
+  }
+  .appello__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 14px;
+  }
+  .appelli__altri {
+    margin: 12px 4px 0;
+  }
+  .appelli__vuoto {
+    color: var(--text-2);
+    margin: 0;
+  }
+  .appelli__fonte {
+    color: var(--caption);
+    font-size: 14px;
+    margin: 16px 0 0;
+  }
+  @media (forced-colors: active) {
+    .appello__data { outline: 2px solid CanvasText; }
+  }
+</style>

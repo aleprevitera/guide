@@ -1,0 +1,314 @@
+id: g-g65v8vsv
+title: Malattie degli Organi di senso
+esse3_codice: "501804"
+anno_di_corso: V Anno
+cfu_totali: 8
+semestre: I
+descrizione_generale: "L'esame è composto da quattro moduli: Oftalmologia, Otorinolaringoiatria e Audiologia, Odontoiatria, Chirurgia maxillo-facciale. I quattro moduli presentano modalità d'esame e tempi di preparazione piuttosto differenti. **Frequenza**: non è controllata in modo rigoroso nei vari moduli."
+moduli:
+  - nome_modulo: Oftalmologia
+    id: m-ze2xjad6
+    exam_type: Orale
+    study_time: 1–2 settimane
+    exam_details: "L'esame è orale e gli studenti vengono chiamati in ordine alfabetico. Interrogano Bianchi e Milano. Generalmente vengono poste due domande: una prima domanda su un argomento più ampio; una seconda domanda su un argomento più circoscritto, ad esempio un vizio di rifrazione, ectropion, entropion, ecc. Le bocciature sono comunque rare."
+    program: |-
+      Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
+
+      **Cenni di anatomia dell’apparato oculare**
+
+      **Patologia di: palpebre – annessi e vie lacrimali:**
+
+      - anatomia e fisiologia
+      - patologia infiammatoria (eziopatogenesi, clinica, terapia)
+      - patologia della statica e della dinamica
+      - patologia neoplastica
+      - dacriocistiti (eziopatogenesi, clinica, terapia)
+
+      **Vizi di refrazione:**
+
+      - miopia, ipermetropia, astigmatismo, presbiopia
+
+      **Strabismo:**
+
+      - fisiopatologia della motilità oculare e della visione binoculare
+      - strabismo concomitante
+      - strabismo paralitico
+
+      **Cataratta congenita:**
+
+      - eziopatogenesi, clinica, terapia
+
+      **Glaucoma congenito:**
+
+      **Retinoblastoma – ROP:**
+
+      Clinica e terapia
+
+      **Congiuntiva:**
+
+      anatomia e fisiologia
+
+      - patologia film lacrimale
+
+      **Cornea:**
+
+      - patologia traumatica
+      - patologia degenerativa (cheratocono, ecc.)
+
+      **Cristallino:**
+
+      - cataratta acquisita (clinica e terapia)
+
+      **Glaucoma acquisito:**
+
+      - Fisiopatologia dell’idrodinamica oculare
+
+      **Uvea:**
+
+      **Retina:**
+
+      - esami funzionali
+      - distacco di retina
+
+      patologia vascolare
+
+      - patologie associate a malattie sistemiche
+      - patologie degenerativ
+
+      **Nervo ottico:**
+
+      - neuriti ottiche retrobulbari (eziopatogenesi, clinica, terapia)
+      - edemi della papilla (eziopatogenesi, clinica, terapia)
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma comprende gli argomenti trattati durante il corso. È particolarmente utile confrontarlo con le domande degli appelli precedenti, che permettono di individuare gli argomenti eventualmente trattati solo superficialmente o non affrontati durante il proprio anno. Tra gli argomenti che possono richiedere integrazione: ectropion, entropion, blefarospasmo, lagoftalmo, calazio.
+
+      - Sbobine dell'anno corrente come fonte principale.
+      - Domande degli appelli precedenti, fondamentali per individuare gli argomenti trattati meno durante il proprio anno.
+      - Sbobine degli anni precedenti per integrare gli argomenti mancanti o trattati superficialmente.
+      - Per alcuni argomenti minori, come ectropion, entropion, blefarospasmo, lagoftalmo e calazio, può essere sufficiente una ricerca mirata su fonti online.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Vizi di rifrazione; ectropion; entropion; altri argomenti individuabili dalle domande degli appelli precedenti
+    professors:
+      - nome: Paolo Emilio Bianchi
+        stile: Generalmente tranquillo.
+        email: paoloemilio.bianchi@unipv.it
+      - nome: Giovanni Milano
+        stile: Tende a essere un po' più puntiglioso.
+        email: giovanni.milano@unipv.it
+      - nome: Francesco Maria Quaranta Leoni
+        email: francescomaria.quarantaleoni@unipv.it
+      - nome: Giacinto Triolo
+        email: giacinto.triolo@unipv.it
+    fascia_studio: 1–2 sett
+    link_whatsapp: https://chat.whatsapp.com/EvQNgjd1MtTEOfJzUl1GZI
+  - nome_modulo: Otorinolaringoiatria e Audiologia
+    id: m-lcq5czjs
+    exam_type: Orale
+    study_time: 3–4 settimane
+    exam_details: L'esame è orale e si svolge in ordine alfabetico. Spesso la prima domanda riguarda il reparto in cui si sta svolgendo l'internato. È frequente una struttura con una domanda di ORL e una domanda di Audiologia/Vestibologia.
+    program: |-
+      **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
+
+      **Otorinolaringoiatria:**
+
+      **Naso**
+
+      - Anatomofisiologia naso-sinusale
+      - Epistassi
+      - Rinosinusiti
+      - Complicanze delle rinosinusiti
+      - Fibroangioma giovanile
+      - Patologia benigna e maligna nasosinusale
+
+      **Cavo orale**
+
+      - Anatomofisiologia del cavo orale
+      - Patologia infiammatoria del cavo orale
+
+      **Orofaringe**
+
+      - Anatomofisiologia dell'orofaringe
+      - Tonsilliti
+      - Complicanze delle tonsilliti
+      - Vegetazioni adenoidi
+      - Sindrome delle apnee ostruttive notturne
+
+      **Ipofaringe/laringe**
+
+      - Anatomofisiologia ipofaringolaringea
+      - Patologia benigna
+      - Patologia neurologica faringolaringea
+
+      **Ghiandole salivari**
+
+      - Anatomofisiologia delle ghiandole salivari
+      - Sialoadeniti
+      - Patologia neoformativa delle ghiandole salivari
+
+      **Collo**
+
+      - Anatomofisiologia del collo
+      - Tumefazioni laterocervicali
+      - Tracheotomia
+
+      **Inquadramento delle neoplasie cervico-facciali**
+
+      **Otologia e audiologia:**
+
+      - Anatomofisiologia dell'apparato uditivo e dell'apparato vestibolare
+      - Semeiotica audiologica (otoscopia ed otomicroscopia); acufenologia
+      - Concetto di ipoacusia e classificazione
+      - Semeiotica audiologica strumentale: audiometria tonale, audiometria vocale, impedenzometria, audiometria a risposte elettriche ed otoemissioni
+      - Patologia dell'orecchio esterno
+      - Patologia dell'orecchio medio: otiti acute, otiti croniche (semplici, iperplastiche, colesteatomatose) e loro complicanze
+      - La timpanosclerosi e le otiti fibroadesive.
+      - Tasche di retrazione ed atelettasia dell'orecchio medio.
+      - L'otosclerosi
+      - I tumori glomici dell'osso temporale
+      - Sordità improvvisa
+      - Presbiacusia; ipoacusia da rumore ed ipoacusia da ototossici
+      - Cenni sulle sordità centrali
+      - Terapia protesica: protesi tradizionale, protesi impiantabili
+      - Semeiotica vestibologica ed otoneurologica
+      - Vertigine parossistica posizionale da labirintolitiasi
+      - Fistole perilinfatiche e deiscenze della capsula otica
+      - Malattia di Menière
+      - Neurite Vestibolare
+      - Neurinoma dell'acustico
+      - Paralisi del nervo facciale
+
+      **Audiologia:**
+
+      - Anatomofisiologia dell'apparato uditivo e dell'apparato vestibolare
+      - Semeiotica audiologica (otoscopia ed otomicroscopia); acufenologia
+      - Concetto di ipoacusia e classificazione
+      - Semeiotica audiologica strumentale: audiometria tonale, audiometria vocale, impedenzometria, audiometria a risposte elettriche ed otoemissioni
+      - Patologia dell'orecchio esterno
+      - Patologia dell'orecchio medio: otiti acute, otiti croniche (semplici, iperplastiche, colesteatomatose) e loro complicanze
+      - La timpanosclerosi e le otiti fibroadesive.
+      - Tasche di retrazione ed atelettasia dell'orecchio medio.
+      - L'otosclerosi
+      - I tumori glomici dell'osso temporale
+      - Sordità improvvisa
+      - Presbiacusia; ipoacusia da rumore ed ipoacusia da ototossici
+      - Cenni sulle sordità centrali
+      - Terapia protesica: protesi tradizionale, protesi impiantabili
+      - Semeiotica vestibologica ed otoneurologica
+
+      - Vertigine parossistica posizionale da labirintolitiasi
+      - Fistole perilinfatiche e deiscenze della capsula otica
+      - Malattia di Menière
+      - Neurite Vestibolare
+      - Neurinoma dell'acustico
+      - Paralisi del nervo facciale
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Per ORL è necessario coprire il programma previsto dal syllabus, verificando che tutti gli argomenti siano effettivamente presenti nelle sbobine dell'anno corrente. Per Audiologia, oltre agli argomenti delle sbobine, è particolarmente importante la vestibologia.
+
+      **ORL**
+
+      - Sbobine dell'anno corrente, generalmente sufficienti.
+      - Syllabus, da confrontare con le sbobine per verificare che non manchino argomenti.
+      - De Campora o sbobine degli anni precedenti per integrare gli argomenti presenti nel programma ma non trattati nell'anno corrente (es. tumori del cavo orale e dell'orofaringe).
+
+      **Audiologia**
+
+      - Le sbobine sono generalmente sufficienti per la parte di audiologia.
+      - Per la vestibologia è necessario integrare dal De Campora, in particolare: anatomia (come ripasso), patologie periferiche e miste, tumori dell'angolo ponto-cerebellare.
+
+      Le domande degli appelli precedenti sono utili sia per ORL sia per Audiologia.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - ORL: Argomenti del programma; possibile domanda iniziale sul reparto di internato; tumori del cavo orale e dell'orofaringe
+      - Audiologia / Vestibologia: Patologie periferiche e miste; tumori dell'angolo ponto-cerebellare
+    professors:
+      - nome: Marco Benazzo
+        stile: È il più impegnativo.
+        email: marco.benazzo@unipv.it
+      - nome: Fabio Giuseppe Maria Pagella
+        email: fabio.pagella@unipv.it
+      - nome: Pietro Canzi
+        email: pietro.canzi@unipv.it
+      - nome: Elena Carlotto
+        stile: È tranquilla, propensa a lasciare parlare lo studente e generalmente larga nella valutazione.
+        email: elena.carlotto@unipv.it
+    esse3_appello: OTORINO
+    fascia_studio: 3–4 sett
+    link_whatsapp: https://chat.whatsapp.com/FmSTfKFCPtW6reSAmGF0bo
+  - nome_modulo: Odontoiatria
+    id: m-j91rrxoo
+    exam_type: Scritto
+    study_time: 3–4 giorni
+    exam_details: A partire dall'ultimo anno accademico, l'esame è diventato scritto. Le domande a scelta multipla sono quindi nuove rispetto agli anni precedenti. L'esame viene svolto tramite Kiro Testing e la valutazione segue la stessa logica di Maxillo, con un punto bonus.
+    program: |-
+      **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
+
+      - Cenni di anatomia, embriologia e istologia dei tessuti dentari.
+      - Eruzione e permuta dei denti: classi dentali e scheletriche, malocclusioni.
+      - La carie dentaria: prevenzione e complicanze; l’igiene orale
+      - Le pulpiti, acute e croniche.
+      - Patologia apicale acuta e cronica.
+      - Traumi dentari.
+      - Radiologia odontoiatrica.
+      - Le malattie del parodonto.
+      - Correlazione fra malattia parodontale e malattie sistemiche.
+      - La necrosi mascellare da bifosfonati.
+      - Patologie delle mucose orali e precancerosi.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma comprende le lezioni previste dal corso. Nell'ultimo anno accademico sono state svolte soltanto 3 delle 4 lezioni previste, rendendo necessario integrare autonomamente la quarta. Gli argomenti da integrare comprendono: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne del cavo orale, stomatiti, pemfigo della mucosa orale, pseudolesioni della mucosa orale, sindrome della bocca che brucia.
+
+      - Sbobine dell'anno corrente, generalmente sufficienti.
+      - Per la quarta lezione non svolta nell'ultimo anno accademico, utilizzare il libro/PDF fornito per integrare: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne, stomatiti, pemfigo della mucosa orale, pseudolesioni, sindrome della bocca che brucia.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande nuove rispetto agli anni precedenti; argomenti delle lezioni dell'anno corrente e della quarta lezione da integrare
+    fascia_studio: < 1 sett
+    professors:
+      - nome: Maria Francesca Sfondrini
+        stile: Titolare del corso.
+        email: francesca.sfondrini@unipv.it
+    link_whatsapp: https://chat.whatsapp.com/Bkq4bMZcByW4FS11UIPbs2
+  - nome_modulo: Chirurgia maxillo-facciale
+    id: m-qya7ev2i
+    exam_type: Scritto
+    study_time: 2–3 giorni
+    exam_details: "L'esame è scritto, con 30 domande a scelta multipla, ed è tenuto dal professor Sfondrini. La valutazione segue questa modalità: 30/30 → 30 e lode; 29/30 → 30; e così via. È quindi presente un punto bonus rispetto alla conversione diretta del numero di risposte corrette."
+    program: |-
+      **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
+
+      *Il programma ufficiale non ha una parte dedicata a questo modulo: vedi la scheda completa.*
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma corrisponde agli argomenti trattati durante le lezioni del corso.
+
+      - Sbobine dell'anno corrente, sufficienti.
+      - Domande degli appelli precedenti, particolarmente importanti perché alcune domande tendono a ripetersi.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Domande delle prove precedenti, alcune delle quali possono ripetersi
+    professors:
+      - nome: Domenico Sfondrini
+        email: domenico.sfondrini@unipv.it
+    fascia_studio: < 1 sett
+    link_whatsapp: https://chat.whatsapp.com/Bkq4bMZcByW4FS11UIPbs2
+aggiornato_da: Rocco Buellis
+ultimo_aggiornamento: 2026-10-08

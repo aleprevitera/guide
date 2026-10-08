@@ -1,0 +1,1139 @@
+{
+  "generato_il": "2026-10-08T15:22:43.691Z",
+  "fonte": "https://unipv.coursecatalogue.cineca.it (API insegnamento e docente)",
+  "esami": {
+    "501317": {
+      "nome": "MICROBIOLOGIA",
+      "docenti": [
+        {
+          "nome": "Fausto",
+          "cognome": "Baldanti",
+          "email": "fausto.baldanti@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "VIROLOGIA",
+            "MICROBIOLOGIA GENERALE",
+            "MICROBIOLOGIA CLINICA",
+            "LABORATORIO IN MICROBIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Francesca",
+          "cognome": "Rovida",
+          "email": "francesca.rovida@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "VIROLOGIA"
+          ]
+        },
+        {
+          "nome": "Roberta",
+          "cognome": "Migliavacca",
+          "email": "roberta.migliavacca@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MICROBIOLOGIA GENERALE",
+            "LABORATORIO IN MICROBIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Aurora",
+          "cognome": "Piazza",
+          "email": "aurora.piazza@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MICROBIOLOGIA GENERALE",
+            "LABORATORIO IN MICROBIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Patrizia",
+          "cognome": "Cambieri",
+          "email": "patrizia.cambieri@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MICROBIOLOGIA CLINICA"
+          ]
+        },
+        {
+          "nome": "Irene",
+          "cognome": "Cassaniti",
+          "email": "irene.cassaniti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "LABORATORIO IN MICROBIOLOGIA"
+          ]
+        }
+      ]
+    },
+    "501624": {
+      "nome": "MALATTIE INFETTIVE",
+      "docenti": [
+        {
+          "nome": "Raffaele",
+          "cognome": "Bruno",
+          "email": "raffaele.bruno@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "MALATTIE INFETTIVE"
+          ]
+        },
+        {
+          "nome": "Valentina",
+          "cognome": "Zuccaro",
+          "email": "valentina.zuccaro@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "MALATTIE INFETTIVE"
+          ]
+        }
+      ]
+    },
+    "501628": {
+      "nome": "GINECOLOGIA E OSTETRICIA",
+      "docenti": []
+    },
+    "501690": {
+      "nome": "FARMACOLOGIA 1",
+      "docenti": [
+        {
+          "nome": "Andrea",
+          "cognome": "Ferrigno",
+          "email": "andrea.ferrigno@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "FARMACODINAMICA",
+            "MONITORAGGIO FARMACOLOGICO",
+            "FARMACOLOGIA GENERALE",
+            "FARMACOCINETICA"
+          ]
+        },
+        {
+          "nome": "Fausto",
+          "cognome": "Feletti",
+          "email": "fausto.feletti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MONITORAGGIO FARMACOLOGICO",
+            "FARMACOCINETICA"
+          ]
+        },
+        {
+          "nome": "Plinio",
+          "cognome": "Richelmi",
+          "email": "plinio.richelmi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "FARMACOLOGIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Davide",
+          "cognome": "Lonati",
+          "email": "davide.lonati@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "FARMACOLOGIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Azzurra",
+          "cognome": "Schicchi",
+          "email": "azzurra.schicchi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "FARMACOLOGIA GENERALE"
+          ]
+        }
+      ]
+    },
+    "501694": {
+      "nome": "FARMACOLOGIA 2",
+      "docenti": [
+        {
+          "nome": "Francesca",
+          "cognome": "Crema",
+          "email": "francesca.crema@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "FARMACOLOGIA",
+            "FARMACOLOGIA APPLICATA",
+            "CHEMIOTERAPIA",
+            "TOSSICOLOGIA",
+            "FARMACOLOGIA CLINICA"
+          ]
+        },
+        {
+          "nome": "Andrea",
+          "cognome": "Ferrigno",
+          "email": "andrea.ferrigno@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "CHEMIOTERAPIA"
+          ]
+        },
+        {
+          "nome": "Laura Giuseppina",
+          "cognome": "Di Pasqua",
+          "email": "lauragiuseppina.dipasqua@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "CHEMIOTERAPIA"
+          ]
+        },
+        {
+          "nome": "Carlo Alessandro",
+          "cognome": "Locatelli",
+          "email": "carloalessandro.locatelli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "TOSSICOLOGIA"
+          ]
+        },
+        {
+          "nome": "Cinzia",
+          "cognome": "Fattore",
+          "email": "cinzia.fattore@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "FARMACOLOGIA CLINICA"
+          ]
+        }
+      ]
+    },
+    "501695": {
+      "nome": "ANATOMIA PATOLOGICA",
+      "docenti": [
+        {
+          "nome": "Marco",
+          "cognome": "Paulli",
+          "email": "marco.paulli@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "ANATOMIA PATOLOGICA",
+            "TECNICHE ISTOLOGICHE, ISTOCHIMICA E IMMUNOISTOCHIMICA",
+            "PRINCIPI DI ANATOMIA PATOLOGICA",
+            "BIOLOGIA MOLECOLARE APPLICATA ALL'ANATOMIA PATOLOGICA",
+            "CITOPATOLOGIA"
+          ]
+        },
+        {
+          "nome": "Marco",
+          "cognome": "Lucioni",
+          "email": "marco.lucioni@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ANATOMIA PATOLOGICA",
+            "ANATOMIA PATOLOGICA - MODULO",
+            "TIROCINIO ANATOMIA PATOLOGICA"
+          ]
+        },
+        {
+          "nome": "Alessandro",
+          "cognome": "Vanoli",
+          "email": "alessandro.vanoli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ANATOMIA PATOLOGICA",
+            "ANATOMIA PATOLOGICA - MODULO",
+            "TIROCINIO ANATOMIA PATOLOGICA"
+          ]
+        },
+        {
+          "nome": "Frediano Socrate",
+          "cognome": "Inzani",
+          "email": "fredianosocrate.inzani@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ANATOMIA PATOLOGICA",
+            "PRINCIPI DI ANATOMIA PATOLOGICA",
+            "CITOPATOLOGIA"
+          ]
+        },
+        {
+          "nome": "Francesca",
+          "cognome": "Lunardi",
+          "email": "francesca.lunardi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ANATOMIA PATOLOGICA",
+            "TECNICHE ISTOLOGICHE, ISTOCHIMICA E IMMUNOISTOCHIMICA",
+            "PRINCIPI DI ANATOMIA PATOLOGICA"
+          ]
+        }
+      ]
+    },
+    "501746": {
+      "nome": "PSICHIATRIA",
+      "docenti": [
+        {
+          "nome": "Laura",
+          "cognome": "Fusar Poli",
+          "email": "laura.fusarpoli@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "PSICOLOGIA MEDICA",
+            "PSICHIATRIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Natascia",
+          "cognome": "Brondino",
+          "email": "natascia.brondino@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PSICOLOGIA MEDICA"
+          ]
+        },
+        {
+          "nome": "Paolo",
+          "cognome": "Fusar Poli",
+          "email": "paolo.fusar-poli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PSICHIATRIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Stefano",
+          "cognome": "Damiani",
+          "email": "stefano.damiani@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PSICHIATRIA GENERALE"
+          ]
+        }
+      ]
+    },
+    "501763": {
+      "nome": "PEDIATRIA",
+      "docenti": [
+        {
+          "nome": "Amelia",
+          "cognome": "Licari",
+          "email": "amelia.licari@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "CHIRURGIA PEDIATRICA",
+            "NEUROPSICHIATRIA INFANTILE",
+            "PEDIATRIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Mirko",
+          "cognome": "Bertozzi",
+          "email": "mirko.bertozzi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "CHIRURGIA PEDIATRICA"
+          ]
+        },
+        {
+          "nome": "Simona",
+          "cognome": "Orcesi",
+          "email": "simona.orcesi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NEUROPSICHIATRIA INFANTILE",
+            "MALATTIE APPARATO VISIVO",
+            "PEDIATRIA GENERALE E SPECIALISTICA",
+            "PSICHIATRIA"
+          ]
+        },
+        {
+          "nome": "Gianluigi Augusto",
+          "cognome": "Marseglia",
+          "email": "gianluigi.marseglia@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PEDIATRIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Valeria",
+          "cognome": "Calcaterra",
+          "email": "valeria.calcaterra@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PEDIATRIA GENERALE",
+            "PEDIATRIA GENERALE E SPECIALISTICA"
+          ]
+        },
+        {
+          "nome": "Riccardo",
+          "cognome": "Castagnoli",
+          "email": "riccardo.castagnoli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PEDIATRIA GENERALE"
+          ]
+        }
+      ]
+    },
+    "501771": {
+      "nome": "SEMEIOTICA MEDICA E CHIRURGICA",
+      "docenti": [
+        {
+          "nome": "Carlo Maria",
+          "cognome": "Bianchi",
+          "email": "carlomaria.bianchi@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "SEMEIOTICA STRUMENTALE",
+            "SEMEIOTICA MEDICA",
+            "SEMEIOTICA CHIRURGICA"
+          ]
+        },
+        {
+          "nome": "Chandra",
+          "cognome": "Bortolotto",
+          "email": "chandra.bortolotto@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA STRUMENTALE"
+          ]
+        },
+        {
+          "nome": "Amedeo",
+          "cognome": "Mugellini",
+          "email": "amedeo.mugellini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Lorenzo",
+          "cognome": "Cavagna",
+          "email": "lorenzo.cavagna@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Federico",
+          "cognome": "Biagi",
+          "email": "federico.biagi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Ciro",
+          "cognome": "Esposito",
+          "email": "ciro.esposito@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Carmelo",
+          "cognome": "Libetta",
+          "email": "carmelo.libetta@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Marilena",
+          "cognome": "Gregorini",
+          "email": "marilena.gregorini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Giuseppe",
+          "cognome": "Derosa",
+          "email": "giuseppe.derosa@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Alessandro",
+          "cognome": "Pecci",
+          "email": "alessandro.pecci@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Flavia",
+          "cognome": "Magri",
+          "email": "flavia.magri@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Antonio",
+          "cognome": "Manzo",
+          "email": "antonio.manzo@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Patrizia",
+          "cognome": "Noris",
+          "email": "patrizia.noris@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Stefano",
+          "cognome": "Perlini",
+          "email": "stefano.perlini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Mario",
+          "cognome": "Rotondi",
+          "email": "mario.rotondi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Antonio",
+          "cognome": "Di Sabatino",
+          "email": "antonio.disabatino@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Serena",
+          "cognome": "Bugatti",
+          "email": "serena.bugatti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Garifallia",
+          "cognome": "Sakellariou",
+          "email": "garifallia.sakellariou@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Federica",
+          "cognome": "Melazzini",
+          "email": "federica.melazzini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Marco Vincenzo",
+          "cognome": "Lenti",
+          "email": "marcovincenzo.lenti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Laura",
+          "cognome": "Croce",
+          "email": "laura.croce@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Annalisa",
+          "cognome": "Schiepatti",
+          "email": "annalisa.schiepatti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Giovanni",
+          "cognome": "Zanframundo",
+          "email": "giovanni.zanframundo@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Santi",
+          "cognome": "Di Pietro",
+          "email": "santi.dipietro@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Ludovico",
+          "cognome": "De Stefano",
+          "email": "ludovico.destefano@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        },
+        {
+          "nome": "Giovanni",
+          "cognome": "Santacroce",
+          "email": "giovanni.santacroce@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "SEMEIOTICA MEDICA"
+          ]
+        }
+      ]
+    },
+    "501773": {
+      "nome": "MEDICINA DI LABORATORIO",
+      "docenti": [
+        {
+          "nome": "Alessandra",
+          "cognome": "Balduini",
+          "email": "alessandra.balduini@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "MEDICINA DI LABORATORIO"
+          ]
+        },
+        {
+          "nome": "Alessandro",
+          "cognome": "Malara",
+          "email": "alessandro.malara@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MEDICINA DI LABORATORIO"
+          ]
+        },
+        {
+          "nome": "Christian Andrea",
+          "cognome": "Di Buduo",
+          "email": "christian.dibuduo@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MEDICINA DI LABORATORIO"
+          ]
+        }
+      ]
+    },
+    "501781": {
+      "nome": "MALATTIE SANGUE",
+      "docenti": [
+        {
+          "nome": "Luca",
+          "cognome": "Malcovati",
+          "email": "luca.malcovati@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "EMATOLOGIA",
+            "ONCOLOGIA EMATOLOGICA",
+            "ANATOMIA PATOLOGICA EMATOLOGICA"
+          ]
+        },
+        {
+          "nome": "Luca",
+          "cognome": "Arcaini",
+          "email": "luca.arcaini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "EMATOLOGIA",
+            "ONCOLOGIA EMATOLOGICA"
+          ]
+        },
+        {
+          "nome": "Elisa",
+          "cognome": "Rumi",
+          "email": "elisa.rumi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "EMATOLOGIA",
+            "ONCOLOGIA EMATOLOGICA"
+          ]
+        },
+        {
+          "nome": "Marco",
+          "cognome": "Paulli",
+          "email": "marco.paulli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ANATOMIA PATOLOGICA EMATOLOGICA"
+          ]
+        }
+      ]
+    },
+    "501793": {
+      "nome": "MALATTIE SISTEMA ENDOCRINO E METABOLISMO",
+      "docenti": [
+        {
+          "nome": "Flavia",
+          "cognome": "Magri",
+          "email": "flavia.magri@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "ENDOCRINOLOGIA",
+            "CHIRURGIA ENDOCRINA",
+            "MALATTIE METABOLICHE"
+          ]
+        },
+        {
+          "nome": "Mario",
+          "cognome": "Rotondi",
+          "email": "mario.rotondi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ENDOCRINOLOGIA"
+          ]
+        },
+        {
+          "nome": "Mario",
+          "cognome": "Alessiani",
+          "email": "mario.alessiani@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "CHIRURGIA ENDOCRINA"
+          ]
+        },
+        {
+          "nome": "Laura",
+          "cognome": "Croce",
+          "email": "laura.croce@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MALATTIE METABOLICHE"
+          ]
+        }
+      ]
+    },
+    "501795": {
+      "nome": "MALATTIE APPARATO DIGERENTE",
+      "docenti": [
+        {
+          "nome": "Federico",
+          "cognome": "Biagi",
+          "email": "federico.biagi@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "NUTRIZIONE UMANA",
+            "CHIRURGIA GASTROENTEROLOGICA",
+            "GASTROENTEROLOGIA"
+          ]
+        },
+        {
+          "nome": "Hellas",
+          "cognome": "Cena",
+          "email": "hellas.cena@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NUTRIZIONE UMANA"
+          ]
+        },
+        {
+          "nome": "Andrea",
+          "cognome": "Peri",
+          "email": "andrea.peri@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "CHIRURGIA GASTROENTEROLOGICA"
+          ]
+        },
+        {
+          "nome": "Annalisa",
+          "cognome": "Schiepatti",
+          "email": "annalisa.schiepatti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "GASTROENTEROLOGIA"
+          ]
+        }
+      ]
+    },
+    "501802": {
+      "nome": "MALATTIE CUTANEE E CHIRURGIA PLASTICA",
+      "docenti": [
+        {
+          "nome": "Giovanni",
+          "cognome": "Nicoletti",
+          "email": "giovanni.nicoletti@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "DERMATOLOGIA",
+            "CHIRURGIA PLASTICA E RICOSTRUTTIVA"
+          ]
+        },
+        {
+          "nome": "Carlo Francesco",
+          "cognome": "Tomasini",
+          "email": "carlofrancesco.tomasini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "DERMATOLOGIA"
+          ]
+        },
+        {
+          "nome": "Stefania",
+          "cognome": "Barruscotti",
+          "email": "stefania.barruscotti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "DERMATOLOGIA"
+          ]
+        }
+      ]
+    },
+    "501804": {
+      "nome": "MALATTIE ORGANI DI SENSO",
+      "docenti": [
+        {
+          "nome": "Maria Francesca",
+          "cognome": "Sfondrini",
+          "email": "francesca.sfondrini@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "OFTALMOLOGIA",
+            "OTORINOLARINGOIATRIA",
+            "AUDIOLOGIA",
+            "ODONTOIATRIA",
+            "CHIRURGIA MAXILLO FACCIALE"
+          ]
+        },
+        {
+          "nome": "Paolo Emilio",
+          "cognome": "Bianchi",
+          "email": "paoloemilio.bianchi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "OFTALMOLOGIA"
+          ]
+        },
+        {
+          "nome": "Giovanni",
+          "cognome": "Milano",
+          "email": "giovanni.milano@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "OFTALMOLOGIA"
+          ]
+        },
+        {
+          "nome": "Francesco Maria",
+          "cognome": "Quaranta Leoni",
+          "email": "francescomaria.quarantaleoni@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "OFTALMOLOGIA"
+          ]
+        },
+        {
+          "nome": "Giacinto",
+          "cognome": "Triolo",
+          "email": "giacinto.triolo@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "OFTALMOLOGIA"
+          ]
+        },
+        {
+          "nome": "Marco",
+          "cognome": "Benazzo",
+          "email": "marco.benazzo@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "OTORINOLARINGOIATRIA"
+          ]
+        },
+        {
+          "nome": "Fabio Giuseppe Maria",
+          "cognome": "Pagella",
+          "email": "fabio.pagella@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "OTORINOLARINGOIATRIA"
+          ]
+        },
+        {
+          "nome": "Pietro",
+          "cognome": "Canzi",
+          "email": "pietro.canzi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "AUDIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Elena",
+          "cognome": "Carlotto",
+          "email": "elena.carlotto@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "AUDIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Domenico",
+          "cognome": "Sfondrini",
+          "email": "domenico.sfondrini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "CHIRURGIA MAXILLO FACCIALE"
+          ]
+        }
+      ]
+    },
+    "501808": {
+      "nome": "SCIENZE NEUROLOGICHE",
+      "docenti": [
+        {
+          "nome": "Cristina",
+          "cognome": "Tassorelli",
+          "email": "cristina.tassorelli@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "NEUROLOGIA",
+            "NEUROCHIRURGIA"
+          ]
+        },
+        {
+          "nome": "Michele",
+          "cognome": "Terzaghi",
+          "email": "michele.terzaghi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NEUROLOGIA"
+          ]
+        },
+        {
+          "nome": "Giuseppe",
+          "cognome": "Cosentino",
+          "email": "giuseppe.cosentino@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NEUROLOGIA"
+          ]
+        },
+        {
+          "nome": "Micol",
+          "cognome": "Avenali",
+          "email": "micol.avenali@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NEUROLOGIA"
+          ]
+        },
+        {
+          "nome": "Lorenzo",
+          "cognome": "Magrassi",
+          "email": "lorenzo.magrassi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NEUROCHIRURGIA"
+          ]
+        }
+      ]
+    },
+    "501832": {
+      "nome": "CLINICA MEDICA 1",
+      "docenti": [
+        {
+          "nome": "Marco Vincenzo",
+          "cognome": "Lenti",
+          "email": "marcovincenzo.lenti@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "GERIATRIA",
+            "MEDICINA DEL TERRITORIO",
+            "MEDICINA INTERNA A"
+          ]
+        },
+        {
+          "nome": "Patrizia",
+          "cognome": "Noris",
+          "email": "patrizia.noris@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "GERIATRIA"
+          ]
+        },
+        {
+          "nome": "Maurizio Maria",
+          "cognome": "Coronelli",
+          "email": "mauriziomaria.coronelli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "GERIATRIA",
+            "MEDICINA DEL TERRITORIO"
+          ]
+        },
+        {
+          "nome": "Stefano",
+          "cognome": "Cartesegna",
+          "email": "stefano.cartesegna@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MEDICINA DEL TERRITORIO"
+          ]
+        },
+        {
+          "nome": "Federica",
+          "cognome": "Melazzini",
+          "email": "federica.melazzini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "MEDICINA INTERNA A"
+          ]
+        }
+      ]
+    },
+    "501833": {
+      "nome": "CLINICA MEDICA 2",
+      "docenti": []
+    },
+    "502622": {
+      "nome": "PATOLOGIA GENERALE",
+      "docenti": [
+        {
+          "nome": "Lucia Anna",
+          "cognome": "Stivala",
+          "email": "luciaanna.stivala@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "PATOLOGIA",
+            "FISIOPATOLOGIA GENERALE"
+          ]
+        },
+        {
+          "nome": "Ornella",
+          "cognome": "Cazzalini",
+          "email": "ornella.cazzalini@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PATOLOGIA"
+          ]
+        },
+        {
+          "nome": "Maristella",
+          "cognome": "Maggi",
+          "email": "maristella.maggi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "PATOLOGIA"
+          ]
+        },
+        {
+          "nome": "Claudia",
+          "cognome": "Scotti",
+          "email": "claudia.scotti@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "FISIOPATOLOGIA GENERALE"
+          ]
+        }
+      ]
+    },
+    "504451": {
+      "nome": "MEDICINA PUBBLICA",
+      "docenti": []
+    },
+    "506412": {
+      "nome": "CHIRURGIA ED EMERGENZE",
+      "docenti": []
+    },
+    "506413": {
+      "nome": "DIAGNOSTICA PER IMMAGINI E ONCOLOGIA",
+      "docenti": [
+        {
+          "nome": "Lorenzo",
+          "cognome": "Preda",
+          "email": "lorenzo.preda@unipv.it",
+          "titolare": true,
+          "moduli": [
+            "ONCOLOGIA MEDICA",
+            "RADIOLOGIA",
+            "RADIOTERAPIA",
+            "NEURORADIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Paolo",
+          "cognome": "Pedrazzoli",
+          "email": "paolo.pedrazzoli@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ONCOLOGIA MEDICA"
+          ]
+        },
+        {
+          "nome": "Francesco",
+          "cognome": "Agustoni",
+          "email": "francesco.agustoni@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ONCOLOGIA MEDICA"
+          ]
+        },
+        {
+          "nome": "Salvatore",
+          "cognome": "Corallo",
+          "email": "salvatore.corallo@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "ONCOLOGIA MEDICA"
+          ]
+        },
+        {
+          "nome": "Chandra",
+          "cognome": "Bortolotto",
+          "email": "chandra.bortolotto@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "RADIOLOGIA"
+          ]
+        },
+        {
+          "nome": "Ester",
+          "cognome": "Orlandi",
+          "email": "ester.orlandi@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "RADIOTERAPIA"
+          ]
+        },
+        {
+          "nome": "Anna",
+          "cognome": "Pichiecchio",
+          "email": "anna.pichiecchio@unipv.it",
+          "titolare": false,
+          "moduli": [
+            "NEURORADIOLOGIA"
+          ]
+        }
+      ]
+    }
+  }
+}

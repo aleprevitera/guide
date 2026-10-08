@@ -1,0 +1,258 @@
+---
+// Difficoltà percepita di un modulo (feedback degli studenti, contenuto
+// "extra"). Va dentro StudyTimeHistogram: è visibile solo dopo l'accesso e
+// carica i dati solo con una sessione. Verdetto = mediana dei voti (vedi
+// src/lib/difficolta.ts), con la distribuzione sempre visibile sotto.
+import { ETICHETTA, LIVELLI, teschiHtml } from '../../lib/difficolta';
+import { MIN_RISPOSTE } from '../../lib/histogram';
+
+interface Props {
+  moduloId: string;
+}
+
+const { moduloId } = Astro.props;
+const uid = `diff-${Math.random().toString(36).slice(2, 8)}`;
+---
+
+<div class="diff" data-diff data-modulo={moduloId}>
+  <h3 class="diff__titolo label" id={`${uid}-titolo`}>Difficoltà</h3>
+  <p class="diff__verdetto" data-diff-verdetto>Caricamento…</p>
+
+  <ol class="diff__righe" aria-label="Distribuzione dei voti sulla difficoltà" data-diff-righe hidden>
+    {LIVELLI.map((l) => (
+      <li class="diff__riga" data-livello={l}>
+        <span class="diff__testa">
+          <span class="diff__tu" hidden title="Il tuo voto"><span class="visually-hidden">(il tuo voto) </span></span>
+          <span class="diff__nome label">{ETICHETTA[l]}</span>
+        </span>
+        <span class="diff__traccia" aria-hidden="true"><span class="diff__barra"></span></span>
+        <span class="diff__count"><span data-diff-count>0</span><span class="visually-hidden"> voti</span></span>
+      </li>
+    ))}
+  </ol>
+  <p class="diff__insufficienti" data-diff-insufficienti hidden>
+    Servono almeno {MIN_RISPOSTE} voti per un verdetto (finora <span data-diff-finora>0</span>).
+  </p>
+
+  {/* Dopo il voto restano visibili solo la scelta fatta e "Cambia voto". */}
+  <div data-scelte>
+  <p class="diff__domanda" id={`${uid}-domanda`}><span class="cursore" aria-hidden="true"></span>Quanto è stato difficile?</p>
+  <div class="diff__pulsanti" role="group" aria-labelledby={`${uid}-domanda`}>
+    {LIVELLI.map((l) => (
+      <button type="button" class="btn-px label diff__btn" data-diff-voto={l} aria-pressed="false">
+        <Fragment set:html={teschiHtml(l)} />
+        {ETICHETTA[l]}
+      </button>
+    ))}
+  </div>
+  <button type="button" class="cambia-voto" data-cambia hidden>Cambia voto</button>
+  </div>
+  <p class="diff__stato" role="status" aria-live="polite" data-diff-stato></p>
+</div>
+
+<script>
+  import { EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+  import { conteggi, EVENTO_FEEDBACK, mioVoto, vota } from '../../lib/feedback';
+  import { ETICHETTA, LIVELLI, mediana, teschiHtml, isLivello } from '../../lib/difficolta';
+  import { scintille, vibra } from '../../lib/fx';
+
+  const BLOCCHI = 10;
+
+  for (const box of document.querySelectorAll<HTMLElement>('[data-diff]')) {
+    const modulo = box.dataset.modulo!;
+    const q = <T extends Element = HTMLElement>(sel: string) => box.querySelector<T>(sel)!;
+    const stato = (msg: string) => (q('[data-diff-stato]').textContent = msg);
+    let attivo = false;
+
+    /** Con un voto dato nasconde le altre scelte; "Cambia voto" le riapre. */
+    const comprimi = (votato: boolean) => {
+      q('[data-scelte]').classList.toggle('is-votato', votato);
+      q('[data-cambia]').hidden = !votato;
+    };
+    q('[data-cambia]').addEventListener('click', () => {
+      comprimi(false);
+      box.querySelector<HTMLButtonElement>('[data-diff-voto][aria-pressed="true"]')?.focus();
+    });
+
+    async function carica() {
+      try {
+        const [mappa, mio] = await Promise.all([conteggi([modulo], 'difficolta'), mioVoto(modulo, 'difficolta')]);
+        const c = mappa.get(modulo) ?? {};
+        const { livello, totale } = mediana(c);
+        const verdetto = q('[data-diff-verdetto]');
+        if (livello) {
+          verdetto.innerHTML = `${teschiHtml(livello)} <strong>${ETICHETTA[livello]}</strong> <span class="diff__nota">mediana di ${totale} voti</span>`;
+        } else {
+          verdetto.textContent = 'Ancora nessun verdetto.';
+        }
+        q('[data-diff-righe]').hidden = livello === null;
+        q('[data-diff-insufficienti]').hidden = livello !== null;
+        q('[data-diff-finora]').textContent = String(totale);
+        const max = Math.max(1, ...LIVELLI.map((l) => c[l] ?? 0));
+        box.querySelectorAll<HTMLElement>('.diff__riga').forEach((riga) => {
+          const n = c[riga.dataset.livello!] ?? 0;
+          const blocchi = n > 0 ? Math.max(1, Math.round((n / max) * BLOCCHI)) : 0;
+          riga.querySelector<HTMLElement>('.diff__barra')!.style.setProperty('--n', String(blocchi));
+          riga.querySelector('[data-diff-count]')!.textContent = String(n);
+          riga.classList.toggle('diff__riga--tu', riga.dataset.livello === mio);
+          riga.querySelector<HTMLElement>('.diff__tu')!.hidden = riga.dataset.livello !== mio;
+        });
+        box.querySelectorAll<HTMLButtonElement>('[data-diff-voto]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.diffVoto === mio)));
+        comprimi(!!mio);
+      } catch {
+        q('[data-diff-verdetto]').textContent = 'Al momento non è possibile caricare i voti.';
+      }
+    }
+
+    const applica = ({ session }: StatoAuth) => {
+      attivo = !!session;
+      if (attivo) carica();
+    };
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+    window.addEventListener(EVENTO_FEEDBACK, (e) => {
+      const { modulo: m, tipo } = (e as CustomEvent<{ modulo: string; tipo: string }>).detail;
+      if (attivo && m === modulo && tipo === 'difficolta') carica();
+    });
+
+    box.querySelectorAll<HTMLButtonElement>('[data-diff-voto]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        if (!attivo || !isLivello(btn.dataset.diffVoto)) return;
+        stato('Invio del voto…');
+        const ok = await vota(modulo, 'difficolta', btn.dataset.diffVoto);
+        if (!ok) {
+          stato('Non è stato possibile registrare il voto. Riprova più tardi.');
+          return;
+        }
+        stato('Voto registrato. Grazie!');
+        scintille(btn);
+        vibra([12, 40, 12]);
+      });
+    });
+  }
+</script>
+
+<style>
+  .diff {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 4px solid var(--bg);
+  }
+  .diff__titolo {
+    color: var(--text-2);
+    margin: 0 0 8px;
+  }
+  .diff__verdetto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+  }
+  .diff__verdetto :global(.teschi),
+  .diff__btn :global(.teschi) {
+    display: inline-flex;
+    gap: 2px;
+  }
+  .diff__verdetto :global(.diff__nota) {
+    color: var(--caption);
+    font-size: 14px;
+  }
+  .diff__righe {
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 0;
+  }
+  /* Stessa griglia delle righe del tempo di studio. */
+  .diff__riga {
+    display: grid;
+    grid-template-columns: 104px 160px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+  }
+  .diff__testa {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .diff__tu {
+    flex: 0 0 auto;
+    width: 8px;
+    height: 8px;
+    background: var(--you);
+  }
+  .diff__tu[hidden] {
+    display: none;
+  }
+  .diff__nome {
+    color: var(--text-2);
+  }
+  .diff__riga--tu .diff__nome {
+    color: var(--you);
+  }
+  .diff__traccia {
+    position: relative;
+    width: 160px;
+    height: 12px;
+    background: repeating-linear-gradient(to right, var(--bg) 0 12px, transparent 12px 16px);
+  }
+  .diff__barra {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(var(--n, 0) * 16px);
+    background: repeating-linear-gradient(to right, var(--accent) 0 12px, transparent 12px 16px);
+  }
+  .diff__riga--tu .diff__barra {
+    background: repeating-linear-gradient(to right, var(--you) 0 12px, transparent 12px 16px);
+  }
+  .diff__count {
+    font-weight: 700;
+  }
+  .diff__insufficienti {
+    color: var(--text-2);
+    background: var(--bg);
+    padding: 12px;
+    margin: 0 0 12px;
+  }
+  .diff__domanda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0 12px;
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h2-size);
+    -webkit-font-smoothing: none;
+  }
+  .diff__pulsanti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .diff__btn {
+    gap: 8px;
+    background: var(--bg);
+    color: var(--text-2);
+    box-shadow: inset 0 0 0 2px var(--border-off);
+  }
+  .diff__btn[aria-pressed='true'] {
+    color: var(--you);
+    box-shadow: inset 0 0 0 4px var(--you);
+  }
+  .is-votato .diff__btn[aria-pressed='false'] {
+    display: none;
+  }
+  .diff__stato:empty {
+    display: none;
+  }
+  .diff__stato {
+    margin: 12px 0 0;
+  }
+  @media (forced-colors: active) {
+    .diff__traccia { outline: 1px solid CanvasText; background: Canvas; }
+    .diff__barra { background: CanvasText; }
+    .diff__btn[aria-pressed='true'] { outline: 4px solid Highlight; }
+  }
+</style>

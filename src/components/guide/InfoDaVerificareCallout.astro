@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
+import PixelIcon from '../common/PixelIcon.astro';
 
 type Item = CollectionEntry<'guide'>['data']['info_da_verificare'][number];
 
@@ -12,40 +13,51 @@ const { items } = Astro.props;
 ---
 
 {items.length > 0 && (
-  <aside class="callout">
-    <h2>⚠️ Informazioni da verificare</h2>
+  <section class="callout panel px-border px-border--warn" aria-labelledby="info-da-verificare" data-pagefind-ignore>
+    <div class="callout__head">
+      <PixelIcon name="alert" size={24} />
+      <h2 id="info-da-verificare" class="callout__title label">Informazioni da verificare</h2>
+    </div>
     <ul>
       {items.map((item) => (
         <li>
           <strong>{item.campo}</strong>
-          {item.nota && <SafeMarkdown text={item.nota} />}
+          {item.nota && <div class="callout__nota"><SafeMarkdown text={item.nota} /></div>}
         </li>
       ))}
     </ul>
-  </aside>
+  </section>
 )}
 
 <style>
   .callout {
-    margin: 1.5rem 0;
-    padding: 1rem 1.25rem;
-    border: 1px solid #fbbf24;
-    background: #fffbeb;
-    border-radius: 0.5rem;
+    background: var(--bg);
+    margin-top: 40px;
   }
-  .callout h2 {
-    font-size: 1rem;
-    margin: 0 0 0.5rem;
-    color: #92400e;
+  .callout__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .callout__title {
+    margin: 0;
+    color: var(--warn);
   }
   .callout ul {
     margin: 0;
-    padding-left: 1.25rem;
   }
   .callout li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 12px;
   }
   .callout li:last-child {
     margin-bottom: 0;
+  }
+  .callout li::marker {
+    color: var(--warn);
+  }
+  .callout__nota {
+    color: var(--text-2);
+    margin-top: 4px;
   }
 </style>

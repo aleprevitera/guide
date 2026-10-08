@@ -1,0 +1,142 @@
+id: g-zvqm8dmw
+title: Semeiotica Medica e Chirurgica
+esse3_codice: "501771"
+anno_di_corso: III Anno
+cfu_totali: 7
+descrizione_generale: "L'esame è composto da tre moduli: Semeiotica Medica (orale), Semeiotica Strumentale (scritto a risposta multipla) e Semeiotica Chirurgica (orale). Il voto di Semeiotica Strumentale fa media aritmetica con quello di Semeiotica Medica e Semeiotica Chirurgica. **Attenzione alla verbalizzazione e ai tirocini**: a seguito dei cambiamenti nel regolamento dei tirocini, la verbalizzazione di Semeiotica medica, strumentale e chirurgica è propedeutica ai tirocini del IV anno. Per poter accedere alla prima finestra di prenotazione dei tirocini, prevista a inizio settembre, è necessario aver verbalizzato il modulo di Semeiotica entro luglio. Se invece la Semeiotica viene verbalizzata a settembre, si potrà accedere solamente alla seconda finestra di prenotazione, prevista a ottobre, nella quale saranno disponibili i posti residui rimasti dalla prima finestra."
+moduli:
+  - nome_modulo: Semeiotica Medica
+    id: m-vna9dmvw
+    exam_type: Orale
+    study_time: 15 giorni
+    durata_orale_min: 15
+    exam_details: Esame orale, durata circa 15 minuti. Si viene interrogati da uno dei tre professori (Di Pietro, Salinaro, Perlini) oppure da un assistente; gli assistenti sono molto preparati.
+    program: |-
+      Definizione di sintomi e segni. Principi basilari del ragionamento clinico. L’anamnesi. L’esame obiettivo generale e sistematico sia in ambito internistico che chirurgico.
+
+      - Anamnesi
+      - parametri vitali
+      - tosse
+      - coma
+      - ascite
+      - cianosi
+      - diuresi
+      - febbre
+      - edema
+      - dolore
+      - dispnea
+      - ittero
+      - linfonodi
+      - polso arterioso e venoso
+      - rene
+      - tiroide
+      - torace
+      - addome
+      - semeiotica neurologica di base
+      - semeiotica ecografica
+
+      **Contenuti del Corso:**
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10668/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Oltre agli argomenti contenuti nel syllabus, è particolarmente importante concentrarsi su: casi clinici trattati dal prof. Di Pietro a lezione, poiché all'esame vengono spesso richiesti gli stessi casi o situazioni molto simili; semeiotica cardiologica, in particolare cuore e soffi cardiaci; semeiotica polmonare. Questi ultimi argomenti sono particolarmente richiesti da Salinaro.
+
+      Le sbobine 2018-19 sono le più complete per la parte teorica della semeiotica. È però necessario integrarle con: semeiotica neurologica, trattata in maniera più completa soltanto negli ultimi due anni; casi clinici di Di Pietro, per i quali è consigliato utilizzare le sbobine della propria coorte. È importante prestare attenzione anche ai dettagli aggiunti oralmente dal professore e non sempre riportati nelle sbobine. Di Pietro può inoltre fare riferimento ad argomenti di semeiotica chirurgica: può quindi essere utile fare una breve integrazione su questi temi, soprattutto quando vengono esplicitamente citati a lezione. Tra gli esempi riportati: pancreatite; appendicite.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Casi clinici di Di Pietro
+      - Cuore
+      - Soffi cardiaci
+      - Polmoni
+      - Semeiotica neurologica
+
+      La frequenza non viene controllata in maniera particolarmente rigida. Di Pietro, tuttavia, durante le lezioni può chiamare casualmente gli studenti per verificare chi è presente.
+    professors:
+      - nome: Santi Di Pietro
+        email: santi.dipietro@unipv.it
+        stile: Chiede sempre un caso clinico, generalmente uguale o simile a quelli affrontati durante le sue lezioni, oltre a un argomento variabile. Può fare riferimento ad argomenti di semeiotica chirurgica.
+      - nome: Francesco Salinaro
+        email: francesco.salinaro@unipv.it
+        stile: Chiede frequentemente argomenti relativi al cuore e ai soffi cardiaci.
+      - nome: Stefano Perlini
+        stile: Chiede frequentemente argomenti relativi al cuore e ai soffi cardiaci.
+        email: stefano.perlini@unipv.it
+    fascia_studio: 1–2 sett
+  - nome_modulo: Semeiotica Strumentale
+    id: m-o9hifbga
+    exam_type: Scritto
+    exam_details: Esame scritto a risposta multipla. La valutazione viene espressa con voti che procedono di tre punti in tre punti. Il voto fa media aritmetica con quello di semeiotica medica e chirurgica.
+    program: |-
+      Definizione di sintomi e segni. Principi basilari del ragionamento clinico. L’anamnesi. L’esame obiettivo generale e sistematico sia in ambito internistico che chirurgico.
+
+      - Principi fisici delle diverse modalità di imaging: radiologia convenzionale, tomografia computerizzata (TC), ecografia (US), risonanza magnetica (RM)
+      - Proprietà, indicazioni e controindicazioni dei diversi tipi di mezzi di contrasto: radiologia convenzionale, tomografia computerizzata (TC), ecografia (US), risonanza magnetica (RM)
+      - Evoluzione delle apparecchiature e della tecnologia per le diverse modalità di imaging: radiologia convenzionale, tomografia computerizzata (TC), ecografia (US), risonanza magnetica (RM)
+      - Introduzione ai criteri di correttezza e agli artefatti delle diverse modalità di imaging.
+      - Rappresentazione tissutale e anatomia di base per radiologia convenzionale, tomografia computerizzata (TC), ecografia (US), risonanza magnetica (RM)
+      - Fondamenti di radiobiologia e radioprotezione (con specifico riguardo alla legislazione italiana e all'aggiornamento apportato dal Dlgs. 101/20).
+
+      **Contenuti del Corso:**
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10668/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma comprende gli argomenti trattati nelle lezioni e presenti nelle sbobine.
+
+      Per la preparazione sono sufficienti: sbobine.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Alcune domande dei vecchi appelli possono ripetersi
+    professors:
+      - nome: Chandra Bortolotto
+        email: chandra.bortolotto@unipv.it
+  - nome_modulo: Semeiotica Chirurgica
+    id: m-rug9bioa
+    exam_type: Orale
+    study_time: 10 giorni
+    durata_orale_min: 15
+    exam_details: "Esame orale, durata circa 15 minuti. Sostenuto con il prof. Bianchi. Il professore tende a interrompere frequentemente durante l'esame: è quindi consigliabile non interromperlo. Il voto di semeiotica chirurgica risente spesso del voto ottenuto in semeiotica medica; per questo motivo è consigliabile sostenere questo parziale dopo aver già sostenuto semeiotica medica. Gli argomenti maggiormente richiesti riguardano la semeiotica dell'addome, in particolare le lezioni 5-12 delle sbobine 2018-19. È importante non trascurare gli argomenti apparentemente banali, perché il professore tende a concentrarsi anche su questi. **Attenzione all'orario**: è fondamentale arrivare puntuali. Il professore convoca gli studenti al mattino presto e, anche se si è tra gli ultimi a essere interrogati, è necessario essere presenti all'appello iniziale; in caso contrario il professore può non consentire di sostenere l'esame."
+    program: |-
+      Definizione di sintomi e segni. Principi basilari del ragionamento clinico. L’anamnesi. L’esame obiettivo generale e sistematico sia in ambito internistico che chirurgico.
+
+      **Contenuti del Corso:**
+
+      **programma di semeiotica chirurgica :**
+
+      - anamnesi
+      - esame obiettivo generale
+      - segni e sintomi
+      - sintomi guida dell’apparato digerente
+      - esame obiettivo dell’addome
+      - semeiotica delle emorragie digestive
+      - semeiotica dell’ addome acuto
+      - semeiotica mammaria
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10668/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      Il programma comprende tutti gli argomenti contenuti nel syllabus. Le prime quattro lezioni delle sbobine 2018-19 sono principalmente un ripasso della semeiotica medica, soprattutto per quanto riguarda: addome; esame obiettivo. Le lezioni più rilevanti per la preparazione dell'esame di semeiotica chirurgica sono quindi dalla quinta in poi.
+
+      Le sbobine 2018-19 sono la fonte principale. Per l'esame è particolarmente importante concentrarsi sulle lezioni 5-12, dedicate soprattutto alla semeiotica dell'addome.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - Semeiotica dell'addome
+      - Lezioni 5-12 delle sbobine 2018-19
+      - Argomenti apparentemente banali
+
+      Bianchi è contento di vedere gli studenti a lezione e tende a ricordarsi degli studenti frequentanti.
+    professors:
+      - nome: Carlo Maria Bianchi
+        email: carlomaria.bianchi@unipv.it
+        stile: Titolare del corso. Tende a interrompere frequentemente durante l'esame; è consigliabile non interromperlo. Tende a concentrarsi anche su argomenti apparentemente banali. Il voto risente spesso del voto di semeiotica medica.
+    fascia_studio: 1–2 sett
+aggiornato_da: Lisa Ceci
+semestre: Annuale
+ultimo_aggiornamento: 2026-10-08

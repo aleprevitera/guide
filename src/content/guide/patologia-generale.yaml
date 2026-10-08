@@ -1,0 +1,205 @@
+id: g-lwrqzriy
+title: Patologia Generale
+esse3_codice: "502622"
+anno_di_corso: III Anno
+cfu_totali: 8
+descrizione_generale: "L'esame è composto da una parte scritta (voto massimo 28/30) e una parte orale (fino a 2/30). Il voto finale è la somma dei due. La prova scritta si svolge al computer e dura 1 ora e 30 minuti. **Frequenza obbligatoria**: almeno il 75%, rilevata tramite app. I controlli sono effettuati dalla prof.ssa Scotti, che richiede il 75% di frequenza del proprio modulo (4 lezioni). Al termine della lezione, la professoressa chiama gli studenti il cui cognome inizia con una lettera scelta casualmente; gli studenti chiamati devono recarsi alla cattedra muniti di documento d'identità e firmare un foglio per attestare la propria presenza. **Rifiuto del voto**: se si rifiuta il voto del vetrino, è necessario ripetere anche lo scritto; se si rifiuta lo scritto, è possibile conservare il risultato dell'orale, valido per 1 anno. **Tempo di studio complessivo**: da un minimo di 3 settimane / 1 mese fino a 2 mesi. **Come rispondere allo scritto**: la correzione è piuttosto severa, quindi adottare un approccio 'Quality over quantity': rispondere direttamente alla domanda, evitare spiegazioni inutilmente prolisse, se viene richiesta una definizione fornire innanzitutto la definizione, quando è sufficiente un elenco preferire l'elenco, se viene richiesto un numero preciso di esempi fornire n+1 esempi."
+moduli:
+  - nome_modulo: Patologia Generale
+    id: m-6nfhsyqs
+    exam_type: Scritto
+    frequenza: Obbligatoria
+    exam_details: "Prova scritta: 12 domande a risposta aperta."
+    program: |-
+      **Contenuti del Corso di Patologia generale**
+
+      **Patologia:**
+
+      **Eziologia:**
+
+      - agenti di malattia estrinseci e intrinseci al processo morboso
+      - lesione termica
+      - radiazioni eccitanti e ionizzanti
+      - agenti di natura chimica
+      - biotrasformazioni.
+
+      **Dinamica della lesione cellulare:**
+
+      - morte cellulare
+      - necrosi, apoptosi, necroptosi, piroptosi
+      - autofagia
+      - calcificazioni patologiche.
+
+      **Lesioni elementari:**
+
+      - degenerazione e malattia degenerativa
+      - degenerazioni intracellulari (vacuolare e rigonfiamento torbido)
+      - degenerazioni extracellulari (ialinosi, amiloidosi e degenerazione fibrinoide)
+      - pigmentazioni
+      - infiammazione (modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici)
+      - processi di guarigione (risoluzione, rigenerazione e riparazione)
+      - accrescimenti patologici
+      - anomalie della crescita (ipertrofia, iperplasia, neoplasia)
+      - anomalie del differenziamento (metaplasia, displasia, anaplasia)
+      - cancerogenesi e mutagenesi
+      - infiammazione, immunità e tumori.
+
+      **Lesioni complesse:**
+
+      trombo e ateroma.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      **Sul programma**
+
+      **Argomenti particolarmente richiesti**
+
+      - **Infiammazione acuta**: definire e descrivere il processo infiammatorio acuto; identificare le cause; descrivere le diverse modalità evolutive; conoscere i modelli sperimentali, in particolare la risposta tripla; distinguere essudato e trasudato in base alla composizione; distinguere i diversi tipi di infiammazione acuta in base alle caratteristiche dell'essudato; conoscere la suppurazione e distinguere ascesso, foruncolo, flemmone, empiema. È fondamentale distinguere la risposta infiammatoria acuta immediata e ritardata, considerando caratteristiche temporali, permeabilità vascolare, migrazione leucocitaria. I mediatori chimici devono essere conosciuti nel dettaglio, compresi meccanismi di produzione ed effetti, con particolare attenzione alle interazioni tra complemento, coagulazione e sistema delle chinine.
+      - **Infiammazione cronica e granulomatosa**: conoscere definizione di infiammazione cronica; differenze rispetto all'infiammazione acuta; natura dell'infiltrato cellulare; ruolo delle cellule di origine mesenchimale; formazione e risoluzione del granuloma; fattori necessari all'avvio dell'infiammazione granulomatosa; origine e differenziamento delle cellule del granuloma; ruolo dell'ipersensibilità ritardata. Distinguere infiammazione cronica diffusa e infiammazione granulomatosa. Conoscere esempi di granuloma: da corpo estraneo, tubercolare, reumatico.
+      - **Guarigione**: definizioni di guarigione, risoluzione, rigenerazione, riparazione. Ruolo di macrofagi, fibroblasti, cellule endoteliali, sistema fibrinolitico, matrice extracellulare. Formazione e funzione del tessuto di granulazione, composizione in cellule, matrice extracellulare, rete vascolare, molecole regolatrici della proliferazione cellulare.
+      - **Neoplasie**: definire la neoplasia; distinguere crescita benigna e maligna; analizzare il significato di malignità dal punto di vista clinico, biologico e morfologico; descrivere i meccanismi dell'invasione; conoscere le metastasi, le vie coinvolte e i fattori tessutali che le influenzano; analizzare l'ipotesi genetica della cancerogenesi.
+      - **Trombo ed emostasi**: definire il trombo e distinguerlo dal coagulo; definire l'emostasi; conoscere la funzione molecolare delle piastrine; descrivere la cascata coagulativa; conoscere il sistema fibrinolitico; conoscere i meccanismi di controllo umorali, piastrinici ed endoteliali; definire la triade di Virchow; descrivere l'evoluzione del trombo; descrivere la formazione dell'embolo.
+      - **Coagulazione intravascolare disseminata**: definizione; stimoli che determinano la comparsa di trombina e plasmina nel microcircolo; meccanismi che alimentano il circolo vizioso; conseguenze sul tessuto. Conoscere inoltre i fenomeni di Sanarelli e Schwartzman e i loro rapporti con la coagulazione intravascolare disseminata.
+      - **Ateroma**: definizioni di arteriosclerosi, arteriolosclerosi, aterosclerosi, malattia aterosclerotica. Descrivere morfologia delle lesioni aterosclerotiche iniziali e avanzate; sequenza degli eventi che portano alla formazione della placca complicata; meccanismi di progressione e regressione della placca; ruolo di cellule endoteliali, cellule muscolari lisce, monociti e piastrine; sostanze secrete dalle cellule coinvolte; principali fattori di rischio e loro contributo alla patogenesi.
+
+      Per Patologia Generale e Fisiopatologia Generale, le lezioni sono generalmente chiare e lineari. La preparazione può quindi essere effettuata utilizzando:
+
+      - sbobine della propria coorte;
+      - slide dei professori;
+      - per Fisiopatologia, anche il sito indicato dalla prof.ssa Scotti.
+
+      È consigliabile integrare con le sbobine dell'anno precedente, perché alcuni argomenti possono essere stati trattati più dettagliatamente negli anni precedenti e possono comunque essere richiesti all'esame.
+      Testi consigliati dalla prof.ssa Stivala:
+
+      - Patologia generale, Altucci et al., Idelson-Gnocchi, Le Basi patologiche delle malattie, Vol. I;
+      - Robbins e Cotran, Elsevier-Masson, Patogenesi;
+      - Pardi e Di Fiore, 2023, Piccin, Cellule, tessuti e malattia;
+      - Majno e Joris, CEA, Principi di patologia generale.
+
+      Questi testi non sono strettamente necessari per la preparazione dell'esame.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - **Lesione cellulare**: Punto di non ritorno; necrosi e apoptosi; alterazioni morfologiche; modelli sperimentali
+      - **Infiammazione acuta**: Definizione, cause, evoluzione, risposta tripla, essudato/trasudato, suppurazione
+      - **Mediatori dell'infiammazione**: Meccanismi di produzione, effetti e interazioni tra complemento, coagulazione e chinine
+      - **Infiammazione cronica**: Differenze con l'acuta, infiltrato cellulare, cellule mesenchimali
+      - **Granuloma**: Formazione, risoluzione, granuloma da corpo estraneo, tubercolare e reumatico
+      - **Guarigione**: Risoluzione, rigenerazione, riparazione, tessuto di granulazione
+      - **Neoplasie**: Benigno/maligno, malignità, invasione, metastasi, oncogeni e geni oncosoppressori
+      - **Trombo**: Differenza trombo/coagulo, emostasi, piastrine, cascata coagulativa, fibrinolisi
+      - **Triade di Virchow**: Definizione ed evoluzione del trombo
+      - **CID**: Meccanismi, trombina, plasmina e danno tessutale
+      - **Sanarelli e Schwartzman**: Meccanismi molecolari e rapporto con CID
+      - **Ateroma**: Definizioni, morfologia, patogenesi, progressione/regressione e fattori di rischio
+    professors:
+      - nome: Lucia Anna Stivala
+        email: luciaanna.stivala@unipv.it
+        stile: Titolare del corso
+      - nome: Claudia Scotti
+        email: claudia.scotti@unipv.it
+      - nome: Maristella Maggi
+        email: maristella.maggi@unipv.it
+      - nome: Ornella Cazzalini
+        email: ornella.cazzalini@unipv.it
+  - nome_modulo: Fisiopatologia Generale
+    id: m-4e11c228
+    exam_type: Scritto
+    frequenza: Obbligatoria
+    exam_details: "Prova scritta: una domanda e un esercizio. L'esercizio consiste generalmente nell'interpretazione di pH, PaCO₂, HCO₃⁻ per identificare una condizione di acidosi o alcalosi, respiratoria o metabolica, eventualmente compensata. Talvolta l'esercizio può essere di un'altra tipologia oppure essere sostituito da una domanda."
+    program: |-
+      **Argomenti: Fisiopatologia generale**
+
+      Omeostasi, insufficienza funzionale. Alterazioni delle seguenti omeostasi:
+
+      - psico-neuro-endocrino-immunologica
+      - ossigenazione
+      - acqua e sodio
+      - acido-base e ione potassio.
+
+      Il modulo di Fisiopatologia Generale del corso Golgi è stato insegnato per più di un decennio dal Prof. Vanio Vannini. Questo corso è in gran parte costruito sul materiale didattico che ha raccolto durante la sua carriera e mira prima di tutto a mantenere la sua visione della materia.
+
+      Nel corso di Fisiopatologia Generale saranno analizzate alcune delle più importanti funzioni integrate. In ogni capitolo sarà definita la funzione stessa e saranno rivisti i principali meccanismi di regolazione. Saranno prese in considerazione le alterazioni della funzione determinate da condizioni fisiologiche e patologiche e saranno discussi i corrispondenti modelli fisiopatologici. Si farà riferimento ai pertinenti sistemi sperimentali essenziali per definire, o per aiutare a definire, i meccanismi fisiopatologici coinvolti. Sarà anche fatto riferimento alla clinica, in quanto luogo finale privilegiato in cui le conoscenze acquisite attraverso il corso saranno applicate, nel lavoro quotidiano dei futuri medici, alla complessa realtà che il paziente rappresenta.
+
+      In questa prospettiva, il corso di fisiopatologia intende contribuire con un ponte preliminare tra la scienza di base e le cliniche. In particolare, è studiato per dare agli studenti la possibilità di iniziare a costruire relazioni tra la maggior parte delle discipline di base, da un lato, e quelle cliniche, dall'altro, dove potranno abituarsi a " leggere" e a trattare il paziente.
+
+      La Fisiopatologia Generale è costituita da diversi blocchi: alcuni di loro comprenderanno una singola lezione, altri diverse. Il primo blocco, omeostasi, si occuperà di questo concetto di base e di quelli strettamente connessi. Nei blocchi successivi saranno discusse le alterazioni delle principali funzioni integrate. All'interno di ogni blocco verrà mantenuta una struttura coerente: verrà inizialmente fornita una definizione della funzione in esame, che sarà seguita dalla lista degli organi e sistemi coinvolti nella loro regolazione e da quella dei principali meccanismi regolatori. Sarà poi fornita una discussione delle alterazioni di ciascuna funzione e del loro significato clinico, fornendo esempi e proponendo esercizi quando ritenuto utile per una migliore comprensione dei concetti chiave.
+
+      Ogni blocco di lezioni includerà la discussione delle alterazioni di una funzione specifica.
+
+      Il corso di Fisiopatologia generale prevede un tutorial al computer con simulazioni di alterazioni fisiopatologiche.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      Per Patologia Generale e Fisiopatologia Generale, le lezioni sono generalmente chiare e lineari. La preparazione può quindi essere effettuata utilizzando:
+
+      - sbobine della propria coorte;
+      - slide dei professori;
+      - per Fisiopatologia, anche il sito indicato dalla prof.ssa Scotti.
+
+      È consigliabile integrare con le sbobine dell'anno precedente, perché alcuni argomenti possono essere stati trattati più dettagliatamente negli anni precedenti e possono comunque essere richiesti all'esame.
+      Testi consigliati dalla prof.ssa Stivala:
+
+      - Patologia generale, Altucci et al., Idelson-Gnocchi, Le Basi patologiche delle malattie, Vol. I;
+      - Robbins e Cotran, Elsevier-Masson, Patogenesi;
+      - Pardi e Di Fiore, 2023, Piccin, Cellule, tessuti e malattia;
+      - Majno e Joris, CEA, Principi di patologia generale.
+
+      Questi testi non sono strettamente necessari per la preparazione dell'esame.
+    body: |-
+      **Domande e argomenti ricorrenti**
+
+      - PNEI;
+      - omeostasi;
+      - pulsossimetro;
+      - eustress/distress;
+      - soluzione fisiologica;
+      - ipossia;
+      - iperosmolarità;
+      - riserva funzionale;
+      - salute, malattia e morte;
+      - equilibrio acido-base.
+    professors:
+      - nome: Lucia Anna Stivala
+        email: luciaanna.stivala@unipv.it
+        stile: Titolare del corso
+      - nome: Claudia Scotti
+        email: claudia.scotti@unipv.it
+      - nome: Maristella Maggi
+        email: maristella.maggi@unipv.it
+      - nome: Ornella Cazzalini
+        email: ornella.cazzalini@unipv.it
+  - nome_modulo: Preparati istopatologici
+    id: m-fwggjwzc
+    exam_type: Orale
+    frequenza: Obbligatoria
+    durata_orale_min: 10
+    exam_details: "Prova orale: discussione di un preparato istopatologico, durata massima 10 minuti. Durante l'esame è consigliabile: iniziare l'osservazione a bassi ingrandimenti; passare progressivamente agli ingrandimenti maggiori; identificare le strutture fisiologiche; riconoscere le lesioni elementari; analizzare le diverse strutture e gli eventuali infiltrati; successivamente concentrarsi sull'area specifica indicata dalla docente. È più importante saper descrivere accuratamente ciò che si osserva rispetto a formulare rapidamente una diagnosi della lesione."
+    program: |-
+      Il corso di Patologia generale include 2 laboratori:
+
+      - il primo di Istopatologia prevede un addestramento all'osservazione morfologica di preparati al microscopio;
+      - il secondo di Patologia sperimentale include alcuni test sperimentali per la valutazione della tossicità o mutagenicità di sostanze chimiche.
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      È fortemente consigliato partecipare alle esercitazioni organizzate dalla professoressa. È inoltre utile avere a disposizione il materiale presente su Drive e quello degli anni precedenti, che illustra dettagliatamente l'analisi dei vetrini. Per visualizzare i preparati caricati dalla professoressa su Kiro è consigliato scaricare i software:
+
+      - QPath per macOS;
+      - Aperio ImageScope.
+
+      I vetrini occupano molta memoria, circa 1 GB ciascuno. Questi programmi permettono di visualizzare i preparati con ingrandimenti simili a quelli dei microscopi utilizzati durante le esercitazioni e l'esame.
+      Per la parte microscopica è consigliabile evitare un approccio puramente mnemonico e imparare invece ad analizzare criticamente ciò che si osserva. Le esercitazioni sono particolarmente importanti perché riguardano i vetrini che possono essere oggetto della prova d'esame.
+    professors:
+      - nome: Lucia Anna Stivala
+        email: luciaanna.stivala@unipv.it
+        stile: Titolare del corso
+      - nome: Claudia Scotti
+        email: claudia.scotti@unipv.it
+      - nome: Maristella Maggi
+        email: maristella.maggi@unipv.it
+      - nome: Ornella Cazzalini
+        email: ornella.cazzalini@unipv.it
+aggiornato_da: Luiza Leshi
+semestre: I
+ultimo_aggiornamento: 2026-10-08

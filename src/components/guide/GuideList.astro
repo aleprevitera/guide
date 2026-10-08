@@ -1,0 +1,262 @@
+---
+// Elenco di guide come card cliccabili, usato in /guide/ e nelle pagine degli
+// anni. Ogni card ha il colore e il terreno del suo mondo (anno di corso) e
+// una riga di "statistiche da videogioco" ricavata solo dai dati della guida
+// (niente da aggiungere a mano: i rappresentanti compilano Decap come sempre).
+import type { CollectionEntry } from 'astro:content';
+import PixelIcon from '../common/PixelIcon.astro';
+import { cfuGuida, proveEsame } from '../../lib/guide';
+import { MONDI, stileMondo } from '../../lib/mondi';
+import { dateFuture, parti } from '../../lib/appelli';
+import type { EsameInArrivo } from '../../lib/in-arrivo';
+
+interface Props {
+  entries: CollectionEntry<'guide'>[];
+  /** Esami senza guida: schede bloccate, dopo le guide (src/lib/in-arrivo.ts). */
+  inArrivo?: EsameInArrivo[];
+}
+
+const inArrivo = Astro.props.inArrivo ?? [];
+
+const guide = [...Astro.props.entries]
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .map((entry) => {
+    const prove = proveEsame(entry.data);
+    return {
+      href: `/guide/${entry.id}/`,
+      // Il titolo della card diventa il titolo della guida (View Transition).
+      vt: entry.data.id ? `guida-${entry.data.id}` : undefined,
+      title: entry.data.title,
+      stile: stileMondo(entry.data.anno_di_corso),
+      terreno: MONDI[entry.data.anno_di_corso].icona,
+      cfu: cfuGuida(entry.data),
+      prove,
+      tipo: prove.scritto && prove.orale ? 'Scritto + orale' : prove.scritto ? 'Scritto' : prove.orale ? 'Orale' : undefined,
+      moduli: entry.data.moduli.length,
+      // Tempo di studio e difficoltà: feedback degli studenti, caricati nel
+      // browser solo con una sessione; senza, la statistica mostra il lucchetto.
+      idModuli: entry.data.moduli.map((m) => m.id).filter(Boolean).join(','),
+      // Prossimo appello (ESSE3): date future alla build; nel browser si salta quelle passate.
+      appelli: dateFuture(entry.data.id),
+    };
+  });
+---
+
+<ul class="guide-list" data-rivela>
+  {guide.map((g) => (
+    <li>
+      <a class="guida px-border" href={g.href} style={g.stile}>
+        <span class="guida__corpo">
+          <span class="guida__titolo" style={g.vt && `view-transition-name:${g.vt}`}>{g.title}</span>
+          {(g.cfu || g.tipo || g.moduli > 1 || g.idModuli) && (
+            <span class="hud label">
+              {g.cfu && (
+                <span class="stat"><PixelIcon name="moneta" size={16} />{g.cfu} CFU</span>
+              )}
+              {g.tipo && (
+                <span class="stat">
+                  {g.prove.scritto && <PixelIcon name="penna" size={16} />}
+                  {g.prove.orale && <PixelIcon name="fumetto" size={16} />}
+                  {g.tipo}
+                </span>
+              )}
+              {g.moduli > 1 && (
+                <span class="stat"><PixelIcon name="moduli" size={16} />{g.moduli} moduli</span>
+              )}
+              {g.appelli.length > 0 && (
+                <span class="stat" data-prossimo-appello={g.appelli.join(',')}>
+                  <PixelIcon name="calendario" size={16} />
+                  <span><span class="visually-hidden">Prossimo appello: </span><span data-prossimo-testo>{parti(g.appelli[0]).giorno} {parti(g.appelli[0]).mese}</span></span>
+                </span>
+              )}
+              {g.idModuli && (
+                <>
+                  <span class="stat" data-fb-card data-tipo="tempo_studio" data-moduli={g.idModuli}>
+                    <PixelIcon name="clessidra" size={16} />
+                    <span data-fb-valore>Tempo <PixelIcon name="lock" size={16} /><span class="visually-hidden"> (accedi per vederlo)</span></span>
+                  </span>
+                  <span class="stat" data-fb-card data-tipo="difficolta" data-moduli={g.idModuli}>
+                    <span data-fb-valore><PixelIcon name="teschio" size={16} />Difficoltà <PixelIcon name="lock" size={16} /><span class="visually-hidden"> (accedi per vederla)</span></span>
+                  </span>
+                </>
+              )}
+            </span>
+          )}
+        </span>
+        <span class="terreno" data-terreno={g.terreno} aria-hidden="true"></span>
+      </a>
+    </li>
+  ))}
+  {inArrivo.map((e) => (
+    <li>
+      <div class="guida guida--bloccata px-border px-border--off">
+        <span class="guida__corpo">
+          <span class="guida__titolo">{e.nome}</span>
+          <span class="hud label">
+            <span class="stat stat--bloccata"><PixelIcon name="lock" size={16} />Guida in arrivo</span>
+            {e.cfu && <span class="stat"><PixelIcon name="moneta" size={16} />{e.cfu} CFU</span>}
+          </span>
+          {e.whatsapp && (
+            <a class="guida__gruppo" href={e.whatsapp} target="_blank" rel="noopener noreferrer"><PixelIcon name="whatsapp" size={16} />Gruppo WhatsApp dell’esame</a>
+          )}
+        </span>
+      </div>
+    </li>
+  ))}
+</ul>
+
+<script>
+  import { EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+  import { conteggi, type TipoFeedback } from '../../lib/feedback';
+  import { ETICHETTA, LIVELLI, mediana, teschiHtml } from '../../lib/difficolta';
+  import { FASCE_STUDIO } from '../../lib/fasce';
+  import { medianaSuperiore, piuAlto } from '../../lib/verdetto';
+
+  // Statistiche dai feedback degli studenti: con accesso, il verdetto del
+  // modulo "peggiore" della guida (più tempo, più difficile); senza, il
+  // lucchetto già nel markup. Una chiamata per tipo per tutte le card.
+  // Prossimo appello: salta le date passate dall'ultimo aggiornamento settimanale.
+  const MESI = ['gen', 'feb', 'mar', 'apr', 'mag', 'giu', 'lug', 'ago', 'set', 'ott', 'nov', 'dic'];
+  const oggi = new Date().toISOString().slice(0, 10);
+  for (const c of document.querySelectorAll<HTMLElement>('[data-prossimo-appello]')) {
+    const prossima = c.dataset.prossimoAppello!.split(',').find((d) => d >= oggi);
+    if (!prossima) c.hidden = true;
+    else c.querySelector('[data-prossimo-testo]')!.textContent = `${Number(prossima.slice(8, 10))} ${MESI[Number(prossima.slice(5, 7)) - 1]}`;
+  }
+
+  const stat = [...document.querySelectorAll<HTMLElement>('[data-fb-card]')];
+  const valore = (c: HTMLElement) => c.querySelector<HTMLElement>('[data-fb-valore]')!;
+  const bloccato = stat.map((c) => valore(c).innerHTML);
+
+  async function mostra(tipo: TipoFeedback) {
+    const mie = stat.filter((c) => c.dataset.tipo === tipo);
+    const moduli = [...new Set(mie.flatMap((c) => c.dataset.moduli!.split(',')))];
+    try {
+      const mappa = await conteggi(moduli, tipo);
+      for (const c of mie) {
+        const ids = c.dataset.moduli!.split(',');
+        if (tipo === 'difficolta') {
+          const peggiore = piuAlto(LIVELLI, ids.map((m) => mediana(mappa.get(m) ?? {}).livello).filter((l) => l !== null));
+          valore(c).innerHTML = peggiore
+            ? `${teschiHtml(peggiore)}<span class="visually-hidden">Difficoltà: </span>${ETICHETTA[peggiore]}`
+            : 'Difficoltà: pochi voti';
+        } else {
+          const lungo = piuAlto(FASCE_STUDIO, ids.map((m) => medianaSuperiore(FASCE_STUDIO, mappa.get(m) ?? {}).valore).filter((f) => f !== null));
+          valore(c).innerHTML = lungo ? `<span class="visually-hidden">Tempo di studio: </span>${lungo}` : 'Tempo: pochi voti';
+        }
+      }
+    } catch {
+      /* resta il lucchetto */
+    }
+  }
+
+  const applica = ({ session }: StatoAuth) => {
+    if (session) {
+      mostra('tempo_studio');
+      mostra('difficolta');
+    } else stat.forEach((c, i) => (valore(c).innerHTML = bloccato[i]));
+  };
+  if (stat.length > 0) {
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+  }
+</script>
+
+<style>
+  .guide-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .guide-list li {
+    margin: 0;
+  }
+  .guida {
+    display: block;
+    min-height: 44px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    background: var(--panel);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 80ms steps(1, end);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .guida:hover {
+      transform: translateY(-2px);
+      --px-c: var(--mondo-chiaro, var(--accent));
+    }
+  }
+  .guida:active {
+    transform: translateY(4px);
+    --px-c: var(--mondo-chiaro, var(--accent));
+  }
+  /* Fascia del colore del mondo sul lato sinistro. */
+  .guida__corpo {
+    display: block;
+    padding: 16px 16px 16px 28px;
+    box-shadow: inset 12px 0 0 0 var(--mondo, var(--chip));
+  }
+  .guida__titolo {
+    display: block;
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h2-size);
+    line-height: 1.2;
+    margin-bottom: 12px;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Statistiche "HUD": icona pixel + valore su fondo scuro. */
+  .hud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .stat {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .stat :global(.teschi) {
+    display: inline-flex;
+    gap: 2px;
+  }
+  [data-fb-valore] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  /* Esame senza guida: scheda spenta, non cliccabile, con il lucchetto. */
+  .guida--bloccata {
+    background: var(--bg);
+    color: var(--text-2);
+  }
+  .guida--bloccata .guida__corpo {
+    box-shadow: inset 12px 0 0 0 var(--border-off);
+  }
+  .guida--bloccata .guida__titolo {
+    color: var(--text-2);
+  }
+  .guida--bloccata .stat {
+    background: var(--chip);
+    color: var(--text-2);
+  }
+  .guida__gruppo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    margin-top: 8px;
+  }
+  .stat--bloccata {
+    color: var(--accent) !important;
+  }
+  @media (forced-colors: active) {
+    .guida { outline: 2px solid CanvasText; }
+    .stat { outline: 1px solid CanvasText; }
+  }
+</style>

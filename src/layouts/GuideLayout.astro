@@ -2,35 +2,56 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from './BaseLayout.astro';
 import GuideHeader from '../components/guide/GuideHeader.astro';
+import ModuliTabs from '../components/guide/ModuliTabs.astro';
 import ModuloSection from '../components/guide/ModuloSection.astro';
 import InfoDaVerificareCallout from '../components/guide/InfoDaVerificareCallout.astro';
-import UltimoAggiornamento from '../components/guide/UltimoAggiornamento.astro';
+import ProssimiAppelli from '../components/guide/ProssimiAppelli.astro';
+import { appelliGuida, futuri } from '../lib/appelli';
+import { moduloAnchor } from '../lib/ids';
+import { MONDI, stileMondo } from '../lib/mondi';
 
 interface Props {
   data: CollectionEntry<'guide'>['data'];
 }
 
 const { data } = Astro.props;
+const isIntegrato = data.moduli.length > 1;
+const moduli = data.moduli.map((modulo, i) => ({ modulo, anchor: moduloAnchor(modulo.id, i) }));
+// Appelli da ESSE3: quelli dell'intero esame (verbalizzazioni, prove uniche)
+// sopra le schede dei moduli; quelli di ogni modulo dentro il modulo.
+const appelli = appelliGuida(data.id);
+const appelliEsame = isIntegrato ? (appelli?.generale ?? []) : [];
 ---
 
-<BaseLayout title={data.title}>
-  <article class="guide">
-    <GuideHeader
-      title={data.title}
-      anno_di_corso={data.anno_di_corso}
-      cfu_totali={data.cfu_totali}
-      moduli={data.moduli}
-      link_sbobine_generale={data.link_sbobine_generale}
-      link_whatsapp_generale={data.link_whatsapp_generale}
-      descrizione_generale={data.descrizione_generale}
-    />
+<BaseLayout title={data.title} description={data.sottotitolo} aggiornamento={data.ultimo_aggiornamento} autore={data.aggiornato_da}>
+  <article class="guide" style={stileMondo(data.anno_di_corso)} data-pagefind-body>
+    {/* Metadati per la ricerca (Pagefind): l'anno colora il risultato. */}
+    <span hidden data-pagefind-meta="anno">{data.anno_di_corso}</span>
+    <span class="terreno guide__terreno" data-terreno={MONDI[data.anno_di_corso].icona} aria-hidden="true"></span>
+    <GuideHeader data={data} />
 
-    {data.moduli.map((modulo) => (
-      <ModuloSection modulo={modulo} />
+    {futuri(appelliEsame).length > 0 && <ProssimiAppelli turni={appelliEsame} titolo="Appelli dell'intero esame" />}
+
+    {isIntegrato && <ModuliTabs moduli={moduli.map((m) => ({ nome: m.modulo.nome_modulo, anchor: m.anchor }))} />}
+
+    {moduli.map(({ modulo, anchor }) => (
+      <ModuloSection
+        modulo={modulo}
+        anchor={anchor}
+        mostraNome={isIntegrato}
+        appelli={appelli ? [...(appelli.moduli[modulo.id ?? ''] ?? []), ...(isIntegrato ? [] : appelli.generale)] : undefined}
+      />
     ))}
 
     <InfoDaVerificareCallout items={data.info_da_verificare} />
-
-    <UltimoAggiornamento data={data.ultimo_aggiornamento} autore={data.aggiornato_da} />
   </article>
 </BaseLayout>
+
+<style>
+  /* Mini-scena del mondo: 8px di cielo nel colore del mondo + terreno. */
+  .guide__terreno {
+    height: 24px;
+    margin: 0 0 16px;
+    border-top: 8px solid var(--mondo);
+  }
+</style>

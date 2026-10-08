@@ -1,0 +1,75 @@
+id: g-hxm7b57t
+title: Medicina di Laboratorio
+esse3_codice: "501773"
+anno_di_corso: III Anno
+cfu_totali: 5
+moduli:
+  - nome_modulo: Medicina di Laboratorio
+    id: m-snews6i7
+    study_time: 15-20 giorni
+    exam_details: |-
+      L'esame può essere sostenuto secondo due modalità:
+
+      - **Modalità 1 – Parziale + completamento**: è possibile sostenere un esame parziale, solitamente a metà/fine aprile, sugli argomenti spiegati fino alla lezione precedente al parziale. Nel mese di maggio è previsto il Journal Club, un'attività a gruppi di massimo 10 persone che consiste nella presentazione di un paper scelto dai professori. Il completamento dell'esame deve essere sostenuto il prima possibile e comunque entro la fine della sessione estiva, sugli argomenti delle lezioni successive al parziale. Nell'a.a. 2025/26, a causa dell'elevato numero di iscritti all'esame di completamento di giugno, la prof.ssa Balduini ha modificato la modalità di completamento, proponendo uno scritto in cui veniva richiesto di descrivere l'iter diagnostico da seguire davanti a un caso clinico.
+      - **Modalità 2 – Esame completo**: è possibile sostenere direttamente l'intero esame in forma orale, generalmente con gli assistenti.
+
+      Durante le prove viene data particolare importanza alla pertinenza e al contenuto delle risposte, penalizzando gli studenti che risultano eccessivamente prolissi.
+
+      **Propedeuticità con Patologia Generale**: dall'a.a. 2022/23, l'esame di Patologia Generale è propedeutico a Medicina di Laboratorio. Questo può rendere complicato sostenere i due esami nella stessa sessione, poiché le professoresse di Patologia Generale possono impiegare diverso tempo per la correzione degli esami. La prof.ssa Balduini generalmente permette comunque agli studenti che non hanno ancora ricevuto l'esito di Patologia Generale di sostenere Medicina di Laboratorio, mantenendo il voto in sospeso fino alla verbalizzazione dell'esame di Patologia.
+
+      In caso di esame scritto basato su un caso clinico, è importante saper impostare correttamente l'iter diagnostico di laboratorio a partire dal caso proposto.
+    program: |-
+      - Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
+      - Esame emocromocitometrico e metabolismo del ferro
+      - L'emostasi: rischio trombotico ed emorragico 1
+      - Struttura e funzione del midollo osseo
+      - Meccanismi biochimici di fibrosi
+      - Ruolo del Calcio nella malattia
+      - UPR e Autofagia
+      - Introduzione alla medicina rigenerativa e ai biomateriali
+      - La funzionalità epatica e pancreatica
+      - Le sieroproteine
+      - Diagnosi di laboratorio e monitoraggio del diabete
+      - La fase acuta e la sepsi
+      - I lipidi e le classi lipoproteiche: struttura e parametri di rischio aterosclerotico
+      - Marcatori di danno cardiaco
+      - Metabolismo del calcio e dell'osso
+      - Marcatori tumorali e loro significato
+      - La funzionalità renale e l'esame delle urine
+      - Introduzione alla Medicina di Laboratorio e raccolta campioni (plasma, siero, principali anticoagulanti)
+      - Sensibilità e specificità dei test di laboratorio
+      - Esame emocromocitometrico
+      - Approcci traslazionali allo studio dell’emopoiesi (introduzione alla medicina rigenerativa e biomateriali)
+      - Il laboratorio dell’emostasi
+      - Elettroforesi (sieroproteine, emoglobine)
+      - Spettrofotometria e dosaggio enzimatico
+      - Le tecniche immunochimiche
+      - Studio dell'autoimmunità
+      - Gli approcci di terapia cellulare avanzata
+      - Biobanche e controlli di qualità cellulare
+      - La diagnostica enzimatica (marcatori di danno cardiaco, marcatori di funzionalità epatica e pancreatica, marcatori tumorali)
+      - La diagnostica proteica (marcatori di danno cardiaco, marcatori di fase acuta, marcatori tumorali)
+      - Gli oligoelementi in medicina di laboratorio (metabolismo del ferro, calcio, rame)
+      - Banche dati, ricerca bibliografica, analisi e discussione della letteratura scientifica
+      - Discussione di casi clinici
+
+      *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10669/2024/9999?coorte=2024&schemaid=17804).*
+    material_tips: |-
+      - Sbobine dell'a.a. 2020-21 sono le più complete.
+      - Per la preparazione è sufficiente utilizzare le sbobine dell'anno corrente e le slide fornite dai professori tramite Kiro.
+      - È consigliabile integrare con le sbobine dell'anno precedente gli argomenti che talvolta non vengono affrontati durante le lezioni, ma che possono comunque essere oggetto d'esame.
+      - Prestare attenzione alla modalità di risposta: i professori danno importanza al contenuto e alla capacità di arrivare al punto, penalizzando le risposte eccessivamente prolisse.
+    body: "Per contattare i docenti: è consigliabile scrivere a tutti e tre i professori, poiché Malara e Di Buduo leggono più frequentemente le email."
+    professors:
+      - nome: Alessandra Balduini
+        email: alessandra.balduini@unipv.it
+        stile: Titolare del corso
+      - nome: Alessandro Malara
+        email: alessandro.malara@unipv.it
+      - nome: Christian Andrea Di Buduo
+        email: christian.dibuduo@unipv.it
+    fascia_studio: 3–4 sett
+    link_whatsapp: https://chat.whatsapp.com/KutxNksIdu8AnLNDlUO1bM
+aggiornato_da: Luiza Leshi
+semestre: II
+ultimo_aggiornamento: 2026-10-08

@@ -1,0 +1,180 @@
+---
+// Mappa dei mondi: sei caselle, una per anno di corso, ognuna con la palette
+// e il terreno del suo mondo (src/lib/mondi.ts). Gli anni senza guide sono
+// mondi ancora bloccati: spenti, con il lucchetto, non cliccabili.
+// I mondi con una scena (sprite sheet in src/assets/mondi/, generato da
+// scripts/mondi/genera-scene.mjs) la mostrano animata a scatti al posto di
+// icona e terreno; da bloccati ne mostrano la versione spenta, ferma.
+import { getCollection } from 'astro:content';
+import { ANNI_DI_CORSO, annoHref, numeroRomano, vtMondo } from '../../lib/anni';
+import { MONDI, stileMondo } from '../../lib/mondi';
+import PixelIcon from '../common/PixelIcon.astro';
+import ScenaMondo from '../common/ScenaMondo.astro';
+
+interface Props {
+  /** Solo per /dev/mondi: mostra tutti i mondi come sbloccati. */
+  anteprima?: boolean;
+}
+
+const { anteprima = false } = Astro.props;
+
+const guide = await getCollection('guide');
+const anni = ANNI_DI_CORSO.map((anno) => ({
+  anno,
+  numero: numeroRomano(anno),
+  href: annoHref(anno),
+  mondo: MONDI[anno],
+  stile: `${stileMondo(anno)};view-transition-name:${vtMondo(anno)}`,
+  n: anteprima ? 1 : guide.filter((g) => g.data.anno_di_corso === anno).length,
+  scena: !!MONDI[anno].scena,
+}));
+---
+
+<ul class="mondi" data-rivela>
+  {anni.map((a) => (
+    <li>
+      {a.n > 0 ? (
+        <a class:list={['mondo', { 'mondo--scena': a.scena }]} href={a.href} style={a.stile}>
+          <span class="mondo__cielo">
+            {a.scena && <ScenaMondo anno={a.anno} />}
+            <span class:list={['mondo__numero', { 'testo-su-scena': a.scena }]}>{a.numero}</span>
+            <span class:list={['label', { 'testo-su-scena': a.scena }]}>Anno<span class="visually-hidden">,</span></span>
+            <span class:list={['mondo__info', 'label', { 'testo-su-scena': a.scena }]}>{a.n} {a.n === 1 ? 'guida' : 'guide'}</span>
+            {!a.scena && <PixelIcon name={a.mondo.icona} size={32} class="mondo__icona" />}
+          </span>
+          {!a.scena && <span class="terreno" data-terreno={a.mondo.icona} aria-hidden="true"></span>}
+        </a>
+      ) : (
+        <span class:list={['mondo', 'mondo--bloccato', { 'mondo--scena': a.scena }]}>
+          <span class="mondo__cielo">
+            {a.scena && <ScenaMondo anno={a.anno} spenta />}
+            <span class:list={['mondo__numero', { 'testo-su-scena': a.scena }]}>{a.numero}</span>
+            <span class:list={['label', { 'testo-su-scena': a.scena }]}>Anno<span class="visually-hidden">:</span></span>
+            <span class:list={['mondo__info', 'label', { 'testo-su-scena': a.scena }]}>In arrivo</span>
+            <PixelIcon name="lock" size={24} class="mondo__icona" />
+          </span>
+          {!a.scena && <span class="terreno" data-terreno="spento" aria-hidden="true"></span>}
+        </span>
+      )}
+    </li>
+  ))}
+</ul>
+
+<script>
+  import { vibra } from '../../lib/fx';
+
+  // Tic brevissimo al tocco di un mondo (Android), come premere un blocco.
+  for (const casella of document.querySelectorAll<HTMLAnchorElement>('a.mondo')) {
+    casella.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') vibra(8);
+    });
+  }
+</script>
+
+<style>
+  .mondi {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+    margin: 0 0 32px;
+    padding: 4px;
+    list-style: none;
+  }
+  @media (min-width: 720px) {
+    .mondi {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .mondi li {
+    margin: 0;
+  }
+  .mondo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 4px;
+    color: var(--mondo-ink);
+    text-decoration: none;
+    box-shadow: -4px 0 0 0 var(--text), 4px 0 0 0 var(--text), 0 -4px 0 0 var(--text), 0 4px 0 0 var(--text);
+    transition: transform 80ms steps(1, end);
+  }
+  a.mondo:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a.mondo:hover {
+      transform: translateY(-2px);
+      box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+    }
+  }
+  /* Al tocco la casella "affonda" di un blocco, come un mattone colpito. */
+  a.mondo:active {
+    transform: translateY(4px);
+    box-shadow: -4px 0 0 0 var(--accent), 4px 0 0 0 var(--accent), 0 -4px 0 0 var(--accent), 0 4px 0 0 var(--accent);
+  }
+  .mondo__cielo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-height: 104px;
+    padding: 12px 12px 8px;
+    background: var(--mondo);
+  }
+  .mondo__numero {
+    font-family: var(--font-title);
+    font-weight: var(--title-weight);
+    font-size: var(--h1-size);
+    line-height: 1;
+    -webkit-font-smoothing: none;
+  }
+  .mondo__info {
+    margin-top: auto;
+  }
+  .mondo__cielo :global(.mondo__icona) {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+  /* L'icona del mondo salta (2 fotogrammi): due volte quando la casella
+     compare scorrendo (telefono), di continuo se puntata col mouse o focus. */
+  .mondi > :global(.is-visto) :global(.mondo__icona) {
+    animation: mondo-salta 400ms steps(1, end) 2;
+    animation-delay: calc(var(--i, 0) * 100ms + 240ms);
+  }
+  a.mondo:focus-visible :global(.mondo__icona) {
+    animation: mondo-salta 500ms steps(1, end) infinite;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a.mondo:hover :global(.mondo__icona) {
+      animation: mondo-salta 500ms steps(1, end) infinite;
+    }
+  }
+  @keyframes mondo-salta {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  .mondo--bloccato {
+    color: var(--caption);
+    box-shadow: -4px 0 0 0 var(--border-off), 4px 0 0 0 var(--border-off), 0 -4px 0 0 var(--border-off), 0 4px 0 0 var(--border-off);
+  }
+  .mondo--bloccato .mondo__cielo {
+    background: var(--chip);
+  }
+  /* --- Caselle con scena animata (ScenaMondo) --- */
+  .mondo--scena .mondo__cielo {
+    min-height: 120px;
+    overflow: hidden;
+    color: var(--text);
+  }
+  .mondo--bloccato.mondo--scena .testo-su-scena {
+    color: var(--caption);
+  }
+  .mondo--bloccato.mondo--scena :global(.mondo__icona) {
+    z-index: 1;
+  }
+  @media (forced-colors: active) {
+    .mondo { outline: 2px solid CanvasText; }
+  }
+</style>

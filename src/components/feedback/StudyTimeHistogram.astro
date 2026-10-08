@@ -1,0 +1,510 @@
+---
+// Istogramma del tempo di studio votato dagli studenti.
+//
+// Due modalità:
+//   - collegata (prop `moduloId`): conteggi e voto letti/scritti su Supabase
+//     dal browser. È un contenuto "extra": senza accesso Google con
+//     l'account d'ateneo il pannello resta bloccato (vedi src/lib/auth.ts).
+//   - statica (props `counts` + `totale`): solo UI, usata da /dev/istogramma.
+import PixelIcon from '../common/PixelIcon.astro';
+import { FASCE_STUDIO, type FasciaStudio } from '../../lib/fasce';
+import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, MS_PER_BLOCCO, ritardoTu, type Conteggi } from '../../lib/histogram';
+
+interface Props {
+  /** Id stabile del modulo: attiva la modalità collegata. */
+  moduloId?: string;
+  /** Modalità statica: numero di voti per ciascuna fascia. */
+  counts?: Conteggi;
+  /** Modalità statica: numero totale di risposte. */
+  totale?: number;
+  /** Fascia stimata dal rappresentante (modulo.fascia_studio). */
+  fasciaRappresentante?: FasciaStudio;
+  /** Modalità statica: fascia votata dall'utente corrente. */
+  fasciaUtente?: FasciaStudio;
+  /** Titolo della sezione (default: "Tempo di studio"). */
+  titolo?: string;
+  /** Sottotitolo della parte istogramma, se il pannello contiene altri feedback. */
+  sottotitolo?: string;
+}
+
+const { moduloId, counts = conteggiVuoti(), totale = 0, fasciaRappresentante, fasciaUtente, titolo = 'Tempo di studio', sottotitolo } = Astro.props;
+
+const live = !!moduloId;
+const uid = `hist-${Math.random().toString(36).slice(2, 8)}`;
+const sufficienti = !live && totale >= MIN_RISPOSTE;
+const blocchi = blocchiPerFascia(counts);
+const righe = FASCE_STUDIO.map((fascia, i) => ({ fascia, count: counts[fascia] ?? 0, blocchi: blocchi[i], i }));
+---
+
+<section
+  class="hist panel px-border"
+  aria-labelledby={`${uid}-titolo`}
+  data-hist
+  data-pagefind-ignore
+  data-modulo={moduloId}
+  data-live={live ? '' : undefined}
+  style={`--tu-delay:${ritardoTu(blocchi)}ms;--ms-blocco:${MS_PER_BLOCCO}ms`}
+>
+  <h2 class="hist__titolo label" id={`${uid}-titolo`}>{titolo}</h2>
+
+  {live && (
+    <div class="bloccato" data-bloccato>
+      <span class="bloccato__icona" data-lucchetto>
+        <span data-lucchetto-chiuso><PixelIcon name="lock" size={32} /></span>
+        <span data-lucchetto-aperto hidden><PixelIcon name="lock-open" size={32} /></span>
+      </span>
+      <p class="bloccato__titolo label">Contenuto extra</p>
+      <p class="bloccato__testo">
+        Accedi con il tuo account <strong>@universitadipavia.it</strong> per vedere quanto hanno
+        studiato gli altri, quanto l'hanno trovato difficile, e dare il tuo voto.
+      </p>
+      <button type="button" class="btn-px btn-px--accent label" data-accedi>Accedi con Google</button>
+      <p class="bloccato__errore" role="status" data-bloccato-errore></p>
+    </div>
+  )}
+
+  <div class="hist__contenuto" data-contenuto hidden={live}>
+  {sottotitolo && <h3 class="hist__sottotitolo label">{sottotitolo}</h3>}
+  <p class="hist__totale label" data-totale>
+    {live ? 'Caricamento…' : `${totale} ${totale === 1 ? 'risposta' : 'risposte'}`}
+  </p>
+
+  <ol class="hist__righe" aria-label="Distribuzione delle risposte per fascia" hidden={!sufficienti} data-righe>
+    {righe.map((r) => (
+      <li class:list={['riga', { 'riga--tu': r.fascia === fasciaUtente }]} data-fascia={r.fascia}>
+        <span class="riga__testa">
+          {/* Quadratino verde = il tuo voto (non solo il colore della riga). */}
+          <span class="tag--tu" hidden={r.fascia !== fasciaUtente} title="Il tuo voto"><span class="visually-hidden">(il tuo voto) </span></span>
+          <span class="riga__fascia label">{r.fascia}</span>
+          {r.fascia === fasciaRappresentante && (
+            <span class="tag tag--rappr label" title="Stima del rappresentante">
+              Rappr.<span class="visually-hidden"> (stima del rappresentante)</span>
+            </span>
+          )}
+        </span>
+        <span class="traccia" aria-hidden="true">
+          <span class="barra" style={`--n:${r.blocchi};--i:${r.i}`}></span>
+        </span>
+        <span class="riga__count"><span data-count>{r.count}</span><span class="visually-hidden"> voti</span></span>
+      </li>
+    ))}
+  </ol>
+
+  <p class="hist__insufficienti" hidden={live || sufficienti} data-insufficienti>
+    <span class="label">Dati insufficienti.</span>
+    Servono almeno {MIN_RISPOSTE} risposte per mostrare la distribuzione (finora <span data-finora>{totale}</span>).
+  </p>
+
+  {/* Dopo il voto restano visibili solo la scelta fatta e "Cambia voto". */}
+  <div class:list={['voto', { 'is-votato': !!fasciaUtente }]} data-scelte>
+    <h3 class="voto__domanda" id={`${uid}-domanda`}>
+      <span class="cursore" aria-hidden="true"></span>Quanto hai studiato?
+    </h3>
+    <div class="voto__pulsanti" role="group" aria-labelledby={`${uid}-domanda`}>
+      {FASCE_STUDIO.map((fascia) => (
+        <button type="button" class="btn-px label voto__btn" data-voto={fascia} aria-pressed={fascia === fasciaUtente ? 'true' : 'false'}>
+          {fascia}
+        </button>
+      ))}
+    </div>
+
+    <button type="button" class="cambia-voto" data-cambia hidden={!fasciaUtente}>Cambia voto</button>
+    <p class="voto__stato" role="status" aria-live="polite" data-stato></p>
+  </div>
+  {/* Altri feedback del modulo (es. difficoltà): visibili solo dopo l'accesso, come il resto. */}
+  <slot />
+  </div>
+</section>
+
+<script>
+  import { isFascia, type FasciaStudio } from '../../lib/fasce';
+  import { blocchiPerFascia, conteggiVuoti, MIN_RISPOSTE, ritardoTu, type Conteggi } from '../../lib/histogram';
+  import { accedi, EVENTO_AUTH, statoAuth, type StatoAuth } from '../../lib/auth';
+  import { fluttua, saltello, scintille, vibra } from '../../lib/fx';
+  import { conteggi, mioVoto, vota as votaFeedback } from '../../lib/feedback';
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = <T extends Element = HTMLElement>(root: ParentNode, sel: string) => root.querySelector<T>(sel)!;
+
+  /** Barre, conteggi e "TU" a partire dai dati. */
+  function render(hist: HTMLElement, counts: Conteggi, totale: number, mia: FasciaStudio | null) {
+    const blocchi = blocchiPerFascia(counts);
+    hist.style.setProperty('--tu-delay', `${ritardoTu(blocchi)}ms`);
+    $(hist, '[data-totale]').textContent = `${totale} ${totale === 1 ? 'risposta' : 'risposte'}`;
+    const sufficienti = totale >= MIN_RISPOSTE;
+    $(hist, '[data-righe]').hidden = !sufficienti;
+    $(hist, '[data-insufficienti]').hidden = sufficienti;
+    $(hist, '[data-finora]').textContent = String(totale);
+    hist.querySelectorAll<HTMLElement>('.riga').forEach((riga, i) => {
+      const fascia = riga.dataset.fascia as FasciaStudio;
+      $(riga, '.barra').style.setProperty('--n', String(blocchi[i]));
+      $(riga, '[data-count]').textContent = String(counts[fascia] ?? 0);
+      segnaMia(riga, fascia === mia);
+    });
+    premuto(hist, mia);
+  }
+
+  function segnaMia(riga: HTMLElement, mia: boolean) {
+    riga.classList.toggle('riga--tu', mia);
+    $(riga, '.tag--tu').hidden = !mia;
+  }
+
+  function premuto(hist: HTMLElement, fascia: string | null) {
+    hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.voto === fascia)));
+    comprimi($(hist, '[data-scelte]'), !!fascia);
+  }
+
+  /** Con un voto dato nasconde le altre scelte; "Cambia voto" le riapre. */
+  function comprimi(scelte: HTMLElement, votato: boolean) {
+    scelte.classList.toggle('is-votato', votato);
+    $(scelte, '[data-cambia]').hidden = !votato;
+  }
+
+  for (const scelte of document.querySelectorAll<HTMLElement>('[data-hist] [data-scelte]')) {
+    $(scelte, '[data-cambia]').addEventListener('click', () => {
+      comprimi(scelte, false);
+      scelte.querySelector<HTMLButtonElement>('[aria-pressed="true"]')?.focus();
+    });
+  }
+
+  /** Animazione al primo ingresso nel viewport, quando `pronto` si risolve. */
+  function animaQuandoVisibile(hist: HTMLElement, pronto: Promise<unknown>) {
+    if (reduce || !('IntersectionObserver' in window)) return;
+    hist.classList.add('is-armed');
+    const visibile = new Promise<void>((resolve) => {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            io.disconnect();
+            resolve();
+          }
+        },
+        // Soglia 0 + margine: parte anche se il pannello è più alto dello
+        // schermo (telefono in orizzontale), quando ne è visibile un pezzo.
+        { threshold: 0, rootMargin: '0px 0px -15% 0px' },
+      );
+      io.observe(hist);
+    });
+    Promise.all([visibile, pronto]).finally(() => hist.classList.replace('is-armed', 'is-playing'));
+  }
+
+  // --- Modalità statica: voto solo locale -----------------------------------
+  for (const hist of document.querySelectorAll<HTMLElement>('[data-hist]:not([data-live])')) {
+    animaQuandoVisibile(hist, Promise.resolve());
+    hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        premuto(hist, btn.dataset.voto!);
+        hist.querySelectorAll<HTMLElement>('.riga').forEach((riga) => segnaMia(riga, riga.dataset.fascia === btn.dataset.voto));
+      });
+    });
+  }
+
+  // --- Modalità collegata (Supabase) ---------------------------------------
+  // Contenuto "extra": senza accesso il pannello resta bloccato e non si
+  // interroga Supabase (che comunque nega i dati a chi non è autenticato).
+  const liveHists = [...document.querySelectorAll<HTMLElement>('[data-hist][data-live]')];
+  if (liveHists.length > 0) {
+    let session: StatoAuth['session'] = null;
+
+    const stato = (hist: HTMLElement, msg: string) => ($(hist, '[data-stato]').textContent = msg);
+
+    async function carica(hist: HTMLElement) {
+      const moduloId = hist.dataset.modulo!;
+      const [mappa, mio] = await Promise.all([conteggi([moduloId], 'tempo_studio'), mioVoto(moduloId, 'tempo_studio')]);
+
+      const counts = conteggiVuoti();
+      let totale = 0;
+      for (const [fascia, voti] of Object.entries(mappa.get(moduloId) ?? {})) {
+        if (!isFascia(fascia)) continue;
+        counts[fascia] = voti;
+        totale += voti;
+      }
+      render(hist, counts, totale, isFascia(mio) ? mio : null);
+    }
+
+    async function vota(hist: HTMLElement, btn: HTMLButtonElement) {
+      const fascia = btn.dataset.voto as FasciaStudio;
+      stato(hist, 'Invio del voto…');
+      const ok = await votaFeedback(hist.dataset.modulo!, 'tempo_studio', fascia);
+      if (!ok) {
+        stato(hist, 'Non è stato possibile registrare il voto. Riprova più tardi.');
+        return;
+      }
+      stato(hist, 'Voto registrato. Grazie!');
+      scintille(btn);
+      vibra([12, 40, 12]); // doppio "tic": voto registrato
+      await carica(hist).catch(() => {});
+      const riga = hist.querySelector<HTMLElement>(`.riga[data-fascia="${fascia}"]`);
+      if (riga && !$(hist, '[data-righe]').hidden) {
+        fluttua($(riga, '.riga__count'), '+1');
+        riga.classList.remove('riga--lampo');
+        void riga.offsetWidth;
+        riga.classList.add('riga--lampo');
+      }
+    }
+
+    function blocca(hist: HTMLElement) {
+      $(hist, '[data-contenuto]').hidden = true;
+      $(hist, '[data-bloccato]').hidden = false;
+      $(hist, '[data-lucchetto-aperto]').hidden = true;
+      $(hist, '[data-lucchetto-chiuso]').hidden = false;
+      stato(hist, '');
+    }
+
+    async function sblocca(hist: HTMLElement, animato: boolean) {
+      if (animato && !reduce) {
+        // Il lucchetto si apre (2 fotogrammi) prima di mostrare i dati.
+        $(hist, '[data-lucchetto-chiuso]').hidden = true;
+        $(hist, '[data-lucchetto-aperto]').hidden = false;
+        saltello($(hist, '[data-lucchetto]'));
+        await new Promise((r) => setTimeout(r, 500));
+      }
+      $(hist, '[data-bloccato]').hidden = true;
+      $(hist, '[data-contenuto]').hidden = false;
+      animaQuandoVisibile(
+        hist,
+        carica(hist).catch(() => {
+          $(hist, '[data-totale]').textContent = 'Voti non disponibili';
+          stato(hist, 'Al momento non è possibile caricare i voti.');
+        }),
+      );
+    }
+
+    const applica = ({ session: s, appenaEntrato }: StatoAuth) => {
+      session = s;
+      for (const hist of liveHists) {
+        if (s) sblocca(hist, appenaEntrato);
+        else blocca(hist);
+      }
+    };
+    statoAuth().then(applica);
+    window.addEventListener(EVENTO_AUTH, (e) => applica((e as CustomEvent<StatoAuth>).detail));
+
+    for (const hist of liveHists) {
+      hist.querySelectorAll<HTMLButtonElement>('[data-voto]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (session) vota(hist, btn);
+        });
+      });
+      $(hist, '[data-accedi]').addEventListener('click', async () => {
+        stato(hist, '');
+        const { errore } = await accedi();
+        if (errore) $(hist, '[data-bloccato-errore]').textContent = errore;
+      });
+    }
+  }
+</script>
+
+<style>
+  /* Fondo antracite e bordo nel colore del mondo: il "Parere degli studenti"
+     si distingue dalla scheda esame (blu, bordo bianco). Contrasti sul fondo
+     #333c57: testo 9.9, didascalie 4.8, accento 7.4, verde 8.0. */
+  .hist {
+    background: var(--chip);
+    --px-c: var(--mondo-chiaro, var(--text));
+  }
+  .hist__titolo {
+    color: var(--accent);
+    margin: 0;
+  }
+  .hist__sottotitolo {
+    color: var(--text-2);
+    margin: 16px 0 0;
+  }
+  .hist__totale {
+    color: var(--caption);
+    margin: 4px 0 16px;
+  }
+
+  .hist__righe {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  /* Una riga per fascia: etichetta, blocchi e conteggio affiancati (come la
+     difficoltà). 104 + 160 + conteggio stanno nei ~300px del pannello a 375px. */
+  .riga {
+    display: grid;
+    grid-template-columns: 104px 160px 1fr;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+  }
+  .riga__testa {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    min-height: 24px;
+  }
+  .riga__fascia {
+    color: var(--text-2);
+  }
+  .riga--tu .riga__fascia {
+    color: var(--you);
+  }
+
+  /* 10 blocchi da 12px + 4px di spazio = 160px (l'ultimo spazio è vuoto). */
+  .traccia {
+    position: relative;
+    flex: 0 0 auto;
+    width: 160px;
+    height: 12px;
+    background: repeating-linear-gradient(to right, var(--bg) 0 12px, transparent 12px 16px);
+  }
+  .barra {
+    --c: var(--accent);
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: calc(var(--n) * 16px);
+    background: repeating-linear-gradient(to right, var(--c) 0 12px, transparent 12px 16px);
+  }
+  .riga--tu .barra {
+    --c: var(--you);
+  }
+  .riga__count {
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .tag {
+    padding: 0 4px;
+    line-height: 20px;
+  }
+  .tag--rappr {
+    color: var(--text);
+    box-shadow: inset 0 0 0 2px var(--text);
+    padding: 0 6px;
+  }
+  .tag--tu {
+    flex: 0 0 auto;
+    width: 8px;
+    height: 8px;
+    background: var(--you);
+  }
+  .tag--tu[hidden] {
+    display: none;
+  }
+
+  /* --- Animazioni (a scatti) --- */
+  /* In attesa del viewport: barre vuote e "TU" nascosto. */
+  .hist.is-armed .barra {
+    width: 0;
+  }
+  .hist.is-armed .tag--tu {
+    visibility: hidden;
+  }
+  /* Un blocco per fotogramma: steps(n) con n = numero di blocchi. */
+  .hist.is-playing .barra {
+    animation: riempi calc(var(--n) * var(--ms-blocco)) steps(var(--n), end) backwards;
+    animation-delay: calc(var(--i) * 150ms);
+  }
+  .hist.is-playing .tag--tu {
+    animation: appari 1ms steps(1, end) backwards;
+    animation-delay: var(--tu-delay);
+  }
+  @keyframes riempi {
+    from { width: 0; }
+  }
+  @keyframes appari {
+    from { visibility: hidden; }
+  }
+
+  .hist__insufficienti {
+    color: var(--text-2);
+    background: var(--bg);
+    padding: 12px;
+    margin: 0 0 16px;
+  }
+  .hist__insufficienti .label {
+    display: block;
+    color: var(--warn);
+    margin-bottom: 4px;
+  }
+
+  .voto {
+    margin-top: 24px;
+  }
+  .voto__domanda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .voto__pulsanti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .voto__btn {
+    background: var(--bg);
+    color: var(--text-2);
+    box-shadow: inset 0 0 0 2px var(--border-off);
+  }
+  .voto__btn[aria-pressed='true'] {
+    background: var(--you);
+    color: var(--bg);
+    box-shadow: none;
+  }
+  .is-votato .voto__btn[aria-pressed='false'] {
+    display: none;
+  }
+
+  @media (forced-colors: active) {
+    .traccia { outline: 1px solid CanvasText; background: Canvas; }
+    .barra { --c: CanvasText; }
+    .tag { outline: 2px solid CanvasText; }
+    .tag--tu { background: CanvasText; }
+    .voto__btn[aria-pressed='true'] { outline: 4px solid Highlight; }
+  }
+
+  /* --- Contenuto extra bloccato --- */
+  .bloccato {
+    margin-top: 12px;
+    padding: 16px;
+    background: var(--bg);
+    text-align: center;
+  }
+  .bloccato p {
+    text-align: center;
+  }
+  .bloccato__icona {
+    display: inline-block;
+  }
+  .bloccato__icona span[hidden] {
+    display: none;
+  }
+  .bloccato__titolo {
+    color: var(--accent);
+    margin: 8px 0;
+  }
+  .bloccato__testo {
+    color: var(--text-2);
+    margin: 0 0 16px;
+  }
+  .bloccato__errore:empty {
+    display: none;
+  }
+  .bloccato__errore {
+    color: var(--warn);
+    margin: 12px 0 0;
+  }
+
+  /* Lampo a due fotogrammi sulla barra appena votata (più specifico
+     dell'animazione di riempimento .hist.is-playing .barra). */
+  .hist .riga.riga--lampo .barra {
+    animation: lampo 160ms steps(1, end) 3;
+  }
+  @keyframes lampo {
+    50% { visibility: hidden; }
+  }
+
+  .voto__stato:empty {
+    display: none;
+  }
+  .voto__stato {
+    color: var(--text);
+    margin: 12px 0 0;
+  }
+</style>
