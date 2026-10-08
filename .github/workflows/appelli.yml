@@ -1,6 +1,6 @@
 # Aggiorna gli appelli d'esame da ESSE3 una volta alla settimana (come farebbe una
-# persona a mano) e salva src/data/appelli.json: il commit su main fa
-# ripartire il deploy di Netlify. Si può lanciare anche a mano da GitHub
+# persona a mano) e salva src/data/appelli.json: il commit su main va online con la
+# pubblicazione serale (.github/workflows/pubblica.yml). Si può lanciare anche a mano da GitHub
 # (Actions › "Appelli ESSE3" › Run workflow). Se ESSE3 non risponde o la
 # pagina cambia, lo script esce con errore senza toccare i dati e GitHub
 # avvisa con un'email: il sito continua con gli appelli precedenti.
