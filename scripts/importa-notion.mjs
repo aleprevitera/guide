@@ -352,7 +352,7 @@ const ZodGuida = z.object({
   info_da_verificare: z.array(z.object({ campo: z.string().min(1).max(200), nota: nullOpt(z.string()) })),
 });
 
-/** Numeri e link nell'output che non compaiono nella scheda originale. */
+/** Numeri, link ed email nell'output che non compaiono nella scheda originale. */
 function sospetti(guida, sorgente) {
   const avvisi = [];
   const numeriSorgente = new Set(sorgente.match(/\d+(?:[.,]\d+)?/g) ?? []);
@@ -364,6 +364,7 @@ function sospetti(guida, sorgente) {
       const senzaNumeriElenco = v.replace(/^\s*\d+[.)]\s/gm, '');
       for (const n of senzaNumeriElenco.match(/\d+(?:[.,]\d+)?/g) ?? []) if (!numeriSorgente.has(n)) avvisi.push(`${dove}: "${n}" non presente nella scheda`);
       for (const u of v.match(/https?:\/\/[^\s)]+/g) ?? []) if (!sorgente.includes(u)) avvisi.push(`${dove}: link ${u} non presente nella scheda`);
+      for (const m of v.match(/[^\s@()<>]+@[^\s@()<>]+\.[a-z]{2,}/gi) ?? []) if (!sorgente.toLowerCase().includes(m.toLowerCase())) avvisi.push(`${dove}: email ${m} non presente nella scheda`);
     }
     if (Array.isArray(v)) v.forEach((x, i) => visita(x, `${dove}[${i}]`));
     else if (typeof v === 'object') for (const [k, x] of Object.entries(v)) visita(x, dove ? `${dove}.${k}` : k);
