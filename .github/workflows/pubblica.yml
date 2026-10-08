@@ -1,0 +1,71 @@
+# Pubblicazione serale del sito. Netlify non aggiorna più la produzione a ogni
+# push su main (vedi "ignore" in netlify.toml): ogni deploy costa 15 crediti e il
+# piano gratuito ne ha 300 al mese. Questa Action, ogni sera:
+#   1. guarda se main è cambiato dall'ultima pubblicazione (tag "pubblicato-*");
+#   2. se sì, e se questo mese non sono già state fatte MAX_MESE pubblicazioni,
+#      chiama il build hook di Netlify (segreto NETLIFY_BUILD_HOOK) e segna il
+#      commit pubblicato con un tag (i tag non fanno partire Netlify).
+# Urgenze: Actions › "Pubblicazione serale" › Run workflow (con "forza" ignora il tetto).
+name: Pubblicazione serale
+
+on:
+  schedule:
+    - cron: '0 19 * * *' # ogni sera, 19:00 UTC (21:00 ora legale italiana, 20:00 solare)
+  workflow_dispatch:
+    inputs:
+      forza:
+        description: 'Pubblica anche se il tetto mensile è raggiunto'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # per i tag "pubblicato-*"
+
+concurrency:
+  group: pubblica
+  cancel-in-progress: false
+
+env:
+  MAX_MESE: 16 # 16 × 15 = 240 crediti; il resto resta per banda e urgenze
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Decidi se pubblicare
+        id: decidi
+        run: |
+          git fetch --tags --force -q
+          HEAD_SHA=$(git rev-parse origin/main)
+          ULTIMO=$(git tag -l 'pubblicato-*' --sort=-creatordate | head -1)
+          if [ -n "$ULTIMO" ] && [ "$(git rev-list -n 1 "$ULTIMO")" = "$HEAD_SHA" ]; then
+            echo "Nessuna modifica dall'ultima pubblicazione ($ULTIMO)."
+            echo "pubblica=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          MESE=$(date -u +%Y%m)
+          FATTE=$(git tag -l "pubblicato-$MESE*" | wc -l)
+          echo "Pubblicazioni questo mese: $FATTE / $MAX_MESE"
+          if [ "$FATTE" -ge "$MAX_MESE" ] && [ "${{ inputs.forza }}" != "true" ]; then
+            echo "::warning::Tetto mensile raggiunto ($FATTE/$MAX_MESE): pubblicazione rimandata al mese prossimo (o lancia a mano con 'forza')."
+            echo "pubblica=no" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          echo "pubblica=si" >> "$GITHUB_OUTPUT"
+          echo "sha=$HEAD_SHA" >> "$GITHUB_OUTPUT"
+      - name: Avvia il deploy di produzione su Netlify
+        if: steps.decidi.outputs.pubblica == 'si'
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "::error::Manca il segreto NETLIFY_BUILD_HOOK"; exit 1; fi
+          curl --fail -sS -X POST -d '{}' "$HOOK?trigger_title=Pubblicazione+serale"
+      - name: Segna il commit pubblicato
+        if: steps.decidi.outputs.pubblica == 'si'
+        run: |
+          TAG="pubblicato-$(date -u +%Y%m%d-%H%M)"
+          git tag "$TAG" "${{ steps.decidi.outputs.sha }}"
+          git push origin "$TAG"
+          echo "Pubblicato $(git log -1 --format='%h %s' ${{ steps.decidi.outputs.sha }}) → $TAG"

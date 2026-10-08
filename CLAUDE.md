@@ -231,7 +231,8 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   lavoro fatto in Decap. `--aggiorna` riscrive da Notion una guida esistente (solo su richiesta esplicita),
   conservando comunque link, CFU, dati della scheda ed email dei docenti inseriti in Decap
   (`CAMPI_DECAP_GUIDA` / `CAMPI_DECAP_MODULO` in `scripts/importa-notion.mjs`).
-- Pubblicazione diretta (`publish_mode: simple`): ogni salvataggio va su `main`, quindi in produzione.
+- Pubblicazione diretta (`publish_mode: simple`): ogni salvataggio va su `main`, e online con la **pubblicazione
+  serale** (sotto).
 - Lo schema accetta i campi facoltativi vuoti (`""`/`null` → non compilato, helper `opz()` in
   `src/content/config.ts`): Decap salva così i campi svuotati e altrimenti la build fallirebbe. La data
   è `z.coerce.date()` (YAML o stringa del selettore).
@@ -249,6 +250,16 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   correzioni). Per ora resta; alternative quando servirà: DecapBridge o backend GitHub.
 - Prova in locale: `npm run cms:local` + `npm run dev`, poi `http://localhost:4321/admin/index.html`
   (in dev `/admin/` non serve l'index; in produzione sì, via redirect Netlify).
+
+## Pubblicazione (crediti Netlify)
+
+- Piano gratuito Netlify: **300 crediti/mese, 15 per deploy di produzione** (≈ 20 deploy). Per questo un push su
+  `main` (Decap, appelli, merge) **non** aggiorna la produzione: `ignore` in `netlify.toml` salta i build di
+  produzione non avviati dal build hook. Deploy preview e branch deploy partono sempre.
+- `.github/workflows/pubblica.yml` ("Pubblicazione serale"): ogni sera alle 19:00 UTC, se `main` è cambiato
+  dall'ultimo tag `pubblicato-*`, chiama il build hook (segreto GitHub `NETLIFY_BUILD_HOOK`) e tagga il commit.
+  Tetto `MAX_MESE` = 16 pubblicazioni/mese (240 crediti). Urgenze: Run workflow a mano (opzione "forza").
+- Raggruppare le modifiche: meno merge, e ai rappresentanti conviene salvare una guida una volta sola.
 
 ## Flusso di lavoro
 

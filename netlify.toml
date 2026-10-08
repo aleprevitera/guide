@@ -1,6 +1,12 @@
 [build]
   command = "npm run build"
   publish = "dist"
+  # Crediti Netlify (piano gratuito: 300/mese, 15 per deploy di produzione): la
+  # produzione NON si aggiorna a ogni push su main (salvataggi Decap, appelli,
+  # merge) ma solo quando la chiama il build hook della GitHub Action
+  # .github/workflows/pubblica.yml (sera, solo se main è cambiato, max 16/mese).
+  # "exit 0" = build saltato; deploy preview e branch deploy partono sempre.
+  ignore = "if [ \"$CONTEXT\" = \"production\" ] && [ -z \"$INCOMING_HOOK_TITLE\" ]; then echo 'Produzione: solo dal build hook (pubblicazione serale)'; exit 0; else exit 1; fi"
 
 [build.environment]
   NODE_VERSION = "22"
