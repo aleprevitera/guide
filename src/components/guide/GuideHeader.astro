@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
+import PixelIcon from '../common/PixelIcon.astro';
 import { cfuGuida, ETICHETTA_SEMESTRE, semestreGuida } from '../../lib/guide';
 import { annoHref } from '../../lib/anni';
 
@@ -41,7 +42,7 @@ const semestre = semestreGuida(data);
         <a class="btn-px btn-px--accent label" href={link_sbobine_generale} target="_blank" rel="noopener noreferrer">Sbobine</a>
       )}
       {link_whatsapp_generale && (
-        <a class="btn-px label" href={link_whatsapp_generale} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn-px label" href={link_whatsapp_generale} target="_blank" rel="noopener noreferrer"><PixelIcon name="whatsapp" size={16} />WhatsApp</a>
       )}
     </p>
   )}

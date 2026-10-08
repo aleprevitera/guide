@@ -297,6 +297,7 @@ strong {
   justify-content: center;
   min-height: 44px;
   min-width: 44px;
+  gap: 8px;
   padding: 8px 16px;
   background: var(--chip);
   color: var(--text);

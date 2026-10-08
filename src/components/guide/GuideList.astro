@@ -97,7 +97,7 @@ const guide = [...Astro.props.entries]
             {e.cfu && <span class="stat"><PixelIcon name="moneta" size={16} />{e.cfu} CFU</span>}
           </span>
           {e.whatsapp && (
-            <a class="guida__gruppo" href={e.whatsapp} target="_blank" rel="noopener noreferrer">Gruppo WhatsApp dell’esame</a>
+            <a class="guida__gruppo" href={e.whatsapp} target="_blank" rel="noopener noreferrer"><PixelIcon name="whatsapp" size={16} />Gruppo WhatsApp dell’esame</a>
           )}
         </span>
       </div>
@@ -248,6 +248,7 @@ const guide = [...Astro.props.entries]
   .guida__gruppo {
     display: inline-flex;
     align-items: center;
+    gap: 8px;
     min-height: 44px;
     margin-top: 8px;
   }

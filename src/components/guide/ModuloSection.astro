@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import SafeMarkdown from '../common/SafeMarkdown.astro';
+import PixelIcon from '../common/PixelIcon.astro';
 import SchedaEsame from './SchedaEsame.astro';
 import StudyTimeHistogram from '../feedback/StudyTimeHistogram.astro';
 import DifficoltaFeedback from '../feedback/DifficoltaFeedback.astro';
@@ -46,7 +47,7 @@ const docentiDettaglio = professors.filter((p) => p.email || p.stile);
   {hasLinks && (
     <p class="btn-row">
       {link_sbobine && <a class="btn-px btn-px--accent label" href={link_sbobine} target="_blank" rel="noopener noreferrer">Sbobine</a>}
-      {link_whatsapp && <a class="btn-px label" href={link_whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp</a>}
+      {link_whatsapp && <a class="btn-px label" href={link_whatsapp} target="_blank" rel="noopener noreferrer"><PixelIcon name="whatsapp" size={16} />WhatsApp</a>}
       {google_sheet_url && <a class="btn-px label" href={google_sheet_url} target="_blank" rel="noopener noreferrer">Domande passate</a>}
     </p>
   )}

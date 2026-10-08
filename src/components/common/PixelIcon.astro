@@ -2,13 +2,27 @@
 // Icone pixel art: griglia 8×8, solo rettangoli, renderizzate a multipli
 // interi (8 → 16/24/32px) con shape-rendering="crispEdges".
 interface Props {
-  name: 'book' | 'alert' | 'letter' | 'lock' | 'lock-open' | 'cellula' | 'cuore' | 'batterio' | 'lastra' | 'cervello' | 'tocco' | 'lente' | 'moneta' | 'penna' | 'fumetto' | 'clessidra' | 'moduli' | 'teschio' | 'calendario';
+  name: 'book' | 'alert' | 'letter' | 'lock' | 'lock-open' | 'cellula' | 'cuore' | 'batterio' | 'lastra' | 'cervello' | 'tocco' | 'lente' | 'moneta' | 'penna' | 'fumetto' | 'clessidra' | 'moduli' | 'teschio' | 'calendario' | 'whatsapp';
   size?: 16 | 24 | 32;
   class?: string;
 }
 
 const { name, size = 32, class: className } = Astro.props;
 ---
+
+{/* Fumetto verde con cornetta: rimando ai gruppi WhatsApp degli esami. */}
+{name === 'whatsapp' && (
+  <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+    <rect x="2" y="0" width="4" height="1" fill="#38b764" />
+    <rect x="1" y="1" width="6" height="1" fill="#38b764" />
+    <rect x="0" y="2" width="8" height="4" fill="#38b764" />
+    <rect x="0" y="6" width="7" height="1" fill="#38b764" />
+    <rect x="0" y="7" width="1" height="1" fill="#38b764" />
+    <rect x="2" y="2" width="1" height="2" fill="#f4f4f4" />
+    <rect x="3" y="4" width="1" height="1" fill="#f4f4f4" />
+    <rect x="4" y="5" width="2" height="1" fill="#f4f4f4" />
+  </svg>
+)}
 
 {name === 'book' && (
   <svg class={className} width={size} height={size} viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
