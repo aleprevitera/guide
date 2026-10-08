@@ -141,11 +141,6 @@ moduli:
     professors:
       - nome: Cobianchi
         stile: Richiede in particolare l’argomento pancreas.
-info_da_verificare:
-  - campo: Docenti
-    nota: Non specificati per il modulo Chirurgia d’urgenza.
-  - campo: Docenti
-    nota: Non specificati per il modulo Clinica chirurgica, oltre a Cobianchi citato nelle domande.
 esse3_codice: "506412"
 cfu_totali: 8
 ultimo_aggiornamento: 2026-10-08

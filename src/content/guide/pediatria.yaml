@@ -380,16 +380,5 @@ moduli:
         email: amelia.licari@unipv.it
       - nome: Simona Orcesi
         email: simona.orcesi@unipv.it
-info_da_verificare:
-  - campo: Nome e contatti del docente di Neuropsichiatria infantile
-    nota: "[DA INTEGRARE]"
-  - campo: Contatti docenti
-    nota: "Castagnoli, Brambilla, Bertozzi: [DA INTEGRARE]"
-  - campo: Percentuale di frequenza formalmente richiesta
-    nota: "[DA VERIFICARE]"
-  - campo: Durata delle singole interrogazioni, criteri di assegnazione dei voti ed eventuali preappelli
-    nota: "[DA INTEGRARE]"
-  - campo: Elenco puntuale delle domande ricorrenti per ciascun modulo
-    nota: "[DA INTEGRARE]"
 aggiornato_da: Rocco Buellis
 ultimo_aggiornamento: 2026-10-08

@@ -432,13 +432,6 @@ moduli:
         stile: Interroga esclusivamente lui; può talvolta spostarsi sulla parte neurologica, sempre in relazione alla domanda di Neurochirurgia.
         email: lorenzo.magrassi@unipv.it
     fascia_studio: 1–2 sett
-info_da_verificare:
-  - campo: Email
-    nota: Email di Costa non indicata ([DA INTEGRARE])
-  - campo: Frequenza
-    nota: Modalità ordinarie di controllo della frequenza [DA INTEGRARE]
-  - campo: Frequenza
-    nota: "[DA INTEGRARE]"
 esse3_codice: "501808"
 semestre: I
 ultimo_aggiornamento: 2026-10-08

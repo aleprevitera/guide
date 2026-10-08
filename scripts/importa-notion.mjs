@@ -594,7 +594,9 @@ function componiYaml(scheda, guida, esistente) {
     link_whatsapp_generale: guida.link_whatsapp_generale,
     descrizione_generale: moduli.length > 1 ? normalizzaMd(guida.descrizione_generale) : null,
     moduli,
-    info_da_verificare: guida.info_da_verificare.map(pulisci),
+    // Niente "Informazioni da verificare" automatiche (decisione 2026-10-08): il
+    // modello le estrae ancora (log), ma nel sito le aggiungono solo i rappresentanti in Decap.
+    info_da_verificare: [],
     aggiornato_da: scheda.autore ?? esistente?.dati.aggiornato_da,
   });
   // ultimo_aggiornamento come data YAML semplice (z.date() nello schema Astro).

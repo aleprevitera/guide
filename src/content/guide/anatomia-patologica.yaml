@@ -144,13 +144,6 @@ moduli:
         stile: "Molto tranquillo, mette a proprio agio. Inizia chiedendo dove si è svolto il tirocinio, poi sceglie la prima domanda. Lascia parlare, domande generali, aiuta in difficoltà. Chiede spesso una patologia neoplastica e una non neoplastica. Argomenti caratteristici: gastroenterologia ed endocrinologia. Tralascia miscellanea, oncoematologia e nefro-urologia (richieste se interno). Possibile domanda su tumori EBV-positivi."
         email: alessandro.vanoli@unipv.it
     fascia_studio: "> 8 sett"
-info_da_verificare:
-  - campo: Frequenza
-    nota: La sezione 'Frequenza' è contrassegnata come [DA INTEGRARE].
-  - campo: Email di Antonio Schena
-    nota: Contatto email da integrare.
-  - campo: Offerta formativa
-    nota: Link all'offerta formativa dell'a.a. 2026/2027 da integrare.
 esse3_codice: "501695"
 semestre: II
 ultimo_aggiornamento: 2026-10-08

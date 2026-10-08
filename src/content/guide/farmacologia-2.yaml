@@ -419,16 +419,5 @@ moduli:
         stile: Più puntigliosa, ma viene comunque descritta come corretta.
         email: cinzia.fattore@unipv.it
     fascia_studio: 3–4 sett
-info_da_verificare:
-  - campo: Dispensa sintetica di Tossicologia
-    nota: Non reperibile nei vari Drive. La scheda la segnala come potenzialmente utile ma non è stato possibile trovarla. Non aggiungere altri dettagli nel campo corrispondente (material_tips).
-  - campo: Frequenza
-    nota: Non risulta che le presenze vengano normalmente rilevate, ma l'informazione non è certa. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
-  - campo: Frequenza
-    nota: Da integrare. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
-  - campo: Frequenza
-    nota: Da integrare. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
-  - campo: Domande e argomenti ricorrenti
-    nota: Da integrare. La sezione è vuota; per Chemioterapia è presente solo una nota sulle crocette già riportata in body. Non aggiungere altri dettagli nel campo corrispondente (body).
 aggiornato_da: Giulia Stofler
 ultimo_aggiornamento: 2026-10-08

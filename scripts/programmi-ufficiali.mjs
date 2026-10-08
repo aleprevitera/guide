@@ -286,7 +286,9 @@ for (const f of (await readdir(DIR_GUIDE)).filter((x) => x.endsWith('.yaml')).so
   // Anno di corso diverso dal catalogo: non si cambia, si segnala.
   const ROMANI = ['I', 'II', 'III', 'IV', 'V', 'VI'];
   const annoUfficiale = ROMANI[Number(p.annoCorso) - 1];
-  if (annoUfficiale && dati.anno_di_corso !== `${annoUfficiale} Anno`) {
+  // Segnalazione disattivata (niente avvisi automatici nelle guide): solo log.
+  if (annoUfficiale && dati.anno_di_corso !== `${annoUfficiale} Anno`) console.log(`  ⚠ ${dati.title}: nel catalogo è al ${annoUfficiale} anno`);
+  if (false && annoUfficiale && dati.anno_di_corso !== `${annoUfficiale} Anno`) {
     const campo = 'Anno di corso';
     dati.info_da_verificare ??= [];
     if (!dati.info_da_verificare.some((i) => i.campo === campo)) {

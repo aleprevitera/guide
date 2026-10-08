@@ -62,8 +62,8 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   numerate 1–9): stessa pipeline con `--docx "III anno.docx" "IV anno.docx"` (+ `--aggiorna` per le guide
   esistenti; usa `textutil`, quindi macOS). Il modello non copia il syllabus ufficiale (poi
   `programmi-ufficiali.mjs` mette il Programma del catalogo e sposta le note in "Sul programma"), usa i
-  nomi dei moduli esistenti (gli `id` dei voti si abbinano per nome) e trasforma "[DA INTEGRARE]" in
-  "Informazioni da verificare". Titolo, codice ESSE3, CFU, autore e link restano quelli del sito.
+  nomi dei moduli esistenti (gli `id` dei voti si abbinano per nome) e **non** crea "Informazioni da verificare" (tolte
+  da tutte le guide il 2026-10-08: le aggiungono solo i rappresentanti in Decap). Titolo, codice ESSE3, CFU, autore e link restano quelli del sito.
   Dopo l'import: `node scripts/programmi-ufficiali.mjs`, poi rileggere le guide toccate.
   Formati riconosciuti: titoli in MAIUSCOLO (anno da "TERZO ANNO") o titoli normali dopo due righe vuote
   (anno dal nome del file); vince la divisione con più esami che hanno UNA sezione "1. Docenti/Professori"
