@@ -404,14 +404,6 @@ moduli:
 info_da_verificare:
   - campo: Email
     nota: Email di Costa non indicata ([DA INTEGRARE])
-  - campo: Email
-    nota: Email di Terzaghi non indicata ([DA INTEGRARE])
-  - campo: Email
-    nota: Email di Cosentino non indicata ([DA INTEGRARE])
-  - campo: Email
-    nota: Email di Avenali non indicata ([DA INTEGRARE])
-  - campo: Email
-    nota: Email di Magrassi non indicata ([DA INTEGRARE])
   - campo: Frequenza
     nota: Modalità ordinarie di controllo della frequenza [DA INTEGRARE]
   - campo: Frequenza

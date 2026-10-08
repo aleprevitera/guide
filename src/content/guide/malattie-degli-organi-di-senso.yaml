@@ -318,11 +318,14 @@ moduli:
 
       - Domande delle prove precedenti, alcune delle quali possono ripetersi
     professors:
-      - nome: Sfondrini
+      - nome: Maria Francesca Sfondrini
         stile: Titolare del corso.
+        email: francesca.sfondrini@unipv.it
+      - nome: Domenico Sfondrini
+        email: domenico.sfondrini@unipv.it
     fascia_studio: < 1 sett
-info_da_verificare:
-  - campo: Contatti docenti
-    nota: Email e nomi completi mancanti per Bianchi, Milano, Benazzo, Pagella, Canzi, Carlotto, Sfondrini; per Odontoiatria nome e contatti da integrare.
 aggiornato_da: Rocco Buellis
+info_da_verificare:
+  - campo: Docente di Odontoiatria
+    nota: Nome e contatti da integrare.
 ultimo_aggiornamento: 2026-10-08

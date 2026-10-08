@@ -1,7 +1,7 @@
 id: g-0qfyrg1m
 title: Farmacologia 2
 esse3_codice: "501694"
-anno_di_corso: IV Anno
+anno_di_corso: V Anno
 cfu_totali: 5
 semestre: II
 descrizione_generale: "L'esame è composto da tre parti: Chemioterapia (1 CFU), Tossicologia (1 CFU), Farmacologia (3 CFU). Il voto finale è calcolato come media ponderata dei tre moduli in base ai rispettivi CFU. Non sottovalutare l'esame per il fatto che Tossicologia e Chemioterapia valgano complessivamente solo 2 CFU: soprattutto Tossicologia può richiedere una preparazione piuttosto lunga. Nel complesso, la preparazione richiede un tempo variabile in base alla familiarità con la materia; la Tossicologia, pur non essendo particolarmente difficile, può risultare lunga perché comprende diversi argomenti nuovi."
@@ -330,12 +330,6 @@ moduli:
         email: cinzia.fattore@unipv.it
     fascia_studio: 3–4 sett
 info_da_verificare:
-  - campo: Professori e contatti
-    nota: Da integrare (nome, cognome, email, modulo di afferenza). Il titolare del corso non è specificato per questo modulo; se non emergerà altro, indicare come 'Titolare del corso' solo se necessario in stile, ma al momento mancano i dati minimi richiesti (nome e cognome completi ed email). Non aggiungere altri dettagli nel campo corrispondente (professors).
-  - campo: Professori e contatti
-    nota: Da integrare (nome, cognome, email, modulo di afferenza). Il titolare del corso non è specificato per questo modulo; se non emergerà altro, indicare come 'Titolare del corso' solo se necessario in stile, ma al momento mancano i dati minimi richiesti (nome e cognome completi ed email). Non aggiungere altri dettagli nel campo corrispondente (professors).
-  - campo: Professori e contatti
-    nota: Contatti da integrare per entrambe le docenti (email). I nomi sono presenti ma mancano le email. Non aggiungere altri dettagli nel campo corrispondente (professors).
   - campo: Dispensa sintetica di Tossicologia
     nota: Non reperibile nei vari Drive. La scheda la segnala come potenzialmente utile ma non è stato possibile trovarla. Non aggiungere altri dettagli nel campo corrispondente (material_tips).
   - campo: Frequenza
@@ -346,7 +340,5 @@ info_da_verificare:
     nota: Da integrare. Non aggiungere altri dettagli nel campo corrispondente (frequenza).
   - campo: Domande e argomenti ricorrenti
     nota: Da integrare. La sezione è vuota; per Chemioterapia è presente solo una nota sulle crocette già riportata in body. Non aggiungere altri dettagli nel campo corrispondente (body).
-  - campo: Anno di corso
-    nota: Nel catalogo ufficiale UniPV l'insegnamento è al V anno ([scheda](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810)).
 aggiornato_da: Giulia Stofler
 ultimo_aggiornamento: 2026-10-08

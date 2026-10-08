@@ -71,17 +71,7 @@ moduli:
 info_da_verificare:
   - campo: Frequenza
     nota: La sezione 'Frequenza' è contrassegnata come [DA INTEGRARE].
-  - campo: Email di Marco Paulli
-    nota: Contatto email da integrare.
-  - campo: Email di Frediano Socrate Inzani
-    nota: Contatto email da integrare.
-  - campo: Email di Marco Lucioni
-    nota: Contatto email da integrare.
-  - campo: Email di Francesca Lunardi
-    nota: Contatto email da integrare.
   - campo: Email di Antonio Schena
-    nota: Contatto email da integrare.
-  - campo: Email di Alessandro Vanoli
     nota: Contatto email da integrare.
   - campo: Offerta formativa
     nota: Link all'offerta formativa dell'a.a. 2026/2027 da integrare.

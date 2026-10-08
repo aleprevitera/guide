@@ -128,7 +128,10 @@ moduli:
 
       La frequenza non sembra essere controllata in maniera particolarmente rigorosa e i docenti non risultano particolarmente pignoli nella rilevazione delle presenze.
     professors:
-      - nome: Fusar Poli
+      - nome: Laura Fusar Poli
+        email: laura.fusarpoli@unipv.it
+      - nome: Paolo Fusar Poli
+        email: paolo.fusar-poli@unipv.it
       - nome: Stefano Damiani
         stile: Sempre presente all'esame.
         email: stefano.damiani@unipv.it
@@ -139,10 +142,6 @@ moduli:
 info_da_verificare:
   - campo: Frequenza
     nota: Modalità e percentuale di frequenza formalmente richiesta. La scheda riporta che la frequenza non sembra essere controllata in maniera particolarmente rigorosa e i docenti non risultano particolarmente pignoli nella rilevazione delle presenze, ma non è chiaro se vi sia un obbligo formale o una percentuale minima richiesta. [DA VERIFICARE] modalità e percentuale di frequenza formalmente richiesta.
-  - campo: Email Prof. Fusar Poli
-    nota: Da integrare.
-  - campo: Email Prof. Damiani
-    nota: Da integrare.
   - campo: Email Dott. Stefanelli
     nota: Da integrare.
   - campo: Criterio correzione gaussiana

@@ -12,6 +12,7 @@
 //      - docente mancante: aggiunto al modulo che insegna (dal nome del modulo
 //        nel catalogo), o all'unico modulo se l'esame non è diviso.
 //      Email diverse da quelle già scritte: si tiene quella del catalogo e lo si segnala.
+//      Cognome condiviso da più docenti dell'esame: si mettono tutti.
 //
 // Uso:
 //   node scripts/docenti.mjs            # scarica e aggiorna le guide
@@ -192,12 +193,21 @@ for (const g of guide) {
   for (const m of g.moduli) for (const p of m.professors ?? []) p.nome = senzaTitolo(p.nome);
   const abbinati = new Set();
   const ambigui = new Set();
+  const espansi = [];
   for (const m of g.moduli) {
     for (const p of m.professors ?? []) {
       const candidati = esame.docenti.filter((d) => stessaPersona(p, d));
       if (candidati.length > 1) {
+        // Stesso cognome (es. Laura e Paolo Fusar Poli): vanno entrambi nel
+        // modulo (scelta dei creatori, 2026-10-08). La nota del rappresentante
+        // passa a tutti, tranne "titolare", che va solo al titolare del catalogo.
         candidati.forEach((d) => ambigui.add(d));
-        note.push(`? "${p.nome}" (${m.nome_modulo}) può essere ${candidati.map(nomeDi).join(' o ')}: da sistemare a mano`);
+        const titolari = candidati.filter((d) => d.titolare);
+        espansi.push({ m, p, nuovi: candidati.map((d) => {
+          const nota = p.stile && (!/titolare/i.test(p.stile) || !titolari.length || titolari.includes(d)) ? { stile: p.stile } : {};
+          return { nome: nomeDi(d), ...nota, ...(d.email ? { email: d.email } : {}) };
+        }) });
+        note.push(`= "${p.nome}" (${m.nome_modulo}) → ${candidati.map(nomeDi).join(' e ')}`);
         continue;
       }
       const d = candidati[0];
@@ -209,6 +219,10 @@ for (const g of guide) {
         p.email = d.email;
       }
     }
+  }
+  for (const { m, p, nuovi } of espansi) {
+    const i = m.professors.indexOf(p);
+    m.professors.splice(i, 1, ...nuovi);
   }
   // 2. Docenti mancanti: nel modulo che insegnano.
   for (const d of esame.docenti) {
@@ -224,7 +238,24 @@ for (const g of guide) {
     }
     note.push(`+ ${nomeDi(d)} → ${dove.map((m) => m.nome_modulo).join(', ')}`);
   }
-  if (JSON.stringify(g.moduli) !== prima) {
+  // 3. Note "da verificare" su email/contatti ormai risolte: si tolgono solo se
+  //    tutti i docenti che nominano hanno l'email (se non ne nominano nessuno:
+  //    tutti quelli della guida). Brambilla, Costa & co. senza email = nota resta.
+  const prof = g.moduli.flatMap((m) => m.professors ?? []);
+  const cognome = (p) => norm(senzaTitolo(p.nome).split(/\s+/).slice(-1)[0]);
+  const primaInfo = JSON.stringify(g.info_da_verificare ?? []);
+  g.info_da_verificare = (g.info_da_verificare ?? []).filter((i) => {
+    const testo = `${i.campo} ${i.nota ?? ''}`;
+    if (!/e-?mail|contatt|nomi? complet|professori e/i.test(testo) || /^frequenza/i.test(i.campo)) return true;
+    const citati = prof.filter((p) => cognome(p).length > 2 && norm(testo).includes(cognome(p)));
+    const risolta = (citati.length ? citati : prof).every((p) => p.email) && prof.length > 0;
+    if (risolta) note.push(`− da verificare: "${i.campo}" (risolta dal catalogo)`);
+    return !risolta;
+  });
+  if (!g.info_da_verificare.length) delete g.info_da_verificare;
+  const infoCambiate = JSON.stringify(g.info_da_verificare ?? []) !== primaInfo;
+
+  if (JSON.stringify(g.moduli) !== prima || infoCambiate) {
     toccate++;
     if (!DRY) {
       const { file, ultimo_aggiornamento, ...resto } = g;
