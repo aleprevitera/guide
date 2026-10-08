@@ -30,7 +30,7 @@ moduli:
       Sono presenti 3 blocchi da 10 affermazioni vero/falso, ciascuno del valore di 4 punti. Ogni blocco è associato a una domanda aperta o a un macrotema. Se si sbagliano 5 risposte, il blocco vale 0 punti. Il punteggio del singolo blocco non può comunque diventare negativo.
 
       **Valutazione**:
-      Il punteggio massimo è di 32 punti e la lode viene assegnata con un punteggio superiore a 30. In alcuni appelli, qualora la media generale dell'esame sia particolarmente bassa, può essere applicata una sorta di correzione gaussiana, con un possibile incremento di uno o due voti. Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
+      Il punteggio massimo è di 32 punti e la lode viene assegnata con un punteggio superiore a 30. In alcuni appelli, qualora la media generale dell'esame sia particolarmente bassa, può essere applicata una sorta di correzione gaussiana, con un possibile incremento di uno o due voti. Non c'è un criterio fisso e predeterminato per stabilire quando venga applicata.
     program: |-
       1. Storia della psichiatria
       2. Psicopatologia
@@ -91,7 +91,7 @@ moduli:
       - Casi clinici: possibile richiesta di formulare la diagnosi e indicare i criteri DSM corrispondenti.
       - Slide: alcune affermazioni vero/falso possono essere riprese direttamente dalle presentazioni.
 
-      La frequenza non sembra essere controllata in maniera particolarmente rigorosa e i docenti non risultano particolarmente pignoli nella rilevazione delle presenze.
+      La frequenza non è controllata in modo rigoroso e i docenti non sono particolarmente pignoli nella rilevazione delle presenze.
     professors:
       - nome: Laura Fusar Poli
         email: laura.fusarpoli@unipv.it

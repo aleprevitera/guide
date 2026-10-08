@@ -325,6 +325,7 @@ const ISTRUZIONI = `Sei un estrattore di dati. Trasformi una scheda d'esame scri
 Regole, in ordine di importanza:
 1. FEDELTÀ. Usa solo informazioni presenti nella scheda. Non inventare e non dedurre docenti, CFU, semestre, difficoltà, durate, date o link. Se un dato manca, metti null.
 2. Puoi riformulare in modo chiaro e impersonale (es. "io ho impiegato 15 giorni" → "circa 15 giorni"), correggere refusi evidenti e riordinare, ma senza togliere informazioni utili né aggiungerne.
+   Scrivi in forma DIRETTA, senza racconto indiretto: niente "secondo la testimonianza", "a quanto riferito", "viene descritto come", "considerate/ritenute", "nell'anno di riferimento" (→ "nell'ultimo anno accademico"), "la scheda dice".
 3. MODULI. Se la scheda descrive parti distinte con modalità d'esame proprie (es. chemioterapia / tossicologia / farmacologia), crea un modulo per parte e raccogli in ciascuno le informazioni sparse nelle varie sezioni (programma, dove studiare, tempo, modalità). Altrimenti un solo modulo con nome_modulo uguale al titolo. In descrizione_generale (solo con più moduli) metti la composizione dell'esame e come si calcola il voto finale.
 4. CAMPI:
    - exam_type: "Orale", "Scritto" o "Scritto + Orale" (scritto seguito da orale). null se non chiaro.

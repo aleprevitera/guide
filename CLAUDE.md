@@ -204,6 +204,10 @@ Le pagine in `src/pages/dev/` esistono in dev e nelle anteprime, mai in produzio
   accetta il risultato **solo se la sequenza di parole è identica** all'originale. Toglie le ripetizioni senza
   perdere contenuto: copie del syllabus fuse per titolo (solo se il primo titolo ricompare), sezioni e paragrafi
   identici, voci puntate ripetute nella stessa sezione. Da lanciare dopo `programmi-ufficiali.mjs`.
+- **Tono diretto**: niente racconto indiretto nelle guide ("secondo la testimonianza", "viene descritto come",
+  "a quanto riferito", "nell'anno di riferimento"...). `node scripts/tono-diretto.mjs` (`--dry`) riscrive con
+  DeepSeek solo le frasi sospette dei campi narrativi (mai il programma ufficiale), tenendo nomi e numeri; anche
+  l'import lo chiede al modello.
 - **Esami senza guida** (schede bloccate "Guida in arrivo"): `src/lib/in-arrivo.ts` li ricava dal catalogo
   (`syllabus.json`: voto finale, niente esami a scelta né tirocini) per gli anni in `ANNI_CON_SEGNAPOSTO`
   (ora IV, V e VI). Spariscono da soli quando esiste una guida con lo stesso `esse3_codice` o lo stesso nome.

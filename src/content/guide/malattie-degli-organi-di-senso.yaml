@@ -4,7 +4,7 @@ esse3_codice: "501804"
 anno_di_corso: V Anno
 cfu_totali: 8
 semestre: I
-descrizione_generale: "L'esame è composto da quattro moduli: Oftalmologia, Otorinolaringoiatria e Audiologia, Odontoiatria, Chirurgia maxillo-facciale. I quattro moduli presentano modalità d'esame e tempi di preparazione piuttosto differenti. **Frequenza**: non sembra essere controllata in maniera particolarmente rigorosa nei vari moduli."
+descrizione_generale: "L'esame è composto da quattro moduli: Oftalmologia, Otorinolaringoiatria e Audiologia, Odontoiatria, Chirurgia maxillo-facciale. I quattro moduli presentano modalità d'esame e tempi di preparazione piuttosto differenti. **Frequenza**: non è controllata in modo rigoroso nei vari moduli."
 moduli:
   - nome_modulo: Oftalmologia
     id: m-ze2xjad6
@@ -232,14 +232,14 @@ moduli:
       - Audiologia / Vestibologia: Patologie periferiche e miste; tumori dell'angolo ponto-cerebellare
     professors:
       - nome: Marco Benazzo
-        stile: Descritto come il più impegnativo.
+        stile: È il più impegnativo.
         email: marco.benazzo@unipv.it
       - nome: Fabio Giuseppe Maria Pagella
         email: fabio.pagella@unipv.it
       - nome: Pietro Canzi
         email: pietro.canzi@unipv.it
       - nome: Elena Carlotto
-        stile: Descritta come tranquilla, propensa a lasciare parlare lo studente e generalmente larga nella valutazione.
+        stile: È tranquilla, propensa a lasciare parlare lo studente e generalmente larga nella valutazione.
         email: elena.carlotto@unipv.it
     esse3_appello: OTORINO
     fascia_studio: 3–4 sett
@@ -247,7 +247,7 @@ moduli:
     id: m-j91rrxoo
     exam_type: Scritto
     study_time: 3–4 giorni
-    exam_details: A partire dall'anno di riferimento, l'esame è diventato scritto. Le domande a scelta multipla sono quindi nuove rispetto agli anni precedenti. L'esame viene svolto tramite Kiro Testing e la valutazione segue la stessa logica di Maxillo, con un punto bonus.
+    exam_details: A partire dall'ultimo anno accademico, l'esame è diventato scritto. Le domande a scelta multipla sono quindi nuove rispetto agli anni precedenti. L'esame viene svolto tramite Kiro Testing e la valutazione segue la stessa logica di Maxillo, con un punto bonus.
     program: |-
       **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
 
@@ -267,10 +267,10 @@ moduli:
     material_tips: |-
       **Sul programma**
 
-      Il programma comprende le lezioni previste dal corso. Nell'anno di riferimento sono state svolte soltanto 3 delle 4 lezioni previste, rendendo necessario integrare autonomamente la quarta. Gli argomenti da integrare comprendono: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne del cavo orale, stomatiti, pemfigo della mucosa orale, pseudolesioni della mucosa orale, sindrome della bocca che brucia.
+      Il programma comprende le lezioni previste dal corso. Nell'ultimo anno accademico sono state svolte soltanto 3 delle 4 lezioni previste, rendendo necessario integrare autonomamente la quarta. Gli argomenti da integrare comprendono: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne del cavo orale, stomatiti, pemfigo della mucosa orale, pseudolesioni della mucosa orale, sindrome della bocca che brucia.
 
       - Sbobine dell'anno corrente, generalmente sufficienti.
-      - Per la quarta lezione non svolta nell'anno di riferimento, utilizzare il libro/PDF fornito per integrare: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne, stomatiti, pemfigo della mucosa orale, pseudolesioni, sindrome della bocca che brucia.
+      - Per la quarta lezione non svolta nell'ultimo anno accademico, utilizzare il libro/PDF fornito per integrare: glossopatie, lesioni pigmentate della mucosa orale, iperplasie e lesioni reattivo-traumatiche della mucosa orale, malformazioni vascolari benigne, stomatiti, pemfigo della mucosa orale, pseudolesioni, sindrome della bocca che brucia.
     body: |-
       **Domande e argomenti ricorrenti**
 
