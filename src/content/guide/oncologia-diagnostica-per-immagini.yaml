@@ -3,7 +3,7 @@ title: Oncologia e Diagnostica per immagini
 esse3_codice: "506413"
 anno_di_corso: IV Anno
 cfu_totali: 6
-descrizione_generale: "L’esame è composto da due moduli: **Oncologia** (orale) e **Diagnostica per immagini** (scritta). Nel voto finale **Diagnostica per immagini pesa più di Oncologia**, ma la modalità esatta di calcolo non è nota."
+descrizione_generale: "L’esame è composto da due moduli: **Oncologia** (orale) e **Diagnostica per immagini** (scritta). La media è ponderata dei due moduli (2 CFU per Oncologia e 4 CFU per Diagnostica per immagini)."
 moduli:
   - nome_modulo: Oncologia
     id: m-4ewf06rv
@@ -36,19 +36,11 @@ moduli:
 
       **Conoscere i principi generali della radioterapia oncologica:**
 
-      a) Iter diagnostico, stadiazione, iter terapeutico,
-
-      b) Tappe nella pianificazione radioterapica: indicazioni, procedure di simulazione, definizione dei volumi bersaglio tumorale e degli organi a rischio,
-
-      dose totale e frazionamenti, approvazione e verifica del piano di trattamento,
-
-      c) Ruolo della radioterapia nei seguenti scenari: carcinoma del polmone (microcitoma e non-microcitoma), carcinoma della mammella, carcinoma della
-
-      prostata, carcinoma del testa-collo, gastroenterico,
-
-      d) Effetti collaterali delle radioterapia per i principali scenari clinici,
-
-      e) Follow-up del paziente sottoposto a radioterapia.
+      1. Iter diagnostico, stadiazione, iter terapeutico,
+      2. Tappe nella pianificazione radioterapica: indicazioni, procedure di simulazione, definizione dei volumi bersaglio tumorale e degli organi a rischio, dose totale e frazionamenti, approvazione e verifica del piano di trattamento,
+      3. Ruolo della radioterapia nei seguenti scenari: carcinoma del polmone (microcitoma e non-microcitoma), carcinoma della mammella, carcinoma della prostata, carcinoma del testa-collo, gastroenterico,
+      4. Effetti collaterali delle radioterapia per i principali scenari clinici,
+      5. Follow-up del paziente sottoposto a radioterapia.
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/12832/2017/9999?coorte=2023&schemaid=17807).*
     material_tips: |-
@@ -121,7 +113,9 @@ moduli:
 
       La conoscenza sarà ulteriormente rafforzata dalla discussione di casi emblematici delle problematiche cliniche trattate. Saranno fornite informazioni di base in merito alle probematiche correlate alla radioprotezione del paziente e del personale sanitario, alla luce della normativa vigente.
 
-      Attrezzature radiologiche: tipi e caratteristiche di funzionamento delle attrezzature radiologiche utilizzate nella diagnostica ed interventistica neuroradiologica con particolare attenzione all'impiego della TC e della RM sia nella fase acuta che nel follow-up.
+      **Attrezzature radiologiche:**
+
+      tipi e caratteristiche di funzionamento delle attrezzature radiologiche utilizzate nella diagnostica ed interventistica neuroradiologica con particolare attenzione all'impiego della TC e della RM sia nella fase acuta che nel follow-up.
 
       Tecniche di indagine da utilizzare nella diagnostica delle principali patologie dell'encefalo e del midollo come:
 
@@ -204,9 +198,6 @@ moduli:
         email: ester.orlandi@unipv.it
       - nome: Anna Pichiecchio
         email: anna.pichiecchio@unipv.it
-info_da_verificare:
-  - campo: CFU/peso dei due moduli e modalità esatta di calcolo della valutazione finale
-    nota: La studentessa riferisce che Diagnostica per immagini ha un peso maggiore rispetto a Oncologia, ma non ricorda la modalità esatta di calcolo.
 aggiornato_da: Sara Cocci
 semestre: II
 ultimo_aggiornamento: 2026-10-08

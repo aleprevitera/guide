@@ -19,11 +19,26 @@ moduli:
     program: |-
       Il corso comprende tre moduli principali (i) farmacologia/ farmacologia applicata/ farmacologia clinica; (ii) chemioterapia; (iii) tossicologia.
 
-      Chemioterapia
+      **Chemioterapia**
 
-      Antibiotici beta-lattamici; aminoglicosidi; chinoloni; macrolidi; lincosamidi; glicopeptidi; tetracicline; cloramfenicolo; sulfonamidici; rifamicine; farmaci antimicobatterici e terapia della tubercolosi; antimicotici; antivirali; farmaci per il trattamento delle infezioni da protozoi; antielmintici; antineoplastici.
+      - Antibiotici beta-lattamici
+      - aminoglicosidi
+      - chinoloni
+      - macrolidi
+      - lincosamidi
+      - glicopeptidi
+      - tetracicline
+      - cloramfenicolo
+      - sulfonamidici
+      - rifamicine
+      - farmaci antimicobatterici e terapia della tubercolosi
+      - antimicotici
+      - antivirali
+      - farmaci per il trattamento delle infezioni da protozoi
+      - antielmintici
+      - antineoplastici
 
-      Parte I e II: Antibatterici
+      **Parte I e II: Antibatterici**
 
       - linee guida aggiornate per il trattamento di: meningite batterica, polmonite, faringite da streptococchi gruppo b, endocardite batterica
       - betalattamici (penicilline, cefalosporine, carbapenemi, monobattami)
@@ -32,7 +47,7 @@ moduli:
       - macrolidi
       - ossazolidinoni
 
-      Parte III: Antivirali
+      **Parte III: Antivirali**
 
       - Linee guida per il trattamento di influenze virali
       - Linee guida per il trattamento dell'epatite C
@@ -40,173 +55,137 @@ moduli:
       - Antivirali anti HBV
       - Antivirali anti HCV
 
-      Parte IV: antitumorali
+      **Parte IV: antitumorali**
 
       - antitumorali citotossici (alchilanti, antimetaboliti, alcaloidi della Vinca, antibiotici citotossici)
       - anticorpi monoclonali
       - inibitori di kinasi
 
-      Lezione 1 — Antibatterici, parte 1
+      **Lezione 1 — Antibatterici, parte 1**
 
-      Beta-lattamici (penicilline, cefalosporine, carbapenemi, monobattami)
+      **Beta-lattamici (penicilline, cefalosporine, carbapenemi, monobattami)**
 
-      Farmacocinetica: biodisponibilità orale, distribuzione, legame proteico, escrezione (renale/biliare)
+      - Farmacocinetica: biodisponibilità orale, distribuzione, legame proteico, escrezione (renale/biliare)
+      - Assorbimento gastrointestinale in funzione del pH (ionizzazione, pKa)
+      - Tempo-dipendenza (T>MIC) e ottimizzazione posologica (PTA, Probability of Target Attainment)
+      - Imipenem/cilastatina; carbapenemi e resistenza alle beta-lattamasi
+      - Ipersensibilità e cross-reattività allergica tra classi
+      - Tossicità epatica/biliare (colestasi, sabbiolina biliare)
+      - Uso in popolazioni speciali: neonati (meningite, ceftriaxone), insufficienza renale
+      - Aztreonam nei pazienti allergici
 
-      Assorbimento gastrointestinale in funzione del pH (ionizzazione, pKa)
+      **Sulfamidici e trimetoprim**
 
-      Tempo-dipendenza (T>MIC) e ottimizzazione posologica (PTA, Probability of Target Attainment)
+      - Meccanismo d'azione e selettività (DHFR, diidrofolato reduttasi; diidropteroato sintasi)
+      - Cotrimossazolo: farmacocinetica, metabolizzazione, indicazioni cliniche
+      - Interazioni (warfarin, CYP2C9), cristalluria
 
-      Imipenem/cilastatina; carbapenemi e resistenza alle beta-lattamasi
+      **Nitrofurantoina**
 
-      Ipersensibilità e cross-reattività allergica tra classi
+      - Spettro d'azione limitato alla vescica; inefficacia in pielonefrite
+      - Tossicità in deficit di G6PD (glucosio-6-fosfato deidrogenasi)
 
-      Tossicità epatica/biliare (colestasi, sabbiolina biliare)
+      **Effetti avversi trasversali**
 
-      Uso in popolazioni speciali: neonati (meningite, ceftriaxone), insufficienza renale
+      - Colite pseudomembranosa da antibiotici
+      - Anemia emolitica da farmaci in pazienti G6PD-deficienti
 
-      Aztreonam nei pazienti allergici
+      **Lezione 2 — Antibatterici, parte 2**
 
-      Sulfamidici e trimetoprim
+      **Fluorochinoloni**
 
-      Meccanismo d'azione e selettività (DHFR, diidrofolato reduttasi; diidropteroato sintasi)
+      - Meccanismo d'azione, classificazione generazionale e spettro
+      - Interazioni con FANS (farmaci antinfiammatori non steroidei; neurotossicità) e warfarin (aritmie, INR)
 
-      Cotrimossazolo: farmacocinetica, metabolizzazione, indicazioni cliniche
+      **Aminoglicosidi**
 
-      Interazioni (warfarin, CYP2C9), cristalluria
+      - Farmacocinetica (Vd, volume di distribuzione; dosaggio su peso ideale), concentrazione-dipendenza (Peak/MIC)
+      - Nefrotossicità e ototossicità; monitoraggio
 
-      Nitrofurantoina
+      **Glicopeptidi (vancomicina) e linezolid**
 
-      Spettro d'azione limitato alla vescica; inefficacia in pielonefrite
+      - Vancomicina: indicazioni per via di somministrazione, evoluzione del monitoraggio (trough vs AUC/MIC)
 
-      Tossicità in deficit di G6PD (glucosio-6-fosfato deidrogenasi)
+      **Linezolid**: meccanismo d'azione, uso nei VRE (Vancomycin-Resistant Enterococci), interazioni serotoninergiche (MAO, monoaminossidasi)
 
-      Effetti avversi trasversali
+      **Macrolidi**
 
-      Colite pseudomembranosa da antibiotici
+      - Farmacocinetica dell'azitromicina; interazioni via CYP3A4
+      - Effetti avversi (epatotossicità, QT)
 
-      Anemia emolitica da farmaci in pazienti G6PD-deficienti
+      **Fosfomicina**
 
-      Lezione 2 — Antibatterici, parte 2
+      - Meccanismo d'azione, ruolo nei patogeni multiresistenti (ESBL, Expanded Spectrum Beta-Lactamase)
 
-      Fluorochinoloni
+      **Terapia dell'infezione da Clostridioides difficile**
 
-      Meccanismo d'azione, classificazione generazionale e spettro
+      - Vancomicina orale, fidaxomicina, bezlotoxumab, trapianto di microbiota fecale (FMT)
 
-      Interazioni con FANS (farmaci antinfiammatori non steroidei; neurotossicità) e warfarin (aritmie, INR)
+      **Linee guida cliniche**
 
-      Aminoglicosidi
+      - Infezioni delle vie urinarie (cistite, pielonefrite) per gravità e popolazione (gravidanza)
+      - Endocardite infettiva da stafilococchi (valvola nativa/protesica) ed enterococchi multiresistenti
+      - Faringite streptococcica e polmonite acquisita in comunità
 
-      Farmacocinetica (Vd, volume di distribuzione; dosaggio su peso ideale), concentrazione-dipendenza (Peak/MIC)
+      **Lezione 3 — Antivirali**
 
-      Nefrotossicità e ototossicità; monitoraggio
+      - Antivirali anti-herpes (HSV, VZV, CMV)
+      - Aciclovir/valaciclovir: attivazione, farmacocinetica, nefrotossicità
+      - Ganciclovir/valganciclovir (CMV, citomegalovirus)
+      - Cidofovir e foscarnet nei ceppi resistenti
+      - Brivudina e interazione con 5-fluorouracile
 
-      Glicopeptidi (vancomicina) e linezolid
+      **Antivirali anti-influenzali**
 
-      Vancomicina: indicazioni per via di somministrazione, evoluzione del monitoraggio (trough vs AUC/MIC)
+      - Inibitori della neuraminidasi (oseltamivir, zanamivir): meccanismo, controindicazioni
 
-      Linezolid: meccanismo d'azione, uso nei VRE (Vancomycin-Resistant Enterococci), interazioni serotoninergiche (MAO, monoaminossidasi)
+      **Terapia dell'epatite B**
 
-      Macrolidi
+      - Analoghi nucleosidici/nucleotidici: farmacocinetica, profarmaci, effetti avversi
+      - PegIFNα (interferone alfa pegilato): razionale della pegilazione, farmacocinetica, effetti avversi dose-limitanti
 
-      Farmacocinetica dell'azitromicina; interazioni via CYP3A4
+      **Terapia dell'epatite C**
 
-      Effetti avversi (epatotossicità, QT)
+      - Ribavirina: duplice meccanismo d'azione, tossicità, controindicazioni
+      - Evoluzione terapeutica: dual therapy, poi tripla terapia, poi DAA di seconda generazione (Direct Acting Antivirals)
+      - Classificazione dei DAA per target molecolare
+      - Ritonavir come booster farmacocinetico
 
-      Fosfomicina
+      **Lezione 4 — Antitumorali**
 
-      Meccanismo d'azione, ruolo nei patogeni multiresistenti (ESBL, Expanded Spectrum Beta-Lactamase)
+      **Principi generali**
 
-      Terapia dell'infezione da Clostridioides difficile
+      - Molecular testing nella scelta terapeutica
+      - Razionale della politerapia (combination therapy) e farmaci di supporto
 
-      Vancomicina orale, fidaxomicina, bezlotoxumab, trapianto di microbiota fecale (FMT)
+      **Chemioterapici citotossici**
 
-      Linee guida cliniche
+      - Antracicline (doxorubicina): meccanismo, cardiotossicità, eliminazione
+      - Vinca alcaloidi e tassani: meccanismo sui microtubuli, resistenza (P-gp, P-glicoproteina), interazioni CYP
+      - Antimetaboliti pirimidinici (5-fluorouracile, capecitabina): attivazione, deficit di DPD (diidropirimidina deidrogenasi), effetti avversi, uridina come rescue
+      - Agenti alchilanti (ciclofosfamide): attivazione, metaboliti (fosforamide, acroleina), cistite emorragica, MESNA
+      - Metotrexato e leucovorina (rescue)
 
-      Infezioni delle vie urinarie (cistite, pielonefrite) per gravità e popolazione (gravidanza)
+      **Terapia ormonale (carcinoma mammario)**
 
-      Endocardite infettiva da stafilococchi (valvola nativa/protesica) ed enterococchi multiresistenti
+      - Inibitori dell'aromatasi vs tamoxifen: meccanismo e profilo di sicurezza a confronto
+      - Scelta terapeutica per stato menopausale; analoghi del GnRH (Gonadotropin-Releasing Hormone)
+      - Fulvestrant e resistenza al tamoxifen
 
-      Faringite streptococcica e polmonite acquisita in comunità
+      **Targeted therapy**
 
-      Lezione 3 — Antivirali
+      - Anti-HER2: anticorpi monoclonali (trastuzumab, pertuzumab) vs small molecule (lapatinib, neratinib); cardiotossicità
+      - Inibitori di EGFR (Epidermal Growth Factor Receptor) e resistenza KRAS-mediata
+      - Inibitori di CDK4/6 (Cyclin-Dependent Kinase 4/6; palbociclib) e ciclo cellulare (Rb/E2F)
 
-      Antivirali anti-herpes (HSV, VZV, CMV)
+      **Farmaci antiangiogenici: bevacizumab vs inibitori multi-target (sunitinib, sorafenib)**
 
-      Aciclovir/valaciclovir: attivazione, farmacocinetica, nefrotossicità
+      **Temi trasversali al corso**
 
-      Ganciclovir/valganciclovir (CMV, citomegalovirus)
-
-      Cidofovir e foscarnet nei ceppi resistenti
-
-      Brivudina e interazione con 5-fluorouracile
-
-      Antivirali anti-influenzali
-
-      Inibitori della neuraminidasi (oseltamivir, zanamivir): meccanismo, controindicazioni
-
-      Terapia dell'epatite B
-
-      Analoghi nucleosidici/nucleotidici: farmacocinetica, profarmaci, effetti avversi
-
-      PegIFNα (interferone alfa pegilato): razionale della pegilazione, farmacocinetica, effetti avversi dose-limitanti
-
-      Terapia dell'epatite C
-
-      Ribavirina: duplice meccanismo d'azione, tossicità, controindicazioni
-
-      Evoluzione terapeutica: dual therapy, poi tripla terapia, poi DAA di seconda generazione (Direct Acting Antivirals)
-
-      Classificazione dei DAA per target molecolare
-
-      Ritonavir come booster farmacocinetico
-
-      Lezione 4 — Antitumorali
-
-      Principi generali
-
-      Molecular testing nella scelta terapeutica
-
-      Razionale della politerapia (combination therapy) e farmaci di supporto
-
-      Chemioterapici citotossici
-
-      Antracicline (doxorubicina): meccanismo, cardiotossicità, eliminazione
-
-      Vinca alcaloidi e tassani: meccanismo sui microtubuli, resistenza (P-gp, P-glicoproteina), interazioni CYP
-
-      Antimetaboliti pirimidinici (5-fluorouracile, capecitabina): attivazione, deficit di DPD (diidropirimidina deidrogenasi), effetti avversi, uridina come rescue
-
-      Agenti alchilanti (ciclofosfamide): attivazione, metaboliti (fosforamide, acroleina), cistite emorragica, MESNA
-
-      Metotrexato e leucovorina (rescue)
-
-      Terapia ormonale (carcinoma mammario)
-
-      Inibitori dell'aromatasi vs tamoxifen: meccanismo e profilo di sicurezza a confronto
-
-      Scelta terapeutica per stato menopausale; analoghi del GnRH (Gonadotropin-Releasing Hormone)
-
-      Fulvestrant e resistenza al tamoxifen
-
-      Targeted therapy
-
-      Anti-HER2: anticorpi monoclonali (trastuzumab, pertuzumab) vs small molecule (lapatinib, neratinib); cardiotossicità
-
-      Inibitori di EGFR (Epidermal Growth Factor Receptor) e resistenza KRAS-mediata
-
-      Inibitori di CDK4/6 (Cyclin-Dependent Kinase 4/6; palbociclib) e ciclo cellulare (Rb/E2F)
-
-      Farmaci antiangiogenici: bevacizumab vs inibitori multi-target (sunitinib, sorafenib)
-
-      Temi trasversali al corso
-
-      Relazione PK/PD (farmacocinetica/farmacodinamica) e ottimizzazione posologica (tempo- vs concentrazione-dipendenza)
-
-      Interazioni farmacologiche clinicamente rilevanti (CYP450, warfarin)
-
-      Farmaci di supporto e rescue drugs
-
-      Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
+      - Relazione PK/PD (farmacocinetica/farmacodinamica) e ottimizzazione posologica (tempo- vs concentrazione-dipendenza)
+      - Interazioni farmacologiche clinicamente rilevanti (CYP450, warfarin)
+      - Farmaci di supporto e rescue drugs
+      - Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -237,21 +216,28 @@ moduli:
       - I voti risultano generalmente abbastanza alti.
       - Sono stati concessi anche appelli straordinari.
     program: |-
-      Il corso comprende tre moduli principali (i) farmacologia/ farmacologia applicata/ farmacologia clinica; (ii) chemioterapia; (iii) tossicologia.
+      Il corso comprende tre moduli principali
 
-      Tossicologia
+      - (i) farmacologia/ farmacologia applicata/ farmacologia clinica
+      - (ii) chemioterapia
+      - (iii) tossicologia
 
-      Tossicità a carico dei vari organi e apparati (fegato, rene, sistema nervoso, apparato respiratorio, sistema riproduttivo); alcolismo e patologie correlate; intossicazioni acute (gas tossici, funghi, prodotti agricoli, prodotti di uso domestico, farmaci psicoattivi, principi applicati nella diagnosi e trattamento); rischi tossicologici in gravidanza, avvelenamenti in situazioni speciali (infanzia ed età avanzato); farmaci di abuso, dipendenza. Effetti tossici di inquinanti ambientali.
+      **Tossicologia**
 
-      Temi trasversali al corso
+      - Tossicità a carico dei vari organi e apparati (fegato, rene, sistema nervoso, apparato respiratorio, sistema riproduttivo)
+      - alcolismo e patologie correlate
+      - intossicazioni acute (gas tossici, funghi, prodotti agricoli, prodotti di uso domestico, farmaci psicoattivi, principi applicati nella diagnosi e trattamento)
+      - rischi tossicologici in gravidanza, avvelenamenti in situazioni speciali (infanzia ed età avanzato)
+      - farmaci di abuso, dipendenza.
 
-      Relazione PK/PD (farmacocinetica/farmacodinamica) e ottimizzazione posologica (tempo- vs concentrazione-dipendenza)
+      Effetti tossici di inquinanti ambientali.
 
-      Interazioni farmacologiche clinicamente rilevanti (CYP450, warfarin)
+      **Temi trasversali al corso**
 
-      Farmaci di supporto e rescue drugs
-
-      Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
+      - Relazione PK/PD (farmacocinetica/farmacodinamica) e ottimizzazione posologica (tempo- vs concentrazione-dipendenza)
+      - Interazioni farmacologiche clinicamente rilevanti (CYP450, warfarin)
+      - Farmaci di supporto e rescue drugs
+      - Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -269,53 +255,179 @@ moduli:
     study_time: 2–3 settimane
     exam_details: L'esame è orale.
     program: |-
-      Il corso comprende tre moduli principali (i) farmacologia/ farmacologia applicata/ farmacologia clinica; (ii) chemioterapia; (iii) tossicologia.
+      Il corso comprende tre moduli principali:
+
+      - (i) farmacologia/ farmacologia applicata/ farmacologia clinica
+      - (ii) chemioterapia
+      - (iii) tossicologia
 
       **Farmacologia, farmacologia applicata, farmacologia clinica:**
 
-      Farmacologia cardiovascolare: Farmaci antianginosi; anti-ipertensivi; glicosidi cardioattive e altri farmaci inotropi; antiaritmici; antidislipemici; anticoagulanti; trombolitici; antiaggreganti; diuretici; farmaci delle malattie ematologiche.
+      **Farmacologia cardiovascolare:**
 
-      Farmacologia delle malattie endocrine e metaboliche: Ormoni ipofisari e analoghi; ormoni tiroidei e farmaci antitiroidei; ormoni surrenalici e analoghi; antidiabetici androgeni, estrogeni, progestinici e prodotti di combinazione; altri farmaci contraccettivi; farmaci che influenzano l'omeostasi del calcio; farmaci dell'osteoporosi; vitamine.
+      - Farmaci antianginosi
+      - anti-ipertensivi
+      - glicosidi cardioattive e altri farmaci inotropi
+      - antiaritmici
+      - antidislipemici
+      - anticoagulanti
+      - trombolitici
+      - antiaggreganti
+      - diuretici
+      - farmaci delle malattie ematologiche
 
-      Farmacologia del sistema vegetativo: Farmaci attivi sui sistemi adrenergico e colinergico.
+      **Farmacologia delle malattie endocrine e metaboliche:**
 
-      Farmacologia gastro-intestinale: Farmaci antiulcera, procinetici, lassativi, antidiarroici, antiemetici.
+      - Ormoni ipofisari e analoghi
+      - ormoni tiroidei e farmaci antitiroidei
+      - ormoni surrenalici e analoghi
+      - antidiabetici androgeni, estrogeni, progestinici e prodotti di combinazione
+      - altri farmaci contraccettivi
+      - farmaci che influenzano l'omeostasi del calcio
+      - farmaci dell'osteoporosi
+      - vitamine
 
-      Farmacologia del sistema respiratorio: Antiasmatici.
+      **Farmacologia del sistema vegetativo:**
 
-      Farmacologia del sistema genitourinario: Farmaci attivi sulla motilità uterina; farmaci per il trattamento dell'ipertrofia prostatica; farmaci attivi sulla disfunzione erettile.
+      Farmaci attivi sui sistemi adrenergico e colinergico.
 
-      Immunofarmacologia e farmacologia dell'infiammazione: Immunomodulatori e immunosoppressori; antistaminici; FANS; corticosteroidi e altri farmaci per il trattamento dell'artrite reumatoide e altre malattie autoimmuni; farmaci per la terapia della gotta; antipiretici.
+      **Farmacologia gastro-intestinale:**
 
-      Farmaci attivi sul SNC: Antipsicotici; antidepressivi; ansiolitici; ipnotici; analgesici maggiori; antiepilettici; antiparkinsoniani; farmaci antiemicranici; miorilassanti e altri farmaci per la terapia della spasticità; anestetici generali e locali; farmaci per il trattamento delle demenze e delle malattie neurodegenerative.
+      Farmaci antiulcera, procinetici, lassativi, antidiarroici, antiemetici.
 
-      Farmacologia cardiovascolare: antidislipemici; anticoagulanti; trombolitici; antiaggreganti piastrinici; diuretici; farmaci delle emopatie.
+      **Farmacologia del sistema respiratorio:**
 
-      Farmacologia endocrina e del metabolismo: ormoni ipofisari; ormoni tiroidei e farmaci antitiroidei; ormoni corticosurrenali; antidiabetici; androgeni, estrogeni ed estro-progestinici; farmacologia della contraccezione; farmacologia dell’omeostasi del calcio.
+      Antiasmatici.
 
-      Farmacologia del sistema neurovegetativo: farmaci attivi sui sistemi adrenergico e colinergico.
+      **Farmacologia del sistema genitourinario:**
 
-      Farmaci dell’apparato genito-urinario: farmaci della motilità uterina; farmaci per il trattamento dell’ipertrofia prostatica.
+      - Farmaci attivi sulla motilità uterina
+      - farmaci per il trattamento dell'ipertrofia prostatica
+      - farmaci attivi sulla disfunzione erettile
 
-      Immunofarmacologia e farmacoterapia degli stati infiammatori: immunomodulatori e immunosoppressori; antistaminici; farmaci antiinfiammatori non steroidei; corticosteroidi antiinfiammatori; farmaci dell’artrite reumatoide; antigottosi; antipiretici.
+      **Immunofarmacologia e farmacologia dell'infiammazione:**
 
-      Farmaci attivi sul sistema nervoso centrale: analgesici maggiori; antiemicranici; miorilassanti e farmaci della spasticità. Anestetici generali e locali. Farmaci utilizzati per il trattamento delle demenze e delle malattie neurodegenerative.
+      - Immunomodulatori e immunosoppressori
+      - antistaminici
+      - FANS
+      - corticosteroidi e altri farmaci per il trattamento dell'artrite reumatoide e altre malattie autoimmuni
+      - farmaci per la terapia della gotta
+      - antipiretici
+
+      **Farmaci attivi sul SNC:**
+
+      - Antipsicotici
+      - antidepressivi
+      - ansiolitici
+      - ipnotici
+      - analgesici maggiori
+      - antiepilettici
+      - antiparkinsoniani
+      - farmaci antiemicranici
+      - miorilassanti e altri farmaci per la terapia della spasticità
+      - anestetici generali e locali
+      - farmaci per il trattamento delle demenze e delle malattie neurodegenerative
+
+      **Farmacologia cardiovascolare:**
+
+      - antidislipemici
+      - anticoagulanti
+      - trombolitici
+      - antiaggreganti piastrinici
+      - diuretici
+      - farmaci delle emopatie
+
+      **Farmacologia endocrina e del metabolismo:**
+
+      - ormoni ipofisari
+      - ormoni tiroidei e farmaci antitiroidei
+      - ormoni corticosurrenali
+      - antidiabetici
+      - androgeni, estrogeni ed estro-progestinici
+      - farmacologia della contraccezione
+      - farmacologia dell’omeostasi del calcio
+
+      **Farmacologia del sistema neurovegetativo:**
+
+      farmaci attivi sui sistemi adrenergico e colinergico.
+
+      **Farmaci dell’apparato genito-urinario:**
+
+      - farmaci della motilità uterina
+      - farmaci per il trattamento dell’ipertrofia prostatica
+
+      **Immunofarmacologia e farmacoterapia degli stati infiammatori:**
+
+      - immunomodulatori e immunosoppressori
+      - antistaminici
+      - farmaci antiinfiammatori non steroidei
+      - corticosteroidi antiinfiammatori
+      - farmaci dell’artrite reumatoide
+      - antigottosi
+      - antipiretici
+
+      **Farmaci attivi sul sistema nervoso centrale:**
+
+      - analgesici maggiori
+      - antiemicranici
+      - miorilassanti e farmaci della spasticità
+      - Anestetici generali e locali
+      - Farmaci utilizzati per il trattamento delle demenze e delle malattie neurodegenerative
 
       Il modulo Farmacologia applicata fa parte del corso integrato "Farmacologia 2".
 
-      Programma: Farmacologia Respiratoria: antiasmatici. Farmacologia Cardiovascolare: antianginosi; antipertensivi; glicosidi cardioattivi e altri farmaci inotropi positivi; antiaritmici; diuretici. Farmacologia Gastrointestinale: farmaci antiulcera, procinetici, lassativi, antidiarroici, antiemetici.
+      **Programma:**
 
-      Il modulo Farmacologia applicata fa parte del corso integrato "Farmacologia 2". Programma: Farmacologia Respiratoria: antiasmatici. Farmacologia Cardiovascolare: antianginosi; antipertensivi; glicosidi cardioattivi e altri farmaci inotropi positivi; antiaritmici; diuretici. Farmacologia Gastrointestinale: farmaci antiulcera, procinetici, lassativi, antidiarroici, antiemetici.
+      **Farmacologia Respiratoria:**
 
-      Temi trasversali al corso
+      antiasmatici.
 
-      Relazione PK/PD (farmacocinetica/farmacodinamica) e ottimizzazione posologica (tempo- vs concentrazione-dipendenza)
+      **Farmacologia Cardiovascolare:**
 
-      Interazioni farmacologiche clinicamente rilevanti (CYP450, warfarin)
+      - antianginosi
+      - antipertensivi
+      - glicosidi cardioattivi e altri farmaci inotropi positivi
+      - antiaritmici
+      - diuretici
 
-      Farmaci di supporto e rescue drugs
+      **Farmacologia Gastrointestinale:**
 
-      Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
+      - farmaci antiulcera
+      - procinetici
+      - lassativi
+      - antidiarroici
+      - antiemetici
+
+      Il modulo Farmacologia applicata fa parte del corso integrato "Farmacologia 2".
+
+      **Programma:**
+
+      **Farmacologia Respiratoria:**
+
+      antiasmatici.
+
+      **Farmacologia Cardiovascolare:**
+
+      - antianginosi
+      - antipertensivi
+      - glicosidi cardioattivi e altri farmaci inotropi positivi
+      - antiaritmici
+      - diuretici
+
+      **Farmacologia Gastrointestinale:**
+
+      - farmaci antiulcera
+      - procinetici
+      - lassativi
+      - antidiarroici
+      - antiemetici
+
+      **Temi trasversali al corso**
+
+      - Relazione PK/PD (farmacocinetica/farmacodinamica) e ottimizzazione posologica (tempo- vs concentrazione-dipendenza)
+      - Interazioni farmacologiche clinicamente rilevanti (CYP450, warfarin)
+      - Farmaci di supporto e rescue drugs
+      - Tossicità d'organo (renale, epatica, cardiaca, ematologica) e relativo monitoraggio
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/10667/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-

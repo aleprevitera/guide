@@ -10,73 +10,73 @@ moduli:
     exam_type: Orale
     preappello: Sì
     durata_orale_min: 15
-    exam_details: "Orale di Gastroenterologia. L'orale prevede generalmente 2 domande: una prima domanda relativa a un primo blocco di argomenti; una seconda domanda relativa a un secondo blocco di argomenti. Le domande sono generalmente piuttosto schematiche e secche. L'interrogazione dura mediamente 15-20 minuti, anche se la durata può variare in base al docente e all'andamento dell'interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Nell'ultimo anno erano presenti 3 docenti + 1 specializzanda."
+    exam_details: "Orale di Gastroenterologia. Non c'è un vero sistema di divisione del gruppo di studenti: praticamente lo studente si propone da uno dei docenti (il più delle volte specializzandi. Biagi tende a non interrogare) per farsi interrogare. L'orale prevede generalmente 2 domande: una prima domanda relativa a un primo blocco di argomenti; una seconda domanda relativa a un secondo blocco di argomenti. Le domande sono generalmente piuttosto schematiche e secche. L'interrogazione dura mediamente 15-20 minuti, anche se la durata può variare in base al docente e all'andamento dell'interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Nell'ultimo anno erano presenti 3 docenti + 1 specializzanda."
     program: |-
-      -Disfagia
+      - Disfagia
+      - Dispepsia
+      - Vomito
+      - Diarrea
+      - Melena
+      - Rettorragia
+      - Ittero
+      - Ascite
+      - Dolore addominale (acuto e cronico)
+      - Acalasia e disturbi motori esofagei
+      - Malattia da reflusso gastroesofageo
+      - Neoplasie dell'esofago
+      - Malattia peptica
+      - Gastriti e gastropatie
+      - H pylori
+      - Neoplasie dello stomaco
+      - Malassorbimento
+      - Malattia celiaca
+      - Morbo di Whipple
+      - Contaminazione batterica dell'intestino tenue
+      - Malattia diverticolare
+      - Malattie infiammatorie intestinali
+      - Sindrome dell'intestino irritabile
+      - Neoplasie benigne e maligne del colon
+      - Epatiti acute
+      - Epatopatie croniche e cirrosi epatica
+      - Colecistite acute
+      - Colica biliare
+      - Tumori del fegato
+      - Pancreatite acuta
+      - Pancreatite cronica
+      - Tumori del pancreas
 
-      -Dispepsia
-
-      -Vomito
-
-      -Diarrea
-
-      -Melena
-
-      -Rettorragia
-
-      -Ittero
-
-      -Ascite
-
-      -Dolore addominale (acuto e cronico)
-
-      -Acalasia e disturbi motori esofagei
-
-      -Malattia da reflusso gastroesofageo
-
-      -Neoplasie dell'esofago
-
-      -Malattia peptica
-
-      -Gastriti e gastropatie
-
-      -H pylori
-
-      -Neoplasie dello stomaco
-
-      -Malassorbimento
-
-      -Malattia celiaca
-
-      -Morbo di Whipple
-
-      -Contaminazione batterica dell'intestino tenue
-
-      -Malattia diverticolare
-
-      -Malattie infiammatorie intestinali
-
-      -Sindrome dell'intestino irritabile
-
-      -Neoplasie benigne e maligne del colon
-
-      -Epatiti acute
-
-      -Epatopatie croniche e cirrosi epatica
-
-      -Colecistite acute
-
-      -Colica biliare
-
-      -Tumori del fegato
-
-      -Pancreatite acuta
-
-      -Pancreatite cronica
-
-      -Tumori del pancreas
-
-      -Disfagia -Dispepsia -Vomito -Diarrea -Melena -Rettorragia -Ittero -Ascite -Dolore addominale (acuto e cronico) -Acalasia e disturbi motori esofagei -Malattia da reflusso gastroesofageo -Neoplasie dell'esofago -Malattia peptica -Gastriti e gastropatie -H pylori -Neoplasie dello stomaco -Malassorbimento -Malattia celiaca -Morbo di Whipple -Contaminazione batterica dell'intestino tenue -Malattia diverticolare -Malattie infiammatorie intestinali -Sindrome dell'intestino irritabile -Neoplasie benigne e maligne del colon -Epatiti acute -Epatopatie croniche e cirrosi epatica -Colecistite acute -Colica biliare -Tumori del fegato -Pancreatite acuta -Pancreatite cronica -Tumori del pancreas
+      - Disfagia
+      - Dispepsia
+      - Vomito
+      - Diarrea
+      - Melena
+      - Rettorragia
+      - Ittero
+      - Ascite
+      - Dolore addominale (acuto e cronico)
+      - Acalasia e disturbi motori esofagei
+      - Malattia da reflusso gastroesofageo
+      - Neoplasie dell'esofago
+      - Malattia peptica
+      - Gastriti e gastropatie
+      - H pylori
+      - Neoplasie dello stomaco
+      - Malassorbimento
+      - Malattia celiaca
+      - Morbo di Whipple
+      - Contaminazione batterica dell'intestino tenue
+      - Malattia diverticolare
+      - Malattie infiammatorie intestinali
+      - Sindrome dell'intestino irritabile
+      - Neoplasie benigne e maligne del colon
+      - Epatiti acute
+      - Epatopatie croniche e cirrosi epatica
+      - Colecistite acute
+      - Colica biliare
+      - Tumori del fegato
+      - Pancreatite acuta
+      - Pancreatite cronica
+      - Tumori del pancreas
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
     material_tips: |-
@@ -156,7 +156,7 @@ moduli:
     exam_type: Orale
     preappello: Sì
     durata_orale_min: 15
-    exam_details: "Orale di Chirurgia gastroenterologica. L'orale prevede generalmente 2 domande: una prima domanda relativa a un primo blocco di argomenti; una seconda domanda relativa a un secondo blocco di argomenti. Le domande sono generalmente piuttosto schematiche e secche. L'interrogazione dura mediamente 15-20 minuti, anche se la durata può variare in base al docente e all'andamento dell'interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Nell'ultimo anno erano presenti 3 docenti + 1 specializzanda."
+    exam_details: "Orale di Chirurgia gastroenterologica in ordine alfabetico. L'orale prevede generalmente 2 domande: una prima domanda relativa a un primo blocco di argomenti; una seconda domanda relativa a un secondo blocco di argomenti. Le domande sono generalmente piuttosto schematiche e secche. L'interrogazione dura mediamente 15-20 minuti, anche se la durata può variare in base al docente e all'andamento dell'interrogazione. Se lo studente si trova in difficoltà, il docente può porre ulteriori domande. Nell'ultimo anno erano presenti 3 docenti + 1 specializzanda."
     program: |-
       - Semeiologia ed esame obiettivo nelle malattie dell'apparato digerente.
       - Dolore addominale acuto e cronico (approccio fisiopatologico, semeiologico e clinico).
@@ -190,8 +190,6 @@ moduli:
       - Cellule staminali e chirurgia.
       - Trapianti d'organo.
 
-      - Inquadramento e trattamento multidisciplinare dell'obesità patologica - Semeiologia ed esame obiettivo nelle malattie dell'apparato digerente. - Dolore addominale acuto e cronico (approccio fisiopatologico, semeiologico e clinico). - Addome acuto chirurgico (peritonitico, occlusivo, vascolare). - Appendicite acuta. - Le ernie parietali addominali. Lo strozzamento erniario. - Le ernie diaframmatiche congenite ed acquisite. - MRGE e Barrett - Il megaesofago. I diverticoli esofagei. - Acalasia.- Tumori benigni e maligni dell'esofago. - Tumori benigni e maligni dello stomaco. Precancerosi gastriche. - Patologia infiammatoria e tumorale del tenue mesenteriale. - Malattie infiammatorie croniche dell'intestino (retto - colite ulcerosa, morbo di Crohn). - Precancerosi intestinali. Polipi intestinali. Poliposi. - Diverticolosi del colon. - Megacolon (congenito, acquisito, tossico). - Carcinoma del colon-retto. - Patologia infiammatoria acuta e cronica del pancreas. - Tumori benigni e maligni del pancreas. - Ipertensione Portale.- Sindrome Compartimentale Addominale.- L'ittero chirurgico. Inquadramento generale e aspetti eziopatogenetici. - Patologia infiammatoria delle via biliari. - La calcolosi biliare. - Malattie dell'ano d'interesse chirurgico (ragade, ascesso, fistola, varici emorroidarie, cancro). - Cellule staminali e chirurgia. - Trapianti d'organo.
-
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
     material_tips: |-
       **Sul programma**
@@ -223,39 +221,23 @@ moduli:
     preappello: Sì
     exam_details: "Scritto di Nutrizione umana. La prova dura 45 minuti ed è composta da: 10 domande a scelta multipla, con una sola risposta corretta: risposta corretta → +2 punti; risposta non data → 0 punti; risposta sbagliata → −0,5 punti; 2 domande aperte, valutate da 0 a 5 punti ciascuna. Le domande aperte possono essere ricorrenti e ripetersi negli anni precedenti. Lo scritto si svolge all'inizio della giornata."
     program: |-
-      Dispendio e bilancio energetico, fabbisogno energetico
-
-      Dietetica fisiologica nell’adulto (Linee guida/LARN)
-
-      Gruppi di alimenti e piramide alimentare
-
-      Diagnostica Nutrizionale nell’adulto
-
-      Obesità e terapia dietetica
-
-      Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
-
-      Dietoterapia nelle Malattie croniche infiammatorie intestinali
-
-      Dispendio e bilancio energetico, fabbisogno energetico
-
-      Dietetica fisiologica nell’adulto (Linee guida/LARN)
-
-      Gruppi di alimenti e piramide alimentare
-
-      Diagnostica Nutrizionale nell’adulto
-
-      Obesità e terapia dietetica
-
-      Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
-
-      Dietoterapia nelle Malattie croniche infiammatorie intestinali
-
-      Disturbi dell'alimentazione e nutrizione
-
-      Malattie neurodegenerative
-
-      Alimentazione e tumori
+      - Dispendio e bilancio energetico, fabbisogno energetico
+      - Dietetica fisiologica nell’adulto (Linee guida/LARN)
+      - Gruppi di alimenti e piramide alimentare
+      - Diagnostica Nutrizionale nell’adulto
+      - Obesità e terapia dietetica
+      - Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
+      - Dietoterapia nelle Malattie croniche infiammatorie intestinali
+      - Dispendio e bilancio energetico, fabbisogno energetico
+      - Dietetica fisiologica nell’adulto (Linee guida/LARN)
+      - Gruppi di alimenti e piramide alimentare
+      - Diagnostica Nutrizionale nell’adulto
+      - Obesità e terapia dietetica
+      - Sindrome Metabolica (Diabete, Dislipidemie, Ipertensione) e terapia dietetica
+      - Dietoterapia nelle Malattie croniche infiammatorie intestinali
+      - Disturbi dell'alimentazione e nutrizione
+      - Malattie neurodegenerative
+      - Alimentazione e tumori
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2023/10045/insegnamenti/2026/11166/2017/9999?coorte=2023&schemaid=17807).*
     material_tips: |-
@@ -282,9 +264,6 @@ moduli:
         email: andrea.peri@unipv.it
       - nome: Annalisa Schiepatti
         email: annalisa.schiepatti@unipv.it
-info_da_verificare:
-  - campo: Modalità di chiamata
-    nota: "Da integrare: ordine alfabetico/ordine di iscrizione/altro"
 aggiornato_da: Sara Cocci
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

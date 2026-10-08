@@ -12,41 +12,52 @@ moduli:
       - Chiamata in ordine alfabetico.
       - Interrogazione con 2-3 domande.
       - Modalità varia in base al docente: alcuni lasciano parlare maggiormente lo studente, altri pongono più domande mirate e specifiche.
-      - Con il Prof. Bruno può essere più difficile ottenere voti particolarmente elevati, ma se lo studente dimostra di conoscere adeguatamente gli argomenti non viene generalmente penalizzato. Anche quando l'interrogazione non è eccellente, non vengono generalmente assegnati voti particolarmente bassi.
+      - Con il Prof. Bruno può essere più difficile ottenere voti particolarmente elevati, ma se lo studente dimostra di conoscere adeguatamente gli argomenti non viene penalizzato. Anche quando l'interrogazione non è eccellente, non vengono assegnati voti particolarmente bassi.
 
       **Frequenza**: il Prof. Bruno ha talvolta comunicato che per sostenere l'esame sarebbe stato necessario aver raggiunto il 75% delle presenze.
 
       **Appelli extra**: il Prof. Bruno concede generalmente un appello extra nel mese di marzo, senza che sia necessario richiederlo. L'appello extra è solitamente molto frequentato. Al di fuori di questo appello, non vengono generalmente concessi ulteriori appelli straordinari, anche quando richiesti dagli studenti.
     program: |-
-      Argomenti: Generalità sulle malattie da agenti infettivi
+      **Argomenti:**
 
-      Principi di terapia antibiotica
+      - Generalità sulle malattie da agenti infettivi
+      - Principi di terapia antibiotica
+      - Contrasto al fenomeno dell’antibiotico resistenza
+      - Sepsi
+      - Endocarditi
+      - Epatiti Virali
+      - Infezioni Gastrointestinali
+      - Infezioni Sistemiche
+      - Infezioni respiratorie e micobatteriosi
+      - Malattie sessualmente trasmesse
+      - Infezioni delle vie urinarie
+      - Infezione malattia HIV
+      - Infezioni osso e tessuti Molli
+      - Malaria e altre malattie parassitarie
 
-      Contrasto al fenomeno dell’antibiotico resistenza
-
-      Sepsi
-
-      Endocarditi
-
-      Epatiti Virali
-
-      Infezioni Gastrointestinali
-
-      Infezioni Sistemiche
-
-      Infezioni respiratorie e micobatteriosi
-
-      Malattie sessualmente trasmesse
-
-      Infezioni delle vie urinarie
-
-      Infezione malattia HIV
-
-      Infezioni osso e tessuti Molli
-
-      Malaria e altre malattie parassitarie
-
-      1. Introduzione 2) Sepsi 3) Endocarditi 4) Gastroenteriti (Tifo / Colera) 5) HIV 6) Influenza 7) Infezioni delle Vie Urinarie 8) Malattie Sessualmente trasmesse 9) Approccio al Paziente febbrile / FUO 10) Epatiti virali 11) Brucellosi 12) Infezioni Sistemiche (CMV e EBV) 13) Tubercolosi ExtraPolmonare 14) Malattie trasmesse da Zecche 15) Infezioni in Gravidanza 16) Covid 19 17) Meningiti / Encefaliti 18) Infezioni dei Tessuti Molli 19) Spondilodisciti 20) Malaria 21) Schistosomiasi 22) Leishmaniosi 23) Malattie Invasive da funghi
+      1. Introduzione
+      2. Sepsi
+      3. Endocarditi
+      4. Gastroenteriti (Tifo / Colera)
+      5. HIV
+      6. Influenza
+      7. Infezioni delle Vie Urinarie
+      8. Malattie Sessualmente trasmesse
+      9. Approccio al Paziente febbrile / FUO
+      10. Epatiti virali
+      11. Brucellosi
+      12. Infezioni Sistemiche (CMV e EBV)
+      13. Tubercolosi ExtraPolmonare
+      14. Malattie trasmesse da Zecche
+      15. Infezioni in Gravidanza
+      16. Covid 19
+      17. Meningiti / Encefaliti
+      18. Infezioni dei Tessuti Molli
+      19. Spondilodisciti
+      20. Malaria
+      21. Schistosomiasi
+      22. Leishmaniosi
+      23. Malattie Invasive da funghi
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/9728/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-

@@ -14,81 +14,71 @@ moduli:
     program: |-
       Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
 
-      **· CENNI DI ANATOMIA DELL’APPARATO OCULARE**
+      **Cenni di anatomia dell’apparato oculare**
 
-      **PATOLOGIA DI: PALPEBRE – ANNESSI E VIE LACRIMALI:**
+      **Patologia di: palpebre – annessi e vie lacrimali:**
 
-      o anatomia e fisiologia
+      - anatomia e fisiologia
+      - patologia infiammatoria (eziopatogenesi, clinica, terapia)
+      - patologia della statica e della dinamica
+      - patologia neoplastica
+      - dacriocistiti (eziopatogenesi, clinica, terapia)
 
-      o patologia infiammatoria (eziopatogenesi, clinica, terapia)
+      **Vizi di refrazione:**
 
-      o patologia della statica e della dinamica
+      - miopia, ipermetropia, astigmatismo, presbiopia
 
-      o patologia neoplastica
+      **Strabismo:**
 
-      o dacriocistiti (eziopatogenesi, clinica, terapia)
+      - fisiopatologia della motilità oculare e della visione binoculare
+      - strabismo concomitante
+      - strabismo paralitico
 
-      **· VIZI DI REFRAZIONE:**
+      **Cataratta congenita:**
 
-      o miopia, ipermetropia, astigmatismo, presbiopia
+      - eziopatogenesi, clinica, terapia
 
-      **· STRABISMO:**
+      **Glaucoma congenito:**
 
-      o fisiopatologia della motilità oculare e della visione binoculare
-
-      o strabismo concomitante
-
-      o strabismo paralitico
-
-      **· CATARATTA CONGENITA:**
-
-      o eziopatogenesi, clinica, terapia
-
-      **GLAUCOMA CONGENITO:**
-
-      **· RETINOBLASTOMA – ROP:**
+      **Retinoblastoma – ROP:**
 
       Clinica e terapia
 
-      **· CONGIUNTIVA:**
+      **Congiuntiva:**
 
       anatomia e fisiologia
 
-      o patologia film lacrimale
+      - patologia film lacrimale
 
-      **· CORNEA:**
+      **Cornea:**
 
-      o patologia traumatica
+      - patologia traumatica
+      - patologia degenerativa (cheratocono, ecc.)
 
-      o patologia degenerativa (cheratocono, ecc.)
+      **Cristallino:**
 
-      **· CRISTALLINO:**
+      - cataratta acquisita (clinica e terapia)
 
-      o cataratta acquisita (clinica e terapia)
+      **Glaucoma acquisito:**
 
-      **· GLAUCOMA ACQUISITO:**
+      - Fisiopatologia dell’idrodinamica oculare
 
-      o Fisiopatologia dell’idrodinamica oculare
+      **Uvea:**
 
-      **· UVEA:**
+      **Retina:**
 
-      **· RETINA:**
-
-      o esami funzionali
-
-      o distacco di retina
+      - esami funzionali
+      - distacco di retina
 
       patologia vascolare
 
-      o patologie associate a malattie sistemiche
+      - patologie associate a malattie sistemiche
+      - patologie degenerativ
 
-      o patologie degenerativ
+      **Nervo ottico:**
 
-      **NERVO OTTICO:**
-
-      o neuriti ottiche retrobulbari (eziopatogenesi, clinica, terapia)
-
-      o edemi della papilla (eziopatogenesi, clinica, terapia)
+      - neuriti ottiche retrobulbari (eziopatogenesi, clinica, terapia)
+      - edemi della papilla (eziopatogenesi, clinica, terapia)
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -122,54 +112,60 @@ moduli:
     study_time: 3–4 settimane
     exam_details: L'esame è orale e si svolge in ordine alfabetico. Spesso la prima domanda riguarda il reparto in cui si sta svolgendo l'internato. È frequente una struttura con una domanda di ORL e una domanda di Audiologia/Vestibologia.
     program: |-
-      Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
+      **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
 
-      **OTORINOLARINGOIATRIA:**
+      **Otorinolaringoiatria:**
 
-      - NASO
+      **Naso**
+
       - Anatomofisiologia naso-sinusale
       - Epistassi
       - Rinosinusiti
       - Complicanze delle rinosinusiti
       - Fibroangioma giovanile
       - Patologia benigna e maligna nasosinusale
-      - CAVO ORALE
+
+      **Cavo orale**
+
       - Anatomofisiologia del cavo orale
       - Patologia infiammatoria del cavo orale
-      - OROFARINGE
+
+      **Orofaringe**
+
       - Anatomofisiologia dell'orofaringe
       - Tonsilliti
       - Complicanze delle tonsilliti
       - Vegetazioni adenoidi
       - Sindrome delle apnee ostruttive notturne
-      - IPOFARINGE/LARINGE
+
+      **Ipofaringe/laringe**
+
       - Anatomofisiologia ipofaringolaringea
       - Patologia benigna
       - Patologia neurologica faringolaringea
-      - GHIANDOLE SALIVARI
+
+      **Ghiandole salivari**
+
       - Anatomofisiologia delle ghiandole salivari
       - Sialoadeniti
       - Patologia neoformativa delle ghiandole salivari
-      - COLLO
+
+      **Collo**
+
       - Anatomofisiologia del collo
       - Tumefazioni laterocervicali
       - Tracheotomia
-      - INQUADRAMENTO DELLE NEOPLASIE CERVICO-FACCIALI
 
-      **OTOLOGIA E AUDIOLOGIA:**
+      **Inquadramento delle neoplasie cervico-facciali**
+
+      **Otologia e audiologia:**
 
       - Anatomofisiologia dell'apparato uditivo e dell'apparato vestibolare
       - Semeiotica audiologica (otoscopia ed otomicroscopia); acufenologia
       - Concetto di ipoacusia e classificazione
-      - Semeiotica audiologica strumentale: audiometria tonale, audiometria vocale, impedenzometria,audiometria a
-
-      risposte elettriche ed otoemissioni
-
+      - Semeiotica audiologica strumentale: audiometria tonale, audiometria vocale, impedenzometria, audiometria a risposte elettriche ed otoemissioni
       - Patologia dell'orecchio esterno
-      - Patologia dell'orecchio medio: otiti acute, otiti croniche (semplici, iperplastiche, colesteatomatose) e loro
-
-      complicanze
-
+      - Patologia dell'orecchio medio: otiti acute, otiti croniche (semplici, iperplastiche, colesteatomatose) e loro complicanze
       - La timpanosclerosi e le otiti fibroadesive.
       - Tasche di retrazione ed atelettasia dell'orecchio medio.
       - L'otosclerosi
@@ -186,53 +182,30 @@ moduli:
       - Neurinoma dell'acustico
       - Paralisi del nervo facciale
 
-      **AUDIOLOGIA:**
+      **Audiologia:**
 
-      Anatomofisiologia dell'apparato uditivo e dell'apparato vestibolare
+      - Anatomofisiologia dell'apparato uditivo e dell'apparato vestibolare
+      - Semeiotica audiologica (otoscopia ed otomicroscopia); acufenologia
+      - Concetto di ipoacusia e classificazione
+      - Semeiotica audiologica strumentale: audiometria tonale, audiometria vocale, impedenzometria, audiometria a risposte elettriche ed otoemissioni
+      - Patologia dell'orecchio esterno
+      - Patologia dell'orecchio medio: otiti acute, otiti croniche (semplici, iperplastiche, colesteatomatose) e loro complicanze
+      - La timpanosclerosi e le otiti fibroadesive.
+      - Tasche di retrazione ed atelettasia dell'orecchio medio.
+      - L'otosclerosi
+      - I tumori glomici dell'osso temporale
+      - Sordità improvvisa
+      - Presbiacusia; ipoacusia da rumore ed ipoacusia da ototossici
+      - Cenni sulle sordità centrali
+      - Terapia protesica: protesi tradizionale, protesi impiantabili
+      - Semeiotica vestibologica ed otoneurologica
 
-      Semeiotica audiologica (otoscopia ed otomicroscopia); acufenologia
-
-      Concetto di ipoacusia e classificazione
-
-      Semeiotica audiologica strumentale: audiometria tonale, audiometria vocale,
-
-      impedenzometria,audiometria a risposte elettriche ed otoemissioni
-
-      Patologia dell'orecchio esterno
-
-      Patologia dell'orecchio medio: otiti acute, otiti croniche (semplici, iperplastiche,
-
-      colesteatomatose) e loro complicanze
-
-      La timpanosclerosi e le otiti fibroadesive.
-
-      Tasche di retrazione ed atelettasia dell'orecchio medio.
-
-      L'otosclerosi
-
-      I tumori glomici dell'osso temporale
-
-      Sordità improvvisa
-
-      Presbiacusia; ipoacusia da rumore ed ipoacusia da ototossici
-
-      Cenni sulle sordità centrali
-
-      Terapia protesica: protesi tradizionale, protesi impiantabili
-
-      Semeiotica vestibologica ed otoneurologica
-
-      Vertigine parossistica posizionale da labirintolitiasi
-
-      Fistole perilinfatiche e deiscenze della capsula otica
-
-      Malattia di Menière
-
-      Neurite Vestibolare
-
-      Neurinoma dell'acustico
-
-      Paralisi del nervo facciale
+      - Vertigine parossistica posizionale da labirintolitiasi
+      - Fistole perilinfatiche e deiscenze della capsula otica
+      - Malattia di Menière
+      - Neurite Vestibolare
+      - Neurinoma dell'acustico
+      - Paralisi del nervo facciale
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -276,9 +249,19 @@ moduli:
     study_time: 3–4 giorni
     exam_details: A partire dall'anno di riferimento, l'esame è diventato scritto. Le domande a scelta multipla sono quindi nuove rispetto agli anni precedenti. L'esame viene svolto tramite Kiro Testing e la valutazione segue la stessa logica di Maxillo, con un punto bonus.
     program: |-
-      Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
+      **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
 
-      Cenni di anatomia, embriologia e istologia dei tessuti dentari. Eruzione e permuta dei denti: classi dentali e scheletriche, malocclusioni. La carie dentaria: prevenzione e complicanze; l’igiene orale Le pulpiti, acute e croniche. Patologia apicale acuta e cronica. Traumi dentari. Radiologia odontoiatrica. Le malattie del parodonto. Correlazione fra malattia parodontale e malattie sistemiche. La necrosi mascellare da bifosfonati. Patologie delle mucose orali e precancerosi.
+      - Cenni di anatomia, embriologia e istologia dei tessuti dentari.
+      - Eruzione e permuta dei denti: classi dentali e scheletriche, malocclusioni.
+      - La carie dentaria: prevenzione e complicanze; l’igiene orale
+      - Le pulpiti, acute e croniche.
+      - Patologia apicale acuta e cronica.
+      - Traumi dentari.
+      - Radiologia odontoiatrica.
+      - Le malattie del parodonto.
+      - Correlazione fra malattia parodontale e malattie sistemiche.
+      - La necrosi mascellare da bifosfonati.
+      - Patologie delle mucose orali e precancerosi.
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11739/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -303,7 +286,7 @@ moduli:
     study_time: 2–3 giorni
     exam_details: "L'esame è scritto, con 30 domande a scelta multipla, ed è tenuto dal professor Sfondrini. La valutazione segue questa modalità: 30/30 → 30 e lode; 29/30 → 30; e così via. È quindi presente un punto bonus rispetto alla conversione diretta del numero di risposte corrette."
     program: |-
-      Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.
+      **Patologia e clinica delle malattie del volto in ambito Oro-Maxillo-Facciale, Odontoiatriaco, Otorinolaringoiatrico, Audiologico e Oculistico.**
 
       *Il programma ufficiale non ha una parte dedicata a questo modulo: vedi la scheda completa.*
 
@@ -313,8 +296,8 @@ moduli:
 
       Il programma corrisponde agli argomenti trattati durante le lezioni del corso.
 
-      - Sbobine dell'anno corrente, ritenute sufficienti.
-      - Domande degli appelli precedenti, particolarmente importanti perché, secondo la testimonianza, alcune domande tendono a ripetersi.
+      - Sbobine dell'anno corrente, sufficienti.
+      - Domande degli appelli precedenti, particolarmente importanti perché alcune domande tendono a ripetersi.
     body: |-
       **Domande e argomenti ricorrenti**
 

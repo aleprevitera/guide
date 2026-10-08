@@ -25,7 +25,7 @@ moduli:
       - I docenti sono descritti come gentili e orientati a far ragionare lo studente.
       - Indicativamente: Rovida si concentra sulla virologia; Migliavacca sulla batteriologia; Piazza su genetica batterica, micobatteri e funghi; Cambieri sulla microbiologia clinica; Baldanti può spaziare maggiormente tra i diversi argomenti e può proporre anche casi clinici.
     program: |-
-      Procarioti
+      **Procarioti**
 
       - Principi di tassonomia batterica
       - Struttura e funzione dei componenti della cellula batterica
@@ -40,16 +40,17 @@ moduli:
       - Basi molecolari della farmaco-resistenza
       - Metodi per la determinazione della sensibilità agli antibiotici
 
-      Sistematica: Staphylococcus, Streptococcus, Corynebacterium, Listeria, Mycobacterium, Neisseria, Enterobacteriaceae, Pseudomonas e bacilli Gram negativi non fermentanti, Vibrio, Campylobacter, Helicobacter, Brucella, Haemophilus, Bordetella, Bacillus e Clostridium, Treponema, Borrelia e Leptospira. Bacteroides e altri batteri anaerobi, Legionella, Rickettsia, Coxiella e generi correlati, Mycoplasma, Ureaplasma, Chlamydia.
+      **Sistematica:** Staphylococcus, Streptococcus, Corynebacterium, Listeria, Mycobacterium, Neisseria, Enterobacteriaceae, Pseudomonas e bacilli Gram negativi non fermentanti, Vibrio, Campylobacter, Helicobacter, Brucella, Haemophilus, Bordetella, Bacillus e Clostridium, Treponema, Borrelia e Leptospira. Bacteroides e altri batteri anaerobi, Legionella, Rickettsia, Coxiella e generi correlati, Mycoplasma, Ureaplasma, Chlamydia.
 
-      Virus
+      **Virus**
 
       - I virus: tassonomia, morfologia, struttura, composizione chimica e metodi di studio
       - Rapporti virus-cellula e meccanismi di replicazione virale
       - Genetica dei virus
       - Coltura dei virus e loro titolazione
       - Il meccanismo d’azione e il ruolo protettivo dell’interferone e di altre citochine nelle infezioni virali
-      - Rapporti virus-ospite; infezioni litiche e non litiche
+      - Rapporti virus-ospite
+      - infezioni litiche e non litiche
       - Trasformazione cellulare ed oncogenesi
       - Proprietà antigeniche dei virioni
       - Trasmissione di virus e patogenesi delle infezioni virali
@@ -57,53 +58,60 @@ moduli:
       - La classificazione ed il meccanismo di azione dei farmaci antivirali
       - Cenni sui vettori virali e principi di terapia cellulare e genica
 
-      Sistematica: Virus a DNA: Papillomavirus, Poliomavirus, Herpesvirus, Adenovirus, Parvovirus, Poxvirus, Hepadnavirus. Virus a RNA: Picornavirus, Coronavirus, Orthomyxovirus, Paramyxovirus, Pneumovirus, Rabdovirus, Filovirus, Virus delle epatiti (A, C, D, G, E), Reovirus e virus gastroenterici, Retrovirus (HTLV, HIV), virus trasmessi da artropodi e da roditori: Bunyavirales, Arenaviridae, Togavirus, Flavivirus.
+      **Sistematica:** **Virus a DNA:** Papillomavirus, Poliomavirus, Herpesvirus, Adenovirus, Parvovirus, Poxvirus, Hepadnavirus. **Virus a RNA:** Picornavirus, Coronavirus, Orthomyxovirus, Paramyxovirus, Pneumovirus, Rabdovirus, Filovirus, Virus delle epatiti (A, C, D, G, E), Reovirus e virus gastroenterici, Retrovirus (HTLV, HIV), virus trasmessi da artropodi e da roditori: Bunyavirales, Arenaviridae, Togavirus, Flavivirus.
 
-      Prioni: Struttura, Patogenesi, Epidemiologia e Manifestazioni Cliniche
+      **Prioni:** Struttura, Patogenesi, Epidemiologia e Manifestazioni Cliniche
 
-      Eucarioti
+      **Eucarioti**
 
       Tassonomia, struttura e replicazione dei miceti, dei protozoi e di interesse medico. Meccanismi della loro azione patogena. Classificazione delle micosi e delle infezioni protozoarie e loro diagnosi di laboratorio. Farmaci e loro meccanismo d’azione. Basi molecolare della farmacoresistenza
 
-      Sistematica: Miceti. Micosi superficiali e cutanee: Tinea, Pietra, Dermatofitosi. Micosi sottocutanee: Sporotricosi, Cromoblastomicosi, Feoifomicosi. Micosi sistemiche da miceti dimorfici: Blastomyces, Paracoccidioides, Histoplasma, Coccidioides). Micosi opportunistiche: Candida albicans e Candida spp, Trichosporon, Malassezia, Criptococcus neoformans, Aspergillus spp, Zygomyces, Pneumocystis jirovecii.
+      **Sistematica:** Miceti. **Micosi superficiali e cutanee:** Tinea, Pietra, Dermatofitosi. **Micosi sottocutanee:** Sporotricosi, Cromoblastomicosi, Feoifomicosi. **Micosi sistemiche da miceti dimorfici:** Blastomyces, Paracoccidioides, Histoplasma, Coccidioides). **Micosi opportunistiche:** Candida albicans e Candida spp, Trichosporon, Malassezia, Criptococcus neoformans, Aspergillus spp, Zygomyces, Pneumocystis jirovecii.
 
-      Protozoi. Protozoi intestinali e urogenitali: Amebe, Flagellati (Trichomonas, Giardia), Ciliati (Balantidium coli), Coccidi (Cryptosporidium, Isospora belli), Microsporidi.
+      **Protozoi.**
 
-      Protozoi del sangue e dei tessuti: Plasmodium spp, Emoflagellati (Tripanosomi, Leishmanie), Babesia, Toxoplasma gondii.
+      **Protozoi intestinali e urogenitali:**
 
-      Aspetti pratici di immunologia applicata alla microbiologia.
+      - Amebe
+      - Flagellati (Trichomonas, Giardia)
+      - Ciliati (Balantidium coli)
+      - Coccidi (Cryptosporidium, Isospora belli)
+      - Microsporidi
+
+      **Protozoi del sangue e dei tessuti:**
+
+      - Plasmodium spp
+      - Emoflagellati (Tripanosomi, Leishmanie)
+      - Babesia
+      - Toxoplasma gondii
+
+      **Aspetti pratici di immunologia applicata alla microbiologia.**
 
       Difese costitutive dell’ospite. Aspetti generali sull’immunità innata e adattiva. Reazioni sierologiche applicate alla diagnosi microbiologica. Sieri e vaccini.
 
-      - I virus: tassonomia, morfologia, struttura, composizione chimica e metodi di studio
-      - Rapporti virus-cellula e meccanismi di replicazione virale
-      - Genetica dei virus
-      - Coltura dei virus e loro titolazione
-      - Il meccanismo d’azione e il ruolo protettivo dell’interferone e di altre citochine nelle infezioni virali
-      - Rapporti virus-ospite; infezioni litiche e non litiche
-      - Trasformazione cellulare ed oncogenesi
-      - Proprietà antigeniche dei virioni
-      - Trasmissione di virus e patogenesi delle infezioni virali
-      - Diagnostica virologica in medicina umana
-      - La classificazione ed il meccanismo di azione dei farmaci antivirali
+      **Procarioti**
 
-      Sistematica: Virus a DNA: Papillomavirus, Poliomavirus, Herpesvirus, Adenovirus, Parvovirus, Poxvirus, Hepadnavirus. Virus a RNA: Picornavirus, Coronavirus, Orthomyxovirus, Paramyxovirus, Pneumovirus, Rabdovirus, Filovirus, Virus delle epatiti (A, C, D, E), Reovirus e virus gastroenterici, Retrovirus (HTLV, HIV), virus trasmessi da artropodi e da roditori: Bunyavirales, Arenaviridae, Togavirus, Flavivirus.
+      **Sistematica:**
 
-      Procarioti
+      - Staphylococcus
+      - Streptococcus
+      - Listeria
+      - Mycobacterium
+      - Neisseria
+      - Enterobacterales
+      - Pseudomonas ed Acinetobacter spp.
+      - Vibrio
+      - Campylobacter
+      - Helicobacter
+      - Haemophilus
+      - Bacillus e Clostridioides
+      - Treponema e Borrelia spp.
+      - Batteri anaerobi
+      - Legionella e generi correlati
+      - Mycoplasma
+      - Chlamydia spp.
 
-      Principi di tassonomia batterica. Struttura e funzione dei componenti della cellula batterica. Spore batteriche: sporogenesi e germinazione. Fisiologia e metabolismo dei batteri (cenni). Principi di genetica batterica e scambio genico. Microbiota umano in condizioni normali e patologiche. Patogenesi dell’infezione batterica. La coltivazione dei batteri. Principi generali della diagnostica di laboratorio delle malattie ad eziologia batterica. Struttura, meccanismo d’azione ed attività dei farmaci antibatterici. Basi molecolari della farmaco-resistenza. Metodi per la determinazione della sensibilità agli antibiotici.
-
-      Sistematica: Staphylococcus, Streptococcus, Listeria, Mycobacterium, Neisseria, Enterobacterales, Pseudomonas ed Acinetobacter spp.. Vibrio, Campylobacter, Helicobacter, Haemophilus, Bacillus e Clostridioides, Treponema e Borrelia spp.. Batteri anaerobi, Legionella e generi correlati, Mycoplasma, Chlamydia spp.
-
-      Eucarioti
-
-      Tassonomia, struttura e replicazione di miceti e protozoi di interesse medico. Meccanismi della loro azione patogena. Classificazione delle micosi e delle infezioni protozoarie e loro diagnosi di laboratorio. Farmaci e loro meccanismo d’azione. Basi molecolare della farmacoresistenza
-
-      Sistematica: Miceti. Micosi superficiali e cutanee: Tinea, Pietra, Dermatofitosi. Micosi sottocutanee: Sporotricosi, Cromoblastomicosi, Feoifomicosi. Micosi sistemiche da miceti dimorfici: Blastomyces, Paracoccidioides, Histoplasma, Coccidioides. Micosi opportunistiche: Candida albicans e Candida spp., Trichosporon, Malassezia, Aspergillus spp., Criptococcus neoformans e Pneumocystis jirovecii.
-
-      Protozoi. Protozoi intestinali e urogenitali: Amebe, Flagellati (Trichomonas, Giardia), Ciliati (Balantidium coli), Coccidi (Cryptosporidium, Isospora belli), Microsporidi.
-
-      Protozoi del sangue e dei tessuti: Plasmodium spp., Emoflagellati (Tripanosomi, Leishmanie), Babesia, Toxoplasma gondii.
+      **Eucarioti**
 
       - Diagnostica microbiologica in medicina umana
       - Patogenesi delle malattie infettive
@@ -181,11 +189,6 @@ moduli:
         email: francesca.rovida@unipv.it
         stile: Si concentra sulla virologia.
     fascia_studio: 5–8 sett
-info_da_verificare:
-  - campo: Frequenza delle lezioni frontali
-    nota: La scheda riporta [DA INTEGRARE] per la frequenza delle lezioni frontali.
-  - campo: Domande e argomenti ricorrenti
-    nota: Eventuale elenco di domande ricorrenti dagli appelli precedenti.
 aggiornato_da: Lisa Ceci
 semestre: II
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

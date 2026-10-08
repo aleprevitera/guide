@@ -26,63 +26,152 @@ moduli:
     exam_type: Orale
     exam_details: Gli studenti vengono generalmente chiamati due alla volta, in ordine alfabetico, e ciascuno riceve due domande. I docenti tendono a concentrarsi sugli argomenti della propria sottospecialità. La prima domanda può riguardare la specializzazione desiderata o il reparto nel quale si sta svolgendo l’internato.
     program: |-
-      **PEDIATRIA GENERALE E SPECIALISTICA**
+      **Pediatria generale e specialistica**
 
-      Argomenti irrinunciabili: note essenziali di fisiopatologia della vita intrauterina; assistenza al neonato normale e patologico (sofferenza fetale, asfissia perinatale); neonato a termine, pre-termine e post-termine, di peso appropriato e di basso peso; fenomeni fisiologici neonatali; screening neonatali; ritardo di crescita intrauterina; encefalopatia ipossico-ischemica-emorragica; emorragie endocraniche; malattia delle membrane ialine; displasia broncopolmonare; itteri neonatali; enterocolite necrotizzante; atresia esofagea; stenosi ipertrofica del piloro; infezioni e sepsi neonatali; convulsioni neonatali.
+      **Argomenti irrinunciabili:**
 
-      Argomenti opzionali: adattamento alla vita extrauterina; neonato di peso molto basso; elementi di nutrizione del neonato;
+      - note essenziali di fisiopatologia della vita intrauterina
+      - assistenza al neonato normale e patologico (sofferenza fetale, asfissia perinatale)
+      - neonato a termine, pre-termine e post-termine, di peso appropriato e di basso peso
+      - fenomeni fisiologici neonatali
+      - screening neonatali
+      - ritardo di crescita intrauterina
+      - encefalopatia ipossico-ischemica-emorragica
+      - emorragie endocraniche
+      - malattia delle membrane ialine
+      - displasia broncopolmonare
+      - itteri neonatali
+      - enterocolite necrotizzante
+      - atresia esofagea
+      - stenosi ipertrofica del piloro
+      - infezioni e sepsi neonatali
+      - convulsioni neonatali.
 
-      **ENDOCRINOLOGIA**
+      **Argomenti opzionali:**
 
-      Argomenti irrinunciabili: note di auxologia; deficit staturali; deficit di ormone della crescita; pubertà normale, precoce e ritardata; ipotiroidismo, ipertiroidismo; tiroidite; gozzo; sindrome adrenogenitale; diabete mellito insulino-dipendente; diabete insipido; obesità semplice e patologica.
+      - adattamento alla vita extrauterina
+      - neonato di peso molto basso
+      - elementi di nutrizione del neonato;
 
-      **MALATTIE DEL METABOLISMO**
+      **Endocrinologia**
 
-      Argomenti irrinunciabili: rachitismo
+      **Argomenti irrinunciabili:**
 
-      **EMATOLOGIA E ONCOEMATOLOGIA**
+      - note di auxologia
+      - deficit staturali
+      - deficit di ormone della crescita
+      - pubertà normale, precoce e ritardata
+      - ipotiroidismo, ipertiroidismo
+      - tiroidite
+      - gozzo
+      - sindrome adrenogenitale
+      - diabete mellito insulino-dipendente
+      - diabete insipido
+      - obesità semplice e patologica.
 
-      Argomenti irrinunciabili: anemie; leucemie; linfomi; piastrinopenie; piastrinopatie.
+      **Malattie del metabolismo**
 
-      epato-splenomegalie.
+      **Argomenti irrinunciabili:**
 
-      **GASTROENTEROLOGIA**
+      - rachitismo
 
-      Argomenti irrinunciabili: vomito; reflusso gastroesofageo; gastroenterite; diarrea cronica; malassorbimento (malattia celiaca, fibrosi cistica); malattia infiammatoria cronica (morbo di Crohn, rettocolite ulcerosa).
+      **Ematologia e oncoematologia**
 
-      **PATOLOGIA CROMOSOMICA**
+      **Argomenti irrinunciabili:**
 
-      Argomenti irrinunciabili: sindrome di Klinefelter, Turner, Down.
+      - anemie
+      - leucemie
+      - linfomi
+      - piastrinopenie
+      - piastrinopatie.
+      - epato-splenomegalie.
 
-      IMMUNOLOGIA ed ALLERGOLOGIA
+      **Gastroenterologia**
 
-      Argomenti irrinunciabili: principali condizioni di immunodeficienza congenita ed acquisita; asma bronchiale.
+      **Argomenti irrinunciabili:**
 
-      **REUMATOLOGIA**
+      - vomito
+      - reflusso gastroesofageo
+      - gastroenterite
+      - diarrea cronica
+      - malassorbimento (malattia celiaca, fibrosi cistica)
+      - malattia infiammatoria cronica (morbo di Crohn, rettocolite ulcerosa).
 
-      Argomenti irrinunciabili: reumatismo articolare acuto; collagenopatie (artrite idiopatica giovanile, lupus eritematoso sistemico giovanile, dermatomiosite giovanile, porpora di Schönlein-Henoch, malattia di Kawasaki).
+      **Patologia cromosomica**
 
-      NEFROLOGIA ed UROLOGIA
+      **Argomenti irrinunciabili:**
 
-      Argomenti irrinunciabili: sindrome nefrosica; sindrome nefritica; infezioni delle vie urinarie.
+      - sindrome di Klinefelter, Turner, Down.
 
-      **INFETTIVOLOGIA**
+      **Immunologia ed allergologia**
 
-      Argomenti irrinunciabili: febbre; morbillo; rosolia; megaloeritema infettivo; esantema critico; varicella; scarlattina; mononucleosi infettiva; parotite; pertosse; meningite a liquor torbido e limpido; tubercolosi.
+      **Argomenti irrinunciabili:**
 
-      **VACCINAZIONI**
+      - principali condizioni di immunodeficienza congenita ed acquisita
+      - asma bronchiale.
 
-      Argomenti irrinunciabili: vaccinazioni obbligatorie e facoltative.
+      **Reumatologia**
 
-      **BRONCOPNEUMOLOGIA**
+      **Argomenti irrinunciabili:**
 
-      Argomenti irrinunciabili: faringo-tonsillite acuta; sinusite; otite media; laringiti; bronchite acuta; bronchiolite; polmoniti; pleuriti; tosse.
+      - reumatismo articolare acuto
+      - collagenopatie (artrite idiopatica giovanile, lupus eritematoso sistemico giovanile, dermatomiosite giovanile, porpora di Schönlein-Henoch, malattia di Kawasaki).
 
-      Argomenti opzionali: bronchiectasie; pneumopatie croniche.
+      **Nefrologia ed urologia**
 
-      **CARDIOLOGIA**
+      **Argomenti irrinunciabili:**
 
-      Argomenti irrinunciabili: principali cardiopatie congenite.
+      - sindrome nefrosica
+      - sindrome nefritica
+      - infezioni delle vie urinarie.
+
+      **Infettivologia**
+
+      **Argomenti irrinunciabili:**
+
+      - febbre
+      - morbillo
+      - rosolia
+      - megaloeritema infettivo
+      - esantema critico
+      - varicella
+      - scarlattina
+      - mononucleosi infettiva
+      - parotite
+      - pertosse
+      - meningite a liquor torbido e limpido
+      - tubercolosi.
+
+      **Vaccinazioni**
+
+      **Argomenti irrinunciabili:**
+
+      - vaccinazioni obbligatorie e facoltative.
+
+      **Broncopneumologia**
+
+      **Argomenti irrinunciabili:**
+
+      - faringo-tonsillite acuta
+      - sinusite
+      - otite media
+      - laringiti
+      - bronchite acuta
+      - bronchiolite
+      - polmoniti
+      - pleuriti
+      - tosse.
+
+      **Argomenti opzionali:**
+
+      - bronchiectasie
+      - pneumopatie croniche.
+
+      **Cardiologia**
+
+      **Argomenti irrinunciabili:**
+
+      - principali cardiopatie congenite.
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11272/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -130,37 +219,68 @@ moduli:
     exam_type: Orale
     exam_details: L’esame è tenuto dal Prof. Bertozzi. Vengono generalmente interrogati tre studenti insieme.
     program: |-
-      **CHIRURGIA PEDIATRICA**
+      **Chirurgia pediatrica**
 
-      Argomenti irrinunciabili: atresia dell'esofago; ernia diaframmatica congenita; occlusioni intestinali nel neonato; stenosi ipertrofica infantile del piloro; ernia inguinale; emorragie gastrointestinali; fimosi; criptorchidismo; addome acuto; masse addominali; idronefrosi; appendicite acuta.
+      **Argomenti irrinunciabili:**
 
-      Argomenti opzionali: onfalocele; gastroschisi; atresia vie biliari; varicocele; neuroblastoma; nefroblastoma (tumore di Wilms); epatoblastoma; reflusso vescicoureterale; ipospadia.
+      - atresia dell'esofago
+      - ernia diaframmatica congenita
+      - occlusioni intestinali nel neonato
+      - stenosi ipertrofica infantile del piloro
+      - ernia inguinale
+      - emorragie gastrointestinali
+      - fimosi
+      - criptorchidismo
+      - addome acuto
+      - masse addominali
+      - idronefrosi
+      - appendicite acuta
 
-      1. ADDOME ACUTO NEL BAMBINO IN CHIRURGIA PEDIATRICA
+      **Argomenti opzionali:**
 
-      Invaginazione intestinale, Appendicite acuta, diverticolo di Meckel e
+      - onfalocele
+      - gastroschisi
+      - atresia vie biliari
+      - varicocele
+      - neuroblastoma
+      - nefroblastoma (tumore di Wilms)
+      - epatoblastoma
+      - reflusso vescicoureterale
+      - ipospadia
 
-      complicanze, volvolo, torsione ovarica, torsione tubarica, empiema
+      1. **Addome acuto nel bambino in chirurgia pediatrica**
 
-      pleurico.
+      - Invaginazione intestinale
+      - Appendicite acuta
+      - diverticolo di Meckel e complicanze
+      - volvolo
+      - torsione ovarica
+      - torsione tubarica
+      - empiema pleurico
 
-      2. SCROTO ACUTO
+      2. **Scroto acuto**
 
-      Torsione del testicolo, torsione delle idatidi, torsione dell’epididimo,
+      - Torsione del testicolo
+      - torsione delle idatidi
+      - torsione dell’epididimo
+      - traumi del testicolo
+      - epididimite e orchiepididimite
 
-      traumi del testicolo, epididimite e orchiepididimite
+      2. **Malformazioni congenite**
 
-      2. MALFORMAZIONI CONGENITE
+      - Ernia diaframmatica congenita
+      - atresie del tubo digerente, dall'esofago al retto
+      - Hirschsprung
+      - Malrotazione intestinale
 
-      Ernia diaframmatica congenita; atresie del tubo digerente, dall'esofago al
+      4. **Routine in chirurgia pediatrica**
 
-      retto; Hirschsprung; Malrotazione intestinale
-
-      4. ROUTINE IN CHIRURGIA PEDIATRICA
-
-      Stenosi ipertrofica infantile del piloro, ernia inguinale congenita, idrocele,
-
-      criptorchidismo, varicocele, fimosi e parafimosi
+      - Stenosi ipertrofica infantile del piloro
+      - ernia inguinale congenita
+      - idrocele
+      - criptorchidismo
+      - varicocele
+      - fimosi e parafimosi
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11272/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
@@ -193,13 +313,41 @@ moduli:
     exam_type: Orale
     exam_details: La NPI può risultare la parte più impegnativa dei tre moduli. I docenti possono essere particolarmente puntigliosi e richiedere un linguaggio preciso e specifico. È quindi importante utilizzare una terminologia corretta, evitando descrizioni vaghe o generiche, soprattutto nell’esposizione degli aspetti clinici e neurologici.
     program: |-
-      **NEUROPSICHIATRIA INFANTILE**
+      **Neuropsichiatria infantile**
 
-      Argomenti irrinunciabili - Sviluppo neuropsichico; Nascita della vita psichica. Lo sviluppo della relazione d'oggetto; Fattori protettivi e fattori di rischio per la relazione; Nozioni di epidemiologia nel campo della neuropsichiatria infantile. Approccio al bambino malato e alla sua famiglia; Esame neurologico del neonato, del lattante e del bambino; Valutazione psichiatrica; Normalità e patologia.
+      **Argomenti irrinunciabili**
 
-      I principali quadri della psicopatologia infantile; Disturbi pervasivi dello sviluppo (Disturbi autistici e dello spettro autistico); Disturbo da deficit di attenzione e iperattività; Nevrosi; Psicosi; Depressione nel bambino e nell'adolescente. Disturbi psicosomatici; Anoressia mentale dell'adolescente e Disturbi del comportamento alimentare; Disturbi di personalità; Psicopatologia dell'adolescente.
+      - Sviluppo neuropsichico
+      - Nascita della vita psichica
+      - Lo sviluppo della relazione d'oggetto
+      - Fattori protettivi e fattori di rischio per la relazione
+      - Nozioni di epidemiologia nel campo della neuropsichiatria infantile
+      - Approccio al bambino malato e alla sua famiglia
+      - Esame neurologico del neonato, del lattante e del bambino
+      - Valutazione psichiatrica
+      - Normalità e patologia
 
-      I principali quadri della neurologia infantile: Paralisi cerebrali infantili; Malformazioni del Sistema Nervoso Centrale e Idrocefalo; Epilessia dell'infanzia e dell'adolescenza e patologia convulsiva; Patologie del sistema extrapiramidale, Malattie neuromuscolari (amiotrofie spinali primitive, Distrofie muscolari, neuropatie periferiche, patologie della giunzione neuromuscolari). Disturbi dell'apprendimento e del linguaggio. Ritardo mentale. Emicrania e cefalee precoci idiopatiche.
+      **I principali quadri della psicopatologia infantile**
+
+      - Disturbi pervasivi dello sviluppo (Disturbi autistici e dello spettro autistico)
+      - Disturbo da deficit di attenzione e iperattività
+      - Nevrosi
+      - Psicosi
+      - Depressione nel bambino e nell'adolescente
+      - Disturbi psicosomatici
+      - Anoressia mentale dell'adolescente e Disturbi del comportamento alimentare
+      - Disturbi di personalità
+      - Psicopatologia dell'adolescente
+
+      **I principali quadri della neurologia infantile**
+
+      - Paralisi cerebrali infantili
+      - Malformazioni del Sistema Nervoso Centrale e Idrocefalo
+      - Epilessia dell'infanzia e dell'adolescenza e patologia convulsiva
+      - Patologie del sistema extrapiramidale, Malattie neuromuscolari (amiotrofie spinali primitive, Distrofie muscolari, neuropatie periferiche, patologie della giunzione neuromuscolari)
+      - Disturbi dell'apprendimento e del linguaggio
+      - Ritardo mentale
+      - Emicrania e cefalee precoci idiopatiche
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11272/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-

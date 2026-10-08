@@ -11,33 +11,64 @@ moduli:
     frequenza: Obbligatoria
     exam_details: "Prova scritta: 12 domande a risposta aperta."
     program: |-
-      Contenuti del Corso di Patologia generale
+      **Contenuti del Corso di Patologia generale**
 
       **Patologia:**
 
-      Eziologia: agenti di malattia estrinseci e intrinseci al processo morboso; lesione termica; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
+      **Eziologia:**
 
-      Dinamica della lesione cellulare: morte cellulare; necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche.
+      - agenti di malattia estrinseci e intrinseci al processo morboso
+      - lesione termica
+      - radiazioni eccitanti e ionizzanti
+      - agenti di natura chimica
+      - biotrasformazioni.
 
-      Lesioni elementari: degenerazione e malattia degenerativa; degenerazioni intracellulari (vacuolare e rigonfiamento torbido); degenerazioni extracellulari (ialinosi, amiloidosi e degenerazione fibrinoide); pigmentazioni; infiammazione (modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici); processi di guarigione (risoluzione, rigenerazione e riparazione); accrescimenti patologici; anomalie della crescita (ipertrofia, iperplasia, neoplasia); anomalie del differenziamento (metaplasia, displasia, anaplasia); cancerogenesi e mutagenesi; Infiammazione, immunità e tumori.
+      **Dinamica della lesione cellulare:**
 
-      Lesioni complesse: trombo e ateroma.
+      - morte cellulare
+      - necrosi, apoptosi, necroptosi, piroptosi
+      - autofagia
+      - calcificazioni patologiche.
 
-      Eziologia: agenti di malattia estrinseci e intrinseci al processo morboso; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
+      **Lesioni elementari:**
 
-      Dinamica della lesione cellulare. Morte cellulare; necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche.
+      - degenerazione e malattia degenerativa
+      - degenerazioni intracellulari (vacuolare e rigonfiamento torbido)
+      - degenerazioni extracellulari (ialinosi, amiloidosi e degenerazione fibrinoide)
+      - pigmentazioni
+      - infiammazione (modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici)
+      - processi di guarigione (risoluzione, rigenerazione e riparazione)
+      - accrescimenti patologici
+      - anomalie della crescita (ipertrofia, iperplasia, neoplasia)
+      - anomalie del differenziamento (metaplasia, displasia, anaplasia)
+      - cancerogenesi e mutagenesi
+      - infiammazione, immunità e tumori.
 
-      Lesioni elementari. Degenerazione e malattia degenerativa; degenerazioni intracellulari: vacuolare e rigonfiamento torbido; degenerazioni extracellulari: ialinosi, amiloidosi e degenerazione fibrinoide. Pigmentazioni. Infiammazione: modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici. Processi di guarigione (rigenerazione e riparazione). Accrescimenti patologici. Anomalie della crescita: ipertrofia, iperplasia, neoplasia. Anomalie del differenziamento: metaplasia, displasia, anaplasia. Cancerogenesi e mutagenesi. Infiammazione, immunità e tumori.
+      **Lesioni complesse:**
 
-      Lesioni complesse: trombo e ateroma.
+      trombo e ateroma.
 
-      Eziologia: agenti di malattia estrinseci e intrinseci al processo morboso; radiazioni eccitanti e ionizzanti; agenti di natura chimica; biotrasformazioni.
+      **Dinamica della lesione cellulare.**
 
-      Dinamica della lesione cellulare. Morte cellulare; necrosi, apoptosi, necroptosi, piroptosi; autofagia; calcificazioni patologiche.
+      - morte cellulare
+      - necrosi, apoptosi, necroptosi, piroptosi
+      - autofagia
+      - calcificazioni patologiche.
 
-      Lesioni elementari. Degenerazione e malattia degenerativa; degenerazioni intracellulari: vacuolare e rigonfiamento torbido; degenerazioni extracellulari: ialinosi, amiloidosi e degenerazione fibrinoide. Pigmentazioni. Infiammazione: modelli sperimentali, infiammazione acuta, infiammazione cronica, mediatori chimici cellulari e plasmatici, aspetti sistemici. Processi di guarigione (rigenerazione e riparazione). Accrescimenti patologici. Anomalie della crescita: ipertrofia, iperplasia, neoplasia. Anomalie del differenziamento: metaplasia, displasia, anaplasia. Cancerogenesi e mutagenesi. Infiammazione, immunità e tumori.
+      **Lesioni complesse:**
 
-      Lesioni complesse: trombo e ateroma
+      trombo e ateroma.
+
+      **Dinamica della lesione cellulare.**
+
+      - morte cellulare
+      - necrosi, apoptosi, necroptosi, piroptosi
+      - autofagia
+      - calcificazioni patologiche.
+
+      **Lesioni complesse:**
+
+      trombo e ateroma
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: |-
@@ -99,13 +130,14 @@ moduli:
     frequenza: Obbligatoria
     exam_details: "Prova scritta: una domanda e un esercizio. L'esercizio consiste generalmente nell'interpretazione di pH, PaCO₂, HCO₃⁻ per identificare una condizione di acidosi o alcalosi, respiratoria o metabolica, eventualmente compensata. Talvolta l'esercizio può essere di un'altra tipologia oppure essere sostituito da una domanda."
     program: |-
-      Fisiopatologia generale
+      **Argomenti: Fisiopatologia generale**
 
-      Omeostasi, insufficienza funzionale. Alterazioni delle seguenti omeostasi: psico-neuro-endocrino-immunologica, ossigenazione, acqua e sodio, acido-base e ione potassio.
+      Omeostasi, insufficienza funzionale. Alterazioni delle seguenti omeostasi:
 
-      Argomenti: Fisiopatologia generale
-
-      Omeostasi, insufficienza funzionale. Alterazioni delle seguenti omeostasi: psico-neuro-endocrino-immunologica, ossigenazione, acqua e sodio, acido-base e ione potassio.
+      - psico-neuro-endocrino-immunologica
+      - ossigenazione
+      - acqua e sodio
+      - acido-base e ione potassio.
 
       Il modulo di Fisiopatologia Generale del corso Golgi è stato insegnato per più di un decennio dal Prof. Vanio Vannini. Questo corso è in gran parte costruito sul materiale didattico che ha raccolto durante la sua carriera e mira prima di tutto a mantenere la sua visione della materia.
 
@@ -166,7 +198,10 @@ moduli:
     durata_orale_min: 10
     exam_details: "Prova orale: discussione di un preparato istopatologico, durata massima 10 minuti. Durante l'esame è consigliabile: iniziare l'osservazione a bassi ingrandimenti; passare progressivamente agli ingrandimenti maggiori; identificare le strutture fisiologiche; riconoscere le lesioni elementari; analizzare le diverse strutture e gli eventuali infiltrati; successivamente concentrarsi sull'area specifica indicata dalla docente. È più importante saper descrivere accuratamente ciò che si osserva rispetto a formulare rapidamente una diagnosi della lesione."
     program: |-
-      Il corso di Patologia generale include 2 laboratori: il primo di Istopatologia prevede un addestramento all'osservazione morfologica di preparati al microscopio; il secondo di Patologia sperimentale include alcuni test sperimentali per la valutazione della tossicità o mutagenicità di sostanze chimiche.
+      Il corso di Patologia generale include 2 laboratori:
+
+      - il primo di Istopatologia prevede un addestramento all'osservazione morfologica di preparati al microscopio;
+      - il secondo di Patologia sperimentale include alcuni test sperimentali per la valutazione della tossicità o mutagenicità di sostanze chimiche.
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2024/10045/insegnamenti/2026/10675/2024/9999?coorte=2024&schemaid=17804).*
     material_tips: |-
@@ -189,4 +224,4 @@ moduli:
         email: ornella.cazzalini@unipv.it
 aggiornato_da: Luiza Leshi
 semestre: I
-ultimo_aggiornamento: 2026-10-07
+ultimo_aggiornamento: 2026-10-08

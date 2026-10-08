@@ -11,21 +11,52 @@ moduli:
     study_time: 1 mese e mezzo
     preappello: Sì
     durata_orale_min: 20
-    exam_details: L’esame è costituito da un unico orale, della durata indicativa di circa 20 minuti. Gli studenti vengono chiamati in ordine alfabetico, ma prima dell’inizio dell’orale la segretaria divide l’elenco tra i cinque professori. Generalmente vengono poste 3 domande, che procedono dal generale al particolare.
+    exam_details: L’esame è costituito da un unico orale, della durata indicativa di circa 20 minuti. Gli studenti vengono chiamati in ordine alfabetico, ma prima dell’inizio dell’orale la segretaria divide l’elenco tra i cinque professori. Generalmente vengono poste 3 domande, che procedono dal generale al particolare. Frequenza obbligatoria e controllata.
     program: |-
-      Le basi della neurologia
+      **Le basi della neurologia**
 
-      Controllo motorio: Organizzazione del sistema motorio - Semeiotica della motricità - paralisi periferica e paralisi centrale
+      **Controllo motorio:**
 
-      Sensibilità: Anatomo-fisiologia della sensibilità - I disturbi della sensibilità
+      - Organizzazione del sistema motorio
+      - Semeiotica della motricità
+      - paralisi periferica e paralisi centrale
 
-      Le grandi sindromi: Sindrome piramidale - Sindromi extrapiramidali - Sindrome cerebellare - Sindromi corticali
+      **Sensibilità:**
 
-      Le funzioni superiori: La vigilanza e i suoi disturbi (confusione mentale) - Linguaggio ed afasie - Aprassie - Agnosie - Disturbi della memoria
+      - Anatomo-fisiologia della sensibilità
+      - I disturbi della sensibilità
 
-      I comi: Fisiopatologia del coma - Esame generale e neurologico del malato comatoso - Scale di valutazione ed esami strumentali - Cause di coma - Prognosi - Morte cerebrale
+      **Le grandi sindromi:**
 
-      Semeiologia dei nervi cranici: Nervo ottico e vie visive - Disturbi della oculomozione - Nervo trigemino - Nervo facciale - Altri nervi cranici (cenni)
+      - Sindrome piramidale
+      - Sindromi extrapiramidali
+      - Sindrome cerebellare
+      - Sindromi corticali
+
+      **Le funzioni superiori:**
+
+      - La vigilanza e i suoi disturbi (confusione mentale)
+      - Linguaggio ed afasie
+      - Aprassie
+      - Agnosie
+      - Disturbi della memoria
+
+      **I comi:**
+
+      - Fisiopatologia del coma
+      - Esame generale e neurologico del malato comatoso
+      - Scale di valutazione ed esami strumentali
+      - Cause di coma
+      - Prognosi
+      - Morte cerebrale
+
+      **Semeiologia dei nervi cranici:**
+
+      - Nervo ottico e vie visive
+      - Disturbi della oculomozione
+      - Nervo trigemino
+      - Nervo facciale
+      - Altri nervi cranici (cenni)
 
       **Diagnostica strumentale:**
 
@@ -33,210 +64,209 @@ moduli:
       - EEG, EMG, potenziali evocati, ECO-doppler
       - rachicentesi ed esame del liquor
 
-      Neurologia funzionale
+      **Neurologia funzionale**
+
+      **Crisi epilettiche ed epilessie:**
+
+      - Definizioni
+      - Incidenza e prevalenza
+      - Classificazione clinico-EEG delle crisi epilettiche
+      - Classificazione delle epilessie: i più importanti quadri sindromici
+      - Eziologia e fisiopatogenesi delle crisi epilettiche
+      - Iter diagnostico
+      - Diagnosi differenziale
+      - Prognosi
+      - Terapia
+      - problemi psico-sociali e medico-legali
+
+      **Il sonno:**
+
+      - Il sonno fisiologico
+      - Metodiche di studio
+      - La classificazione internazionale dei disturbi del sonno
+      - Le insonnie
+      - Le ipersonnie diurne
+
+      **Cefalee e algie della faccia:**
+
+      - Generalità: approccio al paziente con cefalea
+      - Classificazione e diagnosi differenziale delle cefalee
+      - Le sindromi cefalalgiche e il loro trattamento: emicrania con e senza aura
+      - cefalea di tipo tensivo
+      - Cefalea a grappolo
+      - Nevralgia trigeminale
+      - Forme particolari di cefalea: cefalea post-traumatica
+      - Cefalea da sforzo e cefalee "pericolose"
+      - Diagnostica strumentale e terapia: Indagini strumentali
+      - Terapia farmacologica
+
+      **Malattie neurodegenerative**
+
+      **Demenze:**
+
+      - La sindrome demenziale
+      - Classificazione delle demenze
+      - Demenze primarie o degenerative primarie: alterazioni istopatologiche, alterazioni biochimiche, eziopatogenesi, quadro clinico e diagnostica avanzata (marcatori biologici)
+      - Demenze multinfartuali: eziopatogenesi, quadro clinico
+      - Pseudodemenze: a genesi psichica o biologica
+      - Demenze sottocorticali
+      - Demenze trasmissibili (Jacob-Creutzfeldt)
+      - Terapia delle demenze
+
+      **Malattie extrapiramidali:**
+
+      - Parkinson idiopatico: alterazioni dei neurotrasmettitori; eziopatogenesi; segni clinici (motori, neurovegetativi, psichici); decorso; trattamenti; sindrome del trattamento a lungo termine con L-dopa
+      - Parkinsonismi atipici (es: paralisi sopranucleare progressiva)
+      - Parkinsonismi secondari (es: jatrogeni, idrocefalo normoteso)
+      - Corea di Huntington; altre coree (cenni)
+      - Malattia di Wilson (cenni)
+      - Semeiotica dei movimenti involontari patologici
+
+      **Sclerosi laterale amiotrofica:**
 
-      Crisi epilettiche ed epilessie: Definizioni - Incidenza e prevalenza - Classificazione clinico-EEG delle crisi epilettiche - Classificazione delle epilessie: i più importanti quadri sindromici – Eziologia e fisiopatogenesi delle crisi epilettiche - Iter diagnostico - Diagnosi differenziale - Prognosi - Terapia - problemi psico-sociali e medico-legali
+      - Neuropatologia e eziopatogenesi
+      - Quadro clinico sintomatologico
+      - Decorso, diagnosi e trattamento
 
-      Il sonno: Il sonno fisiologico - Metodiche di studio - La classificazione internazionale dei disturbi del sonno - Le insonnie - Le ipersonnie diurne
+      **Malattie neurologiche disimmuni**
 
-      Cefalee e algie della faccia: Generalità: approccio al paziente con cefalea - Classificazione e diagnosi differenziale delle cefalee - Le sindromi cefalalgiche e il loro trattamento: emicrania con e senza aura - cefalea di tipo tensivo - Cefalea a grappolo - Nevralgia trigeminale - Forme particolari di cefalea: cefalea post-traumatica - Cefalea da sforzo e cefalee "pericolose" - Diagnostica strumentale e terapia: Indagini strumentali - Terapia farmacologica
+      **Sclerosi multipla:**
 
-      Malattie neurodegenerative
+      - Classificazione delle malattie demielinizzanti infiammatorie del SNC
+      - Epidemiologia
+      - Eziologia e patogenesi: suscettibilità genetica, immunologia, virus
+      - Anatomia patologica
+      - Fisiopatologia dei sintomi e dei segni
+      - Sintomi e segni clinici
+      - Forme evolutive, storia naturale e prognosi
+      - Esame del liquor
+      - Diagnostica neuroradiologica e diagnosi differenziale mediante RMN
+      - Neurofisiologia clinica
+      - Criteri per la diagnosi clinica
+      - Protocollo diagnostico clinico-strumentale
+      - Diagnosi differenziale
+      - Terapia della fase acuta
+      - Terapie sintomatiche
+      - Terapie disease-modifying
+      - Neuromielite ottica, leucoencefalopatia progressiva multifocale, Sindrome di Guillain Barré, Neuropatia demielinizzante infiammatoria cronica (CIDP).
 
-      Demenze: La sindrome demenziale - Classificazione delle demenze - Demenze primarie o degenerative primarie: alterazioni istopatologiche, alterazioni biochimiche, eziopatogenesi, quadro clinico e diagnostica avanzata (marcatori biologici) - Demenze multinfartuali: eziopatogenesi, quadro clinico - Pseudodemenze: a genesi psichica o biologica - Demenze sottocorticali - Demenze trasmissibili (Jacob-Creutzfeldt) - Terapia delle demenze
+      **Malattie del sistema nervoso periferico e del muscolo**
 
-      Malattie extrapiramidali: Parkinson idiopatico: alterazioni dei neurotrasmettitori; eziopatogenesi; segni clinici (motori, neurovegetativi, psichici); decorso; trattamenti; sindrome del trattamento a lungo termine con L-dopa - Parkinsonismi atipici (es: paralisi sopranucleare progressiva) - Parkinsonismi secondari (es: jatrogeni, idrocefalo normoteso) - Corea di Huntington; altre coree (cenni) - Malattia di Wilson (cenni) - Semeiotica dei movimenti involontari patologici
+      **Patologia dei nervi periferici:**
 
-      Sclerosi laterale amiotrofica: Neuropatologia e eziopatogenesi - Quadro clinico sintomatologico - Decorso, diagnosi e trattamento
+      - Processi anatomo-patologici: degenerazione walleriana, demielinizzazione segmentaria, degenerazione assonale
+      - Sintomatologia delle neuropatie periferiche e approccio al paziente
+      - Classificazione sindromica delle neuropatie periferiche
+      - Le sindromi compressive
+      - Le neuropatie tossiche e metaboliche (es: alcoolica e diabetica)
+      - Le neuropatie disimmuni
 
-      Malattie neurologiche disimmuni
+      **Miopatie:**
 
-      Sclerosi multipla: Classificazione delle malattie demielinizzanti infiammatorie del SNC - Epidemiologia - Eziologia e patogenesi: suscettibilità genetica, immunologia, virus - Anatomia patologica - Fisiopatologia dei sintomi e dei segni - Sintomi e segni clinici - Forme evolutive, storia naturale e prognosi - Esame del liquor - Diagnostica neuroradiologica e diagnosi differenziale mediante RMN - Neurofisiologia clinica - Criteri per la diagnosi clinica - Protocollo diagnostico clinico-strumentale - Diagnosi differenziale - Terapia della fase acuta - Terapie sintomatiche – Terapie disease-modifying - Neuromielite ottica, leucoencefalopatia progressiva multifocale, Sindrome di Guillain Barré, Neuropatia demielinizzante infiammatoria cronica (CIDP).
+      - Classificazione
+      - Cenni di anatomia patologica
+      - Semeiotica clinica e strumentale
+      - Distrofie muscolari
+      - Miopatie infiammatorie
+      - Distrofia miotonica
+      - Altre miopatie (cenni)
 
-      Malattie del sistema nervoso periferico e del muscolo
+      **Miastenia gravis:**
 
-      Patologia dei nervi periferici: Processi anatomo-patologici: degenerazione walleriana, demielinizzazione segmentaria, degenerazione assonale - Sintomatologia delle neuropatie periferiche e approccio al paziente - Classificazione sindromica delle neuropatie periferiche - Le sindromi compressive - Le neuropatie tossiche e metaboliche (es: alcoolica e diabetica) - Le neuropatie disimmuni
+      - clinica, decorso
+      - alterazioni del timo e altre patologie associate
+      - eziopatogenesi
+      - diagnosi
+      - trattamento
+      - Sindrome miasteniforme di Lambert-Eaton (cenni)
 
-      Miopatie: Classificazione - Cenni di anatomia patologica - Semeiotica clinica e strumentale - Distrofie muscolari - Miopatie infiammatorie - Distrofia miotonica - Altre miopatie (cenni)
+      **Emergenze neurologiche**
 
-      Miastenia gravis: clinica, decorso; alterazioni del timo e altre patologie associate; eziopatogenesi; diagnosi; trattamento - Sindrome miasteniforme di Lambert-Eaton (cenni)
+      **Malattie cerebrovascolari:**
 
-      Emergenze neurologiche
+      - Generalità: epidemiologia
+      - Fattori di rischio dello stroke
+      - Patogenesi: infarto cerebrale aterotrombotico
+      - Embolia cerebrale
+      - Infarto lacunare
+      - Emorragia intraparenchimale
+      - Emorragia subaracnoidea.
 
-      Malattie cerebrovascolari: Generalità: epidemiologia - Fattori di rischio dello stroke - Patogenesi: infarto cerebrale aterotrombotico - Embolia cerebrale - Infarto lacunare - Emorragia intraparenchimale – Emorragia subaracnoidea. Caratteristiche cliniche: sintomatologia e decorso delle malattie cerebrovascolari in rapporto alla sede di lesione - Diagnosi differenziale - Terapia farmacologica e riabilitativa
+      **Caratteristiche cliniche:** sintomatologia e decorso delle malattie cerebrovascolari in rapporto alla sede di lesione
 
-      Coma
+      - Diagnosi differenziale
+      - Terapia farmacologica e riabilitativa
 
-      Infezioni del sistema nervoso centrale: encefaliti, meningiti
+      **Coma**
 
-      Crisi miasteniche
+      **Infezioni del sistema nervoso centrale:** encefaliti, meningiti
 
-      Poliradicoloneuriti acute
+      **Crisi miasteniche**
 
-      Altre patologie neurologiche
+      **Poliradicoloneuriti acute**
 
-      Neuro AIDS: Sindromi neurologiche nel periodo della sieroconversione - Sindromi neurologiche croniche - AIDS dementia complex
+      **Altre patologie neurologiche**
 
-      Complicanze neurologiche dell'alcoolismo: Delirium tremens - Encefalopatia di Wernicke - Sindrome di Korsakoff
+      **Neuro AIDS:**
 
-      Encefalopatie non infettive
+      - Sindromi neurologiche nel periodo della sieroconversione
+      - Sindromi neurologiche croniche
+      - AIDS dementia complex
 
-      Neuriabilitazione (Basi neurofisiologiche e Campi di intervento)
+      **Complicanze neurologiche dell'alcoolismo:**
 
-      Le basi della neurologia
+      - Delirium tremens
+      - Encefalopatia di Wernicke
+      - Sindrome di Korsakoff
 
-      Controllo motorio: Organizzazione del sistema motorio - Semeiotica della
+      **Encefalopatie non infettive**
 
-      motricità - paralisi periferica e paralisi centrale
+      **Neuriabilitazione (Basi neurofisiologiche e Campi di intervento)**
 
-      Sensibilità: Anatomo-fisiologia della sensibilità - I disturbi della sensibilità
+      **Le basi della neurologia**
 
-      Le grandi sindromi: Sindrome piramidale - Sindromi extrapiramidali -
+      **Controllo motorio:**
 
-      Sindrome cerebellare - Sindromi corticali
+      - Organizzazione del sistema motorio
+      - Semeiotica della motricità
+      - paralisi periferica e paralisi centrale
 
-      Le funzioni superiori: La vigilanza e i suoi disturbi (confusione mentale) -
+      **Sensibilità:**
 
-      Linguaggio ed afasie - Aprassie - Agnosie - Disturbi della memoria
+      - Anatomo-fisiologia della sensibilità
+      - I disturbi della sensibilità
 
-      I comi: Fisiopatologia del coma - Esame generale e neurologico del
+      **Le grandi sindromi:**
 
-      malato comatoso - Scale di valutazione ed esami strumentali - Cause di
+      - Sindrome piramidale
+      - Sindromi extrapiramidali
+      - Sindrome cerebellare
+      - Sindromi corticali
 
-      coma - Prognosi - Morte cerebrale
+      **Le funzioni superiori:**
 
-      Semeiotica dei nervi cranici: Nervo ottico e vie visive - Disturbi della
+      - La vigilanza e i suoi disturbi (confusione mentale)
+      - Linguaggio ed afasie
+      - Aprassie
+      - Agnosie
+      - Disturbi della memoria
 
-      oculomozione - Nervo trigemino - Nervo facciale - Altri nervi cranici
+      **I comi:**
 
-      (cenni)
+      - Fisiopatologia del coma
+      - Esame generale e neurologico del malato comatoso
+      - Scale di valutazione ed esami strumentali
+      - Cause di coma
+      - Prognosi
+      - Morte cerebrale
 
-      **Diagnostica strumentale:**
+      **Semeiotica dei nervi cranici:**
 
-      - TC, RMN e angiografia: indicazioni e quadri euroradiologici nelle
-
-      principali patologie neurologiche
-
-      - EEG, EMG, potenziali evocati, ECO-doppler
-      - rachicentesi ed esame del liquor
-
-      Neurologia funzionale
-
-      Crisi epilettiche ed epilessie: Definizioni - Incidenza e prevalenza -
-
-      Classificazione clinico-EEG delle crisi epilettiche - Classificazione delle
-
-      epilessie: i più importanti quadri sindromici – Eziologia e fisiopatogenesi
-
-      delle crisi epilettiche - Iter diagnostico - Diagnosi differenziale - Prognosi -
-
-      Terapia - problemi psico-sociali e medico-legali
-
-      Il sonno: Il sonno fisiologico - Metodiche di studio - La classificazione
-
-      internazionale dei disturbi del sonno - Le insonnie - Le ipersonnie diurne
-
-      Cefalee e algie della faccia: Generalità: approccio al paziente con cefalea
-
-      - Classificazione e diagnosi differenziale delle cefalee - Le sindromi
-
-      cefalalgiche e il loro trattamento: emicrania con e senza aura - cefalea di
-
-      tipo tensivo - Cefalea a grappolo - Nevralgia trigeminale - Forme
-
-      particolari di cefalea: cefalea post-traumatica - Cefalea da sforzo e
-
-      **altre cefalee primarie - Diagnostica strumentale e terapia:**
-
-      Indagini strumentali - Terapia farmacologica
-
-      Malattie del sistema nervoso periferico e del muscolo
-
-      Patologia dei nervi periferici: Processi anatomo-patologici: degenerazione
-
-      walleriana, demielinizzazione segmentaria, degenerazione assonale -
-
-      Sintomatologia delle neuropatie periferiche e approccio al paziente -
-
-      Classificazione sindromica delle neuropatie periferiche - Le sindromi
-
-      compressive - Le neuropatie tossiche e metaboliche (es: alcoolica e
-
-      diabetica) - Le neuropatie disimmuni
-
-      Miopatie: Classificazione - Cenni di anatomia patologica - Semeiotica
-
-      clinica e strumentale - Distrofie muscolari - Miopatie infiammatorie -
-
-      Distrofia miotonica - Altre miopatie (cenni) Miastenia gravis: clinica,
-
-      decorso; alterazioni del timo e altre patologie associate; eziopatogenesi;
-
-      diagnosi; trattamento - Sindrome miasteniforme di Lambert-Eaton (cenni)
-
-      Encefalomielite mialgica (ME)/Sindrome da fatica cronica
-
-      Emergenze neurologiche
-
-      Malattie cerebrovascolari: Generalità: epidemiologia - Fattori di rischio
-
-      dello stroke - Patogenesi: infarto cerebrale aterotrombotico - Embolia
-
-      cerebrale - Infarto lacunare - Emorragia intraparenchimale – Emorragia
-
-      subaracnoidea. Caratteristiche cliniche: sintomatologia e decorso delle
-
-      malattie cerebrovascolari in rapporto alla sede di lesione - Diagnosi
-
-      differenziale - Terapia farmacologica e riabilitativa
-
-      Coma
-
-      Infezioni del sistema nervoso centrale: encefaliti, meningiti
-
-      Crisi miasteniche -Poliradicoloneuriti acute -
-
-      Altre patologie neurologiche
-
-      Neuro AIDS: Sindromi neurologiche nel periodo della sieroconversione -
-
-      Sindromi neurologiche croniche -
-
-      AIDS dementia complex
-
-      Complicanze neurologiche dell'alcoolismo: Delirium tremens -
-
-      Encefalopatia di Wernicke - Sindrome di Korsakoff
-
-      Encefalopatie non infettive
-
-      Neuriabilitazione
-
-      Basi neurofisiologiche
-
-      Campi di intervento
-
-      Le basi della neurologia
-
-      Controllo motorio: Organizzazione del sistema motorio - Semeiotica della
-
-      motricità - paralisi periferica e paralisi centrale
-
-      Sensibilità: Anatomo-fisiologia della sensibilità - I disturbi della sensibilità
-
-      Le grandi sindromi: Sindrome piramidale - Sindromi extrapiramidali -
-
-      Sindrome cerebellare - Sindromi corticali
-
-      Le funzioni superiori: La vigilanza e i suoi disturbi (confusione mentale) -
-
-      Linguaggio ed afasie - Aprassie - Agnosie - Disturbi della memoria
-
-      I comi: Fisiopatologia del coma - Esame generale e neurologico del
-
-      malato comatoso - Scale di valutazione ed esami strumentali - Cause di coma - Prognosi - Morte cerebrale
-
-      Semeiotica dei nervi cranici: Nervo ottico e vie visive - Disturbi della oculomozione - Nervo trigemino - Nervo facciale - Altri nervi cranici (cenni)
+      - Nervo ottico e vie visive
+      - Disturbi della oculomozione
+      - Nervo trigemino
+      - Nervo facciale
+      - Altri nervi cranici (cenni)
 
       **Diagnostica strumentale:**
 
@@ -244,81 +274,271 @@ moduli:
       - EEG, EMG, potenziali evocati, ECO-doppler
       - rachicentesi ed esame del liquor
 
-      Neurologia funzionale
+      **Neurologia funzionale**
 
-      Crisi epilettiche ed epilessie: Definizioni - Incidenza e prevalenza - Classificazione clinico-EEG delle crisi epilettiche - Classificazione delle
+      **Crisi epilettiche ed epilessie:**
 
-      epilessie: i più importanti quadri sindromici – Eziologia e fisiopatogenesi delle crisi epilettiche - Iter diagnostico - Diagnosi differenziale - Prognosi -
+      - Definizioni
+      - Incidenza e prevalenza
+      - Classificazione clinico-EEG delle crisi epilettiche
+      - Classificazione delle epilessie: i più importanti quadri sindromici
+      - Eziologia e fisiopatogenesi delle crisi epilettiche
+      - Iter diagnostico
+      - Diagnosi differenziale
+      - Prognosi
+      - Terapia
+      - problemi psico-sociali e medico-legali
 
-      Terapia - problemi psico-sociali e medico-legali
+      **Il sonno:**
 
-      Il sonno: Il sonno fisiologico - Metodiche di studio - La classificazione internazionale dei disturbi del sonno - Le insonnie - Le ipersonnie diurne
+      - Il sonno fisiologico
+      - Metodiche di studio
+      - La classificazione internazionale dei disturbi del sonno
+      - Le insonnie
+      - Le ipersonnie diurne
 
-      Cefalee e algie della faccia: Generalità: approccio al paziente con cefalea - Classificazione e diagnosi differenziale delle cefalee - Le sindromi cefalalgiche e il loro trattamento: emicrania con e senza aura - cefalea di tipo tensivo - Cefalea a grappolo - Nevralgia trigeminale - Forme particolari di cefalea: cefalea post-traumatica - Cefalea da sforzo e altre cefalee primarie - Diagnostica strumentale e terapia: Indagini
+      **Cefalee e algie della faccia:**
 
-      strumentali - Terapia farmacologica
+      - Generalità: approccio al paziente con cefalea
+      - Classificazione e diagnosi differenziale delle cefalee
+      - Le sindromi cefalalgiche e il loro trattamento: emicrania con e senza aura
+      - cefalea di tipo tensivo
+      - Cefalea a grappolo
+      - Nevralgia trigeminale
+      - Forme particolari di cefalea: cefalea post-traumatica
+      - Cefalea da sforzo e **altre cefalee primarie - Diagnostica strumentale e terapia:**
+      - Indagini strumentali
+      - Terapia farmacologica
 
-      Malattie neurodegenerative
+      **Malattie del sistema nervoso periferico e del muscolo**
 
-      Demenze: La sindrome demenziale - Classificazione delle demenze -
+      **Patologia dei nervi periferici:**
 
-      Demenze primarie o degenerative primarie: alterazioni istopatologiche, alterazioni biochimiche, eziopatogenesi, quadro clinico e diagnostica
+      - Processi anatomo-patologici: degenerazione walleriana, demielinizzazione segmentaria, degenerazione assonale
+      - Sintomatologia delle neuropatie periferiche e approccio al paziente
+      - Classificazione sindromica delle neuropatie periferiche
+      - Le sindromi compressive
+      - Le neuropatie tossiche e metaboliche (es: alcoolica e diabetica)
+      - Le neuropatie disimmuni
 
-      avanzata (marcatori biologici) - Demenze multinfartuali: eziopatogenesi, quadro clinico - Pseudodemenze: a genesi psichica o biologica - Demenze
+      **Miopatie:**
 
-      sottocorticali - Demenze trasmissibili (Jacob-Creutzfeldt) - Terapia delle demenze
+      - Classificazione
+      - Cenni di anatomia patologica
+      - Semeiotica clinica e strumentale
+      - Distrofie muscolari
+      - Miopatie infiammatorie
+      - Distrofia miotonica
+      - Altre miopatie (cenni)
 
-      Malattie extrapiramidali: Parkinson idiopatico: alterazioni dei
+      **Miastenia gravis:**
 
-      neurotrasmettitori; eziopatogenesi; segni clinici (motori, neurovegetativi,
+      - clinica, decorso
+      - alterazioni del timo e altre patologie associate
+      - eziopatogenesi
+      - diagnosi
+      - trattamento
+      - Sindrome miasteniforme di Lambert-Eaton (cenni)
 
-      psichici); decorso; trattamenti; sindrome del trattamento a lungo termine con L-dopa - Parkinsonismi atipici (es: paralisi sopranucleare progressiva) - Parkinsonismi secondari (es: jatrogeni, idrocefalo normoteso) - Corea di
+      **Encefalomielite mialgica (ME)/Sindrome da fatica cronica**
 
-      Huntington; altre coree (cenni) - Malattia di Wilson (cenni) - Semeiotica dei movimenti involontari patologici
+      **Emergenze neurologiche**
 
-      Sclerosi laterale amiotrofica: Neuropatologia e eziopatogenesi - Quadro clinico sintomatologico - Decorso, diagnosi e trattamento
+      **Malattie cerebrovascolari:**
 
-      Malattie neurologiche disimmuni
+      - Generalità: epidemiologia
+      - Fattori di rischio dello stroke
+      - Patogenesi: infarto cerebrale aterotrombotico
+      - Embolia cerebrale
+      - Infarto lacunare
+      - Emorragia intraparenchimale
+      - Emorragia subaracnoidea.
 
-      Sclerosi multipla: Classificazione delle malattie demielinizzanti
+      **Caratteristiche cliniche:**
 
-      infiammatorie del SNC - Epidemiologia - Eziologia e patogenesi: suscettibilità genetica, immunologia, virus - Anatomia patologica - Fisiopatologia dei sintomi e dei segni - Sintomi e segni clinici - Forme
+      - sintomatologia e decorso delle malattie cerebrovascolari in rapporto alla sede di lesione
+      - Diagnosi
 
-      evolutive, storia naturale e prognosi - Esame del liquor - Diagnostica neuroradiologica e diagnosi differenziale mediante RMN - Neurofisiologia
+      - Differenziale
+      - Terapia farmacologica e riabilitativa
 
-      clinica - Criteri per la diagnosi clinica - Protocollo diagnostico clinicostrumentale - Diagnosi differenziale - Terapia della fase acuta - Terapie sintomatiche – Terapie disease-modifying - Neuromielite ottica,
+      **Coma**
 
-      leucoencefalopatia progressiva multifocale, Sindrome di Guillain Barré, Neuropatia demielinizzante infiammatoria cronica (CIDP).
+      **Infezioni del sistema nervoso centrale: encefaliti, meningiti**
 
-      Emergenze neurologiche
+      - Crisi miasteniche
+      - Poliradicoloneuriti acute
+      - Altre patologie neurologiche
 
-      Malattie cerebrovascolari: Generalità: epidemiologia - Fattori di rischio dello stroke - Patogenesi: infarto cerebrale aterotrombotico - Embolia cerebrale - Infarto lacunare - Emorragia intraparenchimale – Emorragia subaracnoidea. Caratteristiche cliniche: sintomatologia e decorso delle malattie cerebrovascolari in rapporto alla sede di lesione - Diagnosi differenziale - Terapia farmacologica e riabilitativa
+      **Neuro AIDS:**
 
-      Coma
+      - Sindromi neurologiche nel periodo della sieroconversione
+      - Sindromi neurologiche croniche
+      - AIDS dementia complex
 
-      Infezioni del sistema nervoso centrale: encefaliti, meningiti
+      **Complicanze neurologiche dell'alcoolismo:**
 
-      Crisi miasteniche -Poliradicoloneuriti acute -
+      - Delirium tremens
+      - Encefalopatia di Wernicke
+      - Sindrome di Korsakoff
 
-      Altre patologie neurologiche
+      **Encefalopatie non infettive**
 
-      Neuro AIDS: Sindromi neurologiche nel periodo della sieroconversione -
+      **Neuriabilitazione**
 
-      Sindromi neurologiche croniche -
+      **Basi neurofisiologiche**
 
-      AIDS dementia complex
+      **Campi di intervento**
 
-      Complicanze neurologiche dell'alcoolismo: Delirium tremens -
+      **Le basi della neurologia**
 
-      Encefalopatia di Wernicke - Sindrome di Korsakoff
+      **Controllo motorio:**
 
-      Encefalopatie non infettive
+      - Organizzazione del sistema motorio
+      - Semeiotica della motricità
+      - Paralisi periferica e paralisi centrale
+
+      **Sensibilità:**
+
+      - Anatomo-fisiologia della sensibilità
+      - I disturbi della sensibilità
+
+      **Le grandi sindromi:**
+
+      - Sindrome piramidale
+      - Sindromi extrapiramidali
+      - Sindrome cerebellare
+      - Sindromi corticali
+
+      **Le funzioni superiori:**
+
+      - La vigilanza e i suoi disturbi (confusione mentale)
+      - Linguaggio ed afasie
+      - Aprassie
+      - Agnosie
+      - Disturbi della memoria
+
+      **I comi:**
+
+      - Fisiopatologia del coma
+      - Esame generale e neurologico del malato comatoso
+      - Scale di valutazione ed esami strumentali
+      - Cause di coma
+      - Prognosi
+      - Morte cerebrale
+
+      **Diagnostica strumentale:**
+
+      **Neurologia funzionale**
+
+      **Crisi epilettiche ed epilessie:**
+
+      - Definizioni
+      - Incidenza e prevalenza
+      - Classificazione clinico-EEG delle crisi epilettiche
+      - Classificazione delle epilessie: i più importanti quadri sindromici
+      - Eziologia e fisiopatogenesi delle crisi epilettiche
+      - Iter diagnostico
+      - Diagnosi differenziale
+      - Prognosi
+      - Terapia
+      - Problemi psico-sociali e medico-legali
+
+      - Strumentali
+      - Terapia farmacologica
+
+      **Malattie neurodegenerative**
+
+      **Demenze:**
+
+      - La sindrome demenziale
+      - Classificazione delle demenze
+      - Demenze primarie o degenerative primarie: alterazioni istopatologiche, alterazioni biochimiche, eziopatogenesi, quadro clinico e diagnostica avanzata (marcatori biologici)
+      - Demenze multinfartuali: eziopatogenesi, quadro clinico
+      - Pseudodemenze: a genesi psichica o biologica
+      - Demenze sottocorticali
+      - Demenze trasmissibili (Jacob-Creutzfeldt)
+      - Terapia delle demenze
+
+      **Malattie extrapiramidali:**
+
+      **Parkinson idiopatico:**
+
+      - Alterazioni dei neurotrasmettitori
+      - Eziopatogenesi
+      - Segni clinici (motori, neurovegetativi, psichici)
+      - Decorso
+      - Trattamenti
+      - Sindrome del trattamento a lungo termine con L-dopa
+
+      - Parkinsonismi atipici (es: paralisi sopranucleare progressiva)
+      - Parkinsonismi secondari (es: jatrogeni, idrocefalo normoteso)
+      - Corea di Huntington
+      - Altre coree (cenni)
+      - Malattia di Wilson (cenni)
+      - Semeiotica dei movimenti involontari patologici
+
+      **Sclerosi laterale amiotrofica:**
+
+      - Neuropatologia e eziopatogenesi
+      - Quadro clinico sintomatologico
+      - Decorso, diagnosi e trattamento
+
+      **Malattie neurologiche disimmuni**
+
+      **Sclerosi multipla:**
+
+      Classificazione delle malattie demielinizzanti
+
+      **Infiammatorie del SNC**
+
+      - Epidemiologia
+      - Eziologia e patogenesi: suscettibilità genetica, immunologia, virus
+      - Anatomia patologica
+      - Fisiopatologia dei sintomi e dei segni
+      - Sintomi e segni clinici
+      - Forme evolutive, storia naturale e prognosi
+      - Esame del liquor
+      - Diagnostica neuroradiologica e diagnosi differenziale mediante RMN
+      - Neurofisiologia clinica
+      - Criteri per la diagnosi clinica
+      - Protocollo diagnostico clinicostrumentale
+      - Diagnosi differenziale
+      - Terapia della fase acuta
+      - Terapie sintomatiche
+      - Terapie disease-modifying
+      - Neuromielite ottica, leucoencefalopatia progressiva multifocale, Sindrome di Guillain Barré, Neuropatia demielinizzante infiammatoria cronica (CIDP).
+
+      **Emergenze neurologiche**
+
+      **Coma**
+
+      **Infezioni del sistema nervoso centrale: encefaliti, meningiti**
+
+      - Crisi miasteniche
+      - Poliradicoloneuriti acute
+
+      **Altre patologie neurologiche**
+
+      **Neuro AIDS:**
+
+      - Sindromi neurologiche nel periodo della sieroconversione
+      - Sindromi neurologiche croniche
+      - AIDS dementia complex
+
+      **Complicanze neurologiche dell'alcoolismo:**
+
+      - Delirium tremens
+      - Encefalopatia di Wernicke
+      - Sindrome di Korsakoff
+
+      **Encefalopatie non infettive**
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11236/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: |-
       **Sul programma**
 
-      Il programma del syllabus viene richiesto nella sua interezza, con poca distinzione tra argomenti spiegati a lezione e argomenti non trattati. Fanno eccezione soprattutto: Altre patologie neurologiche; Neuroriabilitazione, che secondo la testimonianza viene chiesta molto raramente e che la stessa Tassorelli dichiara di non chiedere. Non bisogna invece sottovalutare le atassie.
+      Il programma del syllabus viene richiesto nella sua interezza, con poca distinzione tra argomenti spiegati a lezione e argomenti non trattati. Fanno eccezione soprattutto: Neuroriabilitazione, che viene chiesta molto raramente e che la stessa Tassorelli dichiara di non chiedere. Non bisogna invece sottovalutare le atassie.
 
       La base di studio sono le sbobine 2022/2023, da integrare con il Bergamini. È consigliato controllare le sbobine dell’anno corrente per eventuali nuove linee guida o trattamenti più recenti. Dal Bergamini sono indicati: Capitolo 1 – fisiopatologia della mobilità (consigliato, non obbligatorio); Capitolo 2 – fisiopatologia della sensibilità (consigliato, non obbligatorio); Capitolo 4 – solo afasia, aprassia e agnosia; Capitolo 5 – sindromi del tronco encefalico; Capitolo 6 – sindromi dei nervi cranici; Capitolo 14 – solo parte sulla nevralgia trigeminale; Capitolo 16; Capitolo 19 – solo sclerosi multipla; Capitolo 29. Consigli: ripassare neuroanatomia e neurofisiologia prima di affrontare la clinica; utilizzare le domande degli anni precedenti, soprattutto per capire le preferenze dei singoli docenti. Per Neurologia le tempistiche dipendono anche da quanto siano fresche le conoscenze di neuroanatomia e neurofisiologia.
     body: |-
@@ -333,10 +553,11 @@ moduli:
       - nome: Cristina Tassorelli
         email: cristina.tassorelli@unipv.it
         stile: "Titolare del corso. Pone 3 domande: la prima a scelta; la seconda su una malattia cerebrovascolare (ictus, emorragie), con studio obbligatorio dal libro; l’ultima orientata alla lode. Argomenti citati: locked-in syndrome, sindrome di Bernard-Horner. Apprezza riferimenti alla semeiotica neurologica e sicurezza nell’esposizione. Tende a interrogare gli ultimi dell’elenco."
-      - nome: Costa
-        stile: È descritto come molto puntiglioso. Non propone una domanda a scelta. Spazia su tutto il programma e richiede precisione. Lavora nell’ambito delle demenze, che devono quindi essere conosciute molto bene. La sclerosi multipla va studiata in maniera approfondita dal libro. È fondamentale consultare le domande degli anni precedenti.
+      - nome: Alfredo Costa
+        email: alfredo.costa@unipv.it
+        stile: Molto puntiglioso. Non propone una domanda a scelta. Spazia su tutto il programma e richiede precisione. Lavora nell’ambito delle demenze, che devono quindi essere conosciute molto bene. La sclerosi multipla va studiata in maniera approfondita dal libro. È fondamentale consultare le domande degli anni precedenti.
       - nome: Michele Terzaghi
-        stile: È descritto come molto disponibile e capace di mettere lo studente a proprio agio. Parte da una domanda a scelta. La seconda domanda è generalmente basata sull’argomento della prima. Spesso le due domande riguardano lo stesso argomento o argomenti correlati.
+        stile: Molto disponibile e capace di mettere lo studente a proprio agio. Parte da una domanda a scelta. La seconda domanda è generalmente basata sull’argomento della prima. Spesso le due domande riguardano lo stesso argomento o argomenti correlati.
         email: michele.terzaghi@unipv.it
       - nome: Giuseppe Cosentino
         stile: È tranquillo e lascia ragionare. Gli argomenti più frequenti sono quelli da lui spiegati, in particolare miopatie, EMG ed ENG. Può porre anche domande secche. Spazia in misura più limitata sul resto del programma, per cui è particolarmente utile guardare le domande degli anni precedenti.
@@ -350,45 +571,96 @@ moduli:
     cfu: 1
     exam_type: Orale
     study_time: 1 settimana
-    exam_details: L’esame è orale e interroga esclusivamente il professor Magrassi. Viene posta una sola domanda. I voti sono generalmente alti, anche se nella testimonianza viene riferito che possono risultare poco prevedibili. È consigliato sostenere Neurochirurgia insieme o dopo Neurologia, perché diversi argomenti si sovrappongono e Magrassi può talvolta spostarsi sulla parte neurologica, sempre in relazione alla domanda di Neurochirurgia.
+    exam_details: L’esame è orale e interroga esclusivamente il professor Magrassi. Viene posta una sola domanda. I voti sono generalmente alti, anche se possono risultare poco prevedibili. È consigliato sostenere Neurochirurgia insieme o dopo Neurologia, perché diversi argomenti si sovrappongono e Magrassi può talvolta spostarsi sulla parte neurologica, sempre in relazione alla domanda di Neurochirurgia.
     program: |-
-      Fisiopatologia e clinica della sindrome d'ipertensione endocranica: metodi per la misurazione diretta ed indiretta della pressione endocranica, trattamenti farmacologici e neurochirurgici.
+      **Fisiopatologia e clinica della sindrome d'ipertensione endocranica:**
 
-      Traumi cranio-cerebrali: Generalità - Fratture craniche - Ematoma extradurale - Ematoma sottodurale acuto e subacuto - Ematoma sottodurale cronico - Contusioni e lacerazioni post-traumatiche - Liquorree post-traumatiche - Pneumoencefalo post-traumatico - lesioni vascolari post-traumatiche - Indicazioni neurochirurgiche -
+      metodi per la misurazione diretta ed indiretta della pressione endocranica, trattamenti farmacologici e neurochirurgici.
 
-      Tumori primitivi e secondari dell'encefalo Gliomi - meningiomi - Neurinoma dell'acustico - Adenomi ipofisari - Tumori della regione sellare - Tumori cerebrali metastasici - Tumori cerebrali dell'infanzia - Tumori sopratentoriali - Indicazioni neurochirurgiche -
+      **Traumi cranio-cerebrali:**
 
-      Idrocefali: circolazione liquorale - Idrocefalo classificazione- Eziologia - Clinica - Diagnosi strumentale - Trattamento - Idrocefalo comunicante normoteso - Quadro clinico - Diagnosi strumentale - Trattamento -
+      - Generalità
+      - Fratture craniche
+      - Ematoma extradurale
+      - Ematoma sottodurale acuto e subacuto
+      - Ematoma sottodurale cronico
+      - Contusioni e lacerazioni post-traumatiche
+      - Liquorree post-traumatiche
+      - Pneumoencefalo post-traumatico
+      - Lesioni vascolari post-traumatiche
+      - Indicazioni neurochirurgiche
 
-      Traumi vertebro-midollari: Fratture vertebrali - Concetto di stabilità/instabilità - Lesioni radicolo-midollari - Indicazioni di trattamento - Sequele
+      **Tumori primitivi e secondari dell'encefalo:**
 
-      Lesioni congenite e degenerative del rachide: Eziopatogenesi - Anatomia e fisiologia - Fisiopatologia - Quadri clinici - Ernie discali - Stenosi lombare - Mielopatia spondilogena - disrafismi - Siringomielia - Diagnosi - Prognosi - Terapia neurochirurgica
+      - Gliomi
+      - Meningiomi
+      - Neurinoma dell'acustico
+      - Adenomi ipofisari
+      - Tumori della regione sellare
+      - Tumori cerebrali metastasici
+      - Tumori cerebrali dell'infanzia
+      - Tumori sopratentoriali
+      - Indicazioni neurochirurgiche
 
-      Tumori spinali e midollari. Clinica - Diagnosi strumentale - Lesioni metastatiche della colonna - Tumori intradurali extramidollari - Tumori intramidollari - Trattamento
+      **Idrocefali:**
 
-      Patologia cerebrovascolare di interesse neurochirurgico: Anatomia e fisiologia del circolo cerebrale - Ematomi intracerebrali spontanei - emorragia subaracnoidea, aneurismi cerebrali, malformazioni artero-venose , Indicazioni al trattamento neurochirurgico delle patologia cerebrovascolare.
+      - Circolazione liquorale
+      - Idrocefalo classificazione
+      - Eziologia
+      - Clinica
+      - Diagnosi strumentale
+      - Trattamento
+      - Idrocefalo comunicante normoteso
+      - Quadro clinico
+      - Diagnosi strumentale
+      - Trattamento
 
-      La nevralgia trigeminale, le sindromi da deafferentazione e il dolore neuropatico: fisiopatologia, diagnosi e trattamenti neurochirurgici.
+      **Traumi vertebro-midollari:**
 
-      Fisiopatologia e clinica della sindrome d'ipertensione endocranica: metodi per la misurazione diretta ed indiretta della pressione endocranica, trattamenti farmacologici e neurochirurgici.
+      - Fratture vertebrali
+      - Concetto di stabilità/instabilità
+      - Lesioni radicolo-midollari
+      - Indicazioni di trattamento
+      - Sequele
 
-      Traumi cranio-cerebrali: Generalità - Fratture craniche - Ematoma extradurale - Ematoma sottodurale acuto e subacuto - Ematoma sottodurale cronico - Contusioni e lacerazioni post-traumatiche - Liquorree post-traumatiche - Pneumoencefalo post-traumatico - lesioni vascolari post-traumatiche - Indicazioni neurochirurgiche -
+      **Lesioni congenite e degenerative del rachide:**
 
-      Tumori primitivi e secondari dell'encefalo Gliomi - meningiomi - Neurinoma dell'acustico - Adenomi ipofisari - Tumori della regione sellare - Tumori cerebrali metastasici - Tumori cerebrali dell'infanzia - Tumori sopratentoriali - Indicazioni neurochirurgiche -
+      - Eziopatogenesi
+      - Anatomia e fisiologia
+      - Fisiopatologia
+      - Quadri clinici
+      - Ernie discali
+      - Stenosi lombare
+      - Mielopatia spondilogena
+      - Disrafismi
+      - Siringomielia
+      - Diagnosi
+      - Prognosi
+      - Terapia neurochirurgica
 
-      Idrocefali: circolazione liquorale - Idrocefalo classificazione- Eziologia - Clinica - Diagnosi strumentale - Trattamento - Idrocefalo comunicante normoteso - Quadro clinico - Diagnosi strumentale - Trattamento -
+      **Tumori spinali e midollari.**
 
-      Traumi vertebro-midollari: Fratture vertebrali - Concetto di stabilità/instabilità - Lesioni radicolo-midollari - Indicazioni di trattamento - Sequele
+      - Clinica
+      - Diagnosi strumentale
+      - Lesioni metastatiche della colonna
+      - Tumori intradurali extramidollari
+      - Tumori intramidollari
+      - Trattamento
 
-      Lesioni congenite e degenerative del rachide: Eziopatogenesi - Anatomia e fisiologia - Fisiopatologia - Quadri clinici - Ernie discali - Stenosi lombare - Mielopatia spondilogena - disrafismi - Siringomielia - Diagnosi - Prognosi - Terapia neurochirurgica
+      **Patologia cerebrovascolare di interesse neurochirurgico:**
 
-      Tumori spinali e midollari. Clinica - Diagnosi strumentale - Lesioni metastatiche della colonna - Tumori intradurali extramidollari - Tumori intramidollari - Trattamento
+      - Anatomia e fisiologia del circolo cerebrale
+      - Ematomi intracerebrali spontanei
+      - Emorragia subaracnoidea, aneurismi cerebrali, malformazioni artero-venose
+      - Indicazioni al trattamento neurochirurgico delle patologia cerebrovascolare.
 
-      Patologia cerebrovascolare di interesse neurochirurgico: Anatomia e fisiologia del circolo cerebrale - Ematomi intracerebrali spontanei - emorragia subaracnoidea, aneurismi cerebrali, malformazioni artero-venose , Indicazioni al trattamento neurochirurgico delle patologia cerebrovascolare.
+      **La nevralgia trigeminale, le sindromi da deafferentazione e il dolore neuropatico:**
 
-      La nevralgia trigeminale, le sindromi da deafferentazione e il dolore neuropatico: fisiopatologia, diagnosi e trattamenti neurochirurgici.
+      fisiopatologia, diagnosi e trattamenti neurochirurgici.
 
-      Patologie d'interesse neurochirurgico del sistema nervoso periferico. Lesioni traumatiche dei nervi periferici e trattamento neurochirurgico, principali patologie compressive dei nervi periferici, la sindrome del tunnel carpale.
+      **Patologie d'interesse neurochirurgico del sistema nervoso periferico.**
+
+      Lesioni traumatiche dei nervi periferici e trattamento neurochirurgico, principali patologie compressive dei nervi periferici, la sindrome del tunnel carpale.
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11236/2017/9999?coorte=2022&schemaid=17810).*
     material_tips: Per Neurochirurgia sono ritenute sufficienti le sbobine dell’anno corrente.

@@ -14,7 +14,26 @@ moduli:
     program: |-
       Definizione di sintomi e segni. Principi basilari del ragionamento clinico. L’anamnesi. L’esame obiettivo generale e sistematico sia in ambito internistico che chirurgico.
 
-      Anamnesi, parametri vitali, tosse, coma, ascite, cianosi, diuresi, febbre, edema, dolore, dispnea, ittero, linfonodi, polso arterioso e venoso, rene, tiroide, torace, addome, semeiotica neurologica di base, semeiotica ecografica
+      - Anamnesi
+      - parametri vitali
+      - tosse
+      - coma
+      - ascite
+      - cianosi
+      - diuresi
+      - febbre
+      - edema
+      - dolore
+      - dispnea
+      - ittero
+      - linfonodi
+      - polso arterioso e venoso
+      - rene
+      - tiroide
+      - torace
+      - addome
+      - semeiotica neurologica di base
+      - semeiotica ecografica
 
       **Contenuti del Corso:**
 
@@ -118,15 +137,6 @@ moduli:
         email: carlomaria.bianchi@unipv.it
         stile: Titolare del corso. Tende a interrompere frequentemente durante l'esame; è consigliabile non interromperlo. Tende a concentrarsi anche su argomenti apparentemente banali. Il voto risente spesso del voto di semeiotica medica.
     fascia_studio: 1–2 sett
-info_da_verificare:
-  - campo: Tempo di studio
-    nota: Da integrare per Semeiotica Strumentale
-  - campo: Frequenza
-    nota: Da integrare per Semeiotica Strumentale
-  - campo: Domande e argomenti ricorrenti
-    nota: Da integrare per Semeiotica Strumentale
-  - campo: Elenco dettagliato delle domande ricorrenti dei singoli professori
-    nota: Da integrare
 aggiornato_da: Lisa Ceci
 semestre: Annuale
 ultimo_aggiornamento: 2026-10-08

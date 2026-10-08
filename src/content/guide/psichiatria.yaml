@@ -17,7 +17,7 @@ moduli:
 
       Il punteggio massimo è quindi di 32 punti.
 
-      **Domande aperte**
+      **Domande aperte**:
       Le due domande aperte valgono complessivamente 10 punti. Possono riguardare:
 
       - argomenti teorici;
@@ -26,31 +26,22 @@ moduli:
 
       È quindi utile esercitarsi sia nell'esposizione teorica sia nell'applicazione dei criteri diagnostici a un caso clinico.
 
-      **Domande vero/falso**
+      **Domande vero/falso**:
       Sono presenti 3 blocchi da 10 affermazioni vero/falso, ciascuno del valore di 4 punti. Ogni blocco è associato a una domanda aperta o a un macrotema. Se si sbagliano 5 risposte, il blocco vale 0 punti. Il punteggio del singolo blocco non può comunque diventare negativo.
 
-      **Valutazione**
+      **Valutazione**:
       Il punteggio massimo è di 32 punti e la lode viene assegnata con un punteggio superiore a 30. In alcuni appelli, qualora la media generale dell'esame sia particolarmente bassa, può essere applicata una sorta di correzione gaussiana, con un possibile incremento di uno o due voti. Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata.
     program: |-
-      1.Storia della psichiatria
-
-      2.Psicopatologia
-
-      3.Terapie psichiatriche
-
-      4.Disturbi psichiatrici organici
-
-      5.Schizofrenia e disturbi psicotici
-
-      6.Disturbi da abuso di sostanze
-
-      7.Disturbi affettivi e d'ansia
-
-      8.Disturbi dello spettro autistico
-
-      9.Etnopsichiatria e disturbi dell'alimentazione
-
-      10.Disturbi di personalità, del sonno e sessuali
+      1. Storia della psichiatria
+      2. Psicopatologia
+      3. Terapie psichiatriche
+      4. Disturbi psichiatrici organici
+      5. Schizofrenia e disturbi psicotici
+      6. Disturbi da abuso di sostanze
+      7. Disturbi affettivi e d'ansia
+      8. Disturbi dello spettro autistico
+      9. Etnopsichiatria e disturbi dell'alimentazione
+      10. Disturbi di personalità, del sonno e sessuali
 
       - Disturbi dello neurosviluppo in età adulta
       - Disturbi di natura organica e loro gestione
@@ -59,26 +50,16 @@ moduli:
       - Disturbi sessuali
       - Disturbi di personalità
 
-      1.Storia della psichiatria
-
-      2.Psicopatologia
-
-      3.Terapie psichiatriche
-
-      4.Disturbi psichiatrici organici
-
-      5.Schizofrenia e disturbi psicotici
-
-      6.Disturbi da uso di sostanze
-
-      7.Disturbi affettivi e d'ansia
-
-      8.Disturbi dello spettro autistico
-
-      9.Etnopsichiatria e disturbi dell'alimentazione
-
-      10.Disturbi di personalità, del sonno e sessuali
-
+      1. Storia della psichiatria
+      2. Psicopatologia
+      3. Terapie psichiatriche
+      4. Disturbi psichiatrici organici
+      5. Schizofrenia e disturbi psicotici
+      6. Disturbi da uso di sostanze
+      7. Disturbi affettivi e d'ansia
+      8. Disturbi dello spettro autistico
+      9. Etnopsichiatria e disturbi dell'alimentazione
+      10. Disturbi di personalità, del sonno e sessuali
       11. Casi clinici
 
       *Programma ufficiale dal catalogo dei corsi UniPV: [scheda dell'insegnamento](https://unipv.coursecatalogue.cineca.it/corsi/2022/10045/insegnamenti/2026/11109/2017/9999?coorte=2022&schemaid=17810).*
@@ -98,7 +79,7 @@ moduli:
 
       Le domande aperte possono riguardare sia argomenti teorici sia criteri diagnostici DSM. Possono inoltre essere presentati casi clinici nei quali viene richiesta l'interpretazione del quadro e la relativa diagnosi.
 
-      La fonte principale consigliata sono le sbobine 2022/2023, considerate complete e sufficienti per la preparazione dell'esame.
+      La fonte principale consigliata sono le sbobine 2022/2023, complete e sufficienti per la preparazione dell'esame.
 
       Devono essere integrate con alcune lezioni delle sbobine 2025/2026, in particolare:
 
@@ -106,11 +87,6 @@ moduli:
       - ADHD.
 
       È inoltre importante consultare le slide dei docenti, perché alcune domande vero/falso possono riprendere direttamente affermazioni presenti nelle presentazioni.
-
-      Non vanno trascurate le prime lezioni del Prof. Fusar Poli, in particolare:
-
-      - Mini Mental State Examination;
-      - seminari sulle psicosi.
 
       Anche se possono sembrare argomenti introduttivi o secondari, vengono frequentemente richiesti.
 
@@ -139,12 +115,5 @@ moduli:
       - nome: Natascia Brondino
         email: natascia.brondino@unipv.it
     fascia_studio: 3–4 sett
-info_da_verificare:
-  - campo: Frequenza
-    nota: Modalità e percentuale di frequenza formalmente richiesta. La scheda riporta che la frequenza non sembra essere controllata in maniera particolarmente rigorosa e i docenti non risultano particolarmente pignoli nella rilevazione delle presenze, ma non è chiaro se vi sia un obbligo formale o una percentuale minima richiesta. [DA VERIFICARE] modalità e percentuale di frequenza formalmente richiesta.
-  - campo: Email Dott. Stefanelli
-    nota: Da integrare.
-  - campo: Criterio correzione gaussiana
-    nota: Non sembra esserci un criterio fisso e predeterminato per stabilire quando venga applicata la correzione gaussiana.
 aggiornato_da: Rocco Buellis
 ultimo_aggiornamento: 2026-10-08

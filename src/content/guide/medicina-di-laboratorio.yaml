@@ -19,42 +19,24 @@ moduli:
 
       In caso di esame scritto basato su un caso clinico, è importante saper impostare correttamente l'iter diagnostico di laboratorio a partire dal caso proposto.
     program: |-
-      •Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
-
-      •Esame emocromocitometrico e metabolismo del ferro
-
-      •Esame emocromocitometrico e metabolismo del ferro
-
-      •L'emostasi: rischio trombotico ed emorragico 1
-
-      •Struttura e funzione del midollo osseo
-
-      •Meccanismi biochimici di fibrosi
-
-      •Ruolo del Calcio nella malattia
-
-      •UPR e Autofagia
-
-      •Introduzione alla medicina rigenerativa e ai biomateriali
-
-      •La funzionalità epatica e pancreatica
-
-      •Le sieroproteine
-
-      •Diagnosi di laboratorio e monitoraggio del diabete
-
-      •La fase acuta e la sepsi
-
-      •I lipidi e le classi lipoproteiche: struttura e parametri di rischio aterosclerotico
-
-      •Marcatori di danno cardiaco
-
-      •Metabolismo del calcio e dell'osso
-
-      •Marcatori tumorali e loro significato
-
-      •La funzionalità renale e l'esame delle urine
-
+      - Introduzione alla Medicina di Laboratorio. Plasma, siero, principali anticoagulanti e raccolta campioni
+      - Esame emocromocitometrico e metabolismo del ferro
+      - Esame emocromocitometrico e metabolismo del ferro
+      - L'emostasi: rischio trombotico ed emorragico 1
+      - Struttura e funzione del midollo osseo
+      - Meccanismi biochimici di fibrosi
+      - Ruolo del Calcio nella malattia
+      - UPR e Autofagia
+      - Introduzione alla medicina rigenerativa e ai biomateriali
+      - La funzionalità epatica e pancreatica
+      - Le sieroproteine
+      - Diagnosi di laboratorio e monitoraggio del diabete
+      - La fase acuta e la sepsi
+      - I lipidi e le classi lipoproteiche: struttura e parametri di rischio aterosclerotico
+      - Marcatori di danno cardiaco
+      - Metabolismo del calcio e dell'osso
+      - Marcatori tumorali e loro significato
+      - La funzionalità renale e l'esame delle urine
       - Introduzione alla Medicina di Laboratorio e raccolta campioni (plasma, siero, principali anticoagulanti)
       - Sensibilità e specificità dei test di laboratorio
       - Esame emocromocitometrico
@@ -90,11 +72,6 @@ moduli:
       - nome: Christian Andrea Di Buduo
         email: christian.dibuduo@unipv.it
     fascia_studio: 3–4 sett
-info_da_verificare:
-  - campo: Frequenza
-    nota: Da integrare
-  - campo: Domande e argomenti ricorrenti
-    nota: Da integrare – elenco delle domande e degli argomenti maggiormente ricorrenti agli appelli precedenti.
 aggiornato_da: Luiza Leshi
 semestre: II
 ultimo_aggiornamento: 2026-10-08
