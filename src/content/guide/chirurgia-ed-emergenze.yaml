@@ -54,7 +54,20 @@ moduli:
 
       - 30/30 = 30 e lode
       - gli altri punteggi vengono assegnati a scalare.
-    program: Argomenti presenti nelle slide e nelle domande degli esami precedenti.
+    program: |-
+      Il programma prevede i seguenti argomenti:
+
+      - Appendicite acuta
+      - Emergenze biliari
+      - Diverticolite
+      - Pancreatite acuta
+      - Occlusione intestinale
+      - Emorragie del tratto gastroenterico
+      - Perforazione gastrointestinale
+      - Traumi
+      - Damage control surgery
+
+      *Programma ufficiale dell’insegnamento (a.a. 2026/2027).*
     material_tips: |-
       Fonti consigliate:
 
