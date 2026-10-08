@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "cms:local": "npx decap-server",
-    "build": "astro check && astro build && pagefind --site dist",
+    "build": "node scripts/verifica-decap.mjs && astro check && astro build && pagefind --site dist",
     "preview": "astro preview",
     "astro": "astro",
     "appelli": "node scripts/appelli.mjs"

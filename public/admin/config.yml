@@ -42,7 +42,7 @@ collections:
       - { label: "ID (automatico, non modificabile)", name: "id", widget: "readonly-id", prefix: "g", required: false, hint: "Identificativo stabile della guida: viene generato da solo e non cambia mai, anche se rinomini l'esame." }
       - { label: "Nome Esame", name: "title", widget: "string", required: true, pattern: ['^.{3,150}$', "Tra 3 e 150 caratteri"] }
 
-      - { label: "Codice esame ESSE3 (facoltativo)", name: "esse3_codice", widget: "string", required: false, pattern: ['^\\d{4,8}$', "Solo cifre, es. 501694"], hint: "Il numero tra parentesi quadre nella bacheca appelli ESSE3 (es. [501694] FARMACOLOGIA 2). Serve solo se gli appelli non compaiono da soli." }
+      - { label: "Codice esame ESSE3 (facoltativo)", name: "esse3_codice", widget: "string", required: false, pattern: ['^\d{4,8}$', "Solo cifre, es. 501694"], hint: "Il numero tra parentesi quadre nella bacheca appelli ESSE3 (es. [501694] FARMACOLOGIA 2). Serve solo se gli appelli non compaiono da soli." }
       - { label: "Sottotitolo (facoltativo)", name: "sottotitolo", widget: "string", required: false, pattern: ['^.{0,200}$', "Massimo 200 caratteri"], hint: "Una riga sotto il titolo, es. \"Esame integrato del IV anno\"" }
 
       - label: "Anno di Corso"
@@ -167,7 +167,7 @@ collections:
             fields:
               - { label: "Nome Docente", name: "nome", widget: "string", required: true, pattern: ['^.{1,150}$', "Massimo 150 caratteri"] }
               - { label: "Email", name: "email", widget: "string", required: false, pattern: ['^[^@\s]+@[^@\s]+\.[^@\s]+$', "Email non valida"] }
-              - { label: "Stile/Domande", name: "stile", widget: "text", required: false, pattern: ['^[\\s\\S]{0,500}$', "Massimo 500 caratteri"] }
+              - { label: "Stile/Domande", name: "stile", widget: "text", required: false, pattern: ['^[\s\S]{0,500}$', "Massimo 500 caratteri"] }
 
           - label: "Note Extra"
             name: "body"
