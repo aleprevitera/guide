@@ -1,5 +1,5 @@
 {
-  "generato_il": "2026-10-04T18:15:00.376Z",
+  "generato_il": "2026-10-12T14:28:10.724Z",
   "fonte": {
     "bacheca": "https://studentionline.unipv.it/ListaAppelliOfferta.do",
     "corso_di_studio": {
@@ -9,10 +9,244 @@
     }
   },
   "intervallo": {
-    "da": "2026-10-04",
-    "a": "2027-10-04"
+    "da": "2026-10-12",
+    "a": "2027-10-12"
   },
   "guide": {
+    "g-we1ty8o7": {
+      "titolo": "Anatomia patologica",
+      "esame": {
+        "id": "10616",
+        "codice": "501695",
+        "nome": "ANATOMIA PATOLOGICA"
+      },
+      "moduli": {
+        "m-kukjri3a": [
+          {
+            "appello": "ANATOMIA PATOLOGICA",
+            "giorno": "2026-12-17",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-11-27",
+            "iscrizioniA": "2026-12-15",
+            "tipo": "Orale",
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=81&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ]
+      },
+      "generale": []
+    },
+    "g-riy9dsfx": {
+      "titolo": "Chirurgia ed Emergenze",
+      "esame": {
+        "id": "12831",
+        "codice": "506412",
+        "nome": "CHIRURGIA ED EMERGENZE"
+      },
+      "moduli": {
+        "m-2dg08krc": [
+          {
+            "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
+            "giorno": "2026-12-11",
+            "ora": "08:30",
+            "iscrizioniDa": "2026-11-21",
+            "iscrizioniA": "2026-12-09",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=410&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-or9pjiie": [],
+        "m-ke2k2iky": []
+      },
+      "generale": [
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2026-12-14",
+          "ora": "15:00",
+          "iscrizioniDa": "2026-11-24",
+          "iscrizioniA": "2026-12-12",
+          "tipo": "Scritto",
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=422&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA GENERALE",
+          "giorno": "2026-12-15",
+          "ora": "11:00",
+          "iscrizioniDa": "2026-11-25",
+          "iscrizioniA": "2026-12-13",
+          "tipo": "Orale",
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=416&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2026-12-16",
+          "ora": null,
+          "iscrizioniDa": "2026-11-26",
+          "iscrizioniA": "2026-12-14",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=432&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        }
+      ]
+    },
+    "g-c9joseb6": {
+      "titolo": "Clinica medica 1",
+      "esame": {
+        "id": "11747",
+        "codice": "501832",
+        "nome": "CLINICA MEDICA 1"
+      },
+      "moduli": {
+        "m-w52b3ng5": [
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2026-12-10",
+            "ora": "14:30",
+            "iscrizioniDa": "2026-11-20",
+            "iscrizioniA": "2026-12-08",
+            "tipo": "Scritto",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=297&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-dtcnzwqx": [
+          {
+            "appello": "MEDICINA DEL TERRITORIO A-L/M-Z",
+            "giorno": "2026-12-18",
+            "ora": "08:30",
+            "iscrizioniDa": "2026-11-28",
+            "iscrizioniA": "2026-12-12",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=303&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-2f76o2dk": [
+          {
+            "appello": "GERIATRIA",
+            "giorno": "2026-12-11",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-11-21",
+            "iscrizioniA": "2026-12-05",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=291&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ]
+      },
+      "generale": []
+    },
+    "g-m8g8n3g2": {
+      "titolo": "Clinica Medica 2",
+      "esame": {
+        "id": "11748",
+        "codice": "501833",
+        "nome": "CLINICA MEDICA 2"
+      },
+      "moduli": {
+        "m-mmtit3w0": [
+          {
+            "appello": "MEDICINA URGENZA",
+            "giorno": "2026-12-16",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-11-26",
+            "iscrizioniA": "2026-12-14",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=267&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-is900itq": [
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2026-12-16",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-11-26",
+            "iscrizioniA": "2026-12-14",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=261&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ]
+      },
+      "generale": [
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2026-12-17",
+          "ora": null,
+          "iscrizioniDa": "2026-11-27",
+          "iscrizioniA": "2026-12-15",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=275&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE RIS. LAUREANDI",
+          "giorno": "2026-12-17",
+          "ora": null,
+          "iscrizioniDa": "2026-11-27",
+          "iscrizioniA": "2026-12-15",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=276&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        }
+      ]
+    },
+    "g-nqkkq85b": {
+      "titolo": "Farmacologia 1",
+      "esame": {
+        "id": "10664",
+        "codice": "501690",
+        "nome": "FARMACOLOGIA 1"
+      },
+      "moduli": {
+        "m-iqm9iw1f": [],
+        "m-gihhtc94": [],
+        "m-1ktox7eu": [],
+        "m-1zfkfke7": []
+      },
+      "generale": [
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2026-12-14",
+          "ora": "14:30",
+          "iscrizioniDa": "2026-11-26",
+          "iscrizioniA": "2026-12-12",
+          "tipo": "Scritto",
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=183&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        }
+      ]
+    },
     "g-0qfyrg1m": {
       "titolo": "Farmacologia 2",
       "esame": {
@@ -24,30 +258,6 @@
         "m-yfczwv5j": [
           {
             "appello": "CHEMIOTERAPIA A-L e M-Z",
-            "giorno": "2026-09-10",
-            "ora": "09:30",
-            "iscrizioniDa": "2026-08-21",
-            "iscrizioniA": "2026-09-08",
-            "tipo": "Scritto e orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=396&cds_id=10045&app_log_id=1",
-            "aula": "Aula 0.3",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "CHEMIOTERAPIA A-L e M-Z",
-            "giorno": "2026-09-25",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-09-05",
-            "iscrizioniA": "2026-09-23",
-            "tipo": "Scritto e orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=419&cds_id=10045&app_log_id=1",
-            "aula": "Aula 0.5",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "CHEMIOTERAPIA A-L e M-Z",
             "giorno": "2026-12-10",
             "ora": "09:30",
             "iscrizioniDa": "2026-11-20",
@@ -55,35 +265,11 @@
             "tipo": "Scritto e orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=397&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-obz8gkpx": [
-          {
-            "appello": "TOSSICOLOGIA A-L e M-Z",
-            "giorno": "2026-09-09",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-08-20",
-            "iscrizioniA": "2026-09-07",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=403&cds_id=10045&app_log_id=1",
-            "aula": "Aula Emanuele Capodaglio",
-            "edificio": "Fondazione Salvatore Maugeri"
-          },
-          {
-            "appello": "TOSSICOLOGIA A-L e M-Z",
-            "giorno": "2026-09-28",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-09-08",
-            "iscrizioniA": "2026-09-26",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=404&cds_id=10045&app_log_id=1",
-            "aula": "Aula Emanuele Capodaglio",
-            "edificio": "Fondazione Salvatore Maugeri"
-          },
           {
             "appello": "TOSSICOLOGIA A-L e M-Z",
             "giorno": "2026-12-18",
@@ -93,35 +279,11 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=405&cds_id=10045&app_log_id=1",
-            "aula": "Aula Emanuele Capodaglio",
-            "edificio": "Fondazione Salvatore Maugeri"
+            "edificio": "Fondazione Salvatore Maugeri",
+            "aula": "Aula Emanuele Capodaglio"
           }
         ],
         "m-g59ohk2q": [
-          {
-            "appello": "FARMACOLOGIA 2 A-L",
-            "giorno": "2026-09-22",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-09-02",
-            "iscrizioniA": "2026-09-20",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=388&cds_id=10045&app_log_id=1",
-            "aula": "Aula B - Farmacologia Clinica",
-            "edificio": "Golgi Spallanzani - Botta 2"
-          },
-          {
-            "appello": "FARMACOLOGIA 2 M-Z",
-            "giorno": "2026-09-23",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-09-03",
-            "iscrizioniA": "2026-09-21",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=389&cds_id=10045&app_log_id=1",
-            "aula": "Aula B - Farmacologia Clinica",
-            "edificio": "Golgi Spallanzani - Botta 2"
-          },
           {
             "appello": "FARMACOLOGIA 2 A-L",
             "giorno": "2026-12-15",
@@ -131,8 +293,8 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=390&cds_id=10045&app_log_id=1",
-            "aula": "Aula B - Farmacologia Clinica",
-            "edificio": "Golgi Spallanzani - Botta 2"
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B - Farmacologia Clinica"
           },
           {
             "appello": "FARMACOLOGIA 2 M-Z",
@@ -143,24 +305,12 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=391&cds_id=10045&app_log_id=1",
-            "aula": "Aula B - Farmacologia Clinica",
-            "edificio": "Golgi Spallanzani - Botta 2"
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B - Farmacologia Clinica"
           }
         ]
       },
       "generale": [
-        {
-          "appello": "VERBALIZZAZIONE",
-          "giorno": "2026-09-30",
-          "ora": null,
-          "iscrizioniDa": "2026-09-10",
-          "iscrizioniA": "2026-09-28",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=412&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
         {
           "appello": "VERBALIZZAZIONE",
           "giorno": "2026-12-18",
@@ -170,8 +320,72 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=413&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
+        }
+      ]
+    },
+    "g-qjcg8has": {
+      "titolo": "Ginecologia e Ostetricia",
+      "esame": {
+        "id": "9754",
+        "codice": "501628",
+        "nome": "GINECOLOGIA E OSTETRICIA"
+      },
+      "moduli": {
+        "m-oc7rmh1w": [
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2026-12-10",
+            "ora": "08:30",
+            "iscrizioniDa": "2026-11-20",
+            "iscrizioniA": "2026-12-08",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=240&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-ldm3iupg": [
+          {
+            "appello": "GENETICA MEDICA",
+            "giorno": "2026-12-10",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-11-20",
+            "iscrizioniA": "2026-12-08",
+            "tipo": "Scritto",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=246&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ]
+      },
+      "generale": [
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2026-12-11",
+          "ora": null,
+          "iscrizioniDa": "2026-11-21",
+          "iscrizioniA": "2026-12-09",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=254&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE RIS. LAUREANDI",
+          "giorno": "2026-12-11",
+          "ora": null,
+          "iscrizioniDa": "2026-11-21",
+          "iscrizioniA": "2026-12-09",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=255&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -186,18 +400,6 @@
         "m-a12glpvn": [
           {
             "appello": "DERMATOLOGIA",
-            "giorno": "2026-09-22",
-            "ora": "10:00",
-            "iscrizioniDa": "2026-09-02",
-            "iscrizioniA": "2026-09-20",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=267&cds_id=10045&app_log_id=1",
-            "aula": "Aula Dermatologia",
-            "edificio": "Policlinico San Matteo"
-          },
-          {
-            "appello": "DERMATOLOGIA",
             "giorno": "2026-12-15",
             "ora": "14:00",
             "iscrizioniDa": "2026-11-25",
@@ -205,23 +407,11 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=268&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-r3ai30ir": [
-          {
-            "appello": "CHIRURGIA PLASTICA",
-            "giorno": "2026-09-30",
-            "ora": "15:00",
-            "iscrizioniDa": "2026-09-10",
-            "iscrizioniA": "2026-09-28",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=278&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
-          },
           {
             "appello": "CHIRURGIA PLASTICA",
             "giorno": "2026-12-16",
@@ -231,36 +421,12 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=279&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
       "generale": [
-        {
-          "appello": "VERBALIZZAZIONE RIS ERASMUS",
-          "giorno": "2026-09-24",
-          "ora": null,
-          "iscrizioniDa": "2026-09-04",
-          "iscrizioniA": "2026-09-22",
-          "tipo": "Orale",
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=283&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
-        {
-          "appello": "VERBALIZZAZIONE",
-          "giorno": "2026-09-30",
-          "ora": null,
-          "iscrizioniDa": "2026-09-10",
-          "iscrizioniA": "2026-09-28",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=280&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
         {
           "appello": "VERBALIZZAZIONE",
           "giorno": "2026-12-18",
@@ -270,8 +436,8 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=273&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -286,18 +452,6 @@
         "m-ze2xjad6": [
           {
             "appello": "OFTALMOLOGIA",
-            "giorno": "2026-09-18",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-08-29",
-            "iscrizioniA": "2026-09-16",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=383&cds_id=10045&app_log_id=1",
-            "aula": "Aula Morone - Clinica Chirurgica",
-            "edificio": "Policlinico San Matteo"
-          },
-          {
-            "appello": "OFTALMOLOGIA",
             "giorno": "2026-12-18",
             "ora": "09:00",
             "iscrizioniDa": "2026-11-28",
@@ -305,23 +459,11 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=386&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-lcq5czjs": [
-          {
-            "appello": "OTORINO-AUDIOLGIA",
-            "giorno": "2026-09-15",
-            "ora": "14:00",
-            "iscrizioniDa": "2026-08-26",
-            "iscrizioniA": "2026-09-13",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=401&cds_id=10045&app_log_id=1",
-            "aula": "Aula Morone - Clinica Chirurgica",
-            "edificio": "Policlinico San Matteo"
-          },
           {
             "appello": "OTORINO-AUDIOLGIA",
             "giorno": "2026-12-15",
@@ -331,23 +473,11 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=402&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-j91rrxoo": [
-          {
-            "appello": "ODONTOIATRIA",
-            "giorno": "2026-09-29",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-09-09",
-            "iscrizioniA": "2026-09-27",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=392&cds_id=10045&app_log_id=1",
-            "aula": "Aula informatica 0.13",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
           {
             "appello": "ODONTOIATRIA",
             "giorno": "2026-12-16",
@@ -357,35 +487,11 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=418&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-qya7ev2i": [
-          {
-            "appello": "MAXILLO-FACCIALE",
-            "giorno": "2026-09-09",
-            "ora": "14:00",
-            "iscrizioniDa": "2026-08-20",
-            "iscrizioniA": "2026-09-07",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=407&cds_id=10045&app_log_id=1",
-            "aula": "Aula Morone - Clinica Chirurgica",
-            "edificio": "Policlinico San Matteo"
-          },
-          {
-            "appello": "MAXILLO-FACCIALE",
-            "giorno": "2026-09-30",
-            "ora": "14:00",
-            "iscrizioniDa": "2026-09-10",
-            "iscrizioniA": "2026-09-28",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=408&cds_id=10045&app_log_id=1",
-            "aula": "Aula Clinica Odontoiatria",
-            "edificio": "Policlinico San Matteo"
-          },
           {
             "appello": "MAXILLO-FACCIALE",
             "giorno": "2026-12-16",
@@ -395,24 +501,12 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=409&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
       "generale": [
-        {
-          "appello": "VERBALIZZAZIONE",
-          "giorno": "2026-09-30",
-          "ora": null,
-          "iscrizioniDa": "2026-09-10",
-          "iscrizioniA": "2026-09-28",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=416&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
         {
           "appello": "VERBALIZZAZIONE",
           "giorno": "2026-12-18",
@@ -422,8 +516,8 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=415&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -438,18 +532,6 @@
         "m-v0jgxqro": [
           {
             "appello": "MALATTIE SANGUE",
-            "giorno": "2026-09-23",
-            "ora": "08:30",
-            "iscrizioniDa": "2026-09-03",
-            "iscrizioniA": "2026-09-21",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Finale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=100&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.5",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "MALATTIE SANGUE",
             "giorno": "2026-12-17",
             "ora": "08:30",
             "iscrizioniDa": "2026-11-27",
@@ -457,8 +539,8 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=101&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
@@ -475,18 +557,6 @@
         "m-r6dtmg80": [
           {
             "appello": "ENDOCRINOLOGIA",
-            "giorno": "2026-09-16",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-08-27",
-            "iscrizioniA": "2026-09-14",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=268&cds_id=10045&app_log_id=1",
-            "aula": "Aula Morone - Clinica Chirurgica",
-            "edificio": "Policlinico San Matteo"
-          },
-          {
-            "appello": "ENDOCRINOLOGIA",
             "giorno": "2026-12-16",
             "ora": "09:00",
             "iscrizioniDa": "2026-11-26",
@@ -494,23 +564,11 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=285&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-s11z2uij": [
-          {
-            "appello": "MALATTIE DEL METABOLISMO",
-            "giorno": "2026-09-16",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-08-27",
-            "iscrizioniA": "2026-09-14",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=269&cds_id=10045&app_log_id=1",
-            "aula": "Aula Morone - Clinica Chirurgica",
-            "edificio": "Policlinico San Matteo"
-          },
           {
             "appello": "MALATTIE DEL METABOLISMO",
             "giorno": "2026-12-16",
@@ -520,23 +578,11 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=284&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-srbieauq": [
-          {
-            "appello": "CHIRURGIA ENDOCRINA",
-            "giorno": "2026-09-16",
-            "ora": "16:30",
-            "iscrizioniDa": "2026-08-27",
-            "iscrizioniA": "2026-09-14",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=282&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.7",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
           {
             "appello": "CHIRURGIA ENDOCRINA",
             "giorno": "2026-12-16",
@@ -546,36 +592,12 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=283&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
       "generale": [
-        {
-          "appello": "VERBALIZZAZIONE",
-          "giorno": "2026-09-21",
-          "ora": null,
-          "iscrizioniDa": "2026-09-01",
-          "iscrizioniA": "2026-09-19",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=275&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
-        {
-          "appello": "VERBALIZZAZIONE RIS BANDI ERASMUS",
-          "giorno": "2026-09-24",
-          "ora": null,
-          "iscrizioniDa": "2026-09-04",
-          "iscrizioniA": "2026-09-23",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=286&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
         {
           "appello": "VERBALIZZAZIONE",
           "giorno": "2026-12-18",
@@ -585,8 +607,8 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=276&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -604,30 +626,6 @@
       },
       "generale": [
         {
-          "appello": "MALATTIE APPARATO DIGERENTE A-L",
-          "giorno": "2026-09-11",
-          "ora": "09:00",
-          "iscrizioniDa": "2026-08-22",
-          "iscrizioniA": "2026-09-09",
-          "tipo": "Scritto e orale",
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=170&cds_id=10045&app_log_id=1",
-          "aula": "Aula Morone - Clinica Chirurgica",
-          "edificio": "Policlinico San Matteo"
-        },
-        {
-          "appello": "MALATTIE APPARATO DIGERENTE M-Z",
-          "giorno": "2026-09-25",
-          "ora": "09:00",
-          "iscrizioniDa": "2026-09-05",
-          "iscrizioniA": "2026-09-23",
-          "tipo": "Scritto e orale",
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=171&cds_id=10045&app_log_id=1",
-          "aula": "Aula Morone - Clinica Chirurgica",
-          "edificio": "Policlinico San Matteo"
-        },
-        {
           "appello": "MALATTIE APPARATO DIGERENTE",
           "giorno": "2026-12-11",
           "ora": "09:00",
@@ -636,10 +634,35 @@
           "tipo": "Scritto e orale",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=172&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
+    },
+    "g-js52zv2u": {
+      "titolo": "Malattie infettive",
+      "esame": {
+        "id": "9728",
+        "codice": "501624",
+        "nome": "MALATTIE INFETTIVE"
+      },
+      "moduli": {
+        "m-x4s934c2": [
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2026-12-11",
+            "ora": "14:30",
+            "iscrizioniDa": "2026-11-21",
+            "iscrizioniA": "2026-12-09",
+            "tipo": "Orale",
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=93&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
+          }
+        ]
+      },
+      "generale": []
     },
     "g-hxm7b57t": {
       "titolo": "Medicina di Laboratorio",
@@ -649,22 +672,115 @@
         "nome": "MEDICINA DI LABORATORIO"
       },
       "moduli": {
-        "m-snews6i7": [
+        "m-snews6i7": []
+      },
+      "generale": []
+    },
+    "g-ays218a8": {
+      "titolo": "Medicina Pubblica",
+      "esame": {
+        "id": "12828",
+        "codice": "504451",
+        "nome": "MEDICINA PUBBLICA"
+      },
+      "moduli": {
+        "m-p7i98hbx": [
           {
-            "appello": "MEDICINA DI LABORATORIO",
-            "giorno": "2026-09-29",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-09-09",
-            "iscrizioniA": "2026-09-22",
-            "tipo": null,
-            "tipoProva": "Prova Finale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=237&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.11",
-            "edificio": "CAMPUS DELLA SALUTE"
+            "appello": "MEDICINA LEGALE",
+            "giorno": "2026-12-14",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-11-24",
+            "iscrizioniA": "2026-12-12",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=451&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-kfhcmrwh": [
+          {
+            "appello": "MEDICINA DEL LAVORO",
+            "giorno": "2026-12-15",
+            "ora": "14:30",
+            "iscrizioniDa": "2026-11-25",
+            "iscrizioniA": "2026-12-13",
+            "tipo": "Scritto",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=457&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-f18tcg5t": [
+          {
+            "appello": "BIOETICA",
+            "giorno": "2026-12-11",
+            "ora": "13:30",
+            "iscrizioniDa": "2026-11-21",
+            "iscrizioniA": "2026-12-09",
+            "tipo": "Scritto",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=475&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-iptxage9": [
+          {
+            "appello": "ORGANIZZAZIONE SANITARIA",
+            "giorno": "2026-12-17",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-11-27",
+            "iscrizioniA": "2026-12-15",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=469&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          }
+        ],
+        "m-cdt6q6du": [
+          {
+            "appello": "IGIENE AMBIENTALE",
+            "giorno": "2026-12-17",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-11-27",
+            "iscrizioniA": "2026-12-15",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=463&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
           }
         ]
       },
-      "generale": []
+      "generale": [
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2026-12-15",
+          "ora": null,
+          "iscrizioniDa": "2026-11-25",
+          "iscrizioniA": "2026-12-13",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=484&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE RIS. LAUREANDI",
+          "giorno": "2026-12-15",
+          "ora": null,
+          "iscrizioniDa": "2026-11-25",
+          "iscrizioniA": "2026-12-13",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=485&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        }
+      ]
     },
     "g-isk3qiid": {
       "titolo": "Microbiologia",
@@ -677,42 +793,6 @@
         "m-2f7qtr59": [
           {
             "appello": "MICROBIOLOGIA - SCRITTO",
-            "giorno": "2026-09-08",
-            "ora": "10:00",
-            "iscrizioniDa": "2026-08-19",
-            "iscrizioniA": "2026-09-01",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=199&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.5",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "MICROBIOLOGIA - ORALE",
-            "giorno": "2026-09-09",
-            "ora": "09:30",
-            "iscrizioniDa": "2026-08-20",
-            "iscrizioniA": "2026-09-01",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=200&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.5",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "VERBALIZZAZIONE",
-            "giorno": "2026-09-14",
-            "ora": null,
-            "iscrizioniDa": "2026-08-25",
-            "iscrizioniA": "2026-09-12",
-            "tipo": null,
-            "tipoProva": "Prova Finale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=208&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
-          },
-          {
-            "appello": "MICROBIOLOGIA - SCRITTO",
             "giorno": "2026-12-10",
             "ora": "10:00",
             "iscrizioniDa": "2026-11-20",
@@ -720,8 +800,8 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=201&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           },
           {
             "appello": "MICROBIOLOGIA - ORALE",
@@ -732,8 +812,8 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=202&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           },
           {
             "appello": "VERBALIZZAZIONE",
@@ -744,8 +824,8 @@
             "tipo": null,
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=209&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
@@ -762,18 +842,6 @@
         "m-4ewf06rv": [
           {
             "appello": "ONCOLOGIA",
-            "giorno": "2026-09-09",
-            "ora": "14:00",
-            "iscrizioniDa": "2026-08-20",
-            "iscrizioniA": "2026-09-07",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=252&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.9",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "ONCOLOGIA",
             "giorno": "2026-12-15",
             "ora": "14:00",
             "iscrizioniDa": "2026-11-25",
@@ -781,23 +849,11 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=253&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-t588av4v": [
-          {
-            "appello": "RX-NEURORX-RT",
-            "giorno": "2026-09-14",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-08-25",
-            "iscrizioniA": "2026-09-12",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=239&cds_id=10045&app_log_id=1",
-            "aula": "Aula informatica 0.1",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
           {
             "appello": "RX-NEURORX-RT",
             "giorno": "2026-12-18",
@@ -807,24 +863,12 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=255&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
       "generale": [
-        {
-          "appello": "VERBALIZZAZIONI",
-          "giorno": "2026-09-30",
-          "ora": null,
-          "iscrizioniDa": "2026-09-10",
-          "iscrizioniA": "2026-09-28",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=245&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
         {
           "appello": "VERBALIZZAZIONI",
           "giorno": "2026-12-18",
@@ -834,8 +878,8 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=246&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -854,18 +898,6 @@
       "generale": [
         {
           "appello": "PATOLOGIA GENERALE",
-          "giorno": "2026-09-15",
-          "ora": "09:30",
-          "iscrizioniDa": "2026-08-26",
-          "iscrizioniA": "2026-09-10",
-          "tipo": "Scritto e orale",
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=108&cds_id=10045&app_log_id=1",
-          "aula": "Aula informatica 0.13",
-          "edificio": "CAMPUS DELLA SALUTE"
-        },
-        {
-          "appello": "PATOLOGIA GENERALE",
           "giorno": "2026-12-15",
           "ora": "09:30",
           "iscrizioniDa": "2026-11-25",
@@ -873,8 +905,8 @@
           "tipo": "Scritto e orale",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=109&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -893,18 +925,6 @@
       "generale": [
         {
           "appello": "PEDIATRIA",
-          "giorno": "2026-09-07",
-          "ora": "14:00",
-          "iscrizioniDa": "2026-08-18",
-          "iscrizioniA": "2026-09-05",
-          "tipo": "Orale",
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=105&cds_id=10045&app_log_id=1",
-          "aula": "Aula 0.9",
-          "edificio": "CAMPUS DELLA SALUTE"
-        },
-        {
-          "appello": "PEDIATRIA",
           "giorno": "2026-12-14",
           "ora": "14:00",
           "iscrizioniDa": "2026-11-24",
@@ -912,8 +932,8 @@
           "tipo": "Orale",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=106&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     },
@@ -925,22 +945,61 @@
         "nome": "PSICHIATRIA"
       },
       "moduli": {
-        "m-0v8s8vwa": [
+        "m-0v8s8vwa": []
+      },
+      "generale": []
+    },
+    "g-vp9k44fa": {
+      "titolo": "Scienze neurologiche",
+      "esame": {
+        "id": "11236",
+        "codice": "501808",
+        "nome": "SCIENZE NEUROLOGICHE"
+      },
+      "moduli": {
+        "m-8q5v2laa": [
           {
-            "appello": "PSICHIATRIA",
-            "giorno": "2026-09-25",
-            "ora": "11:00",
-            "iscrizioniDa": "2026-09-05",
-            "iscrizioniA": "2026-09-23",
-            "tipo": "Scritto",
-            "tipoProva": "Prova Finale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=96&cds_id=10045&app_log_id=1",
-            "aula": "Aula Ginecologia",
-            "edificio": "Policlinico San Matteo"
+            "appello": "NEUROLOGIA",
+            "giorno": "2026-12-17",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-11-27",
+            "iscrizioniA": "2026-12-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=176&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          }
+        ],
+        "m-4jygklkp": [
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2026-12-17",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-11-27",
+            "iscrizioniA": "2026-12-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=169&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
           }
         ]
       },
-      "generale": []
+      "generale": [
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2026-12-17",
+          "ora": null,
+          "iscrizioniDa": "2026-11-27",
+          "iscrizioniA": "2026-12-15",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=183&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        }
+      ]
     },
     "g-zvqm8dmw": {
       "titolo": "Semeiotica Medica e Chirurgica",
@@ -953,18 +1012,6 @@
         "m-vna9dmvw": [
           {
             "appello": "SEMEIOTICA MEDICA",
-            "giorno": "2026-09-18",
-            "ora": "13:00",
-            "iscrizioniDa": "2026-08-29",
-            "iscrizioniA": "2026-09-16",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=256&cds_id=10045&app_log_id=1",
-            "aula": "Aula 1.5",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
-          {
-            "appello": "SEMEIOTICA MEDICA",
             "giorno": "2026-12-15",
             "ora": "14:00",
             "iscrizioniDa": "2026-11-25",
@@ -972,23 +1019,11 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=257&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-o9hifbga": [
-          {
-            "appello": "SEMEIOTICA STRUMENTALE",
-            "giorno": "2026-09-18",
-            "ora": "09:00",
-            "iscrizioniDa": "2026-08-29",
-            "iscrizioniA": "2026-09-16",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=250&cds_id=10045&app_log_id=1",
-            "aula": "Aula informatica 0.13",
-            "edificio": "CAMPUS DELLA SALUTE"
-          },
           {
             "appello": "SEMEIOTICA STRUMENTALE",
             "giorno": "2026-12-18",
@@ -998,23 +1033,11 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=251&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ],
         "m-rug9bioa": [
-          {
-            "appello": "SEMEIOTICA CHIRURGICA",
-            "giorno": "2026-09-21",
-            "ora": "09:30",
-            "iscrizioniDa": "2026-09-01",
-            "iscrizioniA": "2026-09-19",
-            "tipo": "Orale",
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=260&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
-          },
           {
             "appello": "SEMEIOTICA CHIRURGICA",
             "giorno": "2026-12-10",
@@ -1024,24 +1047,12 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=261&cds_id=10045&app_log_id=1",
-            "aula": null,
-            "edificio": null
+            "edificio": null,
+            "aula": null
           }
         ]
       },
       "generale": [
-        {
-          "appello": "VERBALIZZAZIONE",
-          "giorno": "2026-09-30",
-          "ora": null,
-          "iscrizioniDa": "2026-09-10",
-          "iscrizioniA": "2026-09-28",
-          "tipo": null,
-          "tipoProva": "Prova Finale",
-          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=264&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
-        },
         {
           "appello": "VERBALIZZAZIONE",
           "giorno": "2026-12-18",
@@ -1051,8 +1062,8 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=265&cds_id=10045&app_log_id=1",
-          "aula": null,
-          "edificio": null
+          "edificio": null,
+          "aula": null
         }
       ]
     }
