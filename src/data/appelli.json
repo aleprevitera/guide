@@ -1,5 +1,5 @@
 {
-  "generato_il": "2026-10-19T12:10:43.883Z",
+  "generato_il": "2026-10-26T12:20:42.451Z",
   "fonte": {
     "bacheca": "https://studentionline.unipv.it/ListaAppelliOfferta.do",
     "corso_di_studio": {
@@ -9,8 +9,8 @@
     }
   },
   "intervallo": {
-    "da": "2026-10-19",
-    "a": "2027-10-19"
+    "da": "2026-10-26",
+    "a": "2027-10-26"
   },
   "guide": {
     "g-we1ty8o7": {
@@ -31,8 +31,68 @@
             "tipo": "Orale",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=81&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.6"
+          },
+          {
+            "appello": "ANATOMIA PATOLOGICA",
+            "giorno": "2027-01-20",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=82&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "ANATOMIA PATOLOGICA",
+            "giorno": "2027-02-17",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-28",
+            "iscrizioniA": "2027-02-15",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=83&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "ANATOMIA PATOLOGICA",
+            "giorno": "2027-06-23",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-03",
+            "iscrizioniA": "2027-06-21",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=84&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "ANATOMIA PATOLOGICA",
+            "giorno": "2027-07-21",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-07-01",
+            "iscrizioniA": "2027-07-19",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=85&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "ANATOMIA PATOLOGICA",
+            "giorno": "2027-09-22",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-09-02",
+            "iscrizioniA": "2027-09-20",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10616&app_id=86&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ]
       },
@@ -50,14 +110,74 @@
           {
             "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
             "giorno": "2026-12-11",
-            "ora": "08:30",
+            "ora": "09:00",
             "iscrizioniDa": "2026-11-21",
             "iscrizioniA": "2026-12-09",
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=410&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
+            "giorno": "2027-01-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-12-29",
+            "iscrizioniA": "2027-01-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=436&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
+            "giorno": "2027-02-22",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-02-02",
+            "iscrizioniA": "2027-02-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=437&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
+            "giorno": "2027-06-07",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-05-18",
+            "iscrizioniA": "2027-06-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=438&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
+            "giorno": "2027-07-12",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-22",
+            "iscrizioniA": "2027-07-10",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=439&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "TERAPIA INTENSIVA E RIANIMAZIONE",
+            "giorno": "2027-09-06",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-08-17",
+            "iscrizioniA": "2027-09-04",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=440&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
           }
         ],
         "m-or9pjiie": [],
@@ -67,14 +187,14 @@
         {
           "appello": "CHIRURGIA DI EMERGENZA",
           "giorno": "2026-12-14",
-          "ora": "15:00",
+          "ora": "09:00",
           "iscrizioniDa": "2026-11-24",
           "iscrizioniA": "2026-12-12",
           "tipo": "Scritto",
           "tipoProva": "Prova Parziale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=422&cds_id=10045&app_log_id=1",
-          "edificio": null,
-          "aula": null
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
         },
         {
           "appello": "CHIRURGIA GENERALE",
@@ -85,8 +205,8 @@
           "tipo": "Orale",
           "tipoProva": "Prova Parziale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=416&cds_id=10045&app_log_id=1",
-          "edificio": null,
-          "aula": null
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.5"
         },
         {
           "appello": "VERBALIZZAZIONE",
@@ -97,6 +217,138 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=432&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA GENERALE",
+          "giorno": "2027-01-19",
+          "ora": "11:00",
+          "iscrizioniDa": "2026-12-30",
+          "iscrizioniA": "2027-01-17",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=442&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2027-01-22",
+          "ora": "15:00",
+          "iscrizioniDa": "2027-01-02",
+          "iscrizioniA": "2027-01-20",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=448&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2027-02-22",
+          "ora": "15:00",
+          "iscrizioniDa": "2027-02-02",
+          "iscrizioniA": "2027-02-20",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=454&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "CHIRURGIA GENERALE",
+          "giorno": "2027-02-23",
+          "ora": "11:00",
+          "iscrizioniDa": "2027-02-03",
+          "iscrizioniA": "2027-02-21",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=443&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2027-03-24",
+          "ora": "15:00",
+          "iscrizioniDa": "2027-03-04",
+          "iscrizioniA": "2027-03-22",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=449&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2027-06-07",
+          "ora": "15:00",
+          "iscrizioniDa": "2027-05-18",
+          "iscrizioniA": "2027-06-05",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=450&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "CHIRURGIA GENERALE",
+          "giorno": "2027-06-08",
+          "ora": "11:00",
+          "iscrizioniDa": "2027-05-19",
+          "iscrizioniA": "2027-06-06",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=444&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2027-07-05",
+          "ora": "15:00",
+          "iscrizioniDa": "2027-06-15",
+          "iscrizioniA": "2027-07-03",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=451&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "CHIRURGIA GENERALE",
+          "giorno": "2027-07-06",
+          "ora": "11:00",
+          "iscrizioniDa": "2027-06-16",
+          "iscrizioniA": "2027-07-04",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=445&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "CHIRURGIA DI EMERGENZA",
+          "giorno": "2027-09-13",
+          "ora": "16:30",
+          "iscrizioniDa": "2027-08-24",
+          "iscrizioniA": "2027-09-11",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=452&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "CHIRURGIA GENERALE",
+          "giorno": "2027-09-14",
+          "ora": "11:00",
+          "iscrizioniDa": "2027-08-25",
+          "iscrizioniA": "2027-09-12",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12831&app_id=446&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
         }
@@ -120,8 +372,68 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=297&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA INTERNA A",
+            "giorno": "2027-01-27",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-07",
+            "iscrizioniA": "2027-01-25",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=313&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA INTERNA A",
+            "giorno": "2027-02-22",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-02-02",
+            "iscrizioniA": "2027-02-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=314&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA INTERNA A",
+            "giorno": "2027-06-16",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-27",
+            "iscrizioniA": "2027-06-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=315&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA INTERNA A",
+            "giorno": "2027-07-07",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-17",
+            "iscrizioniA": "2027-07-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=316&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA INTERNA A",
+            "giorno": "2027-09-15",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=317&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-dtcnzwqx": [
@@ -134,8 +446,68 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=303&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "MEDICINA DEL TERRITORIO",
+            "giorno": "2027-01-25",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-05",
+            "iscrizioniA": "2027-01-23",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=307&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA DEL TERRITORIO",
+            "giorno": "2027-03-22",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-03-02",
+            "iscrizioniA": "2027-03-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=308&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "MEDICINA DEL TERRITORIO",
+            "giorno": "2027-06-14",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-25",
+            "iscrizioniA": "2027-06-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=309&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA DEL TERRITORIO",
+            "giorno": "2027-07-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-19",
+            "iscrizioniA": "2027-07-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=310&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MEDICINA DEL TERRITORIO",
+            "giorno": "2027-09-10",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-21",
+            "iscrizioniA": "2027-09-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=311&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-2f76o2dk": [
@@ -148,8 +520,68 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=291&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "GERIATRIA",
+            "giorno": "2027-02-01",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-12",
+            "iscrizioniA": "2027-01-30",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=319&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "GERIATRIA",
+            "giorno": "2027-03-23",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-03-03",
+            "iscrizioniA": "2027-03-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=320&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "GERIATRIA",
+            "giorno": "2027-06-07",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-05-18",
+            "iscrizioniA": "2027-06-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=321&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "GERIATRIA",
+            "giorno": "2027-07-06",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-06-16",
+            "iscrizioniA": "2027-07-04",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=322&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "GERIATRIA",
+            "giorno": "2027-09-06",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-08-17",
+            "iscrizioniA": "2027-09-04",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11747&app_id=323&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ]
       },
@@ -173,8 +605,68 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=267&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.3"
+          },
+          {
+            "appello": "MEDICINA URGENZA",
+            "giorno": "2027-01-21",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-01-01",
+            "iscrizioniA": "2027-01-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=287&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA URGENZA",
+            "giorno": "2027-02-11",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-22",
+            "iscrizioniA": "2027-02-09",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=288&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA URGENZA",
+            "giorno": "2027-06-11",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-22",
+            "iscrizioniA": "2027-06-09",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=289&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA URGENZA",
+            "giorno": "2027-07-08",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-18",
+            "iscrizioniA": "2027-07-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=290&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA URGENZA",
+            "giorno": "2027-09-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-20",
+            "iscrizioniA": "2027-09-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=291&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-is900itq": [
@@ -187,8 +679,80 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=261&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2027-01-20",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=280&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2027-02-10",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-21",
+            "iscrizioniA": "2027-02-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=281&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2027-04-08",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-03-19",
+            "iscrizioniA": "2027-04-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=282&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2027-06-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=283&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2027-07-07",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-17",
+            "iscrizioniA": "2027-07-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=284&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA INTERNA",
+            "giorno": "2027-09-08",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-19",
+            "iscrizioniA": "2027-09-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11748&app_id=285&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Clinica Odontoiatria"
           }
         ]
       },
@@ -242,8 +806,80 @@
           "tipo": "Scritto",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=183&cds_id=10045&app_log_id=1",
+          "edificio": "Piscine Campus",
+          "aula": "Aula F - Campus"
+        },
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2027-01-25",
+          "ora": "14:30",
+          "iscrizioniDa": "2027-01-05",
+          "iscrizioniA": "2027-01-23",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=186&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.5"
+        },
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2027-02-15",
+          "ora": "14:30",
+          "iscrizioniDa": "2027-01-26",
+          "iscrizioniA": "2027-02-13",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=187&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.5"
+        },
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2027-03-22",
+          "ora": "14:30",
+          "iscrizioniDa": "2027-03-02",
+          "iscrizioniA": "2027-03-20",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=188&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
+        },
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2027-06-07",
+          "ora": "14:30",
+          "iscrizioniDa": "2027-05-18",
+          "iscrizioniA": "2027-06-05",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=189&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.5"
+        },
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2027-07-05",
+          "ora": "14:30",
+          "iscrizioniDa": "2027-06-15",
+          "iscrizioniA": "2027-07-03",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=190&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.5"
+        },
+        {
+          "appello": "FARMACOLOGIA 1",
+          "giorno": "2027-09-06",
+          "ora": "14:30",
+          "iscrizioniDa": "2027-08-17",
+          "iscrizioniA": "2027-09-04",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10664&app_id=191&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.5"
         }
       ]
     },
@@ -265,8 +901,80 @@
             "tipo": "Scritto e orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=397&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "CHEMIOTERAPIA",
+            "giorno": "2027-01-22",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-01-02",
+            "iscrizioniA": "2027-01-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=436&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "CHEMIOTERAPIA",
+            "giorno": "2027-02-26",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-02-06",
+            "iscrizioniA": "2027-02-24",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=437&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "CHEMIOTERAPIA",
+            "giorno": "2027-03-19",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-02-27",
+            "iscrizioniA": "2027-03-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=438&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "CHEMIOTERAPIA",
+            "giorno": "2027-06-10",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-05-21",
+            "iscrizioniA": "2027-06-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=439&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "CHEMIOTERAPIA",
+            "giorno": "2027-07-08",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-06-18",
+            "iscrizioniA": "2027-07-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=440&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "CHEMIOTERAPIA",
+            "giorno": "2027-09-02",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-08-13",
+            "iscrizioniA": "2027-08-31",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=441&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-obz8gkpx": [
@@ -307,6 +1015,150 @@
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=391&cds_id=10045&app_log_id=1",
             "edificio": "Golgi Spallanzani - Botta 2",
             "aula": "Aula B - Farmacologia Clinica"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 A-L",
+            "giorno": "2027-01-19",
+            "ora": "08:30",
+            "iscrizioniDa": "2026-12-30",
+            "iscrizioniA": "2027-01-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=422&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 M-Z",
+            "giorno": "2027-01-19",
+            "ora": "08:30",
+            "iscrizioniDa": "2026-12-30",
+            "iscrizioniA": "2027-01-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=423&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 A-L",
+            "giorno": "2027-02-02",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-13",
+            "iscrizioniA": "2027-01-31",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=424&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 M-Z",
+            "giorno": "2027-02-02",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-13",
+            "iscrizioniA": "2027-01-31",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=425&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 A-L",
+            "giorno": "2027-02-24",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-04",
+            "iscrizioniA": "2027-02-22",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=426&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 M-Z",
+            "giorno": "2027-02-24",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-04",
+            "iscrizioniA": "2027-02-22",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=427&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 A-L",
+            "giorno": "2027-06-15",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-05-26",
+            "iscrizioniA": "2027-06-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=428&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 M-Z",
+            "giorno": "2027-06-15",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-05-26",
+            "iscrizioniA": "2027-06-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=429&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 A-L",
+            "giorno": "2027-07-20",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-06-30",
+            "iscrizioniA": "2027-07-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=430&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 M-Z",
+            "giorno": "2027-07-20",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-06-30",
+            "iscrizioniA": "2027-07-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=431&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 A-L",
+            "giorno": "2027-09-16",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-08-27",
+            "iscrizioniA": "2027-09-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=432&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
+          },
+          {
+            "appello": "FARMACOLOGIA 2 M-Z",
+            "giorno": "2027-09-16",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-08-27",
+            "iscrizioniA": "2027-09-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=433&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B"
           }
         ]
       },
@@ -320,6 +1172,90 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=413&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-01-29",
+          "ora": null,
+          "iscrizioniDa": "2027-01-09",
+          "iscrizioniA": "2027-01-27",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=443&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE ERASMUS",
+          "giorno": "2027-02-22",
+          "ora": null,
+          "iscrizioniDa": "2027-02-02",
+          "iscrizioniA": "2027-02-20",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=450&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-02-26",
+          "ora": null,
+          "iscrizioniDa": "2027-02-06",
+          "iscrizioniA": "2027-02-24",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=444&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-06-30",
+          "ora": null,
+          "iscrizioniDa": "2027-06-10",
+          "iscrizioniA": "2027-06-28",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=445&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-07-30",
+          "ora": null,
+          "iscrizioniDa": "2027-07-10",
+          "iscrizioniA": "2027-07-28",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=446&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-07-30",
+          "ora": null,
+          "iscrizioniDa": "2027-07-10",
+          "iscrizioniA": "2027-07-28",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=447&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE BORSE DI STUDIO",
+          "giorno": "2027-09-10",
+          "ora": null,
+          "iscrizioniDa": "2027-08-21",
+          "iscrizioniA": "2027-09-08",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10667&app_id=449&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
         }
@@ -343,8 +1279,80 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=240&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2027-01-21",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-01",
+            "iscrizioniA": "2027-01-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=262&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2027-02-18",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-29",
+            "iscrizioniA": "2027-02-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=263&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2027-03-16",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-24",
+            "iscrizioniA": "2027-03-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=264&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2027-06-10",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-05-21",
+            "iscrizioniA": "2027-06-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=265&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2027-07-15",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-06-25",
+            "iscrizioniA": "2027-07-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=266&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "GINECOLOGIA E OSTETRICIA",
+            "giorno": "2027-09-16",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-08-27",
+            "iscrizioniA": "2027-09-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=267&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.9"
           }
         ],
         "m-ldm3iupg": [
@@ -357,8 +1365,68 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=246&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "GENETICA MEDICA",
+            "giorno": "2027-01-21",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-01",
+            "iscrizioniA": "2027-01-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=269&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "GENETICA MEDICA",
+            "giorno": "2027-02-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-29",
+            "iscrizioniA": "2027-02-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=270&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "GENETICA MEDICA",
+            "giorno": "2027-06-10",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-21",
+            "iscrizioniA": "2027-06-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=271&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "GENETICA MEDICA",
+            "giorno": "2027-07-15",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-25",
+            "iscrizioniA": "2027-07-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=272&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "GENETICA MEDICA",
+            "giorno": "2027-09-16",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-27",
+            "iscrizioniA": "2027-09-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9754&app_id=273&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.9"
           }
         ]
       },
@@ -401,14 +1469,74 @@
           {
             "appello": "DERMATOLOGIA",
             "giorno": "2026-12-15",
-            "ora": "14:00",
+            "ora": "14:30",
             "iscrizioniDa": "2026-11-25",
             "iscrizioniA": "2026-12-13",
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=268&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "DERMATOLOGIA",
+            "giorno": "2027-01-20",
+            "ora": "10:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=285&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Dermatologia"
+          },
+          {
+            "appello": "DERMATOLOGIA",
+            "giorno": "2027-02-17",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-01-28",
+            "iscrizioniA": "2027-02-15",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=286&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Dermatologia"
+          },
+          {
+            "appello": "DERMATOLOGIA",
+            "giorno": "2027-06-08",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-05-19",
+            "iscrizioniA": "2027-06-06",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=287&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Dermatologia"
+          },
+          {
+            "appello": "DERMATOLOGIA",
+            "giorno": "2027-07-14",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-06-24",
+            "iscrizioniA": "2027-07-12",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=288&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Dermatologia"
+          },
+          {
+            "appello": "DERMATOLOGIA",
+            "giorno": "2027-09-14",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-08-25",
+            "iscrizioniA": "2027-09-12",
+            "tipo": "Orale",
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11168&app_id=289&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Dermatologia"
           }
         ],
         "m-r3ai30ir": [
@@ -459,8 +1587,80 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=386&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OFTALMOLOGIA",
+            "giorno": "2027-02-05",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-16",
+            "iscrizioniA": "2027-02-03",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=430&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OFTALMOLOGIA",
+            "giorno": "2027-02-17",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-01-28",
+            "iscrizioniA": "2027-02-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=431&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OFTALMOLOGIA",
+            "giorno": "2027-06-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-29",
+            "iscrizioniA": "2027-06-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=432&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OFTALMOLOGIA",
+            "giorno": "2027-07-02",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-12",
+            "iscrizioniA": "2027-06-30",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=433&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OFTALMOLOGIA",
+            "giorno": "2027-09-17",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-28",
+            "iscrizioniA": "2027-09-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=434&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OFTALMOLOGIA",
+            "giorno": "2027-09-29",
+            "ora": "15:00",
+            "iscrizioniDa": "2027-08-09",
+            "iscrizioniA": "2027-09-27",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=435&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-lcq5czjs": [
@@ -473,22 +1673,154 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=402&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula - Clinica Otorino"
+          },
+          {
+            "appello": "OTORINO-AUDIOLOGIA",
+            "giorno": "2027-01-26",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-01-06",
+            "iscrizioniA": "2027-01-24",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=443&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OTORINO-AUDIOLOGIA",
+            "giorno": "2027-02-23",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-02-03",
+            "iscrizioniA": "2027-02-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=444&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OTORINO-AUDIOLOGIA",
+            "giorno": "2027-06-22",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-06-02",
+            "iscrizioniA": "2027-06-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=445&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OTORINO-AUDIOLOGIA",
+            "giorno": "2027-07-27",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-07-07",
+            "iscrizioniA": "2027-07-25",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=446&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "OTORINO-AUDIOLOGIA",
+            "giorno": "2027-09-28",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-09-08",
+            "iscrizioniA": "2027-09-26",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=447&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-j91rrxoo": [
           {
             "appello": "ODONTOIATRIA",
             "giorno": "2026-12-16",
-            "ora": null,
+            "ora": "09:00",
             "iscrizioniDa": "2026-11-26",
             "iscrizioniA": "2026-12-14",
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=418&cds_id=10045&app_log_id=1",
-            "edificio": null,
+            "edificio": "Nuovo Ed. Didattica Cravino",
+            "aula": "Aula ACI Lab"
+          },
+          {
+            "appello": "ODONTOIATRIA",
+            "giorno": "2027-01-21",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-01",
+            "iscrizioniA": "2027-01-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=442&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "ODONTOIATRIA",
+            "giorno": "2027-02-25",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-05",
+            "iscrizioniA": "2027-02-23",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=441&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "ODONTOIATRIA",
+            "giorno": "2027-03-16",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-24",
+            "iscrizioniA": "2027-03-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=440&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
             "aula": null
+          },
+          {
+            "appello": "ODONTOIATRIA",
+            "giorno": "2027-06-08",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-05-19",
+            "iscrizioniA": "2027-06-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=439&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "ODONTOIATRIA",
+            "giorno": "2027-07-13",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-06-23",
+            "iscrizioniA": "2027-07-11",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=438&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "ODONTOIATRIA",
+            "giorno": "2027-09-07",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-08-18",
+            "iscrizioniA": "2027-09-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=437&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
           }
         ],
         "m-qya7ev2i": [
@@ -501,8 +1833,80 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=409&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MAXILLO-FACCIALE",
+            "giorno": "2027-01-20",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=423&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MAXILLO-FACCIALE",
+            "giorno": "2027-02-22",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-02-02",
+            "iscrizioniA": "2027-02-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=424&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MAXILLO-FACCIALE",
+            "giorno": "2027-06-16",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-27",
+            "iscrizioniA": "2027-06-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=425&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MAXILLO-FACCIALE",
+            "giorno": "2027-07-07",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-06-17",
+            "iscrizioniA": "2027-07-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=426&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MAXILLO-FACCIALE",
+            "giorno": "2027-09-08",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-19",
+            "iscrizioniA": "2027-09-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=427&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "MAXILLO-FACCIALE",
+            "giorno": "2027-09-15",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11739&app_id=428&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ]
       },
@@ -539,8 +1943,68 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=101&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MALATTIE SANGUE",
+            "giorno": "2027-01-27",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-01-07",
+            "iscrizioniA": "2027-01-25",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=102&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MALATTIE SANGUE",
+            "giorno": "2027-02-24",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-04",
+            "iscrizioniA": "2027-02-22",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=103&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MALATTIE SANGUE",
+            "giorno": "2027-06-16",
+            "ora": "13:00",
+            "iscrizioniDa": "2027-05-27",
+            "iscrizioniA": "2027-06-14",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=104&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "MALATTIE SANGUE",
+            "giorno": "2027-07-14",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-24",
+            "iscrizioniA": "2027-07-12",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=105&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "MALATTIE SANGUE",
+            "giorno": "2027-09-24",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-09-04",
+            "iscrizioniA": "2027-09-22",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10671&app_id=106&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
           }
         ]
       },
@@ -564,8 +2028,80 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=285&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "ENDOCRINOLOGIA",
+            "giorno": "2027-01-20",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=287&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "ENDOCRINOLOGIA",
+            "giorno": "2027-02-17",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-28",
+            "iscrizioniA": "2027-02-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=288&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "ENDOCRINOLOGIA",
+            "giorno": "2027-03-23",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-03-03",
+            "iscrizioniA": "2027-03-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=289&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "ENDOCRINOLOGIA",
+            "giorno": "2027-06-23",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-03",
+            "iscrizioniA": "2027-06-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=290&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "ENDOCRINOLOGIA",
+            "giorno": "2027-07-21",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-07-01",
+            "iscrizioniA": "2027-07-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=291&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "ENDOCRINOLOGIA",
+            "giorno": "2027-09-15",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=292&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
           }
         ],
         "m-s11z2uij": [
@@ -586,14 +2122,86 @@
           {
             "appello": "CHIRURGIA ENDOCRINA",
             "giorno": "2026-12-16",
-            "ora": "15:30",
+            "ora": "16:30",
             "iscrizioniDa": "2026-11-26",
             "iscrizioniA": "2026-12-14",
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=283&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "CHIRURGIA ENDOCRINA",
+            "giorno": "2027-01-20",
+            "ora": "15:30",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=294&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "CHIRURGIA ENDOCRINA",
+            "giorno": "2027-02-17",
+            "ora": "15:30",
+            "iscrizioniDa": "2027-01-28",
+            "iscrizioniA": "2027-02-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=295&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "CHIRURGIA ENDOCRINA",
+            "giorno": "2027-03-23",
+            "ora": "15:00",
+            "iscrizioniDa": "2027-03-03",
+            "iscrizioniA": "2027-03-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=296&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "CHIRURGIA ENDOCRINA",
+            "giorno": "2027-06-23",
+            "ora": "15:30",
+            "iscrizioniDa": "2027-06-03",
+            "iscrizioniA": "2027-06-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=297&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "CHIRURGIA ENDOCRINA",
+            "giorno": "2027-07-21",
+            "ora": "15:30",
+            "iscrizioniDa": "2027-07-01",
+            "iscrizioniA": "2027-07-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=298&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "CHIRURGIA ENDOCRINA",
+            "giorno": "2027-09-15",
+            "ora": "16:30",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=299&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
           }
         ]
       },
@@ -607,6 +2215,78 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=276&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-01-25",
+          "ora": null,
+          "iscrizioniDa": "2027-01-05",
+          "iscrizioniA": "2027-01-23",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=301&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-02-22",
+          "ora": null,
+          "iscrizioniDa": "2027-02-02",
+          "iscrizioniA": "2027-02-20",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=302&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-03-31",
+          "ora": null,
+          "iscrizioniDa": "2027-03-11",
+          "iscrizioniA": "2027-03-29",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=303&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-06-28",
+          "ora": null,
+          "iscrizioniDa": "2027-06-08",
+          "iscrizioniA": "2027-06-26",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=307&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-07-26",
+          "ora": null,
+          "iscrizioniDa": "2027-07-06",
+          "iscrizioniA": "2027-07-24",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=304&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-09-20",
+          "ora": null,
+          "iscrizioniDa": "2027-08-31",
+          "iscrizioniA": "2027-09-18",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10672&app_id=305&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
         }
@@ -634,8 +2314,80 @@
           "tipo": "Scritto e orale",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=172&cds_id=10045&app_log_id=1",
-          "edificio": null,
-          "aula": null
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "MALATTIE APPARATO DIGERENTE",
+          "giorno": "2027-02-26",
+          "ora": "09:00",
+          "iscrizioniDa": "2027-02-06",
+          "iscrizioniA": "2027-02-24",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=175&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.9"
+        },
+        {
+          "appello": "MALATTIE APPARATO DIGERENTE",
+          "giorno": "2027-06-11",
+          "ora": "09:00",
+          "iscrizioniDa": "2027-05-22",
+          "iscrizioniA": "2027-06-09",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=176&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.9"
+        },
+        {
+          "appello": "MALATTIE APPARATO DIGERENTE",
+          "giorno": "2027-06-25",
+          "ora": "09:00",
+          "iscrizioniDa": "2027-06-05",
+          "iscrizioniA": "2027-06-23",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=177&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.9"
+        },
+        {
+          "appello": "MALATTIE APPARATO DIGERENTE",
+          "giorno": "2027-07-16",
+          "ora": "09:00",
+          "iscrizioniDa": "2027-06-26",
+          "iscrizioniA": "2027-07-14",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=178&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.9"
+        },
+        {
+          "appello": "MALATTIE APPARATO DIGERENTE",
+          "giorno": "2027-09-10",
+          "ora": "09:00",
+          "iscrizioniDa": "2027-08-21",
+          "iscrizioniA": "2027-09-08",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=179&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.9"
+        },
+        {
+          "appello": "MALATTIE APPARATO DIGERENTE",
+          "giorno": "2027-09-24",
+          "ora": "09:00",
+          "iscrizioniDa": "2027-09-04",
+          "iscrizioniA": "2027-09-22",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11166&app_id=180&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 1.9"
         }
       ]
     },
@@ -659,6 +2411,78 @@
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=93&cds_id=10045&app_log_id=1",
             "edificio": "Policlinico San Matteo",
             "aula": "Aula Malattie Infettive"
+          },
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2027-01-27",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-01-07",
+            "iscrizioniA": "2027-01-25",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=94&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
+          },
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2027-02-25",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-02-05",
+            "iscrizioniA": "2027-02-23",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=95&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
+          },
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2027-03-24",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-03-04",
+            "iscrizioniA": "2027-03-22",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=96&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
+          },
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2027-06-24",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-06-04",
+            "iscrizioniA": "2027-06-22",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=97&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
+          },
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2027-07-29",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-07-09",
+            "iscrizioniA": "2027-07-27",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=98&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
+          },
+          {
+            "appello": "MALATTIE INFETTIVE",
+            "giorno": "2027-09-30",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-09-10",
+            "iscrizioniA": "2027-09-28",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9728&app_id=99&cds_id=10045&app_log_id=1",
+            "edificio": "Policlinico San Matteo",
+            "aula": "Aula Malattie Infettive"
           }
         ]
       },
@@ -672,7 +2496,68 @@
         "nome": "MEDICINA DI LABORATORIO"
       },
       "moduli": {
-        "m-snews6i7": []
+        "m-snews6i7": [
+          {
+            "appello": "MEDICINA DI LABORATORIO",
+            "giorno": "2027-02-04",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-15",
+            "iscrizioniA": "2027-01-28",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=239&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MEDICINA DI LABORATORIO",
+            "giorno": "2027-03-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-02-26",
+            "iscrizioniA": "2027-03-11",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=240&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula A - Farmacologia Clinica"
+          },
+          {
+            "appello": "MEDICINA DI LABORATORIO",
+            "giorno": "2027-06-22",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-02",
+            "iscrizioniA": "2027-06-15",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=241&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MEDICINA DI LABORATORIO",
+            "giorno": "2027-07-29",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-07-09",
+            "iscrizioniA": "2027-07-22",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=242&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B - Farmacologia Clinica"
+          },
+          {
+            "appello": "MEDICINA DI LABORATORIO",
+            "giorno": "2027-09-28",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-09-08",
+            "iscrizioniA": "2027-09-21",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=243&cds_id=10045&app_log_id=1",
+            "edificio": "Golgi Spallanzani - Botta 2",
+            "aula": "Aula B - Farmacologia Clinica"
+          }
+        ]
       },
       "generale": []
     },
@@ -694,22 +2579,142 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=451&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MEDICINA LEGALE",
+            "giorno": "2027-01-18",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-12-29",
+            "iscrizioniA": "2027-01-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=499&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA LEGALE",
+            "giorno": "2027-02-23",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-02-03",
+            "iscrizioniA": "2027-02-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=500&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA LEGALE",
+            "giorno": "2027-06-14",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-25",
+            "iscrizioniA": "2027-06-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=501&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA LEGALE",
+            "giorno": "2027-07-19",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-06-29",
+            "iscrizioniA": "2027-07-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=502&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA LEGALE",
+            "giorno": "2027-09-06",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-17",
+            "iscrizioniA": "2027-09-04",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=503&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.9"
           }
         ],
         "m-kfhcmrwh": [
           {
             "appello": "MEDICINA DEL LAVORO",
             "giorno": "2026-12-15",
-            "ora": "14:30",
+            "ora": "16:30",
             "iscrizioniDa": "2026-11-25",
             "iscrizioniA": "2026-12-13",
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=457&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MEDICINA DEL LAVORO",
+            "giorno": "2027-01-19",
+            "ora": "14:30",
+            "iscrizioniDa": "2026-12-30",
+            "iscrizioniA": "2027-01-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=493&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA DEL LAVORO",
+            "giorno": "2027-02-09",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-01-20",
+            "iscrizioniA": "2027-02-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=494&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA DEL LAVORO",
+            "giorno": "2027-06-15",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-05-26",
+            "iscrizioniA": "2027-06-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=495&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA DEL LAVORO",
+            "giorno": "2027-07-13",
+            "ora": "14:30",
+            "iscrizioniDa": "2027-06-23",
+            "iscrizioniA": "2027-07-11",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=496&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "MEDICINA DEL LAVORO",
+            "giorno": "2027-09-14",
+            "ora": "16:30",
+            "iscrizioniDa": "2027-08-25",
+            "iscrizioniA": "2027-09-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=497&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
           }
         ],
         "m-f18tcg5t": [
@@ -722,8 +2727,128 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=475&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-01-22",
+            "ora": "14:15",
+            "iscrizioniDa": "2027-01-02",
+            "iscrizioniA": "2027-01-19",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=523&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-01-27",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-07",
+            "iscrizioniA": "2027-01-25",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=487&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-02-19",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-30",
+            "iscrizioniA": "2027-02-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=524&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-02-26",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-02-06",
+            "iscrizioniA": "2027-02-24",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=488&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-06-11",
+            "ora": "13:30",
+            "iscrizioniDa": "2027-05-22",
+            "iscrizioniA": "2027-06-09",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=525&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-06-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-29",
+            "iscrizioniA": "2027-06-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=489&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.1"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-07-02",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-12",
+            "iscrizioniA": "2027-06-30",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=526&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-07-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-19",
+            "iscrizioniA": "2027-07-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=490&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-09-10",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-21",
+            "iscrizioniA": "2027-09-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=491&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "BIOETICA",
+            "giorno": "2027-09-10",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-21",
+            "iscrizioniA": "2027-09-08",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=527&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
           }
         ],
         "m-iptxage9": [
@@ -736,8 +2861,68 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=469&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.9"
+          },
+          {
+            "appello": "ORGANIZZAZIONE SANITARIA",
+            "giorno": "2027-01-20",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=517&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "ORGANIZZAZIONE SANITARIA",
+            "giorno": "2027-02-24",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-02-04",
+            "iscrizioniA": "2027-02-22",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=518&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "ORGANIZZAZIONE SANITARIA",
+            "giorno": "2027-06-09",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=519&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "ORGANIZZAZIONE SANITARIA",
+            "giorno": "2027-07-14",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-06-24",
+            "iscrizioniA": "2027-07-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=520&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "ORGANIZZAZIONE SANITARIA",
+            "giorno": "2027-09-15",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=521&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ],
         "m-cdt6q6du": [
@@ -750,8 +2935,68 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=463&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.9"
+          },
+          {
+            "appello": "IGIENE AMBIENTALE",
+            "giorno": "2027-01-20",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-12-31",
+            "iscrizioniA": "2027-01-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=505&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "IGIENE AMBIENTALE",
+            "giorno": "2027-02-24",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-02-04",
+            "iscrizioniA": "2027-02-22",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=506&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "IGIENE AMBIENTALE",
+            "giorno": "2027-06-09",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=507&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "IGIENE AMBIENTALE",
+            "giorno": "2027-07-14",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-06-24",
+            "iscrizioniA": "2027-07-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=508&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "IGIENE AMBIENTALE",
+            "giorno": "2027-09-15",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=509&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
           }
         ]
       },
@@ -779,6 +3024,66 @@
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=485&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
+        },
+        {
+          "appello": "SALUTE PUBBLICA",
+          "giorno": "2027-01-20",
+          "ora": "14:00",
+          "iscrizioniDa": "2026-12-31",
+          "iscrizioniA": "2027-01-18",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=511&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "SALUTE PUBBLICA",
+          "giorno": "2027-02-24",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-02-04",
+          "iscrizioniA": "2027-02-22",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=512&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "SALUTE PUBBLICA",
+          "giorno": "2027-06-09",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-05-20",
+          "iscrizioniA": "2027-06-07",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=513&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "SALUTE PUBBLICA",
+          "giorno": "2027-07-14",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-06-24",
+          "iscrizioniA": "2027-07-12",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=514&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.7"
+        },
+        {
+          "appello": "SALUTE PUBBLICA",
+          "giorno": "2027-09-15",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-08-26",
+          "iscrizioniA": "2027-09-13",
+          "tipo": null,
+          "tipoProva": "Prova Parziale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12828&app_id=515&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.3"
         }
       ]
     },
@@ -800,8 +3105,8 @@
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=201&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
           },
           {
             "appello": "MICROBIOLOGIA - ORALE",
@@ -812,8 +3117,8 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=202&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.6"
           },
           {
             "appello": "VERBALIZZAZIONE",
@@ -826,6 +3131,150 @@
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=209&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
+          },
+          {
+            "appello": "MICROBIOLOGIA-SCRITTO",
+            "giorno": "2027-01-18",
+            "ora": "10:00",
+            "iscrizioniDa": "2026-12-29",
+            "iscrizioniA": "2027-01-11",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=216&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "MICROBIOLOGIA -ORALE",
+            "giorno": "2027-01-21",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-01-01",
+            "iscrizioniA": "2027-01-11",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=210&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MICROBIOLOGIA-SCRITTO",
+            "giorno": "2027-02-09",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-01-20",
+            "iscrizioniA": "2027-02-02",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=217&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "MICROBIOLOGIA -ORALE",
+            "giorno": "2027-02-10",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-01-21",
+            "iscrizioniA": "2027-02-02",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=211&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MICROBIOLOGIA-SCRITTO",
+            "giorno": "2027-06-09",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-02",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=218&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "MICROBIOLOGIA -ORALE",
+            "giorno": "2027-06-10",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-05-21",
+            "iscrizioniA": "2027-06-02",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=212&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "MICROBIOLOGIA-SCRITTO",
+            "giorno": "2027-06-28",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-06-08",
+            "iscrizioniA": "2027-06-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=219&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "MICROBIOLOGIA -ORALE",
+            "giorno": "2027-06-29",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-06-09",
+            "iscrizioniA": "2027-06-21",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=213&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MICROBIOLOGIA-SCRITTO",
+            "giorno": "2027-07-19",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-06-29",
+            "iscrizioniA": "2027-07-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=220&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.8"
+          },
+          {
+            "appello": "MICROBIOLOGIA -ORALE",
+            "giorno": "2027-07-20",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-06-30",
+            "iscrizioniA": "2027-07-12",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=214&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "MICROBIOLOGIA-SCRITTO",
+            "giorno": "2027-09-07",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-08-18",
+            "iscrizioniA": "2027-08-31",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=221&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "MICROBIOLOGIA -ORALE",
+            "giorno": "2027-09-08",
+            "ora": "10:00",
+            "iscrizioniDa": "2027-08-19",
+            "iscrizioniA": "2027-08-31",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=9163&app_id=215&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
           }
         ]
       },
@@ -843,28 +3292,148 @@
           {
             "appello": "ONCOLOGIA",
             "giorno": "2026-12-15",
-            "ora": "14:00",
+            "ora": "09:00",
             "iscrizioniDa": "2026-11-25",
             "iscrizioniA": "2026-12-13",
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=253&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.11"
+          },
+          {
+            "appello": "ONCOLOGIA",
+            "giorno": "2027-01-19",
+            "ora": "14:00",
+            "iscrizioniDa": "2026-12-30",
+            "iscrizioniA": "2027-01-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=259&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "ONCOLOGIA",
+            "giorno": "2027-02-04",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-01-15",
+            "iscrizioniA": "2027-02-02",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=260&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "ONCOLOGIA",
+            "giorno": "2027-06-16",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-27",
+            "iscrizioniA": "2027-06-14",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=261&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "ONCOLOGIA",
+            "giorno": "2027-07-15",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-06-25",
+            "iscrizioniA": "2027-07-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=262&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.7"
+          },
+          {
+            "appello": "ONCOLOGIA",
+            "giorno": "2027-09-15",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-26",
+            "iscrizioniA": "2027-09-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=263&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.9"
           }
         ],
         "m-t588av4v": [
           {
             "appello": "RX-NEURORX-RT",
             "giorno": "2026-12-18",
-            "ora": "09:00",
+            "ora": "10:30",
             "iscrizioniDa": "2026-11-28",
             "iscrizioniA": "2026-12-16",
             "tipo": "Scritto",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=255&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "Matematica",
+            "aula": "Laboratorio Informatico"
+          },
+          {
+            "appello": "RX-NEURORX-RT",
+            "giorno": "2027-01-25",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-05",
+            "iscrizioniA": "2027-01-23",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=265&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "RX-NEURORX-RT",
+            "giorno": "2027-02-15",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-26",
+            "iscrizioniA": "2027-02-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=266&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "RX-NEURORX-RT",
+            "giorno": "2027-06-07",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-18",
+            "iscrizioniA": "2027-06-05",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=267&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "RX-NEURORX-RT",
+            "giorno": "2027-07-19",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-29",
+            "iscrizioniA": "2027-07-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=268&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "RX-NEURORX-RT",
+            "giorno": "2027-09-13",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-24",
+            "iscrizioniA": "2027-09-11",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=12832&app_id=269&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
           }
         ]
       },
@@ -905,8 +3474,68 @@
           "tipo": "Scritto e orale",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=109&cds_id=10045&app_log_id=1",
-          "edificio": null,
-          "aula": null
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula informatica 0.13"
+        },
+        {
+          "appello": "PATOLOGIA GENERALE",
+          "giorno": "2027-01-19",
+          "ora": "09:30",
+          "iscrizioniDa": "2026-12-30",
+          "iscrizioniA": "2027-01-12",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=114&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula informatica 0.1"
+        },
+        {
+          "appello": "PATOLOGIA GENERALE",
+          "giorno": "2027-02-23",
+          "ora": "09:30",
+          "iscrizioniDa": "2027-02-03",
+          "iscrizioniA": "2027-02-18",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=115&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula informatica 0.1"
+        },
+        {
+          "appello": "PATOLOGIA GENERALE",
+          "giorno": "2027-06-08",
+          "ora": "09:30",
+          "iscrizioniDa": "2027-05-19",
+          "iscrizioniA": "2027-06-03",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=116&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula informatica 0.1"
+        },
+        {
+          "appello": "PATOLOGIA GENERALE",
+          "giorno": "2027-07-13",
+          "ora": "09:30",
+          "iscrizioniDa": "2027-06-23",
+          "iscrizioniA": "2027-07-08",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=117&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula informatica 0.1"
+        },
+        {
+          "appello": "PATOLOGIA GENERALE",
+          "giorno": "2027-09-14",
+          "ora": "09:30",
+          "iscrizioniDa": "2027-08-25",
+          "iscrizioniA": "2027-09-09",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10675&app_id=118&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula informatica 0.13"
         }
       ]
     },
@@ -932,8 +3561,80 @@
           "tipo": "Orale",
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=106&cds_id=10045&app_log_id=1",
+          "edificio": "Policlinico San Matteo",
+          "aula": "Aula Burgio - Pediatria"
+        },
+        {
+          "appello": "PEDIATRIA",
+          "giorno": "2027-01-18",
+          "ora": "14:00",
+          "iscrizioniDa": "2026-12-29",
+          "iscrizioniA": "2027-01-16",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=107&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.3"
+        },
+        {
+          "appello": "PEDIATRIA",
+          "giorno": "2027-02-15",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-01-26",
+          "iscrizioniA": "2027-02-13",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=108&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.3"
+        },
+        {
+          "appello": "PEDIATRIA",
+          "giorno": "2027-03-15",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-02-23",
+          "iscrizioniA": "2027-03-13",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=109&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
+        },
+        {
+          "appello": "PEDIATRIA",
+          "giorno": "2027-06-21",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-06-01",
+          "iscrizioniA": "2027-06-19",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=110&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.3"
+        },
+        {
+          "appello": "PEDIATRIA",
+          "giorno": "2027-07-12",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-06-22",
+          "iscrizioniA": "2027-07-10",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=111&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.3"
+        },
+        {
+          "appello": "PEDIATRIA",
+          "giorno": "2027-09-13",
+          "ora": "14:00",
+          "iscrizioniDa": "2027-08-24",
+          "iscrizioniA": "2027-09-11",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11272&app_id=112&cds_id=10045&app_log_id=1",
+          "edificio": "CAMPUS DELLA SALUTE",
+          "aula": "Aula 0.3"
         }
       ]
     },
@@ -945,7 +3646,80 @@
         "nome": "PSICHIATRIA"
       },
       "moduli": {
-        "m-0v8s8vwa": []
+        "m-0v8s8vwa": [
+          {
+            "appello": "PSICHIATRIA",
+            "giorno": "2027-01-29",
+            "ora": "11:00",
+            "iscrizioniDa": "2027-01-09",
+            "iscrizioniA": "2027-01-27",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=97&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "PSICHIATRIA",
+            "giorno": "2027-02-19",
+            "ora": "11:00",
+            "iscrizioniDa": "2027-01-30",
+            "iscrizioniA": "2027-02-17",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=98&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "PSICHIATRIA",
+            "giorno": "2027-04-02",
+            "ora": "11:00",
+            "iscrizioniDa": "2027-03-13",
+            "iscrizioniA": "2027-03-31",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=99&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          },
+          {
+            "appello": "PSICHIATRIA",
+            "giorno": "2027-06-11",
+            "ora": "11:00",
+            "iscrizioniDa": "2027-05-22",
+            "iscrizioniA": "2027-06-09",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=100&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          },
+          {
+            "appello": "PSICHIATRIA",
+            "giorno": "2027-07-16",
+            "ora": "11:00",
+            "iscrizioniDa": "2027-06-26",
+            "iscrizioniA": "2027-07-14",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=101&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.7"
+          },
+          {
+            "appello": "PSICHIATRIA",
+            "giorno": "2027-09-24",
+            "ora": "11:00",
+            "iscrizioniDa": "2027-09-04",
+            "iscrizioniA": "2027-09-22",
+            "tipo": null,
+            "tipoProva": "Prova Finale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11109&app_id=102&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.3"
+          }
+        ]
       },
       "generale": []
     },
@@ -969,6 +3743,78 @@
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=176&cds_id=10045&app_log_id=1",
             "edificio": "Fondazione Casimiro Mondino",
             "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROLOGIA",
+            "giorno": "2027-01-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-12-29",
+            "iscrizioniA": "2027-01-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=186&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROLOGIA",
+            "giorno": "2027-02-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-29",
+            "iscrizioniA": "2027-02-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=188&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROLOGIA",
+            "giorno": "2027-03-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-02-26",
+            "iscrizioniA": "2027-03-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=190&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROLOGIA",
+            "giorno": "2027-06-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=192&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROLOGIA",
+            "giorno": "2027-07-15",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-25",
+            "iscrizioniA": "2027-07-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=194&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROLOGIA",
+            "giorno": "2027-09-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-20",
+            "iscrizioniA": "2027-09-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=196&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
           }
         ],
         "m-4jygklkp": [
@@ -981,6 +3827,78 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=169&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2027-01-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2026-12-29",
+            "iscrizioniA": "2027-01-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=187&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2027-02-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-29",
+            "iscrizioniA": "2027-02-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=189&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2027-03-18",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-02-26",
+            "iscrizioniA": "2027-03-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=191&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2027-06-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=193&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2027-07-15",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-06-25",
+            "iscrizioniA": "2027-07-13",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=195&cds_id=10045&app_log_id=1",
+            "edificio": "Fondazione Casimiro Mondino",
+            "aula": "Aula Berlucchi"
+          },
+          {
+            "appello": "NEUROCHIRURGIA",
+            "giorno": "2027-09-09",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-20",
+            "iscrizioniA": "2027-09-07",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=197&cds_id=10045&app_log_id=1",
             "edificio": "Fondazione Casimiro Mondino",
             "aula": "Aula Berlucchi"
           }
@@ -996,6 +3914,102 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=183&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-01-25",
+          "ora": null,
+          "iscrizioniDa": "2027-01-05",
+          "iscrizioniA": "2027-01-23",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=206&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE PER ERASMUS",
+          "giorno": "2027-02-22",
+          "ora": null,
+          "iscrizioniDa": "2027-02-02",
+          "iscrizioniA": "2027-02-20",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=204&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-03-02",
+          "ora": null,
+          "iscrizioniDa": "2027-02-10",
+          "iscrizioniA": "2027-02-28",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=207&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-03-30",
+          "ora": null,
+          "iscrizioniDa": "2027-03-10",
+          "iscrizioniA": "2027-03-28",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=208&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-06-20",
+          "ora": null,
+          "iscrizioniDa": "2027-05-31",
+          "iscrizioniA": "2027-06-18",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=200&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-07-23",
+          "ora": null,
+          "iscrizioniDa": "2027-07-03",
+          "iscrizioniA": "2027-07-21",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=201&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE PER BORSE DI STUDIO",
+          "giorno": "2027-09-10",
+          "ora": null,
+          "iscrizioniDa": "2027-08-21",
+          "iscrizioniA": "2027-09-08",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=205&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-09-20",
+          "ora": null,
+          "iscrizioniDa": "2027-08-31",
+          "iscrizioniA": "2027-09-18",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=11236&app_id=202&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
         }
@@ -1019,22 +4033,142 @@
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=257&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 0.6"
+          },
+          {
+            "appello": "SEMEIOTICA MEDICA",
+            "giorno": "2027-01-29",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-01-09",
+            "iscrizioniA": "2027-01-27",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=285&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "SEMEIOTICA MEDICA",
+            "giorno": "2027-02-22",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-02-02",
+            "iscrizioniA": "2027-02-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=286&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "SEMEIOTICA MEDICA",
+            "giorno": "2027-06-08",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-19",
+            "iscrizioniA": "2027-06-06",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=287&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "SEMEIOTICA MEDICA",
+            "giorno": "2027-07-26",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-07-06",
+            "iscrizioniA": "2027-07-24",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=288&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
+          },
+          {
+            "appello": "SEMEIOTICA MEDICA",
+            "giorno": "2027-09-17",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-08-28",
+            "iscrizioniA": "2027-09-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=289&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula 1.5"
           }
         ],
         "m-o9hifbga": [
           {
             "appello": "SEMEIOTICA STRUMENTALE",
             "giorno": "2026-12-18",
-            "ora": "14:00",
+            "ora": "08:30",
             "iscrizioniDa": "2026-11-28",
             "iscrizioniA": "2026-12-16",
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=251&cds_id=10045&app_log_id=1",
-            "edificio": null,
-            "aula": null
+            "edificio": "Matematica",
+            "aula": "Laboratorio Informatico"
+          },
+          {
+            "appello": "SEMEIOTICA STRUMENTALE",
+            "giorno": "2027-01-29",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-01-09",
+            "iscrizioniA": "2027-01-27",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=279&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "SEMEIOTICA STRUMENTALE",
+            "giorno": "2027-02-22",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-02-02",
+            "iscrizioniA": "2027-02-20",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=280&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "SEMEIOTICA STRUMENTALE",
+            "giorno": "2027-06-18",
+            "ora": "14:00",
+            "iscrizioniDa": "2027-05-29",
+            "iscrizioniA": "2027-06-16",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=281&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
+          },
+          {
+            "appello": "SEMEIOTICA STRUMENTALE",
+            "giorno": "2027-07-26",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-07-06",
+            "iscrizioniA": "2027-07-24",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=282&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.1"
+          },
+          {
+            "appello": "SEMEIOTICA STRUMENTALE",
+            "giorno": "2027-09-17",
+            "ora": "09:00",
+            "iscrizioniDa": "2027-08-28",
+            "iscrizioniA": "2027-09-15",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=283&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.13"
           }
         ],
         "m-rug9bioa": [
@@ -1047,6 +4181,66 @@
             "tipo": "Orale",
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=261&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          },
+          {
+            "appello": "SEMEIOTICA CHIRURGICA",
+            "giorno": "2027-01-26",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-01-06",
+            "iscrizioniA": "2027-01-24",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=273&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          },
+          {
+            "appello": "SEMEIOTICA CHIRURGICA",
+            "giorno": "2027-02-19",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-01-30",
+            "iscrizioniA": "2027-02-17",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=274&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          },
+          {
+            "appello": "SEMEIOTICA CHIRURGICA",
+            "giorno": "2027-06-24",
+            "ora": "15:00",
+            "iscrizioniDa": "2027-06-04",
+            "iscrizioniA": "2027-06-22",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=275&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          },
+          {
+            "appello": "SEMEIOTICA CHIRURGICA",
+            "giorno": "2027-07-06",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-06-16",
+            "iscrizioniA": "2027-07-04",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=276&cds_id=10045&app_log_id=1",
+            "edificio": null,
+            "aula": null
+          },
+          {
+            "appello": "SEMEIOTICA CHIRURGICA",
+            "giorno": "2027-09-20",
+            "ora": "09:30",
+            "iscrizioniDa": "2027-08-31",
+            "iscrizioniA": "2027-09-18",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=277&cds_id=10045&app_log_id=1",
             "edificio": null,
             "aula": null
           }
@@ -1062,6 +4256,66 @@
           "tipo": null,
           "tipoProva": "Prova Finale",
           "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=265&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-02-16",
+          "ora": null,
+          "iscrizioniDa": "2027-01-27",
+          "iscrizioniA": "2027-02-14",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=291&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-02-26",
+          "ora": null,
+          "iscrizioniDa": "2027-02-06",
+          "iscrizioniA": "2027-02-24",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=292&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-07-05",
+          "ora": null,
+          "iscrizioniDa": "2027-06-15",
+          "iscrizioniA": "2027-07-03",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=293&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-07-23",
+          "ora": null,
+          "iscrizioniDa": "2027-07-03",
+          "iscrizioniA": "2027-07-21",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=294&cds_id=10045&app_log_id=1",
+          "edificio": null,
+          "aula": null
+        },
+        {
+          "appello": "VERBALIZZAZIONE",
+          "giorno": "2027-09-29",
+          "ora": null,
+          "iscrizioniDa": "2027-09-09",
+          "iscrizioniA": "2027-09-27",
+          "tipo": null,
+          "tipoProva": "Prova Finale",
+          "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=295&cds_id=10045&app_log_id=1",
           "edificio": null,
           "aula": null
         }
