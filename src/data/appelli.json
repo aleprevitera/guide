@@ -1,5 +1,5 @@
 {
-  "generato_il": "2026-10-26T12:20:42.451Z",
+  "generato_il": "2026-11-02T14:51:28.099Z",
   "fonte": {
     "bacheca": "https://studentionline.unipv.it/ListaAppelliOfferta.do",
     "corso_di_studio": {
@@ -9,8 +9,8 @@
     }
   },
   "intervallo": {
-    "da": "2026-10-26",
-    "a": "2027-10-26"
+    "da": "2026-11-02",
+    "a": "2027-11-02"
   },
   "guide": {
     "g-we1ty8o7": {
@@ -2503,7 +2503,7 @@
             "ora": "09:00",
             "iscrizioniDa": "2027-01-15",
             "iscrizioniA": "2027-01-28",
-            "tipo": null,
+            "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=239&cds_id=10045&app_log_id=1",
             "edificio": "CAMPUS DELLA SALUTE",
@@ -2515,7 +2515,7 @@
             "ora": "09:00",
             "iscrizioniDa": "2027-02-26",
             "iscrizioniA": "2027-03-11",
-            "tipo": null,
+            "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=240&cds_id=10045&app_log_id=1",
             "edificio": "Golgi Spallanzani - Botta 2",
@@ -2527,7 +2527,7 @@
             "ora": "09:00",
             "iscrizioniDa": "2027-06-02",
             "iscrizioniA": "2027-06-15",
-            "tipo": null,
+            "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=241&cds_id=10045&app_log_id=1",
             "edificio": "CAMPUS DELLA SALUTE",
@@ -2539,7 +2539,7 @@
             "ora": "09:00",
             "iscrizioniDa": "2027-07-09",
             "iscrizioniA": "2027-07-22",
-            "tipo": null,
+            "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=242&cds_id=10045&app_log_id=1",
             "edificio": "Golgi Spallanzani - Botta 2",
@@ -2551,7 +2551,7 @@
             "ora": "09:00",
             "iscrizioniDa": "2027-09-08",
             "iscrizioniA": "2027-09-21",
-            "tipo": null,
+            "tipo": "Scritto",
             "tipoProva": "Prova Finale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10669&app_id=243&cds_id=10045&app_log_id=1",
             "edificio": "Golgi Spallanzani - Botta 2",
@@ -4038,39 +4038,39 @@
           },
           {
             "appello": "SEMEIOTICA MEDICA",
-            "giorno": "2027-01-29",
-            "ora": "14:00",
-            "iscrizioniDa": "2027-01-09",
-            "iscrizioniA": "2027-01-27",
-            "tipo": null,
-            "tipoProva": "Prova Parziale",
-            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=285&cds_id=10045&app_log_id=1",
-            "edificio": "CAMPUS DELLA SALUTE",
-            "aula": "Aula 1.5"
-          },
-          {
-            "appello": "SEMEIOTICA MEDICA",
-            "giorno": "2027-02-22",
-            "ora": "14:00",
-            "iscrizioniDa": "2027-02-02",
-            "iscrizioniA": "2027-02-20",
+            "giorno": "2027-02-02",
+            "ora": "12:00",
+            "iscrizioniDa": "2027-01-13",
+            "iscrizioniA": "2027-01-31",
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=286&cds_id=10045&app_log_id=1",
             "edificio": "CAMPUS DELLA SALUTE",
-            "aula": "Aula 1.5"
+            "aula": "Aula informatica 0.1"
           },
           {
             "appello": "SEMEIOTICA MEDICA",
-            "giorno": "2027-06-08",
-            "ora": "14:00",
-            "iscrizioniDa": "2027-05-19",
-            "iscrizioniA": "2027-06-06",
+            "giorno": "2027-02-25",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-02-05",
+            "iscrizioniA": "2027-02-23",
+            "tipo": null,
+            "tipoProva": "Prova Parziale",
+            "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=285&cds_id=10045&app_log_id=1",
+            "edificio": "CAMPUS DELLA SALUTE",
+            "aula": "Aula informatica 0.1"
+          },
+          {
+            "appello": "SEMEIOTICA MEDICA",
+            "giorno": "2027-06-10",
+            "ora": "08:30",
+            "iscrizioniDa": "2027-05-20",
+            "iscrizioniA": "2027-06-08",
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=287&cds_id=10045&app_log_id=1",
             "edificio": "CAMPUS DELLA SALUTE",
-            "aula": "Aula 1.5"
+            "aula": "Aula informatica 0.13"
           },
           {
             "appello": "SEMEIOTICA MEDICA",
@@ -4082,19 +4082,19 @@
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=288&cds_id=10045&app_log_id=1",
             "edificio": "CAMPUS DELLA SALUTE",
-            "aula": "Aula 1.5"
+            "aula": "Aula informatica 0.1"
           },
           {
             "appello": "SEMEIOTICA MEDICA",
             "giorno": "2027-09-17",
-            "ora": "14:00",
+            "ora": "08:30",
             "iscrizioniDa": "2027-08-28",
             "iscrizioniA": "2027-09-15",
             "tipo": null,
             "tipoProva": "Prova Parziale",
             "url": "https://studentionline.unipv.it/DettaglioTurnoOfferta.do?ad_id=10668&app_id=289&cds_id=10045&app_log_id=1",
             "edificio": "CAMPUS DELLA SALUTE",
-            "aula": "Aula 1.5"
+            "aula": "Aula informatica 0.1"
           }
         ],
         "m-o9hifbga": [
